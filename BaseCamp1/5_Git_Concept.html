@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git Flow — Interactive Simulator</title>
+<style>
+  :root{
+    --bg: #0b0d10;
+    --panel: #12151a;
+    --panel-border: #23282f;
+    --ink: #e8ebef;
+    --ink-dim: #8992a0;
+    --ink-faint: #545c68;
+    --cyan: #4fd7e0;
+    --yellow: #e0c34f;
+    --green: #52d17c;
+    --violet: #b39ff0;
+    --red: #e0645f;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  *{ box-sizing: border-box; }
+  html,body{
+    margin:0; padding:0; background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, #16202333 0%, transparent 60%),
+      radial-gradient(ellipse 900px 500px at 90% 0%, #1a151f33 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink); font-family:var(--sans); min-height:100vh;
+  }
+  .wrap{ max-width:1280px; margin:0 auto; padding:28px 22px 60px; }
+
+  header.top{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px; flex-wrap:wrap; gap:10px; }
+  header.top h1{ font-size:19px; font-weight:600; letter-spacing:0.2px; margin:0; color:var(--ink); }
+  header.top h1 span{ color:var(--ink-faint); font-weight:400; }
+  header.top .tag{ font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+
+  /* control bar */
+  .controlbar{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    background:var(--panel); border:1px solid var(--panel-border); border-radius:10px;
+    padding:14px 16px; margin-bottom:18px;
+  }
+  .field{ display:flex; align-items:center; gap:8px; }
+  .field label{ font-size:12.5px; color:var(--ink-dim); white-space:nowrap; }
+  select{
+    background:#0d1013; color:var(--ink); border:1px solid #2a3038; border-radius:7px;
+    padding:8px 10px; font-family:var(--sans); font-size:13.5px; min-width:120px;
+    outline:none; cursor:pointer;
+  }
+  #scenarioSelect{ min-width:340px; flex:1; }
+  select:focus{ border-color:var(--cyan); box-shadow:0 0 0 3px #4fd7e022; }
+
+  .helper-line{ width:100%; font-size:12.5px; color:var(--ink-dim); padding-top:2px; }
+
+  /* step flow */
+  .flow-row{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0; margin: 20px 0 6px; }
+  .chip{
+    display:flex; align-items:center; gap:8px; padding:9px 14px; border-radius:20px;
+    border:1.5px solid #2b323b; background:#12161b; font-family:var(--mono); font-size:13px;
+    color:var(--ink-faint); transition:all .25s ease; white-space:nowrap;
+  }
+  .chip .num{
+    width:18px;height:18px;border-radius:50%;background:#1c2128;display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans); font-size:10.5px; color:var(--ink-faint); flex-shrink:0;
+  }
+  .chip.done{ border-color:#2f5f47; background:#0e1a15; color:#7fd6a3; }
+  .chip.done .num{ background:#1a4a34; color:#7fd6a3; }
+  .chip.current{ border-color:var(--cyan); background:#0e1c1f; color:var(--cyan); box-shadow:0 0 0 3px #4fd7e01f; }
+  .chip.current .num{ background:#12343a; color:var(--cyan); }
+  .arrow{ color:var(--ink-faint); font-size:13px; margin:0 6px; }
+
+  .actions{ display:flex; align-items:center; justify-content:center; gap:10px; margin: 16px 0 26px; flex-wrap:wrap; }
+  button{
+    font-family:var(--sans); font-size:13.5px; font-weight:500; border-radius:8px; padding:10px 18px;
+    cursor:pointer; border:1px solid transparent; transition: all .15s ease; letter-spacing:0.1px;
+  }
+  button:disabled{ opacity:0.4; cursor:not-allowed; }
+  .btn-primary{ background:var(--cyan); color:#04191b; border-color:var(--cyan); }
+  .btn-primary:hover:not(:disabled){ background:#6ee2e9; }
+  .btn-primary .cmdtxt{ font-family:var(--mono); font-weight:600; }
+  .btn-secondary{ background:#161b21; color:var(--ink); border-color:#2b323b; }
+  .btn-secondary:hover:not(:disabled){ background:#1c222a; border-color:#3a424d; }
+  .btn-ghost{ background:transparent; color:var(--ink-dim); border-color:#262c34; }
+  .btn-ghost:hover:not(:disabled){ color:var(--ink); border-color:#3a424d; }
+
+  /* panels */
+  .panels{ display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; }
+  @media (max-width:980px){ .panels{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .panels{ grid-template-columns:1fr; } }
+
+  .panel{
+    background:var(--panel); border:1px solid var(--panel-border); border-radius:11px;
+    padding:16px; min-height:230px; display:flex; flex-direction:column;
+    transition: box-shadow .3s ease, border-color .3s ease;
+  }
+  .panel.flash{ box-shadow: 0 0 0 2px var(--flashcolor, var(--cyan)) inset, 0 0 20px -4px var(--flashcolor, var(--cyan)); }
+  .panel h3{ margin:0; font-size:14px; font-weight:600; display:flex; align-items:center; gap:8px; }
+  .dot{ width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .dot.cyan{ background:var(--cyan); box-shadow:0 0 8px #4fd7e0aa; }
+  .dot.yellow{ background:var(--yellow); box-shadow:0 0 8px #e0c34faa; }
+  .dot.green{ background:var(--green); box-shadow:0 0 8px #52d17caa; }
+  .dot.violet{ background:var(--violet); box-shadow:0 0 8px #b39ff0aa; }
+  .panel .sub{ font-family:var(--mono); font-size:11px; color:var(--ink-faint); margin:3px 0 14px; }
+  .panel .body{ flex:1; display:flex; flex-direction:column; gap:7px; overflow:auto; }
+  .empty-note{ color:var(--ink-faint); font-style:italic; font-size:13px; margin-top:4px; }
+
+  .file-row{
+    display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:12.5px;
+    padding:7px 9px; border-radius:6px; background:#171b21; border:1px solid #232a32; color:var(--ink);
+  }
+  .file-row.new-anim{ animation: popIn .4s ease; }
+  .file-row .badge{ font-family:var(--sans); font-size:9.5px; padding:1px 6px; border-radius:4px; letter-spacing:.3px; }
+  .file-row.modified .badge{ background:#3a2f12; color:var(--yellow); }
+  .file-row.staged .badge{ background:#123a26; color:var(--green); }
+  .file-row.conflict{ background:#301416; border-color:#5c2226; }
+  .file-row.conflict .badge{ background:#4a1618; color:var(--red); }
+
+  .commit-card{
+    border-radius:8px; padding:9px 11px; border:1px solid; background:#0e1a15;
+    border-color:#1f4632;
+  }
+  .commit-card .hash{ font-family:var(--mono); font-size:11.5px; font-weight:700; }
+  .commit-card .msg{ font-family:var(--mono); font-size:12px; margin-top:3px; opacity:.92; }
+  .local-repo .commit-card{ background:#0e1a15; border-color:#1f4632; }
+  .local-repo .commit-card .hash{ color:#7fe0a0; }
+  .remote-repo .commit-card{ background:#181329; border-color:#3a2e57; }
+  .remote-repo .commit-card .hash{ color:#c6b3f7; }
+  .commit-card.fetched{ opacity:.55; border-style:dashed; }
+  .commit-card.ghost-target{ opacity:.45; border-style:dashed; }
+  .commit-card.new-anim{ animation: popIn .5s ease; }
+  .commit-card .flagrow{ margin-top:4px; }
+  .commit-card .flag{ font-family:var(--sans); font-size:9px; letter-spacing:.3px; padding:1px 5px; border-radius:3px; background:#22283022; color:var(--ink-faint); border:1px solid #2b323b; }
+
+  .branch-strip{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+  .branch-pill{
+    display:flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px;
+    padding:5px 9px; border-radius:6px; background:#101a15; border:1px solid #24352b; color:var(--ink-dim);
+  }
+  .branch-pill .bname{ color:var(--ink); font-weight:600; }
+  .branch-pill.current{ border-color:#52d17c; background:#0f2019; color:#7fe0a0; }
+  .branch-pill.current .bname{ color:#9dedb8; }
+
+  @keyframes popIn{ from{ opacity:0; transform:translateY(-6px) scale(.97);} to{ opacity:1; transform:translateY(0) scale(1);} }
+
+  /* concept panel */
+  .concept{ margin-top:22px; background:var(--panel); border:1px solid var(--panel-border); border-radius:11px; overflow:hidden; }
+  .concept .chead{ display:flex; align-items:center; gap:10px; padding:14px 16px; cursor:pointer; user-select:none; }
+  .concept .chead .toggle{
+    width:20px;height:20px;border-radius:5px;background:#171b21;border:1px solid #262c34;
+    display:flex;align-items:center;justify-content:center;font-size:13px; color:var(--ink-dim); flex-shrink:0;
+  }
+  .concept .chead h3{ margin:0; font-size:14.5px; font-weight:600; }
+  .concept .cbody{ padding:0 16px 18px 46px; color:var(--ink-dim); font-size:14px; line-height:1.65; max-width:820px; }
+  .concept .cbody strong{ color:var(--ink); font-weight:600; }
+  .concept .cbody .cmd-inline{ font-family:var(--mono); background:#171b21; padding:1px 6px; border-radius:4px; color:var(--cyan); font-size:13px; }
+  .concept.collapsed .cbody{ display:none; }
+  .concept .chead .toggle.rot{ transform:rotate(0deg); }
+
+  footer.credit{ text-align:center; margin-top:30px; font-size:11.5px; color:var(--ink-faint); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>Git Flow <span>— interactive simulator</span></h1>
+    <div class="tag">working directory → staging → local repo → remote</div>
+  </header>
+
+  <div class="controlbar">
+    <div class="field" style="flex:1; min-width:260px;">
+      <label for="scenarioSelect">Scenario</label>
+      <select id="scenarioSelect"></select>
+    </div>
+    <div class="field">
+      <label for="speedSelect">Speed</label>
+      <select id="speedSelect">
+        <option value="1400">Slow</option>
+        <option value="900" selected>Normal</option>
+        <option value="450">Fast</option>
+      </select>
+    </div>
+    <div class="helper-line" id="scenarioDesc">Select a scenario, then click "Run next step" to walk through it command by command.</div>
+  </div>
+
+  <div class="flow-row" id="flowRow"></div>
+
+  <div class="actions">
+    <button class="btn-primary" id="runBtn"><span>Run next step</span> <span class="cmdtxt" id="runBtnCmd"></span></button>
+    <button class="btn-secondary" id="autoBtn">▶ Auto-play flow</button>
+    <button class="btn-ghost" id="resetBtn">↺ Reset</button>
+  </div>
+
+  <div class="panels">
+    <div class="panel" id="panelWorking">
+      <h3><span class="dot cyan"></span>Working Directory</h3>
+      <div class="sub">your files on disk</div>
+      <div class="body" id="workingBody"></div>
+    </div>
+    <div class="panel" id="panelStaging">
+      <h3><span class="dot yellow"></span>Staging Area</h3>
+      <div class="sub">index — next commit</div>
+      <div class="body" id="stagingBody"></div>
+    </div>
+    <div class="panel" id="panelLocal">
+      <h3><span class="dot green"></span>Local Repository</h3>
+      <div class="sub">.git — commit history</div>
+      <div class="body local-repo" id="localBody"></div>
+    </div>
+    <div class="panel" id="panelRemote">
+      <h3><span class="dot violet"></span>Remote</h3>
+      <div class="sub">origin — shared repo</div>
+      <div class="body remote-repo" id="remoteBody"></div>
+    </div>
+  </div>
+
+  <div class="concept" id="conceptBox">
+    <div class="chead" id="conceptToggle">
+      <span class="toggle" id="conceptToggleIcon">−</span>
+      <h3>Concept</h3>
+    </div>
+    <div class="cbody" id="conceptBody">Select a scenario and click "Run next step". Each command's meaning appears here.</div>
+  </div>
+
+  <footer class="credit">A visual model of Git's four areas — not a real repository. Hashes and file names are illustrative.</footer>
+</div>
+
+<script>
+/* ---------------------------------------------------------
+   DATA MODEL
+--------------------------------------------------------- */
+const FILE_POOL = ["index.html","style.css","app.js","README.md","utils.js","config.json","header.js"];
+let fileCursor = 0;
+function nextFileName(){ return FILE_POOL[(fileCursor++) % FILE_POOL.length]; }
+function randHash(){
+  const chars = "0123456789abcdef";
+  let h = "";
+  for(let i=0;i<7;i++) h += chars[Math.floor(Math.random()*chars.length)];
+  return h;
+}
+
+function baseLocal(){
+  return [
+    {hash:"4dea37d", msg:"Add project scaffold"},
+    {hash:"6c5e0b3", msg:"Initial commit"}
+  ];
+}
+function cloneCommits(list){ return list.map(c => ({...c})); }
+
+function freshState(overrides){
+  const s = {
+    working: [],
+    staging: [],
+    local: baseLocal(),
+    remote: cloneCommits(baseLocal()),
+    fetched: [],
+    conflict: false,
+    branches: {},
+    currentBranch: 'main'
+  };
+  return Object.assign(s, overrides || {});
+}
+
+/* Apply one step's command to a state (mutates & returns it) */
+function applyStep(state, step){
+  // clear transient "justAdded" flags before applying new ones
+  state.local.forEach(c => c.justAdded = false);
+  state.remote.forEach(c => c.justAdded = false);
+
+  switch(step.cmd){
+    case 'edit': {
+      const file = step.file || nextFileName();
+      if(!state.working.find(f => f.name === file)){
+        state.working.push({name:file, status:'modified'});
+      }
+      break;
+    }
+    case 'add-all': {
+      state.working.filter(f => f.status !== 'conflict').forEach(f => {
+        if(!state.staging.find(s => s.name === f.name)) state.staging.push({name:f.name});
+      });
+      state.working = state.working.filter(f => f.status === 'conflict');
+      break;
+    }
+    case 'add-one': {
+      if(state.working.length){
+        const f = state.working.shift();
+        state.staging.push({name:f.name});
+      }
+      break;
+    }
+    case 'commit': {
+      const hash = randHash();
+      state.local.unshift({hash, msg: step.message || "Update files", justAdded:true});
+      state.staging = [];
+      break;
+    }
+    case 'commit-a': {
+      state.staging = state.working.map(f => ({name:f.name}));
+      state.working = [];
+      const hash = randHash();
+      state.local.unshift({hash, msg: step.message || "Quick update", justAdded:true});
+      state.staging = [];
+      break;
+    }
+    case 'push': {
+      const remoteHashes = new Set(state.remote.map(c => c.hash));
+      const toPush = state.local.filter(c => !remoteHashes.has(c.hash)).slice().reverse();
+      toPush.forEach(c => state.remote.unshift({...c, justAdded:true}));
+      break;
+    }
+    case 'pull-ff': {
+      const localHashes = new Set(state.local.map(c => c.hash));
+      const toPull = state.remote.filter(c => !localHashes.has(c.hash)).slice().reverse();
+      toPull.forEach(c => state.local.unshift({...c, justAdded:true}));
+      state.fetched = [];
+      break;
+    }
+    case 'pull-merge': {
+      const localHashes = new Set(state.local.map(c => c.hash));
+      const toPull = state.remote.filter(c => !localHashes.has(c.hash)).slice().reverse();
+      toPull.forEach(c => state.local.unshift({...c, justAdded:true}));
+      const hash = randHash();
+      state.local.unshift({hash, msg:"Merge remote-tracking branch 'origin/main'", justAdded:true, merge:true});
+      state.fetched = [];
+      break;
+    }
+    case 'fetch': {
+      const localHashes = new Set(state.local.map(c => c.hash));
+      state.fetched = state.remote.filter(c => !localHashes.has(c.hash));
+      break;
+    }
+    case 'pull-conflict': {
+      // the pull DOES fetch the remote's new commit(s) — they just can't be
+      // merged in yet because the working file conflicts. Surface them as
+      // "blocked" so the incoming commit is visible in Local Repository.
+      const localHashes = new Set(state.local.map(c => c.hash));
+      state.fetched = state.remote
+        .filter(c => !localHashes.has(c.hash))
+        .map(c => ({...c, blocked:true}));
+      state.working.forEach(f => f.status = 'conflict');
+      state.conflict = true;
+      break;
+    }
+    case 'resolve': {
+      state.working.forEach(f => f.status = 'modified');
+      state.conflict = false;
+      break;
+    }
+    case 'unstage': {
+      if(state.staging.length){
+        const f = state.staging.pop();
+        state.working.push({name:f.name, status:'modified'});
+      }
+      break;
+    }
+    case 'restore': {
+      state.working = [];
+      break;
+    }
+    case 'commit-merge': {
+      // completes an interrupted pull: merge any pending fetched commits
+      // into local history, then record the resolution as a merge commit.
+      const localHashes = new Set(state.local.map(c => c.hash));
+      const toMerge = state.fetched.filter(c => !localHashes.has(c.hash)).slice().reverse();
+      toMerge.forEach(c => state.local.unshift({hash:c.hash, msg:c.msg, justAdded:true}));
+      state.fetched = [];
+      const hash = randHash();
+      state.local.unshift({hash, msg: step.message || "Merge commit", justAdded:true, merge:true});
+      state.staging = [];
+      break;
+    }
+    case 'branch': {
+      const name = step.name;
+      state.branches[state.currentBranch] = cloneCommits(state.local);
+      state.branches[name] = cloneCommits(state.local);
+      break;
+    }
+    case 'checkout': {
+      const name = step.name;
+      state.branches[state.currentBranch] = cloneCommits(state.local);
+      state.currentBranch = name;
+      state.local = cloneCommits(state.branches[name] || []);
+      state.working = [];
+      state.staging = [];
+      break;
+    }
+    case 'merge-branch': {
+      const src = step.name;
+      const targetHashes = new Set(state.local.map(c => c.hash));
+      const srcCommits = state.branches[src] || [];
+      const toMerge = srcCommits.filter(c => !targetHashes.has(c.hash)).slice().reverse();
+      toMerge.forEach(c => state.local.unshift({...c, justAdded:true}));
+      state.branches[state.currentBranch] = cloneCommits(state.local);
+      break;
+    }
+    case 'amend': {
+      const last = state.local[0];
+      last.hash = randHash();
+      last.msg = step.message || (last.msg + " (amended)");
+      last.justAdded = true;
+      last.amended = true;
+      state.staging = [];
+      break;
+    }
+    case 'clone': {
+      state.local = cloneCommits(state.remote).map(c => ({...c, justAdded:true}));
+      break;
+    }
+    default: break;
+  }
+  return state;
+}
+
+/* ---------------------------------------------------------
+   SCENARIOS
+--------------------------------------------------------- */
+const SCENARIOS = [
+  { group:"Initial (one-time setup)", items:[
+    { id:"clone", label:"Clone a repository",
+      init:() => freshState({ local: [] }),
+      desc:"Copy an existing remote repository onto your machine for the first time.",
+      steps:[
+        { cmd:"clone", chip:"git clone", concept:
+          `<strong>git clone</strong> copies the entire history from the <span class="cmd-inline">Remote</span> into a brand-new <span class="cmd-inline">Local Repository</span> on your disk, and checks the latest commit out into your <span class="cmd-inline">Working Directory</span>. You now have a full, independent copy of the project — Staging Area starts empty and Working Directory starts clean.` }
+      ]
+    }
+  ]},
+  { group:"Everyday", items:[
+    { id:"sync-then-work", label:"Sync then work: pull → edit → add → commit → push",
+      init:() => freshState({ remote:[{hash:"9a41c02",msg:"Fix header spacing"}, ...cloneCommits(baseLocal())] }),
+      desc:"Start your session by catching up with the team before making changes.",
+      steps:[
+        { cmd:"pull-ff", chip:"git pull", concept:
+          `A teammate already pushed a commit you don't have. <strong>git pull</strong> fetches it and fast-forwards your <span class="cmd-inline">Local Repository</span> — since you have no local changes yet, this is a clean, simple update.` },
+        { cmd:"edit", chip:"edit", concept:
+          `You start working. Editing a file changes it only in your <span class="cmd-inline">Working Directory</span> — nothing else knows about this change yet.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> moves your edit into the <span class="cmd-inline">Staging Area</span>, marking it as "ready to be part of the next commit."` },
+        { cmd:"commit", message:"Adjust nav layout", chip:"git commit", concept:
+          `<strong>git commit</strong> takes everything in the Staging Area and permanently records it as a new snapshot in your <span class="cmd-inline">Local Repository</span>, with a message describing the change.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads your new local commit to the <span class="cmd-inline">Remote</span> so everyone else can see it too.` }
+      ]
+    },
+    { id:"work-then-sync", label:"Work then sync: edit → add → commit → pull → push",
+      init:() => freshState({ remote:[{hash:"7fb2a19",msg:"Update footer copy"}, ...cloneCommits(baseLocal())] }),
+      desc:"You worked first without checking for updates — now you reconcile before pushing.",
+      steps:[
+        { cmd:"edit", chip:"edit", concept:
+          `You dive straight into editing a file in your <span class="cmd-inline">Working Directory</span>, without checking whether the remote has moved on.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages the edit into the <span class="cmd-inline">Staging Area</span>.` },
+        { cmd:"commit", message:"Tweak button colors", chip:"git commit", concept:
+          `<strong>git commit</strong> saves the staged change as a new snapshot in your <span class="cmd-inline">Local Repository</span>. At this point your local history has diverged from the remote — you both moved forward independently.` },
+        { cmd:"pull-merge", chip:"git pull", concept:
+          `<strong>git pull</strong> downloads the remote's commit and merges it with yours. Because both sides advanced independently, Git can't just fast-forward — it creates an automatic <em>merge commit</em> tying both histories together.` },
+        { cmd:"push", chip:"git push", concept:
+          `Now that your local history includes the remote's work plus your own, <strong>git push</strong> can safely upload it back to the <span class="cmd-inline">Remote</span>.` }
+      ]
+    },
+    { id:"multi-edit-one-commit", label:"Multiple edits, one commit: edit ×2 → add → commit → push",
+      init:() => freshState(),
+      desc:"Bundle several changed files into a single logical commit.",
+      steps:[
+        { cmd:"edit", file:"index.html", chip:"edit", concept:
+          `You edit a file in the <span class="cmd-inline">Working Directory</span>. It's now "modified" but not yet tracked for the next commit.` },
+        { cmd:"edit", file:"style.css", chip:"edit", concept:
+          `You edit a second, related file. Both changes sit side by side in the Working Directory, uncommitted.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add .</strong> stages every modified file at once, moving both into the <span class="cmd-inline">Staging Area</span> together.` },
+        { cmd:"commit", message:"Update layout and styles", chip:"git commit", concept:
+          `A single <strong>git commit</strong> bundles both staged files into one logical snapshot in the <span class="cmd-inline">Local Repository</span> — one meaningful change, one commit.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads that one commit (covering both files) to the <span class="cmd-inline">Remote</span>.` }
+      ]
+    },
+    { id:"several-commits-then-push", label:"Several commits then push: (edit → add → commit) ×2 → push",
+      init:() => freshState(),
+      desc:"Make two separate, focused commits locally, then publish them together.",
+      steps:[
+        { cmd:"edit", file:"app.js", chip:"edit", concept:
+          `First change: you edit a file in the <span class="cmd-inline">Working Directory</span>.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages that one change.` },
+        { cmd:"commit", message:"Add input validation", chip:"git commit", concept:
+          `<strong>git commit</strong> saves it as its own focused snapshot in the <span class="cmd-inline">Local Repository</span> — commits are cheap and local, so it's fine to make several before publishing anything.` },
+        { cmd:"edit", file:"utils.js", chip:"edit", concept:
+          `Second, unrelated change: another file is edited.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `Staged again, independently of the first commit.` },
+        { cmd:"commit", message:"Refactor date helper", chip:"git commit", concept:
+          `A second commit is recorded locally. Your <span class="cmd-inline">Local Repository</span> is now two commits ahead of <span class="cmd-inline">Remote</span> — none of this is visible to anyone else yet.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads both local commits to the <span class="cmd-inline">Remote</span> in one go, in the order you made them.` }
+      ]
+    },
+    { id:"shortcut-commit-a", label:"Shortcut: edit → commit -a → push",
+      init:() => freshState(),
+      desc:"Skip the explicit staging step for files Git already tracks.",
+      steps:[
+        { cmd:"edit", file:"README.md", chip:"edit", concept:
+          `You edit a file that Git already tracks (it was part of an earlier commit).` },
+        { cmd:"commit-a", message:"Fix typo in README", chip:"git commit -a", concept:
+          `<strong>git commit -a</strong> is a shortcut: it stages every already-tracked, modified file <em>and</em> commits it in one step, skipping a separate <span class="cmd-inline">git add</span>. It only works for files Git already knows about — brand-new files still need an explicit add.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads the new commit to the <span class="cmd-inline">Remote</span>.` }
+      ]
+    }
+  ]},
+  { group:"Branching", items:[
+    { id:"basic-branching", label:"Basic branching: branch → checkout → edit → add → commit → checkout main → merge → push",
+      init:() => freshState(),
+      desc:"Do isolated work on its own line of history, then bring it back into main.",
+      steps:[
+        { cmd:"branch", name:"feature-login", chip:"git branch", concept:
+          `<strong>git branch feature-login</strong> creates a new pointer at your current commit — it does <em>not</em> switch you onto it. Both <span class="cmd-inline">main</span> and <span class="cmd-inline">feature-login</span> point at the same commit right now, shown side by side above the commit list.` },
+        { cmd:"checkout", name:"feature-login", chip:"git checkout", concept:
+          `<strong>git checkout feature-login</strong> switches HEAD — and your Working Directory — onto the new branch. Any commits you make from here will only extend <span class="cmd-inline">feature-login</span>, leaving <span class="cmd-inline">main</span> untouched.` },
+        { cmd:"edit", file:"login.js", chip:"edit", concept:
+          `You edit a file while on the feature branch. This change is isolated — it won't appear on <span class="cmd-inline">main</span> unless it's merged back later.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages the change into the <span class="cmd-inline">Staging Area</span>, same as on any branch.` },
+        { cmd:"commit", message:"Add login form", chip:"git commit", concept:
+          `<strong>git commit</strong> records the change on <span class="cmd-inline">feature-login</span> only. The branch strip now shows <span class="cmd-inline">feature-login</span> ahead of <span class="cmd-inline">main</span> — the two have diverged from their shared starting point.` },
+        { cmd:"checkout", name:"main", chip:"git checkout", concept:
+          `Switching back to <strong>main</strong> shows main's own history — the login commit isn't visible here, because main's pointer never moved while you were working on the branch.` },
+        { cmd:"merge-branch", name:"feature-login", chip:"git merge", concept:
+          `<strong>git merge feature-login</strong> brings the branch's commit into <span class="cmd-inline">main</span>. Since main hasn't advanced since the branch was created, Git can simply <strong>fast-forward</strong> main's pointer up to the branch's tip — no merge commit needed. Notice both branches now point at the same commit.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> publishes main's updated history — now including the feature work — to <span class="cmd-inline">Remote</span>.` }
+      ]
+    }
+  ]},
+  { group:"Staging area", items:[
+    { id:"partial-staging", label:"Partial staging: edit ×2 → add one → commit → push",
+      init:() => freshState(),
+      desc:"Commit only one of your changes, leaving the other for later.",
+      steps:[
+        { cmd:"edit", file:"index.html", chip:"edit", concept:
+          `You edit a file — a finished, ready-to-ship change.` },
+        { cmd:"edit", file:"config.json", chip:"edit", concept:
+          `You also edit a second file — but this one is still a work in progress.` },
+        { cmd:"add-one", chip:"git add (one)", concept:
+          `You stage only the finished file. The Staging Area doesn't have to mirror the whole Working Directory — you choose exactly what goes into the next commit.` },
+        { cmd:"commit", message:"Update homepage markup", chip:"git commit", concept:
+          `<strong>git commit</strong> records only what was staged. The second, unfinished file stays modified in the <span class="cmd-inline">Working Directory</span> — untouched and uncommitted.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> publishes the finished commit. Your unfinished edit never left your machine.` }
+      ]
+    },
+    { id:"unstage", label:"Unstage: edit → add → unstage",
+      init:() => freshState(),
+      desc:"Change your mind after staging, before committing.",
+      steps:[
+        { cmd:"edit", file:"app.js", chip:"edit", concept:
+          `You edit a file in the <span class="cmd-inline">Working Directory</span>.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages it, marking it ready for the next commit.` },
+        { cmd:"unstage", chip:"git restore --staged", concept:
+          `You decide it's not ready after all. Unstaging moves the file back out of the <span class="cmd-inline">Staging Area</span> and into the <span class="cmd-inline">Working Directory</span> — your edits are kept, only the "ready to commit" mark is removed.` }
+      ]
+    },
+    { id:"amend-commit", label:"Amend last commit: commit → edit → add → amend",
+      init:() => freshState({ staging:[{name:"index.html"}] }),
+      desc:"Fix or extend a commit you just made, instead of adding a new one.",
+      steps:[
+        { cmd:"commit", message:"Add homepage", chip:"git commit", concept:
+          `A change is already staged, so <strong>git commit</strong> records it as a new snapshot in the <span class="cmd-inline">Local Repository</span>.` },
+        { cmd:"edit", file:"style.css", chip:"edit", concept:
+          `Right after, you notice something related was missing, so you edit another file.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages that follow-up change.` },
+        { cmd:"amend", message:"Add homepage and styles", chip:"git commit --amend", concept:
+          `<strong>git commit --amend</strong> folds the staged change into the <em>previous</em> commit instead of creating a new one — the old commit is replaced by an updated one with a new hash, keeping history tidy. Only amend commits you haven't pushed yet.` }
+      ]
+    }
+  ]},
+  { group:"Sync with remote", items:[
+    { id:"fetch-vs-pull", label:"Fetch vs. pull: edit → add → commit → fetch → pull → push",
+      init:() => freshState({ remote:[{hash:"3cc781e",msg:"Improve error messages"}, ...cloneCommits(baseLocal())] }),
+      desc:"See the difference between downloading updates and actually merging them.",
+      steps:[
+        { cmd:"edit", file:"app.js", chip:"edit", concept:
+          `You make a local change while, unknown to you, a teammate has already pushed to <span class="cmd-inline">Remote</span>.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages your change.` },
+        { cmd:"commit", message:"Log request payloads", chip:"git commit", concept:
+          `<strong>git commit</strong> records it locally. Your Local Repository and the Remote have now diverged.` },
+        { cmd:"fetch", chip:"git fetch", concept:
+          `<strong>git fetch</strong> downloads the teammate's commit and any new history from <span class="cmd-inline">Remote</span> — but it does <em>not</em> touch your <span class="cmd-inline">Working Directory</span> or merge anything into your current branch. It just lets you look at what changed first (shown faded here).` },
+        { cmd:"pull-merge", chip:"git pull", concept:
+          `<strong>git pull</strong> is really "fetch + merge" in one step: it takes what was just fetched and merges it into your <span class="cmd-inline">Local Repository</span>, creating a merge commit since both sides moved forward independently.` },
+        { cmd:"push", chip:"git push", concept:
+          `With the histories merged, <strong>git push</strong> safely uploads your combined history to <span class="cmd-inline">Remote</span>.` }
+      ]
+    },
+    { id:"catch-up-ff", label:"Catch up: pull (fast-forward)",
+      init:() => freshState({ remote:[{hash:"e819fa2",msg:"Bump dependency versions"},{hash:"5b0d3af",msg:"Add CI workflow"}, ...cloneCommits(baseLocal())] }),
+      desc:"You have no local changes — pulling is a simple, conflict-free catch-up.",
+      steps:[
+        { cmd:"pull-ff", chip:"git pull", concept:
+          `Since your <span class="cmd-inline">Local Repository</span> has no commits the Remote doesn't already have, Git can simply move your branch pointer forward to match — a <strong>fast-forward</strong>. No merge commit is needed because histories never actually diverged.` }
+      ]
+    },
+    { id:"diverged-clean", label:"Diverged but clean: edit → add → commit → pull → push",
+      init:() => freshState({ remote:[{hash:"a410c5e",msg:"Update dependencies"}, ...cloneCommits(baseLocal())] }),
+      desc:"Both sides changed different things — no conflict, but a merge is still needed.",
+      steps:[
+        { cmd:"edit", file:"main.py", chip:"edit", concept:
+          `You edit a file locally while <span class="cmd-inline">Remote</span> already has a commit you don't have yet.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> stages your edit.` },
+        { cmd:"commit", message:"Add retry logic", chip:"git commit", concept:
+          `<strong>git commit</strong> saves it locally. Your history and the Remote's history have now diverged — two different paths forward from the same starting point.` },
+        { cmd:"pull-merge", chip:"git pull", concept:
+          `<strong>git pull</strong> downloads the Remote's commit and merges it in. Because the changes touched different files, Git merges them automatically with no conflict — just a merge commit joining both histories.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads the merged history back to <span class="cmd-inline">Remote</span>.` }
+      ]
+    }
+  ]},
+  { group:"Conflict & recovery", items:[
+    { id:"pull-conflict", label:"Pull with conflict: edit → pull (conflict) → resolve → add → commit → push",
+      init:() => freshState({ remote:[{hash:"d902bb1",msg:"Rewrite auth handler"}, ...cloneCommits(baseLocal())] }),
+      desc:"Two people edit the same lines — Git can't merge automatically.",
+      steps:[
+        { cmd:"edit", file:"app.js", chip:"edit", concept:
+          `You edit <span class="cmd-inline">app.js</span> locally. Unknown to you, a teammate already pushed a commit that changed the very same lines of that file.` },
+        { cmd:"pull-conflict", chip:"git pull", concept:
+          `<strong>git pull</strong> does fetch the teammate's commit — you can see it land in <span class="cmd-inline">Local Repository</span> as a dashed, "blocked by conflict" card. But it can't be merged automatically, because it edits the same lines you did. Git pauses the merge and marks <span class="cmd-inline">app.js</span> as <strong>conflicted</strong> in your Working Directory, leaving conflict markers for you to resolve.` },
+        { cmd:"resolve", chip:"resolve", concept:
+          `You open the file, look at both versions inside the conflict markers, and manually edit it to the version you want to keep. The file is still just "modified," but the conflict is cleared.` },
+        { cmd:"add-all", chip:"git add .", concept:
+          `<strong>git add</strong> tells Git the conflict is resolved and stages the fixed file for commit.` },
+        { cmd:"commit-merge", message:"Merge branch 'origin/main'", chip:"git commit", concept:
+          `<strong>git commit</strong> finishes the pull that was paused earlier: the teammate's commit moves out of "blocked" status into your real history, and a new <strong>merge commit</strong> is recorded on top, reconciling both histories in the <span class="cmd-inline">Local Repository</span>.` },
+        { cmd:"push", chip:"git push", concept:
+          `<strong>git push</strong> uploads the resolved history to <span class="cmd-inline">Remote</span>, so your teammate sees the same resolution.` }
+      ]
+    },
+    { id:"discard-changes", label:"Discard changes: edit → restore",
+      init:() => freshState(),
+      desc:"Throw away an edit you no longer want, before it's staged.",
+      steps:[
+        { cmd:"edit", file:"config.json", chip:"edit", concept:
+          `You edit a file, then decide the change was a mistake.` },
+        { cmd:"restore", chip:"git restore", concept:
+          `<strong>git restore</strong> discards the uncommitted edit in your <span class="cmd-inline">Working Directory</span>, resetting the file back to match the last commit. This only works before the change is staged or committed — once committed, "undoing" means something different.` }
+      ]
+    }
+  ]}
+];
+
+/* ---------------------------------------------------------
+   RUNTIME
+--------------------------------------------------------- */
+let currentScenario = null;
+let state = null;
+let stepIndex = 0; // number of steps already executed
+let autoTimer = null;
+
+const els = {
+  scenarioSelect: document.getElementById('scenarioSelect'),
+  speedSelect: document.getElementById('speedSelect'),
+  scenarioDesc: document.getElementById('scenarioDesc'),
+  flowRow: document.getElementById('flowRow'),
+  runBtn: document.getElementById('runBtn'),
+  runBtnCmd: document.getElementById('runBtnCmd'),
+  autoBtn: document.getElementById('autoBtn'),
+  resetBtn: document.getElementById('resetBtn'),
+  workingBody: document.getElementById('workingBody'),
+  stagingBody: document.getElementById('stagingBody'),
+  localBody: document.getElementById('localBody'),
+  remoteBody: document.getElementById('remoteBody'),
+  panelWorking: document.getElementById('panelWorking'),
+  panelStaging: document.getElementById('panelStaging'),
+  panelLocal: document.getElementById('panelLocal'),
+  panelRemote: document.getElementById('panelRemote'),
+  conceptBody: document.getElementById('conceptBody'),
+  conceptBox: document.getElementById('conceptBox'),
+  conceptToggle: document.getElementById('conceptToggle'),
+  conceptToggleIcon: document.getElementById('conceptToggleIcon'),
+};
+
+function buildScenarioOptions(){
+  SCENARIOS.forEach(group => {
+    const og = document.createElement('optgroup');
+    og.label = group.group;
+    group.items.forEach(item => {
+      const opt = document.createElement('option');
+      opt.value = item.id;
+      opt.textContent = item.label;
+      og.appendChild(opt);
+    });
+    els.scenarioSelect.appendChild(og);
+  });
+}
+
+function findScenario(id){
+  for(const g of SCENARIOS){
+    const found = g.items.find(i => i.id === id);
+    if(found) return found;
+  }
+  return null;
+}
+
+function loadScenario(id){
+  clearInterval(autoTimer); autoTimer = null;
+  els.autoBtn.textContent = '▶ Auto-play flow';
+  currentScenario = findScenario(id);
+  state = currentScenario.init();
+  stepIndex = 0;
+  els.scenarioDesc.textContent = currentScenario.desc;
+  els.conceptBody.innerHTML = 'Select a scenario and click "Run next step". Each command\'s meaning appears here.';
+  renderFlow();
+  renderPanels();
+  updateRunButton();
+}
+
+function renderFlow(){
+  els.flowRow.innerHTML = '';
+  currentScenario.steps.forEach((step, i) => {
+    if(i > 0){
+      const arrow = document.createElement('span');
+      arrow.className = 'arrow';
+      arrow.textContent = '→';
+      els.flowRow.appendChild(arrow);
+    }
+    const chip = document.createElement('div');
+    let cls = 'chip';
+    if(i < stepIndex) cls += ' done';
+    else if(i === stepIndex) cls += ' current';
+    chip.className = cls;
+    chip.innerHTML = `<span class="num">${i+1}</span><span>${step.chip}</span>`;
+    els.flowRow.appendChild(chip);
+  });
+}
+
+function updateRunButton(){
+  const done = stepIndex >= currentScenario.steps.length;
+  els.runBtn.disabled = done;
+  els.autoBtn.disabled = done;
+  if(done){
+    els.runBtnCmd.textContent = '';
+    els.runBtn.querySelector('span').textContent = 'All steps complete';
+  } else {
+    els.runBtn.querySelector('span').textContent = 'Run next step';
+    els.runBtnCmd.textContent = currentScenario.steps[stepIndex].chip;
+  }
+}
+
+function flashPanels(cmd){
+  const map = {
+    'edit': [['panelWorking','cyan']],
+    'add-all': [['panelStaging','yellow']],
+    'add-one': [['panelStaging','yellow']],
+    'commit': [['panelLocal','green']],
+    'commit-a': [['panelLocal','green']],
+    'push': [['panelRemote','violet']],
+    'pull-ff': [['panelLocal','green']],
+    'pull-merge': [['panelLocal','green']],
+    'fetch': [['panelLocal','green']],
+    'pull-conflict': [['panelWorking','cyan'], ['panelLocal','green']],
+    'resolve': [['panelWorking','cyan']],
+    'unstage': [['panelStaging','yellow']],
+    'restore': [['panelWorking','cyan']],
+    'amend': [['panelLocal','green']],
+    'commit-merge': [['panelLocal','green']],
+    'branch': [['panelLocal','green']],
+    'checkout': [['panelLocal','green'], ['panelWorking','cyan']],
+    'merge-branch': [['panelLocal','green']],
+    'clone': [['panelLocal','green']]
+  };
+  const colorVar = {cyan:'#4fd7e0', yellow:'#e0c34f', green:'#52d17c', violet:'#b39ff0'};
+  (map[cmd] || []).forEach(([panelId, color]) => {
+    const el = document.getElementById(panelId);
+    el.style.setProperty('--flashcolor', colorVar[color]);
+    el.classList.add('flash');
+    setTimeout(() => el.classList.remove('flash'), 900);
+  });
+}
+
+function runNextStep(){
+  if(stepIndex >= currentScenario.steps.length) return;
+  const step = currentScenario.steps[stepIndex];
+  applyStep(state, step);
+  stepIndex++;
+  renderFlow();
+  renderPanels();
+  flashPanels(step.cmd);
+  els.conceptBody.innerHTML = step.concept;
+  updateRunButton();
+}
+
+function resetScenario(){
+  loadScenario(currentScenario.id);
+}
+
+function autoPlay(){
+  if(autoTimer){
+    clearInterval(autoTimer);
+    autoTimer = null;
+    els.autoBtn.textContent = '▶ Auto-play flow';
+    return;
+  }
+  els.autoBtn.textContent = '⏸ Pause';
+  const delay = parseInt(els.speedSelect.value, 10);
+  autoTimer = setInterval(() => {
+    if(stepIndex >= currentScenario.steps.length){
+      clearInterval(autoTimer); autoTimer = null;
+      els.autoBtn.textContent = '▶ Auto-play flow';
+      return;
+    }
+    runNextStep();
+  }, delay);
+}
+
+/* ---------------------------------------------------------
+   RENDER PANELS
+--------------------------------------------------------- */
+function renderPanels(){
+  // Working Directory
+  els.workingBody.innerHTML = '';
+  if(state.working.length === 0){
+    els.workingBody.innerHTML = '<div class="empty-note">clean</div>';
+  } else {
+    state.working.forEach(f => {
+      const row = document.createElement('div');
+      row.className = 'file-row ' + (f.status === 'conflict' ? 'conflict' : 'modified') + ' new-anim';
+      const badgeTxt = f.status === 'conflict' ? 'CONFLICT' : 'modified';
+      row.innerHTML = `<span>${f.name}</span><span class="badge">${badgeTxt}</span>`;
+      els.workingBody.appendChild(row);
+    });
+  }
+
+  // Staging Area
+  els.stagingBody.innerHTML = '';
+  if(state.staging.length === 0){
+    els.stagingBody.innerHTML = '<div class="empty-note">empty</div>';
+  } else {
+    state.staging.forEach(f => {
+      const row = document.createElement('div');
+      row.className = 'file-row staged new-anim';
+      row.innerHTML = `<span>${f.name}</span><span class="badge">staged</span>`;
+      els.stagingBody.appendChild(row);
+    });
+  }
+
+  // Local Repository
+  els.localBody.innerHTML = '';
+  const branchNames = Object.keys(state.branches || {});
+  if(branchNames.length > 1){
+    const strip = document.createElement('div');
+    strip.className = 'branch-strip';
+    branchNames.forEach(name => {
+      const commits = name === state.currentBranch ? state.local : (state.branches[name] || []);
+      const tip = commits[0] ? commits[0].hash : '—';
+      const pill = document.createElement('span');
+      pill.className = 'branch-pill' + (name === state.currentBranch ? ' current' : '');
+      pill.innerHTML = `<span class="bname">${name}</span><span class="btip">→ ${tip}</span>`;
+      strip.appendChild(pill);
+    });
+    els.localBody.appendChild(strip);
+  }
+  state.fetched.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'commit-card fetched';
+    const fetchLabel = c.blocked ? 'fetched — blocked by conflict' : 'fetched — not merged';
+    card.innerHTML = `<div class="hash">${c.hash}</div><div class="msg">${c.msg}</div><div class="flagrow"><span class="flag">${fetchLabel}</span></div>`;
+    els.localBody.appendChild(card);
+  });
+  state.local.forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'commit-card' + (c.justAdded ? ' new-anim' : '');
+    let flag = '';
+    if(c.merge) flag = '<div class="flagrow"><span class="flag">merge commit</span></div>';
+    else if(c.amended) flag = '<div class="flagrow"><span class="flag">amended</span></div>';
+    card.innerHTML = `<div class="hash">${c.hash}</div><div class="msg">${c.msg}</div>${flag}`;
+    els.localBody.appendChild(card);
+  });
+  if(state.local.length === 0 && state.fetched.length === 0){
+    els.localBody.innerHTML = '<div class="empty-note">no commits yet</div>';
+  }
+
+  // Remote
+  els.remoteBody.innerHTML = '';
+  if(state.remote.length === 0){
+    els.remoteBody.innerHTML = '<div class="empty-note">no commits</div>';
+  } else {
+    state.remote.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'commit-card' + (c.justAdded ? ' new-anim' : '');
+      let flag = c.merge ? '<div class="flagrow"><span class="flag">merge commit</span></div>' : '';
+      card.innerHTML = `<div class="hash">${c.hash}</div><div class="msg">${c.msg}</div>${flag}`;
+      els.remoteBody.appendChild(card);
+    });
+  }
+}
+
+/* ---------------------------------------------------------
+   EVENTS + INIT
+--------------------------------------------------------- */
+buildScenarioOptions();
+els.scenarioSelect.value = 'multi-edit-one-commit';
+els.scenarioSelect.addEventListener('change', e => loadScenario(e.target.value));
+els.runBtn.addEventListener('click', runNextStep);
+els.autoBtn.addEventListener('click', autoPlay);
+els.resetBtn.addEventListener('click', resetScenario);
+els.conceptToggle.addEventListener('click', () => {
+  els.conceptBox.classList.toggle('collapsed');
+  els.conceptToggleIcon.textContent = els.conceptBox.classList.contains('collapsed') ? '+' : '−';
+});
+
+loadScenario('multi-edit-one-commit');
+</script>
+</body>
+</html>
