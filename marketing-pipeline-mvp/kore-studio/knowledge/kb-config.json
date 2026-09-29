@@ -1,0 +1,10 @@
+{
+  "indexId": "kb-marketing-pipeline",
+  "platform": "Kore.ai Search AI",
+  "sources": [
+    { "file": "data/kb/pricing.md", "type": "markdown", "chunkSize": 500, "overlap": 50 },
+    { "file": "data/kb/faqs.md", "type": "markdown", "chunkSize": 500, "overlap": 50 }
+  ],
+  "settings": { "embedding": "kore-default", "threshold": 0.7, "topK": 2, "grounding": "strict" },
+  "upload": "Kore.ai Search AI Console > Collections > Create Collection 'kb-marketing-pipeline' > Upload data/kb/* > Index > Link to Bot bot.json"
+}

@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Introduction to OpenCode — Slides | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/slides.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Week 1 &middot; OpenCode Deep Dive</h4>
+    <nav>
+      <ul>
+        <li><a href="#title">Title</a></li>
+        <li><a href="#agenda">Session Agenda</a></li>
+        <li><a href="#objectives">Learning Objectives</a></li>
+
+        <li class="part-item"><a href="#opencode-config">Part 0 &middot; Configure OpenCode</a></li>
+        <li class="sub-item"><a href="#opencode-config">0.1 The opencode.jsonc Config File</a></li>
+        <li class="sub-item"><a href="#global-vs-project-config">0.2 Global vs Project Config</a></li>
+        <li class="sub-item"><a href="#model-small-model">0.3 model vs small_model</a></li>
+        <li class="sub-item"><a href="#model-choices">0.4 Choosing Models, Provider by Provider</a></li>
+        <li class="sub-item"><a href="#claude-code-config">0.5 Claude Code's Equivalent Config</a></li>
+        <li class="sub-item"><a href="#hands-on-config">0.6 Hands-On &middot; Write Your Config</a></li>
+
+        <li class="part-item"><a href="#lifecycle-commands">Part 1 &middot; Command Reference</a></li>
+        <li class="sub-item"><a href="#lifecycle-commands">1.1 Session Lifecycle Commands</a></li>
+        <li class="sub-item"><a href="#interface-commands">1.2 Interface &amp; Model Commands</a></li>
+        <li class="sub-item"><a href="#timeline-undo">1.3 The "Timeline" &middot; /undo &amp; /redo</a></li>
+        <li class="sub-item"><a href="#keybinding-platforms">1.4 Windows vs Mac Keybindings</a></li>
+        <li class="sub-item"><a href="#agents-tab-mention">1.5 Agents &middot; Tab &amp; @mention</a></li>
+        <li class="sub-item"><a href="#skills-autodiscover">1.6 Skills &middot; Auto-Discovered, Not Typed</a></li>
+        <li class="sub-item"><a href="#mcp-configured">1.7 MCP Servers &middot; Configured, Not Toggled</a></li>
+        <li class="sub-item"><a href="#status-timestamps">1.8 Status &amp; Timestamps</a></li>
+        <li class="sub-item"><a href="#hands-on-commands">1.9 Hands-On &middot; Run Every Command Once</a></li>
+
+        <li class="part-item"><a href="#what-is-agent-intro">Part 2 &middot; Agents</a></li>
+        <li class="sub-item"><a href="#what-is-agent-intro">2.1 What Is an Agent, and Why More Than One?</a></li>
+        <li class="sub-item"><a href="#build-vs-plan">2.2 Primary Agents &middot; Build vs Plan</a></li>
+        <li class="sub-item"><a href="#subagents-mention">2.3 Subagents via @mention</a></li>
+        <li class="sub-item"><a href="#built-in-subagents-recap">2.4 Built-In Subagents, Recapped</a></li>
+        <li class="sub-item"><a href="#custom-agent-anatomy">2.5 Creating a Custom Agent</a></li>
+        <li class="sub-item"><a href="#agent-tools">2.6 Tools &middot; The Building Blocks</a></li>
+        <li class="sub-item"><a href="#agent-permissions">2.7 Permissions &middot; The Approval Model</a></li>
+        <li class="sub-item"><a href="#custom-agent-example">2.8 Worked Example &middot; code-reviewer</a></li>
+        <li class="sub-item"><a href="#subagent-use-cases">2.9 Diverse Use Cases</a></li>
+        <li class="sub-item"><a href="#subagent-best-practices">2.10 Best Practices</a></li>
+        <li class="sub-item"><a href="#hands-on-subagent">2.11 Hands-On &middot; Delegate a Question</a></li>
+        <li class="sub-item"><a href="#hands-on-custom-agent">2.12 Hands-On &middot; Write Your Own Custom Agent</a></li>
+
+        <li class="part-item"><a href="#what-is-skill-intro">Part 3 &middot; Skills</a></li>
+        <li class="sub-item"><a href="#what-is-skill-intro">3.1 What Is a Skill, and Why Package It?</a></li>
+        <li class="sub-item"><a href="#skill-anatomy">3.2 Anatomy of a SKILL.md</a></li>
+        <li class="sub-item"><a href="#skill-scoped-global">3.3 Scoped vs Global Skills</a></li>
+        <li class="sub-item"><a href="#skill-use-cases">3.4 Diverse Use Cases</a></li>
+        <li class="sub-item"><a href="#skill-best-practices">3.5 Best Practices</a></li>
+        <li class="sub-item"><a href="#hands-on-skill-write">3.6 Hands-On &middot; Write a Skill</a></li>
+
+        <li class="part-item"><a href="#what-is-mcp-intro">Part 4 &middot; MCP Servers</a></li>
+        <li class="sub-item"><a href="#what-is-mcp-intro">4.1 What Is an MCP Server, and Why Connect One?</a></li>
+        <li class="sub-item"><a href="#mcp-local-remote">4.2 Local vs Remote Servers</a></li>
+        <li class="sub-item"><a href="#mcp-playwright-setup">4.3 Install &amp; Set Up Playwright MCP</a></li>
+        <li class="sub-item"><a href="#mcp-example-playwright">4.4 Example Utility &middot; Playwright MCP</a></li>
+        <li class="sub-item"><a href="#mcp-use-cases">4.5 Diverse Use Cases</a></li>
+        <li class="sub-item"><a href="#mcp-best-practices">4.6 Best Practices</a></li>
+        <li class="sub-item"><a href="#hands-on-mcp-connect">4.7 Hands-On &middot; Connect Playwright MCP</a></li>
+
+        <li class="part-item"><a href="#hands-on-init-app">Part 5 &middot; Build with OpenCode</a></li>
+        <li class="sub-item"><a href="#hands-on-init-app">5.1 Create the App Folder &amp; Run /init</a></li>
+        <li class="sub-item"><a href="#brand-context">5.2 Give It Brand Context</a></li>
+        <li class="sub-item"><a href="#hands-on-scoped-skill">5.3 Hands-On &middot; Write This App's Scoped Skill</a></li>
+        <li class="sub-item"><a href="#hands-on-scaffold-backend">5.4 Hands-On &middot; Scaffold the FastAPI Backend</a></li>
+        <li class="sub-item"><a href="#backend-reviewed">5.5 The Generated Backend, Reviewed</a></li>
+        <li class="sub-item"><a href="#hands-on-run-backend">5.6 Hands-On &middot; Activate, Install, Run</a></li>
+        <li class="sub-item"><a href="#hands-on-branded-frontend">5.7 Hands-On &middot; Build the Branded Frontend</a></li>
+        <li class="sub-item"><a href="#reading-build-diff">5.8 Reading This Diff Like a Reviewer</a></li>
+        <li class="sub-item"><a href="#hands-on-playwright-test">5.9 Hands-On &middot; Test It With Playwright MCP</a></li>
+        <li class="sub-item"><a href="#hands-on-run-skill">5.10 Hands-On &middot; Run the Scoped Skill</a></li>
+
+        <li class="part-item"><a href="#recap">Recap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="slide-main">
+    <div class="slide-stage">
+      <div class="slide-toolbar">
+        <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">54</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
+        <div class="slide-nav-btns">
+          <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
+          <button id="nextSlide" class="slide-btn">Next &rsaquo;</button>
+        </div>
+      </div>
+      <div class="slide-viewport">
+
+      <section class="slide slide-hero" id="title">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; OpenCode Deep Dive</div>
+        <h1>Introduction to OpenCode</h1>
+        <p class="lede">Every OpenCode command, explained and run live — what it does, when to use it, and what outcome to expect — with the Claude Code equivalent next to each one. Agents (including how to build your own custom ones), Skills, and MCP servers: what each one is, why it exists, how it's used, worked examples, and best practices. Then a real build: a branded FastAPI calculator with an HTML frontend, scaffolded with OpenCode from a single <code class="inline">/init</code>, and tested end to end with the Playwright MCP server.</p>
+        <div class="meta-row">
+          <span class="meta-pill">⏱ ~5.5 hours, hands-on</span>
+          <span class="meta-pill">🟢 OpenCode &middot; 🔵 Claude Code side by side</span>
+          <span class="meta-pill">🛠️ FastAPI &middot; HTML/JS &middot; Playwright MCP</span>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">01</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agenda">
+        <div class="slide-kicker">Session Agenda</div>
+        <h2 class="slide-title">How Today Breaks Down</h2>
+        <div class="slide-body">
+          <div class="agenda">
+            <div class="agenda-row"><span class="agenda-time">0:00–0:10</span><span class="agenda-label">Welcome &amp; why OpenCode gets its own session</span></div>
+            <div class="agenda-row"><span class="agenda-time">0:10–0:40</span><span class="agenda-label">Part 0 — Configure OpenCode: opencode.jsonc, global vs project, providers, models</span></div>
+            <div class="agenda-row"><span class="agenda-time">0:40–1:20</span><span class="agenda-label">Part 1 — Command Reference: what/when/outcome, vs Claude Code</span></div>
+            <div class="agenda-row break"><span class="agenda-time">1:20–1:30</span><span class="agenda-label">Break</span></div>
+            <div class="agenda-row"><span class="agenda-time">1:30–2:20</span><span class="agenda-label">Part 2 — Agents: what/why/how, primary agents, subagents, custom agents, tools, permissions</span></div>
+            <div class="agenda-row"><span class="agenda-time">2:20–2:50</span><span class="agenda-label">Part 3 — Skills: what/why/how, anatomy, scoped vs global, use cases</span></div>
+            <div class="agenda-row"><span class="agenda-time">2:50–3:25</span><span class="agenda-label">Part 4 — MCP Servers: what/why/how, local vs remote, installing &amp; using Playwright MCP</span></div>
+            <div class="agenda-row break"><span class="agenda-time">3:25–3:35</span><span class="agenda-label">Break</span></div>
+            <div class="agenda-row"><span class="agenda-time">3:35–4:55</span><span class="agenda-label">Part 5 — Build: branded FastAPI calculator, tested with Playwright MCP</span></div>
+            <div class="agenda-row"><span class="agenda-time">4:55–5:05</span><span class="agenda-label">Recap</span></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">02</div>
+        </div>
+      </section>
+
+      <section class="slide" id="objectives">
+        <div class="slide-kicker">Learning Objectives</div>
+        <h2 class="slide-title">By the End of Today, You Will Be Able To&hellip;</h2>
+        <div class="slide-body">
+          <div class="obj-grid">
+            <div class="obj-card"><span class="obj-num">1</span>Write an opencode.jsonc that whitelists models per provider, entirely file-based — no shell exports — and explain how it merges with the global config.</div>
+            <div class="obj-card"><span class="obj-num">2</span>For any OpenCode command, state what it does, when you'd reach for it, and what outcome confirms it worked — plus its Claude Code equivalent, or the honest lack of one.</div>
+            <div class="obj-card"><span class="obj-num">3</span>Explain what an agent is and why one agent isn't enough; use OpenCode's two primary agents, delegate to a built-in subagent, and write and invoke your own custom agent.</div>
+            <div class="obj-card"><span class="obj-num">4</span>Explain the difference between a tool existing and an action being permitted, and configure both at the project and per-agent level.</div>
+            <div class="obj-card"><span class="obj-num">5</span>Explain what a Skill is and why it exists; tell a scoped (project) skill apart from a global one, and write a SKILL.md that auto-triggers on the right task.</div>
+            <div class="obj-card"><span class="obj-num">6</span>Explain what an MCP server is and why it exists; distinguish a local (stdio) server from a remote (HTTP) one, install and run Playwright MCP standalone, and have it connected and callable in both tools.</div>
+            <div class="obj-card"><span class="obj-num">7</span>Start a build with <code class="inline">/init</code>, feed it brand context (color, logo), and scaffold a FastAPI REST backend and a matching HTML frontend.</div>
+            <div class="obj-card"><span class="obj-num">8</span>Create a virtual environment, install requirements, run both halves of an app on their designated ports, and test the finished app end to end by driving a real browser through Playwright MCP.</div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">03</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 0 ============ -->
+      <section class="slide" id="opencode-config">
+        <div class="slide-kicker">Part 0 &middot; Configure OpenCode &middot; 0.1</div>
+        <h2 class="slide-title">The opencode.jsonc Config File</h2>
+        <div class="slide-body">
+          <p class="intro">If your project already has an <code class="inline">opencode.jsonc</code> — OpenCode's JSON-with-comments variant of its config file — use that file for everything below instead of creating a separate <code class="inline">opencode.json</code>. Same fields, same schema, just with room for <code class="inline">//</code> comments so the config documents itself. Everything about which models OpenCode can see, and which key it uses, is read directly from this one file — nothing is set in your shell.</p>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.jsonc</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Primary model — used for real work: reading code, planning, editing
+  "model": "anthropic/claude-sonnet-4-5-20250929",
+
+  // Cheaper/faster model for lightweight background tasks (e.g. session titles)
+  "small_model": "groq/llama-3.1-8b-instant",
+
+  // Allow-list: only these providers are considered at all
+  "enabled_providers": ["anthropic", "openai", "google", "mistral", "groq", "openrouter"],
+
+  "provider": {
+    "anthropic": {
+      "whitelist": ["claude-sonnet-4-5-20250929"],
+      "options": { "apiKey": "sk-ant-paste-your-real-key-here" }
+    },
+    "openai": {
+      "whitelist": ["gpt-4.1-mini"],
+      "options": { "apiKey": "sk-paste-your-real-key-here" }
+    },
+    "google": {
+      "whitelist": ["gemini-3.5-flash-lite"],
+      "options": { "apiKey": "paste-your-real-key-here" }
+    },
+    "mistral": {
+      "whitelist": ["mistral-medium-2508"],
+      "options": { "apiKey": "paste-your-real-key-here" }
+    },
+    "groq": {
+      "whitelist": ["llama-3.1-8b-instant"],
+      "options": { "apiKey": "gsk_paste-your-real-key-here" }
+    },
+    "openrouter": {
+      "whitelist": ["qwen/qwen3.8-27b:free"],
+      "options": { "apiKey": "sk-or-paste-your-real-key-here" }
+    }
+  }
+}</code></pre>
+          </div>
+          <ul class="points">
+            <li><strong><code class="inline">enabled_providers</code></strong> — an allow-list. Only these providers are even considered; everything else is ignored, even if you have a key for it lying around.</li>
+            <li><strong><code class="inline">whitelist</code></strong> (per provider) — narrows the <code class="inline">/models</code> picker for that provider down to exactly these model IDs.</li>
+            <li><strong><code class="inline">options.apiKey</code></strong> — the credential itself, typed directly into the file. No environment variable, no export — the file is the single source of truth.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">This file now holds real secrets</span>
+            Once you paste actual keys in, add <code class="inline">opencode.jsonc</code> to your project's <code class="inline">.gitignore</code> before you ever commit — that's a file-system precaution, not a shell command, and it's the one step worth taking even though everything else here stays inside the config file.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">04</div>
+        </div>
+      </section>
+
+      <section class="slide" id="global-vs-project-config">
+        <div class="slide-kicker">Part 0 &middot; Configure OpenCode &middot; 0.2</div>
+        <h2 class="slide-title">Global vs Project Config — Where the Files Live</h2>
+        <div class="slide-body">
+          <p class="intro">0.1's file is project-scoped — this one project only. OpenCode also reads a <strong>global</strong> config and merges the two: anything the project file sets wins; anything it doesn't set falls back to the global file. Put things you want on <em>every</em> project (a personal <code class="inline">small_model</code>, a theme) there instead of copy-pasting them into every <code class="inline">opencode.jsonc</code> you create.</p>
+          <table class="data-table">
+            <thead><tr><th>Scope</th><th>Location</th></tr></thead>
+            <tbody>
+              <tr><td>Project</td><td><code class="inline">./opencode.jsonc</code> — this one project only</td></tr>
+              <tr><td>Global (macOS / Linux)</td><td><code class="inline">~/.config/opencode/opencode.json</code> — every project on this machine</td></tr>
+            </tbody>
+          </table>
+          <div class="code-block">
+            <div class="code-label"><span>macOS / Linux — check it exists</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">ls ~/.config/opencode/opencode.json</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-label"><span>Windows (PowerShell) — check it exists</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Get-ChildItem "$env:USERPROFILE\.config\opencode\opencode.json"</code></pre>
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Windows specifics</span>
+            OpenCode's own docs recommend running it inside <strong>WSL</strong> on Windows — in which case the path is identical to macOS/Linux: <code class="inline">~/.config/opencode/opencode.json</code>, inside your WSL filesystem. Running natively on Windows isn't separately documented; OpenCode doesn't switch to a Windows-native folder like <code class="inline">%APPDATA%</code>, so the same relative path typically resolves to <code class="inline">%USERPROFILE%\.config\opencode\opencode.json</code> — the command above confirms it either way.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">05</div>
+        </div>
+      </section>
+
+      <section class="slide" id="model-small-model">
+        <div class="slide-kicker">Part 0 &middot; Configure OpenCode &middot; 0.3</div>
+        <h2 class="slide-title">model vs small_model</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Field</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">model</code></td><td>The primary model OpenCode uses for your actual conversation — reading code, planning, writing edits.</td></tr>
+              <tr><td><code class="inline">small_model</code></td><td>A separate, cheaper/faster model OpenCode reaches for on lightweight background tasks — like generating a short title for a session. If you don't set it, OpenCode picks a cost-effective option from your enabled providers on its own.</td></tr>
+            </tbody>
+          </table>
+          <p>This is the same "fast/cheap vs frontier" split from last session's model-choice table — <code class="inline">small_model</code> just makes it explicit and automatic instead of something you switch by hand.</p>
+          <div class="callout">Set <code class="inline">small_model</code> to your free-tier or cheapest whitelisted model. There's no reason to spend frontier-model tokens on naming a session.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">06</div>
+        </div>
+      </section>
+
+      <section class="slide" id="model-choices">
+        <div class="slide-kicker">Part 0 &middot; Configure OpenCode &middot; 0.4</div>
+        <h2 class="slide-title">Choosing Models, Provider by Provider</h2>
+        <div class="slide-body">
+          <p class="intro">Before you whitelist a model ID, check the provider's own current model list — names and capabilities change often, and a stale ID in your config just silently fails to appear in the picker.</p>
+          <table class="data-table">
+            <thead><tr><th>Provider</th><th>Where to check current models</th></tr></thead>
+            <tbody>
+              <tr><td>Anthropic</td><td><a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener">platform.claude.com/docs/en/models/overview</a></td></tr>
+              <tr><td>OpenAI</td><td><a href="https://developers.openai.com/api/docs/models/all" target="_blank" rel="noopener">developers.openai.com/api/docs/models/all</a></td></tr>
+              <tr><td>Google Gemini</td><td><a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener">ai.google.dev/gemini-api/docs/models</a></td></tr>
+              <tr><td>Mistral</td><td><a href="https://docs.mistral.ai/models" target="_blank" rel="noopener">docs.mistral.ai/models</a></td></tr>
+              <tr><td>Groq</td><td><a href="https://console.groq.com/docs/models" target="_blank" rel="noopener">console.groq.com/docs/models</a></td></tr>
+              <tr><td>OpenRouter (free tier)</td><td><a href="https://openrouter.ai/collections/free-models" target="_blank" rel="noopener">openrouter.ai/collections/free-models</a></td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn"><span class="callout-title">A model ID is a moving target</span>Providers rename, deprecate, and version their model IDs (notice <code class="inline">claude-sonnet-4-5-20250929</code> carries a date). Click through and copy the exact current ID — don't guess at it or reuse one from an old tutorial.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">07</div>
+        </div>
+      </section>
+
+      <section class="slide" id="claude-code-config">
+        <div class="slide-kicker">Part 0 &middot; Configure OpenCode &middot; 0.5</div>
+        <h2 class="slide-title">Claude Code's Equivalent Config</h2>
+        <div class="slide-body">
+          <p class="intro">Claude Code only ever speaks to Anthropic, so there's no multi-provider block to write — but it still gives you two purely file-based ways to authenticate, matching the "everything from a config file" pattern above:</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">Option A &middot; No key at all</div>
+              <div style="padding:14px 16px;font-size:14px;">Run <code class="inline">claude</code>, then authenticate once with your Claude account:</div>
+              <div class="code-block"><div class="code-label"><span>inside Claude Code</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">/login</code></pre></div>
+              <div style="padding:0 16px 14px;font-size:13px;color:var(--text-dim);">OAuth sign-in — nothing to store in any file.</div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">Option B &middot; Key in settings.json</div>
+              <div style="padding:14px 16px;font-size:14px;">Store it directly in Claude Code's own config file:</div>
+              <div class="code-block"><div class="code-label"><span>.claude/settings.json</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">{
+  "env": {
+    "ANTHROPIC_API_KEY": "sk-ant-paste-your-real-key-here"
+  }
+}</code></pre></div>
+            </div>
+          </div>
+          <p>Same shape as <code class="inline">opencode.jsonc</code> — a JSON file Claude Code reads directly — just a nested <code class="inline">env</code> object instead of a <code class="inline">provider</code> object. Use <code class="inline">.claude/settings.json</code> for a key the whole project should share, or <code class="inline">~/.claude/settings.json</code> for one that follows you across every project — the same global-vs-project split as 0.2.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">08</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-config">
+        <div class="slide-kicker">Part 0 &middot; Hands-On &middot; 0.6</div>
+        <h2 class="slide-title">Write Your Config — No Shell Commands Needed</h2>
+        <div class="slide-body">
+          <p class="intro">In a fresh project folder, create (or open) <code class="inline">opencode.jsonc</code> and paste 0.1's example directly — replace every placeholder with a real key, in the file itself.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Edit <code class="inline">opencode.jsonc</code>, save it, then confirm inside OpenCode:</div>
+              <div class="code-block"><div class="code-label"><span>inside OpenCode</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">/models</code></pre></div>
+              <div style="padding:0 16px 14px;font-size:13px;color:var(--text-dim);">Should list only your whitelisted models.</div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Either run <code class="inline">/login</code>, or create <code class="inline">.claude/settings.json</code> with the <code class="inline">env</code> block from 0.5, then confirm:</div>
+              <div class="code-block"><div class="code-label"><span>inside Claude Code</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">/status</code></pre></div>
+              <div style="padding:0 16px 14px;font-size:13px;color:var(--text-dim);">Should report you're authenticated.</div>
+            </div>
+          </div>
+          <div class="callout">Both configs are just files sitting in your project. Close the terminal, reopen it tomorrow, and neither tool needs anything re-entered — the file is still there.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">09</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 1 ============ -->
+      <section class="slide" id="lifecycle-commands">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.1</div>
+        <h2 class="slide-title">Session Lifecycle Commands</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Command</th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">/init</code></td><td>Scans the project, drafts AGENTS.md</td><td>Once, right when a project starts (or after a big structural change)</td><td>AGENTS.md appears in the project root; read automatically every session after</td></tr>
+              <tr><td><code class="inline">/new</code> / <code class="inline">/clear</code></td><td>Wipes the current conversation, same working directory</td><td>Starting an unrelated task, or context has drifted</td><td>Empty transcript; files on disk untouched</td></tr>
+              <tr><td><code class="inline">/sessions</code> / <code class="inline">/resume</code> / <code class="inline">/continue</code></td><td>Lists past sessions, switches into one, and is where you rename one</td><td>Picking back up a multi-day task, or checking what an old session did</td><td>That session's full history reloads exactly where you left it</td></tr>
+              <tr><td><code class="inline">/compact</code> / <code class="inline">/summarize</code></td><td>Replaces the conversation so far with a condensed summary</td><td>A long session nears its context limit, or has dead-end exploration you don't need verbatim</td><td>A short summary replaces the full history; key decisions survive</td></tr>
+            </tbody>
+          </table>
+          <ul class="points">
+            <li><code class="inline">/init</code> → Claude Code's <code class="inline">/init</code> — same idea, writes CLAUDE.md instead of AGENTS.md</li>
+            <li><code class="inline">/new</code>/<code class="inline">/clear</code> → Claude Code's <code class="inline">/clear</code> — identical behavior</li>
+            <li><code class="inline">/sessions</code>/<code class="inline">/resume</code> → <strong>no in-session browser or rename in Claude Code.</strong> Closest is <code class="inline">claude --continue</code> (most recent) or <code class="inline">claude --resume</code> (picker) at launch</li>
+            <li><code class="inline">/compact</code> → Claude Code's <code class="inline">/compact</code> — same idea, optionally with focus instructions</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">10</div>
+        </div>
+      </section>
+
+      <section class="slide" id="interface-commands">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.2</div>
+        <h2 class="slide-title">Interface &amp; Model Commands</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Command</th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">/models</code> <span style="color:var(--text-dim);">(ctrl+x m, ctrl+t)</span></td><td>Opens a picker of every whitelisted model across enabled providers</td><td>Switching cost/capability tradeoffs — planning vs a hard debugging problem</td><td>Model badge updates; next message uses the new model</td></tr>
+              <tr><td><code class="inline">/thinking</code></td><td>Toggles whether reasoning/thinking blocks show inline</td><td>Debugging why the agent decided something, or cutting visual noise on a routine task</td><td>Grey "thinking" blocks appear or disappear before responses</td></tr>
+              <tr><td><code class="inline">/themes</code> <span style="color:var(--text-dim);">(ctrl+x t)</span></td><td>Lists and switches the terminal color theme</td><td>Improving contrast/readability for your terminal and lighting</td><td>UI recolors immediately; no effect on files or conversation</td></tr>
+            </tbody>
+          </table>
+          <ul class="points">
+            <li><code class="inline">/models</code> → Claude Code's <code class="inline">/model</code> (in-session picker)</li>
+            <li><code class="inline">/thinking</code> → <strong>no dedicated toggle in Claude Code</strong>; extended thinking is invoked contextually, not a command you flip</li>
+            <li><code class="inline">/themes</code> → chosen from Claude Code's <code class="inline">/config</code> settings screen, not a dedicated command</li>
+          </ul>
+          <div class="callout">Run <code class="inline">/models</code> right now and pick your fast/cheap tier from 0.4 before doing anything else today.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">11</div>
+        </div>
+      </section>
+
+      <section class="slide" id="timeline-undo">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.3</div>
+        <h2 class="slide-title">The "Timeline" — /undo &amp; /redo</h2>
+        <div class="slide-body">
+          <p class="intro">OpenCode has no separate timeline view — undo/redo through your message history <em>is</em> the timeline.</p>
+          <table class="data-table">
+            <thead><tr><th>Command</th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">/undo</code> <span style="color:var(--text-dim);">(ctrl+x u)</span></td><td>Removes the most recent user message and its response</td><td>You asked the wrong thing, before the agent did anything worth keeping</td><td>That exchange disappears; conversation rewinds to just before it</td></tr>
+              <tr><td><code class="inline">/redo</code> <span style="color:var(--text-dim);">(ctrl+x r)</span></td><td>Restores the message <code class="inline">/undo</code> just removed</td><td>You undid by mistake, or changed your mind again</td><td>The removed exchange reappears exactly as it was</td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn"><span class="callout-title">Claude Code has no equivalent pair</span>The closest working analogue is pressing <strong>Esc twice</strong> to jump back to an earlier point in the conversation and edit what you sent — a rewind, not a symmetric undo/redo. Neither mechanism, in either tool, undoes file edits already made on disk — version control is still your real safety net for that.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">12</div>
+        </div>
+      </section>
+
+      <section class="slide" id="keybinding-platforms">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.4</div>
+        <h2 class="slide-title">Windows vs Mac Keybindings</h2>
+        <div class="slide-body">
+          <p class="intro">Every chord in this reference — <code class="inline">ctrl+x m</code>, <code class="inline">ctrl+x n</code>, <code class="inline">ctrl+x l</code>, <code class="inline">ctrl+x c</code>, <code class="inline">ctrl+x t</code>, <code class="inline">ctrl+x u/r</code> — is sent as a raw keystroke to the terminal app, not intercepted by the OS. That means <strong>the same <code class="inline">Ctrl</code>-based chord works identically on Windows, macOS, and Linux terminals.</strong> There's no "use Cmd instead" variant to memorize for these.</p>
+          <p>Where platforms genuinely differ is starting things and activating a Python environment — never in setting up your provider keys, since those live in <code class="inline">opencode.jsonc</code> / <code class="inline">.claude/settings.json</code> either way, at the identical path:</p>
+          <table class="data-table">
+            <thead><tr><th>Task</th><th>macOS / Linux</th><th>Windows (PowerShell)</th></tr></thead>
+            <tbody>
+              <tr><td>Start OpenCode / Claude Code</td><td><code class="inline">opencode</code> / <code class="inline">claude</code></td><td><code class="inline">opencode</code> / <code class="inline">claude</code> — identical</td></tr>
+              <tr><td>Activate a Python venv</td><td><code class="inline">source .venv/bin/activate</code></td><td><code class="inline">.venv\Scripts\Activate.ps1</code></td></tr>
+              <tr><td>Where your provider keys live</td><td><code class="inline">opencode.jsonc</code> / <code class="inline">.claude/settings.json</code></td><td>Same files, same path — no OS-specific step</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">The CLI itself doesn't care which OS it's on. The shell around it does — that's the actual line to remember.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">13</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agents-tab-mention">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.5</div>
+        <h2 class="slide-title">Agents — No Slash Command, Tab &amp; @mention Instead</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Mechanism</th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">Tab</code></td><td>Switches which primary agent is driving — Build (full read/write/execute) or Plan (read-only)</td><td>Before a multi-step or ambiguous change, switch to Plan first; back to Build once you approve</td><td>Agent badge changes; Plan refuses to edit/run until you switch back</td></tr>
+              <tr><td><code class="inline">@general help me search for this</code></td><td>Routes this one message to a named subagent instead of the primary agent</td><td>A bounded, delegable job — a search, a review, a lookup</td><td>A separate focused exchange runs and reports back; your main conversation's context is untouched</td></tr>
+            </tbody>
+          </table>
+          <p>Claude Code's <code class="inline">Shift+Tab</code> cycles <em>permission modes</em> instead of agent identity — a related but different axis. Its chat input's <code class="inline">@</code> typeahead <em>does</em> support mentioning an agent by name for guaranteed invocation, alongside file references — it's not file-only. Full purpose, worked examples, and — new this session — how to build your own custom agent, in Part 2.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">14</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skills-autodiscover">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.6</div>
+        <h2 class="slide-title">Skills — Auto-Discovered, Not Typed</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th></th><th>What it does</th><th>When it triggers</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td>Skill matching<br/><span style="color:var(--text-dim);font-weight:400;">(no command)</span></td><td>Matches your task's wording against every discovered SKILL.md's description, auto-loads the best match</td><td>Whenever your phrasing resembles a skill's description closely enough</td><td>The agent follows the skill's exact steps instead of improvising</td></tr>
+            </tbody>
+          </table>
+          <p>A Skill is just a <code class="inline">SKILL.md</code> file sitting in a folder the agent already knows to check — <code class="inline">.opencode/skills/</code> (project) or <code class="inline">~/.config/opencode/skills/</code> (global); OpenCode also reads Claude-compatible skills straight out of <code class="inline">.claude/skills/</code>. What a Skill actually is, why it exists, full anatomy, scoping rules, worked examples, and best practices in Part 3.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">15</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-configured">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.7</div>
+        <h2 class="slide-title">MCP Servers — Configured, Not Toggled</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th></th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td>MCP config<br/><span style="color:var(--text-dim);font-weight:400;">(no command)</span></td><td>Declares an external tool/data server the agent can call, alongside its built-ins</td><td>You need a capability that isn't text/file/shell — browser control, a database, a third-party API</td><td>The server's tools appear in the toolbox at the next session start</td></tr>
+            </tbody>
+          </table>
+          <p>Declared under the <code class="inline">"mcp"</code> key in <code class="inline">opencode.jsonc</code>; no <code class="inline">/mcp</code> slash command in OpenCode — servers just load at startup. Claude Code's <code class="inline">/mcp</code> <em>does</em> exist, but it's status-only — it shows what's connected, it doesn't turn anything on or off. What an MCP server actually is, why it exists, full schema, installing and using a real worked example (Playwright), use cases, and best practices in Part 4; you'll connect it for real in 4.7.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">16</div>
+        </div>
+      </section>
+
+      <section class="slide" id="status-timestamps">
+        <div class="slide-kicker">Part 1 &middot; Command Reference &middot; 1.8</div>
+        <h2 class="slide-title">Status &amp; Timestamps</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Command</th><th>What it does</th><th>When to use it</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><td>OpenCode timestamps<br/><span style="color:var(--text-dim);font-weight:400;">(no command)</span></td><td>Renders a timestamp inline per message in the TUI</td><td>Always on — no toggle needed</td><td>Every message shows when it was sent</td></tr>
+              <tr><td>Claude Code <code class="inline">/cost</code></td><td>Reports cumulative token usage and cost for this session</td><td>Checking whether you're burning through a budget mid-task</td><td>A one-time printed usage report</td></tr>
+              <tr><td>Claude Code <code class="inline">/status</code></td><td>Reports version, account, and connectivity</td><td>Confirming you're authenticated (0.6), or debugging a connection issue</td><td>A one-time printed status report</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">Different shape, same underlying need — knowing where you stand in a session. OpenCode answers "when did I send this," Claude Code answers "what has this session cost me so far."</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">17</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-commands">
+        <div class="slide-kicker">Part 1 &middot; Hands-On &middot; 1.9</div>
+        <h2 class="slide-title">Run Every Command Once, Read the Outcome</h2>
+        <div class="slide-body">
+          <p class="intro">In your configured project folder, run each of these in OpenCode, in order, and actually read what comes back before moving to the next one:</p>
+          <ol class="steps">
+            <li><strong><code class="inline">/init</code></strong><span>Watch it read your files and draft AGENTS.md. Open the file afterward — it should describe your actual project, not generic boilerplate.</span></li>
+            <li><strong><code class="inline">/models</code></strong><span>Confirm only your whitelisted models from 0.1 appear. Pick one.</span></li>
+            <li><strong>Send one message</strong><span>Ask anything — "what files are in this folder?" — so there's a real message to undo.</span></li>
+            <li><strong><code class="inline">/undo</code>, then <code class="inline">/redo</code></strong><span>Confirm the message disappears, then comes back.</span></li>
+            <li><strong><code class="inline">/compact</code></strong><span>Notice the conversation gets replaced with a summary — try it again later once you have a longer history to actually compact.</span></li>
+            <li><strong><code class="inline">/themes</code></strong><span>Switch to a different theme, then switch back to whichever you actually prefer.</span></li>
+            <li><strong><code class="inline">/new</code></strong><span>Confirm you're back to a clean slate.</span></li>
+          </ol>
+          <div class="callout warn"><span class="callout-title">Now do it in Claude Code</span>Run <code class="inline">/init</code>, <code class="inline">/model</code>, <code class="inline">/compact</code>, <code class="inline">/cost</code>, <code class="inline">/status</code>, and Esc-Esc on a sent message. Notice which outcomes feel identical and which don't — that gap is the point of this whole section.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">18</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 2 ============ -->
+      <section class="slide" id="what-is-agent-intro">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.1</div>
+        <h2 class="slide-title">What Is an Agent, and Why Do You Need More Than One?</h2>
+        <div class="slide-body">
+          <p class="intro">Session 1 covered what one agent is — something that reads, plans, edits, and runs commands in a loop. Today's question is different: why would you ever want more than one in a single project?</p>
+          <ul class="points">
+            <li><strong>What:</strong> an agent is a configured "personality" for the same underlying model — a name, a system prompt, a set of tools it can use, and a permission stance. Not a different AI, just a different mandate.</li>
+            <li><strong>Why:</strong> one agent doing everything accumulates context (dead-end explorations, irrelevant file reads) and mixes mandates — exploring vs editing, reviewing vs writing. Separate agents keep each job's context clean and its capabilities matched to the risk of the task.</li>
+            <li><strong>How:</strong> OpenCode gives you three layers, all covered today — switch between two built-in <strong>primary agents</strong> (Build/Plan) with <code class="inline">Tab</code>, delegate to a <strong>built-in subagent</strong> (<code class="inline">@general</code>) for a bounded side-task, or write your own <strong>custom agent</strong> with exactly the tools and permissions a recurring job needs.</li>
+          </ul>
+          <div class="callout">By the end of Part 2 you'll have used all three layers on the same project — not just read about them.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">19</div>
+        </div>
+      </section>
+
+      <section class="slide" id="build-vs-plan">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.2</div>
+        <h2 class="slide-title">Primary Agents — Build vs Plan</h2>
+        <div class="slide-body">
+          <p class="intro">OpenCode ships two primary agents you cycle between with <code class="inline">Tab</code> — they're the same underlying model, given a different mandate:</p>
+          <table class="data-table">
+            <thead><tr><th>Agent</th><th>Mandate</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Build</strong></td><td>Full read/write/execute — edits files, runs commands, gets things done directly. Your default.</td></tr>
+              <tr><td><strong>Plan</strong></td><td>Read-only exploration — investigates and proposes an approach, but won't touch a file or run a command until you switch to Build and approve it.</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Example:</strong> in Plan, ask "how would you add a soft-delete flag to the tasks table?" — it reads the schema and code, then writes out a numbered plan. Switch to Build and say "do it" and the same plan gets executed.</p>
+          <p>This is the same "explore first, then act" idea as Claude Code's <code class="inline">plan</code> permission mode from last session — cycled with <code class="inline">Tab</code> here instead of <code class="inline">Shift+Tab</code>, and framed as switching <em>which agent</em> you're talking to rather than switching a mode on the same agent.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">20</div>
+        </div>
+      </section>
+
+      <section class="slide" id="subagents-mention">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.3</div>
+        <h2 class="slide-title">Subagents via @mention</h2>
+        <div class="slide-body">
+          <p class="intro">Beyond Build and Plan, OpenCode lets you address a specific subagent by name, right in your message:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">@general help me search for every place
+this config value is read.</code></pre>
+          </div>
+          <p><strong>What comes back:</strong> a short report — the file paths and line numbers where that value is read — not a running commentary of every file the subagent opened along the way. That noise stays inside the subagent's own throwaway context.</p>
+          <div class="callout warn"><span class="callout-title">🎓 Same rule as Claude Code's Agent tool</span>A subagent starting fresh with zero memory of your conversation isn't an OpenCode quirk — it's how delegation works in both tools. "Check if this is right" tells a fresh subagent nothing; it needs the actual file, function, or claim spelled out.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">21</div>
+        </div>
+      </section>
+
+      <section class="slide" id="built-in-subagents-recap">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.4</div>
+        <h2 class="slide-title">Built-In Subagents, Recapped</h2>
+        <div class="slide-body">
+          <p class="intro">Before writing your own, know what already ships. From Session 1: Claude Code and the Claude Agent SDK call this the <strong>Agent</strong> tool (older material calls it "Task" — same mechanism, renamed). Four subagents ship by default:</p>
+          <table class="data-table">
+            <thead><tr><th>Subagent</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">Explore</code></td><td>Fast, read-only file discovery and codebase search</td></tr>
+              <tr><td><code class="inline">Plan</code></td><td>Research for plan mode before proposing changes</td></tr>
+              <tr><td><code class="inline">general-purpose</code></td><td>Multi-step tasks needing exploration <em>and</em> action</td></tr>
+              <tr><td><code class="inline">claude</code></td><td>Catch-all fallback</td></tr>
+            </tbody>
+          </table>
+          <p>OpenCode ships one default subagent, <code class="inline">general</code> — the closest match to Claude Code's <code class="inline">general-purpose</code>, and the one you've been calling with <code class="inline">@general</code> throughout this session.</p>
+          <div class="callout">Every custom agent you write in the next few slides sits <em>alongside</em> these built-ins — it doesn't replace them. You reach for a built-in first; you write a custom one when none of the built-ins fit the job.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">22</div>
+        </div>
+      </section>
+
+      <section class="slide" id="custom-agent-anatomy">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.5</div>
+        <h2 class="slide-title">Creating a Custom Agent — File &amp; Fields</h2>
+        <div class="slide-body">
+          <p class="intro">A custom agent is the same shape as a Skill (3.2) — a markdown file with YAML frontmatter — except the body becomes the agent's <em>system prompt</em>, not a set of steps to follow once.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div style="padding:14px 16px;font-size:14px;">
+                <strong>File:</strong> <code class="inline">.opencode/agents/&lt;name&gt;.md</code> (project) or <code class="inline">~/.config/opencode/agents/</code> (global)<br/><br/>
+                <strong>Fields:</strong> <code class="inline">description</code> (required), <code class="inline">mode</code> (<code class="inline">primary</code> / <code class="inline">subagent</code> / <code class="inline">all</code>), <code class="inline">model</code>, <code class="inline">temperature</code>, <code class="inline">prompt</code>, <code class="inline">permission</code>, <code class="inline">hidden</code>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">
+                <strong>File:</strong> <code class="inline">.claude/agents/&lt;name&gt;.md</code> (project) or <code class="inline">~/.claude/agents/</code> (global)<br/><br/>
+                <strong>Fields:</strong> <code class="inline">name</code>, <code class="inline">description</code> (required), <code class="inline">tools</code>, <code class="inline">disallowedTools</code>, <code class="inline">model</code>, <code class="inline">permissionMode</code>
+              </div>
+            </div>
+          </div>
+          <p>Both discover recursively, so you can organize into subfolders — and both are matched against your task the same way a Skill's <code class="inline">description</code> is: it's the selection criteria, not documentation. The <code class="inline">permission</code> / <code class="inline">tools</code> / <code class="inline">permissionMode</code> fields are the two levers worth understanding properly before you write one — next.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">23</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agent-tools">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.6</div>
+        <h2 class="slide-title">Tools — The Building Blocks</h2>
+        <div class="slide-body">
+          <p class="intro">Every action an agent can take — reading a file, running a command, fetching a URL — is a <em>tool</em>. The agent has no innate ability to touch your disk; it can only do what a tool exposes.</p>
+          <table class="data-table">
+            <thead><tr><th>Tool</th><th>Does</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">read</code></td><td>Read a file's contents</td></tr>
+              <tr><td><code class="inline">write</code></td><td>Create a new file</td></tr>
+              <tr><td><code class="inline">edit</code></td><td>Modify an existing file via string replacement</td></tr>
+              <tr><td><code class="inline">bash</code></td><td>Execute a shell command</td></tr>
+              <tr><td><code class="inline">grep</code> / <code class="inline">glob</code></td><td>Search file contents / find files by pattern</td></tr>
+              <tr><td><code class="inline">webfetch</code> / <code class="inline">websearch</code></td><td>Fetch a URL / search the web</td></tr>
+              <tr><td><code class="inline">skill</code></td><td>Load a Skill's instructions (Part 3)</td></tr>
+              <tr><td><code class="inline">question</code></td><td>Ask you something mid-task instead of guessing</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Why this matters:</strong> an agent's tool access is your first line of safety, before you even get to permissions (next) — an agent that can never call <code class="inline">bash</code> cannot run a destructive command, full stop, regardless of what it's asked to do.</p>
+          <div class="callout warn"><span class="callout-title">OpenCode has no separate "turn this tool off" switch</span>Unlike Claude Code's explicit <code class="inline">tools:</code> allow-list on a custom agent — which decides whether a tool <em>exists</em> for it at all — OpenCode's built-in tools always exist. What you control instead is whether using one is <em>allowed</em>, which is entirely the job of Permissions.</div>
+          <div class="callout warn"><span class="callout-title">Restricting which subagents an agent can spawn</span>Claude Code lets a custom agent's <code class="inline">tools</code> list name exactly which other subagents it may itself delegate to: <code class="inline">tools: Agent(worker, researcher), Read, Bash</code> restricts it to spawning only <code class="inline">worker</code> and <code class="inline">researcher</code> — useful for a coordinator agent you don't want fanning out into every subagent you own. OpenCode doesn't document an equivalent.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">24</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agent-permissions">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.7</div>
+        <h2 class="slide-title">Permissions — The Approval Model</h2>
+        <div class="slide-body">
+          <p class="intro">If Tools are what an agent <em>can</em> do, Permissions decide whether it's allowed to do it without asking first — set project-wide, and overridable per agent.</p>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.jsonc — project-wide default</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "git push *": "deny"
+    },
+    "edit": {
+      "*": "ask",
+      "src/**": "allow"
+    },
+    "webfetch": "deny"
+  }
+}</code></pre>
+          </div>
+          <ul class="points">
+            <li>Every category — <code class="inline">read</code>, <code class="inline">edit</code>, <code class="inline">bash</code>, <code class="inline">webfetch</code>, <code class="inline">websearch</code>, and more — resolves to <code class="inline">allow</code>, <code class="inline">ask</code>, or <code class="inline">deny</code>.</li>
+            <li><code class="inline">bash</code> and <code class="inline">edit</code> support pattern-based rules; the most specific match wins — <code class="inline">git push *</code> overrides the broader <code class="inline">git *</code> above it.</li>
+            <li>A custom agent's own <code class="inline">permission</code> block (2.5) merges with this global one — the agent's rule wins for anything it sets, and it inherits the rest.</li>
+          </ul>
+          <p>Claude Code's version of the same idea is the six permission modes from Session 1 (<code class="inline">default</code> / <code class="inline">plan</code> / <code class="inline">acceptEdits</code> / <code class="inline">auto</code> / <code class="inline">dontAsk</code> / <code class="inline">bypassPermissions</code>), plus a custom agent's own <code class="inline">permissionMode</code> field to pin it to one of those regardless of the session's overall mode.</p>
+          <div class="callout">Set the risky stuff to <code class="inline">ask</code>, the safe stuff to <code class="inline">allow</code>, and the truly dangerous stuff (<code class="inline">git push</code>, <code class="inline">rm</code>) to <code class="inline">deny</code> outright — a specific pattern is worth more than a blanket <code class="inline">ask</code> on everything, which just trains you to click "yes" without reading.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">25</div>
+        </div>
+      </section>
+
+      <section class="slide" id="custom-agent-example">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.8</div>
+        <h2 class="slide-title">Worked Example — a Read-Only code-reviewer Agent</h2>
+        <div class="slide-body">
+          <p class="intro">Same job, same name, written the way each tool expects — both physically incapable of editing anything, by construction, not by instruction:</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div class="code-block"><div class="code-label"><span>.opencode/agents/code-reviewer.md</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">---
+description: Reviews code for quality and best practices. Use after writing or modifying code.
+mode: subagent
+model: anthropic/claude-sonnet-4-5-20250929
+permission:
+  edit: deny
+  bash: deny
+---
+
+You are in code review mode. Focus on code
+quality, potential bugs, performance, and
+security. Provide specific, actionable
+feedback — never make changes yourself.</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div class="code-block"><div class="code-label"><span>.claude/agents/code-reviewer.md</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">---
+name: code-reviewer
+description: Reviews code for quality and best practices. Use after writing or modifying code.
+tools: Read, Grep, Glob
+model: sonnet
+---
+
+You are a code reviewer. Analyze the code
+and provide specific, actionable feedback
+on quality, security, and best practices.</code></pre></div>
+            </div>
+          </div>
+          <div class="callout">OpenCode gets there via Permissions — <em>denying</em> edit/bash; Claude Code gets there via Tools — never <em>listing</em> them. Different lever, same guarantee: this agent cannot touch your files, no matter how it's prompted.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">26</div>
+        </div>
+      </section>
+
+      <section class="slide" id="subagent-use-cases">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.9</div>
+        <h2 class="slide-title">Diverse Use Cases</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Scenario</th><th>Why delegate</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Codebase-wide search</strong> — "find every caller of this deprecated function"</td><td>Noisy, exploratory — keeps dozens of file reads out of your main conversation's context</td></tr>
+              <tr><td><strong>Independent code review</strong> — "review this diff for correctness bugs"</td><td>A subagent with no memory of writing the code reviews it more skeptically than the agent that just wrote it</td></tr>
+              <tr><td><strong>Research a library's current API</strong> — "check how this package's auth flow works now"</td><td>Bounded, one-shot lookup — the answer is all you need back, not the search process</td></tr>
+              <tr><td><strong>Parallel investigation</strong> — checking three unrelated hypotheses for a bug at once</td><td>Each subagent explores one hypothesis independently; you compare their reports instead of one agent context-switching serially</td></tr>
+              <tr><td><strong>Drafting test cases</strong> for code someone else (or another agent) just wrote</td><td>Fresh eyes on requirements, not on the implementation that was just produced</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">27</div>
+        </div>
+      </section>
+
+      <section class="slide" id="subagent-best-practices">
+        <div class="slide-kicker">Part 2 &middot; Agents &middot; 2.10</div>
+        <h2 class="slide-title">Best Practices</h2>
+        <div class="slide-body">
+          <ul class="points">
+            <li><strong>Write the prompt like the subagent is a new hire</strong> — no shared history, no assumed context. Include the file paths, the specific claim to check, the exact scope.</li>
+            <li><strong>Keep delegated tasks narrow and bounded.</strong> "Investigate the whole codebase" produces a vague report; "check whether these three files still call this deprecated function" produces a checkable one.</li>
+            <li><strong>Don't delegate trivial work.</strong> A one-line fix doesn't need a subagent round-trip — that overhead only pays off on noisy, multi-step, or parallelizable tasks.</li>
+            <li><strong>Ask for a specific output shape</strong> — "summarize in 3 bullets," "return pass/fail per file" — so the report is easy to act on, not another wall of text to re-read.</li>
+            <li><strong>Give a custom agent the least tools/permissions it needs to do its one job</strong> — a reviewer that can't edit is a feature, not a limitation; it's what makes its feedback trustworthy.</li>
+            <li><strong>Treat Plan mode as a subagent's little sibling</strong> — same principle (look before you touch), applied to your one main conversation instead of a delegated one.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">28</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-subagent">
+        <div class="slide-kicker">Part 2 &middot; Hands-On &middot; 2.11</div>
+        <h2 class="slide-title">Delegate a Real Question</h2>
+        <div class="slide-body">
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Switch to Plan (<code class="inline">Tab</code>), then @mention a subagent:</div>
+              <div class="code-block"><div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">@general Research what the current stable
+FastAPI version's recommended way to add
+CORS middleware is. Summarize in 3 bullets.
+Don't install anything yet.</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Ask in plain language and let Claude choose the Agent tool:</div>
+              <div class="code-block"><div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">Using a subagent, research the current
+stable FastAPI version's recommended way
+to add CORS middleware. Summarize in 3
+bullets. Don't install anything yet.</code></pre></div>
+            </div>
+          </div>
+          <div class="callout">Keep this answer — it's exactly what Part 5's build needs, and you'll use it there.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">29</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-custom-agent">
+        <div class="slide-kicker">Part 2 &middot; Hands-On &middot; 2.12</div>
+        <h2 class="slide-title">Write &amp; Invoke Your Own Custom Agent</h2>
+        <div class="slide-body">
+          <p class="intro">Create the <code class="inline">code-reviewer</code> file from 2.8 in today's practice project — the OpenCode version, the Claude Code version, or both — then invoke it by name:</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div class="code-block"><div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">@code-reviewer look at tasks.py and
+suggest improvements.</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div class="code-block"><div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">@code-reviewer look at tasks.py and
+suggest improvements.</code></pre></div>
+              <div style="padding:8px 16px 0;font-size:13px;color:var(--text-dim);">Type <code class="inline">@</code> and it should appear in the typeahead alongside your files.</div>
+            </div>
+          </div>
+          <div class="callout warn"><span class="callout-title">Now try to break it</span>Follow up with <em>"just fix the issues you found."</em> It should refuse, or explain that it can't edit — proving the restriction from 2.8 is real and enforced, not just a polite instruction in the prompt.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">30</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 3 ============ -->
+      <section class="slide" id="what-is-skill-intro">
+        <div class="slide-kicker">Part 3 &middot; Skills &middot; 3.1</div>
+        <h2 class="slide-title">What Is a Skill, and Why Package Instructions?</h2>
+        <div class="slide-body">
+          <p class="intro">A quick reset before the mechanics: what problem does a Skill actually solve?</p>
+          <ul class="points">
+            <li><strong>What:</strong> a Skill is a saved, named procedure — a markdown file the agent can load mid-conversation — for a job you do the same way every time.</li>
+            <li><strong>Why:</strong> without one, you re-explain the same multi-step process in every session ("run the tests, then build, then push, in that order") and get slightly different execution each time. A Skill makes the procedure itself the source of truth, not your memory of it in the moment.</li>
+            <li><strong>How:</strong> you write it once as a <code class="inline">SKILL.md</code> file with a <code class="inline">description</code> (what makes the agent reach for it) and a body (the steps); the agent then either auto-loads it when your task matches, or you invoke it by name.</li>
+          </ul>
+          <div class="callout">Contrast with a custom agent (Part 2): an agent is a standing personality you talk <em>to</em>; a Skill is a one-off procedure the current agent borrows, runs, and sets back down.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">31</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-anatomy">
+        <div class="slide-kicker">Part 3 &middot; Skills &middot; 3.2</div>
+        <h2 class="slide-title">Anatomy of a SKILL.md</h2>
+        <div class="slide-body">
+          <p class="intro">The same file format works in <code class="inline">.opencode/skills/</code> and <code class="inline">.claude/skills/</code> — a markdown file with a small YAML frontmatter block:</p>
+          <div class="code-block">
+            <div class="code-label"><span>.opencode/skills/deploy/SKILL.md</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">---
+name: deploy
+description: Deploy the application to a specified environment
+allowed-tools: bash(git *) bash(npm run deploy *)
+---
+
+1. Run the test suite
+2. Build the application
+3. Push to the deployment target</code></pre>
+          </div>
+          <ul class="points">
+            <li><strong><code class="inline">description</code></strong> is the selection criteria — the agent matches your task's wording against every discovered skill's description and auto-loads the best match. Vague description, unreliable triggering.</li>
+            <li><strong><code class="inline">allowed-tools</code></strong> pre-approves exactly the tools this skill needs — nothing more. This is least-privilege applied to a packaged workflow.</li>
+            <li>The body is plain instructions — numbered steps, a checklist, a template — whatever a person would need to do the job by hand.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">32</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-scoped-global">
+        <div class="slide-kicker">Part 3 &middot; Skills &middot; 3.3</div>
+        <h2 class="slide-title">Scoped vs Global Skills</h2>
+        <div class="slide-body">
+          <p class="intro">OpenCode looks for skills by walking <em>upward</em> from your current working directory until it hits the git worktree root, loading any <code class="inline">skills/*/SKILL.md</code> it passes along the way. That walk is what makes a skill "scoped."</p>
+          <table class="data-table">
+            <thead><tr><th>Location</th><th>Scope</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">~/.config/opencode/skills/&lt;name&gt;/SKILL.md</code></td><td><strong>Global</strong> — every project on your machine sees it</td></tr>
+              <tr><td><code class="inline">.opencode/skills/&lt;name&gt;/SKILL.md</code> at a project's root</td><td><strong>Scoped</strong> — only visible while working inside that project's folder tree</td></tr>
+              <tr><td><code class="inline">apps/calculator/.opencode/skills/&lt;name&gt;/SKILL.md</code> in a monorepo</td><td><strong>Scoped to that app</strong> — visible from <code class="inline">apps/calculator/</code> and below, invisible from a sibling <code class="inline">apps/billing/</code></td></tr>
+            </tbody>
+          </table>
+          <div class="callout">Use global for anything genuinely personal and universal — a commit-message style you always want. Use scoped for anything project-specific — a deploy sequence, a run command, a set of ports — so it doesn't leak into (or clutter the picker for) unrelated work. Part 5 writes one scoped to a single app on purpose.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">33</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-use-cases">
+        <div class="slide-kicker">Part 3 &middot; Skills &middot; 3.4</div>
+        <h2 class="slide-title">Diverse Use Cases</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Skill</th><th>What it packages</th></tr></thead>
+            <tbody>
+              <tr><td><strong>pr-description</strong></td><td>A house style for pull-request write-ups — summary, test plan, screenshots — so every PR reads the same way regardless of who (or what) opened it</td></tr>
+              <tr><td><strong>db-migration</strong></td><td>Your team's exact steps for writing a safe migration — backfill defaults, avoid locking a huge table, run it in staging first</td></tr>
+              <tr><td><strong>changelog</strong></td><td>Turn a batch of merged commits into a customer-facing changelog entry, in your project's established tone</td></tr>
+              <tr><td><strong>run-app</strong></td><td>Create/activate a venv, install requirements, start a backend and frontend on their designated ports — exactly what you'll build in Part 5</td></tr>
+              <tr><td><strong>onboarding-brief</strong></td><td>Summarize a codebase area for a new contributor — architecture, gotchas, where to start reading</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">34</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-best-practices">
+        <div class="slide-kicker">Part 3 &middot; Skills &middot; 3.5</div>
+        <h2 class="slide-title">Best Practices</h2>
+        <div class="slide-body">
+          <ul class="points">
+            <li><strong>Make the description specific and disambiguating.</strong> "Helps with deployment" matches too much (or too little); "Deploy the application to a named environment after running its test suite" matches on purpose.</li>
+            <li><strong>Grant only the tools the skill actually needs.</strong> A changelog skill doesn't need <code class="inline">bash</code> access to your deploy scripts.</li>
+            <li><strong>Scope project-specific skills to the project, not global.</strong> A <code class="inline">run-app</code> skill for one app has no business triggering in another.</li>
+            <li><strong>One skill, one job.</strong> A skill that tries to cover five loosely related workflows triggers unpredictably and is harder to trust.</li>
+            <li><strong>Keep the body procedural, not aspirational.</strong> "Always write good tests" isn't actionable; "run <code class="inline">pytest -x</code>, and if it fails, stop and report which test failed" is.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">35</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-skill-write">
+        <div class="slide-kicker">Part 3 &middot; Hands-On &middot; 3.6</div>
+        <h2 class="slide-title">Write a Tiny Skill</h2>
+        <div class="slide-body">
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Create <code class="inline">.opencode/skills/task-summary/SKILL.md</code> in today's practice folder:</div>
+              <div class="code-block"><div class="code-label"><span>.opencode/skills/task-summary/SKILL.md</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">---
+name: task-summary
+description: Summarize how many files changed in this session
+---
+
+When asked to summarize the session,
+report: how many files were read, how
+many were edited, in one sentence.</code></pre></div>
+              <div style="padding:8px 16px 14px;font-size:13px;color:var(--text-dim);">Then ask: <em>"Summarize the session so far."</em></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Same file, unmodified, at <code class="inline">.claude/skills/task-summary/SKILL.md</code> — that's the payoff of the shared format from 3.2.</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">36</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 4 ============ -->
+      <section class="slide" id="what-is-mcp-intro">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.1</div>
+        <h2 class="slide-title">What Is an MCP Server, and Why Connect One?</h2>
+        <div class="slide-body">
+          <p class="intro">Before local-vs-remote schemas, the basic idea: what is MCP actually for?</p>
+          <ul class="points">
+            <li><strong>What:</strong> the Model Context Protocol is an open standard for connecting an agent to a capability that isn't a file, a shell command, or a web page — a database, a ticket tracker, a real browser.</li>
+            <li><strong>Why:</strong> without it, every new capability would need its own bespoke integration built directly into the harness. MCP means any tool built to the standard works in OpenCode, Claude Code, or any other compliant host, unmodified.</li>
+            <li><strong>How:</strong> you declare a server in config (4.2); the host starts or connects to it, and whatever tools it exposes just show up in the agent's toolbox — same as a built-in tool, from the agent's point of view.</li>
+          </ul>
+          <div class="callout">Session 1 introduced the concept — host/client/server, tools/resources/prompts. Today you install one, connect it, and actually use it to test a real app — Playwright MCP, ahead in 4.3 and reused throughout Part 5.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">37</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-local-remote">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.2</div>
+        <h2 class="slide-title">Local vs Remote Servers</h2>
+        <div class="slide-body">
+          <p class="intro">An MCP server either runs as a subprocess your agent starts and talks to over stdio ("local"), or already exists somewhere reachable over HTTP ("remote"). Same distinction, different keywords, in each tool's config:</p>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.jsonc — local (stdio)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "mcp": {
+    "my-local-server": {
+      "type": "local",
+      "command": ["npx", "-y", "my-mcp-command"],
+      "enabled": true
+    }
+  }
+}</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.jsonc — remote (HTTP)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "mcp": {
+    "my-remote-mcp": {
+      "type": "remote",
+      "url": "https://my-mcp-server.com",
+      "enabled": true,
+      "headers": { "Authorization": "Bearer paste-your-token-here" }
+    }
+  }
+}</code></pre>
+          </div>
+          <p>Claude Code's <code class="inline">.mcp.json</code> uses the same two shapes: <code class="inline">command</code>/<code class="inline">args</code> for local, <code class="inline">"type": "http"</code> + <code class="inline">url</code> for remote.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">38</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-playwright-setup">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.3</div>
+        <h2 class="slide-title">Install &amp; Set Up Playwright MCP</h2>
+        <div class="slide-body">
+          <p class="intro">Before wiring Playwright MCP into either tool's config, get it running standalone once — that isolates "is the server itself okay" from "is my MCP config okay" if something doesn't work later.</p>
+          <ul class="points">
+            <li><strong>Requirement:</strong> Node.js 18 or newer — check with <code class="inline">node -v</code>.</li>
+            <li><strong>No separate install step.</strong> <code class="inline">npx @playwright/mcp@latest</code> downloads and runs the current version on demand, every time — there's nothing to <code class="inline">npm install</code> ahead of time.</li>
+            <li><strong>First run is slower.</strong> npx fetches the package before starting the server; every run after that is fast.</li>
+          </ul>
+          <div class="code-block">
+            <div class="code-label"><span>terminal — verify it runs standalone</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">npx @playwright/mcp@latest --headless</code></pre>
+          </div>
+          <p>No output and no errors is correct — it's sitting there waiting for an MCP client to connect over stdio. Press <code class="inline">Ctrl+C</code> to stop it once you've confirmed it starts cleanly.</p>
+          <table class="data-table">
+            <thead><tr><th>Flag</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">--browser &lt;chrome|firefox|webkit|msedge&gt;</code></td><td>Pick which browser engine to drive</td></tr>
+              <tr><td><code class="inline">--headless</code></td><td>Run without a visible window (headed is the default)</td></tr>
+              <tr><td><code class="inline">--isolated</code></td><td>Keep the browser profile in memory only — nothing saved to disk</td></tr>
+              <tr><td><code class="inline">--port &lt;n&gt;</code></td><td>Serve over HTTP instead of stdio, for a shared/remote setup</td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn"><span class="callout-title">If no browser launches</span>Run <code class="inline">npx playwright install chromium</code> once to fetch browser binaries, then retry the command above.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">39</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-example-playwright">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.4</div>
+        <h2 class="slide-title">Example Utility — Playwright MCP</h2>
+        <div class="slide-body">
+          <p class="intro">With the server confirmed working standalone (4.3), wire it into your agent's config. This is what makes "a server exposes tools" concrete instead of abstract: a real, widely used MCP server that drives an actual browser.</p>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.jsonc</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "@playwright/mcp@latest"],
+      "enabled": true
+    }
+  }
+}</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-label"><span>.mcp.json (Claude Code)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "mcpServers": {
+    "playwright": { "command": "npx", "args": ["@playwright/mcp@latest"] }
+  }
+}</code></pre>
+          </div>
+          <p>The moment this is enabled, real tools appear in the agent's toolbox — the same way <code class="inline">Read</code> or <code class="inline">Bash</code> already do:</p>
+          <table class="data-table">
+            <thead><tr><th>Tool</th><th>Does</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">browser_navigate</code></td><td>Load a URL</td></tr>
+              <tr><td><code class="inline">browser_click</code></td><td>Click an element on the page</td></tr>
+              <tr><td><code class="inline">browser_type</code> / <code class="inline">browser_fill_form</code></td><td>Type into a field, or fill several at once</td></tr>
+              <tr><td><code class="inline">browser_snapshot</code></td><td>Read the page's accessibility tree — what's actually on screen, as text</td></tr>
+              <tr><td><code class="inline">browser_take_screenshot</code></td><td>Capture a visual screenshot</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">40</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-use-cases">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.5</div>
+        <h2 class="slide-title">Diverse Use Cases</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Server</th><th>Type</th><th>Use case</th></tr></thead>
+            <tbody>
+              <tr><td>GitHub MCP server</td><td>Local or remote</td><td>Read and comment on issues/PRs without leaving the agent</td></tr>
+              <tr><td>Postgres MCP server</td><td>Local</td><td>Query a real database in plain English during development</td></tr>
+              <tr><td>Filesystem MCP server</td><td>Local</td><td>Safely let an agent reach a second project folder outside its working directory</td></tr>
+              <tr><td>A team's internal API, wrapped as MCP</td><td>Remote</td><td>Every teammate's agent gets the same tool without each of them running a local process</td></tr>
+              <tr><td><strong>Playwright MCP</strong></td><td>Local</td><td>End-to-end testing, screenshotting a live bug for a report, filling out a form for a demo — today's build, Part 5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">41</div>
+        </div>
+      </section>
+
+      <section class="slide" id="mcp-best-practices">
+        <div class="slide-kicker">Part 4 &middot; MCP Servers &middot; 4.6</div>
+        <h2 class="slide-title">Best Practices</h2>
+        <div class="slide-body">
+          <ul class="points">
+            <li><strong>Secrets stay inside the config file, never a literal you paste elsewhere.</strong> A remote server's <code class="inline">headers</code> value is still just a field in <code class="inline">opencode.jsonc</code> — same file-based pattern as Part 0.</li>
+            <li><strong>Enable only what a given project needs.</strong> A GitHub MCP server sitting enabled on a project that never touches GitHub is unused attack surface, not a convenience.</li>
+            <li><strong>Read a new server's tool descriptions before trusting it</strong> — same reasoning as reading a permission prompt (Week 1, Session 1, Part 3). An MCP server's tools are just as capable of a destructive action as your own <code class="inline">Bash</code> tool.</li>
+            <li><strong>Prefer remote (HTTP) for anything shared across a team</strong> — one running server, everyone's agent points at the same URL.</li>
+            <li><strong>Prefer local (stdio) for anything that only makes sense on your machine</strong> — Playwright MCP driving your own local browser is exactly this case.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">42</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-mcp-connect">
+        <div class="slide-kicker">Part 4 &middot; Hands-On &middot; 4.7</div>
+        <h2 class="slide-title">Connect Playwright MCP, Right Now</h2>
+        <div class="slide-body">
+          <p class="intro">Add 4.4's config block to your <code class="inline">opencode.jsonc</code> (or <code class="inline">.mcp.json</code> for Claude Code), restart the tool, then prove the connection with a real task:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Using the Playwright MCP tools, navigate to
+https://example.com, take a snapshot, and
+tell me the page's exact heading text.</code></pre>
+          </div>
+          <div class="callout">Expect a visible <code class="inline">browser_navigate</code> call followed by a <code class="inline">browser_snapshot</code>, then the agent reading "Example Domain" back to you from the snapshot — not from its own memory of that page. You'll reuse this exact server, live, in Part 5 to test the calculator you're about to build.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">43</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 5 ============ -->
+      <section class="slide" id="hands-on-init-app">
+        <div class="slide-kicker">Part 5 &middot; Build with OpenCode &middot; 5.1</div>
+        <h2 class="slide-title">Create the App Folder &amp; Run /init</h2>
+        <div class="slide-body">
+          <p class="intro">Everything from today lands here — a real REST API and a matching frontend, built the same disciplined way as any other OpenCode task: folder first, memory file first, code second.</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">mkdir calculator_app
+cd calculator_app
+opencode</code></pre>
+          </div>
+          <p>The folder is empty — that's fine. Run <code class="inline">/init</code> anyway, as the very first action:</p>
+          <div class="code-block">
+            <div class="code-label"><span>inside OpenCode</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">/init</code></pre>
+          </div>
+          <div class="callout">On an empty project, <code class="inline">/init</code> writes a short, mostly-generic AGENTS.md — that's expected. You're about to make it specific in 5.2, which is the whole point: a memory file is something you curate, not something that has to be perfect the moment it's generated.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">44</div>
+        </div>
+      </section>
+
+      <section class="slide" id="brand-context">
+        <div class="slide-kicker">Part 5 &middot; Build with OpenCode &middot; 5.2</div>
+        <h2 class="slide-title">Give It Brand Context — Color, Logo, Font</h2>
+        <div class="slide-body">
+          <p class="intro">Without this step, the agent invents its own default look for the frontend in 5.7 — usually a generic blue button on a white background. Tell it what "on-brand" means <em>once</em>, in AGENTS.md, and every future prompt inherits it automatically.</p>
+          <p>If you have real brand assets, use them — this deck's own kit is a fine stand-in for practice:</p>
+          <div class="code-block">
+            <div class="code-label"><span>append to AGENTS.md</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">## Design
+
+- Primary color: #002726 (dark teal)
+- Accent color: #33c375 (mint green)
+- Background: #ffffff
+- Logo: assets/logo.svg — show it next to the
+  page title and use it as the favicon
+- Layout: a single centered card, plain
+  HTML/CSS/JS, no framework
+- Tone: clean, minimal, developer-friendly</code></pre>
+          </div>
+          <p>Copy an actual logo file into <code class="inline">calculator_app/assets/logo.svg</code> before 5.7 so the path in AGENTS.md points at something real.</p>
+          <div class="callout">This is last session's "memory file" lesson applied for real: standing context you write once, in a place the agent reliably re-reads, instead of repeating "make it dark teal" in every single prompt.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">45</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-scoped-skill">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.3</div>
+        <h2 class="slide-title">Write This App's Scoped "run-app" Skill</h2>
+        <div class="slide-body">
+          <p class="intro">Applying 3.3 directly: this skill lives inside <code class="inline">calculator_app/</code> itself, not your global skills folder — it's scoped to this one project, and OpenCode's upward directory walk means it will never show up while you're working somewhere else.</p>
+          <div class="code-block">
+            <div class="code-label"><span>calculator_app/.opencode/skills/run-app/SKILL.md</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">---
+name: run-app
+description: Create/activate the venv, install requirements, and run the calculator backend and frontend on their designated ports
+allowed-tools: bash(python*) bash(pip*)
+---
+
+1. If backend/.venv doesn't exist, create it
+2. Activate it and install backend/requirements.txt
+3. Start the FastAPI backend on port 8000
+4. Serve frontend/ as static files on port 5500
+5. Report both URLs once both are running</code></pre>
+          </div>
+          <div class="callout">Write this now, before the backend or frontend even exist — you'll invoke it for real in 5.10, once there's something for it to run.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">46</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-scaffold-backend">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.4</div>
+        <h2 class="slide-title">Scaffold the FastAPI Backend</h2>
+        <div class="slide-body">
+          <p class="intro">A plain REST API — four operations, same shape as Base Camp 3's calculator session, built fresh here with the agent:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Create backend/main.py: a FastAPI REST API
+with GET endpoints /add, /subtract,
+/multiply, /divide, each taking two float
+query params a and b. Divide must return a
+clean 400 error on b=0, not crash. Enable
+CORS for all origins so a static HTML
+frontend can call it. Run it on port 8000
+with uvicorn when the file is executed
+directly. Also create backend/requirements.txt
+listing exactly what this needs. Don't start
+the server yet.</code></pre>
+          </div>
+          <div class="callout">Same prompt works in both tools — approve each edit as it comes, per last session's Part 3.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">47</div>
+        </div>
+      </section>
+
+      <section class="slide" id="backend-reviewed">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.5</div>
+        <h2 class="slide-title">The Generated Backend, Reviewed</h2>
+        <div class="slide-body">
+          <p class="intro">Expect something close to this shape — read it against what you asked for before running it:</p>
+          <div class="code-block">
+            <div class="code-label"><span>backend/main.py</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import uvicorn
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Calculator API is running"}
+
+
+@app.get("/add")
+def add(a: float, b: float):
+    return {"result": a + b}
+
+
+@app.get("/subtract")
+def subtract(a: float, b: float):
+    return {"result": a - b}
+
+
+@app.get("/multiply")
+def multiply(a: float, b: float):
+    return {"result": a * b}
+
+
+@app.get("/divide")
+def divide(a: float, b: float):
+    if b == 0:
+        raise HTTPException(status_code=400, detail="Cannot divide by zero")
+    return {"result": a / b}
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)</code></pre>
+          </div>
+          <div class="code-block">
+            <div class="code-label"><span>backend/requirements.txt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">fastapi
+uvicorn[standard]</code></pre>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">48</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-run-backend">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.6</div>
+        <h2 class="slide-title">Activate, Install, Run — on Its Designated Port</h2>
+        <div class="slide-body">
+          <p class="intro">You could ask the agent to run these for you — but run them yourself once, so you know exactly what "the backend is up" actually takes:</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">macOS / Linux</div>
+              <div class="code-block"><div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div><pre><code class="language-bash">cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python main.py</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">Windows (PowerShell)</div>
+              <div class="code-block"><div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">cd backend
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py</code></pre></div>
+            </div>
+          </div>
+          <div class="callout">Open <code class="inline">http://127.0.0.1:8000/docs</code> — FastAPI's Swagger UI should load, listing all four endpoints. That's your backend confirmed running on its designated port before the frontend exists.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">49</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-branded-frontend">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.7</div>
+        <h2 class="slide-title">Build the Branded Frontend</h2>
+        <div class="slide-body">
+          <p class="intro">With the backend running, ask for the frontend — deliberately without repeating any styling detail, since it's already in AGENTS.md from 5.2:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Create frontend/index.html and
+frontend/app.js. Two number inputs, an
+operation dropdown (add/subtract/multiply/
+divide), a Calculate button, and a result
+area. On click, fetch the matching endpoint
+on http://127.0.0.1:8000 and display the
+result, or the error message on failure.
+Follow the Design section in AGENTS.md.</code></pre>
+          </div>
+          <p>Serve it on its own designated port, next to the backend's 8000:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal, from inside frontend/</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">python3 -m http.server 5500</code></pre>
+          </div>
+          <p style="font-size:13px;color:var(--text-dim);">Windows: the same command, just <code class="inline">python</code> instead of <code class="inline">python3</code> if that's how your install is aliased.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">50</div>
+        </div>
+      </section>
+
+      <section class="slide" id="reading-build-diff">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.8</div>
+        <h2 class="slide-title">Reading This Diff Like a Reviewer</h2>
+        <div class="slide-body">
+          <p class="intro">Before trusting either half, check specifically:</p>
+          <ul class="points">
+            <li>Does <code class="inline">/divide</code> return a clean 400 with a message on <code class="inline">b=0</code>, instead of a 500 or a crash?</li>
+            <li>Does the frontend actually use the colors, logo, and layout from AGENTS.md's Design section — not a generic default?</li>
+            <li>Is CORS really enabled? Open <code class="inline">index.html</code> in a browser and check the console for a CORS error before assuming it's fine.</li>
+            <li>Are the ports exactly 8000 (backend) and 5500 (frontend) — matching what the scoped skill in 5.3 assumes?</li>
+            <li>Did anything outside <code class="inline">backend/</code> and <code class="inline">frontend/</code> get touched that didn't need to be?</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">51</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-playwright-test">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.9</div>
+        <h2 class="slide-title">Test It With Playwright MCP</h2>
+        <div class="slide-body">
+          <p class="intro">With Playwright MCP already installed and connected (Part 4) and both servers running (8000 + 5500), stop clicking through the UI by hand — have the agent drive a real browser instead:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Using the Playwright MCP tools, open
+http://127.0.0.1:5500. Enter 12 and 30,
+select Add, click Calculate, and take a
+snapshot to read the result. Then enter 10
+and 0, select Divide, click Calculate, and
+confirm an error message appears instead
+of a crash. Report both outcomes.</code></pre>
+          </div>
+          <div class="callout warn"><span class="callout-title">This is MCP actually doing something, not just being configured</span>Expect a real sequence — <code class="inline">browser_navigate</code>, <code class="inline">browser_fill_form</code>, <code class="inline">browser_click</code>, <code class="inline">browser_snapshot</code> — with the agent reading "42" and the divide-by-zero error text back from the live page, not from its own arithmetic. If it just computes the answer itself without touching the browser, redirect it back to the tools explicitly.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">52</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-run-skill">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.10</div>
+        <h2 class="slide-title">Run the Scoped Skill to Wrap Up</h2>
+        <div class="slide-body">
+          <p class="intro">Stop both servers, then let 5.3's skill bring the whole app back up in one shot:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Run the run-app skill.</code></pre>
+          </div>
+          <div class="callout">Confirm it activates the existing venv (doesn't recreate it), installs from <code class="inline">requirements.txt</code>, starts the backend on 8000 and the frontend on 5500, and reports both URLs — exactly what 5.3 specified. Then open a new terminal in a completely different folder and check that <code class="inline">run-app</code> does <em>not</em> appear there — proof the scoping from 3.3 is real, not just a claim on a slide.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">53</div>
+        </div>
+      </section>
+
+      <!-- ============ RECAP ============ -->
+      <section class="slide" id="recap">
+        <div class="slide-kicker">Recap</div>
+        <h2 class="slide-title">Key Takeaways</h2>
+        <div class="slide-body">
+          <div class="recap-grid">
+            <div class="obj-card"><span class="obj-num">1</span>opencode.jsonc (project) merges with opencode.json at ~/.config/opencode/ (global, same relative path on Windows via WSL) — the single source of truth for providers, models, and keys, no shell exports.</div>
+            <div class="obj-card"><span class="obj-num">2</span>Every command has a what/when/outcome — and most, but not all, have a Claude Code equivalent; the honest gaps are worth knowing, not papering over.</div>
+            <div class="obj-card"><span class="obj-num">3</span>An agent is a mandate, not a different AI — you used built-in primary agents, a built-in subagent, and wrote your own custom one, each with a clear why.</div>
+            <div class="obj-card"><span class="obj-num">4</span>Tools decide what an agent can ever do; Permissions decide whether it can do it without asking — two different levers, set globally and overridable per agent.</div>
+            <div class="obj-card"><span class="obj-num">5</span>A Skill is a saved procedure, not a personality — its location determines its reach, global for anything universal, scoped for anything project-specific.</div>
+            <div class="obj-card"><span class="obj-num">6</span>An MCP server adds real, callable tools for capabilities outside files/shell/web — installing and using Playwright MCP made that concrete by driving an actual browser.</div>
+            <div class="obj-card"><span class="obj-num">7</span>You built a REST API and a matching branded frontend, ran both on designated ports, and proved they work end to end by watching an MCP-driven browser use them.</div>
+          </div>
+          <div class="exercise" style="margin-top:24px;">
+            <div class="exercise-title">Before Next Session</div>
+            <p style="margin:0;">Add one more operation to the calculator — e.g. <code class="inline">power(a, b)</code> — as a new backend endpoint and a matching frontend control, then have Playwright MCP click through it for you. Same loop, one more rep.</p>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">54</div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

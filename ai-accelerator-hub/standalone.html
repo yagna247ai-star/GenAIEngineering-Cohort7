@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Accelerator Hub — Journalism Edition | Enterprise Learning Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI Accelerator Hub — Verify first. Accelerate second. Journalism Edition of the Outskill portal.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0b;--charcoal:#1a1c1f;--paper:#f8f7f5;--paper-2:#f1efe9;--line:#e8e5de;--ink:#0f0f10;--muted:#6b6a6e;--gold:#D4AF37;--gold-dark:#b8941f;--gold-soft:#FFF8E1;--nav:#0b0c0e;--radius:14px;--shadow:0 10px 30px rgba(0,0,0,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;letter-spacing:-.04em}
+a{color:inherit;text-decoration:none}button{font:inherit}
+
+/* Layout */
+.portal{display:grid;grid-template-columns:268px 1fr;min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;background:var(--nav);color:#fff;padding:22px 16px 18px;display:flex;flex-direction:column;overflow:auto;border-right:1px solid #1f1f21}
+.brand{display:flex;gap:10px;align-items:center;border-bottom:1px solid #1e1e20;padding:8px 8px 10px}
+.mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);border-radius:8px;background:rgba(212,175,55,.08)}
+.brand-text{line-height:1}.brand-text strong{font-size:12px;letter-spacing:.14em;display:block}.brand-text span{font-size:12px;letter-spacing:.14em;color:var(--gold);font-weight:700}
+.edition{margin-left:auto;font-size:7px;letter-spacing:.12em;color:#a89a6a;border:1px solid #2a2616;padding:4px 6px;border-radius:99px;background:#1a1810}
+.prog{margin:22px 8px 16px}
+.prog span{color:#fff6;letter-spacing:.15em;font-size:8px;font-weight:700}
+.prog strong{color:#fff;font-size:28px;line-height:.9;display:block;margin:7px 0 6px}
+.prog small{color:#d4c9a0;letter-spacing:.1em;font-size:7.5px;font-weight:600}
+.rule{height:2px;width:36px;background:linear-gradient(90deg,var(--gold),transparent);margin-top:10px;border-radius:99px}
+.nav-label{color:#9a989e;letter-spacing:.13em;font-size:8px;font-weight:700;margin:16px 8px 6px}
+nav{display:grid;gap:3px}
+nav a{color:#ffffffa8;display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:9px;font-size:12.2px;border:1px solid transparent;transition:.18s}
+nav a:hover{color:#fff;background:#ffffff0f}
+nav a.active{background:#1e1b0f;border-color:#2d2814;color:#fff}
+.side-progress{margin-top:auto;border-top:1px solid #1f1f21;padding:16px 8px 8px}
+.track{background:#ffffff14;border-radius:10px;height:4px;margin:10px 0 6px;overflow:hidden}
+.track span{background:var(--gold);height:100%;display:block}
+.side-note{color:#d4c9a0;margin:10px 8px 0;font:italic 12px/1.4 Georgia,serif;opacity:.9}
+
+.main{min-width:0}
+.top{position:sticky;top:0;z-index:10;background:rgba(248,247,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;height:70px;padding:0 24px}
+.search{position:relative;display:flex;align-items:center;gap:10px;width:min(480px,52vw);background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 12px;height:40px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.search input{flex:1;border:0;outline:0;background:transparent;font-size:13px}
+.search kbd{color:#8e8c92;background:#f8f7f5;border:1px solid #d7d4cd;border-radius:6px;padding:4px 7px;font-size:9px}
+.results{position:absolute;top:46px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;max-height:320px;overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.14);display:none}
+.results.open{display:block}
+.results button{width:100%;text-align:left;background:transparent;border:0;border-radius:8px;padding:10px;display:grid;gap:2px;cursor:pointer}
+.results button:hover{background:var(--paper)}
+.guard{color:#5a5a5e;letter-spacing:.08em;font-size:9px;font-weight:700;display:flex;align-items:center;gap:8px}
+.guard i{width:7px;height:7px;border-radius:50%;background:#0a7a3a;box-shadow:0 0 0 4px rgba(10,122,58,.12)}
+
+.view{padding:24px;max-width:1400px;margin:0 auto}
+.eyebrow{color:#787681;letter-spacing:.13em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.eyebrow.gold{color:#8a7a2b}
+em{color:var(--gold-dark);font-family:"Fraunces",Georgia,serif;font-weight:600}
+
+/* Hero */
+.hero{color:#fff;background:#0f0f12;border-radius:18px;display:grid;grid-template-columns:1.35fr .75fr;gap:24px;padding:24px;border:1px solid #1e1c12;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;top:-140px;right:-160px;width:420px;height:420px;background:radial-gradient(ellipse at center,rgba(212,175,55,.18),transparent 70%);pointer-events:none}
+.hero>div{position:relative;z-index:1}
+.kicker{color:var(--gold);font-size:10px;letter-spacing:.14em;font-weight:700;text-transform:uppercase;margin-top:6px}
+.hero h1{font-size:clamp(34px,4.2vw,54px);line-height:.92;margin:12px 0 10px}
+.lead{color:#ffffffb3;max-width:620px;font-size:13.5px;line-height:1.65}
+.actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:#111;border:0;border-radius:9px;min-height:44px;padding:0 16px;font-size:12.5px;font-weight:750;cursor:pointer;box-shadow:0 8px 22px rgba(212,175,55,.22)}
+.btn-ghost{background:#fff;border:1px solid var(--line);border-radius:8px;min-height:36px;padding:0 12px;font-weight:700;font-size:11.5px;cursor:pointer}
+.btn-quiet{color:#ffffffc2;background:transparent;border:0;border-bottom:1px solid #ffffff55;min-height:36px;cursor:pointer;font-size:12px}
+.trust{color:#ffffff66;font-size:10px;display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.quote{margin-top:12px;color:#d4c9a0;font:italic 12px/1.4 Georgia,serif;border-left:2px solid rgba(212,175,55,.35);padding-left:10px}
+.hero-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px;backdrop-filter:blur(10px)}
+.hero-panel h2{font-size:20px;margin:8px 0 12px}
+.hero-panel ol{margin:0;padding:0;list-style:none}
+.hero-panel li{display:grid;grid-template-columns:38px 1fr;gap:6px;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);color:#ffffffc2;font-size:11.5px}
+.hero-panel li span{color:var(--gold);font-size:9px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;border-top:1px solid rgba(255,255,255,.1);padding-top:12px}
+.stats strong{color:var(--gold);font:700 18px/1 Georgia,serif;display:block;text-align:center}
+.stats span{color:#ffffff8a;font-size:8px;letter-spacing:.06em;text-transform:uppercase;text-align:center;display:block}
+
+.section{margin-top:32px}
+.section h2{font-size:clamp(22px,3vw,30px);line-height:1;margin:8px 0 6px}
+.section p.desc{color:var(--muted);font-size:12.5px;line-height:1.6;max-width:760px;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;transition:.18s}
+.card:hover{transform:translateY(-1px);box-shadow:0 16px 30px rgba(0,0,0,.08);border-color:#d2c7a0}
+.card.feature{background:#0f0f12;color:#fff;border-color:#1e1c12;grid-row:span 2}
+.kicker-sm{letter-spacing:.12em;text-transform:uppercase;font-size:8px;font-weight:700;color:#8a7a2b;margin-bottom:6px}
+.card.feature .kicker-sm{color:var(--gold)}
+.card h3{margin:0 0 6px;font-size:16px}
+.card p{color:var(--muted);font-size:12px;line-height:1.5;margin:0}
+.card.feature p{color:#ffffffb3}
+.cta{color:var(--gold-dark);font-size:11px;font-weight:700;margin-top:10px;display:inline-flex;gap:6px}
+.card.feature .cta{color:var(--gold)}
+
+/* Roadmap form */
+.roadmap-grid{display:grid;grid-template-columns:380px 1fr;gap:16px}
+.road-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.road-card label{display:block;margin-top:12px;font-size:12px;font-weight:600}
+.road-card select,.road-card input{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff;font-size:12.5px}
+.preview{background:#0b0c0e;color:#fff;border-radius:14px;padding:16px;border:1px solid #1f1f1f}
+.week-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.week{background:#ffffff0f;border:1px solid #ffffff14;border-radius:10px;padding:12px}
+.week span{color:var(--gold);font-size:8px;letter-spacing:.1em;font-weight:700}
+.week strong{color:#fff}
+.guardrail{margin-top:12px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.25);color:#f0dd9a;border-radius:8px;padding:8px;font-size:11px}
+
+/* Topics */
+.pills{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.pills button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:6px 10px;font-size:11px;cursor:pointer}
+.pills button.active{background:#0b0c0e;color:var(--gold);border-color:#0b0c0e}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.topic{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.topic h3{font-size:14px;margin:6px 0 4px}
+.topic p{color:var(--muted);font-size:11.5px;line-height:1.45}
+.meta{font-size:10px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;margin-top:8px}
+
+/* Anchor */
+.anchor{background:#0b0c0e;color:#fff;border-radius:16px;padding:24px;border:1px solid #1f1f1f}
+.anchor-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.anchor-3 div{border-left:1px solid #ffffff16;padding-left:16px}
+.anchor-3 div:first-child{border:0;padding-left:0}
+.anchor-3 strong{color:var(--gold);font-size:11px}
+.anchor-3 span{color:#ffffffb3;font-size:11.5px;line-height:1.5}
+.try{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;background:var(--gold);color:#111;border-radius:12px;padding:16px;margin-top:16px}
+.try pre{margin:0;background:#111;color:#e8e0c0;border-radius:9px;padding:12px;overflow:auto;font:11px/1.5 "JetBrains Mono",monospace}
+.try button{background:#111;color:var(--gold);border:1px solid #111;border-radius:8px;min-height:34px;padding:0 10px;font-weight:700;cursor:pointer}
+
+/* Workbooks */
+.wb{display:grid;grid-template-columns:48px 1fr 140px;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px}
+.wb-num{width:42px;height:42px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:10px;font:600 15px/1 Georgia,serif}
+
+/* Lab */
+.progress{height:5px;background:#ffffff14;border-radius:99px;overflow:hidden}
+.progress span{height:100%;background:var(--gold);display:block}
+.lab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.lab{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff;display:grid;grid-template-columns:36px 1fr;gap:12px;cursor:pointer}
+.lab.done{background:#fff8df;border-color:#f0dd9a}
+
+/* Glossary */
+.gloss{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.gloss article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.risk{font-size:9px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:99px;border:1px solid var(--line);display:inline-block;margin-top:8px}
+
+/* Footer */
+footer{border-top:1px solid var(--line);background:#0b0c0e;color:#c8c6c0;padding:16px 24px;margin-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:1100px){.portal{grid-template-columns:1fr}.sidebar{display:none}.hero{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.topic-grid{grid-template-columns:1fr}.roadmap-grid{grid-template-columns:1fr}.anchor-3{grid-template-columns:1fr}.anchor-3 div{border-left:0;border-top:1px solid #ffffff14;padding:12px 0 0}.try{grid-template-columns:1fr}.lab-grid{grid-template-columns:1fr}.gloss{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="portal">
+<aside class="sidebar">
+<div class="brand"><div class="mark">◆</div><div class="brand-text"><strong>AI ACCELERATOR</strong><span>HUB</span></div><span class="edition">JOURNALISM EDITION</span></div>
+<div class="prog"><span>GENERATIVE AI</span><strong>LEARNING<br>PORTAL</strong><small>FOR JOURNALISTS • YOUR AI NEWSROOM OS</small><div class="rule"></div></div>
+<div class="nav-label">YOUR JOURNEY</div>
+<nav><a href="#home" class="active">Home</a><a href="#my-roadmap">My AI Roadmap NEW</a></nav>
+<div class="nav-label">LIBRARY</div>
+<nav><a href="#learning-topics">Learning Topics</a><a href="#workbooks">Guided Workbooks</a><a href="#lab">Practice Lab</a><a href="#roadmap">Five-Level Roadmap</a></nav>
+<div class="nav-label">SUPPORT</div>
+<nav><a href="#glossary">Beginner Glossary</a><a href="#stuck">I'm Stuck</a></nav>
+<div class="side-progress"><div style="display:flex;justify-content:space-between;font-size:9px;color:#ffffff6b"><span id="progText">0% Practice progress</span><small id="progSmall">0 of 6</small></div><div class="track"><span id="track" style="width:0%"></span></div></div>
+<div class="side-note">“Verify first. Accelerate second.”</div>
+</aside>
+
+<div class="main">
+<div class="top">
+<div class="search" role="search">⌕ <input id="q" placeholder="Search topics, workbooks, glossary… (e.g. RAG, hallucination)" aria-label="Search"><kbd>⌘ K</kbd><div id="results" class="results"></div></div>
+<div class="guard"><i></i> Editorial Guardrails Active</div>
+</div>
+
+<div class="view">
+<!-- Hero -->
+<section id="home" class="hero">
+<div>
+<div class="eyebrow"><i></i> AI ACCELERATOR HUB — JOURNALISM EDITION</div>
+<div class="kicker">For investigative reporters, editors & newsroom operators</div>
+<h1>Verify first.<br><em>Accelerate second.</em></h1>
+<p class="lead">Outskill’s portal, re-engineered for journalism. A source-first curriculum — from the AI Generalist Toolkit to newsroom agents — with editorial guardrails. <b>Proof you can publish.</b></p>
+<div class="actions"><button class="btn-primary" onclick="document.getElementById('my-roadmap').scrollIntoView({behavior:'smooth'})">Create my newsroom roadmap →</button><button class="btn-quiet" onclick="document.getElementById('learning-topics').scrollIntoView({behavior:'smooth'})">Explore 105 sections</button></div>
+<div class="trust"><span>◷ 10–15 min onboarding</span><span>• Beginner-friendly</span><span>• Change answers anytime</span><span>• Editorial standards desk</span></div>
+<div class="quote">“Learn deeply. Build bravely.” <small>— Outskill principle, newsroom-hardened</small></div>
+</div>
+<div class="hero-panel">
+<div class="eyebrow gold"><i></i> YOUR JOURNEY PREVIEW</div>
+<h2>From curious reporter<br>to AI newsroom builder.</h2>
+<ol>
+<li><span>01</span><div><strong>Discover your beat & starting point</strong>Role, experience, confidence, stories you want to tell</div></li>
+<li><span>02</span><div><strong>Focus on the right skills</strong>Route matched to deadlines, desk, risk tolerance</div></li>
+<li><span>03</span><div><strong>Ship verifiable proof</strong>Bylined artifact with citations, evals, demo</div></li>
+</ol>
+<div class="stats"><div><strong>105</strong><span>Learning sections</span></div><div><strong>5</strong><span>Guided workbooks</span></div><div><strong>6</strong><span>Portfolio proofs</span></div><div><strong>5</strong><span>Newsroom levels</span></div></div>
+</div>
+</section>
+
+<!-- My Roadmap -->
+<section id="my-roadmap" class="section">
+<div class="eyebrow"><i></i> PERSONALIZED JOURNEY — DO / REACT</div>
+<h2>My AI Roadmap — your 30-day newsroom plan.</h2>
+<p class="desc">Answer 4. The system <b>does</b> a mapping, you <b>react</b> to the preview, the system refines.</p>
+<div class="roadmap-grid">
+<div class="road-card">
+<h3>8 questions, 90 seconds</h3>
+<label>Primary role<select id="role"><option>Investigative Reporter</option><option>Editor / Standards Desk</option><option>Fact-Checker / Researcher</option><option>Audience / Producer</option></select></label>
+<label>Core goal<select id="goal"><option>Research & verification at speed</option><option>Drafting with provenance</option><option>Building newsroom agents</option></select></label>
+<label>Weekly hours<input type="range" id="hrs" min="2" max="15" value="6"><small id="hrsLabel">6 hrs/week — Craft track</small></label>
+<label>Risk tolerance<select id="risk"><option>Publish-grade — citations required</option><option>Internal briefing — speed first</option></select></label>
+<button class="btn-primary" style="width:100%;margin-top:12px" onclick="generate()">Generate my 30-day plan</button>
+<div id="done" style="display:none;margin-top:8px;background:#fff8df;border:1px solid #f0dd9a;color:#7a5a00;border-radius:8px;padding:8px;font-size:11px">✓ Plan generated</div>
+</div>
+<div class="preview" id="preview">
+<div class="eyebrow gold"><i></i> YOUR PREVIEW — REACT & REFINE</div>
+<h3 id="prevTitle" style="color:var(--gold);margin:6px 0 4px">Investigative Reporter • Research & verification at speed</h3>
+<div class="week-grid" id="weeks"></div>
+<div class="guardrail" id="guardrail">Guardrail: Publish-grade — citations required</div>
+</div>
+</div>
+</section>
+
+<!-- Library -->
+<section class="section">
+<div class="eyebrow"><i></i> YOUR COMPLETE RESOURCE LIBRARY</div>
+<h2>Everything to go from learning to byline.</h2>
+<p class="desc">Explore freely, or follow your roadmap. Each resource is built for a newsroom outcome.</p>
+<div class="grid3" style="margin-top:12px">
+<div class="card feature"><div class="kicker-sm">PERSONALIZED JOURNEY</div><h3>Find your best place to start.</h3><p>8 questions → a focused 30-day plan mapped to 105 sections, with editorial gates.</p><span class="cta">Take the onboarding →</span></div>
+<div class="card"><div class="kicker-sm">LEARN</div><h3>Learning Topics</h3><p>105 sections across 6 editorial pillars — from foundations to audience & ethics.</p><span class="cta">Explore topics →</span></div>
+<div class="card"><div class="kicker-sm">BUILD WITH GUIDANCE</div><h3>Guided Workbooks</h3><p>Exact steps, prompts, checks, fixes, and proof — for the 9am deadline.</p><span class="cta">Open workbooks →</span></div>
+<div class="card"><div class="kicker-sm">CREATE PROOF</div><h3>Practice Lab</h3><p>Six proofs an editor can verify — with citation and PII evals.</p><span class="cta">Start a proof →</span></div>
+<div class="card"><div class="kicker-sm">SEE THE BIG PICTURE</div><h3>Five-Level Roadmap</h3><p>Foundations → Leadership, each gate requires a bylined artifact.</p><span class="cta">Explore levels →</span></div>
+</div>
+</section>
+
+<!-- Learning Topics -->
+<section id="learning-topics" class="section">
+<div class="eyebrow"><i></i> LEARN — 105 CLEAR SECTIONS</div>
+<h2>Learning Topics, curated for journalists.</h2>
+<p class="desc">Six editorial pillars, sequenced by newsroom risk.</p>
+<div class="pills" id="pills"></div>
+<input id="topicQ" placeholder="Filter topics…" style="width:100%;border:1px solid var(--line);border-radius:8px;padding:8px;margin-bottom:10px">
+<div class="topic-grid" id="topicGrid"></div>
+<div style="text-align:center;color:var(--muted);font-size:11px;margin-top:8px" id="topicCount"></div>
+</section>
+
+<!-- Session 01 -->
+<section id="session-1-foundations-of-generative-ai-and-the-ai-generalist-toolkit-3-prompt-engineering-versus-context-engineering" class="section">
+<div class="anchor">
+<div class="eyebrow gold"><i></i> SESSION 01 • FOUNDATIONS — JOURNALISM FOCUS</div>
+<h2>Foundations of Generative AI and the AI Generalist Toolkit</h2>
+<p style="color:#ffffffb3;font-size:12.5px;max-width:760px">For journalists, generative AI is not a chatbot. It is a <b style="color:#fff">generalist toolkit</b> — models + prompts + context + evals — that turns reporting labor into verifiable systems.</p>
+<div class="anchor-3">
+<div><strong>01 — The Generalist Reporter Lens</strong><span>Compose LLM, retrieval, human judgment like a desk: researcher + drafter + standards editor. Tip → Retrieval → Draft → Gate → Publish.</span></div>
+<div><strong>02 — Prompt Engineering <em>vs</em> Context Engineering</strong><span><b>Prompt</b> = precise instruction. <b>Context</b> = evidence window. Reliability lives in context; leverage in prompt.</span></div>
+<div><strong>03 — Editorial Guardrails</strong><span>Every output carries citations + confidence (high/med/low) + Do-not-publish checklist. Verification is the product.</span></div>
+</div>
+<div class="try">
+<div><div class="eyebrow"><i></i> TRY IT NOW — EDITORIAL PROMPT</div><h3>Turn a vague brief into a standards-ready system prompt.</h3><button onclick="copyPrompt()">Copy starter prompt</button> <button class="btn-ghost" onclick="navigator.clipboard.writeText(promptText).then(()=>toast('Copied'))">Copy</button></div>
+<pre><code id="promptText">You are editorial assistant — JOURNALISM EDITION.
+GOAL: Tip + sources → publish-ready brief.
+GUARDRAILS: Cite [1][2], confidence high/med/low, redact PII, Do-not-publish if <90%.
+CONTEXT: <paste 2–3 sources, 800 tokens>
+TASK: 1) Claims needing verification 2) 180w brief with citations 3) Open questions
+OUTPUT: Markdown + Do-not-publish gate.</code></pre>
+</div>
+</div>
+</section>
+
+<!-- Workbooks -->
+<section id="workbooks" class="section">
+<div class="eyebrow"><i></i> BUILD WITH GUIDANCE — 5 WORKBOOKS</div>
+<h2>Exact steps, prompts, checks, fixes, and proof.</h2>
+<div id="wbGrid" style="display:grid;gap:10px;margin-top:12px"></div>
+</section>
+
+<!-- Lab -->
+<section id="lab" class="section">
+<div class="eyebrow"><i></i> CREATE PROOF — PRACTICE LAB</div>
+<h2>Six portfolio proofs you can show an editor.</h2>
+<div style="display:flex;gap:12px;align-items:center;background:#0b0c0e;color:#fff;border-radius:12px;padding:12px;border:1px solid #1f1f1f;margin-top:10px">
+<div><strong id="labPct" style="color:var(--gold);font-size:22px">0%</strong><span style="color:#ffffff8a;font-size:9px;letter-spacing:.08em"> Lab completion</span></div>
+<div style="flex:1" class="progress"><span id="labBar" style="width:0%"></span></div>
+</div>
+<div class="lab-grid" id="labGrid"></div>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap" class="section">
+<div class="eyebrow"><i></i> FIVE-LEVEL NEWSROOM ROADMAP</div>
+<h2>The complete capability path — foundations to leadership.</h2>
+<div id="roadmapList" style="background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px"></div>
+<div style="margin-top:12px;background:#0b0c0e;color:#fff;border-radius:12px;padding:14px;display:flex;gap:12px"><span style="color:var(--gold);font-size:10px;letter-spacing:.1em;font-weight:700">Newsroom guardrail</span><p style="color:#ffffffb3;font:12.5px/1.6 Georgia,serif;margin:0">Every level includes provenance, PII, bias review — so acceleration never outruns trust.</p></div>
+</section>
+
+<!-- Glossary -->
+<section id="glossary" class="section">
+<div class="eyebrow"><i></i> SUPPORT — BEGINNER GLOSSARY</div>
+<h2>Decode AI language — journalist translation.</h2>
+<input id="glossQ" placeholder="Search glossary… (hallucination, RAG, guardrail)" style="width:260px;border:1px solid var(--line);border-radius:8px;padding:8px;margin-top:8px">
+<div class="gloss" id="glossGrid" style="margin-top:12px"></div>
+</section>
+
+<!-- Stuck -->
+<section id="stuck" class="section">
+<div class="eyebrow"><i></i> SUPPORT — I’M STUCK</div>
+<h2>Find your next step — newsroom triage.</h2>
+<div id="stuckGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px"></div>
+</section>
+
+<!-- Loop -->
+<section style="margin-top:24px;display:grid;grid-template-columns:.55fr 1.45fr;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px">
+<div><div class="eyebrow"><i></i> A BETTER WAY TO LEARN AI</div><h2>Use the loop.</h2><p style="color:var(--muted);font-size:12px">Don’t memorize tools. Build a repeatable newsroom rhythm.</p></div>
+<div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span style="display:grid;justify-items:center;gap:4px"><b style="width:32px;height:32px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:50%">1</b>Learn</span><span>→</span><span style="display:grid;justify-items:center;gap:4px"><b style="width:32px;height:32px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:50%">2</b>Practice</span><span>→</span><span style="display:grid;justify-items:center;gap:4px"><b style="width:32px;height:32px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:50%">3</b>Build</span><span>→</span><span style="display:grid;justify-items:center;gap:4px"><b style="width:32px;height:32px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:50%">4</b>Reflect</span></div>
+</section>
+
+</div>
+<footer><div><strong style="color:var(--gold);letter-spacing:.12em;font-size:10px">AI ACCELERATOR HUB — JOURNALISM EDITION</strong><span style="color:#a8a6a0;font-size:11px"> © 2026 Verification is the product.</span></div><div style="display:flex;gap:12px;font-size:11px"><a href="#">Editorial Policy</a><a href="#">Privacy</a></div></footer>
+</div>
+</div>
+
+<div id="toast" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0b0c0e;color:var(--gold);border:1px solid #2a2616;padding:10px 14px;border-radius:99px;font-size:12px;box-shadow:0 20px 50px rgba(0,0,0,.2);display:none"></div>
+
+<script>
+// Data
+const pillars=["Foundations","Reporting","Verification","Production","Audience","Ethics"];
+const topics=[
+{p:"Foundations",t:"The AI Generalist Toolkit for Newsrooms",d:"Models + prompts + context + evals as a desk.",j:"Explain AI to newsroom"},
+{p:"Foundations",t:"How LLMs Work (For Reporters)",d:"Tokens, attention, why sounding right ≠ evidence.",j:"Interview an AI source"},
+{p:"Foundations",t:"Prompt vs Context Engineering",d:"Twin levers for reliability.",j:"Write a standards-grade prompt"},
+{p:"Reporting",t:"Research at Speed — Synthesis",d:"20 tabs → cited synthesis.",j:"Background a story"},
+{p:"Reporting",t:"Interview Synthesis",d:"Transcript → claims → gap analysis.",j:"Post-interview brief"},
+{p:"Reporting",t:"FOIA to Context Window",d:"Chunk FOIA dumps for RAG.",j:"Build FOIA locker"},
+{p:"Verification",t:"Verification Protocols",d:"Citation coverage + confidence + gate.",j:"Fact-check AI draft"},
+{p:"Verification",t:"PII & Source Protection",d:"Redaction, permissions.",j:"Handle sensitive material"},
+{p:"Verification",t:"Bias & Framing Audits",d:"Audit for omission/amplification.",j:"Audit explainer"},
+{p:"Production",t:"From Prompt to Workflow",d:"Multi-step system with gate.",j:"Tip-to-brief workflow"},
+{p:"Production",t:"Agents for Assignment Desk",d:"Inbox → brief agent.",j:"Automate morning brief"},
+{p:"Production",t:"RAG — Archive as Context",d:"10 years clips as retrieval.",j:"Launch archive copilot"},
+{p:"Audience",t:"Controlled Generation",d:"Brand voice + legal constraints.",j:"Explainer series"},
+{p:"Audience",t:"Distribution & Analytics",d:"Headline tests without clickbait.",j:"Test 3 heds"},
+{p:"Ethics",t:"Editorial Policy for AI",d:"Attribution, disclosure.",j:"Draft policy"},
+{p:"Ethics",t:"Leadership — ROI & Risk",d:"Cost, latency, trust.",j:"Pitch budget"},
+];
+const workbooks=[
+{n:"01",t:"Source to Story — Provenance Co-Pilot",d:"Draft that cites. Verifies. Never invents a source.",time:"~90 min",proof:"1 cited draft"},
+{n:"02",t:"Evidence Locker — Context Lab",d:"Turn archives/FOIA/transcripts into citable RAG.",time:"~75 min",proof:"RAG over 20 docs"},
+{n:"03",t:"Tip to Brief — Desk Agent",d:"Tip → triage → brief → human gate.",time:"~110 min",proof:"Brief agent demo"},
+{n:"04",t:"Standards Desk — Eval & Red-Team",d:"Design evals, red-team prompts.",time:"~60 min",proof:"Eval dashboard"},
+{n:"05",t:"From Demo to Deploy — VCA",d:"Containerize + deploy to VCA.",time:"~95 min",proof:"VCA deploy + runbook"},
+];
+const labs=[
+{tag:"PORTFOLIO",t:"Fact-Checked Brief Generator",d:"Tip + 3 sources → cited brief.",e:"Citation ≥90%"},
+{tag:"PORTFOLIO",t:"Archive Copilot (RAG)",d:"10 years clips, citable.",e:"Precision + redaction"},
+{tag:"PORTFOLIO",t:"Interview Synthesis Agent",d:"Transcript → claims → gaps.",e:"Claim recall"},
+{tag:"PORTFOLIO",t:"Bias & Framing Audit",d:"Stress-test explainer.",e:"Bias rubric"},
+{tag:"PORTFOLIO",t:"Controlled Explainer System",d:"Consistent voice + legal.",e:"Voice consistency"},
+{tag:"PORTFOLIO",t:"VCA Deploy — Newsroom Product",d:"Deploy to VCA with health.",e:"Deploy success"},
+];
+const levels=[
+{n:"01",t:"Foundations — Generalist Reporter Toolkit",d:"LLM, diffusion, generalist stack.",meta:"Prompt × Context × Evals"},
+{n:"02",t:"Craft — Research & Verification",d:"Synthesis, interview, FOIA, provenance.",meta:"Research • Verify • Draft"},
+{n:"03",t:"Systems — Workflows & Agents",d:"Multi-step systems with gates.",meta:"Workflows • Agents • Logs"},
+{n:"04",t:"Products — Prototype to Published",d:"Ship copilots with observability.",meta:"Ship • Observe • Scale"},
+{n:"05",t:"Leadership — Standards",d:"Governance, policy, enablement.",meta:"Govern • Enable • Measure"},
+];
+const glossary=[
+{t:"Hallucination",a:"Fabrication",d:"Model invents fact/source.",j:"Treat as fabrication risk. Require citations.",risk:"Fabrication risk"},
+{t:"RAG",a:"Retrieval-Augmented",d:"Supply your docs as context.",j:"Your archive as context. 10 years, citable.",risk:"Low if cited"},
+{t:"Context Window",a:"Evidence window",d:"How much source model sees.",j:"FOIA dump → chunk → cite.",risk:"Omission risk"},
+{t:"Prompt Engineering",a:"Instruction design",d:"Precise role/task/format.",j:"Assignment note. Role+task+guardrail.",risk:"Style drift"},
+{t:"Eval",a:"Evaluation",d:"Measurable reliability test.",j:"Make trust measurable.",risk:"Unmeasured = risky"},
+{t:"PII",a:"Personally Identifiable",d:"Names/contacts sensitive.",j:"Never paste sensitive source.",risk:"Leakage risk"},
+];
+const stucks=[
+{t:"I’m new — where to start?",d:"You’re a reporter, not engineer.",f:"Click Create my newsroom roadmap → answer 8 → Level 01."},
+{t:"Prompt sounds right but not cited",d:"Hallucination risk.",f:"Add 2–3 sources (800 tokens) + demand citations. WB01."},
+{t:"Source won’t verify / PII worry",d:"Sensitive material.",f:"Redact before paste. WB02 permissioned RAG."},
+{t:"VCA deploy fails",d:"Container builds but fails on VCA.",f:"Check Dockerfile healthcheck + base-href. WB05."},
+];
+
+// Helpers
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
+function copyPrompt(){const c=document.getElementById('promptText').textContent;navigator.clipboard.writeText(c).then(()=>toast('Editorial prompt copied'))}
+
+// Roadmap preview
+function updateWeeks(){
+ const hrs=+document.getElementById('hrs').value;
+ document.getElementById('hrsLabel').textContent=hrs+" hrs/week — "+(hrs<5?"Foundations track":hrs<10?"Craft track":"Builder track");
+ const role=document.getElementById('role').value;
+ document.getElementById('prevTitle').textContent=role+" • "+document.getElementById('goal').value;
+ document.getElementById('guardrail').textContent="Guardrail: "+document.getElementById('risk').value;
+ const w=document.getElementById('weeks');
+ w.innerHTML="";
+ const sets= hrs<5? [["WEEK 01","Foundations — Generalist Toolkit","LLM+retrieval+gate"], ["WEEK 02","Craft — Prompt vs Context","Editorial prompts + evidence"], ["WEEK 03","Evidence Locker","Archive/FOIA → cite"], ["WEEK 04","Ship — Fact-Checked Brief","Research→draft→gate"]]
+ : hrs<10? [["WEEK 01","Foundations + Ethics","Generalist + guardrails"], ["WEEK 02","Investigative Research System","Tip triage to source graph"], ["WEEK 03","Agent for Desk","Inbox → brief"], ["WEEK 04","Publish & Reflect","FOIA brief + explainer"]]
+ : [["WEEK 01","Foundations → Systems","Toolkit + orchestration"], ["WEEK 02","RAG & Evaluation","Evidence locker + evals"], ["WEEK 03","Newsroom Product","Archive copilot"], ["WEEK 04","Deploy & Lead","VCA deploy + rollout"]];
+ sets.forEach(s=>{
+  const d=document.createElement('div');d.className='week';d.innerHTML=`<span>${s[0]}</span><strong>${s[1]}</strong><small>${s[2]}</small>`;
+  w.appendChild(d);
+ });
+}
+document.getElementById('hrs').addEventListener('input',updateWeeks);
+document.getElementById('role').addEventListener('change',updateWeeks);
+document.getElementById('goal').addEventListener('change',updateWeeks);
+document.getElementById('risk').addEventListener('change',updateWeeks);
+function generate(){document.getElementById('done').style.display='block';toast('Newsroom roadmap generated');}
+
+updateWeeks();
+
+// Topics
+function renderTopics(){
+ const q=document.getElementById('topicQ').value.toLowerCase();
+ const active=document.querySelector('.pills button.active');
+ const pillar=active?active.dataset.pill:"all";
+ const filtered=topics.filter(t=>(pillar==="all"||t.p===pillar) && (!q|| (t.t+t.d+t.j).toLowerCase().includes(q)));
+ const grid=document.getElementById('topicGrid');
+ grid.innerHTML="";
+ filtered.forEach(t=>{
+  const el=document.createElement('article');el.className='topic';
+  el.innerHTML=`<div class="eyebrow gold"><i></i> ${t.p} • ${t.j}</div><h3>${t.t}</h3><p>${t.d}</p><div class="meta"><span>Job: ${t.j}</span><span style="background:var(--paper-2);border:1px solid var(--line);border-radius:99px;padding:2px 6px;font-size:9px">Lab</span></div>`;
+  grid.appendChild(el);
+ });
+ document.getElementById('topicCount').textContent=`Showing ${filtered.length} of 105 sections • Foundations → Leadership (18 shown)`;
+}
+function renderPills(){
+ const p=document.getElementById('pills');
+ p.innerHTML="";
+ [...pillars,"All"].forEach(pl=>{
+  const b=document.createElement('button');b.textContent=pl;b.dataset.pill=pl;b.className=pl==="All"?"active":"";
+  b.onclick=()=>{document.querySelectorAll('.pills button').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderTopics()};
+  p.appendChild(b);
+ });
+}
+document.getElementById('topicQ').addEventListener('input',renderTopics);
+renderPills();renderTopics();
+
+// Workbooks
+const wbGrid=document.getElementById('wbGrid');
+workbooks.forEach(w=>{
+ const el=document.createElement('div');el.className='wb';
+ el.innerHTML=`<div class="wb-num">${w.n}</div><div><div class="eyebrow gold"><i></i> WORKBOOK ${w.n}</div><h3 style="margin:4px 0">${w.t}</h3><p style="color:var(--muted);font-size:11.5px">${w.d}</p><div style="display:flex;gap:6px;margin-top:6px"><span style="background:var(--paper-2);border:1px solid var(--line);border-radius:99px;padding:3px 6px;font-size:9px">${w.time}</span><span style="background:var(--paper-2);border:1px solid var(--line);border-radius:99px;padding:3px 6px;font-size:9px">${w.proof}</span></div></div><div style="border-left:1px solid var(--line);padding-left:12px"><strong style="color:var(--gold-dark)">Open workbook →</strong></div>`;
+ el.onclick=()=>toast('Workbook '+w.n+' — exact steps, prompts, checks');
+ wbGrid.appendChild(el);
+});
+
+// Lab
+let labDone=Array(6).fill(false);
+function renderLab(){
+ const grid=document.getElementById('labGrid');grid.innerHTML="";
+ labs.forEach((l,i)=>{
+  const el=document.createElement('div');el.className='lab'+(labDone[i]?' done':'');
+  el.innerHTML=`<div style="width:34px;height:34px;display:grid;place-items:center;border:1px solid #d9d6ce;border-radius:8px;background:${labDone[i]?'var(--gold)':'#fff'}">${labDone[i]?'✓':'+'}</div><div><div class="eyebrow gold"><i></i> ${l.tag}</div><h3 style="font-size:14px;margin:4px 0">${l.t}</h3><p style="color:var(--muted);font-size:11.5px">${l.d}</p><div style="margin-top:6px;background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:10px;display:inline-block">Eval: ${l.e}</div></div>`;
+  el.onclick=()=>{labDone[i]=!labDone[i];const pct=Math.round(labDone.filter(Boolean).length/6*100);document.getElementById('labPct').textContent=pct+'%';document.getElementById('labBar').style.width=pct+'%';document.getElementById('progText').textContent=pct+'% Practice progress';document.getElementById('progSmall').textContent=labDone.filter(Boolean).length+' of 6';toast(labDone[i]?'Proof complete':'Proof reopened');renderLab()};
+  grid.appendChild(el);
+ });
+}
+renderLab();
+
+// Roadmap
+const rList=document.getElementById('roadmapList');
+levels.forEach(l=>{
+ const el=document.createElement('div');el.style.cssText="display:grid;grid-template-columns:1fr 180px;gap:16px;padding:16px;border-bottom:1px solid var(--line)";
+ el.innerHTML=`<div><div class="eyebrow gold"><i></i> LEVEL ${l.n}</div><h3 style="margin:6px 0">${l.t}</h3><p style="color:var(--muted);font-size:11.5px">${l.d}</p><div style="display:flex;gap:6px;margin-top:6px"><span style="background:var(--paper-2);border:1px solid var(--line);border-radius:99px;padding:3px 6px;font-size:9px">${l.meta}</span></div></div><div style="background:#fff8df;border:1px solid #f0dd9a;border-radius:10px;padding:12px;align-self:center"><span style="color:var(--gold-dark);font-size:10px;letter-spacing:.08em">Includes</span><strong style="display:block;margin:6px 0">Workbooks • Labs • Evals</strong></div>`;
+ rList.appendChild(el);
+});
+
+// Glossary
+function renderGloss(){
+ const q=document.getElementById('glossQ').value.toLowerCase();
+ const grid=document.getElementById('glossGrid');grid.innerHTML="";
+ glossary.filter(g=>!q|| (g.t+g.a+g.d+g.j).toLowerCase().includes(q)).forEach(g=>{
+  const el=document.createElement('article');el.innerHTML=`<h3 style="margin:0 0 6px;font-size:14px">${g.t} <small style="color:var(--muted);font:400 11px sans-serif">${g.a}</small></h3><p style="color:var(--muted);font-size:11.5px">${g.d}</p><p style="margin:6px 0 0;background:#fff8df;border:1px solid #f0dd9a;border-radius:6px;padding:6px 8px;font-size:11px"><b>For journalists:</b> ${g.j}</p><span class="risk">${g.risk}</span>`;
+  grid.appendChild(el);
+ });
+}
+document.getElementById('glossQ').addEventListener('input',renderGloss);
+renderGloss();
+
+// Stuck
+const sGrid=document.getElementById('stuckGrid');
+stucks.forEach(s=>{
+ const el=document.createElement('div');el.style.cssText="background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:40px 1fr;gap:12px";
+ el.innerHTML=`<div style="width:36px;height:36px;display:grid;place-items:center;background:#fff3c2;border:1px solid #f0dd9a;color:var(--gold-dark);border-radius:8px">?</div><div><strong>${s.t}</strong><p style="color:var(--muted);font-size:11.5px">${s.d}</p><small style="display:block;margin-top:6px;background:#f8f7f5;border:1px solid var(--line);border-radius:6px;padding:6px 8px">${s.f}</small></div>`;
+ el.onclick=()=>toast(s.t+' — fix applied');
+ sGrid.appendChild(el);
+});
+
+// Search
+const allItems=[
+{tag:"Session 01",t:"Foundations of Generative AI — Journalist Toolkit",d:"Generalist lens, prompt vs context.",a:"session-1-foundations-of-generative-ai-and-the-ai-generalist-toolkit-3-prompt-engineering-versus-context-engineering"},
+{tag:"Topic",t:"Prompt vs Context Engineering",d:"Twin levers for reliability.",a:"learning-topics"},
+{tag:"Workbook",t:"Workbook 02 — Evidence Locker",d:"Context engineering for archives.",a:"workbooks"},
+{tag:"Lab",t:"Archive Copilot (RAG)",d:"10 years clips, citable.",a:"lab"},
+{tag:"Glossary",t:"Hallucination",d:"Fabrication risk.",a:"glossary"},
+];
+document.getElementById('q').addEventListener('input',e=>{
+ const v=e.target.value.toLowerCase().trim();
+ const r=document.getElementById('results');
+ if(!v){r.classList.remove('open');return}
+ const filtered=allItems.filter(x=>(x.t+x.d).toLowerCase().includes(v)).slice(0,5);
+ if(!filtered.length){r.innerHTML='<div style="padding:12px;color:var(--muted);font-size:12px">No results</div>';r.classList.add('open');return}
+ r.innerHTML=filtered.map(x=>`<button onclick="document.getElementById('${x.a}').scrollIntoView({behavior:'smooth'});document.getElementById('results').classList.remove('open')"><span style="color:var(--gold-dark);font-size:8px;letter-spacing:.1em;text-transform:uppercase">${x.tag}</span><strong style="font-size:12px">${x.t}</strong><small style="color:var(--muted)">${x.d}</small></button>`).join('');
+ r.classList.add('open');
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.search')) document.getElementById('results').classList.remove('open')});
+
+// requestAnimationFrame smoke for standalone verification
+requestAnimationFrame(()=>{window.__standaloneSmoke=true});
+</script>
+</body>
+</html>

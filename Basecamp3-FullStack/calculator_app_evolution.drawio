@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Outskill" version="24.7.5">
+  <diagram id="stage1" name="1 - Standalone Script">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="STAGE 1 &#183; STANDALONE SCRIPT" style="text;html=0;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="Everything runs in one process, on one machine." style="text;html=0;align=left;verticalAlign=middle;fontSize=13;fontColor=#536b64;" vertex="1" parent="1">
+          <mxGeometry x="60" y="62" width="600" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Your Laptop" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="620" height="410" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="$ python calculator.py&#10;&#10;Enter a: 4&#10;Enter b: 5&#10;Enter operation: add&#10;&#10;Result: 9" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="170" y="200" width="240" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="calculator.py&#10;&#10;def add(a, b):&#10;    return a + b&#10;&#10;def subtract(a, b): ...&#10;def multiply(a, b): ...&#10;def divide(a, b): ..." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="490" y="200" width="220" height="200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="calls add(4, 5)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=12;endArrow=block;endFill=1;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="returns 9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#7a8f88;strokeWidth=2;dashed=1;fontColor=#002726;fontSize=12;endArrow=block;endFill=1;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=1;entryY=0.65;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b2" target="b1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cap1" value="Nothing here is reachable from outside this machine -- no other program, phone, or teammate can call these functions." style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#536b64;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="545" width="1000" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="head1" value="ALTERNATIVE TECHNOLOGY CHOICES AT THIS STAGE" style="text;html=0;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="120" y="595" width="700" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="panelLang" value="PROGRAMMING LANGUAGE CHOICES&#10;&#10;- Python (used in this example)&#10;- JavaScript / Node.js&#10;- Java&#10;- C# (.NET)&#10;- Go&#10;- Ruby" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="120" y="625" width="1000" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="stage2" name="2 - Becomes a Server">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="STAGE 2 &#183; BECOMES A SERVER" style="text;html=0;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="The same functions, now reachable over HTTP -- verified with Swagger." style="text;html=0;align=left;verticalAlign=middle;fontSize=13;fontColor=#536b64;" vertex="1" parent="1">
+          <mxGeometry x="60" y="62" width="700" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Your Laptop -- Server" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="470" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Browser" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="650" y="110" width="400" height="430" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="main.py (FastAPI)&#10;&#10;@app.get('/add')&#10;@app.get('/subtract')&#10;@app.get('/multiply')&#10;@app.get('/divide')" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="180" width="390" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="uvicorn main:app --reload&#10;&#10;Uvicorn running on&#10;http://127.0.0.1:8000" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="370" width="390" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="served by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="Swagger UI (/docs)&#10;&#10;Interactive API docs,&#10;auto-generated by FastAPI.&#10;&#10;'Try it out' -&gt; Execute" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff8e6;strokeColor=#e0a800;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="270" width="320" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" value="GET /add?a=4&amp;b=5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b3" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="200 OK  {'result': 9}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#7a8f88;strokeWidth=2;dashed=1;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b2" target="b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cap1" value="The server runs on its own -- Swagger just proves each endpoint works, before any real front-end exists." style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#536b64;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="560" width="950" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="head1" value="ALTERNATIVE TECHNOLOGY CHOICES AT THIS STAGE" style="text;html=0;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="100" y="610" width="700" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="panelBackend" value="BACKEND FRAMEWORK CHOICES&#10;&#10;- FastAPI (used here)&#10;- Flask&#10;- Django REST Framework&#10;- Express.js (Node)&#10;- Spring Boot (Java)&#10;- ASP.NET Core (C#)" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="100" y="640" width="500" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="panelApiTools" value="API CLIENT &amp; TESTING TOOL CHOICES&#10;&#10;- Swagger UI (used here)&#10;- Postman&#10;- Insomnia&#10;- curl&#10;- httpx / requests (Python)" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff8e6;strokeColor=#e0a800;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="640" y="640" width="410" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="stage3" name="3 - Custom Front-End">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1180" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="STAGE 3 &#183; CUSTOM FRONT-END" style="text;html=0;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="Swagger is replaced by a real interface end-users see -- same API underneath." style="text;html=0;align=left;verticalAlign=middle;fontSize=13;fontColor=#536b64;" vertex="1" parent="1">
+          <mxGeometry x="60" y="62" width="700" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Your Laptop -- Server" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="470" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Browser -- Custom Front-End" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="650" y="110" width="400" height="430" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="main.py (FastAPI)&#10;&#10;@app.get('/add')&#10;@app.get('/subtract')&#10;@app.get('/multiply')&#10;@app.get('/divide')" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="180" width="390" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="uvicorn main:app --reload&#10;&#10;Uvicorn running on&#10;http://127.0.0.1:8000" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="340" width="390" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="served by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui1" value="Calculator&#10;&#10;a: [ 4 ]   b: [ 5 ]&#10;Operation: [ Add ]&#10;&#10;[ Calculate ]&#10;&#10;Result: 9" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#1f8756;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="690" y="160" width="320" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="app.js&#10;&#10;fetch(BASE_URL + '/add?a=4&amp;b=5')&#10;  .then(r =&gt; r.json())" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="410" width="320" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" value="GET /add?a=4&amp;b=5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b3" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="{'result': 9}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#7a8f88;strokeWidth=2;dashed=1;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b2" target="b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cap1" value="A real interface anyone can use -- typing numbers and clicking a button, not reading API docs." style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#536b64;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="560" width="950" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="head1" value="ALTERNATIVE TECHNOLOGY CHOICES AT THIS STAGE" style="text;html=0;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="100" y="610" width="700" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="panelFrontend" value="FRONTEND FRAMEWORK CHOICES&#10;&#10;- Plain HTML / CSS / JavaScript (used here)&#10;- React&#10;- Vue&#10;- Angular&#10;- Svelte" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="100" y="640" width="950" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="stage4" name="4 - Full-Stack with Database">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="STAGE 4 &#183; FULL-STACK WITH A DATABASE" style="text;html=0;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="Every calculation is saved -- the app becomes a complete, persistent system." style="text;html=0;align=left;verticalAlign=middle;fontSize=13;fontColor=#536b64;" vertex="1" parent="1">
+          <mxGeometry x="60" y="62" width="800" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="Front-End App" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="320" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Server -- FastAPI + uvicorn" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="470" y="110" width="340" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Database" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=16;spacingTop=12;fontSize=16;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="900" y="110" width="320" height="430" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui1" value="Calculator&#10;&#10;a: [ 4 ]   b: [ 5 ]&#10;Operation: [ Add ]&#10;[ Calculate ]&#10;&#10;Result: 9&#10;&#10;History&#10;4 + 5 = 9&#10;10 / 2 = 5" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#1f8756;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=12;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="90" y="180" width="260" height="300" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="main.py&#10;&#10;@app.get('/history')&#10;@app.post('/calculate')&#10;@app.put('/calculate/{id}')&#10;@app.delete('/calculate/{id}')&#10;&#10;reads, creates, updates,&#10;and deletes rows" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="190" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="uvicorn main:app --reload&#10;http://127.0.0.1:8000" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="375" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="served by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="SQLite / PostgreSQL&#10;&#10;calculations table&#10;&#10;id | a | b | op | result&#10;1  | 4 | 5 | add | 9&#10;2  | 10 | 2 | div | 5" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff8e6;strokeColor=#e0a800;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="220" width="260" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" value="POST /calculate {a,b,op}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="ui1" target="b1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="{result, history}" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#7a8f88;strokeWidth=2;dashed=1;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b1" target="ui1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" value="INSERT / SELECT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b2" target="b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="rows" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;strokeColor=#7a8f88;strokeWidth=2;dashed=1;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;labelBackgroundColor=#f2f9f6;" edge="1" parent="1" source="b3" target="b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cap1" value="The server now talks to a database -- results persist even after a restart, and history can be listed back to the front-end." style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=13;fontColor=#536b64;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="555" width="1160" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="head2" value="API SURFACE -- METHODS, STATUS CODES &amp; COMMON ERRORS" style="text;html=0;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="800" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="tblHead" value="METHOD   | ENDPOINT              | SUCCESS         | COMMON ERROR(S)" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#114741;strokeWidth=1;fontColor=#e6f5ee;align=left;verticalAlign=middle;spacingLeft=14;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="630" width="1160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="tblBody" value="GET      | /history              | 200 OK          | 500 Internal Server Error&#10;POST     | /calculate            | 201 Created     | 400 Bad Request (divide by zero), 422 Unprocessable Entity&#10;PUT      | /calculate/{id}       | 200 OK          | 404 Not Found&#10;DELETE   | /calculate/{id}       | 204 No Content  | 404 Not Found" style="rounded=0;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=1;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=8;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="664" width="1160" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="head3" value="ALTERNATIVE TECHNOLOGY CHOICES AT THIS STAGE" style="text;html=0;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="800" width="800" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="panelDb" value="DATABASE CHOICES&#10;&#10;- SQLite (used here)&#10;- PostgreSQL&#10;- MySQL&#10;- MongoDB (NoSQL)&#10;- Redis (cache / fast lookups)" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff8e6;strokeColor=#e0a800;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60" y="830" width="560" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="panelFullstack" value="FULL-STACK FRAMEWORK CHOICES&#10;&#10;- Next.js (React full-stack)&#10;- Django (Python, batteries-included)&#10;- Ruby on Rails&#10;- Laravel (PHP)&#10;- Spring Boot + Thymeleaf (Java)" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="830" width="560" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="overview" name="5 - Evolution Overview">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="t1" value="THE EVOLUTION OF OUR CALCULATOR APP" style="text;html=0;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#002726;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="From a script only you can run, to a full-stack app anyone can use." style="text;html=0;align=left;verticalAlign=middle;fontSize=13;fontColor=#536b64;" vertex="1" parent="1">
+          <mxGeometry x="60" y="62" width="800" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="1&#10;&#10;Standalone Script&#10;&#10;Runs in your&#10;terminal only" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2f9f6;strokeColor=#d9ece3;strokeWidth=2;fontColor=#002726;align=center;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="2&#10;&#10;Becomes a Server&#10;&#10;FastAPI + uvicorn,&#10;tested in Swagger" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf7f0;strokeColor=#33c375;strokeWidth=2;fontColor=#002726;align=center;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="360" y="160" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="3&#10;&#10;Custom Front-End&#10;&#10;A real UI calls&#10;the same API" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#bfe7d3;strokeColor=#1f8756;strokeWidth=2;fontColor=#002726;align=center;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="660" y="160" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="4&#10;&#10;Full-Stack + Database&#10;&#10;Results are saved&#10;and retrieved" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#002726;strokeColor=#33c375;strokeWidth=2;fontColor=#ffffff;align=center;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="960" y="160" width="240" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ov1" value="evolves into" style="edgeStyle=none;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=3;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2" value="evolves into" style="edgeStyle=none;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=3;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov3" value="evolves into" style="edgeStyle=none;rounded=0;html=0;strokeColor=#1f8756;strokeWidth=3;fontColor=#002726;fontSize=11;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

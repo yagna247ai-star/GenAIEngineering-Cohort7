@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Setting Up API Keys | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; API Access</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#mistral">1 &middot; Mistral AI</a></li>
+        <li><a href="#groq">2 &middot; Groq</a></li>
+        <li><a href="#openrouter">3 &middot; OpenRouter</a></li>
+        <li><a href="#serper">4 &middot; Serper</a></li>
+        <li><a href="#huggingface">5 &middot; Hugging Face</a></li>
+        <li><a href="#safety">Keeping Keys Safe</a></li>
+        <li><a href="#checklist">Setup Checklist</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Before Base Camp 2</span>
+        <h1>Setting Up API Keys</h1>
+        <p class="lede">Base Camp 2 and beyond will have you calling real LLM, search, and model-hosting APIs from Python. Every one of those providers needs an account and an API key. Do this setup now — once, calmly, outside of class time — so you're not fumbling through sign-up flows and email verification links in the middle of a live session.</p>
+        <div class="meta-row">
+          <span class="meta-pill">🔑 5 providers</span>
+          <span class="meta-pill">⏱ ~15 minutes</span>
+          <span class="meta-pill">No coding required yet</span>
+        </div>
+      </div>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>One account, one key, per provider</h2>
+        <div class="topic">
+          <p>Each of these five services gives you a different capability you'll use later in the fellowship: fast open-weight model inference, access to many different LLMs through one API, real-time web search results for grounding AI answers, and access to hosted models and datasets. All five work the same basic way:</p>
+          <ol class="steps">
+            <li><strong>Create an account</strong><span>Sign up with an email address, or use a Google/GitHub sign-in where offered — whichever is faster for you.</span></li>
+            <li><strong>Find the API keys page</strong><span>Every dashboard has a dedicated page for creating and managing keys. Direct links are given below so you don't have to hunt for them.</span></li>
+            <li><strong>Generate a key</strong><span>Click "Create," give it a name you'll recognize later (e.g. <code class="inline">outskill-fellowship</code>), and confirm.</span></li>
+            <li><strong>Copy it immediately</strong><span>Most providers show the full key exactly once. If you close the dialog without copying it, you'll have to generate a new one.</span></li>
+            <li><strong>Save it somewhere safe</strong><span>A password manager, or a local <code class="inline">.env</code> file as shown in the last section on this page.</span></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-title">Before you start</span>
+            Use a personal email you check regularly — some providers send a verification link before the API keys page unlocks.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MISTRAL ============ -->
+      <section class="part" id="mistral">
+        <div class="part-label">Provider 1 of 5</div>
+        <h2>Mistral AI</h2>
+        <div class="topic">
+          <p class="intro">Mistral is a leading European AI lab — their API gives you access to models like Mistral Large and Mistral Small directly.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://admin.mistral.ai/organization/api-keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above. If you don't have an account yet, you'll be redirected to create one with your email, Google, or Microsoft account.</span></li>
+            <li><strong>Land on the organization admin console</strong><span>Logging in takes you straight to your organization's settings — the API Keys page is on the left-hand navigation.</span></li>
+            <li><strong>Click "Create new key"</strong><span>Give it a name like <code class="inline">outskill-fellowship</code>. You can optionally set an expiration date.</span></li>
+            <li><strong>Copy the key right away</strong><span>Mistral displays the full key only once, immediately after creation.</span></li>
+          </ol>
+          <div class="callout">
+            Some new Mistral accounts need a verified phone number or a payment method on file before API access is fully enabled — follow any prompts the console shows you.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GROQ ============ -->
+      <section class="part" id="groq">
+        <div class="part-label">Provider 2 of 5</div>
+        <h2>Groq</h2>
+        <div class="topic">
+          <p class="intro">Groq runs open-weight models (Llama, and others) on custom hardware built for extremely fast inference — useful whenever response speed matters.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://console.groq.com/keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above and continue with Google, GitHub, or an email address.</span></li>
+            <li><strong>You're already on the right page</strong><span>The link drops you directly onto the API Keys screen inside the Groq console.</span></li>
+            <li><strong>Click "Create API Key"</strong><span>Name it and confirm.</span></li>
+            <li><strong>Copy the key from the dialog</strong><span>It's shown once — copy it before closing the popup.</span></li>
+          </ol>
+          <div class="callout">
+            Groq's free tier includes generous rate limits, which makes it a good default choice for testing and live coding during class.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OPENROUTER ============ -->
+      <section class="part" id="openrouter">
+        <div class="part-label">Provider 3 of 5</div>
+        <h2>OpenRouter</h2>
+        <div class="topic">
+          <p class="intro">OpenRouter is a single API that routes to dozens of different model providers — one key, one request format, many models to choose between.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://openrouter.ai/workspaces/default/keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above and continue with Google, GitHub, or an email address.</span></li>
+            <li><strong>You land on your default workspace's Keys page</strong><span>This is where every key you create for this workspace is listed.</span></li>
+            <li><strong>Click "Create Key"</strong><span>Name it, and optionally set a credit limit — a safety net that stops the key from spending past whatever cap you choose.</span></li>
+            <li><strong>Copy the key</strong><span>OpenRouter keys start with <code class="inline">sk-or-</code>. Copy the full string before closing the dialog.</span></li>
+          </ol>
+          <div class="callout">
+            Setting a credit limit on day one is worth the extra ten seconds — it caps your worst-case spend if a key ever leaks or a script runs away in a loop.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERPER ============ -->
+      <section class="part" id="serper">
+        <div class="part-label">Provider 4 of 5</div>
+        <h2>Serper</h2>
+        <div class="topic">
+          <p class="intro">Serper is a fast Google Search API — the standard way to give an AI agent real-time web search results instead of relying only on what a model already "knows."</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://serper.dev/api-keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above — Google sign-in is supported alongside email.</span></li>
+            <li><strong>Check the API Key page</strong><span>Serper typically generates a default key automatically the moment you sign up.</span></li>
+            <li><strong>Copy the existing key, or create a new one</strong><span>If you'd rather start fresh, use the option on that page to generate a new key.</span></li>
+          </ol>
+          <div class="callout">
+            Serper's free tier gives you a fixed number of free search credits when you sign up — plenty for coursework, but keep an eye on usage once you start building agents that search on every request.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HUGGING FACE ============ -->
+      <section class="part" id="huggingface">
+        <div class="part-label">Provider 5 of 5</div>
+        <h2>Hugging Face</h2>
+        <div class="topic">
+          <p class="intro">Hugging Face hosts the largest catalog of open-source models and datasets, plus an Inference API for running many of them without downloading anything locally.</p>
+          <div class="code-block">
+            <div class="code-label"><span>tokens page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://huggingface.co/settings/tokens</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above and create an account with your email or a Google sign-in.</span></li>
+            <li><strong>You land on Access Tokens settings</strong><span>This page lists every token tied to your account.</span></li>
+            <li><strong>Click "New token"</strong><span>Name it, and choose a role: <strong>Read</strong> is enough for downloading models and datasets; pick <strong>Write</strong> only if you'll also be uploading models yourself.</span></li>
+            <li><strong>Click "Generate token" and copy it</strong><span>Hugging Face calls this a "token" rather than a "key" — functionally, it's the same thing.</span></li>
+          </ol>
+          <div class="callout">
+            Hugging Face calls these <strong>access tokens</strong> everywhere in its own docs — if you see that term later in the fellowship, it's the same key you're creating here.
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SAFETY ============ -->
+      <section class="part" id="safety">
+        <div class="part-label">Before you move on</div>
+        <h2>Keeping Your Keys Safe</h2>
+        <div class="topic">
+          <p>Treat every API key exactly like a password: anyone who has it can make requests — and rack up usage or charges — on your account. A few rules that will save you real pain later:</p>
+          <ul class="points">
+            <li>Never paste a key directly into code you plan to commit to GitHub or share in Slack, email, or a chat message.</li>
+            <li>Store keys in a local <code class="inline">.env</code> file (shown below) and keep that file out of version control.</li>
+            <li>If a key ever leaks, go back to that same provider's dashboard and revoke or regenerate it immediately — don't just delete the leaked copy.</li>
+          </ul>
+
+          <p class="intro" style="margin-top:20px;">A sneak peek at the pattern you'll use once Base Camp 2 introduces functions and files: keep all your keys in one untracked file, and load them into Python at runtime.</p>
+
+          <div class="code-block">
+            <div class="code-label"><span>.env</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">MISTRAL_API_KEY=your_mistral_key_here
+GROQ_API_KEY=your_groq_key_here
+OPENROUTER_API_KEY=your_openrouter_key_here
+SERPER_API_KEY=your_serper_key_here
+HUGGINGFACE_API_KEY=your_huggingface_token_here</code></pre>
+          </div>
+
+          <div class="code-block">
+            <div class="code-label"><span>python</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">from dotenv import load_dotenv
+import os
+
+load_dotenv()  # reads the .env file in your project folder
+
+mistral_key = os.getenv("MISTRAL_API_KEY")
+groq_key = os.getenv("GROQ_API_KEY")</code></pre>
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Don't have python-dotenv yet?</span>
+            That's expected — <code class="inline">pip install python-dotenv</code> and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe (a password manager works fine too).
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>API Key Setup — Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> You have a Mistral AI account and a copied API key</li>
+            <li><span class="tick">✓</span> You have a Groq account and a copied API key</li>
+            <li><span class="tick">✓</span> You have an OpenRouter account and a copied API key</li>
+            <li><span class="tick">✓</span> You have a Serper account and a copied API key</li>
+            <li><span class="tick">✓</span> You have a Hugging Face account and a copied access token</li>
+            <li><span class="tick">✓</span> All five keys are saved somewhere safe — not just left open in a browser tab</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Stuck?</span>
+            Flag your instructor before Base Camp 2 — you'll need at least the Groq and Serper keys ready for the earliest hands-on exercises.
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
+          <span class="footer-outskill">OUTSKILL</span>
+          <span class="footer-sep">|</span>
+          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "name": "Lead-to-Meeting Agent - Marketing Pipeline MVP (D.A.R.E)",
+  "version": "0.1.0",
+  "platform": "Kore.ai XO",
+  "description": "UC1+UC3: Capture -> BANT score -> Hot books meeting + CRM, Warm nurture Day1/3/7. Web Widget Only.",
+  "dialogs": [
+    {
+      "name": "Welcome",
+      "type": "message",
+      "text": "Hi! I'm your Lead-to-Meeting agent. Ask about pricing or say 'book a demo'."
+    },
+    {
+      "name": "KB_Answer",
+      "type": "searchAI",
+      "kb": ["pricing.md", "faqs.md"],
+      "grounding": "Answer ONLY from KB chunks, else handoff. Confidence <0.7 -> human.",
+      "output": "kb_chunks"
+    },
+    {
+      "name": "Capture_Lead",
+      "type": "entity",
+      "entities": ["name", "email", "company", "company_size", "industry", "timeline", "budget_band", "pain_point"],
+      "validation": "email format, company_size numeric"
+    },
+    {
+      "name": "Score_BANT",
+      "type": "script",
+      "logic": "BANT 4/4=90, 3/4=70, 2/4=45, 1/4=25; size>=50 +5, industry SaaS/Fintech +5; >=75 Hot, >=40 Warm else Cold",
+      "tool": "score_lead"
+    },
+    {
+      "name": "Branch_Hot_Warm_Cold",
+      "type": "condition",
+      "branches": {
+        "Hot": "create_hubspot_contact + book_calendar + notify_slack + confirm",
+        "Warm": "create_hubspot_contact + enroll_nurture_D1_D3_D7",
+        "Cold": "create_hubspot_contact + newsletter_optin"
+      }
+    }
+  ],
+  "tools": [
+    {"name": "score_lead", "args": ["name","email","company","company_size","industry","timeline","budget_band","pain_point"]},
+    {"name": "create_hubspot_contact", "auth": "HUBSPOT_TOKEN", "endpoint": "POST /crm/v3/objects/contacts"},
+    {"name": "create_salesforce_lead", "auth": "SALESFORCE_TOKEN", "endpoint": "POST /services/data/v59.0/sobjects/Lead"},
+    {"name": "send_email", "provider": "SendGrid/Gmail", "templates": ["Day1 case study", "Day3 ROI", "Day7 slots"]},
+    {"name": "send_whatsapp", "provider": "360dialog/Twilio"},
+    {"name": "book_calendar", "provider": "Google Calendar/Calendly"},
+    {"name": "notify_slack", "channel": "#sdr-hot-leads"}
+  ],
+  "channels": ["Web SDK"],
+  "success_metric": "Meetings Booked",
+  "import": "Kore.ai XO Console -> Bot Builder -> Import -> select this JSON -> configure HUBSPOT_TOKEN + KB upload"
+}

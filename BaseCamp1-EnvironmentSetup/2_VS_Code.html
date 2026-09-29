@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Session 2 — Installing VS Code | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; Session 2</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#download">Step 1 &middot; Download VS Code</a></li>
+        <li><a href="#explorer">Step 2 &middot; Meet the Explorer</a></li>
+        <li><a href="#terminal">Step 3 &middot; Open a Terminal</a></li>
+        <li><a href="#extensions">Step 4 &middot; Python &amp; Jupyter Extensions</a></li>
+        <li><a href="#theme">Step 5 &middot; Choose a Theme</a></li>
+        <li><a href="#firstfiles">Step 6 &middot; Your First Files</a></li>
+        <li><a href="#verify">Step 7 &middot; Verify the Interpreter</a></li>
+        <li><a href="#multiple">Multiple Versions?</a></li>
+        <li><a href="#ipykernel">Step 8 &middot; Install ipykernel</a></li>
+        <li><a href="#moreext">Step 9 &middot; More Extensions</a></li>
+        <li><a href="#checklist">Final Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 2</span>
+        <h1>Environment Setup: Installing VS Code</h1>
+        <p class="lede">Your code editor for the entire fellowship. This session installs VS Code, sets up an in-editor terminal, adds the essential extensions, and has you write your very first Python file and notebook.</p>
+        <div class="meta-row">
+          <span class="meta-pill">💻 Editor: Visual Studio Code</span>
+          <span class="meta-pill">Builds on Session 1's Python 3.11.9</span>
+        </div>
+      </div>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>One editor, one workflow</h2>
+        <div class="topic">
+          <p>Python (Session 1) is the language; VS Code is where you'll actually write, run, and debug it every day of this fellowship. Beyond text editing, VS Code gives you a built-in terminal, a file browser, and — critically — a way to see and switch <em>which</em> Python installation is running your code. That last part matters a lot once multiple Python versions or virtual environments enter the picture (Base Camp 2 covers this in depth).</p>
+        </div>
+      </section>
+
+      <section class="part" id="download">
+        <div class="part-label">Step 1 — Download</div>
+        <h2>Download VS Code</h2>
+        <div class="topic">
+          <p class="intro">The site automatically detects your operating system — just click the big button.</p>
+          <div class="code-block">
+            <div class="code-label"><span>url</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://code.visualstudio.com/download</code></pre>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Mac users</span>
+            Choose <strong>Apple Silicon</strong> if your Mac has an M1/M2/M3/M4 chip, or <strong>Intel chip</strong> for older Macs. Not sure? <strong>Universal</strong> works on both.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="explorer">
+        <div class="part-label">Step 2 — First Look</div>
+        <h2>Meet the Explorer</h2>
+        <div class="topic">
+          <p>The Explorer is your file browser inside VS Code — every file and folder for the course lives here. Open it with the file icon in the leftmost activity bar, then <strong>File &rarr; Open Folder…</strong> to point VS Code at your working directory.</p>
+          <div class="callout">
+            <span class="callout-title">Tip</span>
+            Create one folder for the whole fellowship — e.g. <code class="inline">ai-fellowship</code> — and keep every week's files inside it. Opening that single folder in VS Code gives you one Explorer view for everything.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="terminal">
+        <div class="part-label">Step 3 — Terminal</div>
+        <h2>Open a Terminal Inside VS Code</h2>
+        <div class="topic">
+          <p class="intro">Menu bar &rarr; Terminal &rarr; New Terminal, or the keyboard shortcut below.</p>
+          <div class="code-block">
+            <div class="code-label"><span>shortcut</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Ctrl+`   (Windows)
+Cmd+`    (macOS)</code></pre>
+          </div>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div style="padding:12px 16px;font-size:14px;">Terminal dropdown should show <strong>cmd</strong>.</div>
+              <div class="callout warn" style="margin:0 14px 14px;">Select "cmd" (Command Prompt) — <strong>not PowerShell</strong>.</div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div style="padding:12px 16px;font-size:14px;">Terminal dropdown should show <strong>zsh</strong>.</div>
+              <div class="callout" style="margin:0 14px 14px;">The default "zsh" terminal is exactly what you need — no change needed.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="extensions">
+        <div class="part-label">Step 4 — Extensions</div>
+        <h2>Install the Python &amp; Jupyter Extensions</h2>
+        <div class="topic">
+          <p class="intro">Open the Extensions panel, search, then install both — make sure the publisher says <strong>Microsoft</strong> for each.</p>
+          <div class="code-block">
+            <div class="code-label"><span>shortcut</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Cmd+Shift+X   (macOS)
+Ctrl+Shift+X  (Windows)</code></pre>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Extension</th><th>Publisher</th><th>What it gives you</th></tr></thead>
+            <tbody>
+              <tr><td>Python</td><td>Microsoft</td><td>IntelliSense, linting, debugging &amp; more</td></tr>
+              <tr><td>Jupyter</td><td>Microsoft</td><td>Notebook support for VS Code</td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn">
+            <span class="callout-title">Watch out</span>
+            Check the publisher name under each search result — it should say "Microsoft." Several look-alike extensions exist from other publishers.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="theme">
+        <div class="part-label">Step 5 — Make It Yours</div>
+        <h2>Choose a Color Theme</h2>
+        <div class="topic">
+          <p class="intro">Open the Command Palette, type "Color Theme," pick one, and use the arrow keys to preview each option live before committing.</p>
+          <div class="code-block">
+            <div class="code-label"><span>shortcut</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Ctrl+Shift+P  (Windows)   →  "Color Theme"
+Cmd+Shift+P   (macOS)     →  "Color Theme"</code></pre>
+          </div>
+          <p>Options include Dark Modern (default), Light Modern, Monokai, Solarized Dark, Solarized Light, and High Contrast.</p>
+          <div class="callout">
+            There's no "right" theme — pick whatever's easiest on your eyes. If you want your screen to match the instructor's screenshots exactly, stick with <strong>Dark Modern</strong> (the default).
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="firstfiles">
+        <div class="part-label">Step 6 — Your First Files</div>
+        <h2>Create test.py and test.ipynb</h2>
+        <div class="topic">
+          <p class="intro">In the Explorer, click the "New File" icon (or right-click your folder &rarr; New File).</p>
+          <div class="code-block">
+            <div class="code-label"><span>test.py</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">print("Hello, AI Fellowship!")</code></pre>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Naming tip</span>
+            Use <code class="inline">.py</code> for plain Python scripts and <code class="inline">.ipynb</code> for Jupyter notebooks — VS Code recognizes both instantly and adjusts its UI accordingly (e.g. notebooks get "cells," scripts get a Run button).
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="verify">
+        <div class="part-label">Step 7 — Verify</div>
+        <h2>Confirm the Right Python Is Selected</h2>
+        <div class="topic">
+          <p>VS Code always shows which Python interpreter is active: <strong>bottom-right</strong> of the window for a <code class="inline">.py</code> file, <strong>top-right</strong> for a Jupyter notebook.</p>
+          <table class="data-table">
+            <thead><tr><th>File type</th><th>Where the indicator lives</th><th>How to change it</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">test.py</code></td><td>Bottom status bar — e.g. "🐍 Python 3.11.9"</td><td>Command Palette &rarr; "Python: Select Interpreter" &rarr; choose the one showing 3.11.9</td></tr>
+              <tr><td><code class="inline">test.ipynb</code></td><td>Top-right kernel picker</td><td>Click "Select Kernel" &rarr; Python Environments &rarr; pick 3.11.9</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="part" id="multiple">
+        <div class="part-label">Multiple Versions?</div>
+        <h2>Choosing the Right Python When Several Are Installed</h2>
+        <div class="topic">
+          <p class="intro">Clicking the version indicator (bottom-right for .py, kernel picker top-right for .ipynb) opens a list of every Python VS Code can find on your machine — something like this:</p>
+          <div class="code-block">
+            <div class="code-label"><span>Select Interpreter</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Python 3.11.9  ('.venv': venv)  — ./.venv/bin/python        ← this one
+Python 3.9.6                    — /usr/bin/python3  (macOS system Python)
+Python 3.12.1                   — /usr/local/bin/python3.12
+Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code></pre>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Rule of thumb</span>
+            Always match the exact version number — <strong>3.11.9</strong> — and prefer an entry inside a project's <code class="inline">.venv</code> folder over a system-wide install. (You'll create your first <code class="inline">.venv</code> in Base Camp 2.)
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="ipykernel">
+        <div class="part-label">Step 8 — One More Package</div>
+        <h2>Install ipykernel</h2>
+        <div class="topic">
+          <p class="intro">If the kernel picker couldn't find a Jupyter kernel for your Python, run this once in the terminal.</p>
+          <div class="callout">
+            <span class="callout-title">Why this step?</span>
+            <code class="inline">ipykernel</code> is the bridge that lets Jupyter notebooks run code using a specific Python installation. Without it, the kernel picker in <code class="inline">test.ipynb</code> won't show your Python 3.11.9 as an option.
+          </div>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python -m pip install ipykernel</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python3 -m pip install ipykernel</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout">
+            Using <code class="inline">python -m pip</code> (not just <code class="inline">pip</code>) guarantees the package installs into the exact Python you're targeting — even with multiple versions installed, because <code class="inline">python -m</code> forces that specific interpreter to do the installing.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="moreext">
+        <div class="part-label">Step 9 — A Few More Extensions</div>
+        <h2>Extra Extensions Worth Installing</h2>
+        <div class="topic">
+          <p class="intro">Same process every time: Extensions icon &rarr; search the name &rarr; check the publisher &rarr; Install.</p>
+          <table class="data-table">
+            <thead><tr><th>Extension</th><th>Publisher</th><th>What it's for</th></tr></thead>
+            <tbody>
+              <tr><td>Draw.io Integration</td><td>Henning Dieterichs</td><td>Create &amp; edit diagrams (.drawio) without leaving VS Code</td></tr>
+              <tr><td>Markdown Preview Enhanced</td><td>Yiyi Wang</td><td>Richer Markdown preview — math, diagrams, tables, export to PDF</td></tr>
+              <tr><td>Mermaid</td><td>Mermaid Chart</td><td>Author Mermaid diagrams (flowcharts, sequence, ER) with editor support</td></tr>
+              <tr><td>Mermaid Preview</td><td>Mermaid OSS</td><td>Live-render Mermaid diagrams side-by-side as you write them</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>VS Code Setup — Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> VS Code is installed and opens correctly</li>
+            <li><span class="tick">✓</span> A terminal opens inside VS Code (cmd on Windows — not PowerShell — or zsh on Mac)</li>
+            <li><span class="tick">✓</span> Python and Jupyter extensions installed, both published by Microsoft</li>
+            <li><span class="tick">✓</span> A color theme is chosen and comfortable to read</li>
+            <li><span class="tick">✓</span> <code class="inline">test.py</code> and <code class="inline">test.ipynb</code> both exist and run</li>
+            <li><span class="tick">✓</span> Both files show Python 3.11.9 as the selected interpreter / kernel</li>
+            <li><span class="tick">✓</span> <code class="inline">ipykernel</code> is installed</li>
+            <li><span class="tick">✓</span> Draw.io Integration, Markdown Preview Enhanced, Mermaid, and Mermaid Preview are installed</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
+          <span class="footer-outskill">OUTSKILL</span>
+          <span class="footer-sep">|</span>
+          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+</body>
+</html>

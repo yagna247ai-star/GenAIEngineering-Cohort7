@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Full-Stack Build with OpenCode — Slides | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/slides.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;} .mermaid{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;justify-content:center;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Week 1 &middot; Session 2</h4>
+    <nav>
+      <ul>
+        <li><a href="#title">Title</a></li>
+        <li><a href="#agenda">Session Agenda</a></li>
+        <li><a href="#objectives">Learning Objectives</a></li>
+        <li><a href="#beginner-glossary">If This Is All New to You</a></li>
+
+        <li class="part-item"><a href="#blueprint-source">Part 1 &middot; Your Blueprint</a></li>
+        <li class="sub-item"><a href="#blueprint-source">1.1 Where It Comes From</a></li>
+        <li class="sub-item"><a href="#blueprint-shape">1.2 The Blueprint's Shape (JSON)</a></li>
+        <li class="sub-item"><a href="#blueprint-md">1.3 No JSON? A Markdown Version</a></li>
+        <li class="sub-item"><a href="#hands-on-loadblueprint">1.4 Hands-On &middot; Set Up the Project</a></li>
+
+        <li class="part-item"><a href="#why-plan-big">Part 2 &middot; Plan the Whole Build</a></li>
+        <li class="sub-item"><a href="#why-plan-big">2.1 Three Layers, One Plan</a></li>
+        <li class="sub-item"><a href="#build-prompt">2.2 The Build Prompt</a></li>
+        <li class="sub-item"><a href="#hands-on-fullplan">2.3 Hands-On &middot; Get the Full Plan</a></li>
+        <li class="sub-item"><a href="#reading-the-plan">2.4 Reading a Multi-Layer Plan</a></li>
+
+        <li class="part-item"><a href="#memory-for-real-project">Part 3 &middot; Memory &amp; Setup</a></li>
+        <li class="sub-item"><a href="#memory-for-real-project">3.1 A Memory File Before You Start</a></li>
+        <li class="sub-item"><a href="#permission-for-build">3.2 Choosing a Permission Setup</a></li>
+        <li class="sub-item"><a href="#hands-on-initproject">3.3 Hands-On &middot; Init &amp; Write Memory</a></li>
+
+        <li class="part-item"><a href="#tables-to-schema">Part 4 &middot; Database Layer</a></li>
+        <li class="sub-item"><a href="#tables-to-schema">4.1 Tables &rarr; Real Schema</a></li>
+        <li class="sub-item"><a href="#hands-on-database">4.2 Hands-On &middot; Build the Database</a></li>
+        <li class="sub-item"><a href="#hands-on-verifydb">4.3 Hands-On &middot; Verify the Schema</a></li>
+
+        <li class="part-item"><a href="#endpoints-to-routes">Part 5 &middot; FastAPI Back End</a></li>
+        <li class="sub-item"><a href="#endpoints-to-routes">5.1 Endpoints &rarr; Real Routes</a></li>
+        <li class="sub-item"><a href="#hands-on-backend">5.2 Hands-On &middot; Build the Backend</a></li>
+        <li class="sub-item"><a href="#hands-on-testbackend">5.3 Hands-On &middot; Test It in Swagger</a></li>
+
+        <li class="part-item"><a href="#halfway">Halfway Point</a></li>
+
+        <li class="part-item"><a href="#screens-to-pages">Part 6 &middot; Front End</a></li>
+        <li class="sub-item"><a href="#screens-to-pages">6.1 Screens &amp; Controls &rarr; Pages &amp; Elements</a></li>
+        <li class="sub-item"><a href="#hands-on-scaffoldfrontend">6.2 Hands-On &middot; Scaffold the Front End</a></li>
+        <li class="sub-item"><a href="#hands-on-buildscreens">6.3 Hands-On &middot; Build the Screens</a></li>
+        <li class="sub-item"><a href="#hands-on-wireup">6.4 Hands-On &middot; Wire It to the Backend</a></li>
+
+        <li class="part-item"><a href="#skill-run-dev">Part 7 &middot; Skills, Subagents &amp; Diagrams</a></li>
+        <li class="sub-item"><a href="#skill-run-dev">7.1 A Skill to Run Everything</a></li>
+        <li class="sub-item"><a href="#subagent-crosscheck">7.2 A Subagent to Cross-Check the Build</a></li>
+        <li class="sub-item"><a href="#why-diagram-intro">7.3 Why Diagram Your Own App?</a></li>
+        <li class="sub-item"><a href="#skill-drawio-architecture">7.4 A Skill to Draw the Architecture</a></li>
+        <li class="sub-item"><a href="#skill-mermaid-sequence">7.5 A Skill to Draw the Sequence</a></li>
+        <li class="sub-item"><a href="#hands-on-generate-diagrams">7.6 Hands-On &middot; Generate Both Diagrams</a></li>
+        <li class="sub-item"><a href="#hands-on-writerunskill">7.7 Hands-On &middot; Write &amp; Run the Skills</a></li>
+
+        <li class="part-item"><a href="#reading-full-diff">Part 8 &middot; Review, Test &amp; Iterate</a></li>
+        <li class="sub-item"><a href="#reading-full-diff">8.1 Reading a Diff Across 3 Layers</a></li>
+        <li class="sub-item"><a href="#hands-on-e2e">8.2 Hands-On &middot; End-to-End Test</a></li>
+        <li class="sub-item"><a href="#hands-on-iterate">8.3 Hands-On &middot; Redirect &amp; Iterate</a></li>
+        <li class="sub-item"><a href="#hands-on-fixissues">8.4 Hands-On &middot; Fix Flagged Issues</a></li>
+
+        <li class="part-item"><a href="#concept-map">Part 9 &middot; Wrap-Up</a></li>
+        <li class="sub-item"><a href="#concept-map">9.1 What Powered What</a></li>
+        <li class="sub-item"><a href="#before-week2">9.2 Before Week 2</a></li>
+
+        <li class="part-item"><a href="#recap">Recap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="slide-main">
+    <div class="slide-stage">
+      <div class="slide-toolbar">
+        <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">40</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
+        <div class="slide-nav-btns">
+          <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
+          <button id="nextSlide" class="slide-btn">Next &rsaquo;</button>
+        </div>
+      </div>
+      <div class="slide-viewport">
+
+      <section class="slide slide-hero" id="title">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; Session 2</div>
+        <h1>Full-Stack Build with OpenCode</h1>
+        <p class="lede">Your app-idea blueprint goes in one end; a working FastAPI + SQLite + HTML/JS app comes out the other — plus two diagrams of your own app, drawn for you. Written for complete beginners: every term is explained the first time it shows up, and every step in both OpenCode and Claude Code. Everything from Session 1 (agents, skills, permissions, MCP) gets used for real, on your own app idea.</p>
+        <div class="meta-row">
+          <span class="meta-pill">⏱ ~5.5 hours, hands-on</span>
+          <span class="meta-pill">🛠️ FastAPI &middot; SQLite &middot; plain HTML/JS</span>
+          <span class="meta-pill">📄 Input: your blueprint file</span>
+          <span class="meta-pill">🖼️ Output: 2 diagrams of your app</span>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">01</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agenda">
+        <div class="slide-kicker">Session Agenda</div>
+        <h2 class="slide-title">How Today Breaks Down</h2>
+        <div class="slide-body">
+          <div class="agenda">
+            <div class="agenda-row"><span class="agenda-time">0:00–0:15</span><span class="agenda-label">Welcome, recap of Session 1 &amp; a quick glossary for beginners</span></div>
+            <div class="agenda-row"><span class="agenda-time">0:15–0:40</span><span class="agenda-label">Part 1 — Your Blueprint</span></div>
+            <div class="agenda-row"><span class="agenda-time">0:40–1:10</span><span class="agenda-label">Part 2 — Plan the Whole Build</span></div>
+            <div class="agenda-row"><span class="agenda-time">1:10–1:30</span><span class="agenda-label">Part 3 — Memory &amp; Setup</span></div>
+            <div class="agenda-row break"><span class="agenda-time">1:30–1:40</span><span class="agenda-label">Break</span></div>
+            <div class="agenda-row"><span class="agenda-time">1:40–2:10</span><span class="agenda-label">Part 4 — Database Layer</span></div>
+            <div class="agenda-row"><span class="agenda-time">2:10–2:50</span><span class="agenda-label">Part 5 — FastAPI Back End</span></div>
+            <div class="agenda-row break"><span class="agenda-time">2:50–3:00</span><span class="agenda-label">Break</span></div>
+            <div class="agenda-row"><span class="agenda-time">3:00–4:00</span><span class="agenda-label">Part 6 — Front End (plain HTML/JS)</span></div>
+            <div class="agenda-row"><span class="agenda-time">4:00–4:45</span><span class="agenda-label">Part 7 — Skills, Subagents &amp; Diagramming Your App</span></div>
+            <div class="agenda-row break"><span class="agenda-time">4:45–4:55</span><span class="agenda-label">Break</span></div>
+            <div class="agenda-row"><span class="agenda-time">4:55–5:20</span><span class="agenda-label">Part 8 — Review, Test &amp; Iterate</span></div>
+            <div class="agenda-row"><span class="agenda-time">5:20–5:30</span><span class="agenda-label">Part 9 — Wrap-Up, Recap &amp; Preview of Week 2</span></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">02</div>
+        </div>
+      </section>
+
+      <section class="slide" id="objectives">
+        <div class="slide-kicker">Learning Objectives</div>
+        <h2 class="slide-title">By the End of Today, You Will Be Able To&hellip;</h2>
+        <div class="slide-body">
+          <div class="obj-grid">
+            <div class="obj-card"><span class="obj-num">1</span>Turn your blueprint file into a build prompt an agent can execute — no coding background required.</div>
+            <div class="obj-card"><span class="obj-num">2</span>Plan a three-layer build (database, back end, front end) before writing any code.</div>
+            <div class="obj-card"><span class="obj-num">3</span>Write a project memory file that keeps the agent consistent across a whole build.</div>
+            <div class="obj-card"><span class="obj-num">4</span>Have an agent build a real database, FastAPI backend, and plain HTML/JS frontend from your spec.</div>
+            <div class="obj-card"><span class="obj-num">5</span>Write a Skill and delegate a task to a Subagent inside a real project.</div>
+            <div class="obj-card"><span class="obj-num">6</span>Generate an architecture diagram (draw.io) and a sequence diagram (Mermaid) of the exact app you built.</div>
+            <div class="obj-card"><span class="obj-num">7</span>Review a diff that spans three layers, test end-to-end, and redirect the agent mid-task.</div>
+            <div class="obj-card"><span class="obj-num">8</span>Leave with a working full-stack app — plus two pictures of it — that you can show and explain to anyone.</div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">03</div>
+        </div>
+      </section>
+
+      <section class="slide" id="beginner-glossary">
+        <div class="slide-kicker">Before We Start</div>
+        <h2 class="slide-title">If Any of This Is All New to You</h2>
+        <div class="slide-body">
+          <p class="intro">You do not need any prior coding experience for today. Every word below shows up in the next five hours — read this once now, and come back anytime one doesn't click.</p>
+          <table class="data-table">
+            <thead><tr><th>Term</th><th>In plain English</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Terminal</strong></td><td>A window where you type commands instead of clicking icons. On a Mac it's the <em>Terminal</em> app (in Applications &rarr; Utilities); on Windows it's <em>PowerShell</em>.</td></tr>
+              <tr><td><strong>Folder</strong></td><td>What programmers usually call a "directory" — same thing as the folders on your desktop.</td></tr>
+              <tr><td><strong>Front end</strong></td><td>The part of the app a person sees and clicks: pages, buttons, forms.</td></tr>
+              <tr><td><strong>Back end</strong></td><td>The part nobody sees: the rules and logic that run behind the scenes when a button is pressed.</td></tr>
+              <tr><td><strong>Database</strong></td><td>Where the app's information is permanently stored — think an extremely organized spreadsheet.</td></tr>
+              <tr><td><strong>Endpoint</strong></td><td>One specific "address" the front end can call on the back end to get one job done, e.g. <code class="inline">POST /bookings</code>.</td></tr>
+              <tr><td><strong>JSON</strong></td><td>A simple, structured way to write data as plain text, using <code class="inline">{ }</code> and <code class="inline">[ ]</code>, that both people and programs can read.</td></tr>
+              <tr><td><strong>localhost / port</strong></td><td>"This same computer," at a specific numbered door — <code class="inline">http://localhost:8000</code> means port 8000, on your own machine, reachable only by you.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">You don't need to memorize any of this. You just need to know it's here.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">04</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 1 ============ -->
+      <section class="slide" id="blueprint-source">
+        <div class="slide-kicker">Part 1 &middot; Your Blueprint &middot; 1.1</div>
+        <h2 class="slide-title">Where It Comes From</h2>
+        <div class="slide-body">
+          <p class="intro">Before this session, you were asked to turn your app idea into a <strong>blueprint</strong> using the tool your instructor shared: <code class="inline">app_idea_blueprint.html</code> — a form you open in any browser (no install, no account, works offline). It asks about your idea in plain business language, in three parts — front end, back end, database — plus scope and tech preferences, and it works out the backend endpoints for you automatically.</p>
+          <ul class="points">
+            <li>If you filled it in and clicked <strong>Save as JSON</strong>, you already have a file named something like <code class="inline">your-app-name-blueprint.json</code> — use it directly, exactly as it downloaded.</li>
+            <li>If you only have free-text answers from elsewhere (e.g. the Google Form version of the same questionnaire), 1.3 gives you a simple Markdown template to organize them the same way.</li>
+            <li>Haven't filled it in yet? Open <code class="inline">app_idea_blueprint.html</code> now and spend 15–20 minutes on it — a rushed hour of building on a vague idea wastes far more time than that does.</li>
+          </ul>
+          <div class="callout">No coding knowledge was needed to fill it out, and none is needed to read it back — it's just your own words, organized.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">05</div>
+        </div>
+      </section>
+
+      <section class="slide" id="blueprint-shape">
+        <div class="slide-kicker">Part 1 &middot; Your Blueprint &middot; 1.2</div>
+        <h2 class="slide-title">The Blueprint's Shape (JSON)</h2>
+        <div class="slide-body">
+          <p class="intro">The blueprint tool's JSON export has a few parts an agent can read directly — here's a trimmed example, from <em>GlowBook</em>, a made-up salon-booking app used throughout the blueprint tool's own examples:</p>
+          <div class="code-block">
+            <div class="code-label"><span>glowbook-blueprint.json (excerpt)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-json">{
+  "type": "app-idea-blueprint",
+  "app_name": "GlowBook",
+  "saved_at": "2026-09-20T14:32:00.000Z",
+  "progress": { "required_answered": 26, "required_total": 26, "complete": true },
+  "derived": {
+    "api_endpoints": [
+      {
+        "method": "POST",
+        "path": "/bookings",
+        "used_by": ["Book screen › Confirm button"],
+        "sends": ["service_id, stylist_id, date, time, name, phone"],
+        "returns": ["the saved booking, including its id"],
+        "errors": ["400 time already taken", "422 missing phone"]
+      }
+    ],
+    "issues_to_review": []
+  },
+  "answers": {
+    "pitch": { "section": "The Big Idea", "question": "One-sentence pitch",
+      "answer": "GlowBook helps salon clients book appointments online." }
+  }
+}</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">answers</code> — every question you answered, in your own plain business language, with the question text kept alongside it so nothing needs re-explaining.</li>
+            <li><code class="inline">derived.api_endpoints</code> — every backend call your screens need, worked out automatically from the controls you described. This is your backend spec, already written for you.</li>
+            <li><code class="inline">derived.issues_to_review</code> — gaps the tool spotted itself (e.g. a screen with no controls, or a control missing its endpoint). Worth fixing in the tool before you build.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">06</div>
+        </div>
+      </section>
+
+      <section class="slide" id="blueprint-md">
+        <div class="slide-kicker">Part 1 &middot; Your Blueprint &middot; 1.3</div>
+        <h2 class="slide-title">No JSON? A Markdown Version</h2>
+        <div class="slide-body">
+          <p class="intro">If you only have free-text answers, organize them into this shape instead — an agent reads this just as well as the JSON:</p>
+          <div class="code-block">
+            <div class="code-label"><span>blueprint.md</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext"># App name: GlowBook
+Pitch: GlowBook helps salon clients book
+appointments online so they never have to call.
+
+## Front end (screens)
+- Home: list of services, "Book now" button per service
+- Booking: pick a time, client name/phone, "Confirm" button
+- My Bookings: list of upcoming bookings, "Cancel" button
+
+## Back end (endpoints)
+- POST /bookings — create a booking (client_id, service_id, time)
+- GET /bookings?client_id=... — list a client's bookings
+- DELETE /bookings/{id} — cancel a booking
+
+## Database (tables)
+- services: id, name, price, duration_minutes
+- bookings: id, client_name, client_phone, service_id, time, status
+
+## Scope
+- One salon, one location, no payment processing yet
+- SQLite is fine for today</code></pre>
+          </div>
+          <div class="callout">Keep it specific — names, fields, and screen-by-screen behavior. "Users can manage bookings" is not specific; "DELETE /bookings/{id} cancels a booking and shows a confirmation" is.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">07</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-loadblueprint">
+        <div class="slide-kicker">Part 1 &middot; Hands-On &middot; 1.4</div>
+        <h2 class="slide-title">Set Up the Project</h2>
+        <div class="slide-body">
+          <ol class="steps">
+            <li><strong>Create a project folder</strong><span>e.g. <code class="inline">my-app</code> — a fresh folder for today's whole build. Right-click on your Desktop &rarr; New Folder is perfectly fine.</span></li>
+            <li><strong>Put your blueprint inside it</strong><span>As <code class="inline">blueprint.json</code> or <code class="inline">blueprint.md</code> — exactly one of the two, at the top level of that folder.</span></li>
+            <li><strong>Open a terminal in that folder</strong><span>Everything from here runs from this one project folder. On Mac: right-click the folder &rarr; "New Terminal at Folder" (or open Terminal and type <code class="inline">cd</code> then drag the folder in). On Windows: open the folder in File Explorer, type <code class="inline">powershell</code> in the address bar, press Enter.</span></li>
+          </ol>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div class="code-block"><div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div><pre><code class="language-bash">cd my-app
+opencode</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div class="code-block"><div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div><pre><code class="language-bash">cd my-app
+claude</code></pre></div>
+            </div>
+          </div>
+          <div class="callout warn">Don't have a blueprint yet? Go back to 1.1 now — everything from Part 2 onward depends on this file existing.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">08</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 2 ============ -->
+      <section class="slide" id="why-plan-big">
+        <div class="slide-kicker">Part 2 &middot; Plan the Whole Build &middot; 2.1</div>
+        <h2 class="slide-title">Three Layers, One Plan</h2>
+        <div class="slide-body">
+          <p>Session 1's decision table said: plan first when there are multi-file changes, architectural decisions, and large scope. A database + a FastAPI backend + an HTML/JS frontend is exactly that, times three. Skipping the plan here is how you end up with a backend that doesn't match what the frontend expects — discovered an hour in, after dozens of files already exist.</p>
+          <div class="callout">The right order is always <strong>database &rarr; backend &rarr; frontend</strong> — each layer depends on the one before it already existing. You can't display data from a backend that doesn't exist yet, and a backend can't save data to a database that isn't there.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">09</div>
+        </div>
+      </section>
+
+      <section class="slide" id="build-prompt">
+        <div class="slide-kicker">Part 2 &middot; Plan the Whole Build &middot; 2.2</div>
+        <h2 class="slide-title">The Build Prompt</h2>
+        <div class="slide-body">
+          <p class="intro">This is the instruction the blueprint tool itself recommends, extended for today's stack — the "our class stack" default your blueprint likely chose (Section 5, question 35):</p>
+          <div class="code-block">
+            <div class="code-label"><span>the build prompt — attach or paste your blueprint first</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Build the app described in the attached
+blueprint. Plan first, then build the
+database (SQLite, tables and fields), the
+FastAPI back end (the endpoints listed
+under derived.api_endpoints and any
+extras), and the front end (plain HTML,
+CSS and JavaScript — one page per screen,
+with its controls and navigation between
+screens), and tell me how to run all of
+it. Use the color theme, logo, and look
+and feel I described. Ask me before making
+any decision that isn't covered by my
+answers.</code></pre>
+          </div>
+          <div class="callout">Notice this prompt itself asks for a plan first — you're about to enforce that with a Plan agent on top, which is belt-and-suspenders and exactly right for a build this size.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">10</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-fullplan">
+        <div class="slide-kicker">Part 2 &middot; Hands-On &middot; 2.3</div>
+        <h2 class="slide-title">Get the Full Plan</h2>
+        <div class="slide-body">
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Press <code class="inline">Tab</code> to switch to the Plan agent, then give it the 2.2 prompt plus:</div>
+              <div class="code-block"><div class="code-label"><span>append</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">Read blueprint.json (or blueprint.md)
+first.</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Press <code class="inline">Shift+Tab</code> into Plan Mode, then give it the same 2.2 prompt plus the same line above.</div>
+            </div>
+          </div>
+          <div class="callout warn">Do not approve execution yet — read the plan fully first (2.4).</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">11</div>
+        </div>
+      </section>
+
+      <section class="slide" id="reading-the-plan">
+        <div class="slide-kicker">Part 2 &middot; Plan the Whole Build &middot; 2.4</div>
+        <h2 class="slide-title">Reading a Multi-Layer Plan</h2>
+        <div class="slide-body">
+          <p class="intro">Before approving, check the plan specifically for — you don't need to understand the code, just check it against your own blueprint:</p>
+          <ul class="points">
+            <li><strong>Order</strong> — does it build the database before the backend, and the backend before the frontend?</li>
+            <li><strong>Coverage</strong> — does every table in your blueprint get a place in the plan? Every endpoint in <code class="inline">derived.api_endpoints</code>? Every screen?</li>
+            <li><strong>Unclear items</strong> — did it flag anything from <code class="inline">issues_to_review</code>, or ask you a clarifying question instead of guessing?</li>
+            <li><strong>Run instructions</strong> — does the plan explain how you'll actually start the backend and frontend when it's done?</li>
+          </ul>
+          <div class="callout">If something's missing, say so now — <em>"Your plan doesn't mention the Cancel button on My Bookings — add it"</em> — before a single file gets written.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">12</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 3 ============ -->
+      <section class="slide" id="memory-for-real-project">
+        <div class="slide-kicker">Part 3 &middot; Memory &amp; Setup &middot; 3.1</div>
+        <h2 class="slide-title">A Memory File Before You Start</h2>
+        <div class="slide-body">
+          <p class="intro">This project will run for hours across many turns. Standing rules belong in <code class="inline">AGENTS.md</code> / <code class="inline">CLAUDE.md</code> now, not repeated in every prompt — the same lesson from Session 1, now applied to a real, multi-hour project.</p>
+          <div class="code-block">
+            <div class="code-label"><span>AGENTS.md / CLAUDE.md — starter content</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext"># Project conventions
+
+- Backend: FastAPI, SQLite, in `backend/`
+- Frontend: plain HTML/CSS/JS, in `frontend/`
+- Run backend: `python main.py` from `backend/`
+- Run frontend: `python -m http.server 5500`
+  from `frontend/`
+- Always confirm the server actually starts
+  before saying a task is done.
+- Ask before changing anything not covered
+  by blueprint.json / blueprint.md.
+
+## Design
+(paste your blueprint's color theme, logo
+path, and look-and-feel answers here)</code></pre>
+          </div>
+          <div class="callout">That last "Design" section is Session 1's brand-context lesson, applied here — paste your blueprint's actual color and logo answers in once, and the frontend build in Part 6 follows them automatically.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">13</div>
+        </div>
+      </section>
+
+      <section class="slide" id="permission-for-build">
+        <div class="slide-kicker">Part 3 &middot; Memory &amp; Setup &middot; 3.2</div>
+        <h2 class="slide-title">Choosing a Permission Setup</h2>
+        <div class="slide-body">
+          <p class="intro">A build this size means dozens of individual edits. Approving each one-by-one for hours is exhausting — but so is missing something in a hundred silent changes. A reasonable middle ground, using Session 1's permission model:</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🟢 OPENCODE</div>
+              <div class="code-block"><div class="code-label"><span>opencode.jsonc</span><button class="copy-btn">Copy</button></div><pre><code class="language-plaintext">{
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "*": "ask",
+      "python *": "allow",
+      "pip install *": "ask"
+    }
+  }
+}</code></pre></div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🔵 CLAUDE CODE</div>
+              <div style="padding:14px 16px;font-size:14px;">Switch to <code class="inline">acceptEdits</code> mode (<code class="inline">Shift+Tab</code>) — auto-accepts file edits, still prompts for commands like installs or starting servers.</div>
+            </div>
+          </div>
+          <div class="callout warn">Whatever you pick, stay in the room. Skim file names as they're created — you're trading per-edit approval for periodic spot-checks, not for ignoring it entirely.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">14</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-initproject">
+        <div class="slide-kicker">Part 3 &middot; Hands-On &middot; 3.3</div>
+        <h2 class="slide-title">Init &amp; Write Memory</h2>
+        <div class="slide-body">
+          <ol class="steps">
+            <li><strong>Run <code class="inline">/init</code></strong><span>In either tool. OpenCode writes AGENTS.md; Claude Code writes CLAUDE.md.</span></li>
+            <li><strong>Paste in the 3.1 content</strong><span>Including your actual color theme and logo answers from the blueprint, under Design.</span></li>
+            <li><strong>Set your permission setup from 3.2</strong><span>Edit <code class="inline">opencode.jsonc</code>, or press <code class="inline">Shift+Tab</code> to <code class="inline">acceptEdits</code>.</span></li>
+          </ol>
+          <div class="callout">Same command, different filename — you're now set up for the whole rest of today's build.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">15</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 4 ============ -->
+      <section class="slide" id="tables-to-schema">
+        <div class="slide-kicker">Part 4 &middot; Database Layer &middot; 4.1</div>
+        <h2 class="slide-title">Tables &rarr; Real Schema</h2>
+        <div class="slide-body">
+          <p>Every "thing the app remembers" in your blueprint (Section 4) becomes a real SQLite table; every detail you listed for it becomes a column. A thing that "links to another thing" (e.g. "each booking is for exactly one stylist") becomes a foreign key — a column that points at a row in another table. This is the smallest, most mechanical layer to build, and everything else depends on getting it right first.</p>
+          <div class="callout">SQLite needs no server or install beyond Python itself — perfect for today. It's also literally a single file on your laptop, which makes it easy to look inside and easy to reset if something goes wrong.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">16</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-database">
+        <div class="slide-kicker">Part 4 &middot; Hands-On &middot; 4.2</div>
+        <h2 class="slide-title">Build the Database</h2>
+        <div class="slide-body">
+          <p class="intro">Release just the database portion of your approved plan — identical prompt in both tools:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Build just the database layer from the
+plan: the SQLite schema for every table in
+my blueprint, plus a small script that
+creates the database file with that
+schema. Don't start the backend yet.</code></pre>
+          </div>
+          <div class="callout">Watch the permission prompts (or the edit summary) as files are created in a <code class="inline">backend/</code> or <code class="inline">database/</code> folder — you should see one file per table's worth of logic, not one giant file.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">17</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-verifydb">
+        <div class="slide-kicker">Part 4 &middot; Hands-On &middot; 4.3</div>
+        <h2 class="slide-title">Verify the Schema</h2>
+        <div class="slide-body">
+          <p class="intro">Don't just trust it — ask it to prove the schema matches your blueprint. Same prompt, either tool:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Run the setup script to create the
+database, then show me the schema of every
+table it created (columns and types).</code></pre>
+          </div>
+          <div class="callout">Compare the output against your blueprint's tables and fields yourself — this is the same "read the diff, don't just trust the claim" habit from Session 1, applied to a database instead of a code diff. You don't need to understand SQL to check that every field you listed actually shows up as a column.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">18</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 5 ============ -->
+      <section class="slide" id="endpoints-to-routes">
+        <div class="slide-kicker">Part 5 &middot; FastAPI Back End &middot; 5.1</div>
+        <h2 class="slide-title">Endpoints &rarr; Real Routes</h2>
+        <div class="slide-body">
+          <p>Every entry in <code class="inline">derived.api_endpoints</code> (or the Back End section of your Markdown blueprint) becomes one FastAPI route: the same method (GET/POST/PUT/DELETE), the same path, reading or writing the tables from Part 4. Pydantic models — FastAPI's way of checking that incoming data has the right shape before anything happens with it — validate what each endpoint sends and returns. This is exactly the pattern from Base Camp 3's FastAPI session, just generated for your specific app instead of a calculator.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">19</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-backend">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.2</div>
+        <h2 class="slide-title">Build the Backend</h2>
+        <div class="slide-body">
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Now build the FastAPI back end: every
+endpoint from derived.api_endpoints (or my
+blueprint's Back End section), reading and
+writing the database from Part 4. Use
+Pydantic models for requests and
+responses. Enable CORS for all origins so
+a plain HTML frontend can call it. Add a
+way to run it with uvicorn. Don't build
+the front end yet.</code></pre>
+          </div>
+          <div class="callout warn">This is the biggest single step so far — expect several file edits and at least one permission/command prompt for installing <code class="inline">fastapi</code> and <code class="inline">uvicorn</code>. Read them; "installing a package" just means downloading a small piece of pre-written code your app depends on.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">20</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-testbackend">
+        <div class="slide-kicker">Part 5 &middot; Hands-On &middot; 5.3</div>
+        <h2 class="slide-title">Test It in Swagger</h2>
+        <div class="slide-body">
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Start the backend, then tell me the URL
+for the Swagger docs (/docs).</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Open <code class="inline">/docs</code> in your browser</strong><span>This is Swagger — an automatic, interactive web page FastAPI builds for you, listing every endpoint from your blueprint.</span></li>
+            <li><strong>Try the "create" endpoint by hand</strong><span>Click it, click "Try it out," fill in the request body, click "Execute," and confirm you get a real response back — not an error.</span></li>
+            <li><strong>Try a "list" endpoint</strong><span>Confirm the row you just created comes back.</span></li>
+          </ol>
+          <div class="callout">This is the same Swagger workflow from Base Camp 3 — now proving out your own app's real endpoints. If this page loads and these two calls work, your backend is genuinely functioning, independent of any frontend.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">21</div>
+        </div>
+      </section>
+
+      <!-- ============ HALFWAY ============ -->
+      <section class="slide slide-hero" id="halfway">
+        <div class="slide-kicker">Halfway Point</div>
+        <h1>The Kitchen Is Built — Now the Dining Room</h1>
+        <p class="lede">Your database stores real data and your FastAPI backend serves it — tested and proven in Swagger. The second half builds the plain HTML/JS front end your blueprint describes, wires it to the backend you just verified, teaches you to diagram the app you're building, and wraps everything in the review-and-iterate habits from Session 1.</p>
+        <p class="lede" style="font-weight:700;">Next up: Part 6 — Front End</p>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">22</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 6 ============ -->
+      <section class="slide" id="screens-to-pages">
+        <div class="slide-kicker">Part 6 &middot; Front End &middot; 6.1</div>
+        <h2 class="slide-title">Screens &amp; Controls &rarr; Pages &amp; Elements</h2>
+        <div class="slide-body">
+          <p>Each screen in your blueprint becomes one HTML page; each control (button, input, list) becomes a plain HTML element inside it; each "Call the back end" control becomes a <code class="inline">fetch</code> call — JavaScript's way of asking the backend for something — to the exact endpoint you already tested in Part 5. Navigation between screens becomes links between pages.</p>
+          <div class="callout">This is deliberately the simplest possible frontend approach — no build tools, no installs, no npm. It's the same shape as last week's calculator app (<code class="inline">index.html</code> + <code class="inline">app.js</code>), just with more pages. If your blueprint asked for React instead, that's a fine choice for later — today's session builds the "our class stack" default so absolute beginners have zero extra tooling to fight with.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">23</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-scaffoldfrontend">
+        <div class="slide-kicker">Part 6 &middot; Hands-On &middot; 6.2</div>
+        <h2 class="slide-title">Scaffold the Front End</h2>
+        <div class="slide-body">
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Create a frontend/ folder with one plain
+HTML page per screen in my blueprint, a
+shared style.css using my Design colors
+and logo from AGENTS.md, and a shared
+app.js. Don't build any screen content
+yet — just get a home page showing my
+app's name and logo.</code></pre>
+          </div>
+          <p>Verify it manually once it's done — no installs needed, this is the same tool from Session 1:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal — inside frontend/</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">python3 -m http.server 5500</code></pre>
+          </div>
+          <div class="callout">Open <code class="inline">http://localhost:5500</code> and confirm you see your app's name, logo, and colors before moving on.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">24</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-buildscreens">
+        <div class="slide-kicker">Part 6 &middot; Hands-On &middot; 6.3</div>
+        <h2 class="slide-title">Build the Screens</h2>
+        <div class="slide-body">
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Now build every screen from my blueprint:
+the controls it describes, and navigation
+between screens (regular links between
+pages is fine). Don't wire up the backend
+calls yet — use fake placeholder data for
+now so we can see the screens first.</code></pre>
+          </div>
+          <div class="callout">Building the UI with fake data before wiring the real backend is deliberate — it isolates "does the UI look and flow right" from "does the network call work," so if something's broken later, you know which half to look in.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">25</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-wireup">
+        <div class="slide-kicker">Part 6 &middot; Hands-On &middot; 6.4</div>
+        <h2 class="slide-title">Wire It to the Backend</h2>
+        <div class="slide-body">
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Replace the placeholder data with real
+fetch calls to the FastAPI backend from
+Part 5, one endpoint per control, exactly
+matching derived.api_endpoints. Handle the
+loading and error states simply. Tell me
+how to run both servers together.</code></pre>
+          </div>
+          <div class="callout warn">A common snag here is <strong>CORS</strong> — a browser security rule that blocks a page from calling a different address unless that address explicitly allows it. If the frontend can't reach the backend, open your browser's console (right-click &rarr; Inspect &rarr; Console) and, if you see the word "CORS," just tell the agent: <em>"the browser console shows a CORS error — fix it."</em> It knows the fix (FastAPI's <code class="inline">CORSMiddleware</code>, already added back in 5.2).</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">26</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 7 ============ -->
+      <section class="slide" id="skill-run-dev">
+        <div class="slide-kicker">Part 7 &middot; Skills, Subagents &amp; Diagrams &middot; 7.1</div>
+        <h2 class="slide-title">A Skill to Run Everything</h2>
+        <div class="slide-body">
+          <p class="intro">You'll start both servers many more times today. Package it once, per Session 1 — the same file works in both tools:</p>
+          <div class="code-block">
+            <div class="code-label"><span>.opencode/skills/run-dev/SKILL.md (or .claude/skills/run-dev/SKILL.md)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">---
+name: run-dev
+description: Start the backend and frontend dev servers together
+allowed-tools: bash(python*) bash(uvicorn*)
+---
+
+Start the FastAPI backend (python main.py,
+from backend/) and the frontend static
+server (python -m http.server 5500, from
+frontend/) in the background. Report both
+URLs when ready.</code></pre>
+          </div>
+          <div class="callout">This is scoped to this one project (Session 1, Part 3) — it lives inside <code class="inline">my-app/</code>, so it won't clutter any other project's list of skills.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">27</div>
+        </div>
+      </section>
+
+      <section class="slide" id="subagent-crosscheck">
+        <div class="slide-kicker">Part 7 &middot; Skills, Subagents &amp; Diagrams &middot; 7.2</div>
+        <h2 class="slide-title">A Subagent to Cross-Check the Build</h2>
+        <div class="slide-body">
+          <p class="intro">A focused, read-only cross-check is exactly the bounded, well-specified task a subagent is good for — it explores without polluting your main conversation with file dumps.</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">@general Compare blueprint.json against
+the actual code in backend/ and frontend/.
+List any endpoint, screen, or table from
+the blueprint that's missing or built
+differently than described. Don't change
+any files — just report back.</code></pre>
+          </div>
+          <p style="font-size:13px;color:var(--text-dim);">In Claude Code, drop the <code class="inline">@general</code> and just ask in plain language — it'll pick the Agent tool on its own.</p>
+          <div class="callout warn">Remember Session 1's rule: context doesn't inherit. This prompt works because it re-states exactly what to compare — the subagent doesn't remember your earlier conversation about the app.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">28</div>
+        </div>
+      </section>
+
+      <section class="slide" id="why-diagram-intro">
+        <div class="slide-kicker">Part 7 &middot; Skills, Subagents &amp; Diagrams &middot; 7.3</div>
+        <h2 class="slide-title">Why Diagram Your Own App?</h2>
+        <div class="slide-body">
+          <p class="intro">You just asked an agent to build three connected layers at once. Before trusting that it's all wired together correctly, it helps enormously to actually <em>see</em> the shape of what got built — not just read code you may not fully understand yet.</p>
+          <ul class="points">
+            <li><strong>What:</strong> two small, visual pictures of your own app — one showing its pieces and how they connect (an <strong>architecture diagram</strong>), one showing a single request traveling through those pieces step by step (a <strong>sequence diagram</strong>).</li>
+            <li><strong>Why:</strong> a diagram makes gaps obvious that text doesn't. If your frontend box has no arrow connecting it to your backend box, something's missing — you don't need to read Python to spot that.</li>
+            <li><strong>How:</strong> two more Skills, exactly like the one you just wrote in 7.1 — you ask the agent to look at the code it built and draw what it finds, in two well-known, free diagram formats: <strong>draw.io</strong> and <strong>Mermaid</strong>.</li>
+          </ul>
+          <div class="callout">Neither format needs you to install anything new — both open free, in a browser, over the next two slides.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">29</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-drawio-architecture">
+        <div class="slide-kicker">Part 7 &middot; Skills, Subagents &amp; Diagrams &middot; 7.4</div>
+        <h2 class="slide-title">A Skill to Draw the Architecture (draw.io)</h2>
+        <div class="slide-body">
+          <p class="intro"><strong>draw.io</strong> (also called diagrams.net) is a free diagramming tool — boxes, arrows, text — that saves a diagram as a <code class="inline">.drawio</code> file: plain text underneath, which means an agent can write one directly, no drawing required.</p>
+          <div class="code-block">
+            <div class="code-label"><span>.opencode/skills/draw-architecture/SKILL.md (or .claude/skills/...)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">---
+name: draw-architecture
+description: Draw a draw.io architecture diagram of this app's frontend, backend, and database
+allowed-tools: read grep glob write
+---
+
+Look at the actual code in backend/ and
+frontend/. Create architecture.drawio with
+three labeled boxes -- Browser / Frontend,
+FastAPI Backend, SQLite Database -- and
+arrows showing how a request flows between
+them. Use this color style: box fill
+#f2f9f6 with a #33c375 border, 2px, titles
+in #002726 bold. Label each arrow with
+what's sent, e.g. "GET /bookings".</code></pre>
+          </div>
+          <p>To view the finished diagram:</p>
+          <ol class="steps">
+            <li><strong>Go to app.diagrams.net</strong><span>Free, runs in your browser, no account needed.</span></li>
+            <li><strong>Choose "Open Existing Diagram"</strong><span>Pick <code class="inline">architecture.drawio</code> from your project folder.</span></li>
+            <li><strong>Look, don't edit (yet)</strong><span>Check every box and arrow matches what you actually asked to be built.</span></li>
+          </ol>
+          <div class="callout">This is the exact color style used in Base Camp 3's <code class="inline">calculator_app_evolution.drawio</code> — if you've seen that diagram before, your own will look like it belongs to the same family.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">30</div>
+        </div>
+      </section>
+
+      <section class="slide" id="skill-mermaid-sequence">
+        <div class="slide-kicker">Part 7 &middot; Skills, Subagents &amp; Diagrams &middot; 7.5</div>
+        <h2 class="slide-title">A Skill to Draw the Sequence (Mermaid)</h2>
+        <div class="slide-body">
+          <p class="intro"><strong>Mermaid</strong> draws a diagram from plain text — you (or the agent) write a short script, and it renders as a picture, no dragging boxes around. A <strong>sequence diagram</strong> shows one single request traveling through your app, step by step, in the order it actually happens. This one below is real, live Mermaid, rendering right now on this slide:</p>
+          <pre class="mermaid">
+sequenceDiagram
+    participant U as User
+    participant F as Frontend
+    participant B as Backend (FastAPI)
+    participant D as Database
+    U->>F: Taps "Confirm" on Book screen
+    F->>B: POST /bookings (service, time, name)
+    B->>D: INSERT INTO bookings
+    D-->>B: booking saved, id=42
+    B-->>F: 200 OK (booking_id: 42)
+    F-->>U: Shows "Booking confirmed!"
+          </pre>
+          <div class="code-block">
+            <div class="code-label"><span>.opencode/skills/draw-sequence/SKILL.md (or .claude/skills/...)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">---
+name: draw-sequence
+description: Draw a Mermaid sequence diagram of this app's main user journey
+allowed-tools: read grep glob write
+---
+
+Look at the main user journey from the
+blueprint (question 9) and the actual code
+in backend/ and frontend/. Create
+sequence.md containing one Mermaid
+sequenceDiagram code block with
+participants User, Frontend, Backend,
+Database. Show every step of that one
+journey, in order, using the real endpoint
+paths that were actually built.</code></pre>
+          </div>
+          <div class="callout">Your <code class="inline">sequence.md</code> will render the exact same way as the diagram above: automatically on GitHub, in VS Code's Markdown preview, or pasted into the free live editor at mermaid.live.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">31</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-generate-diagrams">
+        <div class="slide-kicker">Part 7 &middot; Hands-On &middot; 7.6</div>
+        <h2 class="slide-title">Generate Both Diagrams for Your App</h2>
+        <div class="slide-body">
+          <p class="intro">Create both skill files from 7.4 and 7.5 in your project, then ask for both, one after the other:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Use the draw-architecture skill, then the
+draw-sequence skill, on my actual backend/
+and frontend/ code.</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Open <code class="inline">architecture.drawio</code></strong><span>At app.diagrams.net — does every table from your blueprint appear as a box? Does every screen connect to the backend with an arrow?</span></li>
+            <li><strong>Open <code class="inline">sequence.md</code></strong><span>In VS Code's preview, or paste the Mermaid block into mermaid.live — does it match the exact journey you described in your blueprint's question 9?</span></li>
+          </ol>
+          <div class="callout warn">If either diagram is missing a piece, that's a real finding — treat it exactly like the 7.2 subagent's cross-check report, and fix it before Part 8.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">32</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-writerunskill">
+        <div class="slide-kicker">Part 7 &middot; Hands-On &middot; 7.7</div>
+        <h2 class="slide-title">Write &amp; Run the Skills, Then Cross-Check</h2>
+        <div class="slide-body">
+          <ol class="steps">
+            <li><strong>Set up 7.1</strong><span>Create the <code class="inline">run-dev</code> skill file, in whichever tool's skills folder (or both).</span></li>
+            <li><strong>Try it</strong><span><code class="inline">"run-dev"</code> or <em>"start everything."</em> — same words work in both tools.</span></li>
+            <li><strong>Run the 7.2 cross-check</strong><span>Note anything it flags — you'll fix real gaps in Part 8.</span></li>
+            <li><strong>Confirm both diagrams from 7.6 exist</strong><span>You'll hand these to someone else in Part 9 as proof of what you built.</span></li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">33</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 8 ============ -->
+      <section class="slide" id="reading-full-diff">
+        <div class="slide-kicker">Part 8 &middot; Review, Test &amp; Iterate &middot; 8.1</div>
+        <h2 class="slide-title">Reading a Diff Across 3 Layers</h2>
+        <div class="slide-body">
+          <p class="intro">Session 1's diff-reading checklist, applied to a build this size, means checking each layer's contract with its neighbor — your two new diagrams make several of these checkable at a glance:</p>
+          <ul class="points">
+            <li>Does every database column the backend reads actually exist in the schema?</li>
+            <li>Does every backend response shape match what the frontend expects to receive?</li>
+            <li>Does every frontend fetch call use the exact method + path the backend defined?</li>
+            <li>Did anything get built that isn't in the blueprint — or in your architecture diagram — at all?</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">34</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-e2e">
+        <div class="slide-kicker">Part 8 &middot; Hands-On &middot; 8.2</div>
+        <h2 class="slide-title">End-to-End Test</h2>
+        <div class="slide-body">
+          <p class="intro">With both servers running (your <code class="inline">run-dev</code> skill), open the app in your browser and do the real thing your app is for — the exact journey from your sequence diagram:</p>
+          <ol class="steps">
+            <li><strong>Create something</strong><span>Use the app's main "add/create" screen exactly as a real user would.</span></li>
+            <li><strong>See it reflected</strong><span>Navigate to wherever it should now appear — a list, a dashboard.</span></li>
+          </ol>
+          <p class="intro">Check the database directly:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">Show me the current contents of the
+[table] table.</code></pre>
+          </div>
+          <div class="callout">This is the moment the three layers either prove they work together, or don't — and now you'll know exactly which layer to fix.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">35</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-iterate">
+        <div class="slide-kicker">Part 8 &middot; Hands-On &middot; 8.3</div>
+        <h2 class="slide-title">Redirect &amp; Iterate</h2>
+        <div class="slide-body">
+          <p class="intro">Pick one real thing you noticed in 8.2 that isn't quite right — a field missing, a screen that doesn't flow the way you pictured — and fix it live:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">On the [screen name] screen, [what's
+wrong]. Fix it so that [what should
+happen instead].</code></pre>
+          </div>
+          <p style="font-size:13px;color:var(--text-dim);">Wrong path mid-task? OpenCode: try <code class="inline">Esc</code>, or <code class="inline">Ctrl+C</code> if that doesn't stop it. Claude Code: <code class="inline">Esc</code> — or double-tap it to jump back and edit an earlier message.</p>
+          <p>Same muscle memory as Session 1, now on your own app.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">36</div>
+        </div>
+      </section>
+
+      <section class="slide" id="hands-on-fixissues">
+        <div class="slide-kicker">Part 8 &middot; Hands-On &middot; 8.4</div>
+        <h2 class="slide-title">Fix What Got Flagged</h2>
+        <div class="slide-body">
+          <p class="intro">Go back to three lists you already have: your blueprint's <code class="inline">issues_to_review</code> (1.2), the 7.2 subagent's cross-check report, and anything your two diagrams (7.6) revealed. For each real gap:</p>
+          <div class="code-block">
+            <div class="code-label"><span>prompt</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">The cross-check found: [paste one finding].
+Fix it, matching what the blueprint
+describes.</code></pre>
+          </div>
+          <div class="callout">Work through these one at a time, reviewing each diff — this is deliberately the slow, careful way, on purpose.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">37</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 9 ============ -->
+      <section class="slide" id="concept-map">
+        <div class="slide-kicker">Part 9 &middot; Wrap-Up &middot; 9.1</div>
+        <h2 class="slide-title">What Powered What</h2>
+        <div class="slide-body">
+          <table class="data-table">
+            <thead><tr><th>Session 1 concept</th><th>Where it just did real work</th></tr></thead>
+            <tbody>
+              <tr><td>Plan agent / Plan Mode</td><td>Part 2 — sequencing database &rarr; backend &rarr; frontend before touching a file</td></tr>
+              <tr><td>Permissions</td><td>Throughout — reviewing edits and commands across three layers</td></tr>
+              <tr><td>AGENTS.md / CLAUDE.md, brand context</td><td>Part 3 — kept stack, run commands, and your colors/logo consistent for hours</td></tr>
+              <tr><td>Tools (Read/Write/Bash)</td><td>Parts 4–6 — every file created, every server started</td></tr>
+              <tr><td>Skills (scoped)</td><td>Part 7 — <code class="inline">run-dev</code>, <code class="inline">draw-architecture</code>, <code class="inline">draw-sequence</code>, all scoped to this one project</td></tr>
+              <tr><td>Subagents</td><td>Part 7 — the blueprint-vs-code cross-check, isolated from your main thread</td></tr>
+              <tr><td>Reviewing &amp; redirecting</td><td>Part 8 — catching and fixing real gaps before calling it done</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">38</div>
+        </div>
+      </section>
+
+      <section class="slide" id="before-week2">
+        <div class="slide-kicker">Part 9 &middot; Wrap-Up &middot; 9.2</div>
+        <h2 class="slide-title">Before Week 2</h2>
+        <div class="slide-body">
+          <p class="intro">Your app currently lives only on your laptop, in a SQLite file, with no version history. Week 2 changes both:</p>
+          <ul class="points">
+            <li><strong>GitHub</strong> — branching, pull requests, and code review, on the project you built today.</li>
+            <li><strong>CI/CD</strong> — automated checks on every push.</li>
+            <li><strong>Going live</strong> — this exact app, deployed to serverless hosting, with SQLite swapped for a real online database.</li>
+          </ul>
+          <div class="callout">Keep your project folder, your blueprint, and both diagrams — you'll deploy this same app, not a new one, and the diagrams are exactly what you'll show to explain it to a reviewer.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">39</div>
+        </div>
+      </section>
+
+      <!-- ============ RECAP ============ -->
+      <section class="slide" id="recap">
+        <div class="slide-kicker">Recap</div>
+        <h2 class="slide-title">Key Takeaways</h2>
+        <div class="slide-body">
+          <div class="recap-grid">
+            <div class="obj-card"><span class="obj-num">1</span>A specific blueprint (JSON or Markdown) is what turns "build me an app" into something an agent can actually execute — no coding background needed to write one.</div>
+            <div class="obj-card"><span class="obj-num">2</span>Database &rarr; backend &rarr; frontend, in that order, planned before any of it is built.</div>
+            <div class="obj-card"><span class="obj-num">3</span>A memory file — with your brand context inside it — keeps a multi-hour build consistent without repeating yourself.</div>
+            <div class="obj-card"><span class="obj-num">4</span>Skills and subagents stop being abstract once you're running the same steps for the fifth time.</div>
+            <div class="obj-card"><span class="obj-num">5</span>A diagram makes a gap in your app visible at a glance — you don't need to read code to spot a missing box or arrow.</div>
+            <div class="obj-card"><span class="obj-num">6</span>Testing end-to-end — not layer by layer in isolation — is what actually proves the app works.</div>
+            <div class="obj-card"><span class="obj-num">7</span>You built, tested, diagrammed, and shipped a real full-stack app today. That's the whole loop.</div>
+          </div>
+          <div class="exercise" style="margin-top:24px;">
+            <div class="exercise-title">Before Week 2</div>
+            <p style="margin:0;">Keep today's project folder intact — blueprint, backend, frontend, and both diagrams. Next session takes this exact app to GitHub and puts it online.</p>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="slide-index">40</div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: "base", themeVariables: { primaryColor: "#f2f9f6", primaryBorderColor: "#33c375", primaryTextColor: "#002726", lineColor: "#1f8756", actorBkg: "#002726", actorTextColor: "#e6f5ee", actorBorder: "#114741", signalColor: "#002726", signalTextColor: "#0e1f1c" } });</script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

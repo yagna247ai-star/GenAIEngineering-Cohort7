@@ -1,0 +1,42 @@
+[project]
+name = "marketing-pipeline-mvp"
+version = "0.1.0"
+description = "Marketing Pipeline MVP - Lead-to-Meeting AI Agent built on Kore.ai XO Platform principles using D.A.R.E framework (Sandeep Swadia)"
+readme = "README.md"
+authors = [
+    { name = "yagna247ai-star", email = "yagna247.ai@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-multipart>=0.0.9",
+    "httpx>=0.27.0",
+    "jinja2>=3.1.4",
+    "email-validator>=2.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.4.5",
+    "mypy>=1.10.0",
+]
+
+[project.scripts]
+marketing-pipeline-mvp = "marketing_pipeline_mvp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true

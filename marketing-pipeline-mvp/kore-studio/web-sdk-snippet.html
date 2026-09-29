@@ -1,0 +1,22 @@
+<!-- Kore.ai Web SDK - paste into your landing page <head> or before </body> -->
+<!-- Replace BOT_ID, CLIENT_ID with values from Kore.ai XO Console > Channels > Web/Mobile Client -->
+<script src="https://bots.kore.ai/api/botstack/sdk/kore-ai-sdk.js"></script>
+<script>
+(function(){
+  // Kore.ai XO Web SDK config (get these from Bot Builder > Channels > Web/Mobile Client)
+  var botOptions = {
+    koreAPIUrl: "https://bots.kore.ai/api/",
+    botInfo: { name: "Lead-to-Meeting Agent", "_id": "st-xxxx-xxxx-xxxx-marketing-pipeline-mvp" },
+    clientId: "cs-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    enableAck: { delivery: true }
+  };
+  // For local MVP simulation, the FastAPI widget at / is used instead.
+  // When KORE_BOT_ID + KORE_CLIENT_ID are set, src/marketing_pipeline_mvp/kore/web_sdk.py emits the live snippet.
+  if (window.KoreSDK) {
+    KoreSDK.chatConfig.botOptions = botOptions;
+    KoreSDK.show(KoreSDK.chatConfig);
+  } else {
+    console.warn("Kore Web SDK not loaded - using local MVP at /");
+  }
+})();
+</script>

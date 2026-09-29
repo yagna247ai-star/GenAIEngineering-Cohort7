@@ -1,0 +1,10 @@
+{
+  "entities": [
+    { "name": "Email", "type": "Email", "validation": "^[^@]+@[^@]+\\.[^@]+$", "koreType": "system.email" },
+    { "name": "PersonName", "type": "PersonName", "koreType": "system.personName" },
+    { "name": "CompanyName", "type": "String", "koreType": "custom.company" },
+    { "name": "Number", "type": "Number", "koreType": "system.number" },
+    { "name": "Industry", "type": "List", "values": ["SaaS","Fintech","Healthcare","Ecommerce","Other"], "koreType": "custom.industry" }
+  ],
+  "notes": "In Kore.ai XO: Bot Builder > Natural Language > Training > Entities > Import entities.json. Each entity maps to src/marketing_pipeline_mvp/models.py fields."
+}

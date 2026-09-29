@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Session 1 — Installing Python | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; Session 1</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#download">Step 1 &middot; Download Python</a></li>
+        <li><a href="#windows">Step 2 &middot; Install on Windows</a></li>
+        <li><a href="#macos">Step 2 &middot; Install on macOS</a></li>
+        <li><a href="#verify">Step 3 &middot; Verify the Install</a></li>
+        <li><a href="#confusion">python vs python3 vs py</a></li>
+        <li><a href="#troubleshooting">Multiple Versions Installed</a></li>
+        <li><a href="#checklist">Environment Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 1</span>
+        <h1>Environment Setup: Installing Python</h1>
+        <p class="lede">By the end of this session, every laptop in the room — Windows or Mac — runs the exact same Python version, verified and ready. That consistency is the whole point: when everyone's code behaves the same way, debugging a shared exercise means debugging the exercise, not someone's environment.</p>
+        <div class="meta-row">
+          <span class="meta-pill">🐍 Target version: Python 3.11.9</span>
+          <span class="meta-pill">Windows + macOS covered</span>
+        </div>
+      </div>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>One version, everywhere</h2>
+        <div class="topic">
+          <p>Python is updated constantly, and "just install the latest one" is a trap in a classroom setting: minor version differences change how certain libraries behave (you'll see a live example of this in Base Camp 2, Session 2, with NumPy). To keep every exercise reproducible across the whole cohort, this fellowship standardizes on <code class="inline">Python 3.11.9</code> specifically — not 3.12, not 3.13, not whatever ships by default on a fresh laptop.</p>
+          <div class="callout warn">
+            <span class="callout-title">Before you start</span>
+            If you already have some version of Python installed, that's fine — install 3.11.9 alongside it. Session 1's troubleshooting section below shows you how to run the exact version you need even when several are present.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="download">
+        <div class="part-label">Step 1 — Download</div>
+        <h2>Download Python 3.11.9</h2>
+        <div class="topic">
+          <p class="intro">Use exactly this version — not the latest one on the site. Everyone landing on 3.11.9 means everyone's code behaves identically.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div style="padding:14px 16px;">
+                <p style="margin-top:0">Go to the official release page and scroll to <strong>Files</strong>:</p>
+                <p><code class="inline">python.org/downloads/release/python-3119/</code></p>
+                <p>Click <strong>Windows installer (64-bit)</strong>.</p>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>direct link</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-plaintext">https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div style="padding:14px 16px;">
+                <p style="margin-top:0">Same release page, scroll to <strong>Files</strong>:</p>
+                <p><code class="inline">python.org/downloads/release/python-3119/</code></p>
+                <p>Click <strong>macOS 64-bit universal2 installer</strong>.</p>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>direct link</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-plaintext">https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="windows">
+        <div class="part-label">Step 2 — Windows</div>
+        <h2>Installing on Windows</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Run the installer</strong><span>Double-click the downloaded <code class="inline">.exe</code> file to launch the setup wizard.</span></li>
+            <li><strong>Check "Add python.exe to PATH"</strong><span>This checkbox sits at the <em>bottom</em> of the first screen and is easy to miss. Without it, typing <code class="inline">python</code> in a terminal won't work anywhere on the system — the OS has no idea where to find it.</span></li>
+            <li><strong>Click "Install Now"</strong><span>Use the default install location. Approve the Windows permission prompt if one appears.</span></li>
+            <li><strong>Click "Close" when done</strong><span>The optional "Disable path length limit" screen is safe to click too — it prevents rare errors with long file paths later in the program.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="part" id="macos">
+        <div class="part-label">Step 2 — macOS</div>
+        <h2>Installing on macOS</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Open the .pkg file</strong><span>Double-click the downloaded <code class="inline">python-3.11.9-macos11.pkg</code> file.</span></li>
+            <li><strong>Click through the installer</strong><span>Continue &rarr; Continue (license) &rarr; Agree &rarr; Install. macOS has no "Add to PATH" checkbox — the installer handles this automatically.</span></li>
+            <li><strong>Enter your Mac password</strong><span>This is your normal login password, required to install system software.</span></li>
+            <li><strong>Run "Install Certificates.command"</strong><span>A Finder window opens automatically in <code class="inline">/Applications/Python 3.11/</code> after install. Double-click this file once — it lets Python make secure internet connections.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="part" id="verify">
+        <div class="part-label">Step 3 — Verify</div>
+        <h2>Confirm Python Is Installed Correctly</h2>
+        <div class="topic">
+          <p class="intro">Open a terminal and check both the version <em>and</em> where it lives on disk — a version string alone doesn't tell you which install is actually being run.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 Command Prompt — Windows</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python --version
+&gt; Python 3.11.9
+
+where python
+&gt; C:\Users\...\Python311\python.exe
+
+REM if "python" is not recognized, try:
+py --version
+&gt; Python 3.11.9</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 Terminal — macOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python3 --version
+&gt; Python 3.11.9
+
+which python3
+&gt; /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+
+# plain "python" usually doesn't exist on Mac — always use python3</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="confusion">
+        <div class="part-label">Common Confusion</div>
+        <h2>"python", "python3", or "py" — Which One Do I Type?</h2>
+        <div class="topic">
+          <p class="intro">Different laptops resolve these commands differently, depending on OS and what else is installed. Here's what each one actually means.</p>
+          <table class="data-table">
+            <thead><tr><th>Command</th><th>Where</th><th>What it does</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">python</code></td><td>Windows (after checking the PATH box)</td><td>Works if the installer added Python to PATH and no other "python" already claims that name.</td></tr>
+              <tr><td><code class="inline">python3</code></td><td>macOS / Linux</td><td>The standard command on Mac and Linux, since those systems no longer ship Python 2.</td></tr>
+              <tr><td><code class="inline">py</code></td><td>Windows — recommended default</td><td>The Windows Python Launcher, installed automatically alongside Python. Finds the right version even if multiple are installed.</td></tr>
+              <tr><td><code class="inline">py -3.11</code></td><td>Windows, multiple versions</td><td>Tells the Windows launcher to use exactly version 3.11, ignoring any other installed version.</td></tr>
+              <tr><td><code class="inline">python3.11</code></td><td>macOS / Linux, multiple versions</td><td>Runs a specific version directly when more than one Python 3.x is installed.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="part" id="troubleshooting">
+        <div class="part-label">Troubleshooting</div>
+        <h2>Got Multiple Python Versions Installed?</h2>
+        <div class="topic">
+          <p class="intro">Some laptops already have an older Python from another course or tool. Here's how to find every version on disk and lock in 3.11.9 for this fellowship.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash"># 1. List every installed version
+py -0
+
+# 2. Run the exact version you need
+py -3.11 --version</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash"># 1. List every installed version
+which -a python3
+
+# 2. Run the exact version you need
+python3.11 --version</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Rule of thumb</span>
+            Always run programs with <code class="inline">py -3.11</code> (Windows) or <code class="inline">python3.11</code> (Mac) for this course — even if plain <code class="inline">python</code> / <code class="inline">python3</code> already points somewhere else on your machine.
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>Environment Check — Before You Move On</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> Running the version command prints exactly <code class="inline">Python 3.11.9</code></li>
+            <li><span class="tick">✓</span> You know the exact command your laptop needs (<code class="inline">python</code> / <code class="inline">python3</code> / <code class="inline">py</code> / <code class="inline">py -3.11</code>)</li>
+            <li><span class="tick">✓</span> You know the file path where Python is installed</li>
+            <li><span class="tick">✓</span> If multiple versions exist, you can run the 3.11.9 one on demand</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Stuck?</span>
+            Flag your instructor before the next step — everyone needs a working Python before we install the code editor.
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
+          <span class="footer-outskill">OUTSKILL</span>
+          <span class="footer-sep">|</span>
+          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+</body>
+</html>

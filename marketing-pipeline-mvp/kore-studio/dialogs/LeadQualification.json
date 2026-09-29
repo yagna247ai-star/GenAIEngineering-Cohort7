@@ -1,0 +1,59 @@
+{
+  "dialogName": "LeadQualification",
+  "type": "dialogTask",
+  "description": "UC1: Welcome -> KB_Answer (Search AI) -> Capture_Lead (entities) -> Score_BANT (script) -> Branch Hot/Warm/Cold (Agent AI orchestration)",
+  "nodes": [
+    {
+      "name": "Welcome",
+      "type": "message",
+      "text": "Hi! I'm your Lead-to-Meeting agent (Kore.ai XO). Ask about pricing, features, or say 'book a demo'.",
+      "transitions": ["KB_Answer", "Capture_Lead"]
+    },
+    {
+      "name": "KB_Answer",
+      "type": "service",
+      "service": "SearchAI",
+      "config": { "indexId": "kb-marketing-pipeline", "topK": 2, "threshold": 0.7, "grounding": "Answer ONLY from KB chunks, else handoff. If confidence <0.7, trigger Agent Transfer to human SDR." },
+      "inputs": ["userMessage"],
+      "outputs": ["kb_chunks", "confidence", "grounded"],
+      "onLowConfidence": "HumanHandoff"
+    },
+    {
+      "name": "Capture_Lead",
+      "type": "entity",
+      "entities": [
+        { "name": "name", "type": "PersonName", "required": true, "prompt": "Could you share your name?" },
+        { "name": "email", "type": "Email", "required": true, "validation": "email", "prompt": "And your work email?" },
+        { "name": "company", "type": "CompanyName", "required": true },
+        { "name": "company_size", "type": "Number", "required": false, "prompt": "How large is your team? (e.g., 75 employees)" },
+        { "name": "industry", "type": "List", "values": ["SaaS","Fintech","Healthcare","Ecommerce","Other"], "required": false },
+        { "name": "timeline", "type": "String", "required": false, "prompt": "What timeline are you looking at? (e.g., 2 weeks)" },
+        { "name": "budget_band", "type": "String", "required": false },
+        { "name": "pain_point", "type": "String", "required": false }
+      ]
+    },
+    {
+      "name": "Score_BANT",
+      "type": "script",
+      "code": "src/marketing_pipeline_mvp/pipeline/scoring.py:score_lead",
+      "logic": "BANT 4/4=90, 3/4=70, 2/4=45, 1/4=25; size>=50 +5, size>=200 +5, industry SaaS/Fin etc +5; >=75 Hot, >=40 Warm else Cold",
+      "tool": "score_lead (Agent AI)",
+      "outputs": ["score","band","bant"]
+    },
+    {
+      "name": "Branch_Hot_Warm_Cold",
+      "type": "condition",
+      "expression": "band",
+      "branches": {
+        "Hot": ["CreateCRM_Hot","BookCalendar","NotifySlack","ConfirmMeeting"],
+        "Warm": ["CreateCRM_Warm","EnrollNurture"],
+        "Cold": ["CreateCRM_Cold","NewsletterOptIn"]
+      }
+    },
+    { "name": "CreateCRM_Hot", "type": "service", "service": "HubSpot", "endpoint": "POST /crm/v3/objects/contacts", "tool": "create_crm_contact" },
+    { "name": "BookCalendar", "type": "service", "service": "GoogleCalendar", "tool": "book_meeting", "slots": ["2026-09-30T15:00:00","2026-10-01T11:00:00","2026-10-02T14:00:00"] },
+    { "name": "NotifySlack", "type": "service", "service": "Slack", "channel": "#sdr-hot-leads", "tool": "notify_slack" },
+    { "name": "EnrollNurture", "type": "service", "service": "AgentAI", "tool": "send_nurture", "sequence": "Day1 email case study, Day3 WhatsApp ROI, Day7 slots" },
+    { "name": "HumanHandoff", "type": "agentTransfer", "queue": "SDR Queue", "message": "Low confidence or user requested human - transferring with context." }
+  ]
+}

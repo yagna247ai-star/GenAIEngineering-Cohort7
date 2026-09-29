@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Building Your First REST API with FastAPI — Slides | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/slides.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 3 &middot; Week 2 &middot; Session 1</h4>
+    <nav>
+      <ul>
+        <li><a href="#title">Title</a></li>
+        <li><a href="#agenda">Session Agenda</a></li>
+        <li><a href="#objectives">Learning Objectives</a></li>
+
+        <li class="part-item"><a href="#func-anatomy">Part 1 · Calculator Functions</a></li>
+        <li class="sub-item"><a href="#func-anatomy">1.1 Anatomy of a Function</a></li>
+        <li class="sub-item"><a href="#func-calc">1.2 add, subtract, multiply</a></li>
+        <li class="sub-item"><a href="#func-divide-crash">1.3 The Trouble With divide(0)</a></li>
+        <li class="sub-item"><a href="#func-tryexcept">1.4 try / except: Handling the Crash</a></li>
+        <li class="sub-item"><a href="#func-dict-result">1.5 Returning Results as a Dictionary</a></li>
+
+        <li class="part-item"><a href="#cs-problem">Part 2 · Client–Server Architecture</a></li>
+        <li class="sub-item"><a href="#cs-problem">2.1 One Laptop Isn't Enough</a></li>
+        <li class="sub-item"><a href="#cs-model">2.2 The Client–Server Model</a></li>
+        <li class="sub-item"><a href="#cs-fit">2.3 Where Our Calculator Fits</a></li>
+
+        <li class="part-item"><a href="#rest-what">Part 3 · REST APIs</a></li>
+        <li class="sub-item"><a href="#rest-what">3.1 What Is an API?</a></li>
+        <li class="sub-item"><a href="#rest-restful">3.2 What Makes an API "RESTful"</a></li>
+        <li class="sub-item"><a href="#rest-methods">3.3 HTTP Methods: GET, POST, PUT, DELETE</a></li>
+        <li class="sub-item"><a href="#rest-anatomy">3.4 Anatomy of a Request &amp; a Response</a></li>
+        <li class="sub-item"><a href="#rest-status">3.5 HTTP Status Codes at a Glance</a></li>
+
+        <li class="part-item"><a href="#fastapi-what">Part 4 · Setting Up FastAPI</a></li>
+        <li class="sub-item"><a href="#fastapi-what">4.1 What Is FastAPI (and Why)</a></li>
+        <li class="sub-item"><a href="#fastapi-venv">4.2 Create &amp; Activate a Fresh venv</a></li>
+        <li class="sub-item"><a href="#fastapi-install">4.3 Installing fastapi and uvicorn</a></li>
+        <li class="sub-item"><a href="#fastapi-files">4.4 Project Files: main.py</a></li>
+
+        <li class="part-item"><a href="#halfway">Halfway Point</a></li>
+
+        <li class="part-item"><a href="#ep-smallest">Part 5 · From Functions to Endpoints</a></li>
+        <li class="sub-item"><a href="#ep-smallest">5.1 The Smallest Possible FastAPI App</a></li>
+        <li class="sub-item"><a href="#ep-add">5.2 add() Becomes a GET Endpoint</a></li>
+        <li class="sub-item"><a href="#ep-sub-mul">5.3 subtract() and multiply() as Endpoints</a></li>
+        <li class="sub-item"><a href="#ep-divide">5.4 divide() — a Real Error, Not a Crash</a></li>
+        <li class="sub-item"><a href="#ep-run">5.5 Running the Server with uvicorn</a></li>
+
+        <li class="part-item"><a href="#swagger-what">Part 6 · Swagger: Explore Your API</a></li>
+        <li class="sub-item"><a href="#swagger-what">6.1 What Is Swagger / OpenAPI?</a></li>
+        <li class="sub-item"><a href="#swagger-try">6.2 Opening /docs and Trying an Endpoint</a></li>
+        <li class="sub-item"><a href="#swagger-error">6.3 Testing the divide-by-zero Error</a></li>
+        <li class="sub-item"><a href="#swagger-redoc">6.4 /redoc — the Read-Only Alternative</a></li>
+
+        <li class="part-item"><a href="#client-requests">Part 7 · Calling the API from Python</a></li>
+        <li class="sub-item"><a href="#client-requests">7.1 Installing requests in Your Notebook</a></li>
+        <li class="sub-item"><a href="#client-get">7.2 GET Requests: add, subtract, multiply</a></li>
+        <li class="sub-item"><a href="#client-post-endpoint">7.3 Adding a POST Endpoint: calculate</a></li>
+        <li class="sub-item"><a href="#client-post-call">7.4 Calling the POST Endpoint</a></li>
+        <li class="sub-item"><a href="#client-status">7.5 Checking status_code First</a></li>
+
+        <li class="part-item"><a href="#recap">Recap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="slide-main">
+    <div class="slide-stage">
+      <div class="slide-toolbar">
+        <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">36</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
+        <div class="slide-nav-btns">
+          <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
+          <button id="nextSlide" class="slide-btn">Next &rsaquo;</button>
+        </div>
+      </div>
+      <div class="slide-viewport">
+      <section class="slide slide-hero" id="title">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Base Camp 3 · Week 2 · Session 1</div>
+        <h1>Building Your First REST API with FastAPI</h1>
+        <p class="lede">Function arguments &amp; return values · error handling · client&ndash;server architecture · REST APIs at a glance · setting up FastAPI · turning calculator functions into live endpoints · Swagger · calling your own API from a notebook. Today we build the server &mdash; tomorrow, a real client connects to it.</p>
+        <div class="meta-row">
+<span class="meta-pill">⏱ Extended, hands-on</span>
+<span class="meta-pill">🖥️ Server today · client tomorrow</span>
+</div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">01</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agenda">
+        <div class="slide-kicker">Session Agenda</div>
+        <h2 class="slide-title">How This Extended Session Breaks Down</h2>
+        <div class="slide-body">
+          <div class="agenda">
+<div class="agenda-row"><span class="agenda-time">0:00–0:10</span><span class="agenda-label">Welcome &amp; Recap</span></div>
+<div class="agenda-row"><span class="agenda-time">0:10–0:50</span><span class="agenda-label">Part 1 — Calculator Functions &amp; Error Handling</span></div>
+<div class="agenda-row"><span class="agenda-time">0:50–1:20</span><span class="agenda-label">Part 2 — Client–Server Architecture</span></div>
+<div class="agenda-row break"><span class="agenda-time">1:20–1:30</span><span class="agenda-label">Break</span></div>
+<div class="agenda-row"><span class="agenda-time">1:30–2:10</span><span class="agenda-label">Part 3 — REST APIs</span></div>
+<div class="agenda-row"><span class="agenda-time">2:10–2:50</span><span class="agenda-label">Part 4 — Setting Up FastAPI</span></div>
+<div class="agenda-row break"><span class="agenda-time">2:50–3:00</span><span class="agenda-label">Break</span></div>
+<div class="agenda-row"><span class="agenda-time">3:00–3:50</span><span class="agenda-label">Part 5 — From Functions to Endpoints</span></div>
+<div class="agenda-row"><span class="agenda-time">3:50–4:30</span><span class="agenda-label">Part 6 — Swagger: Explore Your Own API</span></div>
+<div class="agenda-row break"><span class="agenda-time">4:30–4:40</span><span class="agenda-label">Break</span></div>
+<div class="agenda-row"><span class="agenda-time">4:40–5:20</span><span class="agenda-label">Part 7 — Calling the API from Python</span></div>
+<div class="agenda-row"><span class="agenda-time">5:20–5:30</span><span class="agenda-label">Final Recap &amp; Wrap-up</span></div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">02</div>
+        </div>
+      </section>
+
+      <section class="slide" id="objectives">
+        <div class="slide-kicker">Learning Objectives</div>
+        <h2 class="slide-title">By the End of This Session, You Will Be Able To&hellip;</h2>
+        <div class="slide-body">
+          <p class="intro">By the end of this session, you will be able to:</p>
+          <div class="obj-grid">
+<div class="obj-card"><span class="obj-num">1</span>Explain what a function's arguments, body, and return statement each do, and write add / subtract / multiply / divide functions.</div>
+<div class="obj-card"><span class="obj-num">2</span>Reproduce and explain a <code class="inline">ZeroDivisionError</code>, and handle it with try / except instead of crashing.</div>
+<div class="obj-card"><span class="obj-num">3</span>Explain the client–server model and where a running API fits into it.</div>
+<div class="obj-card"><span class="obj-num">4</span>Explain what an API is and what makes an API "RESTful".</div>
+<div class="obj-card"><span class="obj-num">5</span>Name the four common HTTP methods (GET, POST, PUT, DELETE) and when each is used.</div>
+<div class="obj-card"><span class="obj-num">6</span>Read the anatomy of an HTTP request and response, including common status codes.</div>
+<div class="obj-card"><span class="obj-num">7</span>Set up a fresh venv and install <code class="inline">fastapi</code> and <code class="inline">uvicorn</code>, explaining what each library does.</div>
+<div class="obj-card"><span class="obj-num">8</span>Turn the calculator functions into GET and POST endpoints using FastAPI.</div>
+<div class="obj-card"><span class="obj-num">9</span>Use <code class="inline">HTTPException</code> to return a proper error response instead of letting the server crash.</div>
+<div class="obj-card"><span class="obj-num">10</span>Run the server with uvicorn, explore it in Swagger UI, and call it from a notebook using <code class="inline">requests</code>.</div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">03</div>
+        </div>
+      </section>
+
+      <section class="slide" id="func-anatomy">
+        <div class="slide-kicker">Part 1 · Calculator Functions &middot; 1.1</div>
+        <h2 class="slide-title">Anatomy of a Function</h2>
+        <div class="slide-body">
+          <p class="intro">Before we build an API, let's make sure every piece of a function is solid — we'll be leaning on all of it today.</p>
+          <div class="code-block">
+          <div class="code-label"><span>python</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">def add(a, b):
+    result = a + b
+    return result</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">def</code> starts a function <strong>definition</strong> — it doesn't run anything yet, it just teaches Python a new command.</li>
+          <li><code class="inline">add</code> is the function's name; <code class="inline">(a, b)</code> are its <strong>parameters</strong> — placeholders for whatever values the caller will provide.</li>
+          <li>The indented lines are the function's <strong>body</strong> — they run top to bottom, every time the function is called.</li>
+          <li><code class="inline">return result</code> sends a value back to whoever called the function, and immediately ends it.</li>
+          </ul>
+          <div class="callout"><span class="callout-title">Defining vs. calling</span><code class="inline">def add(a, b):</code> only defines the function. Nothing happens until you <em>call</em> it — <code class="inline">add(2, 3)</code> — passing real values called <strong>arguments</strong> for the parameters <code class="inline">a</code> and <code class="inline">b</code>.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">04</div>
+        </div>
+      </section>
+
+      <section class="slide" id="func-calc">
+        <div class="slide-kicker">Part 1 · Calculator Functions &middot; 1.2</div>
+        <h2 class="slide-title">add, subtract, multiply</h2>
+        <div class="slide-body">
+          <p class="intro">Same shape, three times — this repetition is deliberate, because it's exactly the shape we'll turn into API endpoints later.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+print(add(4, 5))
+print(subtract(10, 3))
+print(multiply(6, 7))</code></pre>
+          </div>
+          <ul class="points">
+          <li>Each function: two parameters in, one calculation, one value out.</li>
+          <li>A one-line body can <code class="inline">return</code> an expression directly — no need for a separate variable.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">05</div>
+        </div>
+      </section>
+
+      <section class="slide" id="func-divide-crash">
+        <div class="slide-kicker">Part 1 · Calculator Functions &middot; 1.3</div>
+        <h2 class="slide-title">The Trouble With divide(0)</h2>
+        <div class="slide-body">
+          <p class="intro">One more function, same shape — until someone passes 0 as the second argument.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">def divide(a, b):
+    return a / b
+
+print(divide(10, 2))
+print(divide(10, 0))</code></pre>
+          </div>
+          <div class="code-block">
+          <div class="code-label"><span>output</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">5.0
+Traceback (most recent call last):
+  ...
+ZeroDivisionError: division by zero</code></pre>
+          </div>
+          <div class="callout warn">The <em>third</em> line of output never printed — the error crashed the program the instant it happened, mid-function.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">06</div>
+        </div>
+      </section>
+
+      <section class="slide" id="func-tryexcept">
+        <div class="slide-kicker">Part 1 · Calculator Functions &middot; 1.4</div>
+        <h2 class="slide-title">try / except: Handling the Crash</h2>
+        <div class="slide-body">
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("Error: cannot divide by zero")
+        return None
+
+print(divide(10, 2))
+print(divide(10, 0))
+print("Program kept running!")</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">try:</code> wraps the risky line; <code class="inline">except ZeroDivisionError:</code> catches only that specific failure.</li>
+          <li>Naming the exact exception keeps you from silently hiding unrelated bugs.</li>
+          <li>The program continues afterward — one bad input no longer takes down everything else.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">07</div>
+        </div>
+      </section>
+
+      <section class="slide" id="func-dict-result">
+        <div class="slide-kicker">Part 1 · Calculator Functions &middot; 1.5</div>
+        <h2 class="slide-title">Returning Results as a Dictionary</h2>
+        <div class="slide-body">
+          <p class="intro">One more small shape change — instead of returning a bare number (or <code class="inline">None</code>), wrap it in a dictionary with a descriptive key.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">def divide(a, b):
+    try:
+        return {"result": a / b}
+    except ZeroDivisionError:
+        return {"error": "Cannot divide by zero"}
+
+print(divide(10, 2))
+print(divide(10, 0))</code></pre>
+          </div>
+          <ul class="points">
+          <li>A dictionary can carry a label (<code class="inline">"result"</code>, <code class="inline">"error"</code>) alongside the value — the caller knows exactly what they got back.</li>
+          <li>This isn't just a style choice: it's exactly the shape a server sends back as <strong>JSON</strong>.</li>
+          </ul>
+          <div class="callout">Keep this pattern in mind — every endpoint we write in Part 5 will return a dictionary just like this one, and FastAPI will convert it to JSON automatically.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">08</div>
+        </div>
+      </section>
+
+      <section class="slide" id="cs-problem">
+        <div class="slide-kicker">Part 2 · Client–Server Architecture &middot; 2.1</div>
+        <h2 class="slide-title">One Laptop Isn't Enough</h2>
+        <div class="slide-body">
+          <p>Everything so far has lived inside your own notebook, on your own laptop. Only you can call <code class="inline">add()</code> or <code class="inline">divide()</code> — because only you have that Python process running.</p>
+          <div class="callout warn"><span class="callout-title">The real question</span>What if a teammate, a phone app, or a website needs to use the <em>same</em> calculator logic — without copy-pasting your code or having Python installed at all?</div>
+          <p>Sharing a <code class="inline">.py</code> file isn't the same as sharing a running, reachable <strong>service</strong>. That's the gap client–server architecture closes.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">09</div>
+        </div>
+      </section>
+
+      <section class="slide" id="cs-model">
+        <div class="slide-kicker">Part 2 · Client–Server Architecture &middot; 2.2</div>
+        <h2 class="slide-title">The Client–Server Model</h2>
+        <div class="slide-body">
+          <p class="intro">Split the work into two roles, running as two separate programs — possibly on two separate machines.</p>
+          <div class="flow-diagram">
+            <div class="flow-box"><div class="flow-title">🖥️ Client</div><div class="flow-sub">Browser · Notebook · curl · phone app</div></div>
+            <div class="flow-arrow">
+              <span class="flow-arrow-label">Request →</span>
+              <div class="flow-arrow-line"></div>
+              <span class="flow-arrow-label">← Response</span>
+            </div>
+            <div class="flow-box"><div class="flow-title">🗄️ Server</div><div class="flow-sub">Always running, waiting for requests</div></div>
+          </div>
+          <ul class="points">
+          <li>The <strong>server</strong> holds the logic (our calculator functions) and stays running, listening at a network address.</li>
+          <li>A <strong>client</strong> is anything that sends it a request and waits for a response — it never needs to see the server's code.</li>
+          <li>One server can answer many different clients, at the same time, without either side knowing how the other is built.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">10</div>
+        </div>
+      </section>
+
+      <section class="slide" id="cs-fit">
+        <div class="slide-kicker">Part 2 · Client–Server Architecture &middot; 2.3</div>
+        <h2 class="slide-title">Where Our Calculator Fits</h2>
+        <div class="slide-body">
+          <p class="intro">This fellowship splits the build across two sessions, matching the two roles exactly.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">TODAY</div>
+          <div style="padding:14px 16px;font-size:14px;">We build the <strong>server</strong> — a FastAPI app hosting <code class="inline">add</code> / <code class="inline">subtract</code> / <code class="inline">multiply</code> / <code class="inline">divide</code>, always running and reachable at an address like <code class="inline">http://127.0.0.1:8000</code>.</div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">TOMORROW</div>
+          <div style="padding:14px 16px;font-size:14px;">We build a <strong>client</strong> — a separate Python program that sends requests to that address and reads back the results. Today, Swagger UI and a notebook will play the client's role.</div>
+          </div>
+          </div>
+          <div class="callout">Once the server is running, <em>any</em> client that speaks HTTP can use it — not just the one we happen to write tomorrow.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">11</div>
+        </div>
+      </section>
+
+      <section class="slide" id="rest-what">
+        <div class="slide-kicker">Part 3 · REST APIs &middot; 3.1</div>
+        <h2 class="slide-title">What Is an API?</h2>
+        <div class="slide-body">
+          <p>An <strong>API</strong> (Application Programming Interface) is a defined way for one piece of software to ask another to do something — and get a result back — without needing to know how it works inside.</p>
+          <div class="callout">
+          <span class="callout-title">The restaurant analogy</span>
+          You (the client) order from a menu (the API) by name. The kitchen (the server) does the actual work. A waiter carries your order in and your dish back out. You never enter the kitchen, and the kitchen doesn't need to know who's asking — just what was ordered.
+          </div>
+          <p>A <strong>web API</strong> is an API you talk to over the internet (or a local network) using HTTP — the same protocol your browser uses to load web pages.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">12</div>
+        </div>
+      </section>
+
+      <section class="slide" id="rest-restful">
+        <div class="slide-kicker">Part 3 · REST APIs &middot; 3.2</div>
+        <h2 class="slide-title">What Makes an API "RESTful"</h2>
+        <div class="slide-body">
+          <p class="intro">REST (REpresentational State Transfer) isn't a piece of software — it's a set of conventions most web APIs follow.</p>
+          <ul class="points">
+          <li>Every <strong>resource</strong> (a thing you can act on) gets its own URL — <code class="inline">/add</code>, <code class="inline">/users/42</code>, <code class="inline">/orders</code>.</li>
+          <li>Actions on a resource use standard <strong>HTTP methods</strong> — GET to read, POST to create, and so on (next slide).</li>
+          <li>Data travels as <strong>JSON</strong> — the same dictionary shape from Part 1.5, in both directions.</li>
+          <li>Each request is <strong>stateless</strong> — it carries everything the server needs to answer it; the server doesn't have to "remember" you between requests.</li>
+          </ul>
+          <div class="callout">FastAPI, which we set up in Part 4, is built specifically to make writing REST APIs like this fast and hard to get wrong.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">13</div>
+        </div>
+      </section>
+
+      <section class="slide" id="rest-methods">
+        <div class="slide-kicker">Part 3 · REST APIs &middot; 3.3</div>
+        <h2 class="slide-title">HTTP Methods: GET, POST, PUT, DELETE</h2>
+        <div class="slide-body">
+          <p class="intro">The method tells the server <em>what kind of action</em> you want, before it even looks at the URL.</p>
+          <table class="data-table">
+          <thead><tr><th>Method</th><th>Used to&hellip;</th><th>Example</th></tr></thead>
+          <tbody>
+          <tr><td><code class="inline">GET</code></td><td>Retrieve data — read-only, no side effects</td><td><code class="inline">GET /add?a=2&amp;b=3</code></td></tr>
+          <tr><td><code class="inline">POST</code></td><td>Send new data to be processed or created</td><td><code class="inline">POST /calculate</code> with a JSON body</td></tr>
+          <tr><td><code class="inline">PUT</code></td><td>Replace or update an existing resource</td><td><code class="inline">PUT /items/5</code></td></tr>
+          <tr><td><code class="inline">DELETE</code></td><td>Remove a resource</td><td><code class="inline">DELETE /items/5</code></td></tr>
+          </tbody>
+          </table>
+          <div class="callout">Today we'll build with <code class="inline">GET</code> and <code class="inline">POST</code> — the two you'll use constantly. <code class="inline">PUT</code> and <code class="inline">DELETE</code> follow the exact same pattern once those two click.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">14</div>
+        </div>
+      </section>
+
+      <section class="slide" id="rest-anatomy">
+        <div class="slide-kicker">Part 3 · REST APIs &middot; 3.4</div>
+        <h2 class="slide-title">Anatomy of a Request &amp; a Response</h2>
+        <div class="slide-body">
+          <p class="intro">Every HTTP exchange is one request, matched with exactly one response.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">REQUEST</div>
+          <div class="code-block">
+          <div class="code-label"><span>client → server</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">GET /add?a=4&b=5 HTTP/1.1
+Host: 127.0.0.1:8000</code></pre>
+          </div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">RESPONSE</div>
+          <div class="code-block">
+          <div class="code-label"><span>server → client</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"result": 9.0}</code></pre>
+          </div>
+          </div>
+          </div>
+          <ul class="points">
+          <li>A request = <strong>method</strong> + <strong>URL</strong> (path, plus optional query parameters like <code class="inline">?a=4&amp;b=5</code>) + optional headers/body.</li>
+          <li>A response = <strong>status code</strong> + headers + a <strong>body</strong> (almost always JSON, for a REST API).</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">15</div>
+        </div>
+      </section>
+
+      <section class="slide" id="rest-status">
+        <div class="slide-kicker">Part 3 · REST APIs &middot; 3.5</div>
+        <h2 class="slide-title">HTTP Status Codes at a Glance</h2>
+        <div class="slide-body">
+          <p class="intro">A 3-digit code at the top of every response — check this before you even look at the body.</p>
+          <table class="data-table">
+          <thead><tr><th>Code</th><th>Meaning</th><th>When you'll see it today</th></tr></thead>
+          <tbody>
+          <tr><td><code class="inline">200</code></td><td>OK</td><td>A GET or POST succeeded</td></tr>
+          <tr><td><code class="inline">201</code></td><td>Created</td><td>A POST successfully created something</td></tr>
+          <tr><td><code class="inline">400</code></td><td>Bad Request</td><td>Our own check fails — e.g. dividing by zero</td></tr>
+          <tr><td><code class="inline">404</code></td><td>Not Found</td><td>Typo in the URL / endpoint doesn't exist</td></tr>
+          <tr><td><code class="inline">422</code></td><td>Unprocessable Entity</td><td>FastAPI's own validation rejects the input type</td></tr>
+          <tr><td><code class="inline">500</code></td><td>Internal Server Error</td><td>An unhandled exception inside the server</td></tr>
+          </tbody>
+          </table>
+          <div class="callout warn">These codes are the API version of Part 1's exceptions — <code class="inline">400</code> is what <code class="inline">HTTPException</code> will send back in Part 5.4, in place of a <code class="inline">ZeroDivisionError</code> crash.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">16</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fastapi-what">
+        <div class="slide-kicker">Part 4 · Setting Up FastAPI &middot; 4.1</div>
+        <h2 class="slide-title">What Is FastAPI (and Why)</h2>
+        <div class="slide-body">
+          <p><strong>FastAPI</strong> is a Python web framework built specifically for writing REST APIs — you write regular Python functions with type hints, and it handles the HTTP plumbing.</p>
+          <div class="callout">
+          <span class="callout-title">Why FastAPI, specifically</span>
+          It reads the type hints you're already writing (<code class="inline">a: float</code>) to automatically validate incoming data, and it generates interactive, always-up-to-date documentation — Swagger UI — for free, straight from your code.
+          </div>
+          <p>FastAPI defines <em>what</em> your endpoints do. It doesn't, by itself, listen on a network port — that job belongs to <strong>uvicorn</strong>, installed next.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">17</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fastapi-venv">
+        <div class="slide-kicker">Part 4 · Setting Up FastAPI &middot; 4.2</div>
+        <h2 class="slide-title">Create &amp; Activate a Fresh venv</h2>
+        <div class="slide-body">
+          <p class="intro">Same pattern from Base Camp 2 — a clean, isolated venv just for this project.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">🪟 WINDOWS — Command Prompt</div>
+          <div class="code-block">
+          <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">python -m venv venv_fastapi
+venv_fastapi\Scripts\activate
+REM prompt becomes: (venv_fastapi) C:\project&gt;</code></pre>
+          </div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">🍎 MACOS — Terminal</div>
+          <div class="code-block">
+          <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">python3 -m venv venv_fastapi
+source venv_fastapi/bin/activate
+# prompt becomes: (venv_fastapi) yourname@MacBook project %</code></pre>
+          </div>
+          </div>
+          </div>
+          <div class="callout">Everything for the rest of today — installing libraries, running the server — happens with this venv activated.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">18</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fastapi-install">
+        <div class="slide-kicker">Part 4 · Setting Up FastAPI &middot; 4.3</div>
+        <h2 class="slide-title">Installing fastapi and uvicorn</h2>
+        <div class="slide-body">
+          <p class="intro">Two libraries, two different jobs — you need both.</p>
+          <table class="data-table">
+          <thead><tr><th>Library</th><th>Why you need it</th></tr></thead>
+          <tbody>
+          <tr><td><code class="inline">fastapi</code></td><td>Lets you declare endpoints (<code class="inline">@app.get</code>, <code class="inline">@app.post</code>) and automatically validates request data.</td></tr>
+          <tr><td><code class="inline">uvicorn</code></td><td>An ASGI server — the actual program that listens on a port and hands each incoming request to your FastAPI app. FastAPI alone can't listen for network connections.</td></tr>
+          </tbody>
+          </table>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal — venv_fastapi active</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">pip install fastapi uvicorn
+&gt; Successfully installed fastapi-0.115.0 uvicorn-0.32.0 ...
+
+pip show fastapi
+&gt; Name: fastapi
+&gt; Version: 0.115.0</code></pre>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">19</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fastapi-files">
+        <div class="slide-kicker">Part 4 · Setting Up FastAPI &middot; 4.4</div>
+        <h2 class="slide-title">Project Files: main.py</h2>
+        <div class="slide-body">
+          <p class="intro">Unlike Part 3's Pandas scripts, a FastAPI project doesn't need much structure to get started.</p>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal — inside your project folder</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">mkdir calculator_api
+cd calculator_api
+# create an empty file named main.py here
+# (any editor works — VS Code, notepad, nano, ...)</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">main.py</code> is just a name we're choosing — uvicorn will refer to it directly in Part 5.5.</li>
+          <li>Keep this file open in your editor — we'll build it up piece by piece for the rest of the session.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">20</div>
+        </div>
+      </section>
+
+      <section class="slide slide-hero" id="halfway">
+        <div class="slide-kicker">Halfway Point</div>
+        <h1>From Concepts to a Running Server</h1>
+        <p class="lede">You've refreshed functions and error handling, and you understand why client–server architecture and REST APIs exist. Take a longer break here — the second half is where <code class="inline">main.py</code> actually comes alive.</p>
+        <p class="lede" style="font-weight:700;">Next up: Part 5 &mdash; From Functions to Endpoints</p>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">21</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ep-smallest">
+        <div class="slide-kicker">Part 5 · From Functions to Endpoints &middot; 5.1</div>
+        <h2 class="slide-title">The Smallest Possible FastAPI App</h2>
+        <div class="slide-body">
+          <p class="intro">Type this into <code class="inline">main.py</code> — four lines is a complete, runnable API.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Calculator API is running"}</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">FastAPI()</code> creates the application object — everything else attaches to <code class="inline">app</code>.</li>
+          <li><code class="inline">@app.get("/")</code> is a <strong>decorator</strong> — it wires the HTTP method (<code class="inline">GET</code>) and path (<code class="inline">/</code>) to the function written directly below it.</li>
+          <li>Returning a dictionary is enough — FastAPI converts it to JSON automatically, no extra step.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">22</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ep-add">
+        <div class="slide-kicker">Part 5 · From Functions to Endpoints &middot; 5.2</div>
+        <h2 class="slide-title">add() Becomes a GET Endpoint</h2>
+        <div class="slide-body">
+          <p class="intro">Append this below the code from 5.1 — same file, growing one endpoint at a time.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py (append below)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">@app.get("/add")
+def add(a: float, b: float):
+    return {"result": a + b}</code></pre>
+          </div>
+          <ul class="points">
+          <li>This is Part 1.2's <code class="inline">add()</code> — unchanged logic, wrapped in <code class="inline">@app.get("/add")</code>.</li>
+          <li><code class="inline">a: float</code> and <code class="inline">b: float</code> aren't optional decoration — FastAPI reads them from <code class="inline">?a=4&amp;b=5</code> in the URL and <em>validates</em> they're really numbers before your code even runs.</li>
+          <li>Send text instead of a number (<code class="inline">?a=hello&amp;b=5</code>) and FastAPI rejects it itself, with a <code class="inline">422</code> — your function is never called.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">23</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ep-sub-mul">
+        <div class="slide-kicker">Part 5 · From Functions to Endpoints &middot; 5.3</div>
+        <h2 class="slide-title">subtract() and multiply() as Endpoints</h2>
+        <div class="slide-body">
+          <p class="intro">Same pattern, twice more — append both below <code class="inline">/add</code>.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py (append below)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">@app.get("/subtract")
+def subtract(a: float, b: float):
+    return {"result": a - b}
+
+@app.get("/multiply")
+def multiply(a: float, b: float):
+    return {"result": a * b}</code></pre>
+          </div>
+          <div class="callout">Three endpoints in, and the pattern should feel automatic: <code class="inline">@app.get("/path")</code>, typed parameters, a dictionary return. <code class="inline">/divide</code> is next — and it needs one more piece.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">24</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ep-divide">
+        <div class="slide-kicker">Part 5 · From Functions to Endpoints &middot; 5.4</div>
+        <h2 class="slide-title">divide() — a Real Error, Not a Crash</h2>
+        <div class="slide-body">
+          <p class="intro">A server can't <code class="inline">print()</code> an error and move on the way Part 1.4 did — it needs to send the client a proper response.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py (append below)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">from fastapi import FastAPI, HTTPException
+
+app = FastAPI()
+
+# ... /add, /subtract, /multiply stay as they are ...
+
+@app.get("/divide")
+def divide(a: float, b: float):
+    if b == 0:
+        raise HTTPException(status_code=400, detail="Cannot divide by zero")
+    return {"result": a / b}</code></pre>
+          </div>
+          <ul class="points">
+          <li>Add <code class="inline">HTTPException</code> to the import at the top of the file — it's the FastAPI-side equivalent of the <code class="inline">except ZeroDivisionError</code> from Part 1.4.</li>
+          <li><code class="inline">raise HTTPException(status_code=400, detail="...")</code> sends back the <code class="inline">400 Bad Request</code> from Part 3.5, with your message in the body — instead of a <code class="inline">500</code> crash.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">25</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ep-run">
+        <div class="slide-kicker">Part 5 · From Functions to Endpoints &middot; 5.5</div>
+        <h2 class="slide-title">Running the Server with uvicorn</h2>
+        <div class="slide-body">
+          <p class="intro">Save <code class="inline">main.py</code>, then start the server from the terminal — Windows and Mac use the identical command.</p>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal — venv_fastapi active, inside calculator_api/</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">uvicorn main:app --reload
+
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process
+INFO:     Application startup complete.</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">main:app</code> means "in <code class="inline">main.py</code>, run the object named <code class="inline">app</code>" — the exact variable from 5.1.</li>
+          <li><code class="inline">--reload</code> restarts the server automatically whenever you save a change to <code class="inline">main.py</code>.</li>
+          <li>Leave this terminal window running — open a <em>new</em> terminal (or use Swagger, next) to talk to it.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">26</div>
+        </div>
+      </section>
+
+      <section class="slide" id="swagger-what">
+        <div class="slide-kicker">Part 6 · Swagger: Explore Your API &middot; 6.1</div>
+        <h2 class="slide-title">What Is Swagger / OpenAPI?</h2>
+        <div class="slide-body">
+          <p>FastAPI reads your endpoints, their parameters, and their type hints, and auto-generates a complete, interactive API reference — no extra work on your part.</p>
+          <div class="callout"><span class="callout-title">Swagger UI</span>A web page, served by your own running server, listing every endpoint you've written — where you can fill in parameters and actually call them, right from the browser, with no separate client needed.</div>
+          <p>This is one of the biggest reasons FastAPI was chosen in 4.1 — the documentation can never drift out of date, because it's generated from the same code that runs.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">27</div>
+        </div>
+      </section>
+
+      <section class="slide" id="swagger-try">
+        <div class="slide-kicker">Part 6 · Swagger: Explore Your API &middot; 6.2</div>
+        <h2 class="slide-title">Opening /docs and Trying an Endpoint</h2>
+        <div class="slide-body">
+          <p class="intro">With uvicorn still running from 5.5, open a browser to:</p>
+          <div class="code-block">
+          <div class="code-label"><span>browser address bar</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">http://127.0.0.1:8000/docs</code></pre>
+          </div>
+          <ol class="steps">
+          <li><strong>Find the endpoint.</strong><span>Click to expand <code class="inline">GET /add</code> in the list.</span></li>
+          <li><strong>Try it out.</strong><span>Click the "Try it out" button — the parameter fields become editable.</span></li>
+          <li><strong>Fill in values.</strong><span>Enter <code class="inline">4</code> for <code class="inline">a</code> and <code class="inline">5</code> for <code class="inline">b</code>.</span></li>
+          <li><strong>Execute.</strong><span>Click "Execute" — Swagger sends the real request to your running server.</span></li>
+          <li><strong>Read the result.</strong><span>See the response body <code class="inline">{"result": 9}</code> and status code <code class="inline">200</code>, right below.</span></li>
+          </ol>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">28</div>
+        </div>
+      </section>
+
+      <section class="slide" id="swagger-error">
+        <div class="slide-kicker">Part 6 · Swagger: Explore Your API &middot; 6.3</div>
+        <h2 class="slide-title">Testing the divide-by-zero Error</h2>
+        <div class="slide-body">
+          <p class="intro">Same five steps as 6.2, now on <code class="inline">GET /divide</code> — this time to see the error path from Part 5.4 in action.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">a=10, b=2</div>
+          <div class="code-block">
+          <div class="code-label"><span>Response</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">Status: 200
+{
+  "result": 5.0
+}</code></pre>
+          </div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">a=10, b=0</div>
+          <div class="code-block">
+          <div class="code-label"><span>Response</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">Status: 400
+{
+  "detail": "Cannot divide by zero"
+}</code></pre>
+          </div>
+          </div>
+          </div>
+          <div class="callout">No traceback, no crashed server — Swagger just shows a <code class="inline">400</code> and your <code class="inline">detail</code> message. The server is still running underneath, ready for the next request.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">29</div>
+        </div>
+      </section>
+
+      <section class="slide" id="swagger-redoc">
+        <div class="slide-kicker">Part 6 · Swagger: Explore Your API &middot; 6.4</div>
+        <h2 class="slide-title">/redoc — the Read-Only Alternative</h2>
+        <div class="slide-body">
+          <p class="intro">FastAPI actually ships two docs pages from the same code, for free.</p>
+          <div class="code-block">
+          <div class="code-label"><span>browser address bar</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">http://127.0.0.1:8000/redoc</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">/docs</code> (Swagger UI) — interactive, lets you execute real requests. Best while you're building.</li>
+          <li><code class="inline">/redoc</code> — clean, read-only reference. No "Try it out" button, but easier to skim and share with teammates who just need to read the contract.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">30</div>
+        </div>
+      </section>
+
+      <section class="slide" id="client-requests">
+        <div class="slide-kicker">Part 7 · Calling the API from Python &middot; 7.1</div>
+        <h2 class="slide-title">Installing requests in Your Notebook</h2>
+        <div class="slide-body">
+          <p class="intro">Swagger is great for exploring by hand — but a real client is code. Open a <em>separate</em> notebook (or terminal) alongside the one still running uvicorn.</p>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal — notebook's venv active</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">pip install requests
+&gt; Successfully installed requests-2.32.3</code></pre>
+          </div>
+          <div class="callout"><span class="callout-title">Why requests</span><code class="inline">requests</code> is the standard Python library for sending HTTP requests to any server — GET, POST, and every other method. This is literally what "being a client" means in code, and it's what tomorrow's client script will be built on.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">31</div>
+        </div>
+      </section>
+
+      <section class="slide" id="client-get">
+        <div class="slide-kicker">Part 7 · Calling the API from Python &middot; 7.2</div>
+        <h2 class="slide-title">GET Requests: add, subtract, multiply</h2>
+        <div class="slide-body">
+          <p class="intro">Paste this into a notebook cell — with uvicorn still running in its own terminal.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">import requests
+
+BASE_URL = "http://127.0.0.1:8000"
+
+response = requests.get(f"{BASE_URL}/add", params={"a": 4, "b": 5})
+print(response.status_code)
+print(response.json())
+
+response = requests.get(f"{BASE_URL}/subtract", params={"a": 10, "b": 3})
+print(response.json())
+
+response = requests.get(f"{BASE_URL}/multiply", params={"a": 6, "b": 7})
+print(response.json())</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">params={"a": 4, "b": 5}</code> is how <code class="inline">requests</code> builds the <code class="inline">?a=4&amp;b=5</code> query string from Part 5.2 — no manual string building.</li>
+          <li><code class="inline">response.status_code</code> and <code class="inline">response.json()</code> are the Python-side view of the raw HTTP response from Part 3.4.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">32</div>
+        </div>
+      </section>
+
+      <section class="slide" id="client-post-endpoint">
+        <div class="slide-kicker">Part 7 · Calling the API from Python &middot; 7.3</div>
+        <h2 class="slide-title">Adding a POST Endpoint: calculate</h2>
+        <div class="slide-body">
+          <p class="intro">Back in <code class="inline">main.py</code> — one more endpoint, this time using <code class="inline">POST</code> with a JSON body instead of query parameters.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py (append below)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">from pydantic import BaseModel
+
+class CalcRequest(BaseModel):
+    a: float
+    b: float
+    op: str
+
+@app.post("/calculate")
+def calculate(payload: CalcRequest):
+    if payload.op == "add":
+        result = payload.a + payload.b
+    elif payload.op == "subtract":
+        result = payload.a - payload.b
+    elif payload.op == "multiply":
+        result = payload.a * payload.b
+    elif payload.op == "divide":
+        if payload.b == 0:
+            raise HTTPException(status_code=400, detail="Cannot divide by zero")
+        result = payload.a / payload.b
+    else:
+        raise HTTPException(status_code=400, detail=f"Unknown op: {payload.op}")
+    return {"result": result}</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">CalcRequest</code> is a <strong>Pydantic model</strong> — a class describing the exact shape of the JSON body you expect. FastAPI parses and validates it into <code class="inline">payload</code> automatically.</li>
+          <li>Save the file — <code class="inline">--reload</code> from 5.5 picks up this change without restarting the server by hand.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">33</div>
+        </div>
+      </section>
+
+      <section class="slide" id="client-post-call">
+        <div class="slide-kicker">Part 7 · Calling the API from Python &middot; 7.4</div>
+        <h2 class="slide-title">Calling the POST Endpoint</h2>
+        <div class="slide-body">
+          <p class="intro">Back in the notebook from 7.2 — a POST sends its data as a JSON <em>body</em>, not a query string.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">payload = {"a": 10, "b": 3, "op": "multiply"}
+response = requests.post(f"{BASE_URL}/calculate", json=payload)
+
+print(response.status_code)
+print(response.json())</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">json=payload</code> tells <code class="inline">requests</code> to serialize the dictionary and send it as the request body — the client-side mirror of the <code class="inline">CalcRequest</code> model in 7.3.</li>
+          <li>Try Swagger's <code class="inline">/docs</code> page on <code class="inline">POST /calculate</code> too — same endpoint, same result, different client.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">34</div>
+        </div>
+      </section>
+
+      <section class="slide" id="client-status">
+        <div class="slide-kicker">Part 7 · Calling the API from Python &middot; 7.5</div>
+        <h2 class="slide-title">Checking status_code First</h2>
+        <div class="slide-body">
+          <p class="intro">A real client never assumes success — it checks the status code from Part 3.5 before trusting the body.</p>
+          <div class="code-block">
+          <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">response = requests.get(f"{BASE_URL}/divide", params={"a": 10, "b": 0})
+
+if response.status_code == 200:
+    print("Result:", response.json()["result"])
+else:
+    print("Error:", response.status_code, response.json()["detail"])</code></pre>
+          </div>
+          <div class="callout warn">This is the client-side twin of Part 5.4's <code class="inline">HTTPException</code> — the server sends a clean <code class="inline">400</code> and a <code class="inline">detail</code> message, and the client checks for it instead of letting a bad response crash its own code.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">35</div>
+        </div>
+      </section>
+
+      <section class="slide" id="recap">
+        <div class="slide-kicker">Recap</div>
+        <h2 class="slide-title">Key Takeaways</h2>
+        <div class="slide-body">
+          <div class="recap-grid">
+<div class="obj-card"><span class="obj-num">1</span>A function's shape — parameters in, body runs, <code class="inline">return</code> sends a value out — is the same shape an API endpoint uses.</div>
+<div class="obj-card"><span class="obj-num">2</span>try/except turns a crash (<code class="inline">ZeroDivisionError</code>) into a handled, recoverable case.</div>
+<div class="obj-card"><span class="obj-num">3</span>Client–server architecture splits software into a server that holds logic and a client that calls it over a network.</div>
+<div class="obj-card"><span class="obj-num">4</span>REST APIs expose resources at URLs, acted on with standard HTTP methods, exchanging JSON.</div>
+<div class="obj-card"><span class="obj-num">5</span>GET reads data via query parameters; POST sends data via a JSON body — both return dictionaries FastAPI turns into JSON.</div>
+<div class="obj-card"><span class="obj-num">6</span>Status codes (200, 400, 404, 422, 500) tell a client what happened before it even reads the body.</div>
+<div class="obj-card"><span class="obj-num">7</span>fastapi declares and validates endpoints; uvicorn is the server that actually listens for requests.</div>
+<div class="obj-card"><span class="obj-num">8</span><code class="inline">HTTPException</code> is the API's version of try/except — a controlled error response instead of a server crash.</div>
+<div class="obj-card"><span class="obj-num">9</span>Swagger UI (<code class="inline">/docs</code>) and ReDoc (<code class="inline">/redoc</code>) document and let you test every endpoint, generated straight from your code.</div>
+<div class="obj-card"><span class="obj-num">10</span>The <code class="inline">requests</code> library is a real client in Python — today, it proved the server works; tomorrow, we build with it properly.</div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">36</div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

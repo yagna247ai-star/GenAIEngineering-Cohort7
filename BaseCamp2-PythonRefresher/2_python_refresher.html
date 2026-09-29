@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Environments, Libraries &amp; Data Tools | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 2 &middot; Week 1 &middot; Session 2</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview &amp; Objectives</a></li>
+
+        <li class="part-item"><a href="#part1">Part 1 &middot; Virtual Environments</a></li>
+        <li class="sub-item"><a href="#venv-problem">1.1 The Version-Conflict Problem</a></li>
+        <li class="sub-item"><a href="#venv-what">1.2 What Is a venv?</a></li>
+        <li class="sub-item"><a href="#venv-create">1.3 Creating a venv</a></li>
+        <li class="sub-item"><a href="#venv-activate">1.4 Activating a venv</a></li>
+        <li class="sub-item"><a href="#venv-deactivate">1.5 Deactivating a venv</a></li>
+
+        <li class="part-item"><a href="#part2">Part 2 &middot; Libraries</a></li>
+        <li class="sub-item"><a href="#lib-problem">2.1 The Problem Libraries Solve</a></li>
+        <li class="sub-item"><a href="#pip-install">2.2 Installing With pip</a></li>
+        <li class="sub-item"><a href="#lib-import">2.3 Import and Use a Library</a></li>
+
+        <li class="part-item"><a href="#part3">Part 3 &middot; Hands-On</a></li>
+        <li class="sub-item"><a href="#setup-126">3.1 Set Up venv_numpy_126</a></li>
+        <li class="sub-item"><a href="#setup-232">3.2 Set Up venv_numpy_232</a></li>
+        <li class="sub-item"><a href="#validate-venv">3.3 Validate the venv</a></li>
+        <li class="sub-item"><a href="#check-libs">3.4 Check Installed Libraries</a></li>
+        <li class="sub-item"><a href="#test-function">3.5 Write the Test Function</a></li>
+        <li class="sub-item"><a href="#two-outcomes">3.6 Same File, Two Outcomes</a></li>
+        <li class="sub-item"><a href="#requirements">3.7 requirements.txt</a></li>
+
+        <li class="part-item"><a href="#part4">Part 4 &middot; NumPy</a></li>
+        <li class="sub-item"><a href="#np-create">4.1 Creating Arrays</a></li>
+        <li class="sub-item"><a href="#np-math">4.2 Array Math &amp; Broadcasting</a></li>
+        <li class="sub-item"><a href="#np-agg">4.3 Aggregations, Indexing, Reshaping</a></li>
+
+        <li class="part-item"><a href="#part5">Part 5 &middot; Pandas</a></li>
+        <li class="sub-item"><a href="#pd-why">5.1 Why Pandas?</a></li>
+        <li class="sub-item"><a href="#pd-dataset">5.2 Mock Dataset: employees.csv</a></li>
+        <li class="sub-item"><a href="#pd-read">5.3 Reading a CSV &amp; Exploring</a></li>
+        <li class="sub-item"><a href="#pd-filter">5.4 Selecting &amp; Filtering Rows</a></li>
+        <li class="sub-item"><a href="#pd-group">5.5 Adding Columns &amp; Grouping</a></li>
+        <li class="sub-item"><a href="#pd-write">5.6 Writing Output With to_csv()</a></li>
+
+        <li class="part-item"><a href="#part6">Part 6 &middot; Files &amp; Errors</a></li>
+        <li class="sub-item"><a href="#func-files">6.1 A Function With File Arguments</a></li>
+        <li class="sub-item"><a href="#func-errors">6.2 When Functions Error Out</a></li>
+        <li class="sub-item"><a href="#tryexcept">6.3 Handling Errors With try/except</a></li>
+        <li class="sub-item"><a href="#exceptions-table">6.4 Common Exception Types</a></li>
+
+        <li class="part-item"><a href="#part7">Part 7 &middot; Real Scripts</a></li>
+        <li class="sub-item"><a href="#mainpattern">7.1 The __main__ Pattern</a></li>
+        <li class="sub-item"><a href="#argparse">7.2 Command-Line Args With argparse</a></li>
+        <li class="sub-item"><a href="#script-function">7.3 process_employees.py — Function</a></li>
+        <li class="sub-item"><a href="#script-main">7.4 process_employees.py — Main Block</a></li>
+        <li class="sub-item"><a href="#script-run">7.5 Running It From the Terminal</a></li>
+
+        <li class="part-item"><a href="#recap">Recap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 2 &middot; Week 1 &middot; Session 2 &middot; Extended</span>
+        <h1>Environments, Libraries &amp; Data Tools</h1>
+        <p class="lede">Virtual environments &middot; installing libraries with pip &middot; NumPy &middot; Pandas &middot; files, functions &amp; error handling &middot; command-line scripts. This session combines two full modules — set up isolated environments, install and use real libraries, and finish with a script you run from the terminal, not just a notebook cell.</p>
+        <div class="meta-row">
+          <span class="meta-pill">⏱ Extended, hands-on</span>
+          <span class="meta-pill">📄 Dataset: employees.csv (provided)</span>
+        </div>
+      </div>
+
+      <section class="part" id="overview">
+        <h2>Learning Objectives</h2>
+        <div class="topic">
+          <div class="obj-grid">
+            <div class="obj-card"><span class="obj-num">1</span>Explain why virtual environments exist, and create / activate / deactivate one on Windows and Mac.</div>
+            <div class="obj-card"><span class="obj-num">2</span>Explain why libraries exist and install one with pip.</div>
+            <div class="obj-card"><span class="obj-num">3</span>Set up two separate venvs with two different NumPy versions on the same laptop.</div>
+            <div class="obj-card"><span class="obj-num">4</span>Validate a virtual environment, and check which libraries and versions are installed.</div>
+            <div class="obj-card"><span class="obj-num">5</span>Use requirements.txt to record and recreate an environment's dependencies.</div>
+            <div class="obj-card"><span class="obj-num">6</span>Use NumPy for array creation, math, aggregation, and reshaping.</div>
+            <div class="obj-card"><span class="obj-num">7</span>Use pandas to read, explore, filter, group, and write tabular data (CSV files).</div>
+            <div class="obj-card"><span class="obj-num">8</span>Write functions that take file paths as arguments, process data, and write a new file.</div>
+            <div class="obj-card"><span class="obj-num">9</span>Handle errors gracefully with try/except instead of letting a program crash.</div>
+            <div class="obj-card"><span class="obj-num">10</span>Structure a script with <code class="inline">if __name__ == "__main__"</code> and run it from the terminal with arguments.</div>
+          </div>
+        </div>
+
+        <h4 style="margin-top:32px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-dim);">Session Agenda</h4>
+        <div class="agenda">
+          <div class="agenda-row"><span class="agenda-time">0:00–0:10</span><span class="agenda-label">Welcome &amp; Recap</span></div>
+          <div class="agenda-row"><span class="agenda-time">0:10–0:40</span><span class="agenda-label">Part 1 — Virtual Environments</span></div>
+          <div class="agenda-row"><span class="agenda-time">0:40–1:10</span><span class="agenda-label">Part 2 — Libraries</span></div>
+          <div class="agenda-row break"><span class="agenda-time">1:10–1:20</span><span class="agenda-label">Break</span></div>
+          <div class="agenda-row"><span class="agenda-time">1:20–2:40</span><span class="agenda-label">Part 3 — Hands-On: Two venvs, Two NumPy Versions</span></div>
+          <div class="agenda-row"><span class="agenda-time">2:40–2:55</span><span class="agenda-label">requirements.txt &amp; Mid-Session Recap</span></div>
+          <div class="agenda-row break"><span class="agenda-time">2:55–3:10</span><span class="agenda-label">Break</span></div>
+          <div class="agenda-row"><span class="agenda-time">3:10–3:35</span><span class="agenda-label">Part 4 — NumPy Capabilities</span></div>
+          <div class="agenda-row"><span class="agenda-time">3:35–4:15</span><span class="agenda-label">Part 5 — Introducing Pandas</span></div>
+          <div class="agenda-row break"><span class="agenda-time">4:15–4:25</span><span class="agenda-label">Break</span></div>
+          <div class="agenda-row"><span class="agenda-time">4:25–5:10</span><span class="agenda-label">Part 6 — Functions, Files &amp; Error Handling</span></div>
+          <div class="agenda-row"><span class="agenda-time">5:10–5:50</span><span class="agenda-label">Part 7 — Running Python Like a Real Program</span></div>
+          <div class="agenda-row"><span class="agenda-time">5:50–6:00</span><span class="agenda-label">Final Recap &amp; Wrap-up</span></div>
+        </div>
+      </section>
+
+      <!-- ============ PART 1 ============ -->
+      <section class="part" id="part1">
+        <div class="part-label">Part 1 &middot; Virtual Environments</div>
+        <h2>Virtual Environments</h2>
+
+        <div class="topic" id="venv-problem">
+          <h3><span class="topic-num">1.1</span> The Problem: Version Conflicts</h3>
+          <p class="intro">By default, there's only one Python and one set of installed libraries on your laptop.</p>
+          <div class="callout warn">
+            <span class="callout-title">The NumPy example</span>
+            <code class="inline">np.strings</code> was added in NumPy 2.0. Code written for NumPy 2.3.2 that uses <code class="inline">np.strings.str_len()</code> will crash with an <code class="inline">AttributeError</code> on NumPy 1.26 — same code, same laptop, different result. We'll reproduce this exact error ourselves in Part 3.
+          </div>
+          <p>Project A might need NumPy 1.26. Project B — built a year later — needs NumPy 2.3.2 for a feature that didn't exist before. Installing one version globally can silently break the other project.</p>
+        </div>
+
+        <div class="topic" id="venv-what">
+          <h3><span class="topic-num">1.2</span> What Is a Virtual Environment?</h3>
+          <p>A virtual environment (venv) is an isolated, self-contained copy of Python and its installed libraries.</p>
+          <div class="callout">
+            <span class="callout-title">Mental model</span>
+            Think of each venv as its own sealed toolbox. You can have <code class="inline">venv_numpy_126</code> &rarr; NumPy 1.26 and <code class="inline">venv_numpy_232</code> &rarr; NumPy 2.3.2, both on the same laptop, both using the same base Python install, completely independent of each other.
+          </div>
+          <p>Each project gets its own venv folder — installing or upgrading a library in one venv never touches another. And <code class="inline">venv</code> comes built into Python — no separate installation required.</p>
+        </div>
+
+        <div class="topic" id="venv-create">
+          <h3><span class="topic-num">1.3</span> Creating a Virtual Environment</h3>
+          <p class="intro">Run this once, inside your project folder, to create a new venv folder on disk.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS — Command Prompt</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python -m venv venv_numpy_126
+REM creates a new folder: .\venv_numpy_126\</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS — Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python3 -m venv venv_numpy_126
+# creates a new folder: ./venv_numpy_126/</code></pre>
+              </div>
+            </div>
+          </div>
+          <p><code class="inline">venv_numpy_126</code> is just a name we're choosing — call it anything, but a name that describes the project or setup helps future-you.</p>
+        </div>
+
+        <div class="topic" id="venv-activate">
+          <h3><span class="topic-num">1.4</span> Activating a Virtual Environment</h3>
+          <p class="intro">Activation switches your terminal to use that venv's Python and libraries until you deactivate.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS — Command Prompt</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">venv_numpy_126\Scripts\activate
+REM prompt becomes: (venv_numpy_126) C:\project&gt;</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS — Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">source venv_numpy_126/bin/activate
+# prompt becomes: (venv_numpy_126) yourname@MacBook project %</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout">That <code class="inline">(venv_numpy_126)</code> prefix appearing in your prompt is the signal it worked — see 3.3 below for how to confirm it fully.</div>
+        </div>
+
+        <div class="topic" id="venv-deactivate">
+          <h3><span class="topic-num">1.5</span> Deactivating a Virtual Environment</h3>
+          <p class="intro">One single command — identical on Windows and Mac — returns you to your regular system Python.</p>
+          <div class="code-block">
+            <div class="code-label"><span>Command Prompt / Terminal — both OS</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">deactivate
+# prompt prefix is gone — you're back to the system Python</code></pre>
+          </div>
+          <div class="callout warn">Deactivate before switching to a different venv — running two active venvs at once in one terminal isn't a thing; each terminal window is either in one venv, or in none.</div>
+        </div>
+      </section>
+
+      <!-- ============ PART 2 ============ -->
+      <section class="part" id="part2">
+        <div class="part-label">Part 2 &middot; Libraries</div>
+        <h2>Libraries</h2>
+
+        <div class="topic" id="lib-problem">
+          <h3><span class="topic-num">2.1</span> The Problem Libraries Solve</h3>
+          <p>Every program needs common building blocks — math, dates, file handling, working with grids of numbers. Writing all of that from scratch, correctly and fast, would take years before you write your first real feature.</p>
+          <div class="callout">
+            <span class="callout-title">Example: NumPy</span>
+            NumPy is the standard library for working with arrays and numerical data in Python. Operations that would take dozens of lines of your own loops become a single, fast, well-tested function call — which is why almost every data science and AI codebase starts with:
+            <div class="code-block" style="margin-top:10px;">
+              <div class="code-label"><span>python</span><button class="copy-btn">Copy</button></div>
+              <pre><code class="language-python">import numpy as np</code></pre>
+            </div>
+          </div>
+          <p>A library is code someone else already wrote, tested, and optimized — you just plug it in.</p>
+        </div>
+
+        <div class="topic" id="pip-install">
+          <h3><span class="topic-num">2.2</span> Installing a Library with pip</h3>
+          <p class="intro">pip is Python's built-in package installer — it ships with Python, no extra setup needed.</p>
+          <div class="code-block">
+            <div class="code-label"><span>Terminal — Windows or Mac</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash"># install the latest version of a library
+pip install numpy
+&gt; Successfully installed numpy-2.3.2
+
+# check what version got installed
+pip show numpy
+&gt; Name: numpy
+&gt; Version: 2.3.2</code></pre>
+          </div>
+          <p>The exact same two commands — <code class="inline">pip install</code> and <code class="inline">pip show</code> — work identically on Windows and Mac.</p>
+        </div>
+
+        <div class="topic" id="lib-import">
+          <h3><span class="topic-num">2.3</span> Import and Use a Library</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import numpy as np
+print(f"Numpy version: {np.__version__}")
+
+string_arr = np.array(['hello', 'world', 'numpy'])
+np.strings.str_len(string_arr)</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">import numpy as np</code> loads the whole library under the short name <code class="inline">np</code>.</li>
+            <li><code class="inline">np.__version__</code> tells you exactly which version is installed.</li>
+            <li><code class="inline">np.strings.str_len()</code> is a real NumPy 2.x function — keep this example in mind for Part 3.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PART 3 ============ -->
+      <section class="part" id="part3">
+        <div class="part-label">Part 3 &middot; Hands-On</div>
+        <h2>Two venvs, Two NumPy Versions</h2>
+
+        <div class="topic" id="setup-126">
+          <h3><span class="topic-num">3.1</span> Set Up venv_numpy_126</h3>
+          <p class="intro">Create it, activate it, then install the older NumPy — pin the exact version with <code class="inline">==</code>.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python -m venv venv_numpy_126
+venv_numpy_126\Scripts\activate
+pip install numpy==1.26.4
+&gt; Successfully installed numpy-1.26.4</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python3 -m venv venv_numpy_126
+source venv_numpy_126/bin/activate
+pip install numpy==1.26.4
+&gt; Successfully installed numpy-1.26.4</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic" id="setup-232">
+          <h3><span class="topic-num">3.2</span> Set Up venv_numpy_232</h3>
+          <p class="intro">Same steps, new venv name, and the newer NumPy this time.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python -m venv venv_numpy_232
+venv_numpy_232\Scripts\activate
+pip install numpy==2.3.2
+&gt; Successfully installed numpy-2.3.2</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">python3 -m venv venv_numpy_232
+source venv_numpy_232/bin/activate
+pip install numpy==2.3.2
+&gt; Successfully installed numpy-2.3.2</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout">You now have two folders on disk — <code class="inline">venv_numpy_126</code> and <code class="inline">venv_numpy_232</code> — each with its own private copy of NumPy.</div>
+        </div>
+
+        <div class="topic" id="validate-venv">
+          <h3><span class="topic-num">3.3</span> Validate: Is the venv Actually Active?</h3>
+          <p class="intro">Three quick checks — the prompt prefix, the Python location, and the Python version.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS</div>
+              <div class="code-block">
+                <div class="code-label"><span>cmd</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">(venv_numpy_232) where python
+&gt; ...\venv_numpy_232\Scripts\python.exe
+
+(venv_numpy_232) python --version
+&gt; Python 3.11.9</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">(venv_numpy_232) which python3
+&gt; .../venv_numpy_232/bin/python3
+
+(venv_numpy_232) python3 --version
+&gt; Python 3.11.9</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout warn"><strong>Important:</strong> the Python version (3.11.9) stays the same in every venv — venvs isolate installed <em>libraries</em>, not the Python version itself.</div>
+        </div>
+
+        <div class="topic" id="check-libs">
+          <h3><span class="topic-num">3.4</span> Check Installed Libraries &amp; Versions</h3>
+          <p class="intro">Run these inside each activated venv to see exactly what's installed there.</p>
+          <div class="code-block">
+            <div class="code-label"><span>Terminal — inside venv_numpy_126</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">(venv_numpy_126) pip list
+Package    Version
+---------- -------
+numpy      1.26.4
+pip        24.0
+
+(venv_numpy_126) pip show numpy
+Name: numpy
+Version: 1.26.4
+Location: .../venv_numpy_126/lib/python3.11/site-packages</code></pre>
+          </div>
+          <p>Same two commands, run inside <code class="inline">venv_numpy_232</code>, would show <code class="inline">Version: 2.3.2</code> instead — same laptop, two truths.</p>
+        </div>
+
+        <div class="topic" id="test-function">
+          <h3><span class="topic-num">3.5</span> Write the Test Function (.py and .ipynb)</h3>
+          <p class="intro">Save this exact code as <code class="inline">test_numpy.py</code> — and also paste it into a Jupyter cell as <code class="inline">test_numpy.ipynb</code>.</p>
+          <div class="code-block">
+            <div class="code-label"><span>test_numpy.py</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import numpy as np
+
+def get_string_lengths(words):
+    arr = np.array(words)
+    return np.strings.str_len(arr)
+
+print(get_string_lengths(["hello", "world", "numpy"]))</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">get_string_lengths()</code> wraps the <code class="inline">np.strings.str_len()</code> call from Part 2.3 in a reusable function.</li>
+            <li>This one function is what we'll run in both venvs next.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="two-outcomes">
+          <h3><span class="topic-num">3.6</span> Same File, Two Different Outcomes</h3>
+          <p class="intro">Run <code class="inline">python test_numpy.py</code> in each activated venv, back to back.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">venv_numpy_232</div>
+              <div class="code-block">
+                <div class="code-label"><span>Terminal</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">(venv_numpy_232) python test_numpy.py
+[5 5 5]
+# works perfectly — np.strings exists in NumPy 2.x</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">venv_numpy_126</div>
+              <div class="code-block">
+                <div class="code-label"><span>Terminal</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">(venv_numpy_126) python test_numpy.py
+Traceback (most recent call last):
+  File "test_numpy.py", line 5
+AttributeError: module 'numpy' has no
+attribute 'strings'. Did you mean: 'string_'?</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout warn">This is exactly why venvs exist: identical code, identical laptop — the only difference is which environment is active.</div>
+        </div>
+
+        <div class="topic" id="requirements">
+          <h3><span class="topic-num">3.7</span> requirements.txt — Reproducible Environments</h3>
+          <p class="intro">A text file listing every installed package and its exact version — so anyone can recreate your environment.</p>
+          <div class="code-block">
+            <div class="code-label"><span>Terminal — inside venv_numpy_232</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash"># 1. Save everything installed to a file
+pip freeze > requirements.txt
+
+# requirements.txt now contains:
+numpy==2.3.2
+
+# 2. Anyone (or any machine) can recreate it:
+pip install -r requirements.txt</code></pre>
+          </div>
+          <p>Share <code class="inline">requirements.txt</code> alongside your code — teammates, servers, and your future self all install the exact same versions.</p>
+        </div>
+
+        <div class="callout" style="margin-top:28px;">
+          <span class="callout-title">Halfway point</span>
+          You've built two isolated NumPy environments and understand why they exist. Take a longer break here — the second half shifts into NumPy's capabilities, pandas, and building a real command-line script.
+        </div>
+      </section>
+
+      <!-- ============ PART 4 ============ -->
+      <section class="part" id="part4">
+        <div class="part-label">Part 4 &middot; NumPy</div>
+        <h2>NumPy Capabilities</h2>
+
+        <div class="topic" id="np-create">
+          <h3><span class="topic-num">4.1</span> Creating Arrays</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">a = np.array([1, 2, 3, 4, 5])
+zeros = np.zeros(4)
+ones = np.ones((2, 3))
+seq = np.arange(0, 10, 2)
+lin = np.linspace(0, 1, 5)
+
+print(a)
+print(zeros)
+print(ones)
+print(seq)
+print(lin)</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">np.array()</code> turns a Python list into a fast NumPy array.</li>
+            <li><code class="inline">np.zeros()</code> / <code class="inline">np.ones()</code> create pre-filled arrays of any shape.</li>
+            <li><code class="inline">np.arange(start, stop, step)</code> and <code class="inline">np.linspace(start, stop, count)</code> both generate number sequences.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="np-math">
+          <h3><span class="topic-num">4.2</span> Array Math &amp; Broadcasting</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">prices = np.array([100, 200, 300])
+print(prices * 1.1)
+print(prices + 10)
+
+a1 = np.array([1, 2, 3])
+b1 = np.array([10, 20, 30])
+print(a1 + b1)</code></pre>
+          </div>
+          <ul class="points">
+            <li>Math operators apply to every element at once — no loop needed.</li>
+            <li>A single number (like 1.1) automatically "broadcasts" across the whole array.</li>
+            <li>Two same-shaped arrays combine element-by-element: <code class="inline">a1[0]+b1[0]</code>, <code class="inline">a1[1]+b1[1]</code>...</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="np-agg">
+          <h3><span class="topic-num">4.3</span> Aggregations, Indexing &amp; Reshaping</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">grades = np.array([88, 92, 79, 95, 66])
+print(grades.sum())
+print(grades.mean())
+print(grades.max())
+print(grades.std())
+
+grid = np.arange(1, 13).reshape(3, 4)
+print(grid)
+print(grid[1, 2])
+print(grid[:, 1])</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">.sum()</code>, <code class="inline">.mean()</code>, <code class="inline">.max()</code>, <code class="inline">.std()</code> summarize a whole array in one call.</li>
+            <li><code class="inline">.reshape(rows, cols)</code> turns a flat array into a grid — same data, new shape.</li>
+            <li><code class="inline">grid[1, 2]</code> gets one cell; <code class="inline">grid[:, 1]</code> gets an entire column.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PART 5 ============ -->
+      <section class="part" id="part5">
+        <div class="part-label">Part 5 &middot; Pandas</div>
+        <h2>Introducing Pandas</h2>
+
+        <div class="topic" id="pd-why">
+          <h3><span class="topic-num">5.1</span> Why Pandas?</h3>
+          <p>NumPy arrays are great for numbers, but real data has named columns, mixed types, and missing values. pandas adds the <strong>DataFrame</strong> — a table, like a spreadsheet, that you can filter, group, and reshape with code.</p>
+          <div class="callout">
+            <span class="callout-title">The two building blocks</span>
+            <strong>Series</strong> — a single labeled column of data, like one column in a spreadsheet.<br/>
+            <strong>DataFrame</strong> — a full table made of many Series, sharing one row index.
+          </div>
+          <div class="code-block">
+            <div class="code-label"><span>python</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import pandas as pd</code></pre>
+          </div>
+          <p>That one line is how almost every pandas file starts. Almost every real dataset you'll touch in this fellowship starts as a CSV file loaded into a DataFrame.</p>
+        </div>
+
+        <div class="topic" id="pd-dataset">
+          <h3><span class="topic-num">5.2</span> Our Mock Dataset: employees.csv</h3>
+          <p class="intro">A small, realistic CSV we'll use for every pandas example this session — 12 employees across 4 departments.</p>
+          <table class="data-table">
+            <thead><tr><th>employee_id</th><th>name</th><th>department</th><th>salary</th><th>join_date</th></tr></thead>
+            <tbody>
+              <tr><td>101</td><td>Ravi Kumar</td><td>Engineering</td><td>85000</td><td>2021-03-15</td></tr>
+              <tr><td>102</td><td>Meera Nair</td><td>Engineering</td><td>92000</td><td>2020-07-01</td></tr>
+              <tr><td>103</td><td>Zara Khan</td><td>Marketing</td><td>67000</td><td>2022-01-10</td></tr>
+              <tr><td>104</td><td>Kabir Singh</td><td>Sales</td><td>58000</td><td>2019-11-20</td></tr>
+              <tr><td>105</td><td>Ana Silva</td><td>Engineering</td><td>78000</td><td>2023-05-05</td></tr>
+              <tr><td colspan="5" style="text-align:center;color:var(--text-dim);">&hellip; 7 more rows &hellip;</td></tr>
+            </tbody>
+          </table>
+          <div class="code-block">
+            <div class="code-label"><span>employees.csv</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">employee_id,name,department,salary,join_date
+101,Ravi Kumar,Engineering,85000,2021-03-15
+102,Meera Nair,Engineering,92000,2020-07-01
+103,Zara Khan,Marketing,67000,2022-01-10
+104,Kabir Singh,Sales,58000,2019-11-20
+105,Ana Silva,Engineering,78000,2023-05-05
+106,John Lee,Sales,61000,2021-09-12
+107,Priya Rao,HR,54000,2020-02-28
+108,Tom Becker,Marketing,71000,2022-08-19
+109,Fatima Ali,Engineering,99000,2018-06-30
+110,Chen Wei,Sales,63000,2023-02-14
+111,Grace Osei,HR,57000,2021-12-01
+112,Diego Ruiz,Marketing,69000,2020-10-08</code></pre>
+          </div>
+          <div class="callout">This exact file is provided alongside the slides — save it as <code class="inline">employees.csv</code> in your project folder before continuing.</div>
+        </div>
+
+        <div class="topic" id="pd-read">
+          <h3><span class="topic-num">5.3</span> Reading a CSV &amp; Exploring It</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv("employees.csv")
+print(df.head())
+print(df.shape)
+print(df.columns.tolist())</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">pd.read_csv()</code> loads a CSV file straight into a DataFrame.</li>
+            <li><code class="inline">.head()</code> previews the first 5 rows — always check this first.</li>
+            <li><code class="inline">.shape</code> gives <code class="inline">(rows, columns)</code>; <code class="inline">.columns</code> lists every column name.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="pd-filter">
+          <h3><span class="topic-num">5.4</span> Selecting &amp; Filtering Rows</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">print(df["salary"])
+print(df[["name", "department"]])
+
+engineering = df[df["department"] == "Engineering"]
+print(engineering)
+
+high_earners = df[df["salary"] > 70000]
+print(high_earners[["name", "salary"]])</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">df["col"]</code> selects one column; <code class="inline">df[["a","b"]]</code> selects several.</li>
+            <li><code class="inline">df[condition]</code> keeps only the rows where the condition is <code class="inline">True</code>.</li>
+            <li>Conditions can combine any column — this is the pandas version of Part 4's loop + if filtering from Session 1.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="pd-group">
+          <h3><span class="topic-num">5.5</span> Adding Columns &amp; Grouping</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">df["bonus"] = df["salary"] * 0.10
+print(df.head(3))
+
+avg_salary = df.groupby("department")["salary"].mean()
+print(avg_salary)
+
+dept_counts = df["department"].value_counts()
+print(dept_counts)</code></pre>
+          </div>
+          <ul class="points">
+            <li>Assigning to a new column name creates it, computed for every row at once.</li>
+            <li><code class="inline">.groupby(col)</code> splits rows into groups, ready to summarize.</li>
+            <li><code class="inline">.value_counts()</code> is a fast way to count how many rows fall into each category.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="pd-write">
+          <h3><span class="topic-num">5.6</span> Writing Output with to_csv()</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">df.to_csv("employees_with_bonus.csv", index=False)
+print("Saved!")</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">to_csv()</code> writes a DataFrame back out to a real file on disk.</li>
+            <li><code class="inline">index=False</code> skips writing pandas' internal row numbers into the file.</li>
+            <li>This is the exact pattern we'll wrap inside a function next.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ PART 6 ============ -->
+      <section class="part" id="part6">
+        <div class="part-label">Part 6 &middot; Files &amp; Errors</div>
+        <h2>Functions, Files &amp; Error Handling</h2>
+
+        <div class="topic" id="func-files">
+          <h3><span class="topic-num">6.1</span> A Function With File Arguments</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import pandas as pd
+
+def process_employee_data(input_path, output_path):
+    df = pd.read_csv(input_path)
+    df["bonus"] = df["salary"] * 0.10
+    df.to_csv(output_path, index=False)
+    print(f"Saved {len(df)} rows to {output_path}")
+
+process_employee_data("employees.csv", "employees_with_bonus.csv")</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">input_path</code> and <code class="inline">output_path</code> are just parameters — the function doesn't care what files you pass.</li>
+            <li>Everything from Part 5.3–5.6 is now packaged into one reusable call.</li>
+            <li>This works perfectly... as long as the input is exactly what we expect.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="func-errors">
+          <h3><span class="topic-num">6.2</span> When Functions Error Out</h3>
+          <p class="intro">Real files go missing, and real columns get renamed. Here's what happens with no protection at all.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">Wrong filename</div>
+              <div class="code-block">
+                <div class="code-label"><span>Terminal</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-python">>>> process_employee_data(
+        "employees_typo.csv", "out.csv")
+
+Traceback (most recent call last):
+  ...
+FileNotFoundError: [Errno 2] No such
+file or directory: 'employees_typo.csv'</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">Missing column</div>
+              <div class="code-block">
+                <div class="code-label"><span>Terminal</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-python">>>> process_employee_data(
+        "employees_v2.csv", "out.csv")
+
+Traceback (most recent call last):
+  ...
+KeyError: 'salary'
+# the file exists, but has no
+# 'salary' column</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="callout warn">Both crash the entire program — even if 11 other rows or files were perfectly fine.</div>
+        </div>
+
+        <div class="topic" id="tryexcept">
+          <h3><span class="topic-num">6.3</span> Handling Errors with try / except</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">def process_employee_data(input_path, output_path):
+    try:
+        df = pd.read_csv(input_path)
+    except FileNotFoundError:
+        print(f"Error: could not find file '{input_path}'")
+        return
+
+    try:
+        df["bonus"] = df["salary"] * 0.10
+    except KeyError:
+        print("Error: expected a 'salary' column")
+        return
+
+    df.to_csv(output_path, index=False)
+    print(f"Saved {len(df)} rows to {output_path}")</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">try:</code> wraps risky code; <code class="inline">except ErrorType:</code> catches only that specific failure.</li>
+            <li>Naming the exact exception (<code class="inline">FileNotFoundError</code>, <code class="inline">KeyError</code>) keeps you from hiding unrelated bugs.</li>
+            <li><code class="inline">return</code> inside <code class="inline">except</code> stops that function call cleanly, without crashing the whole program.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="exceptions-table">
+          <h3><span class="topic-num">6.4</span> Common Exception Types</h3>
+          <p class="intro">Recognizing the exception name tells you exactly what to <code class="inline">except:</code> — before you even fix the bug.</p>
+          <table class="data-table">
+            <thead><tr><th>Exception</th><th>Happens when...</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td><code class="inline">FileNotFoundError</code></td><td>A file path doesn't exist</td><td><code class="inline">pd.read_csv("missing.csv")</code></td></tr>
+              <tr><td><code class="inline">KeyError</code></td><td>A dictionary key / column doesn't exist</td><td><code class="inline">df["typo_column"]</code></td></tr>
+              <tr><td><code class="inline">ValueError</code></td><td>A value has the right type, wrong content</td><td><code class="inline">int("abc")</code></td></tr>
+              <tr><td><code class="inline">ZeroDivisionError</code></td><td>Dividing by zero</td><td><code class="inline">10 / 0</code></td></tr>
+              <tr><td><code class="inline">TypeError</code></td><td>An operation on the wrong type</td><td><code class="inline">"5" + 5</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============ PART 7 ============ -->
+      <section class="part" id="part7">
+        <div class="part-label">Part 7 &middot; Real Scripts</div>
+        <h2>Running Python Like a Real Program</h2>
+
+        <div class="topic" id="mainpattern">
+          <h3><span class="topic-num">7.1</span> The if __name__ == "__main__" Pattern</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">def main():
+    print("Running as a script!")
+
+if __name__ == "__main__":
+    main()</code></pre>
+          </div>
+          <ul class="points">
+            <li>Every <code class="inline">.py</code> file has a hidden variable <code class="inline">__name__</code>.</li>
+            <li>It equals <code class="inline">"__main__"</code> only when the file is run directly — not when it's imported elsewhere.</li>
+            <li>This lets a file work both as a standalone script <em>and</em> as a library other files can import safely.</li>
+          </ul>
+        </div>
+
+        <div class="topic" id="argparse">
+          <h3><span class="topic-num">7.2</span> Command-Line Arguments with argparse</h3>
+          <div class="code-block">
+            <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import argparse
+
+parser = argparse.ArgumentParser(
+    description="Add a bonus column to employee data"
+)
+parser.add_argument("input_file", help="Path to input CSV")
+parser.add_argument("output_file", help="Path to output CSV")
+args = parser.parse_args()
+
+print(args.input_file)
+print(args.output_file)</code></pre>
+          </div>
+          <ul class="points">
+            <li><code class="inline">argparse</code> reads whatever the user typed after the filename in the terminal.</li>
+            <li>Each <code class="inline">add_argument()</code> becomes an attribute on <code class="inline">args</code> — <code class="inline">args.input_file</code>, <code class="inline">args.output_file</code>.</li>
+          </ul>
+          <div class="callout warn"><code class="inline">argparse</code> reads real terminal arguments — run this from a <code class="inline">.py</code> file, not a Jupyter cell.</div>
+        </div>
+
+        <div class="topic" id="script-function">
+          <h3><span class="topic-num">7.3</span> process_employees.py — The Function</h3>
+          <div class="code-block">
+            <div class="code-label"><span>process_employees.py</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">import argparse
+import pandas as pd
+
+def process_employee_data(input_path, output_path):
+    try:
+        df = pd.read_csv(input_path)
+    except FileNotFoundError:
+        print(f"Error: could not find '{input_path}'")
+        return
+    try:
+        df["bonus"] = df["salary"] * 0.10
+    except KeyError:
+        print("Error: expected a 'salary' column")
+        return
+    df.to_csv(output_path, index=False)
+    print(f"Saved {len(df)} rows to {output_path}")</code></pre>
+          </div>
+          <p>This is the exact function from Part 6.3 — pandas, file args, and try/except, all together. It's just a function so far — nothing runs yet without something calling it. That's what the <code class="inline">__main__</code> block below is for.</p>
+        </div>
+
+        <div class="topic" id="script-main">
+          <h3><span class="topic-num">7.4</span> process_employees.py — The Main Block</h3>
+          <div class="code-block">
+            <div class="code-label"><span>process_employees.py (append below)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file")
+    parser.add_argument("output_file")
+    args = parser.parse_args()
+    process_employee_data(args.input_file, args.output_file)</code></pre>
+          </div>
+          <p>Appended to the bottom of the same file, below the function from 7.3. This block only runs when the file is executed directly from the terminal. Together, the two blocks are the complete, real file — save it as <code class="inline">process_employees.py</code>.</p>
+        </div>
+
+        <div class="topic" id="script-run">
+          <h3><span class="topic-num">7.5</span> Running It From the Terminal</h3>
+          <p class="intro">No Jupyter, no copy-pasting cells — this is how the script is actually meant to be used.</p>
+          <div class="code-block">
+            <div class="code-label"><span>Terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">python process_employees.py employees.csv employees_with_bonus.csv
+Saved 12 rows to employees_with_bonus.csv
+
+python process_employees.py missing.csv out.csv
+Error: could not find 'missing.csv'
+
+python process_employees.py --help
+usage: process_employees.py [-h] input_file output_file
+
+python process_employees.py employees.csv
+error: the following arguments are required: output_file</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="part" id="recap">
+        <div class="part-label">Recap</div>
+        <h2>Key Takeaways</h2>
+        <div class="recap-grid">
+          <div class="obj-card"><span class="obj-num">1</span>A venv is an isolated copy of Python's libraries — create, activate, and deactivate it per project.</div>
+          <div class="obj-card"><span class="obj-num">2</span>pip installs, updates, and inspects libraries — the same commands on Windows and Mac.</div>
+          <div class="obj-card"><span class="obj-num">3</span>The exact same code can succeed or fail depending only on which environment is active.</div>
+          <div class="obj-card"><span class="obj-num">4</span>requirements.txt records exact versions so any machine can recreate your environment.</div>
+          <div class="obj-card"><span class="obj-num">5</span>Libraries save you from reinventing well-tested code — NumPy is the standard for numerical arrays.</div>
+          <div class="obj-card"><span class="obj-num">6</span>pandas turns a CSV into a DataFrame you can filter, group, and transform like a spreadsheet, in code.</div>
+          <div class="obj-card"><span class="obj-num">7</span>Wrapping file input/output in a function makes it reusable across any file, not just one.</div>
+          <div class="obj-card"><span class="obj-num">8</span>try/except stops one bad file or bad column from crashing an entire program.</div>
+          <div class="obj-card"><span class="obj-num">9</span>if __name__ == "__main__" + argparse turns a script into a real command-line tool.</div>
+          <div class="obj-card"><span class="obj-num">10</span>Everything from this session — environments, libraries, data, and error handling — comes together in one real script.</div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
+          <span class="footer-outskill">OUTSKILL</span>
+          <span class="footer-sep">|</span>
+          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+        </div>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+</body>
+</html>

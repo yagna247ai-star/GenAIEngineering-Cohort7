@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bringing the Calculator to Life with HTML &amp; JavaScript — Slides | Outskill AI Fellowship</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="assets/slides.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
+    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+
+    <h4>Base Camp 3 &middot; Week 2 &middot; Session 2</h4>
+    <nav>
+      <ul>
+        <li><a href="#title">Title</a></li>
+        <li><a href="#agenda">Session Agenda</a></li>
+        <li><a href="#objectives">Learning Objectives</a></li>
+
+        <li class="part-item"><a href="#html-what">Part 1 · HTML Basics</a></li>
+        <li class="sub-item"><a href="#html-what">1.1 What Is HTML?</a></li>
+        <li class="sub-item"><a href="#html-skeleton">1.2 The Skeleton of Every Page</a></li>
+        <li class="sub-item"><a href="#html-text-tags">1.3 Text &amp; Structure Tags</a></li>
+        <li class="sub-item"><a href="#html-inputs">1.4 Input Elements — Building a Form</a></li>
+        <li class="sub-item"><a href="#html-calc-skeleton">1.5 The Calculator Skeleton</a></li>
+
+        <li class="part-item"><a href="#js-what">Part 2 · Introducing JavaScript</a></li>
+        <li class="sub-item"><a href="#js-what">2.1 What Is JavaScript (and Where It Runs)</a></li>
+        <li class="sub-item"><a href="#js-script-tag">2.2 Adding a &lt;script&gt; Tag</a></li>
+        <li class="sub-item"><a href="#js-select">2.3 Selecting Elements: getElementById</a></li>
+        <li class="sub-item"><a href="#js-read-values">2.4 Reading Input Values</a></li>
+        <li class="sub-item"><a href="#js-click">2.5 Listening for Clicks: addEventListener</a></li>
+        <li class="sub-item"><a href="#js-render-result">2.6 Putting a Result on the Page</a></li>
+        <li class="sub-item"><a href="#js-local-calc">2.7 A Local-Only Calculator</a></li>
+
+        <li class="part-item"><a href="#server-recap">Part 3 · Talking to the Server</a></li>
+        <li class="sub-item"><a href="#server-recap">3.1 Recap: Our Server Is Still Running</a></li>
+        <li class="sub-item"><a href="#fetch-what">3.2 What Is fetch()?</a></li>
+        <li class="sub-item"><a href="#fetch-console">3.3 Calling /add from the Console</a></li>
+        <li class="sub-item"><a href="#cors-blocked">3.4 CORS: Why the Browser Blocks You</a></li>
+        <li class="sub-item"><a href="#cors-fix">3.5 Fixing CORS in FastAPI</a></li>
+        <li class="sub-item"><a href="#fetch-wire-button">3.6 Wiring fetch() into the Button</a></li>
+        <li class="sub-item"><a href="#network-tab">3.7 Watch It Happen: the Network Tab</a></li>
+        <li class="sub-item"><a href="#fetch-errors">3.8 Handling Errors from the Server</a></li>
+
+        <li class="part-item"><a href="#halfway">Halfway Point</a></li>
+
+        <li class="part-item"><a href="#ports-why">Part 4 · Two Ports, Two Servers</a></li>
+        <li class="sub-item"><a href="#ports-why">4.1 Two Servers, Two Ports — Why Split Them?</a></li>
+        <li class="sub-item"><a href="#ports-backend">4.2 Keep the Backend Running</a></li>
+        <li class="sub-item"><a href="#ports-frontend">4.3 Serving the Front-End on Its Own Port</a></li>
+        <li class="sub-item"><a href="#ports-two-terminals">4.4 Two Terminals, Side by Side</a></li>
+        <li class="sub-item"><a href="#ports-confirm">4.5 Confirming Both Are Alive</a></li>
+
+        <li class="part-item"><a href="#final-html">Part 5 · Full Calculator, End to End</a></li>
+        <li class="sub-item"><a href="#final-html">5.1 The Complete index.html</a></li>
+        <li class="sub-item"><a href="#final-js">5.2 The Complete app.js</a></li>
+        <li class="sub-item"><a href="#try-end-to-end">5.3 Trying It End-to-End</a></li>
+        <li class="sub-item"><a href="#try-divide-error">5.4 Testing the divide-by-zero Error</a></li>
+        <li class="sub-item"><a href="#recap-flow">5.5 Under the Hood: One Click, Recapped</a></li>
+
+        <li class="part-item"><a href="#recap">Recap</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="slide-main">
+    <div class="slide-stage">
+      <div class="slide-toolbar">
+        <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">35</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
+        <div class="slide-nav-btns">
+          <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
+          <button id="nextSlide" class="slide-btn">Next &rsaquo;</button>
+        </div>
+      </div>
+      <div class="slide-viewport">
+      <section class="slide slide-hero" id="title">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Base Camp 3 · Week 2 · Session 2</div>
+        <h1>Bringing the Calculator to Life with HTML &amp; JavaScript</h1>
+        <p class="lede">Step-by-step HTML · the DOM &amp; JavaScript events · <code class="inline">fetch()</code> and CORS · running the front-end and back-end on two ports at once. Yesterday we built the server &mdash; today, a real interface calls it live, in the browser.</p>
+        <div class="meta-row">
+<span class="meta-pill">⏱ Extended, hands-on</span>
+<span class="meta-pill">🔌 Two servers, two ports, one browser tab</span>
+</div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">01</div>
+        </div>
+      </section>
+
+      <section class="slide" id="agenda">
+        <div class="slide-kicker">Session Agenda</div>
+        <h2 class="slide-title">How This Extended Session Breaks Down</h2>
+        <div class="slide-body">
+          <div class="agenda">
+<div class="agenda-row"><span class="agenda-time">0:00–0:10</span><span class="agenda-label">Welcome &amp; Recap</span></div>
+<div class="agenda-row"><span class="agenda-time">0:10–0:50</span><span class="agenda-label">Part 1 — HTML Basics</span></div>
+<div class="agenda-row"><span class="agenda-time">0:50–1:30</span><span class="agenda-label">Part 2 — Introducing JavaScript</span></div>
+<div class="agenda-row break"><span class="agenda-time">1:30–1:40</span><span class="agenda-label">Break</span></div>
+<div class="agenda-row"><span class="agenda-time">1:40–2:40</span><span class="agenda-label">Part 3 — Talking to the Server</span></div>
+<div class="agenda-row break"><span class="agenda-time">2:40–2:50</span><span class="agenda-label">Break</span></div>
+<div class="agenda-row"><span class="agenda-time">2:50–3:30</span><span class="agenda-label">Part 4 — Two Ports, Two Servers</span></div>
+<div class="agenda-row"><span class="agenda-time">3:30–4:10</span><span class="agenda-label">Part 5 — Full Calculator, End to End</span></div>
+<div class="agenda-row"><span class="agenda-time">4:10–4:20</span><span class="agenda-label">Final Recap &amp; Wrap-up</span></div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">02</div>
+        </div>
+      </section>
+
+      <section class="slide" id="objectives">
+        <div class="slide-kicker">Learning Objectives</div>
+        <h2 class="slide-title">By the End of This Session, You Will Be Able To&hellip;</h2>
+        <div class="slide-body">
+          <p class="intro">By the end of this session, you will be able to:</p>
+          <div class="obj-grid">
+<div class="obj-card"><span class="obj-num">1</span>Explain what HTML is and build a page skeleton — doctype, <code class="inline">html</code>, <code class="inline">head</code>, <code class="inline">body</code>.</div>
+<div class="obj-card"><span class="obj-num">2</span>Build form elements (<code class="inline">input</code>, <code class="inline">select</code>, <code class="inline">button</code>) with ids that JavaScript can target.</div>
+<div class="obj-card"><span class="obj-num">3</span>Explain what JavaScript is and where it runs — in the browser, not on the server.</div>
+<div class="obj-card"><span class="obj-num">4</span>Select DOM elements with <code class="inline">getElementById</code> and read their values.</div>
+<div class="obj-card"><span class="obj-num">5</span>Respond to clicks with <code class="inline">addEventListener</code> and update the page with <code class="inline">textContent</code>.</div>
+<div class="obj-card"><span class="obj-num">6</span>Explain what <code class="inline">fetch()</code> does and use it to call an API from the browser.</div>
+<div class="obj-card"><span class="obj-num">7</span>Explain CORS, reproduce a blocked request, and fix it with FastAPI's <code class="inline">CORSMiddleware</code>.</div>
+<div class="obj-card"><span class="obj-num">8</span>Handle both successful and error responses from <code class="inline">fetch()</code> using <code class="inline">response.ok</code> and <code class="inline">.catch()</code>.</div>
+<div class="obj-card"><span class="obj-num">9</span>Run the backend (uvicorn) and a front-end file server on two different ports, at the same time.</div>
+<div class="obj-card"><span class="obj-num">10</span>Build and test a complete calculator UI that calls the live FastAPI server end to end.</div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">03</div>
+        </div>
+      </section>
+
+      <section class="slide" id="html-what">
+        <div class="slide-kicker">Part 1 · HTML Basics &middot; 1.1</div>
+        <h2 class="slide-title">What Is HTML?</h2>
+        <div class="slide-body">
+          <p><strong>HTML</strong> (HyperText Markup Language) describes the structure and content of a web page using <strong>tags</strong>. The browser reads your HTML and renders it visually — headings, paragraphs, buttons, input boxes.</p>
+          <div class="callout">
+          <span class="callout-title">Where it fits</span>
+          HTML is the <strong>skeleton</strong> — what's on the page and how it's organized. Today we'll add a little <strong>CSS</strong> for appearance, but our real focus is structure (HTML) and behavior (JavaScript, Part 2).
+          </div>
+          <p>Almost every tag comes in an opening and closing pair — <code class="inline">&lt;p&gt;</code> starts a paragraph, <code class="inline">&lt;/p&gt;</code> ends it. Everything between them is that element's content.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">04</div>
+        </div>
+      </section>
+
+      <section class="slide" id="html-skeleton">
+        <div class="slide-kicker">Part 1 · HTML Basics &middot; 1.2</div>
+        <h2 class="slide-title">The Skeleton of Every Page</h2>
+        <div class="slide-body">
+          <p class="intro">Every HTML file starts with this same shape. Save it as <code class="inline">index.html</code>.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">&lt;!doctype html&gt;</code> tells the browser "this is a modern HTML5 page."</li>
+          <li><code class="inline">&lt;head&gt;</code> holds metadata — nothing inside it is visible on the page itself (the <code class="inline">&lt;title&gt;</code> shows in the browser tab).</li>
+          <li><code class="inline">&lt;body&gt;</code> holds everything visitors actually see. Everything we build goes here.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">05</div>
+        </div>
+      </section>
+
+      <section class="slide" id="html-text-tags">
+        <div class="slide-kicker">Part 1 · HTML Basics &middot; 1.3</div>
+        <h2 class="slide-title">Text &amp; Structure Tags</h2>
+        <div class="slide-body">
+          <p class="intro">A handful of tags cover most of what a page needs to say something.</p>
+          <div class="code-block">
+          <div class="code-label"><span>inside &lt;body&gt;</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">&lt;h1&gt;Calculator&lt;/h1&gt;
+&lt;p&gt;Enter two numbers and pick an operation.&lt;/p&gt;
+
+&lt;div id="app"&gt;
+  &lt;!-- our calculator will live in here --&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">&lt;h1&gt;</code>&hellip;<code class="inline">&lt;h6&gt;</code> are headings, biggest to smallest; <code class="inline">&lt;p&gt;</code> is a paragraph.</li>
+          <li><code class="inline">&lt;div&gt;</code> is a generic container — it groups other elements together with no visual styling of its own.</li>
+          <li>An <code class="inline">id</code> attribute (like <code class="inline">id="app"</code>) gives an element a unique name — JavaScript will use these constantly, starting in Part 2.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">06</div>
+        </div>
+      </section>
+
+      <section class="slide" id="html-inputs">
+        <div class="slide-kicker">Part 1 · HTML Basics &middot; 1.4</div>
+        <h2 class="slide-title">Input Elements — Building a Form</h2>
+        <div class="slide-body">
+          <p class="intro">The three elements our calculator actually needs: two number inputs, a dropdown, and a button.</p>
+          <div class="code-block">
+          <div class="code-label"><span>inside &lt;div id="app"&gt;</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">&lt;label for="a"&gt;First number&lt;/label&gt;
+&lt;input type="number" id="a" /&gt;
+
+&lt;label for="b"&gt;Second number&lt;/label&gt;
+&lt;input type="number" id="b" /&gt;
+
+&lt;label for="op"&gt;Operation&lt;/label&gt;
+&lt;select id="op"&gt;
+  &lt;option value="add"&gt;Add&lt;/option&gt;
+  &lt;option value="subtract"&gt;Subtract&lt;/option&gt;
+  &lt;option value="multiply"&gt;Multiply&lt;/option&gt;
+  &lt;option value="divide"&gt;Divide&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;button id="calcBtn"&gt;Calculate&lt;/button&gt;</code></pre>
+          </div>
+          <div class="callout">Every element that JavaScript needs to find later gets a distinct <code class="inline">id</code> — <code class="inline">a</code>, <code class="inline">b</code>, <code class="inline">op</code>, <code class="inline">calcBtn</code>. Get these exactly right; Part 2 depends on them.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">07</div>
+        </div>
+      </section>
+
+      <section class="slide" id="html-calc-skeleton">
+        <div class="slide-kicker">Part 1 · HTML Basics &middot; 1.5</div>
+        <h2 class="slide-title">The Calculator Skeleton (Putting It Together)</h2>
+        <div class="slide-body">
+          <p class="intro">1.2 + 1.3 + 1.4, combined into one real file, plus an empty <code class="inline">div</code> to hold the result later.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Calculator&lt;/h1&gt;
+
+  &lt;label for="a"&gt;First number&lt;/label&gt;
+  &lt;input type="number" id="a" /&gt;&lt;br/&gt;
+
+  &lt;label for="b"&gt;Second number&lt;/label&gt;
+  &lt;input type="number" id="b" /&gt;&lt;br/&gt;
+
+  &lt;label for="op"&gt;Operation&lt;/label&gt;
+  &lt;select id="op"&gt;
+    &lt;option value="add"&gt;Add&lt;/option&gt;
+    &lt;option value="subtract"&gt;Subtract&lt;/option&gt;
+    &lt;option value="multiply"&gt;Multiply&lt;/option&gt;
+    &lt;option value="divide"&gt;Divide&lt;/option&gt;
+  &lt;/select&gt;&lt;br/&gt;
+
+  &lt;button id="calcBtn"&gt;Calculate&lt;/button&gt;
+
+  &lt;div id="result"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+          <p>Open this file directly in a browser (double-click it). You'll see a full form — but clicking "Calculate" does nothing yet. That's Part 2.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">08</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-what">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.1</div>
+        <h2 class="slide-title">What Is JavaScript (and Where It Runs)</h2>
+        <div class="slide-body">
+          <p><strong>JavaScript</strong> is the language browsers execute to make a page interactive — respond to clicks, change what's on screen, talk to a server.</p>
+          <div class="callout warn">
+          <span class="callout-title">The key architectural point</span>
+          Python (<code class="inline">main.py</code>) runs on <em>your server</em>. JavaScript in a <code class="inline">&lt;script&gt;</code> tag runs inside <em>the visitor's browser</em> — on their machine, not yours. This is client-side code, meeting the client&ndash;server model from last session head-on.
+          </div>
+          <p>That distinction matters all session: anything JavaScript does happens locally, instantly, with no server involved &mdash; until we deliberately ask it to talk to one, in Part 3.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">09</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-script-tag">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.2</div>
+        <h2 class="slide-title">Adding a &lt;script&gt; Tag</h2>
+        <div class="slide-body">
+          <p class="intro">Add this just before <code class="inline">&lt;/body&gt;</code> in <code class="inline">index.html</code> — after all the elements above it, so they already exist when the script runs.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html (before &lt;/body&gt;)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">  &lt;script&gt;
+    console.log("Hello from JavaScript!");
+  &lt;/script&gt;
+&lt;/body&gt;</code></pre>
+          </div>
+          <ul class="points">
+          <li>Save the file, reload it in the browser.</li>
+          <li>Open DevTools (right-click &rarr; Inspect, or F12) &rarr; the <strong>Console</strong> tab &mdash; you'll see your message there.</li>
+          <li><code class="inline">console.log()</code> is your best debugging friend all session &mdash; use it constantly to check what a value actually is.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">10</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-select">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.3</div>
+        <h2 class="slide-title">Selecting Elements: getElementById</h2>
+        <div class="slide-body">
+          <div class="code-block">
+          <div class="code-label"><span>inside &lt;script&gt;</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">const aInput = document.getElementById("a");
+console.log(aInput);</code></pre>
+          </div>
+          <ul class="points">
+          <li>The <strong>DOM</strong> (Document Object Model) is JavaScript's live map of the page — every tag becomes an object it can inspect and change.</li>
+          <li><code class="inline">document.getElementById("a")</code> fetches the exact element whose <code class="inline">id="a"</code> — the first number input from 1.4.</li>
+          <li><code class="inline">const</code> declares a variable that won't be reassigned — the standard choice unless you know a value needs to change.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">11</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-read-values">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.4</div>
+        <h2 class="slide-title">Reading Input Values</h2>
+        <div class="slide-body">
+          <div class="code-block">
+          <div class="code-label"><span>inside &lt;script&gt;</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">const aValue = document.getElementById("a").value;
+console.log(aValue, typeof aValue);
+// "4" string  -- even though the input type is "number"!
+
+const a = Number(document.getElementById("a").value);
+console.log(a, typeof a);
+// 4 number</code></pre>
+          </div>
+          <div class="callout warn"><code class="inline">.value</code> on any input <strong>always</strong> returns a string. Forget <code class="inline">Number()</code> and <code class="inline">"4" + "5"</code> gives you <code class="inline">"45"</code>, not <code class="inline">9</code> — a classic first bug.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">12</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-click">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.5</div>
+        <h2 class="slide-title">Listening for Clicks: addEventListener</h2>
+        <div class="slide-body">
+          <div class="code-block">
+          <div class="code-label"><span>inside &lt;script&gt;</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">const btn = document.getElementById("calcBtn");
+
+btn.addEventListener("click", function () {
+  console.log("Button was clicked!");
+});</code></pre>
+          </div>
+          <ul class="points">
+          <li>This is <strong>event-driven</strong> code &mdash; nothing inside the function runs until the user actually clicks.</li>
+          <li>The function you pass to <code class="inline">addEventListener</code> runs <em>every time</em> that click happens, for as long as the page stays open.</li>
+          <li>Save, reload, click "Calculate" &mdash; watch the Console log once per click.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">13</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-render-result">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.6</div>
+        <h2 class="slide-title">Putting a Result on the Page</h2>
+        <div class="slide-body">
+          <div class="code-block">
+          <div class="code-label"><span>inside the click listener</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">const sum = 4 + 5;
+document.getElementById("result").textContent = "Result: " + sum;</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">textContent</code> sets the visible text inside an element &mdash; here, the empty <code class="inline">&lt;div id="result"&gt;</code> from 1.5.</li>
+          <li>The page updates <strong>instantly</strong>, with no reload &mdash; this is the whole point of client-side JavaScript.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">14</div>
+        </div>
+      </section>
+
+      <section class="slide" id="js-local-calc">
+        <div class="slide-kicker">Part 2 · Introducing JavaScript &middot; 2.7</div>
+        <h2 class="slide-title">A Local-Only Calculator</h2>
+        <div class="slide-body">
+          <p class="intro">2.3 through 2.6, combined — a fully working calculator, entirely inside the browser.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html (inside &lt;script&gt;)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">document.getElementById("calcBtn").addEventListener("click", function () {
+  const a = Number(document.getElementById("a").value);
+  const b = Number(document.getElementById("b").value);
+  const op = document.getElementById("op").value;
+
+  let result;
+  if (op === "add") result = a + b;
+  else if (op === "subtract") result = a - b;
+  else if (op === "multiply") result = a * b;
+  else if (op === "divide") result = a / b;
+
+  document.getElementById("result").textContent = "Result: " + result;
+});</code></pre>
+          </div>
+          <div class="callout warn">This works! But the math happens entirely in the browser &mdash; the FastAPI server from last session isn't involved at all. Part 3 replaces this local math with a real network call to it.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">15</div>
+        </div>
+      </section>
+
+      <section class="slide" id="server-recap">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.1</div>
+        <h2 class="slide-title">Recap: Our Server Is Still Running</h2>
+        <div class="slide-body">
+          <p class="intro">Everything from Session 1's <code class="inline">main.py</code> still applies — we're adding a client for it, not rebuilding it.</p>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal — venv_fastapi active, from last session</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">uvicorn main:app --reload
+INFO:     Uvicorn running on http://127.0.0.1:8000</code></pre>
+          </div>
+          <ul class="points">
+          <li>If it's not already running, start it now, from inside your <code class="inline">calculator_api</code> folder.</li>
+          <li>Confirm it's alive: open <code class="inline">http://127.0.0.1:8000/docs</code> — Swagger should load, exactly like last session.</li>
+          <li>Leave this terminal running for the rest of today.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">16</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fetch-what">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.2</div>
+        <h2 class="slide-title">What Is fetch()?</h2>
+        <div class="slide-body">
+          <p><code class="inline">fetch()</code> is a function built into every browser for making HTTP requests from JavaScript — the browser-side equivalent of Python's <code class="inline">requests</code> library from last session.</p>
+          <div class="code-block">
+          <div class="code-label"><span>shape of a fetch call</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">fetch("http://127.0.0.1:8000/add?a=4&amp;b=5")
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data));</code></pre>
+          </div>
+          <ul class="points">
+          <li><code class="inline">fetch(url)</code> sends the request and returns a <strong>Promise</strong> — a value that isn't ready yet, but will be.</li>
+          <li><code class="inline">.then()</code> chains what happens once each step finishes: first turn the response into JSON, then use that data.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">17</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fetch-console">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.3</div>
+        <h2 class="slide-title">Calling /add from the Console</h2>
+        <div class="slide-body">
+          <p class="intro">Before wiring anything into the page, prove it works by pasting straight into the DevTools Console — on the <code class="inline">index.html</code> tab you already have open.</p>
+          <div class="code-block">
+          <div class="code-label"><span>DevTools Console</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">fetch("http://127.0.0.1:8000/add?a=4&amp;b=5")
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data));
+
+// logs: {result: 9}</code></pre>
+          </div>
+          <div class="callout">If you see <code class="inline">{result: 9}</code> logged, the browser just called your FastAPI server directly &mdash; no Swagger, no <code class="inline">requests</code>, just JavaScript.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">18</div>
+        </div>
+      </section>
+
+      <section class="slide" id="cors-blocked">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.4</div>
+        <h2 class="slide-title">CORS: Why the Browser Blocks You</h2>
+        <div class="slide-body">
+          <p class="intro">Later today, <code class="inline">index.html</code> will be served from a different port than the API. Try that combination now and the exact same <code class="inline">fetch()</code> fails.</p>
+          <div class="code-block">
+          <div class="code-label"><span>DevTools Console — page served from a different origin</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-plaintext">Access to fetch at 'http://127.0.0.1:8000/add?a=4&b=5'
+from origin 'http://127.0.0.1:5500' has been blocked by CORS policy:
+No 'Access-Control-Allow-Origin' header is present on the requested resource.</code></pre>
+          </div>
+          <ul class="points">
+          <li>Browsers enforce a <strong>same-origin policy</strong>: a page loaded from one origin (protocol + host + <strong>port</strong>) can't read a response from a different origin unless that server explicitly allows it.</li>
+          <li><code class="inline">:5500</code> (front-end) and <code class="inline">:8000</code> (API) count as <em>different origins</em> — even on the very same laptop.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">19</div>
+        </div>
+      </section>
+
+      <section class="slide" id="cors-fix">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.5</div>
+        <h2 class="slide-title">Fixing CORS in FastAPI</h2>
+        <div class="slide-body">
+          <p class="intro">Back in <code class="inline">main.py</code> — a few lines that permit other origins to call this API.</p>
+          <div class="code-block">
+          <div class="code-label"><span>main.py (near the top, after app = FastAPI())</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-python">from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)</code></pre>
+          </div>
+          <ul class="points">
+          <li>This adds the <code class="inline">Access-Control-Allow-Origin</code> header the browser was looking for in 3.4.</li>
+          <li><code class="inline">allow_origins=["*"]</code> means "any origin may call this API" &mdash; fine for local learning; a real deployment would list its exact front-end URL instead.</li>
+          <li>Save &mdash; <code class="inline">--reload</code> restarts the server with the fix applied.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">20</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fetch-wire-button">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.6</div>
+        <h2 class="slide-title">Wiring fetch() into the Button</h2>
+        <div class="slide-body">
+          <p class="intro">Replace 2.7's local math with a real network call to the server.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html (inside &lt;script&gt;, replacing 2.7)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">document.getElementById("calcBtn").addEventListener("click", function () {
+  const a = document.getElementById("a").value;
+  const b = document.getElementById("b").value;
+  const op = document.getElementById("op").value;
+
+  fetch(`http://127.0.0.1:8000/${op}?a=${a}&amp;b=${b}`)
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+      document.getElementById("result").textContent = "Result: " + data.result;
+    });
+});</code></pre>
+          </div>
+          <ul class="points">
+          <li>Backtick strings (template literals) let <code class="inline">${op}</code> splice the dropdown's value straight into the URL — one function now handles all four operations.</li>
+          <li><code class="inline">data.result</code> reads the exact key our FastAPI endpoints return — the same dictionary shape from Session 1.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">21</div>
+        </div>
+      </section>
+
+      <section class="slide" id="network-tab">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.7</div>
+        <h2 class="slide-title">Watch It Happen: the Network Tab</h2>
+        <div class="slide-body">
+          <p class="intro">DevTools has a tab that shows every request your page makes, in real time.</p>
+          <ol class="steps">
+          <li><strong>Open the Network tab.</strong><span>DevTools &rarr; "Network" (next to "Console").</span></li>
+          <li><strong>Fill in the form.</strong><span>Enter <code class="inline">4</code> and <code class="inline">5</code>, choose "Add".</span></li>
+          <li><strong>Click Calculate.</strong><span>A new row appears — <code class="inline">add?a=4&amp;b=5</code>.</span></li>
+          <li><strong>Click that row.</strong><span>See the request URL, method (<code class="inline">GET</code>), and status (<code class="inline">200</code>).</span></li>
+          <li><strong>Open the "Response" tab.</strong><span>See the exact JSON body: <code class="inline">{"result": 9}</code>.</span></li>
+          </ol>
+          <div class="callout">This is Part 3.4's anatomy of a request/response, from Session 1 — no longer a diagram, but a real exchange you triggered yourself.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">22</div>
+        </div>
+      </section>
+
+      <section class="slide" id="fetch-errors">
+        <div class="slide-kicker">Part 3 · Talking to the Server &middot; 3.8</div>
+        <h2 class="slide-title">Handling Errors from the Server</h2>
+        <div class="slide-body">
+          <p class="intro">Try dividing by 0 right now — the page probably shows <code class="inline">Result: undefined</code>, silently. <code class="inline">fetch()</code> has a gotcha.</p>
+          <div class="callout warn"><strong>Unlike Python's <code class="inline">requests</code></strong>, <code class="inline">fetch()</code> only rejects on a <em>network</em> failure — a <code class="inline">400</code> or <code class="inline">404</code> still counts as "successful," so you must check <code class="inline">response.ok</code> yourself.</div>
+          <div class="code-block">
+          <div class="code-label"><span>index.html (inside &lt;script&gt;, replacing 3.6)</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">fetch(`http://127.0.0.1:8000/${op}?a=${a}&amp;b=${b}`)
+  .then(response =&gt; {
+    if (!response.ok) {
+      return response.json().then(err =&gt; { throw new Error(err.detail); });
+    }
+    return response.json();
+  })
+  .then(data =&gt; {
+    document.getElementById("result").textContent = "Result: " + data.result;
+  })
+  .catch(error =&gt; {
+    document.getElementById("result").textContent = "Error: " + error.message;
+  });</code></pre>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">23</div>
+        </div>
+      </section>
+
+      <section class="slide slide-hero" id="halfway">
+        <div class="slide-kicker">Halfway Point</div>
+        <h1>From a Working Page to a Real Deployment Shape</h1>
+        <p class="lede">Your calculator already talks to the live server, in one browser tab, on one machine. The second half changes exactly one thing: the front-end and back-end run as two separate, independent processes &mdash; the shape every real app actually takes.</p>
+        <p class="lede" style="font-weight:700;">Next up: Part 4 &mdash; Two Ports, Two Servers</p>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">24</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ports-why">
+        <div class="slide-kicker">Part 4 · Two Ports, Two Servers &middot; 4.1</div>
+        <h2 class="slide-title">Two Servers, Two Ports — Why Split Them?</h2>
+        <div class="slide-body">
+          <p>So far, <code class="inline">index.html</code> has been opened directly as a local file. That's fine for learning, but it's not how real apps run — and some browsers restrict <code class="inline">fetch()</code> from a <code class="inline">file://</code> page in ways that don't match production.</p>
+          <div class="callout">
+          <span class="callout-title">The real shape</span>
+          The <strong>backend</strong> (FastAPI + uvicorn) serves data and logic on <code class="inline">:8000</code>. The <strong>front-end</strong> (<code class="inline">index.html</code> + <code class="inline">app.js</code>) are just static files that need serving too — from their own, separate, lightweight server, on a different port like <code class="inline">:5500</code>.
+          </div>
+          <p>Two independent processes, two ports, one browser tab talking to both — exactly the CORS situation from 3.4, now for real.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">25</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ports-backend">
+        <div class="slide-kicker">Part 4 · Two Ports, Two Servers &middot; 4.2</div>
+        <h2 class="slide-title">Keep the Backend Running</h2>
+        <div class="slide-body">
+          <p class="intro">Nothing changes here — this is the same terminal, same command, from 3.1 and all of last session.</p>
+          <div class="code-block">
+          <div class="code-label"><span>Terminal 1 — venv_fastapi active, inside calculator_api/</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">uvicorn main:app --reload
+INFO:     Uvicorn running on http://127.0.0.1:8000</code></pre>
+          </div>
+          <div class="callout warn">Do not close this terminal. It stays open and running for the rest of the session — the front-end has nothing to call without it.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">26</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ports-frontend">
+        <div class="slide-kicker">Part 4 · Two Ports, Two Servers &middot; 4.3</div>
+        <h2 class="slide-title">Serving the Front-End on Its Own Port</h2>
+        <div class="slide-body">
+          <p class="intro">Python's standard library can serve static files with one command &mdash; no new library to install.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">🪟 WINDOWS — new Command Prompt</div>
+          <div class="code-block">
+          <div class="code-label"><span>cmd — inside the folder with index.html</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">python -m http.server 5500</code></pre>
+          </div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">🍎 MACOS — new Terminal</div>
+          <div class="code-block">
+          <div class="code-label"><span>zsh — inside the folder with index.html</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">python3 -m http.server 5500</code></pre>
+          </div>
+          </div>
+          </div>
+          <p>Then open <code class="inline">http://127.0.0.1:5500/index.html</code> in the browser &mdash; the calculator now loads from its <em>own</em> origin, port <code class="inline">5500</code>, separate from the API's <code class="inline">8000</code>.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">27</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ports-two-terminals">
+        <div class="slide-kicker">Part 4 · Two Ports, Two Servers &middot; 4.4</div>
+        <h2 class="slide-title">Two Terminals, Side by Side</h2>
+        <div class="slide-body">
+          <p class="intro">Both processes run at once, in two separate terminal windows — neither one is ever stopped to run the other.</p>
+          <div class="os-grid">
+          <div class="os-card">
+          <div class="os-title">TERMINAL 1 — BACKEND</div>
+          <div class="code-block">
+          <div class="code-label"><span>calculator_api/</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">uvicorn main:app --reload
+INFO:     Uvicorn running on
+http://127.0.0.1:8000</code></pre>
+          </div>
+          </div>
+          <div class="os-card">
+          <div class="os-title">TERMINAL 2 — FRONT-END</div>
+          <div class="code-block">
+          <div class="code-label"><span>front-end folder</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-bash">python3 -m http.server 5500
+Serving HTTP on :: port 5500
+http://127.0.0.1:5500/</code></pre>
+          </div>
+          </div>
+          </div>
+          <div class="callout">Two processes, two ports, one machine — this is a miniature version of how a real product's frontend and backend are deployed, often on entirely different servers.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">28</div>
+        </div>
+      </section>
+
+      <section class="slide" id="ports-confirm">
+        <div class="slide-kicker">Part 4 · Two Ports, Two Servers &middot; 4.5</div>
+        <h2 class="slide-title">Confirming Both Are Alive</h2>
+        <div class="slide-body">
+          <p class="intro">Four checks, in order — if any one fails, that's exactly where to look.</p>
+          <ul class="checklist">
+          <li><span class="tick">✓</span><span><code class="inline">http://127.0.0.1:8000/docs</code> loads Swagger — the backend (Terminal 1) is alive.</span></li>
+          <li><span class="tick">✓</span><span><code class="inline">http://127.0.0.1:5500/index.html</code> loads the calculator form — the front-end (Terminal 2) is alive.</span></li>
+          <li><span class="tick">✓</span><span>Filling in numbers and clicking "Calculate" shows a real result — the two are talking, CORS included.</span></li>
+          <li><span class="tick">✓</span><span>The Network tab (3.7) shows the request going to <code class="inline">:8000</code> while the page itself loaded from <code class="inline">:5500</code>.</span></li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">29</div>
+        </div>
+      </section>
+
+      <section class="slide" id="final-html">
+        <div class="slide-kicker">Part 5 · Full Calculator, End to End &middot; 5.1</div>
+        <h2 class="slide-title">The Complete index.html</h2>
+        <div class="slide-body">
+          <p class="intro">One last change: move the script out of <code class="inline">index.html</code> into its own <code class="inline">app.js</code> file — cleaner, and how real front-ends are organized.</p>
+          <div class="code-block">
+          <div class="code-label"><span>index.html</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-xml">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Calculator&lt;/h1&gt;
+
+  &lt;label for="a"&gt;First number&lt;/label&gt;
+  &lt;input type="number" id="a" /&gt;&lt;br/&gt;
+  &lt;label for="b"&gt;Second number&lt;/label&gt;
+  &lt;input type="number" id="b" /&gt;&lt;br/&gt;
+  &lt;label for="op"&gt;Operation&lt;/label&gt;
+  &lt;select id="op"&gt;
+    &lt;option value="add"&gt;Add&lt;/option&gt;
+    &lt;option value="subtract"&gt;Subtract&lt;/option&gt;
+    &lt;option value="multiply"&gt;Multiply&lt;/option&gt;
+    &lt;option value="divide"&gt;Divide&lt;/option&gt;
+  &lt;/select&gt;&lt;br/&gt;
+  &lt;button id="calcBtn"&gt;Calculate&lt;/button&gt;
+
+  &lt;div id="result"&gt;&lt;/div&gt;
+
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </div>
+          <p><code class="inline">&lt;script src="app.js"&gt;&lt;/script&gt;</code> loads and runs the external file below — same effect as an inline <code class="inline">&lt;script&gt;</code>, one file per job.</p>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">30</div>
+        </div>
+      </section>
+
+      <section class="slide" id="final-js">
+        <div class="slide-kicker">Part 5 · Full Calculator, End to End &middot; 5.2</div>
+        <h2 class="slide-title">The Complete app.js</h2>
+        <div class="slide-body">
+          <p class="intro">3.6 + 3.8, saved as its own file, sitting right next to <code class="inline">index.html</code>.</p>
+          <div class="code-block">
+          <div class="code-label"><span>app.js</span><button class="copy-btn">Copy</button></div>
+          <pre><code class="language-javascript">const BASE_URL = "http://127.0.0.1:8000";
+
+document.getElementById("calcBtn").addEventListener("click", function () {
+  const a = document.getElementById("a").value;
+  const b = document.getElementById("b").value;
+  const op = document.getElementById("op").value;
+
+  fetch(`${BASE_URL}/${op}?a=${a}&amp;b=${b}`)
+    .then(response =&gt; {
+      if (!response.ok) {
+        return response.json().then(err =&gt; { throw new Error(err.detail); });
+      }
+      return response.json();
+    })
+    .then(data =&gt; {
+      document.getElementById("result").textContent = "Result: " + data.result;
+    })
+    .catch(error =&gt; {
+      document.getElementById("result").textContent = "Error: " + error.message;
+    });
+});</code></pre>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">31</div>
+        </div>
+      </section>
+
+      <section class="slide" id="try-end-to-end">
+        <div class="slide-kicker">Part 5 · Full Calculator, End to End &middot; 5.3</div>
+        <h2 class="slide-title">Trying It End-to-End</h2>
+        <div class="slide-body">
+          <p class="intro">With both terminals from Part 4 still running, reload <code class="inline">http://127.0.0.1:5500/index.html</code>.</p>
+          <ol class="steps">
+          <li><strong>Enter 10 and 3.</strong><span>Type into the first and second number fields.</span></li>
+          <li><strong>Choose Multiply.</strong><span>Select it from the operation dropdown.</span></li>
+          <li><strong>Click Calculate.</strong><span>The page shows <code class="inline">Result: 30</code>, with no reload.</span></li>
+          <li><strong>Check the Network tab.</strong><span>Confirm the request went to <code class="inline">:8000</code>, status <code class="inline">200</code>.</span></li>
+          </ol>
+          <div class="callout">Try all four operations. Each one reuses the exact same <code class="inline">app.js</code> code — only the <code class="inline">op</code> value changes.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">32</div>
+        </div>
+      </section>
+
+      <section class="slide" id="try-divide-error">
+        <div class="slide-kicker">Part 5 · Full Calculator, End to End &middot; 5.4</div>
+        <h2 class="slide-title">Testing the divide-by-zero Error</h2>
+        <div class="slide-body">
+          <p class="intro">Now break it on purpose — the whole reason 3.8's error handling exists.</p>
+          <ol class="steps">
+          <li><strong>Enter 10 and 0.</strong><span>Choose "Divide" from the dropdown.</span></li>
+          <li><strong>Click Calculate.</strong><span>The page shows <code class="inline">Error: Cannot divide by zero</code>.</span></li>
+          <li><strong>Check the Network tab.</strong><span>Status <code class="inline">400</code>, response body <code class="inline">{"detail": "Cannot divide by zero"}</code>.</span></li>
+          </ol>
+          <div class="callout warn">No crash, no frozen page, no <code class="inline">Result: undefined</code> — the server's <code class="inline">HTTPException</code> (Session 1) and the client's <code class="inline">response.ok</code> check (3.8) are working together.</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">33</div>
+        </div>
+      </section>
+
+      <section class="slide" id="recap-flow">
+        <div class="slide-kicker">Part 5 · Full Calculator, End to End &middot; 5.5</div>
+        <h2 class="slide-title">Under the Hood: One Click, Recapped</h2>
+        <div class="slide-body">
+          <p class="intro">Everything this session built, in the order it actually runs on every click.</p>
+          <div class="flow-diagram">
+            <div class="flow-box"><div class="flow-title">🌐 Browser :5500</div><div class="flow-sub">index.html + app.js</div></div>
+            <div class="flow-arrow">
+              <span class="flow-arrow-label">fetch() request →</span>
+              <div class="flow-arrow-line"></div>
+              <span class="flow-arrow-label">← JSON response</span>
+            </div>
+            <div class="flow-box"><div class="flow-title">🖥️ Server :8000</div><div class="flow-sub">FastAPI + uvicorn</div></div>
+          </div>
+          <ul class="points">
+          <li><code class="inline">addEventListener</code> fires &rarr; <code class="inline">app.js</code> reads the three input values &rarr; builds the URL.</li>
+          <li><code class="inline">fetch()</code> crosses from port <code class="inline">5500</code> to port <code class="inline">8000</code> &mdash; allowed only because of <code class="inline">CORSMiddleware</code> (3.5).</li>
+          <li>FastAPI runs the matching function, returns a dictionary, which becomes the JSON body.</li>
+          <li><code class="inline">app.js</code> checks <code class="inline">response.ok</code>, then writes either the result or the error into <code class="inline">textContent</code>.</li>
+          </ul>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">34</div>
+        </div>
+      </section>
+
+      <section class="slide" id="recap">
+        <div class="slide-kicker">Recap</div>
+        <h2 class="slide-title">Key Takeaways</h2>
+        <div class="slide-body">
+          <div class="recap-grid">
+<div class="obj-card"><span class="obj-num">1</span>HTML describes structure — doctype, head, body, and elements with ids JavaScript can target.</div>
+<div class="obj-card"><span class="obj-num">2</span>JavaScript runs in the browser, on the visitor's machine — not on your server.</div>
+<div class="obj-card"><span class="obj-num">3</span><code class="inline">getElementById</code> + <code class="inline">.value</code> read what a user typed; remember to convert with <code class="inline">Number()</code>.</div>
+<div class="obj-card"><span class="obj-num">4</span><code class="inline">addEventListener</code> + <code class="inline">textContent</code> make a page interactive without ever reloading it.</div>
+<div class="obj-card"><span class="obj-num">5</span><code class="inline">fetch()</code> is the browser's client — the same role <code class="inline">requests</code> played in Python.</div>
+<div class="obj-card"><span class="obj-num">6</span>CORS blocks cross-origin requests by default; <code class="inline">CORSMiddleware</code> on the server allows them.</div>
+<div class="obj-card"><span class="obj-num">7</span><code class="inline">fetch()</code> doesn't reject on HTTP errors — always check <code class="inline">response.ok</code> and use <code class="inline">.catch()</code>.</div>
+<div class="obj-card"><span class="obj-num">8</span>The Network tab shows every request/response live — method, status code, and body.</div>
+<div class="obj-card"><span class="obj-num">9</span>Backend (uvicorn, :8000) and front-end (http.server, :5500) run as two separate processes, at once.</div>
+<div class="obj-card"><span class="obj-num">10</span>A full click cycle — DOM event → fetch → server → JSON → DOM update — is now a system you built yourself, end to end.</div>
+</div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini">
+            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
+            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+          </div>
+          <div class="slide-index">35</div>
+        </div>
+      </section>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

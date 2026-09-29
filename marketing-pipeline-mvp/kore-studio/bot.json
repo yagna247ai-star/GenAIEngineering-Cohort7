@@ -1,0 +1,16 @@
+{
+  "name": "Lead-to-Meeting Agent - Marketing Pipeline MVP",
+  "_id": "st-xxxx-xxxx-xxxx-marketing-pipeline-mvp",
+  "description": "UC1 Lead Capture & Qualification + UC3 Nurture. Built via D.A.R.E framework (Sandeep Swadia). Web Widget Only, success = Meetings Booked.",
+  "language": "en",
+  "type": "enterprise",
+  "platform": "Kore.ai XO Platform 11.x",
+  "channel": "web",
+  "sessions": { "idleTimeout": 300 },
+  "settings": {
+    "nlp": { "engine": "Kore.ai NLP v3", "confidenceThreshold": 0.7 },
+    "searchAI": { "indexId": "kb-marketing-pipeline", "threshold": 0.7, "sources": ["pricing.md", "faqs.md", "case-studies/*.pdf"] },
+    "agentAI": { "enabled": true, "goal": "book_meeting_or_nurture", "tools": ["score_lead", "create_crm_contact", "book_meeting", "send_nurture", "notify_slack"] }
+  },
+  "importInstructions": "Kore.ai XO Console > Bot Builder > Create New Bot > Import > select kore-studio/bot.json + dialogs/* + entities/* > Configure env KORE_BOT_ID, KORE_CLIENT_ID, KORE_CLIENT_SECRET > Upload KB to Search AI > Publish"
+}

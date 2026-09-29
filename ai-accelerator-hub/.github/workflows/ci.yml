@@ -1,0 +1,36 @@
+name: CI — AI Accelerator Hub Journalism Edition
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ai-accelerator-hub/package-lock.json
+      - name: Install (ai-accelerator-hub)
+        working-directory: ai-accelerator-hub
+        run: npm ci
+      - name: Lint (if available)
+        working-directory: ai-accelerator-hub
+        run: npm run lint --if-present
+      - name: Build production
+        working-directory: ai-accelerator-hub
+        run: npm run build
+      - name: Run durable tests
+        working-directory: ai-accelerator-hub
+        run: npm test -- --watch=false --browsers=ChromeHeadless --if-present
+      - name: Check 404 route
+        run: test -f ai-accelerator-hub/dist/ai-accelerator-hub/browser/index.html
+      - name: Docker build (VCA)
+        run: docker build -t ai-accelerator-hub:ci ai-accelerator-hub
+      - name: Docker health
+        run: docker run -d -p 8080:80 --name ci-hub ai-accelerator-hub:ci && sleep 3 && curl -sf http://localhost:8080/health | grep -q ok && docker rm -f ci-hub
