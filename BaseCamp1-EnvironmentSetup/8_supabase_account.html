@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Creating Your Supabase Account | GenAI Coaching — AI Accelerator Hub</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="Supabase gives you a free, hosted PostgreSQL database that lives online — plus ready-made login, file storage, and an automatic data API on top of it. It's t...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
+</head>
+<body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; Supabase</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#signup">1 &middot; Sign Up</a></li>
+        <li><a href="#org">2 &middot; Create an Organization</a></li>
+        <li><a href="#project">3 &middot; Create Your First Project</a></li>
+        <li><a href="#explore">4 &middot; Look Around</a></li>
+        <li><a href="#keys">5 &middot; Find Your URL &amp; Keys</a></li>
+        <li><a href="#freeplan">Free Plan Housekeeping</a></li>
+        <li><a href="#safety">Keeping Keys Safe</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#checklist">Setup Checklist</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Database Account</span>
+        <h1>Creating Your Supabase Account</h1>
+        <p class="lede">Supabase gives you a free, hosted PostgreSQL database that lives online &mdash; plus ready-made login, file storage, and an automatic data API on top of it. It's the natural next step after a database that lives only on your laptop: an online database keeps working when your app goes live. The account takes about fifteen minutes to set up, so do it now rather than during a live session.</p>
+        <div class="meta-row">
+          <span class="meta-pill">🗄️ Hosted PostgreSQL</span>
+          <span class="meta-pill">⏱ ~15 minutes</span>
+          <span class="meta-pill">Free plan is all you need</span>
+        </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="7_claude_code_opencode_new.html">← Prev</a>
+    <a class="genai-nav-next" href="9_llm_settings.html">Next →</a>
+  </span>
+</nav>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>An online database, free to start</h2>
+        <div class="topic">
+          <p>By the end of this page you'll have a Supabase account, an <strong>organization</strong> (the container that holds your projects), and one <strong>project</strong> &mdash; your own PostgreSQL database with its own web address and API keys. Here's what the <strong>Free plan</strong> includes:</p>
+          <table class="data-table">
+            <thead><tr><th>What you get</th><th>Free plan limit</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Free projects</strong></td><td>2 active projects (paused projects don't count toward the limit)</td></tr>
+              <tr><td><strong>Database size</strong></td><td>500 MB per project</td></tr>
+              <tr><td><strong>File storage</strong></td><td>1 GB</td></tr>
+              <tr><td><strong>Monthly active users</strong></td><td>50,000</td></tr>
+              <tr><td><strong>Inactivity</strong></td><td>A project with no activity for 1 week is paused (you can restore it &mdash; see below)</td></tr>
+            </tbody>
+          </table>
+          <p>Have these ready before you start:</p>
+          <ul class="checklist">
+            <li><span class="tick">✓</span> <span><strong>A personal email address</strong> you check regularly &mdash; or the GitHub account from the previous guide, if you'd rather sign in with it.</span></li>
+            <li><span class="tick">✓</span> <span><strong>A password manager</strong> (or a safe place). You'll create a database password and collect API keys that must not be lost or shared.</span></li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Stay on the Free plan</span>
+            The Free plan is plenty for learning and class projects. If any screen asks you to upgrade or enter payment details, stop and check that the <strong>Free</strong> plan is selected.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · An online database, free to start <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Supabase Free plan includes:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">2 active projects, 500 MB DB, 1 GB storage, 50k MAU</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Unlimited everything</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">No free plan</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Only 1 project, 10 MB</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;An online database, free to start&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU." data-feedback-wrong="Not quite — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 1 ============ -->
+      <section class="part" id="signup">
+        <div class="part-label">Step 1 of 5</div>
+        <h2>Sign Up</h2>
+        <div class="topic">
+          <div class="code-block">
+            <div class="code-label"><span>sign-up page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://supabase.com/dashboard/sign-up</code></pre>
+          </div>
+          <p>The sign-up page offers a few options. Pick <strong>one</strong>:</p>
+
+          <h3 style="margin-top:20px;">Option A &mdash; Email and password</h3>
+          <ol class="steps">
+            <li><strong>Enter your email address and a strong password</strong><span>Let your password manager generate the password. Make it unique &mdash; don't reuse one from another site.</span></li>
+            <li><strong>Click "Sign up"</strong><span>By continuing you agree to Supabase's Terms of Service and Privacy Policy.</span></li>
+            <li><strong>Confirm your email if asked</strong><span>Supabase may email you a confirmation link. Open it to activate the account &mdash; check spam or promotions if it doesn't arrive within a couple of minutes.</span></li>
+            <li><strong>Sign in</strong><span>Return to <code class="inline">supabase.com/dashboard</code> and sign in with the same email and password.</span></li>
+          </ol>
+
+          <h3 style="margin-top:20px;">Option B &mdash; Continue with GitHub</h3>
+          <ol class="steps">
+            <li><strong>Click "Continue with GitHub"</strong><span>Sign in to GitHub if you're asked to &mdash; use the account from the previous guide.</span></li>
+            <li><strong>Authorize Supabase</strong><span>GitHub shows what Supabase can access. Review it, then approve.</span></li>
+            <li><strong>You land in the Supabase dashboard</strong><span>No separate password to create or remember.</span></li>
+          </ol>
+
+          <div class="callout">
+            <span class="callout-title">Which option should I pick?</span>
+            <strong>GitHub</strong> is the quickest, and you'll use GitHub in the course anyway. The trade-off: your Supabase access then depends on your GitHub account, so keep your GitHub two-factor recovery codes safe. <strong>Email and password</strong> keeps the two accounts independent. Either works for everything that follows.
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Ignore the other buttons</span>
+            You may also see <strong>Continue with SSO</strong> (for companies with their own single sign-on) and <strong>Continue with ChatGPT</strong>. You don't need either for the fellowship.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="signup">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Sign Up <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Sign up via:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">GitHub OAuth or email at supabase.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Only AWS console</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Only VS Code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Only phone call</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Sign Up&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Signup section offers GitHub/email.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section offers GitHub/email." data-feedback-wrong="Not quite — Signup section offers GitHub/email.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 2 ============ -->
+      <section class="part" id="org">
+        <div class="part-label">Step 2 of 5</div>
+        <h2>Create an Organization</h2>
+        <div class="topic">
+          <p class="intro">Supabase groups projects inside an <strong>organization</strong>. On your first visit it asks you to create one.</p>
+          <ol class="steps">
+            <li><strong>Enter an organization name</strong><span>Your name works well, e.g. <code class="inline">Asha Rao</code>, or <code class="inline">AI Accelerator Hub-fellowship</code>.</span></li>
+            <li><strong>Choose the type that fits you</strong><span><strong>Personal</strong> (or the closest option offered) is right for coursework.</span></li>
+            <li><strong>Choose the Free plan</strong><span>Leave it on Free unless you have a specific reason to change it.</span></li>
+            <li><strong>Click "Create organization"</strong></li>
+          </ol>
+          <div class="callout">
+            If Supabase already created an organization for you when you signed in, you can use that one &mdash; skip ahead to Step 3.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="org">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Create an Organization <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Organization is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">Container that holds your projects</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">A Python package</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">A VS Code theme</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">A billing card</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Create an Organization&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">Org section says organization holds projects.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Org section says organization holds projects." data-feedback-wrong="Not quite — Org section says organization holds projects.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 3 ============ -->
+      <section class="part" id="project">
+        <div class="part-label">Step 3 of 5</div>
+        <h2>Create Your First Project</h2>
+        <div class="topic">
+          <p class="intro">A <strong>project</strong> is one PostgreSQL database plus its API, login system and file storage. Use <em>New project</em> in the dashboard, and select your organization if asked.</p>
+          <ol class="steps">
+            <li><strong>Project name</strong><span>Something you'll recognize, e.g. <code class="inline">AI Accelerator Hub-fellowship</code>. You can rename it later.</span></li>
+            <li><strong>Database password</strong><span>Click <strong>Generate a password</strong> and let Supabase create a strong one. <strong>Copy it into your password manager right now</strong> &mdash; you'll need it to connect to the database directly from code. You can reset it later if you lose it, but it's much easier to save it now.</span></li>
+            <li><strong>Region</strong><span>Pick the region closest to you, or the one your instructor names. It's where your database physically lives, and it can't easily be changed later.</span></li>
+            <li><strong>Click "Create new project"</strong><span>Supabase takes a couple of minutes to set everything up. Wait for the dashboard to finish loading &mdash; don't close the tab.</span></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-title">Save the database password first</span>
+            It's shown while you fill in the form. Store it before you click Create &mdash; it's not something Supabase will show you again on a normal screen.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="project">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Create Your First Project <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Creating a project requires:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Name, database password, region</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Only email</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Only API key</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Only GitHub username</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Create Your First Project&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Project section needs name, password, region.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Project section needs name, password, region." data-feedback-wrong="Not quite — Project section needs name, password, region.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 4 ============ -->
+      <section class="part" id="explore">
+        <div class="part-label">Step 4 of 5</div>
+        <h2>Look Around &amp; Prove It Works</h2>
+        <div class="topic">
+          <p class="intro">When the project is ready, the left-hand menu shows the parts you'll use most:</p>
+          <ul class="points">
+            <li><strong>Table Editor</strong> &mdash; your tables as a spreadsheet you can click through. It's empty for now.</li>
+            <li><strong>SQL Editor</strong> &mdash; a place to run SQL commands against your database.</li>
+            <li><strong>Authentication</strong> &mdash; ready-made user sign-up and login.</li>
+            <li><strong>Storage</strong> &mdash; places to keep files and photos.</li>
+            <li><strong>Project Settings</strong> &mdash; keys, database settings and billing for this project.</li>
+          </ul>
+          <p>Prove the database is alive with one command:</p>
+          <ol class="steps">
+            <li><strong>Open the SQL Editor</strong><span>From the left-hand menu.</span></li>
+            <li><strong>Paste this into a new query and run it</strong><span>Use the Run button.</span></li>
+          </ol>
+          <div class="code-block">
+            <div class="code-label"><span>SQL Editor</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">select version();</code></pre>
+          </div>
+          <p>The result panel shows a line beginning <code class="inline">PostgreSQL</code> followed by a version number. That means you have a working, online database.</p>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="explore">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Look Around &amp; Prove It Works <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Explore proves:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Table Editor, SQL Editor, API docs work</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Only theme change</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Only Python version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Only GitHub push</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Look Around &amp; Prove It Works&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Explore section shows Table/SQL editors.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explore section shows Table/SQL editors." data-feedback-wrong="Not quite — Explore section shows Table/SQL editors.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 5 ============ -->
+      <section class="part" id="keys">
+        <div class="part-label">Step 5 of 5</div>
+        <h2>Find Your Project URL &amp; API Keys</h2>
+        <div class="topic">
+          <p class="intro">Apps talk to your project using its web address and an API key. You'll collect them now so they're ready when the time comes.</p>
+          <ol class="steps">
+            <li><strong>Click "Connect" at the top of the dashboard</strong><span>The Connect panel shows your <strong>Project URL</strong> &mdash; it looks like <code class="inline">https://abcdefghijkl.supabase.co</code> &mdash; and the key to use.</span></li>
+            <li><strong>Or open Project Settings &rarr; API Keys</strong><span>Every key lives on this page. There's no separate "API" settings page.</span></li>
+            <li><strong>Copy your Project URL and both keys into your password manager</strong><span>Label each one clearly so you never mix them up.</span></li>
+          </ol>
+          <table class="data-table">
+            <thead><tr><th>Key</th><th>Looks like</th><th>Where it may be used</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Publishable key</strong></td><td><code class="inline">sb_publishable_&hellip;</code></td><td>Safe in a browser or front-end app. It only works within the access rules you set on your tables (Row Level Security).</td></tr>
+              <tr><td><strong>Secret key</strong></td><td><code class="inline">sb_secret_&hellip;</code></td><td><strong>Servers only.</strong> It bypasses all access rules. Never put it in front-end code, a browser, or GitHub.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn">
+            <span class="callout-title">Old key names</span>
+            You may also see keys called <code class="inline">anon</code> and <code class="inline">service_role</code>. These are the older versions of the publishable and secret keys, and Supabase is retiring them by the end of 2026. Prefer the <code class="inline">sb_publishable_&hellip;</code> and <code class="inline">sb_secret_&hellip;</code> keys wherever you have the choice.
+          </div>
+          <p>When you're ready to use them in a project, keep them in the same <code class="inline">.env</code> file as your other keys. Add these lines (these names are a common convention, so they'll be easy to recognize later):</p>
+          <div class="code-block">
+            <div class="code-label"><span>.env</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key_here
+SUPABASE_SECRET_KEY=sb_secret_your_key_here
+SUPABASE_DB_PASSWORD=your_database_password_here</code></pre>
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="keys">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Find Your Project URL &amp; API Keys <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Keys are at:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">Project Settings → API → URL &amp; anon/service_role keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">GitHub settings</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">AWS console</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">VS Code settings</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Find Your Project URL &amp; API Keys&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">Keys section points to Project Settings → API.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Keys section points to Project Settings → API." data-feedback-wrong="Not quite — Keys section points to Project Settings → API.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ FREE PLAN ============ -->
+      <section class="part" id="freeplan">
+        <div class="part-label">Good to know</div>
+        <h2>Free Plan Housekeeping</h2>
+        <div class="topic">
+          <ul class="points">
+            <li><strong>Inactive projects pause after 1 week.</strong> If nobody uses your project for a week, Supabase pauses it to save resources. Open it and use it (or just visit its dashboard) at least once a week while you're in the fellowship.</li>
+            <li><strong>Paused doesn't mean deleted.</strong> A paused Free project can be restored with a single click from its dashboard page for 90 days after it was paused. After that window you can still download a backup of your data, but you can no longer restore it in place.</li>
+            <li><strong>Two free projects at a time.</strong> Paused projects don't count toward the limit. If you hit it, pause or delete one you no longer need.</li>
+          </ul>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="freeplan">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Free Plan Housekeeping <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Free plan housekeeping warns:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Projects pause after inactivity — resume needed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">No limits</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Auto-deletes forever</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">No warning</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Free Plan Housekeeping&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Freeplan warns about auto-pause.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Freeplan warns about auto-pause." data-feedback-wrong="Not quite — Freeplan warns about auto-pause.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ SAFETY ============ -->
+      <section class="part" id="safety">
+        <div class="part-label">Before you move on</div>
+        <h2>Keeping Your Keys Safe</h2>
+        <div class="topic">
+          <p>A Supabase project has three secrets. Treat the last two like passwords:</p>
+          <ul class="points">
+            <li><strong>Publishable key:</strong> designed to be visible in a web page. Even so, it only protects you if you set up Row Level Security on your tables &mdash; you'll cover that when you start building.</li>
+            <li><strong>Secret key:</strong> full access to your data. Use it only in back-end code that runs on your server, loaded from <code class="inline">.env</code>. Supabase's own docs note it won't even work from a browser &mdash; a request from one is rejected. Anything in a front-end file such as <code class="inline">app.js</code> is public, so it must never go there.</li>
+            <li><strong>Database password:</strong> lets anyone who has it connect straight to your database. Keep it in your password manager and <code class="inline">.env</code> only.</li>
+          </ul>
+          <ul class="points">
+            <li>Never paste any of these into Slack, email, chat messages, or a GitHub repository. Keep <code class="inline">.env</code> out of version control.</li>
+            <li>If a secret key leaks, create a new one on the <em>Project Settings &rarr; API Keys</em> page and delete the old one straight away. If the database password leaks, reset it in the project's database settings.</li>
+          </ul>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="safety">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Keeping Your Keys Safe <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Service_role key is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Secret — never expose in frontend; anon is public but RLS-protected</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Same as anon, safe anywhere</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Not needed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Only for VS Code</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Keeping Your Keys Safe&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Safety distinguishes anon vs service_role.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety distinguishes anon vs service_role." data-feedback-wrong="Not quite — Safety distinguishes anon vs service_role.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ TROUBLESHOOTING ============ -->
+      <section class="part" id="troubleshooting">
+        <div class="part-label">Troubleshooting</div>
+        <h2>If Something Goes Wrong</h2>
+        <div class="topic">
+          <ul class="points">
+            <li><strong>No confirmation email:</strong> check spam and promotions, wait a couple of minutes, and confirm you typed the address correctly. If it still doesn't arrive, tell your instructor, or use the GitHub option instead.</li>
+            <li><strong>Project stuck on "setting up":</strong> project creation takes a couple of minutes. Keep the tab open and wait. If it hasn't finished after ten minutes, refresh the page.</li>
+            <li><strong>Can't create a new project:</strong> you've probably reached the limit of two free projects. Pause or delete one you don't need.</li>
+            <li><strong>Project shows as paused:</strong> open its dashboard page and use the restore option. You have 90 days from when it was paused.</li>
+            <li><strong>Lost the database password:</strong> reset it from the project's database settings, then update your password manager and <code class="inline">.env</code>.</li>
+            <li><strong>Can't find the keys:</strong> use the <strong>Connect</strong> button at the top of the dashboard, or <em>Project Settings &rarr; API Keys</em>.</li>
+            <li><strong>Signed in with GitHub and can't get back in:</strong> the problem is with GitHub sign-in, not Supabase. Check your GitHub account and 2FA first.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Still stuck?</span>
+            Tell your instructor before Base Camp 2. Describe the message you see &mdash; and never share your database password or secret key when asking for help.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="troubleshooting">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · If Something Goes Wrong <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Troubleshooting covers:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Project creation fails, password, region, email</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Only Python PATH</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Only theme</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Only AWS budget</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;If Something Goes Wrong&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Troubleshooting lists Supabase issues.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists Supabase issues." data-feedback-wrong="Not quite — Troubleshooting lists Supabase issues.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>Supabase Setup &mdash; Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> You have a Supabase account and can sign in to the dashboard</li>
+            <li><span class="tick">✓</span> You have an organization on the Free plan</li>
+            <li><span class="tick">✓</span> You created a project and it finished setting up</li>
+            <li><span class="tick">✓</span> <code class="inline">select version();</code> in the SQL Editor returned a PostgreSQL version</li>
+            <li><span class="tick">✓</span> Your database password is saved in a password manager</li>
+            <li><span class="tick">✓</span> You've saved your Project URL, publishable key and secret key &mdash; labelled, and not shared</li>
+            <li><span class="tick">✓</span> You know the project pauses after a week of inactivity, and how to restore it</li>
+          </ul>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Supabase Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Final check confirms:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Account, org, project, URL+keys saved</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Only Python install</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Only GitHub 2FA</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Only AWS MFA</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Supabase Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Checklist confirms Supabase ready.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms Supabase ready." data-feedback-wrong="Not quite — Checklist confirms Supabase ready.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — Supabase — Project URL</h3><p>Paste your Supabase project URL format. The page says find it under Project Settings → API.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="https://abcdefgh.supabase.co" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^https://[A-Za-z0-9-]+\.supabase\.co\s*$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+        </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: https://YOUR-PROJECT.supabase.co</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+      </footer>
+    </div>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 9 Llm Settings</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="7_claude_code_opencode_new.html">← Previous</a>
+    <a class="genai-nav-next" href="9_llm_settings.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
+</body>
+</html>

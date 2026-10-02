@@ -43,9 +43,9 @@ import { PILLARS, TOPICS } from '../../core/data';
           </article>
         }
       </div>
-      <div class="count">Showing {{filtered().length}} of 105 sections • Foundations → Leadership — more appropriate than Outskill’s “105 clear sections, ready in any order.” — each now with outcome + try-it.</div>
+      <div class="count">Showing {{filtered().length}} of 105 sections • Foundations → Leadership — more appropriate than AI Accelerator Hub’s “105 clear sections, ready in any order.” — each now with outcome + try-it.</div>
 
-      <div class="note">Research: Outskill’s “105 clear sections, ready in any order.” is generic. Journalism Edition is more appropriate: every topic now carries a journalist job, an outcome you can demonstrate, and a 10-minute try-it that produces proof — Kajabi-grade hierarchy, not gray-400.</div>
+      <div class="note">Research: AI Accelerator Hub’s “105 clear sections, ready in any order.” is generic. Journalism Edition is more appropriate: every topic now carries a journalist job, an outcome you can demonstrate, and a 10-minute try-it that produces proof — Kajabi-grade hierarchy, not gray-400.</div>
     </div>
   `,
   styles: [`

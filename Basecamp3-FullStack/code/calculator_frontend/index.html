@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator | GenAI Coaching — AI Accelerator Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta property="og:image" content="assets/genai-coaching-logo.svg" />
+  <link rel="stylesheet" href="assets/genai-brand.css" />
+  <link rel="stylesheet" href="assets/genai-gamify.css" />
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+  
+  <header style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #E8E0C8;margin-bottom:16px;background:#fff">
+    <a href="../../.." style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <img src="../../assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" width="28" height="28" style="border-radius:8px;display:block" onerror="this.src='assets/genai-coaching-emblem.svg'" />
+      <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A;line-height:1">GEN AI<br/>COACHING</span>
+    </a>
+    <span style="margin-left:auto;display:inline-flex;align-items:center;background:#0A0A0A;color:#C9A86A;font-weight:700;font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid #0A0A0A">ELITE <span style="margin-left:6px;color:#fff;font-weight:600">Calculator</span></span>
+  </header>
+  <div class="genai-progress-wrap" aria-label="Course progress" style="max-width:560px;margin:8px auto"><div class="genai-progress-track" aria-hidden="true" style="flex:1;height:8px;background:#e2f5ea;border:1px solid #E8E0C8;border-radius:999px;overflow:hidden"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
+  
+  <main id="main-content" style="max-width:560px;margin:0 auto;padding:0 16px">
+  
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="../../app_idea_blueprint.html">← Prev</a>
+    <a class="genai-nav-next" href="../../../Week1-CodeAssistants/1_opencode_introduction.html">Next →</a>
+  </span>
+</nav>
+<h1>Calculator</h1>
+
+  <label for="a">First number</label>
+  <input type="number" id="a" /><br/>
+  <label for="b">Second number</label>
+  <input type="number" id="b" /><br/>
+  <label for="op">Operation</label>
+  <select id="op">
+    <option value="add">Add</option>
+    <option value="subtract">Subtract</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+  </select><br/>
+  <button id="calcBtn">Calculate</button>
+
+  <div id="result" role="status" aria-live="polite"></div>
+  <div id="genai-challenge" style="margin-top:24px;border:1px solid #E8E0C8;border-radius:10px;background:#f2f9f6;padding:16px 18px">
+    <div style="display:flex;align-items:center;gap:8px;font-weight:700;color:#0A0A0A"><img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" width="18" height="18" style="border-radius:4px" onerror="this.src='../../assets/genai-coaching-emblem.svg'" /> GenAI Challenge — Solve 3 to unlock Elite badge <span class="genai-xp-badge" style="margin-left:auto">XP <strong id="challenge-xp">0</strong></span></div>
+    <p style="font-size:13px;color:#536b64;margin:6px 0 12px">Use the calculator above. Each correct calculation counts — solve 3 in a row without error.</p>
+    <div id="challenge-status" style="font-size:14px;color:#0e1f1c;min-height:20px"></div>
+    <div id="challenge-badge" style="display:none;margin-top:10px;padding:10px 14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:999px;text-align:center;font-weight:800;color:#0A0A0A">✓ ELITE BADGE UNLOCKED</div>
+  </div>
+  
+
+<section class="genai-quiz" style="margin:24px 0;padding:18px;border:1px solid #E8E0C8;border-radius:12px;background:#FFFBF0">
+  <div style="font-weight:800;color:#0A0A0A;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:16px;height:16px"> Elite Lab — Calculator API</div>
+  <p style="margin:0 0 10px;color:#6B6B6B;font-size:14px">Verify your FastAPI calculator handles all 4 operations and error cases. Complete 3 calculations to earn <strong style="color:#C9A86A">+50 XP</strong>.</p>
+  <div style="display:grid;gap:8px">
+    <label style="font-size:13px;font-weight:600">Try: 12 / 4 = <input id="lab-answer" placeholder="3" style="margin-left:8px;padding:6px 10px;border:1px solid #E8E0C8;border-radius:8px;width:80px"></label>
+    <button onclick="document.getElementById('lab-answer').value==='3' ? (this.textContent='✓ Elite Unlocked +50 XP',this.style.background='#C9A86A',this.style.color='#0A0A0A') : (this.textContent='Try again — hint: 12 divided by 4')" style="padding:8px 14px;background:#0A0A0A;color:#C9A86A;border:1px solid #0A0A0A;border-radius:999px;font-weight:700;cursor:pointer;width:fit-content">Check Answer</button>
+  </div>
+</section>
+
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 1 Opencode Introduction</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="../../app_idea_blueprint.html">← Previous</a>
+    <a class="genai-nav-next" href="../../../Week1-CodeAssistants/1_opencode_introduction.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+  <footer class="site-footer genai-footer" style="border-top:1px solid #E8E0C8;padding-top:18px;margin-top:32px;max-width:560px;margin-left:auto;margin-right:auto">
+    <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+      <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching" onerror="this.src='../../assets/genai-coaching-logo.svg'" />
+      <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+      <span class="footer-sep" style="color:#E8E0C8">|</span>
+      <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px" onerror="this.src='../../assets/ai-accelerator-hub-logo.svg'" />
+    </div>
+    <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+  </footer>
+
+
+  <script src="app.js"></script>
+
+<script src="assets/genai-gamify.js" onerror="var s=document.createElement('script');s.src='../../assets/genai-gamify.js';document.body.appendChild(s)"></script>
+<script>
+(function(){
+  var aEl=document.getElementById('a'), bEl=document.getElementById('b'), opEl=document.getElementById('op'), resEl=document.getElementById('result');
+  var status=document.getElementById('challenge-status'), badge=document.getElementById('challenge-badge'), xpEl=document.getElementById('challenge-xp');
+  var progFill=document.querySelector('.genai-progress-fill'); var topProg=document.querySelector('.genai-progress');
+  var xpBadge=document.querySelector('.genai-xp-badge strong');
+  var count=0; var target=3;
+  function compute(a,b,op){ a=Number(a); b=Number(b); if(op==='add') return a+b; if(op==='subtract') return a-b; if(op==='multiply') return a*b; if(op==='divide') return b===0?null:a/b; return null; }
+  function updateProgress(){ var pct=Math.round((count/target)*100); if(progFill) progFill.style.width=pct+'%'; if(topProg){ topProg.style.width=pct+'%'; topProg.setAttribute('aria-valuenow',String(pct)); } }
+  // Observe result changes
+  var lastResult=null;
+  var observer = new MutationObserver(function(){
+    var text=(resEl.textContent||'').trim();
+    if(text===lastResult) return;
+    lastResult=text;
+    if(text.startsWith('Result:')){
+      var a=aEl.value, b=bEl.value, op=opEl.value;
+      var expected=compute(a,b,op);
+      var shown=Number(text.replace('Result:','').trim());
+      if(expected!==null && Math.abs(shown-expected) < 0.0001){
+        count++; updateProgress();
+        status.textContent='Correct '+count+'/'+target+' — '+text;
+        status.style.color='#0e1f1c';
+        if(xpEl) xpEl.textContent=String(count*25);
+        try{ if(xpBadge){ var n=parseInt(xpBadge.textContent||'0',10)+25; xpBadge.textContent=String(n);} }catch(e){}
+        var toast=document.querySelector('.genai-xp-toast'); if(!toast){ toast=document.createElement('div'); toast.className='genai-xp-toast'; document.body.appendChild(toast);} toast.textContent='+25 XP'; toast.classList.add('is-visible'); setTimeout(function(){toast.classList.remove('is-visible')},2200);
+        if(count>=target){
+          badge.style.display='block';
+          status.textContent='All 3 solved — Elite badge unlocked! +75 XP';
+          status.style.color='#1f8756';
+        }
+      } else {
+        status.textContent='Not quite — expected Result: '+expected+' ('+text+')';
+        status.style.color='#8a5a00';
+      }
+    } else if(text.startsWith('Error:')){
+      status.textContent=text+' — fix and try again';
+      status.style.color='#8a1c1c';
+      count=0; updateProgress(); if(xpEl) xpEl.textContent='0';
+    }
+  });
+  if(resEl) observer.observe(resEl,{childList:true,characterData:true,subtree:true});
+  // ensure fill initial
+  updateProgress();
+})();
+</script>
+
+</body>
+</html>

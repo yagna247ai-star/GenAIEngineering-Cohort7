@@ -11,7 +11,7 @@ import { Component, signal, computed } from '@angular/core';
         <div class="eyebrow"><i></i> AI ACCELERATOR HUB — JOURNALISM EDITION</div>
         <div class="kicker">For investigative reporters, editors & newsroom operators</div>
         <h1>Verify first.<br><em>Accelerate second.</em></h1>
-        <p class="lead">Outskill’s Generative AI Learning Portal, re-engineered for journalism. A rigorous, source-first curriculum — from the AI Generalist Toolkit to newsroom agents — with editorial guardrails. Not tool tourism. <b>Proof you can publish.</b></p>
+        <p class="lead">AI Accelerator Hub’s Generative AI Learning Portal, re-engineered for journalism. A rigorous, source-first curriculum — from the AI Generalist Toolkit to newsroom agents — with editorial guardrails. Not tool tourism. <b>Proof you can publish.</b></p>
         <div class="hero-actions">
           <button class="primary-action" (click)="scrollTo('my-roadmap')">Create my newsroom roadmap <span>→</span></button>
           <button class="quiet-action" (click)="scrollTo('learning-topics')">Explore 105 sections</button>
@@ -19,7 +19,7 @@ import { Component, signal, computed } from '@angular/core';
         <div class="trust-row">
           <span>◷ 10–15 min onboarding</span><span>• Beginner-friendly</span><span>• Change answers anytime</span><span>• Editorial standards desk</span>
         </div>
-        <div class="quote">“Learn deeply. Build bravely.” <small>— Outskill principle, newsroom-hardened</small></div>
+        <div class="quote">“Learn deeply. Build bravely.” <small>— AI Accelerator Hub principle, newsroom-hardened</small></div>
       </div>
       <div class="hero-panel">
         <div class="eyebrow gold"><i></i> YOUR JOURNEY PREVIEW</div>

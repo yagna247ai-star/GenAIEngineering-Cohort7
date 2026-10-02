@@ -3,18 +3,35 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Python Fundamentals — Slides | Outskill AI Fellowship</title>
+<title>Python Fundamentals — Slides | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="assets/slides.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:image" content="assets/genai-coaching-logo.svg" />
+<link rel="stylesheet" href="assets/genai-brand.css" />
+<link rel="stylesheet" href="assets/genai-gamify.css" />
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="1_python_refresher.html">← Prev</a>
+    <a class="genai-nav-next" href="1_python_slides.html">Next →</a>
+  </span>
+</nav>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="genai-brand-lockup"><img src="assets/genai-coaching-emblem.svg" class="genai-brand-logo" alt="GenAI Coaching emblem" width="28" height="28" /><div class="genai-brand-wordmark">GEN <span>AI</span><br/>COACHING</div></div>
+    <div class="genai-brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-progress-wrap" aria-label="Course progress"><div class="genai-progress-track" aria-hidden="true"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
 
     <h4>Base Camp 2 &middot; Week 1 &middot; Session 1</h4>
     <nav>
@@ -69,9 +86,10 @@
     </nav>
   </aside>
 
-  <main class="slide-main">
+  <main class="slide-main" id="main-content">
     <div class="slide-stage">
       <div class="slide-toolbar">
+        <img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching" width="22" height="22" style="border-radius:6px;display:inline-block;vertical-align:middle;margin-right:8px" />
         <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">35</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
         <div class="slide-nav-btns">
           <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
@@ -80,7 +98,7 @@
       </div>
       <div class="slide-viewport">
       <section class="slide slide-hero" id="title">
-        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Base Camp 2 · Week 1 · Session 1</div>
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> Base Camp 2 · Week 1 · Session 1</div>
         <h1>Python Fundamentals</h1>
         <p class="lede">Variables & built-ins · strings · data structures · branching, looping & comprehensions · functions. Everything runs in plain Python inside Jupyter — no installs, no imports, no virtual environments. Every snippet below is copy-paste ready.</p>
         <div class="meta-row">
@@ -89,12 +107,16 @@
 </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">01</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="agenda">
         <div class="slide-kicker">Session Agenda</div>
@@ -113,12 +135,16 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">02</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="objectives">
         <div class="slide-kicker">Learning Objectives</div>
@@ -135,12 +161,16 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">03</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="variables">
         <div class="slide-kicker">Part 1 · Getting Started &middot; 1.1</div>
@@ -166,8 +196,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">04</div>
         </div>
@@ -204,8 +234,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">05</div>
         </div>
@@ -237,10 +267,29 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">06</div>
+        </div>
+      </section>
+      <section class="slide genai-quiz-slide" id="genai-quiz-1">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Quick Check</div>
+        <h2 class="slide-title">Quick Check</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-1">
+            <p class="genai-quiz-q">Given <code>age = 27</code> then <code>age = 28</code>, what does <code>print(age)</code> output?</p>
+            <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">28</button>
+<button type="button" class="genai-quiz-option" data-correct="false">27</button>
+<button type="button" class="genai-quiz-option" data-correct="false">Error</button>
+<button type="button" class="genai-quiz-option" data-correct="false">27 28</button>
+</div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Quiz</div>
         </div>
       </section>
 
@@ -250,7 +299,7 @@
         <div class="slide-body">
           <div class="code-block">
           <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
-          <pre><code class="language-python">message = "Hello, AI Fellowship!"
+          <pre><code class="language-python">message = "Hello, AI Accelerator Hub!"
           print(message)
           print(len(message))</code></pre>
           </div>
@@ -261,8 +310,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">07</div>
         </div>
@@ -293,8 +342,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">08</div>
         </div>
@@ -322,8 +371,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">09</div>
         </div>
@@ -359,8 +408,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">10</div>
         </div>
@@ -386,8 +435,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">11</div>
         </div>
@@ -421,10 +470,29 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">12</div>
+        </div>
+      </section>
+      <section class="slide genai-quiz-slide" id="genai-quiz-2">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Quick Check</div>
+        <h2 class="slide-title">Quick Check</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-2">
+            <p class="genai-quiz-q">With <code>a=15, b=4</code>, what is <code>a // b</code>?</p>
+            <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">3</button>
+<button type="button" class="genai-quiz-option" data-correct="false">3.75</button>
+<button type="button" class="genai-quiz-option" data-correct="false">4</button>
+<button type="button" class="genai-quiz-option" data-correct="false">3.0</button>
+</div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Quiz</div>
         </div>
       </section>
 
@@ -449,8 +517,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">13</div>
         </div>
@@ -486,8 +554,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">14</div>
         </div>
@@ -517,8 +585,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">15</div>
         </div>
@@ -550,8 +618,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">16</div>
         </div>
@@ -579,8 +647,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">17</div>
         </div>
@@ -603,10 +671,29 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">18</div>
+        </div>
+      </section>
+      <section class="slide genai-quiz-slide" id="genai-quiz-3">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Quick Check</div>
+        <h2 class="slide-title">Quick Check</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-3">
+            <p class="genai-quiz-q">For <code>course="AI Engineering"</code>, what does <code>course[0]</code> return?</p>
+            <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">"A"</button>
+<button type="button" class="genai-quiz-option" data-correct="false">"AI"</button>
+<button type="button" class="genai-quiz-option" data-correct="false">"g"</button>
+<button type="button" class="genai-quiz-option" data-correct="false">Error</button>
+</div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Quiz</div>
         </div>
       </section>
 
@@ -640,8 +727,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">19</div>
         </div>
@@ -670,8 +757,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">20</div>
         </div>
@@ -700,8 +787,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">21</div>
         </div>
@@ -726,8 +813,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">22</div>
         </div>
@@ -756,8 +843,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">23</div>
         </div>
@@ -787,10 +874,29 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">24</div>
+        </div>
+      </section>
+      <section class="slide genai-quiz-slide" id="genai-quiz-4">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Quick Check</div>
+        <h2 class="slide-title">Quick Check</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-4">
+            <p class="genai-quiz-q">What does <code>fruits[1:3]</code> return?</p>
+            <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">["banana","cherry"]</button>
+<button type="button" class="genai-quiz-option" data-correct="false">["apple","banana"]</button>
+<button type="button" class="genai-quiz-option" data-correct="false">["cherry","date"]</button>
+<button type="button" class="genai-quiz-option" data-correct="false">["banana"]</button>
+</div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Quiz</div>
         </div>
       </section>
 
@@ -818,8 +924,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">25</div>
         </div>
@@ -843,8 +949,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">26</div>
         </div>
@@ -870,8 +976,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">27</div>
         </div>
@@ -897,8 +1003,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">28</div>
         </div>
@@ -923,8 +1029,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">29</div>
         </div>
@@ -950,10 +1056,29 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">30</div>
+        </div>
+      </section>
+      <section class="slide genai-quiz-slide" id="genai-quiz-5">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Quick Check</div>
+        <h2 class="slide-title">Quick Check</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-5">
+            <p class="genai-quiz-q">What does <code>is_even(4)</code> return?</p>
+            <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">True</button>
+<button type="button" class="genai-quiz-option" data-correct="false">False</button>
+<button type="button" class="genai-quiz-option" data-correct="false">4</button>
+<button type="button" class="genai-quiz-option" data-correct="false">None</button>
+</div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Quiz</div>
         </div>
       </section>
 
@@ -977,8 +1102,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">31</div>
         </div>
@@ -1016,8 +1141,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">32</div>
         </div>
@@ -1040,8 +1165,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">33</div>
         </div>
@@ -1063,8 +1188,8 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">34</div>
         </div>
@@ -1084,16 +1209,61 @@
         </div>
         <div class="slide-footer">
           <div class="brand-mini">
-            <img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>
-            OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL
+            <img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />
+            GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub
           </div>
           <div class="slide-index">35</div>
+        </div>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
+      <section class="slide genai-lab-slide" id="elite-lab">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Elite Practice Lab</div>
+        <h2 class="slide-title">Elite Practice Lab — Fill the Output</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" style="padding:0;border:none;background:transparent;">
+            <div class="code-block"><div class="code-label"><span>python</span></div><pre><code class="language-python">student = "Maria"
+score = 92.5
+print(f"{student} scored {score:.0f} points in the quiz.")</code></pre></div>
+            <p>What prints? Type exact output:</p>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer="Maria scored 92 points in the quiz." data-regex="^Maria scored 92 points in the quiz\.$" placeholder="Maria scored ..." style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+            <div class="code-block" style="margin-top:18px;"><div class="code-label"><span>python</span></div><pre><code class="language-python">fruits = ["apple", "banana", "cherry", "date"]
+print(fruits[1:3])</code></pre></div>
+            <p>What list prints? Type exact literal:</p>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer="['banana', 'cherry']" data-regex="^\[\'banana\',\s*\'cherry\'\]$" placeholder="['banana', 'cherry']" style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
+          <div class="slide-index">Lab</div>
         </div>
       </section>
 
       </div>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 1 Python Slides</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="1_python_refresher.html">← Previous</a>
+    <a class="genai-nav-next" href="1_python_slides.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -1101,5 +1271,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/slides.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('[data-lab-check]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wrap = btn.closest('.genai-lab-input-wrap');
+      var input = wrap.querySelector('.genai-lab-input');
+      var feedback = wrap.querySelector('.genai-quiz-feedback');
+      if(!input || !feedback) return;
+      var val = input.value.trim();
+      var expected = input.getAttribute('data-answer')||'';
+      var regexStr = input.getAttribute('data-regex');
+      var ok = false;
+      if(regexStr){
+        try{ var re = new RegExp(regexStr); ok = re.test(val); }catch(e){ ok = val===expected; }
+      } else { ok = val===expected; }
+      feedback.classList.add('is-visible');
+      if(ok){
+        feedback.textContent='Correct! +25 XP';
+        feedback.className='genai-quiz-feedback is-visible is-correct';
+        input.style.borderColor='#C9A86A';
+        try{ var badge = document.querySelector('.genai-xp-badge strong'); if(badge){ var n = parseInt(badge.textContent||'0',10)+25; badge.textContent=String(n); } }catch(e){}
+        btn.disabled=true; input.disabled=true;
+        var toast = document.querySelector('.genai-xp-toast'); if(toast){ toast.textContent='+25 XP  lab'; toast.classList.add('is-visible'); setTimeout(function(){toast.classList.remove('is-visible')},2200); }
+      } else {
+        feedback.textContent='Not quite \u2014 check exact output including punctuation and spacing.';
+        feedback.className='genai-quiz-feedback is-visible is-wrong';
+        input.style.borderColor='#e0a800';
+      }
+    });
+  });
+  document.querySelectorAll('.genai-lab-input').forEach(function(inp){
+    inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); var b=inp.closest('.genai-lab-input-wrap').querySelector('[data-lab-check]'); if(b) b.click(); }});
+  });
+})();
+</script>
+<script src="assets/genai-gamify.js"></script>
 </body>
 </html>

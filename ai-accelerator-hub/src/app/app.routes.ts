@@ -11,7 +11,7 @@ export const routes: Routes = [
   { path: 'roadmap', loadComponent: () => import('./features/roadmap/roadmap.component').then(m => m.RoadmapComponent) },
   { path: 'glossary', loadComponent: () => import('./features/glossary/glossary.component').then(m => m.GlossaryComponent) },
   { path: 'stuck', loadComponent: () => import('./features/stuck/stuck.component').then(m => m.StuckComponent) },
-  // Session 01 — preserves exact Outskill deep-link hash as a dedicated page
+  // Session 01 — preserves exact AI Accelerator Hub deep-link hash as a dedicated page
   { path: 'session/foundations', loadComponent: () => import('./features/session/session.component').then(m => m.SessionComponent) },
   { path: '404', loadComponent: () => import('./features/not-found/not-found.component').then(m => m.NotFoundComponent) },
   { path: '**', redirectTo: '404' }

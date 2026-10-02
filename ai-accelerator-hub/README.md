@@ -1,13 +1,13 @@
 # AI Accelerator Hub — Enterprise AI Learning Portal
 
-Black & Gold rebrand of the Outskill Generative AI Learning Portal, rebuilt as a production-grade Angular 20 application.
+Black & Gold rebrand of the AI Accelerator Hub Generative AI Learning Portal, rebuilt as a production-grade Angular 20 application.
 
 ## Brand
 - **Name:** AI Accelerator Hub
 - **Theme:** Black (#0A0A0B) + Gold (#D4AF37) — enterprise, editorial, high-contrast
 - **Tagline:** Your AI Learning OS — Learn deeply. Build bravely.
 
-## Parity — Every Outskill section replicated
+## Parity — Every AI Accelerator Hub section replicated
 1. **Sidebar + Topbar** — Fixed nav (Your Journey / Library / Support), progress, search ⌘K, guardrail badge
 2. **Hero** — "A clear AI roadmap, built around you" with personalized CTA + 10–15 min onboarding notes
 3. **Journey Preview** — 01 Discover / 02 Focus / 03 Build + stats (105 / 5 / 6 / 5)

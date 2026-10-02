@@ -3,18 +3,35 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Full-Stack Build with OpenCode — Slides | Outskill AI Fellowship</title>
+<title>Full-Stack Build with OpenCode — Slides | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="assets/slides.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;} .mermaid{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;justify-content:center;}</style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:image" content="assets/genai-coaching-logo.svg" />
+<link rel="stylesheet" href="assets/genai-brand.css" />
+<link rel="stylesheet" href="assets/genai-gamify.css" />
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="1_opencode_introduction.html">← Prev</a>
+    <a class="genai-nav-next" href="../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html">Next →</a>
+  </span>
+</nav>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="genai-brand-lockup"><img src="assets/genai-coaching-emblem.svg" class="genai-brand-logo" alt="GenAI Coaching emblem" width="28" height="28" /><div class="genai-brand-wordmark">GEN <span>AI</span><br/>COACHING</div></div>
+    <div class="genai-brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-progress-wrap" aria-label="Course progress"><div class="genai-progress-track" aria-hidden="true"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
 
     <h4>Week 1 &middot; Session 2</h4>
     <nav>
@@ -83,9 +100,10 @@
     </nav>
   </aside>
 
-  <main class="slide-main">
+  <main class="slide-main" id="main-content">
     <div class="slide-stage">
       <div class="slide-toolbar">
+        <img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching" width="22" height="22" style="border-radius:6px;display:inline-block;vertical-align:middle;margin-right:8px" />
         <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">40</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
         <div class="slide-nav-btns">
           <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
@@ -95,7 +113,7 @@
       <div class="slide-viewport">
 
       <section class="slide slide-hero" id="title">
-        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; Session 2</div>
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; Session 2</div>
         <h1>Full-Stack Build with OpenCode</h1>
         <p class="lede">Your app-idea blueprint goes in one end; a working FastAPI + SQLite + HTML/JS app comes out the other — plus two diagrams of your own app, drawn for you. Written for complete beginners: every term is explained the first time it shows up, and every step in both OpenCode and Claude Code. Everything from Session 1 (agents, skills, permissions, MCP) gets used for real, on your own app idea.</p>
         <div class="meta-row">
@@ -105,10 +123,14 @@
           <span class="meta-pill">🖼️ Output: 2 diagrams of your app</span>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">01</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="agenda">
         <div class="slide-kicker">Session Agenda</div>
@@ -131,10 +153,14 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">02</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="objectives">
         <div class="slide-kicker">Learning Objectives</div>
@@ -152,10 +178,14 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">03</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="beginner-glossary">
         <div class="slide-kicker">Before We Start</div>
@@ -178,7 +208,7 @@
           <div class="callout">You don't need to memorize any of this. You just need to know it's here.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">04</div>
         </div>
       </section>
@@ -197,7 +227,7 @@
           <div class="callout">No coding knowledge was needed to fill it out, and none is needed to read it back — it's just your own words, organized.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">05</div>
         </div>
       </section>
@@ -240,9 +270,35 @@
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">06</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-blueprint">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — Blueprint</div>
+        <h2 class="slide-title">Quick Check — Blueprint Shape</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-blueprint">
+            <p class="genai-quiz-q">Slide 1.2: which key in the exported JSON already contains the backend spec the agent will build (worked out automatically)?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">derived.api_endpoints</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">answers</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">progress</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">issues_to_review</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 1.1: what is the single recommended build prompt instruction regarding decisions not covered by the blueprint?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">Ask me before making any decision not covered by my answers</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Make the best guess and continue</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Skip that feature</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Use the AI default template</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="blueprint-md">
@@ -277,7 +333,7 @@ appointments online so they never have to call.
           <div class="callout">Keep it specific — names, fields, and screen-by-screen behavior. "Users can manage bookings" is not specific; "DELETE /bookings/{id} cancels a booking and shows a confirmation" is.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">07</div>
         </div>
       </section>
@@ -306,7 +362,7 @@ claude</code></pre></div>
           <div class="callout warn">Don't have a blueprint yet? Go back to 1.1 now — everything from Part 2 onward depends on this file existing.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">08</div>
         </div>
       </section>
@@ -320,7 +376,7 @@ claude</code></pre></div>
           <div class="callout">The right order is always <strong>database &rarr; backend &rarr; frontend</strong> — each layer depends on the one before it already existing. You can't display data from a backend that doesn't exist yet, and a backend can't save data to a database that isn't there.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">09</div>
         </div>
       </section>
@@ -349,7 +405,7 @@ answers.</code></pre>
           <div class="callout">Notice this prompt itself asks for a plan first — you're about to enforce that with a Plan agent on top, which is belt-and-suspenders and exactly right for a build this size.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">10</div>
         </div>
       </section>
@@ -373,7 +429,7 @@ first.</code></pre></div>
           <div class="callout warn">Do not approve execution yet — read the plan fully first (2.4).</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">11</div>
         </div>
       </section>
@@ -392,7 +448,7 @@ first.</code></pre></div>
           <div class="callout">If something's missing, say so now — <em>"Your plan doesn't mention the Cancel button on My Bookings — add it"</em> — before a single file gets written.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">12</div>
         </div>
       </section>
@@ -424,7 +480,7 @@ path, and look-and-feel answers here)</code></pre>
           <div class="callout">That last "Design" section is Session 1's brand-context lesson, applied here — paste your blueprint's actual color and logo answers in once, and the frontend build in Part 6 follows them automatically.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">13</div>
         </div>
       </section>
@@ -456,7 +512,7 @@ path, and look-and-feel answers here)</code></pre>
           <div class="callout warn">Whatever you pick, stay in the room. Skim file names as they're created — you're trading per-edit approval for periodic spot-checks, not for ignoring it entirely.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">14</div>
         </div>
       </section>
@@ -473,7 +529,7 @@ path, and look-and-feel answers here)</code></pre>
           <div class="callout">Same command, different filename — you're now set up for the whole rest of today's build.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">15</div>
         </div>
       </section>
@@ -487,9 +543,35 @@ path, and look-and-feel answers here)</code></pre>
           <div class="callout">SQLite needs no server or install beyond Python itself — perfect for today. It's also literally a single file on your laptop, which makes it easy to look inside and easy to reset if something goes wrong.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">16</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-db">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — Database Layer</div>
+        <h2 class="slide-title">Quick Check — Tables &amp; Stack</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-db">
+            <p class="genai-quiz-q">Slide 4.1: a blueprint field that “links to another table” becomes what in SQLite?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">A foreign key — a column pointing at a row in another table</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">A new database file</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">A JSON blob</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">An index only</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 2.2: what is the recommended build order for the three layers — and why?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">Database → Backend → Frontend (each depends on the previous existing)</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Frontend → Backend → Database</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Backend → Database → Frontend</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">All three in parallel</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="hands-on-database">
@@ -508,7 +590,7 @@ schema. Don't start the backend yet.</code></pre>
           <div class="callout">Watch the permission prompts (or the edit summary) as files are created in a <code class="inline">backend/</code> or <code class="inline">database/</code> folder — you should see one file per table's worth of logic, not one giant file.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">17</div>
         </div>
       </section>
@@ -527,7 +609,7 @@ table it created (columns and types).</code></pre>
           <div class="callout">Compare the output against your blueprint's tables and fields yourself — this is the same "read the diff, don't just trust the claim" habit from Session 1, applied to a database instead of a code diff. You don't need to understand SQL to check that every field you listed actually shows up as a column.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">18</div>
         </div>
       </section>
@@ -540,7 +622,7 @@ table it created (columns and types).</code></pre>
           <p>Every entry in <code class="inline">derived.api_endpoints</code> (or the Back End section of your Markdown blueprint) becomes one FastAPI route: the same method (GET/POST/PUT/DELETE), the same path, reading or writing the tables from Part 4. Pydantic models — FastAPI's way of checking that incoming data has the right shape before anything happens with it — validate what each endpoint sends and returns. This is exactly the pattern from Base Camp 3's FastAPI session, just generated for your specific app instead of a calculator.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">19</div>
         </div>
       </section>
@@ -564,7 +646,7 @@ the front end yet.</code></pre>
           <div class="callout warn">This is the biggest single step so far — expect several file edits and at least one permission/command prompt for installing <code class="inline">fastapi</code> and <code class="inline">uvicorn</code>. Read them; "installing a package" just means downloading a small piece of pre-written code your app depends on.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">20</div>
         </div>
       </section>
@@ -586,7 +668,7 @@ for the Swagger docs (/docs).</code></pre>
           <div class="callout">This is the same Swagger workflow from Base Camp 3 — now proving out your own app's real endpoints. If this page loads and these two calls work, your backend is genuinely functioning, independent of any frontend.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">21</div>
         </div>
       </section>
@@ -598,10 +680,14 @@ for the Swagger docs (/docs).</code></pre>
         <p class="lede">Your database stores real data and your FastAPI backend serves it — tested and proven in Swagger. The second half builds the plain HTML/JS front end your blueprint describes, wires it to the backend you just verified, teaches you to diagram the app you're building, and wraps everything in the review-and-iterate habits from Session 1.</p>
         <p class="lede" style="font-weight:700;">Next up: Part 6 — Front End</p>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">22</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <!-- ============ PART 6 ============ -->
       <section class="slide" id="screens-to-pages">
@@ -612,9 +698,35 @@ for the Swagger docs (/docs).</code></pre>
           <div class="callout">This is deliberately the simplest possible frontend approach — no build tools, no installs, no npm. It's the same shape as last week's calculator app (<code class="inline">index.html</code> + <code class="inline">app.js</code>), just with more pages. If your blueprint asked for React instead, that's a fine choice for later — today's session builds the "our class stack" default so absolute beginners have zero extra tooling to fight with.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">23</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-frontend">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — Full-Stack Flow</div>
+        <h2 class="slide-title">Quick Check — Front-End &amp; Skills</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-frontend">
+            <p class="genai-quiz-q">Slide 6.1: each blueprint “screen” becomes what in the built app?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">A page — one HTML file per screen with its controls and navigation</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">A database table</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">An API endpoint</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">A MCP server</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 7.1: the “run-app” skill from Session 1 Part 5 is what kind of skill?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">Scoped (project) skill — lives in .opencode/skills/ or .claude/skills/ inside the project</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Global skill — in ~/.config/opencode/skills/</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">MCP server tool</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Agent permission</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="hands-on-scaffoldfrontend">
@@ -639,7 +751,7 @@ app's name and logo.</code></pre>
           <div class="callout">Open <code class="inline">http://localhost:5500</code> and confirm you see your app's name, logo, and colors before moving on.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">24</div>
         </div>
       </section>
@@ -660,7 +772,7 @@ now so we can see the screens first.</code></pre>
           <div class="callout">Building the UI with fake data before wiring the real backend is deliberate — it isolates "does the UI look and flow right" from "does the network call work," so if something's broken later, you know which half to look in.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">25</div>
         </div>
       </section>
@@ -681,7 +793,7 @@ how to run both servers together.</code></pre>
           <div class="callout warn">A common snag here is <strong>CORS</strong> — a browser security rule that blocks a page from calling a different address unless that address explicitly allows it. If the frontend can't reach the backend, open your browser's console (right-click &rarr; Inspect &rarr; Console) and, if you see the word "CORS," just tell the agent: <em>"the browser console shows a CORS error — fix it."</em> It knows the fix (FastAPI's <code class="inline">CORSMiddleware</code>, already added back in 5.2).</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">26</div>
         </div>
       </section>
@@ -709,7 +821,7 @@ URLs when ready.</code></pre>
           <div class="callout">This is scoped to this one project (Session 1, Part 3) — it lives inside <code class="inline">my-app/</code>, so it won't clutter any other project's list of skills.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">27</div>
         </div>
       </section>
@@ -732,7 +844,7 @@ any files — just report back.</code></pre>
           <div class="callout warn">Remember Session 1's rule: context doesn't inherit. This prompt works because it re-states exactly what to compare — the subagent doesn't remember your earlier conversation about the app.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">28</div>
         </div>
       </section>
@@ -750,7 +862,7 @@ any files — just report back.</code></pre>
           <div class="callout">Neither format needs you to install anything new — both open free, in a browser, over the next two slides.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">29</div>
         </div>
       </section>
@@ -774,8 +886,8 @@ three labeled boxes -- Browser / Frontend,
 FastAPI Backend, SQLite Database -- and
 arrows showing how a request flows between
 them. Use this color style: box fill
-#f2f9f6 with a #33c375 border, 2px, titles
-in #002726 bold. Label each arrow with
+#f2f9f6 with a #C9A86A border, 2px, titles
+in #0A0A0A bold. Label each arrow with
 what's sent, e.g. "GET /bookings".</code></pre>
           </div>
           <p>To view the finished diagram:</p>
@@ -787,7 +899,7 @@ what's sent, e.g. "GET /bookings".</code></pre>
           <div class="callout">This is the exact color style used in Base Camp 3's <code class="inline">calculator_app_evolution.drawio</code> — if you've seen that diagram before, your own will look like it belongs to the same family.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">30</div>
         </div>
       </section>
@@ -831,7 +943,7 @@ paths that were actually built.</code></pre>
           <div class="callout">Your <code class="inline">sequence.md</code> will render the exact same way as the diagram above: automatically on GitHub, in VS Code's Markdown preview, or pasted into the free live editor at mermaid.live.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">31</div>
         </div>
       </section>
@@ -854,7 +966,7 @@ and frontend/ code.</code></pre>
           <div class="callout warn">If either diagram is missing a piece, that's a real finding — treat it exactly like the 7.2 subagent's cross-check report, and fix it before Part 8.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">32</div>
         </div>
       </section>
@@ -871,7 +983,7 @@ and frontend/ code.</code></pre>
           </ol>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">33</div>
         </div>
       </section>
@@ -890,7 +1002,7 @@ and frontend/ code.</code></pre>
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">34</div>
         </div>
       </section>
@@ -913,7 +1025,7 @@ and frontend/ code.</code></pre>
           <div class="callout">This is the moment the three layers either prove they work together, or don't — and now you'll know exactly which layer to fix.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">35</div>
         </div>
       </section>
@@ -933,7 +1045,7 @@ happen instead].</code></pre>
           <p>Same muscle memory as Session 1, now on your own app.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">36</div>
         </div>
       </section>
@@ -952,7 +1064,7 @@ describes.</code></pre>
           <div class="callout">Work through these one at a time, reviewing each diff — this is deliberately the slow, careful way, on purpose.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">37</div>
         </div>
       </section>
@@ -976,7 +1088,7 @@ describes.</code></pre>
           </table>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">38</div>
         </div>
       </section>
@@ -994,7 +1106,7 @@ describes.</code></pre>
           <div class="callout">Keep your project folder, your blueprint, and both diagrams — you'll deploy this same app, not a new one, and the diagrams are exactly what you'll show to explain it to a reviewer.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">39</div>
         </div>
       </section>
@@ -1019,14 +1131,86 @@ describes.</code></pre>
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">40</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
+
+      <section class="slide genai-lab-slide" id="elite-lab">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Elite Practice Lab</div>
+        <h2 class="slide-title">Elite Lab — Command Builder &amp; Flow</h2>
+        <div class="slide-body">
+          <p class="intro">Practice the exact commands from Sessions 1–2: verify models and wire a local MCP server.</p>
+          <div class="genai-quiz" style="padding:0;border:none;background:transparent;">
+            <div class="code-block"><div class="code-label"><span>inside OpenCode</span></div><pre><code class="language-plaintext">opencode</code></pre></div>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer="opencode" data-regex="^opencode$" placeholder="opencode" style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+            <div class="code-block" style="margin-top:12px"><div class="code-label"><span>opencode.jsonc — local (stdio) MCP declaration (type field)</span></div><pre><code class="language-plaintext">"type": "local"</code></pre></div>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer='"type": "local"' data-regex='^"type":\s*"local"$' placeholder='"type": "local"' style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Lab</div></div>
+      </section>
+<script>
+(function(){
+  document.querySelectorAll('[data-lab-check]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wrap = btn.closest('.genai-lab-input-wrap');
+      var input = wrap.querySelector('.genai-lab-input');
+      var feedback = wrap.querySelector('.genai-quiz-feedback');
+      if(!input || !feedback) return;
+      var val = input.value.trim();
+      var expected = input.getAttribute('data-answer')||'';
+      var regexStr = input.getAttribute('data-regex');
+      var ok = false;
+      if(regexStr){ try{ var re = new RegExp(regexStr); ok = re.test(val); }catch(e){ ok = val===expected; } } else { ok = val===expected; }
+      feedback.classList.add('is-visible');
+      if(ok){
+        feedback.textContent='Correct! +25 XP';
+        feedback.className='genai-quiz-feedback is-visible is-correct';
+        input.style.borderColor='#C9A86A';
+        try{ var badge = document.querySelector('.genai-xp-badge strong'); if(badge){ var n = parseInt(badge.textContent||'0',10)+25; badge.textContent=String(n); } }catch(e){}
+        btn.disabled=true; input.disabled=true;
+        var toast = document.querySelector('.genai-xp-toast'); if(!toast){ toast=document.createElement('div'); toast.className='genai-xp-toast'; document.body.appendChild(toast);} toast.textContent='+25 XP  lab'; toast.classList.add('is-visible'); setTimeout(function(){toast.classList.remove('is-visible')},2200);
+      } else {
+        feedback.textContent='Not quite — match exactly, including quotes and colon spacing.';
+        feedback.className='genai-quiz-feedback is-visible is-wrong';
+        input.style.borderColor='#e0a800';
+      }
+    });
+  });
+  document.querySelectorAll('.genai-lab-input').forEach(function(inp){
+    inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); var b=inp.closest('.genai-lab-input-wrap').querySelector('[data-lab-check]'); if(b) b.click(); }});
+  });
+})();
+</script>
       </div>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 4A Virtual Environment</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="1_opencode_introduction.html">← Previous</a>
+    <a class="genai-nav-next" href="../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -1035,7 +1219,8 @@ describes.</code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, theme: "base", themeVariables: { primaryColor: "#f2f9f6", primaryBorderColor: "#33c375", primaryTextColor: "#002726", lineColor: "#1f8756", actorBkg: "#002726", actorTextColor: "#e6f5ee", actorBorder: "#114741", signalColor: "#002726", signalTextColor: "#0e1f1c" } });</script>
+<script>mermaid.initialize({ startOnLoad: true, theme: "base", themeVariables: { primaryColor: "#f2f9f6", primaryBorderColor: "#C9A86A", primaryTextColor: "#0A0A0A", lineColor: "#1f8756", actorBkg: "#0A0A0A", actorTextColor: "#e6f5ee", actorBorder: "#114741", signalColor: "#0A0A0A", signalTextColor: "#0e1f1c" } });</script>
 <script src="assets/slides.js"></script>
+<script src="assets/genai-gamify.js"></script>
 </body>
 </html>

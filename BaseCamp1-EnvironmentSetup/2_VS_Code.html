@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Session 2 — Installing VS Code | Outskill AI Fellowship</title>
+<title>Session 2 — Installing VS Code | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="Your code editor for the entire fellowship. This session installs VS Code, sets up an in-editor terminal, adds the essential extensions, and has you write yo...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
 </head>
 <body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
 
     <h4>Base Camp 1 &middot; Week 1 &middot; Session 2</h4>
     <nav>
@@ -34,18 +43,25 @@
     </nav>
   </aside>
 
-  <main>
+  <main id="main">
     <div class="content">
 
       <div class="page-header">
-        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 2</span>
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 2</span>
         <h1>Environment Setup: Installing VS Code</h1>
         <p class="lede">Your code editor for the entire fellowship. This session installs VS Code, sets up an in-editor terminal, adds the essential extensions, and has you write your very first Python file and notebook.</p>
         <div class="meta-row">
           <span class="meta-pill">💻 Editor: Visual Studio Code</span>
           <span class="meta-pill">Builds on Session 1's Python 3.11.9</span>
         </div>
-      </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="1_Python.html">← Prev</a>
+    <a class="genai-nav-next" href="3_api_keys.html">Next →</a>
+  </span>
+</nav>
 
       <section class="part" id="overview">
         <div class="part-label">Why this matters</div>
@@ -53,7 +69,27 @@
         <div class="topic">
           <p>Python (Session 1) is the language; VS Code is where you'll actually write, run, and debug it every day of this fellowship. Beyond text editing, VS Code gives you a built-in terminal, a file browser, and — critically — a way to see and switch <em>which</em> Python installation is running your code. That last part matters a lot once multiple Python versions or virtual environments enter the picture (Base Camp 2 covers this in depth).</p>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · One editor, one workflow <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Why is VS Code the fellowship editor?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running." data-feedback-wrong="Not quite — Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running.">It gives a built-in terminal, file browser, and Python interpreter switcher — the page says that matters when multiple versions exist</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running." data-feedback-wrong="Not quite — Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running.">Because it&#x27;s the only editor that runs Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running." data-feedback-wrong="Not quite — Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running.">Because Python ships inside VS Code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running." data-feedback-wrong="Not quite — Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running.">Because it&#x27;s required for GitHub</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: What does VS Code show about Python?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: VS Code shows which Python installation is running your code." data-feedback-wrong="Not quite — Overview: VS Code shows which Python installation is running your code.">Which Python installation is running your code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code shows which Python installation is running your code." data-feedback-wrong="Not quite — Overview: VS Code shows which Python installation is running your code.">Only the file name</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code shows which Python installation is running your code." data-feedback-wrong="Not quite — Overview: VS Code shows which Python installation is running your code.">Only the OS version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: VS Code shows which Python installation is running your code." data-feedback-wrong="Not quite — Overview: VS Code shows which Python installation is running your code.">The AWS region</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="download">
         <div class="part-label">Step 1 — Download</div>
@@ -70,6 +106,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="download">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Download VS Code <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Where to download VS Code from?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Download section links to code.visualstudio.com." data-feedback-wrong="Not quite — Download section links to code.visualstudio.com.">code.visualstudio.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Download section links to code.visualstudio.com." data-feedback-wrong="Not quite — Download section links to code.visualstudio.com.">python.org</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Download section links to code.visualstudio.com." data-feedback-wrong="Not quite — Download section links to code.visualstudio.com.">github.com only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Download section links to code.visualstudio.com." data-feedback-wrong="Not quite — Download section links to code.visualstudio.com.">Microsoft Store exclusively</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which VS Code build is recommended?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page says download the Stable build for your OS." data-feedback-wrong="Not quite — Page says download the Stable build for your OS.">Stable build for your OS (Windows/macOS)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says download the Stable build for your OS." data-feedback-wrong="Not quite — Page says download the Stable build for your OS.">Insiders only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says download the Stable build for your OS." data-feedback-wrong="Not quite — Page says download the Stable build for your OS.">Web only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says download the Stable build for your OS." data-feedback-wrong="Not quite — Page says download the Stable build for your OS.">Legacy 2019 build</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="explorer">
         <div class="part-label">Step 2 — First Look</div>
@@ -82,6 +134,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="explorer">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Meet the Explorer <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: What is the Explorer in VS Code?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Explorer section introduces the Explorer as the file browser." data-feedback-wrong="Not quite — Explorer section introduces the Explorer as the file browser.">The file browser / sidebar that shows folders and files</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section introduces the Explorer as the file browser." data-feedback-wrong="Not quite — Explorer section introduces the Explorer as the file browser.">A browser extension</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section introduces the Explorer as the file browser." data-feedback-wrong="Not quite — Explorer section introduces the Explorer as the file browser.">The terminal</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section introduces the Explorer as the file browser." data-feedback-wrong="Not quite — Explorer section introduces the Explorer as the file browser.">The Python debugger</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Explorer lets you:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Explorer section describes creating files/folders." data-feedback-wrong="Not quite — Explorer section describes creating files/folders.">Create, rename, and delete files and folders</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section describes creating files/folders." data-feedback-wrong="Not quite — Explorer section describes creating files/folders.">Only view images</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section describes creating files/folders." data-feedback-wrong="Not quite — Explorer section describes creating files/folders.">Compile Python to C</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Explorer section describes creating files/folders." data-feedback-wrong="Not quite — Explorer section describes creating files/folders.">Set AWS budgets</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="terminal">
         <div class="part-label">Step 3 — Terminal</div>
@@ -107,6 +175,22 @@ Cmd+`    (macOS)</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="terminal">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Open a Terminal Inside VS Code <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: How to open a terminal inside VS Code?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Terminal section: Terminal → New Terminal / Ctrl+`." data-feedback-wrong="Not quite — Terminal section: Terminal → New Terminal / Ctrl+`.">Terminal → New Terminal or Ctrl+`</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Terminal section: Terminal → New Terminal / Ctrl+`." data-feedback-wrong="Not quite — Terminal section: Terminal → New Terminal / Ctrl+`.">File → New File</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Terminal section: Terminal → New Terminal / Ctrl+`." data-feedback-wrong="Not quite — Terminal section: Terminal → New Terminal / Ctrl+`.">View → Explorer</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Terminal section: Terminal → New Terminal / Ctrl+`." data-feedback-wrong="Not quite — Terminal section: Terminal → New Terminal / Ctrl+`.">Run → Start Debugging</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Where does the integrated terminal open?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page shows integrated terminal inside VS Code." data-feedback-wrong="Not quite — Page shows integrated terminal inside VS Code.">Inside VS Code at the bottom panel</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows integrated terminal inside VS Code." data-feedback-wrong="Not quite — Page shows integrated terminal inside VS Code.">As a separate OS window only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows integrated terminal inside VS Code." data-feedback-wrong="Not quite — Page shows integrated terminal inside VS Code.">Inside the browser URL bar</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows integrated terminal inside VS Code." data-feedback-wrong="Not quite — Page shows integrated terminal inside VS Code.">Inside GitHub</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="extensions">
         <div class="part-label">Step 4 — Extensions</div>
@@ -131,6 +215,22 @@ Ctrl+Shift+X  (Windows)</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="extensions">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Install the Python &amp; Jupyter Extensions <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which two extensions are essential?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Extensions section lists Python and Jupyter as essential." data-feedback-wrong="Not quite — Extensions section lists Python and Jupyter as essential.">Python (Microsoft) and Jupyter (Microsoft)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Extensions section lists Python and Jupyter as essential." data-feedback-wrong="Not quite — Extensions section lists Python and Jupyter as essential.">Prettier and ESLint</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Extensions section lists Python and Jupyter as essential." data-feedback-wrong="Not quite — Extensions section lists Python and Jupyter as essential.">GitLens and Docker</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Extensions section lists Python and Jupyter as essential." data-feedback-wrong="Not quite — Extensions section lists Python and Jupyter as essential.">Live Server only</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: How to install an extension?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Section shows Extensions sidebar search and Install." data-feedback-wrong="Not quite — Section shows Extensions sidebar search and Install.">Click Extensions sidebar → search → Install</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows Extensions sidebar search and Install." data-feedback-wrong="Not quite — Section shows Extensions sidebar search and Install.">Drag a zip file onto the dock</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows Extensions sidebar search and Install." data-feedback-wrong="Not quite — Section shows Extensions sidebar search and Install.">pip install</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows Extensions sidebar search and Install." data-feedback-wrong="Not quite — Section shows Extensions sidebar search and Install.">brew install</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="theme">
         <div class="part-label">Step 5 — Make It Yours</div>
@@ -148,6 +248,22 @@ Cmd+Shift+P   (macOS)     →  "Color Theme"</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="theme">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Choose a Color Theme <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Choosing a theme affects:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Theme section notes theme is cosmetic for readability." data-feedback-wrong="Not quite — Theme section notes theme is cosmetic for readability.">Editor colors / readability only — not functionality</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Theme section notes theme is cosmetic for readability." data-feedback-wrong="Not quite — Theme section notes theme is cosmetic for readability.">Python version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Theme section notes theme is cosmetic for readability." data-feedback-wrong="Not quite — Theme section notes theme is cosmetic for readability.">API keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Theme section notes theme is cosmetic for readability." data-feedback-wrong="Not quite — Theme section notes theme is cosmetic for readability.">Git history</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: How to change theme?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page shows Command Palette → Preferences: Color Theme." data-feedback-wrong="Not quite — Page shows Command Palette → Preferences: Color Theme.">Preferences: Color Theme via Command Palette</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows Command Palette → Preferences: Color Theme." data-feedback-wrong="Not quite — Page shows Command Palette → Preferences: Color Theme.">Reinstall VS Code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows Command Palette → Preferences: Color Theme." data-feedback-wrong="Not quite — Page shows Command Palette → Preferences: Color Theme.">Edit settings.json only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page shows Command Palette → Preferences: Color Theme." data-feedback-wrong="Not quite — Page shows Command Palette → Preferences: Color Theme.">Change OS wallpaper</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="firstfiles">
         <div class="part-label">Step 6 — Your First Files</div>
@@ -156,7 +272,7 @@ Cmd+Shift+P   (macOS)     →  "Color Theme"</code></pre>
           <p class="intro">In the Explorer, click the "New File" icon (or right-click your folder &rarr; New File).</p>
           <div class="code-block">
             <div class="code-label"><span>test.py</span><button class="copy-btn">Copy</button></div>
-            <pre><code class="language-python">print("Hello, AI Fellowship!")</code></pre>
+            <pre><code class="language-python">print("Hello, AI Accelerator Hub!")</code></pre>
           </div>
           <div class="callout">
             <span class="callout-title">Naming tip</span>
@@ -164,6 +280,22 @@ Cmd+Shift+P   (macOS)     →  "Color Theme"</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="firstfiles">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Create test.py and test.ipynb <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which two test files do you create?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Firstfiles: Create test.py and test.ipynb." data-feedback-wrong="Not quite — Firstfiles: Create test.py and test.ipynb.">test.py and test.ipynb</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Firstfiles: Create test.py and test.ipynb." data-feedback-wrong="Not quite — Firstfiles: Create test.py and test.ipynb.">app.py and index.html</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Firstfiles: Create test.py and test.ipynb." data-feedback-wrong="Not quite — Firstfiles: Create test.py and test.ipynb.">.env and README.md</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Firstfiles: Create test.py and test.ipynb." data-feedback-wrong="Not quite — Firstfiles: Create test.py and test.ipynb.">main.go and main.rs</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: test.py should contain:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Section shows writing a print statement in test.py." data-feedback-wrong="Not quite — Section shows writing a print statement in test.py.">print(&quot;Hello, fellowship!&quot;) or similar print test</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows writing a print statement in test.py." data-feedback-wrong="Not quite — Section shows writing a print statement in test.py.">import aws secrets</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows writing a print statement in test.py." data-feedback-wrong="Not quite — Section shows writing a print statement in test.py.">HTML page</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows writing a print statement in test.py." data-feedback-wrong="Not quite — Section shows writing a print statement in test.py.">SQL query</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="verify">
         <div class="part-label">Step 7 — Verify</div>
@@ -179,6 +311,22 @@ Cmd+Shift+P   (macOS)     →  "Color Theme"</code></pre>
           </table>
         </div>
       </section>
+    <div class="genai-quiz" data-section="verify">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Confirm the Right Python Is Selected <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Where to confirm Python interpreter in VS Code?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Verify section points to bottom-right interpreter indicator." data-feedback-wrong="Not quite — Verify section points to bottom-right interpreter indicator.">Bottom-right status bar / Command Palette → Python: Select Interpreter</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section points to bottom-right interpreter indicator." data-feedback-wrong="Not quite — Verify section points to bottom-right interpreter indicator.">Top menu → Help → About</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section points to bottom-right interpreter indicator." data-feedback-wrong="Not quite — Verify section points to bottom-right interpreter indicator.">Explorer → Outline</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section points to bottom-right interpreter indicator." data-feedback-wrong="Not quite — Verify section points to bottom-right interpreter indicator.">Git tab</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Correct interpreter to select is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page says select Python 3.11.9 from Session 1." data-feedback-wrong="Not quite — Page says select Python 3.11.9 from Session 1.">Python 3.11.9 installed in Session 1</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says select Python 3.11.9 from Session 1." data-feedback-wrong="Not quite — Page says select Python 3.11.9 from Session 1.">Any Python 2.7</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says select Python 3.11.9 from Session 1." data-feedback-wrong="Not quite — Page says select Python 3.11.9 from Session 1.">System Python without version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page says select Python 3.11.9 from Session 1." data-feedback-wrong="Not quite — Page says select Python 3.11.9 from Session 1.">Node.js</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="multiple">
         <div class="part-label">Multiple Versions?</div>
@@ -198,6 +346,22 @@ Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="multiple">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Choosing the Right Python When Several Are Installed <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: With multiple Pythons, how to lock to 3.11.9 in VS Code?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Select 3.11.9 in the interpreter picker</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Uninstall all others</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Use py -0 inside VS Code only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Edit the HTML</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Choosing the Right Python When Several Are Installed&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Multiple section says pick 3.11.9 in interpreter picker.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Multiple section says pick 3.11.9 in interpreter picker." data-feedback-wrong="Not quite — Multiple section says pick 3.11.9 in interpreter picker.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="ipykernel">
         <div class="part-label">Step 8 — One More Package</div>
@@ -229,6 +393,22 @@ Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="ipykernel">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Install ipykernel <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: What is ipykernel for?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">Lets VS Code run Jupyter notebooks with the selected Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">A theme</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">A Git extension</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">An AWS SDK</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Install ipykernel&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">ipykernel section: enables notebooks with the selected kerne</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="ipykernel section: enables notebooks with the selected kernel." data-feedback-wrong="Not quite — ipykernel section: enables notebooks with the selected kernel.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="moreext">
         <div class="part-label">Step 9 — A Few More Extensions</div>
@@ -246,6 +426,22 @@ Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code>
           </table>
         </div>
       </section>
+    <div class="genai-quiz" data-section="moreext">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Extra Extensions Worth Installing <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which extra extension is suggested?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">Pylance, autoDocstring, etc.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">Photoshop extension</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">AWS Toolkit only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">No extras suggested</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Extra Extensions Worth Installing&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">MoreExt lists Pylance and helpful extras.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MoreExt lists Pylance and helpful extras." data-feedback-wrong="Not quite — MoreExt lists Pylance and helpful extras.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="checklist">
         <div class="part-label">You're done when...</div>
@@ -263,17 +459,131 @@ Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code>
           </ul>
         </div>
       </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · VS Code Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Final check requires:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">VS Code opens test.py and runs Hello with Python 3.11.9</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">VS Code uninstalls Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">AWS account created</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">GitHub username chosen</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;VS Code Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">Checklist confirms test.py runs correctly.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms test.py runs correctly." data-feedback-wrong="Not quite — Checklist confirms test.py runs correctly.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
-          <span class="footer-outskill">OUTSKILL</span>
-          <span class="footer-sep">|</span>
-          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — VS Code — Confirm Editor &amp; Interpreter</h3><p>Type the command that proves VS Code sees Python 3.11.9. The page uses the status bar / interpreter picker, but in a terminal you&#x27;d check the editor and Python.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="code --version" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^(code --version|python --version|python3 --version|py --version)\s*$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
         </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: Try code --version to prove VS Code installed, or python --version to prove the interpreter</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
       </footer>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 3 Api Keys</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="1_Python.html">← Previous</a>
+    <a class="genai-nav-next" href="3_api_keys.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -281,5 +591,6 @@ Python 2.7.18                   — /usr/bin/python  (legacy, deprecated)</code>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
 </body>
 </html>

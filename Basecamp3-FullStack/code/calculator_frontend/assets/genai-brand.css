@@ -1,0 +1,229 @@
+/* GenAI Coaching — Enterprise Brand Layer
+   Palette: #0A0A0A (ink) #C9A86A (signal) #FFFFFF (paper) #070A0A (crow)
+   Flat enterprise — solid colors only, additive overrides; load after style.css.
+*/
+:root {
+  --genai-ink: #0A0A0A;
+  --genai-signal: #C9A86A;
+  --genai-signal-hover: #B8941F;
+  --genai-paper: #FFFFFF;
+  --genai-crow: #070A0A;
+  --genai-border: #E8E0C8;
+  --genai-radius: 10px;
+}
+
+/* ---------- Progress bar (top fixed, JS sets width) ---------- */
+.genai-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--genai-signal);
+  z-index: 9999;
+  transition: width 0.2s ease;
+  pointer-events: none;
+}
+.genai-progress[aria-valuenow] { /* accessible */ }
+
+/* ---------- Sidebar brand lockup ---------- */
+.genai-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.genai-brand-lockup img.genai-brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: block;
+}
+.genai-brand-wordmark {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1;
+}
+.genai-brand-wordmark span { color: var(--genai-signal); }
+.genai-brand-sub {
+  font-size: 11.5px;
+  color: #9A9A9A;
+  margin: 0 0 22px 38px;
+  letter-spacing: 0.03em;
+}
+.genai-brand-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--genai-ink);
+  background: var(--genai-signal);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  border: 1px solid var(--genai-signal);
+}
+
+/* Dark/light logo swap — use .genai-logo-dark (default) and .genai-logo-light */
+.genai-logo-dark { display: block; }
+.genai-logo-light { display: none; }
+@media (prefers-color-scheme: light) {
+  .genai-logo-dark.genai-auto-swap { display: none; }
+  .genai-logo-light.genai-auto-swap { display: block; }
+}
+.genai-logo-light--on-dark { display: none; }
+.genai-logo-dark--on-dark { display: block; }
+
+/* ---------- Header branding ---------- */
+.genai-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0 14px;
+  border-bottom: 1px solid var(--genai-border);
+  margin-bottom: 24px;
+}
+.genai-header-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* ---------- Footer branding ---------- */
+footer.site-footer.genai-footer,
+.genai-footer {
+  border-top: 1px solid var(--genai-border);
+  padding-top: 18px;
+  margin-top: 48px;
+}
+.genai-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.genai-footer-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+.genai-footer-logo--light { display: none; }
+.genai-footer-logo--dark { display: block; }
+.genai-footer .footer-brand { gap: 12px; }
+
+/* ---------- Enterprise pill (eyebrow / meta) ---------- */
+.genai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--genai-ink);
+  background: #FFF8E6;
+  border: 1px solid var(--genai-border);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.genai-pill--signal {
+  background: var(--genai-signal);
+  color: #FFFFFF;
+  border-color: var(--genai-signal);
+}
+
+/* ---------- Accessible focus styles ---------- */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--genai-signal);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.genai-quiz-option:focus-visible,
+.copy-btn:focus-visible,
+.genai-cert-close:focus-visible {
+  outline: 2px solid var(--genai-signal);
+  outline-offset: 2px;
+}
+
+/* ---------- Prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .genai-progress { transition: none; }
+}
+
+/* --- GenAI Top/Bottom Navigation — Black/White/Gold Veranda (segregated) --- */
+.genai-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: 1px solid #C9A86A;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 18px 0 22px;
+  font-size: 13px;
+}
+.genai-nav-top .genai-nav-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #C9A86A;
+}
+.genai-nav-top .genai-nav-label img { width: 16px; height: 16px; border-radius: 4px; }
+.genai-nav-top a, .genai-nav-bottom a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+}
+.genai-nav-top a.genai-nav-prev { color: #E8E0C8; border-color: #2A2A2A; background: #1A1A1A; }
+.genai-nav-top a.genai-nav-prev:hover { background: #222; color: #FFFFFF; }
+.genai-nav-top a.genai-nav-next { color: #0A0A0A; background: #C9A86A; border-color: #C9A86A; }
+.genai-nav-top a.genai-nav-next:hover { background: #B8941F; border-color: #B8941F; }
+.genai-nav-top a.is-disabled { opacity: 0.35; pointer-events: none; }
+
+.genai-nav-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E8E0C8;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 36px 0 28px;
+  box-shadow: 0 4px 20px rgba(10,10,10,0.06);
+}
+.genai-nav-bottom .genai-nav-copy h4 { margin: 0 0 4px; font-size: 15px; font-weight: 800; color: #0A0A0A; letter-spacing: -0.02em; }
+.genai-nav-bottom .genai-nav-copy p { margin: 0; font-size: 13px; color: #6B6B6B; }
+.genai-nav-bottom .genai-nav-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.genai-nav-bottom a.genai-nav-prev { color: #0A0A0A; background: #FFFFFF; border-color: #E8E0C8; }
+.genai-nav-bottom a.genai-nav-prev:hover { background: #FFFBF0; }
+.genai-nav-bottom a.genai-nav-next { color: #0A0A0A; background: #C9A86A; border-color: #C9A86A; }
+.genai-nav-bottom a.genai-nav-next:hover { background: #B8941F; }
+.genai-nav-bottom a.is-disabled { opacity: 0.35; pointer-events: none; }
+@media (max-width: 720px) {
+  .genai-nav-top, .genai-nav-bottom { flex-direction: column; align-items: stretch; }
+  .genai-nav-bottom .genai-nav-actions { justify-content: stretch; }
+  .genai-nav-bottom a { flex: 1; text-align: center; justify-content: center; display: inline-flex; }
+}

@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Session 1 — Installing Python | Outskill AI Fellowship</title>
+<title>Session 1 — Installing Python | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="By the end of this session, every laptop in the room — Windows or Mac — runs the exact same Python version, verified and ready. That consistency is the whole...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
 </head>
 <body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
 
     <h4>Base Camp 1 &middot; Week 1 &middot; Session 1</h4>
     <nav>
@@ -30,18 +39,25 @@
     </nav>
   </aside>
 
-  <main>
+  <main id="main">
     <div class="content">
 
       <div class="page-header">
-        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 1</span>
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Session 1</span>
         <h1>Environment Setup: Installing Python</h1>
         <p class="lede">By the end of this session, every laptop in the room — Windows or Mac — runs the exact same Python version, verified and ready. That consistency is the whole point: when everyone's code behaves the same way, debugging a shared exercise means debugging the exercise, not someone's environment.</p>
         <div class="meta-row">
           <span class="meta-pill">🐍 Target version: Python 3.11.9</span>
           <span class="meta-pill">Windows + macOS covered</span>
         </div>
-      </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev is-disabled" aria-disabled="true">← Prev</a>
+    <a class="genai-nav-next" href="2_VS_Code.html">Next →</a>
+  </span>
+</nav>
 
       <section class="part" id="overview">
         <div class="part-label">Why this matters</div>
@@ -54,6 +70,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · One version, everywhere <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Why does the fellowship standardize on Python 3.11.9 specifically?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”" data-feedback-wrong="Not quite — The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”">To keep every exercise reproducible across the cohort (the page says minor version differences change how libraries behave)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”" data-feedback-wrong="Not quite — The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”">Because 3.11.9 is the newest Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”" data-feedback-wrong="Not quite — The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”">Because 3.11.9 is faster than any other version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”" data-feedback-wrong="Not quite — The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”">Because the OS requires 3.11.9</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: If you already have a different Python installed, what does the page advise?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”" data-feedback-wrong="Not quite — Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”">Install 3.11.9 alongside it and use version-specific commands</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”" data-feedback-wrong="Not quite — Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”">Uninstall all other Pythons first</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”" data-feedback-wrong="Not quite — Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”">Ignore it and use whatever is installed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”" data-feedback-wrong="Not quite — Callout: “If you already have some version of Python installed, that&#x27;s fine — install 3.11.9 alongside it.”">Install 3.11.9 only inside a VM</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="download">
         <div class="part-label">Step 1 — Download</div>
@@ -88,6 +120,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="download">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Download Python 3.11.9 <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Where does the page tell you to download Python 3.11.9?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9." data-feedback-wrong="Not quite — Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9.">From python.org → Downloads → View the full list of downloads</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9." data-feedback-wrong="Not quite — Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9.">From the Microsoft Store only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9." data-feedback-wrong="Not quite — Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9.">From VS Code extensions</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9." data-feedback-wrong="Not quite — Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9.">From GitHub releases</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which installer file is correct for Windows 64-bit?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page lists the 64-bit Windows installer for 3.11.9 specifically." data-feedback-wrong="Not quite — Page lists the 64-bit Windows installer for 3.11.9 specifically.">Windows installer (64-bit) for Python 3.11.9</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page lists the 64-bit Windows installer for 3.11.9 specifically." data-feedback-wrong="Not quite — Page lists the 64-bit Windows installer for 3.11.9 specifically.">Windows installer (32-bit) for 3.13</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page lists the 64-bit Windows installer for 3.11.9 specifically." data-feedback-wrong="Not quite — Page lists the 64-bit Windows installer for 3.11.9 specifically.">Source tarball</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page lists the 64-bit Windows installer for 3.11.9 specifically." data-feedback-wrong="Not quite — Page lists the 64-bit Windows installer for 3.11.9 specifically.">macOS pkg</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="windows">
         <div class="part-label">Step 2 — Windows</div>
@@ -101,6 +149,22 @@
           </ol>
         </div>
       </section>
+    <div class="genai-quiz" data-section="windows">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Installing on Windows <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which checkbox MUST be ticked during Windows install?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked." data-feedback-wrong="Not quite — Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked.">Add python.exe to PATH</button>
+<button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked." data-feedback-wrong="Not quite — Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked.">Install launcher for all users (recommended) → actually “Add Python 3.11 to PATH”</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked." data-feedback-wrong="Not quite — Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked.">Disable pip</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked." data-feedback-wrong="Not quite — Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked.">Install without Tcl/Tk</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: What does “Install Now” do on Windows?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Section says clicking Install Now installs with defaults." data-feedback-wrong="Not quite — Section says clicking Install Now installs with defaults.">Installs Python 3.11.9 with default options into default location</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section says clicking Install Now installs with defaults." data-feedback-wrong="Not quite — Section says clicking Install Now installs with defaults.">Only downloads without installing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section says clicking Install Now installs with defaults." data-feedback-wrong="Not quite — Section says clicking Install Now installs with defaults.">Installs VS Code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section says clicking Install Now installs with defaults." data-feedback-wrong="Not quite — Section says clicking Install Now installs with defaults.">Creates a virtual environment</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="macos">
         <div class="part-label">Step 2 — macOS</div>
@@ -114,6 +178,22 @@
           </ol>
         </div>
       </section>
+    <div class="genai-quiz" data-section="macos">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Installing on macOS <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which file do macOS users download for Python 3.11.9?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="macOS download row points to the universal2 installer pkg." data-feedback-wrong="Not quite — macOS download row points to the universal2 installer pkg.">macOS 64-bit universal2 installer for Python 3.11.9</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="macOS download row points to the universal2 installer pkg." data-feedback-wrong="Not quite — macOS download row points to the universal2 installer pkg.">Windows .exe</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="macOS download row points to the universal2 installer pkg." data-feedback-wrong="Not quite — macOS download row points to the universal2 installer pkg.">Linux tar.xz</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="macOS download row points to the universal2 installer pkg." data-feedback-wrong="Not quite — macOS download row points to the universal2 installer pkg.">Homebrew formula only</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: After install, which command checks the version on macOS?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Verify section shows python3 --version (and python3.11 --version when multiple versions)." data-feedback-wrong="Not quite — Verify section shows python3 --version (and python3.11 --version when multiple versions).">python3 --version or python3.11 --version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section shows python3 --version (and python3.11 --version when multiple versions)." data-feedback-wrong="Not quite — Verify section shows python3 --version (and python3.11 --version when multiple versions).">py -0</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section shows python3 --version (and python3.11 --version when multiple versions)." data-feedback-wrong="Not quite — Verify section shows python3 --version (and python3.11 --version when multiple versions).">winget list</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section shows python3 --version (and python3.11 --version when multiple versions)." data-feedback-wrong="Not quite — Verify section shows python3 --version (and python3.11 --version when multiple versions).">code --version</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="verify">
         <div class="part-label">Step 3 — Verify</div>
@@ -152,6 +232,22 @@ which python3
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="verify">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Confirm Python Is Installed Correctly <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: What exact output proves success?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Verify section: running the version command should print exactly Python 3.11.9." data-feedback-wrong="Not quite — Verify section: running the version command should print exactly Python 3.11.9.">Python 3.11.9</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section: running the version command should print exactly Python 3.11.9." data-feedback-wrong="Not quite — Verify section: running the version command should print exactly Python 3.11.9.">Python 3.13.0</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section: running the version command should print exactly Python 3.11.9." data-feedback-wrong="Not quite — Verify section: running the version command should print exactly Python 3.11.9.">Python 2.7</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Verify section: running the version command should print exactly Python 3.11.9." data-feedback-wrong="Not quite — Verify section: running the version command should print exactly Python 3.11.9.">No output</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which command lists the install path?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Section shows which -a python3, where python, py -0 to locate installs." data-feedback-wrong="Not quite — Section shows which -a python3, where python, py -0 to locate installs.">which python3 / where python / py -0 (Windows)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows which -a python3, where python, py -0 to locate installs." data-feedback-wrong="Not quite — Section shows which -a python3, where python, py -0 to locate installs.">git status</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows which -a python3, where python, py -0 to locate installs." data-feedback-wrong="Not quite — Section shows which -a python3, where python, py -0 to locate installs.">code .</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Section shows which -a python3, where python, py -0 to locate installs." data-feedback-wrong="Not quite — Section shows which -a python3, where python, py -0 to locate installs.">pip list</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="confusion">
         <div class="part-label">Common Confusion</div>
@@ -170,6 +266,22 @@ which python3
           </table>
         </div>
       </section>
+    <div class="genai-quiz" data-section="confusion">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · &quot;python&quot;, &quot;python3&quot;, or &quot;py&quot; — Which One Do I Type? <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: On Windows the recommended default launcher is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Table: py is Windows — recommended default (Windows Python Launcher)." data-feedback-wrong="Not quite — Table: py is Windows — recommended default (Windows Python Launcher).">py</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table: py is Windows — recommended default (Windows Python Launcher)." data-feedback-wrong="Not quite — Table: py is Windows — recommended default (Windows Python Launcher).">python3</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table: py is Windows — recommended default (Windows Python Launcher)." data-feedback-wrong="Not quite — Table: py is Windows — recommended default (Windows Python Launcher).">python3.11 only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table: py is Windows — recommended default (Windows Python Launcher)." data-feedback-wrong="Not quite — Table: py is Windows — recommended default (Windows Python Launcher).">python2</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: On macOS/Linux with multiple versions, how to pin 3.11?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Table row: python3.11 runs a specific version directly." data-feedback-wrong="Not quite — Table row: python3.11 runs a specific version directly.">python3.11 --version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table row: python3.11 runs a specific version directly." data-feedback-wrong="Not quite — Table row: python3.11 runs a specific version directly.">py -0</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table row: python3.11 runs a specific version directly." data-feedback-wrong="Not quite — Table row: python3.11 runs a specific version directly.">python.exe</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Table row: python3.11 runs a specific version directly." data-feedback-wrong="Not quite — Table row: python3.11 runs a specific version directly.">uv run</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="troubleshooting">
         <div class="part-label">Troubleshooting</div>
@@ -206,6 +318,22 @@ python3.11 --version</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="troubleshooting">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Got Multiple Python Versions Installed? <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Windows: how to list every installed version?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OS grid Windows: py -0 lists every installed version." data-feedback-wrong="Not quite — OS grid Windows: py -0 lists every installed version.">py -0</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid Windows: py -0 lists every installed version." data-feedback-wrong="Not quite — OS grid Windows: py -0 lists every installed version.">python --version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid Windows: py -0 lists every installed version." data-feedback-wrong="Not quite — OS grid Windows: py -0 lists every installed version.">code --list</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid Windows: py -0 lists every installed version." data-feedback-wrong="Not quite — OS grid Windows: py -0 lists every installed version.">pip freeze</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: macOS: how to list every installed version?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OS grid macOS: which -a python3 lists every version." data-feedback-wrong="Not quite — OS grid macOS: which -a python3 lists every version.">which -a python3</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid macOS: which -a python3 lists every version." data-feedback-wrong="Not quite — OS grid macOS: which -a python3 lists every version.">py -0</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid macOS: which -a python3 lists every version." data-feedback-wrong="Not quite — OS grid macOS: which -a python3 lists every version.">where.exe python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OS grid macOS: which -a python3 lists every version." data-feedback-wrong="Not quite — OS grid macOS: which -a python3 lists every version.">ls -a</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="checklist">
         <div class="part-label">You're done when...</div>
@@ -223,17 +351,131 @@ python3.11 --version</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Environment Check — Before You Move On <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which checklist item is required before next step?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist: “Running the version command prints exactly Python 3.11.9”." data-feedback-wrong="Not quite — Checklist: “Running the version command prints exactly Python 3.11.9”.">Running version command prints exactly Python 3.11.9</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist: “Running the version command prints exactly Python 3.11.9”." data-feedback-wrong="Not quite — Checklist: “Running the version command prints exactly Python 3.11.9”.">Having deleted old Pythons</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist: “Running the version command prints exactly Python 3.11.9”." data-feedback-wrong="Not quite — Checklist: “Running the version command prints exactly Python 3.11.9”.">Installing Node</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist: “Running the version command prints exactly Python 3.11.9”." data-feedback-wrong="Not quite — Checklist: “Running the version command prints exactly Python 3.11.9”.">Creating GitHub repo</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: What to do if stuck?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Callout Stuck? — Flag your instructor before the next step." data-feedback-wrong="Not quite — Callout Stuck? — Flag your instructor before the next step.">Flag your instructor before the next step</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout Stuck? — Flag your instructor before the next step." data-feedback-wrong="Not quite — Callout Stuck? — Flag your instructor before the next step.">Reinstall OS</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout Stuck? — Flag your instructor before the next step." data-feedback-wrong="Not quite — Callout Stuck? — Flag your instructor before the next step.">Skip to VS Code anyway</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Callout Stuck? — Flag your instructor before the next step." data-feedback-wrong="Not quite — Callout Stuck? — Flag your instructor before the next step.">Ignore the version</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
-          <span class="footer-outskill">OUTSKILL</span>
-          <span class="footer-sep">|</span>
-          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — Python 3.11.9 — Verify Your Install</h3><p>Type the exact version-check command for your OS. The page says success is printing Python 3.11.9. Try the Windows launcher or macOS command.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="python --version" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^(python --version|python3 --version|python3\.11 --version|py --version|py -3\.11 --version)\s*$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
         </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: Windows → py -3.11 --version or py --version · macOS → python3 --version or python3.11 --version</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
       </footer>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 2 Vs Code</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev is-disabled" aria-disabled="true">← Previous</a>
+    <a class="genai-nav-next" href="2_VS_Code.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -241,5 +483,6 @@ python3.11 --version</code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
 </body>
 </html>

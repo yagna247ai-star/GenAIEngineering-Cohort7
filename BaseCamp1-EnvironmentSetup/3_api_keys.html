@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Setting Up API Keys | Outskill AI Fellowship</title>
+<title>Setting Up API Keys | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="Base Camp 2 and beyond will have you calling real LLM, search, and model-hosting APIs from Python. Every one of those providers needs an account and an API k...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
 </head>
 <body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
 
     <h4>Base Camp 1 &middot; Week 1 &middot; API Access</h4>
     <nav>
@@ -30,11 +39,11 @@
     </nav>
   </aside>
 
-  <main>
+  <main id="main">
     <div class="content">
 
       <div class="page-header">
-        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Before Base Camp 2</span>
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Before Base Camp 2</span>
         <h1>Setting Up API Keys</h1>
         <p class="lede">Base Camp 2 and beyond will have you calling real LLM, search, and model-hosting APIs from Python. Every one of those providers needs an account and an API key. Do this setup now — once, calmly, outside of class time — so you're not fumbling through sign-up flows and email verification links in the middle of a live session.</p>
         <div class="meta-row">
@@ -42,7 +51,14 @@
           <span class="meta-pill">⏱ ~15 minutes</span>
           <span class="meta-pill">No coding required yet</span>
         </div>
-      </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="2_VS_Code.html">← Prev</a>
+    <a class="genai-nav-next" href="4_llm_api_keys.html">Next →</a>
+  </span>
+</nav>
 
       <section class="part" id="overview">
         <div class="part-label">Why this matters</div>
@@ -52,7 +68,7 @@
           <ol class="steps">
             <li><strong>Create an account</strong><span>Sign up with an email address, or use a Google/GitHub sign-in where offered — whichever is faster for you.</span></li>
             <li><strong>Find the API keys page</strong><span>Every dashboard has a dedicated page for creating and managing keys. Direct links are given below so you don't have to hunt for them.</span></li>
-            <li><strong>Generate a key</strong><span>Click "Create," give it a name you'll recognize later (e.g. <code class="inline">outskill-fellowship</code>), and confirm.</span></li>
+            <li><strong>Generate a key</strong><span>Click "Create," give it a name you'll recognize later (e.g. <code class="inline">AI Accelerator Hub-fellowship</code>), and confirm.</span></li>
             <li><strong>Copy it immediately</strong><span>Most providers show the full key exactly once. If you close the dialog without copying it, you'll have to generate a new one.</span></li>
             <li><strong>Save it somewhere safe</strong><span>A password manager, or a local <code class="inline">.env</code> file as shown in the last section on this page.</span></li>
           </ol>
@@ -62,6 +78,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · One account, one key, per provider <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: How many providers are set up on this page?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Meta pill and overview say 5 providers." data-feedback-wrong="Not quite — Meta pill and overview say 5 providers.">5 providers: Mistral, Groq, OpenRouter, Serper, Hugging Face</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Meta pill and overview say 5 providers." data-feedback-wrong="Not quite — Meta pill and overview say 5 providers.">3 providers</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Meta pill and overview say 5 providers." data-feedback-wrong="Not quite — Meta pill and overview say 5 providers.">8 providers</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Meta pill and overview say 5 providers." data-feedback-wrong="Not quite — Meta pill and overview say 5 providers.">2 providers</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: What is the common flow for every provider?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview lists the 5-step flow." data-feedback-wrong="Not quite — Overview lists the 5-step flow.">Create account → find API keys page → generate key → copy immediately → save safe</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview lists the 5-step flow." data-feedback-wrong="Not quite — Overview lists the 5-step flow.">Email the CEO → wait</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview lists the 5-step flow." data-feedback-wrong="Not quite — Overview lists the 5-step flow.">Install VS Code → run Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview lists the 5-step flow." data-feedback-wrong="Not quite — Overview lists the 5-step flow.">Push to GitHub → deploy</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ MISTRAL ============ -->
       <section class="part" id="mistral">
@@ -76,7 +108,7 @@
           <ol class="steps">
             <li><strong>Sign up or log in</strong><span>Open the link above. If you don't have an account yet, you'll be redirected to create one with your email, Google, or Microsoft account.</span></li>
             <li><strong>Land on the organization admin console</strong><span>Logging in takes you straight to your organization's settings — the API Keys page is on the left-hand navigation.</span></li>
-            <li><strong>Click "Create new key"</strong><span>Give it a name like <code class="inline">outskill-fellowship</code>. You can optionally set an expiration date.</span></li>
+            <li><strong>Click "Create new key"</strong><span>Give it a name like <code class="inline">AI Accelerator Hub-fellowship</code>. You can optionally set an expiration date.</span></li>
             <li><strong>Copy the key right away</strong><span>Mistral displays the full key only once, immediately after creation.</span></li>
           </ol>
           <div class="callout">
@@ -84,6 +116,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="mistral">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Mistral AI <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Where are Mistral keys managed?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">console.mistral.ai → API Keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">github.com/settings</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">supabase dashboard</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">aws console</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Mistral AI&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">Mistral section links to console.mistral.ai API Keys.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Mistral section links to console.mistral.ai API Keys." data-feedback-wrong="Not quite — Mistral section links to console.mistral.ai API Keys.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ GROQ ============ -->
       <section class="part" id="groq">
@@ -106,6 +154,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="groq">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Groq <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Groq dashboard is at:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">console.groq.com → API Keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">console.mistral.ai</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">platform.openai.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">serper.dev</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Groq&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">Groq section gives console.groq.com.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Groq section gives console.groq.com." data-feedback-wrong="Not quite — Groq section gives console.groq.com.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ OPENROUTER ============ -->
       <section class="part" id="openrouter">
@@ -128,6 +192,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="openrouter">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · OpenRouter <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: OpenRouter provides:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Access to many different LLMs through one API</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Only one model</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Only search results</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Only storage</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;OpenRouter&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Overview says OpenRouter gives access to many LLMs through o</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says OpenRouter gives access to many LLMs through one API." data-feedback-wrong="Not quite — Overview says OpenRouter gives access to many LLMs through one API.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ SERPER ============ -->
       <section class="part" id="serper">
@@ -149,6 +229,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="serper">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Serper <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Serper is for:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Real-time web search results for grounding AI answers</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Hosting PostgreSQL</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Python editing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Designing logos</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Serper&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Overview says Serper provides real-time web search results.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Serper provides real-time web search results." data-feedback-wrong="Not quite — Overview says Serper provides real-time web search results.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ HUGGING FACE ============ -->
       <section class="part" id="huggingface">
@@ -171,6 +267,22 @@
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="huggingface">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Hugging Face <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Hugging Face keys are:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Access tokens for hosted models and datasets</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">AWS root passwords</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">VS Code themes</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Git commits</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Hugging Face&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Overview says Hugging Face gives hosted models and datasets.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says Hugging Face gives hosted models and datasets." data-feedback-wrong="Not quite — Overview says Hugging Face gives hosted models and datasets.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <!-- ============ SAFETY ============ -->
       <section class="part" id="safety">
@@ -211,6 +323,22 @@ groq_key = os.getenv("GROQ_API_KEY")</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="safety">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Keeping Your Keys Safe <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Best place to store keys?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Password manager or local .env file (not committed)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Paste in public GitHub repo</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Email to group chat</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Screenshot on desktop</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Keeping Your Keys Safe&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Safety section says use password manager or local .env file.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety section says use password manager or local .env file." data-feedback-wrong="Not quite — Safety section says use password manager or local .env file.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
       <section class="part" id="checklist">
         <div class="part-label">You're done when...</div>
@@ -230,22 +358,137 @@ groq_key = os.getenv("GROQ_API_KEY")</code></pre>
           </div>
         </div>
       </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · API Key Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Checklist confirms:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">All 5 keys saved safely and retrievable</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">VS Code theme chosen</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">Python path verified</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">AWS MFA enabled</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;API Key Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">Checklist verifies all 5 provider keys.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies all 5 provider keys." data-feedback-wrong="Not quite — Checklist verifies all 5 provider keys.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
 
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
-          <span class="footer-outskill">OUTSKILL</span>
-          <span class="footer-sep">|</span>
-          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — API Keys — Validate Token Format</h3><p>Paste a Hugging Face token format (shown in the page as hf_…). Real keys are shown once — this checks the format, not your real key.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^hf_[A-Za-z0-9]{10,}$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
         </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: Hugging Face tokens start with hf_ followed by letters/numbers</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
       </footer>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 4 Llm Api Keys</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="2_VS_Code.html">← Previous</a>
+    <a class="genai-nav-next" href="4_llm_api_keys.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
 </body>
 </html>

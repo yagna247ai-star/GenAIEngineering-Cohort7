@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Setting Up Claude Code &amp; OpenCode with API Keys | GenAI Coaching — AI Accelerator Hub</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="Claude Code and OpenCode are AI coding agents that live in your terminal: you open a project folder, describe what you want in plain English, and the agent r...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
+</head>
+<body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; AI Agents</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#strategy">Which Key Should You Use?</a></li>
+        <li><a href="#cc-install">A1 &middot; Claude Code: Install</a></li>
+        <li><a href="#cc-key">A2 &middot; Claude Code: API Key</a></li>
+        <li><a href="#cc-run">A3 &middot; Claude Code: First Run</a></li>
+        <li><a href="#oc-install">B1 &middot; OpenCode: Install</a></li>
+        <li><a href="#oc-keys">B2 &middot; OpenCode: API Keys</a></li>
+        <li><a href="#oc-run">B3 &middot; OpenCode: First Run</a></li>
+        <li><a href="#reference">Quick Reference</a></li>
+        <li><a href="#safety">Using Agents Safely</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#checklist">Setup Checklist</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; AI Coding Tools</span>
+        <h1>Setting Up Claude Code &amp; OpenCode with API Keys</h1>
+        <p class="lede">Claude Code and OpenCode are AI coding agents that live in your terminal: you open a project folder, describe what you want in plain English, and the agent reads your files, edits code, and runs commands to get it done. Both can run on the API keys you created on the previous two pages &mdash; this page installs each one, picks a cost-smart key to start with, and connects it, so you can start building with them from day one.</p>
+        <div class="meta-row">
+          <span class="meta-pill">⌨️ 2 terminal tools</span>
+          <span class="meta-pill">⏱ ~20 minutes</span>
+          <span class="meta-pill">Uses keys from pages 3 &amp; 4</span>
+        </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="7_claude_code_opencode.html">← Prev</a>
+    <a class="genai-nav-next" href="8_supabase_account.html">Next →</a>
+  </span>
+</nav>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>Two agents, one set of keys</h2>
+        <div class="topic">
+          <p>Both tools work the same way day to day, but they differ in which models they can use &mdash; and that decides which of your keys goes where:</p>
+          <table class="data-table">
+            <thead><tr><th></th><th>Claude Code</th><th>OpenCode</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Made by</strong></td><td>Anthropic</td><td>Open-source project (opencode.ai)</td></tr>
+              <tr><td><strong>Models</strong></td><td>Claude models only</td><td>Many providers &mdash; Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more</td></tr>
+              <tr><td><strong>Keys it accepts</strong></td><td>Anthropic key only</td><td>Anthropic, OpenAI, Gemini, Groq, Mistral, or OpenRouter key</td></tr>
+              <tr><td><strong>Env variable</strong></td><td><code class="inline">ANTHROPIC_API_KEY</code></td><td><code class="inline">ANTHROPIC_API_KEY</code>, <code class="inline">OPENAI_API_KEY</code>, <code class="inline">GEMINI_API_KEY</code>, <code class="inline">GROQ_API_KEY</code>, <code class="inline">MISTRAL_API_KEY</code>, <code class="inline">OPENROUTER_API_KEY</code></td></tr>
+              <tr><td><strong>Start command</strong></td><td><code class="inline">claude</code></td><td><code class="inline">opencode</code></td></tr>
+            </tbody>
+          </table>
+          <p>Before you start, you need:</p>
+          <ul class="checklist">
+            <li><span class="tick">✓</span> <span><strong>A terminal</strong> you're comfortable opening &mdash; Terminal on macOS, PowerShell on Windows, or the terminal inside VS Code.</span></li>
+            <li><span class="tick">✓</span> <span><strong>At least one API key</strong> from the <em>Setting Up API Keys</em> page or the <em>Setting Up Anthropic, OpenAI &amp; Gemini API Keys</em> page &mdash; the next section helps you pick which one to start with.</span></li>
+            <li><span class="tick">✓</span> <span><strong>A project folder</strong> to try things in &mdash; an empty new folder is perfect.</span></li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Agents use a lot of tokens</span>
+            A coding agent makes many model calls per task, and API usage is billed per token &mdash; noticeably more than a single chat message. Free-tier keys exist for exactly this reason: learn and experiment on those first, and only spend real money once you know what you're doing.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Two agents, one set of keys <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Claude Code is Anthropic-only, OpenCode is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Open-source, many providers — Anthropic, OpenAI, Gemini, Groq, Mistral, OpenRouter, …</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Only Claude</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Only Gemini</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">No providers</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Two agents, one set of keys&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">New page overview: OpenCode many providers — Anthropic, Open</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more." data-feedback-wrong="Not quite — New page overview: OpenCode many providers — Anthropic, OpenAI, Google Gemini, Groq, Mistral, OpenRouter, and more.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STRATEGY: WHICH KEY FIRST ============ -->
+      <section class="part" id="strategy">
+        <div class="part-label">Before you connect anything</div>
+        <h2>Which Key Should You Use First?</h2>
+        <div class="topic">
+          <p class="intro">You generated eight keys across the last two pages. Only six of them can act as an agent's "brain" &mdash; Serper and Hugging Face are a search tool and a model-hosting service, not chat models, so they don't appear here. (Serper comes back later in the fellowship as a <em>tool</em> an agent can call, not the model powering it.) For the six that matter, follow this order:</p>
+
+          <ol class="steps">
+            <li><strong>Start free &mdash; Groq, Mistral, or OpenRouter</strong><span>All three give you real, working credits with no card on file. Any one of them is enough to learn the ropes with OpenCode (see the parallels table below for why Claude Code isn't in this step).</span></li>
+            <li><strong>Gemini is a second free option</strong><span>Google AI Studio's free tier needs no billing either &mdash; a good fourth option if you want more headroom before touching a paid key.</span></li>
+            <li><strong>Only move to a paid key once free credits run out</strong><span>That means <strong>Anthropic</strong> or <strong>OpenAI</strong> &mdash; both need a small amount of prepaid credit (see page 4). Anthropic is the one to reach for if you specifically want to use Claude Code.</span></li>
+          </ol>
+
+          <div class="callout warn">
+            <span class="callout-title">Don't have a paid key? That's completely fine.</span>
+            Parts A and B below both work on a free-tier key alone. Use <strong>OpenCode</strong> with Groq, Mistral, OpenRouter, or Gemini for everything in this fellowship until you choose to add Anthropic or OpenAI credit. Save <strong>Claude Code</strong> for once you have Anthropic access &mdash; or if you already have a Claude Pro/Max subscription, see the callout in Part A, Step 2.
+          </div>
+
+          <h3 style="margin-top:26px;">The parallel, provider by provider</h3>
+          <table class="data-table">
+            <thead><tr><th>Provider</th><th>Cost</th><th>OpenCode</th><th>Claude Code</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Groq</strong></td><td>Free tier</td><td>✅ <code class="inline">/connect</code> &rarr; Groq</td><td>❌ not supported</td></tr>
+              <tr><td><strong>Mistral</strong></td><td>Free tier</td><td>✅ <code class="inline">/connect</code> &rarr; Mistral</td><td>❌ not supported</td></tr>
+              <tr><td><strong>OpenRouter</strong></td><td>Free-tier models available</td><td>✅ <code class="inline">/connect</code> &rarr; OpenRouter</td><td>❌ not supported</td></tr>
+              <tr><td><strong>Google Gemini</strong></td><td>Free tier</td><td>✅ <code class="inline">/connect</code> &rarr; Google</td><td>❌ not supported</td></tr>
+              <tr><td><strong>OpenAI</strong></td><td>Paid (prepaid credit)</td><td>✅ <code class="inline">/connect</code> &rarr; OpenAI</td><td>❌ not supported</td></tr>
+              <tr><td><strong>Anthropic</strong></td><td>Paid (prepaid credit), or free with a Claude Pro/Max login</td><td>✅ <code class="inline">/connect</code> &rarr; Anthropic</td><td>✅ the <em>only</em> key Claude Code accepts</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-dim);">In short: <strong>OpenCode is the multi-provider tool</strong> &mdash; every key you generated works in it. <strong>Claude Code is Claude-only</strong> &mdash; it never accepts a Groq, Mistral, OpenRouter, Gemini, or OpenAI key, no matter what you try. That one restriction drives the whole strategy above.</p>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="strategy">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Which Key Should You Use First? <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Cost-smart first key is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Cheaper/fast open-weight via Groq/Mistral/OpenRouter for practice; frontier keys when needed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Always use the most expensive</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">No key needed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Only use Gemini</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Which Key Should You Use First?&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Strategy section discusses picking a cost-smart key.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Strategy section discusses picking a cost-smart key." data-feedback-wrong="Not quite — Strategy section discusses picking a cost-smart key.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ CLAUDE CODE: INSTALL ============ -->
+      <section class="part" id="cc-install">
+        <div class="part-label">Part A &mdash; Claude Code &middot; Step 1</div>
+        <h2>Install Claude Code</h2>
+        <div class="topic">
+          <p class="intro">Claude Code needs macOS 13+, Windows 10 (1809 or later), or a recent Linux, with at least 4 GB of RAM and an internet connection. The native installer is the recommended route &mdash; it needs no Node.js and updates itself in the background.</p>
+
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS / LINUX / WSL &mdash; Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh / bash</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS &mdash; PowerShell</div>
+              <div class="code-block">
+                <div class="code-label"><span>powershell</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">irm https://claude.ai/install.ps1 | iex</code></pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>or, in Command Prompt (cmd)</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <p><strong>Prefer a package manager?</strong> These install the same tool, but don't auto-update:</p>
+          <div class="code-block">
+            <div class="code-label"><span>alternatives</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash"># macOS (Homebrew)
+brew install --cask claude-code
+
+# Windows (WinGet)
+winget install Anthropic.ClaudeCode
+
+# Any OS, if you already use Node.js 22 or newer (never use sudo)
+npm install -g @anthropic-ai/claude-code</code></pre>
+          </div>
+
+          <p>Then <strong>close and reopen your terminal</strong> and verify:</p>
+          <div class="code-block">
+            <div class="code-label"><span>verify</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">claude --version
+claude doctor</code></pre>
+          </div>
+          <p><code class="inline">claude --version</code> prints a version number. <code class="inline">claude doctor</code> runs a read-only health check of your install and settings.</p>
+
+          <div class="callout">
+            <span class="callout-title">Windows tip</span>
+            Your prompt shows <code class="inline">PS C:\</code> in PowerShell and plain <code class="inline">C:\</code> in Command Prompt &mdash; use the matching command. Installing <a href="https://git-scm.com/downloads/win">Git for Windows</a> is optional, but lets Claude Code use a Bash shell for its commands.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="cc-install">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Install Claude Code <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Install command is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">npm install -g @anthropic-ai/claude-code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">pip install claude-code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">apt-get install claude</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">yarn add python</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Install Claude Code&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">CC-install shows npm install -g @anthropic-ai/claude-code.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-install shows npm install -g @anthropic-ai/claude-code." data-feedback-wrong="Not quite — CC-install shows npm install -g @anthropic-ai/claude-code.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ CLAUDE CODE: KEY ============ -->
+      <section class="part" id="cc-key">
+        <div class="part-label">Part A &mdash; Claude Code &middot; Step 2</div>
+        <h2>Give Claude Code Your Anthropic API Key</h2>
+        <div class="topic">
+          <p class="intro">Claude Code reads your key from an environment variable named exactly <code class="inline">ANTHROPIC_API_KEY</code>. When it's set, Claude Code skips the browser login and asks you to approve the key instead.</p>
+
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS &mdash; Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh &mdash; permanent</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">echo 'export ANTHROPIC_API_KEY="paste-your-key"' &gt;&gt; ~/.zshrc
+source ~/.zshrc</code></pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh &mdash; this window only</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">export ANTHROPIC_API_KEY="paste-your-key"</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS &mdash; PowerShell</div>
+              <div class="code-block">
+                <div class="code-label"><span>powershell &mdash; permanent</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">setx ANTHROPIC_API_KEY "paste-your-key"
+# then close and reopen PowerShell</code></pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>powershell &mdash; this window only</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">$env:ANTHROPIC_API_KEY = "paste-your-key"</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <ul class="points">
+            <li>Replace <code class="inline">paste-your-key</code> with your real <code class="inline">sk-ant-&hellip;</code> key from the Anthropic console.</li>
+            <li>The <strong>permanent</strong> options save the key in your shell profile or Windows user settings, so every new terminal has it. The <strong>this window only</strong> options disappear when you close the terminal &mdash; handy for a quick test.</li>
+            <li>Commands you type are saved in your shell history, so a key typed this way lives in plain text on your machine. That's acceptable on a personal laptop; never do it on a shared computer.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Only an Anthropic key works here</span>
+            Claude Code talks to Claude models only &mdash; not Groq, Mistral, OpenRouter, OpenAI, or Gemini. No Anthropic credit yet? Skip ahead to Part B and run OpenCode on a free key instead; come back to Claude Code once you add Anthropic credit.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="cc-key">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Give Claude Code Your Anthropic API Key <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Claude Code key setup uses:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">ANTHROPIC_API_KEY env or /login</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">GROQ_API_KEY only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">HuggingFace token</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">AWS secret</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Give Claude Code Your Anthropic API Key&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">CC-key describes setting ANTHROPIC_API_KEY.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-key describes setting ANTHROPIC_API_KEY." data-feedback-wrong="Not quite — CC-key describes setting ANTHROPIC_API_KEY.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ CLAUDE CODE: RUN ============ -->
+      <section class="part" id="cc-run">
+        <div class="part-label">Part A &mdash; Claude Code &middot; Step 3</div>
+        <h2>Run Claude Code for the First Time</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Open a terminal in your project folder</strong><span>In VS Code, open the folder and use <em>Terminal &rarr; New Terminal</em> &mdash; it opens in the right place.</span></li>
+            <li><strong>Start Claude Code</strong><span>Type <code class="inline">claude</code> and press Enter.</span></li>
+            <li><strong>Approve your API key</strong><span>Because <code class="inline">ANTHROPIC_API_KEY</code> is set, Claude Code asks you once whether to use it. Choose yes &mdash; your answer is remembered. You may also be asked whether you trust the files in this folder.</span></li>
+            <li><strong>Check which credential is active</strong><span>Type <code class="inline">/status</code>. It shows how Claude Code is signed in &mdash; it should show your API key, not a subscription login.</span></li>
+            <li><strong>Give it a first task</strong><span>Try: <em>"Create a file called hello.py that prints a greeting, then run it."</em> Claude Code shows each file edit and command and asks your permission before making changes.</span></li>
+          </ol>
+          <div class="code-block">
+            <div class="code-label"><span>inside Claude Code</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">/status     shows which login or API key is active
+/help       lists every command
+/logout     signs out and resets first-run setup</code></pre>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Already have a Claude Pro or Max subscription?</span>
+            If <code class="inline">ANTHROPIC_API_KEY</code> is set and you approve it, Claude Code bills that key instead of your subscription. To go back to your subscription, run <code class="inline">unset ANTHROPIC_API_KEY</code> (on Windows, remove the variable in System settings) and check <code class="inline">/status</code> again.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="cc-run">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Run Claude Code for the First Time <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: First run: </p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">claude</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">python app.py</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">opencode run</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">code .</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Run Claude Code for the First Time&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">CC-run shows claude command.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="CC-run shows claude command." data-feedback-wrong="Not quite — CC-run shows claude command.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ OPENCODE: INSTALL ============ -->
+      <section class="part" id="oc-install">
+        <div class="part-label">Part B &mdash; OpenCode &middot; Step 1</div>
+        <h2>Install OpenCode</h2>
+        <div class="topic">
+          <p class="intro">OpenCode is an open-source coding agent that isn't tied to one model provider. It runs as a full-screen text interface in your terminal, so a modern terminal emulator gives the best experience &mdash; the OpenCode docs recommend WezTerm, Alacritty, Ghostty, or Kitty. If the interface looks garbled in your default terminal, try one of those.</p>
+
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS / LINUX / WSL &mdash; Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh / bash</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">curl -fsSL https://opencode.ai/install | bash</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS &mdash; PowerShell</div>
+              <div class="code-block">
+                <div class="code-label"><span>Node.js installed</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">npm install -g opencode-ai</code></pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label"><span>or, with Scoop / Chocolatey</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">scoop install opencode
+choco install opencode</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <p><strong>Other options:</strong></p>
+          <div class="code-block">
+            <div class="code-label"><span>alternatives</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash"># macOS (Homebrew)
+brew install anomalyco/tap/opencode
+
+# Any OS with Node.js
+npm install -g opencode-ai</code></pre>
+          </div>
+
+          <p>Close and reopen your terminal, then verify:</p>
+          <div class="code-block">
+            <div class="code-label"><span>verify</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">opencode --version</code></pre>
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="oc-install">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Install OpenCode <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: OpenCode install is via:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">install script / npm from opencode.ai</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">Microsoft Store</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">pip install supabase</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">conda</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Install OpenCode&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">OC-install lists opencode.ai installer.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-install lists opencode.ai installer." data-feedback-wrong="Not quite — OC-install lists opencode.ai installer.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ OPENCODE: KEYS ============ -->
+      <section class="part" id="oc-keys">
+        <div class="part-label">Part B &mdash; OpenCode &middot; Step 2</div>
+        <h2>Connect Your API Keys to OpenCode</h2>
+        <div class="topic">
+          <p class="intro">OpenCode can use any of your six model keys &mdash; Groq, Mistral, OpenRouter, Google Gemini, Anthropic, and OpenAI &mdash; connect one, or all six. Per the strategy above, start with a free one. There are two ways to connect a key; pick whichever you prefer.</p>
+
+          <h3 style="margin-top:22px;">Option 1 &mdash; The /connect command (recommended)</h3>
+          <ol class="steps">
+            <li><strong>Start OpenCode</strong><span>Run <code class="inline">opencode</code> in any folder.</span></li>
+            <li><strong>Type <code class="inline">/connect</code> and press Enter</strong></li>
+            <li><strong>Choose your provider</strong><span><strong>Groq</strong>, <strong>Mistral</strong>, <strong>OpenRouter</strong>, <strong>Google</strong> (the Gemini API), <strong>Anthropic</strong>, or <strong>OpenAI</strong>. Pick whichever free-tier provider you're starting with.</span></li>
+            <li><strong>Choose "Manually enter API Key" and paste your key</strong><span>For Anthropic and OpenAI you'll also see a browser-login option for a paid Claude or ChatGPT subscription &mdash; skip that; we're using API keys.</span></li>
+          </ol>
+          <p>You can do the same from a normal terminal, without opening the interface:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">opencode auth login</code></pre>
+          </div>
+          <p>OpenCode saves the key in a file on your computer &mdash; <code class="inline">~/.local/share/opencode/auth.json</code> on macOS and Linux &mdash; so you only enter it once.</p>
+
+          <h3 style="margin-top:26px;">Option 2 &mdash; Environment variables</h3>
+          <p>OpenCode also detects the standard variable names automatically &mdash; nothing to run inside OpenCode. Set only the ones for keys you're actually using; you don't need all six.</p>
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS &mdash; Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh &mdash; add to ~/.zshrc</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">export GROQ_API_KEY="paste-your-key"
+export MISTRAL_API_KEY="paste-your-key"
+export OPENROUTER_API_KEY="paste-your-key"
+export GEMINI_API_KEY="paste-your-key"
+export ANTHROPIC_API_KEY="paste-your-key"
+export OPENAI_API_KEY="paste-your-key"</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS &mdash; PowerShell</div>
+              <div class="code-block">
+                <div class="code-label"><span>powershell &mdash; then reopen</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">setx GROQ_API_KEY "paste-your-key"
+setx MISTRAL_API_KEY "paste-your-key"
+setx OPENROUTER_API_KEY "paste-your-key"
+setx GEMINI_API_KEY "paste-your-key"
+setx ANTHROPIC_API_KEY "paste-your-key"
+setx OPENAI_API_KEY "paste-your-key"</code></pre>
+              </div>
+            </div>
+          </div>
+          <p>Confirm OpenCode sees them:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">opencode auth list</code></pre>
+          </div>
+          <p>The output lists saved credentials, plus an <strong>Environment</strong> section naming each provider whose variable it found, such as <code class="inline">Groq GROQ_API_KEY</code> and <code class="inline">Google GEMINI_API_KEY</code>.</p>
+
+          <div class="callout">
+            <span class="callout-title">Same variable names as your other tools</span>
+            These are the same names the earlier API-key pages put in your <code class="inline">.env</code> file for Python. For OpenCode, the reliable way is to export them as environment variables in your terminal (or use <code class="inline">/connect</code>), as shown above.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="oc-keys">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Connect Your API Keys to OpenCode <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: OpenCode can use:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Anthropic, OpenAI, Gemini, Groq, Mistral, OpenRouter keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Only one key ever</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">No keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Only AWS keys</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Connect Your API Keys to OpenCode&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Overview says many providers accepted.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview says many providers accepted." data-feedback-wrong="Not quite — Overview says many providers accepted.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ OPENCODE: RUN ============ -->
+      <section class="part" id="oc-run">
+        <div class="part-label">Part B &mdash; OpenCode &middot; Step 3</div>
+        <h2>Pick a Model and Run OpenCode</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>See which models your keys unlock</strong><span>In a terminal: <code class="inline">opencode models</code> lists every available model as <code class="inline">provider/model</code>. Add a provider name to narrow it down, e.g. <code class="inline">opencode models google</code>.</span></li>
+            <li><strong>Make it ask before it acts (recommended)</strong><span>Unlike Claude Code, OpenCode edits files and runs shell commands <em>without asking</em> by default. Create the small <code class="inline">opencode.json</code> file shown below in your project folder to turn approval prompts on.</span></li>
+            <li><strong>Open your project folder and start OpenCode</strong><span><code class="inline">cd</code> into the folder, then run <code class="inline">opencode</code>.</span></li>
+            <li><strong>Choose a model</strong><span>Type <code class="inline">/models</code> and pick one &mdash; see the low-cost picks for each provider just below.</span></li>
+            <li><strong>Let it learn your project</strong><span>Type <code class="inline">/init</code>. OpenCode analyzes the folder and writes an <code class="inline">AGENTS.md</code> file describing it, which it uses as context in later sessions.</span></li>
+            <li><strong>Give it a first task</strong><span>Try: <em>"Create a file called hello.py that prints a greeting, then run it."</em></span></li>
+          </ol>
+          <div class="code-block">
+            <div class="code-label"><span>opencode.json (in your project folder)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "edit": "ask",
+    "bash": "ask"
+  }
+}</code></pre>
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">OpenCode's default is "allow"</span>
+            Without this file, OpenCode changes files and runs commands on its own as soon as you give it a task. With it, you're prompted before every edit and every shell command &mdash; the same safety net Claude Code gives you out of the box. It only applies to the folder the file is in, so add it to each project you use OpenCode in.
+          </div>
+
+          <p>You can also send a one-off request without the full interface:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">opencode run "Explain what the files in this folder do"</code></pre>
+          </div>
+          <h3 style="margin-top:26px;">Pick a small, cheap model first</h3>
+          <p class="intro">Every provider sells a "big flagship" model and a smaller, faster, much cheaper one alongside it. For learning and everyday agent tasks, the small one is almost always the right call &mdash; save the flagship for a task the small model actually struggles with.</p>
+          <table class="data-table">
+            <thead><tr><th>Provider</th><th>Start with</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Groq</strong></td><td><code class="inline">groq/llama-3.1-8b-instant</code></td><td>Free tier, extremely fast &mdash; good default for quick edits</td></tr>
+              <tr><td><strong>Mistral</strong></td><td><code class="inline">mistral/mistral-small-latest</code></td><td>The cheapest Mistral tier; fine for routine coding tasks</td></tr>
+              <tr><td><strong>OpenRouter</strong></td><td>any model with a <code class="inline">:free</code> suffix</td><td>Filter OpenRouter's model list to "free" &mdash; $0 per token</td></tr>
+              <tr><td><strong>Google Gemini</strong></td><td><code class="inline">google/gemini-2.5-flash</code></td><td>The "flash" tier &mdash; free-tier friendly and fast</td></tr>
+              <tr><td><strong>Anthropic</strong></td><td><code class="inline">anthropic/claude-haiku-4-5</code></td><td>The cheapest Claude tier &mdash; reserve Sonnet/Opus for harder tasks</td></tr>
+              <tr><td><strong>OpenAI</strong></td><td>the current "mini" tier, e.g. <code class="inline">openai/gpt-5-mini</code></td><td>A fraction of the flagship's per-token cost</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-dim);">Model names change often on every provider &mdash; if one of these has been renamed or retired by the time you read this, look for whichever model is labeled "mini," "flash," "small," "instant," or "free" in that provider's current list; that's the equivalent pick.</p>
+          <p>Manage saved credentials any time:</p>
+          <div class="code-block">
+            <div class="code-label"><span>terminal</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-bash">opencode auth list       # what's saved and what's in your environment
+opencode auth logout     # remove a provider's saved key</code></pre>
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="oc-run">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Pick a Model and Run OpenCode <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Run OpenCode via:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">opencode</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">claude</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">npm run dev</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">python3.11</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Pick a Model and Run OpenCode&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">OC-run shows opencode.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OC-run shows opencode." data-feedback-wrong="Not quite — OC-run shows opencode.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ REFERENCE ============ -->
+      <section class="part" id="reference">
+        <div class="part-label">Quick reference</div>
+        <h2>Side-by-Side Commands</h2>
+        <div class="topic">
+          <table class="data-table">
+            <thead><tr><th>Task</th><th>Claude Code</th><th>OpenCode</th></tr></thead>
+            <tbody>
+              <tr><td>Install (Mac/Linux)</td><td><code class="inline">curl -fsSL https://claude.ai/install.sh | bash</code></td><td><code class="inline">curl -fsSL https://opencode.ai/install | bash</code></td></tr>
+              <tr><td>Check version</td><td><code class="inline">claude --version</code></td><td><code class="inline">opencode --version</code></td></tr>
+              <tr><td>Provide a key</td><td><code class="inline">ANTHROPIC_API_KEY</code> &mdash; the only one it accepts</td><td><code class="inline">/connect</code>, <code class="inline">opencode auth login</code>, or env variables &mdash; any of your six keys</td></tr>
+              <tr><td>Start in a project</td><td><code class="inline">claude</code></td><td><code class="inline">opencode</code></td></tr>
+              <tr><td>Check credentials</td><td><code class="inline">/status</code></td><td><code class="inline">opencode auth list</code></td></tr>
+              <tr><td>Switch model</td><td><code class="inline">/model</code></td><td><code class="inline">/models</code></td></tr>
+              <tr><td>Sign out</td><td><code class="inline">/logout</code></td><td><code class="inline">opencode auth logout</code></td></tr>
+              <tr><td>Health check</td><td><code class="inline">claude doctor</code></td><td>&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="reference">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Side-by-Side Commands <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Reference shows:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Claude vs OpenCode commands</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Git vs GitHub</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Python vs R</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">AWS vs Supabase</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Side-by-Side Commands&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Reference is side-by-side commands.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Reference is side-by-side commands." data-feedback-wrong="Not quite — Reference is side-by-side commands.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ SAFETY ============ -->
+      <section class="part" id="safety">
+        <div class="part-label">Before you move on</div>
+        <h2>Using Coding Agents Safely</h2>
+        <div class="topic">
+          <p>These tools are powerful because they can read your files and run commands &mdash; which is exactly why a few habits matter:</p>
+          <ul class="points">
+            <li><strong>Keep secrets out of the project folder.</strong> An agent can read files in the folder you start it in, and what it reads is sent to the model provider. Don't keep a <code class="inline">.env</code> file with real keys in a folder you're about to hand to an agent &mdash; or make sure it's excluded.</li>
+            <li><strong>Read before you approve.</strong> Claude Code shows each file edit and shell command and asks permission first. <strong>OpenCode does not by default</strong> &mdash; add the <code class="inline">opencode.json</code> from Part B, Step 3 so it asks too. Then skim what you're approving, especially commands that delete or install things.</li>
+            <li><strong>Start in a scratch folder.</strong> Practice in an empty test project, not your only copy of important work &mdash; and put important projects under Git.</li>
+            <li><strong>Never paste an API key into the chat with the agent.</strong> Set it as an environment variable or through <code class="inline">/connect</code> instead.</li>
+            <li><strong>Cap your spending.</strong> Set a monthly limit where the provider offers one, and check the usage dashboard after your first sessions. Agents can use a lot of tokens on a big task.</li>
+            <li><strong>Use a dedicated key.</strong> Create a key named for this purpose (e.g. <code class="inline">coding-agents</code>) so you can revoke just that one if anything goes wrong.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Where OpenCode stores your key</span>
+            <code class="inline">auth.json</code> holds keys you enter through <code class="inline">/connect</code> in plain text. Treat that file like a password &mdash; never share or commit it.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="safety">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Using Coding Agents Safely <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Safety notes:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Review diffs, keep keys private, sandbox commands</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Share keys publicly</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Skip reviews</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Commit .env</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Using Coding Agents Safely&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Safety covers reviewing edits and key privacy.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety covers reviewing edits and key privacy." data-feedback-wrong="Not quite — Safety covers reviewing edits and key privacy.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ TROUBLESHOOTING ============ -->
+      <section class="part" id="troubleshooting">
+        <div class="part-label">Troubleshooting</div>
+        <h2>If Something Goes Wrong</h2>
+        <div class="topic">
+          <ul class="points">
+            <li><strong><code class="inline">command not found: claude</code> (or <code class="inline">opencode</code>):</strong> close and reopen the terminal first. If it persists, the install folder isn't on your PATH &mdash; the native Claude Code installer puts it at <code class="inline">~/.local/bin</code>. Run <code class="inline">claude doctor</code> for a diagnosis.</li>
+            <li><strong>Windows error about <code class="inline">&amp;&amp;</code> or <code class="inline">irm</code>:</strong> you ran the command in the wrong shell. <code class="inline">irm &hellip; | iex</code> is for PowerShell (<code class="inline">PS C:\</code> prompt); the <code class="inline">curl &hellip; &amp;&amp;</code> line is for Command Prompt.</li>
+            <li><strong>"Invalid API key" / authentication error:</strong> re-copy the key from the provider's console, check for stray spaces or quotes, and confirm the variable name is spelled exactly (<code class="inline">ANTHROPIC_API_KEY</code>, <code class="inline">OPENAI_API_KEY</code>, <code class="inline">GEMINI_API_KEY</code>). After using <code class="inline">setx</code> on Windows, open a <em>new</em> terminal.</li>
+            <li><strong>"Credit balance too low" or "quota exceeded":</strong> the key is valid but the account has no credit. Add a small amount on the provider's billing page (Anthropic and OpenAI need prepaid credit; Gemini has a free tier).</li>
+            <li><strong>Claude Code bills my key when I expected my subscription (or the reverse):</strong> run <code class="inline">/status</code>. To switch to your subscription, <code class="inline">unset ANTHROPIC_API_KEY</code> and restart Claude Code.</li>
+            <li><strong>OpenCode shows no models for a provider:</strong> run <code class="inline">opencode auth list</code> to confirm the key was saved or detected, then <code class="inline">opencode models --refresh</code> to update the model list.</li>
+            <li><strong>OpenCode's interface looks garbled:</strong> try a modern terminal emulator such as Ghostty, WezTerm, Alacritty, or Kitty.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Still stuck?</span>
+            Tell your instructor before Base Camp 2 &mdash; and don't paste your real key into class chat while asking for help; describe the error message instead.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="troubleshooting">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · If Something Goes Wrong <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Troubleshooting lists:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Permission, key, network errors</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Only VS Code theme</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Only Python PATH</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Only browser cache</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;If Something Goes Wrong&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Troubleshooting covers failures.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting covers failures." data-feedback-wrong="Not quite — Troubleshooting covers failures.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>Coding Agent Setup &mdash; Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> You know which key you're starting with, and why (free-first: Groq, Mistral, OpenRouter, or Gemini &mdash; paid only once those run out)</li>
+            <li><span class="tick">✓</span> <code class="inline">opencode --version</code> prints a version number</li>
+            <li><span class="tick">✓</span> <code class="inline">opencode auth list</code> shows at least one provider from your keys</li>
+            <li><span class="tick">✓</span> Your project has an <code class="inline">opencode.json</code> so OpenCode asks before editing files or running commands</li>
+            <li><span class="tick">✓</span> OpenCode completed a first small task using a low-cost model you chose</li>
+            <li><span class="tick">✓</span> <em>If you have Anthropic credit or a Claude Pro/Max login</em> &mdash; <code class="inline">claude --version</code> prints a version number, <code class="inline">/status</code> shows it's active, and Claude Code completed a first small task</li>
+            <li><span class="tick">✓</span> You've noted where your keys are stored and set a spend limit where available</li>
+          </ul>
+          <div class="callout">
+            No Anthropic key yet? Skip that one Claude Code item &mdash; everything else in this fellowship works fine on OpenCode with a free-tier key alone.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Coding Agent Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Checklist expects:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Both agents installed and first run done</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Only VS Code installed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Only AWS account</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Only Python download</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Coding Agent Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Checklist confirms both agents ready.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist confirms both agents ready." data-feedback-wrong="Not quite — Checklist confirms both agents ready.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — Coding Agents — Cost-Smart Setup</h3><p>Type the Claude Code install command. Strategy says start cost-smart but this challenge checks the Claude Code installer.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="npm install -g @anthropic-ai/claude-code" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^npm install -g @anthropic-ai/claude-code\s*$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+        </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: npm install -g @anthropic-ai/claude-code</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+      </footer>
+    </div>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 8 Supabase Account</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="7_claude_code_opencode.html">← Previous</a>
+    <a class="genai-nav-next" href="8_supabase_account.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
+</body>
+</html>

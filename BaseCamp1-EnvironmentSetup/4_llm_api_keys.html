@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Setting Up Anthropic, OpenAI &amp; Gemini API Keys | GenAI Coaching — AI Accelerator Hub</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="The previous page covered fast, open-weight and search providers. This one covers the three frontier model labs you'll call most often from Python: Anthropic...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
+</head>
+<body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; LLM Keys</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#anthropic">1 &middot; Anthropic (Claude)</a></li>
+        <li><a href="#openai">2 &middot; OpenAI</a></li>
+        <li><a href="#gemini">3 &middot; Google Gemini</a></li>
+        <li><a href="#compare">Side-by-Side Comparison</a></li>
+        <li><a href="#test">Test Your Keys</a></li>
+        <li><a href="#safety">Keeping Keys Safe</a></li>
+        <li><a href="#checklist">Setup Checklist</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Before Base Camp 2</span>
+        <h1>Setting Up Anthropic, OpenAI &amp; Gemini API Keys</h1>
+        <p class="lede">The previous page covered fast, open-weight and search providers. This one covers the three frontier model labs you'll call most often from Python: Anthropic's Claude, OpenAI's GPT models, and Google's Gemini. Each needs its own account and API key &mdash; do it now, calmly, so class time is spent coding instead of waiting on verification emails and billing pages.</p>
+        <div class="meta-row">
+          <span class="meta-pill">🔑 3 providers</span>
+          <span class="meta-pill">⏱ ~15 minutes</span>
+          <span class="meta-pill">💳 Small billing setup may be needed</span>
+        </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="3_api_keys.html">← Prev</a>
+    <a class="genai-nav-next" href="5_aws_account.html">Next →</a>
+  </span>
+</nav>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>An API key is not your chat subscription</h2>
+        <div class="topic">
+          <p>The chat apps you may already use &mdash; Claude.ai, ChatGPT, the Gemini app &mdash; and the developer APIs behind them are <strong>separate products with separate billing</strong>. A Claude Pro or ChatGPT Plus subscription does not include API credits. To call these models from code you need a key from each provider's developer console, created through the steps below.</p>
+          <ol class="steps">
+            <li><strong>Open the provider's key page</strong><span>Direct links are given in each section so you don't have to hunt through menus.</span></li>
+            <li><strong>Sign in</strong><span>Use a personal email you check regularly &mdash; some providers send a verification link or ask for a phone number first.</span></li>
+            <li><strong>Create a key and name it</strong><span>Something you'll recognize later, e.g. <code class="inline">AI Accelerator Hub-fellowship</code>.</span></li>
+            <li><strong>Copy it immediately</strong><span>Anthropic and OpenAI show the full key exactly once. If you close the dialog first, you'll have to generate a new key.</span></li>
+            <li><strong>Save it somewhere safe</strong><span>A password manager, or the local <code class="inline">.env</code> file shown near the end of this page.</span></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-title">Plan for billing</span>
+            Anthropic and OpenAI generally require adding a small amount of prepaid credit before API calls will succeed &mdash; a few dollars is plenty for coursework. Gemini has a free tier that works without a card. Details are in each section, and dashboards change their wording from time to time, so trust the on-screen labels if they differ slightly from these steps.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · An API key is not your chat subscription <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Chat subscription vs API key:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Separate products/billing — Claude Pro/ChatGPT Plus does not include API credits</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Same thing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">API key is free if you have chat subscription</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Billing is shared</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;An API key is not your chat subscription&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Overview: chat and API are separate products with separate b</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: chat and API are separate products with separate billing." data-feedback-wrong="Not quite — Overview: chat and API are separate products with separate billing.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ ANTHROPIC ============ -->
+      <section class="part" id="anthropic">
+        <div class="part-label">Provider 1 of 3</div>
+        <h2>Anthropic (Claude)</h2>
+        <div class="topic">
+          <p class="intro">Anthropic makes the Claude family of models. Their developer platform is where you create keys and manage credits for the Claude API.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://platform.claude.com/settings/keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above. If you don't have an account yet, you'll be prompted to create one with your email or a Google account.</span></li>
+            <li><strong>Land on the API Keys page</strong><span>The link takes you to <em>Settings &rarr; API Keys</em> inside the developer console.</span></li>
+            <li><strong>Click "Create Key"</strong><span>Give it a name like <code class="inline">AI Accelerator Hub-fellowship</code>. If you're asked to pick a workspace, the default one is fine.</span></li>
+            <li><strong>Copy the key right away</strong><span>Anthropic keys start with <code class="inline">sk-ant-</code>, and the full key is displayed only once.</span></li>
+            <li><strong>Add credit so calls succeed</strong><span>Open <em>Settings &rarr; Billing</em> and purchase a small amount of credit. A valid key with no credit will return an error when you actually call the model.</span></li>
+          </ol>
+          <div class="callout">
+            The Anthropic SDK looks for an environment variable named <code class="inline">ANTHROPIC_API_KEY</code> automatically &mdash; use exactly that name in your <code class="inline">.env</code> file and you won't have to pass the key around in code.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="anthropic">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Anthropic (Claude) <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Anthropic keys are at:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">console.anthropic.com → API Keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">console.groq.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">platform.openai.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">aistudio.google.com</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Anthropic (Claude)&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">Anthropic section links to console.anthropic.com.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Anthropic section links to console.anthropic.com." data-feedback-wrong="Not quite — Anthropic section links to console.anthropic.com.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ OPENAI ============ -->
+      <section class="part" id="openai">
+        <div class="part-label">Provider 2 of 3</div>
+        <h2>OpenAI</h2>
+        <div class="topic">
+          <p class="intro">OpenAI makes the GPT family of models. Its developer platform is separate from the ChatGPT app &mdash; your ChatGPT login usually works there, but the billing does not carry over.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://platform.openai.com/api-keys</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign up or log in</strong><span>Open the link above and continue with your email, or a Google, Microsoft, or Apple account. New accounts may be asked to verify a phone number.</span></li>
+            <li><strong>Land on the API Keys page</strong><span>This page lists every secret key tied to your account and project.</span></li>
+            <li><strong>Click "Create new secret key"</strong><span>Name it (e.g. <code class="inline">AI Accelerator Hub-fellowship</code>). Leave the project as the default, and leave permissions on <strong>All</strong> for coursework.</span></li>
+            <li><strong>Copy the key immediately</strong><span>OpenAI keys start with <code class="inline">sk-</code> (project keys often start with <code class="inline">sk-proj-</code>). The full key is shown only once &mdash; copy it before clicking Done.</span></li>
+            <li><strong>Add credit so calls succeed</strong><span>Open <em>Settings &rarr; Billing</em>, add a payment method, and purchase a small amount of prepaid credit. Without credit, requests fail with a "quota exceeded" error even though the key itself is valid.</span></li>
+          </ol>
+          <div class="callout">
+            The OpenAI SDK reads <code class="inline">OPENAI_API_KEY</code> from the environment by default &mdash; use that exact name in your <code class="inline">.env</code> file. The billing page also lets you set a monthly spend limit; setting a low one on day one caps your worst-case cost if a key ever leaks.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="openai">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · OpenAI <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: OpenAI keys are at:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">platform.openai.com → API keys</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">console.anthropic.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">serper.dev</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">supabase.co</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;OpenAI&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">OpenAI section links to platform.openai.com.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="OpenAI section links to platform.openai.com." data-feedback-wrong="Not quite — OpenAI section links to platform.openai.com.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ GEMINI ============ -->
+      <section class="part" id="gemini">
+        <div class="part-label">Provider 3 of 3</div>
+        <h2>Google Gemini</h2>
+        <div class="topic">
+          <p class="intro">Gemini keys are created in Google AI Studio, Google's browser-based workspace for the Gemini API. You sign in with a regular Google account &mdash; no separate developer signup.</p>
+          <div class="code-block">
+            <div class="code-label"><span>api keys page (Google AI Studio)</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://aistudio.google.com/apikey</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Sign in with your Google account</strong><span>Open the link above. Accept the terms of service if prompted.</span></li>
+            <li><strong>Land on the API Keys page</strong><span>Any keys you've created before are listed here.</span></li>
+            <li><strong>Click "Create API key"</strong><span>AI Studio asks which Google Cloud project the key belongs to. Pick an existing project, or choose the option to create the key in a new project &mdash; either works.</span></li>
+            <li><strong>Copy the key</strong><span>Gemini keys typically start with <code class="inline">AIza</code>. Unlike Anthropic and OpenAI, AI Studio keeps your keys listed, so you can usually come back and copy one again later.</span></li>
+          </ol>
+          <div class="callout">
+            The Gemini API has a free tier with rate limits, so you can get started without adding a card. The Google GenAI Python SDK reads the <code class="inline">GEMINI_API_KEY</code> environment variable &mdash; use that name in your <code class="inline">.env</code> file.
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Free-tier data note</span>
+            Under Google's terms, content sent through the free tier may be used to improve Google's products. Don't send sensitive, personal, or confidential data while using the free tier.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="gemini">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Google Gemini <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Gemini keys are at:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">aistudio.google.com → API Keys (or Google AI Studio)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">platform.openai.com</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">console.mistral.ai</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">github.com</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Google Gemini&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">Gemini section links to aistudio.google.com.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Gemini section links to aistudio.google.com." data-feedback-wrong="Not quite — Gemini section links to aistudio.google.com.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ COMPARE ============ -->
+      <section class="part" id="compare">
+        <div class="part-label">Quick reference</div>
+        <h2>Side-by-Side Comparison</h2>
+        <div class="topic">
+          <table class="data-table">
+            <thead><tr><th>Provider</th><th>Key page</th><th>Key looks like</th><th>Billing to start</th><th>Env variable</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Anthropic</strong></td><td><code class="inline">platform.claude.com/settings/keys</code></td><td><code class="inline">sk-ant-&hellip;</code></td><td>Prepaid credit</td><td><code class="inline">ANTHROPIC_API_KEY</code></td></tr>
+              <tr><td><strong>OpenAI</strong></td><td><code class="inline">platform.openai.com/api-keys</code></td><td><code class="inline">sk-&hellip; / sk-proj-&hellip;</code></td><td>Prepaid credit</td><td><code class="inline">OPENAI_API_KEY</code></td></tr>
+              <tr><td><strong>Google Gemini</strong></td><td><code class="inline">aistudio.google.com/apikey</code></td><td><code class="inline">AIza&hellip;</code></td><td>Free tier available</td><td><code class="inline">GEMINI_API_KEY</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="compare">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Side-by-Side Comparison <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which table row is shown?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Provider, key location, billing notes side-by-side</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Only prices</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Only model names</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Only URLs</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Side-by-Side Comparison&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Compare section provides side-by-side table.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Compare section provides side-by-side table." data-feedback-wrong="Not quite — Compare section provides side-by-side table.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ TEST ============ -->
+      <section class="part" id="test">
+        <div class="part-label">Optional but recommended</div>
+        <h2>Test That Each Key Works</h2>
+        <div class="topic">
+          <p class="intro">Each command below asks the provider to list the models your key can use. It sends no prompt and costs nothing &mdash; a list of models means the key is valid, an authentication error means it was copied wrongly.</p>
+
+          <div class="os-grid">
+            <div class="os-card">
+              <div class="os-title">🍎 MACOS &mdash; Terminal</div>
+              <div class="code-block">
+                <div class="code-label"><span>zsh</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">export ANTHROPIC_API_KEY="paste-your-key"
+curl https://api.anthropic.com/v1/models \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01"
+
+export OPENAI_API_KEY="paste-your-key"
+curl https://api.openai.com/v1/models \
+  -H "Authorization: Bearer $OPENAI_API_KEY"
+
+export GEMINI_API_KEY="paste-your-key"
+curl https://generativelanguage.googleapis.com/v1beta/models \
+  -H "x-goog-api-key: $GEMINI_API_KEY"</code></pre>
+              </div>
+            </div>
+            <div class="os-card">
+              <div class="os-title">🪟 WINDOWS &mdash; PowerShell</div>
+              <div class="code-block">
+                <div class="code-label"><span>powershell</span><button class="copy-btn">Copy</button></div>
+                <pre><code class="language-bash">$env:ANTHROPIC_API_KEY = "paste-your-key"
+curl.exe https://api.anthropic.com/v1/models `
+  -H "x-api-key: $env:ANTHROPIC_API_KEY" `
+  -H "anthropic-version: 2023-06-01"
+
+$env:OPENAI_API_KEY = "paste-your-key"
+curl.exe https://api.openai.com/v1/models `
+  -H "Authorization: Bearer $env:OPENAI_API_KEY"
+
+$env:GEMINI_API_KEY = "paste-your-key"
+curl.exe https://generativelanguage.googleapis.com/v1beta/models `
+  -H "x-goog-api-key: $env:GEMINI_API_KEY"</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout warn">
+            <span class="callout-title">One-off test only</span>
+            Keys typed into a terminal end up in your shell history, and these variables vanish when you close the window. That's fine for a quick check &mdash; the permanent setup is the <code class="inline">.env</code> file below. On Windows, use <code class="inline">curl.exe</code> (not plain <code class="inline">curl</code>), because PowerShell aliases <code class="inline">curl</code> to a different command.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="test">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Test That Each Key Works <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: How to test keys?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Run a small Python snippet that calls each provider</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Email support</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Wait for class</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Reinstall Python</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Test That Each Key Works&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Test section gives Python snippets to call each API.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Test section gives Python snippets to call each API." data-feedback-wrong="Not quite — Test section gives Python snippets to call each API.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ SAFETY ============ -->
+      <section class="part" id="safety">
+        <div class="part-label">Before you move on</div>
+        <h2>Keeping Your Keys Safe</h2>
+        <div class="topic">
+          <p>Frontier-model keys are billed per use, so a leaked key is a leaked credit card. The same rules apply as for every other key in this fellowship:</p>
+          <ul class="points">
+            <li>Never paste a key into code you plan to commit to GitHub, or share it in Slack, email, or a chat message.</li>
+            <li>Keep keys in a local <code class="inline">.env</code> file and keep that file out of version control.</li>
+            <li>If a key leaks, revoke or delete it on that provider's key page immediately &mdash; then create a fresh one.</li>
+            <li>Set a spend limit where the provider offers one (OpenAI's billing settings, for example).</li>
+          </ul>
+
+          <p class="intro" style="margin-top:20px;">Add these three lines to the same <code class="inline">.env</code> file you started on the previous API-keys page &mdash; one file, one line per key:</p>
+
+          <div class="code-block">
+            <div class="code-label"><span>.env</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">ANTHROPIC_API_KEY=your_anthropic_key_here
+OPENAI_API_KEY=your_openai_key_here
+GEMINI_API_KEY=your_gemini_key_here</code></pre>
+          </div>
+
+          <div class="code-block">
+            <div class="code-label"><span>python</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-python">from dotenv import load_dotenv
+import os
+
+load_dotenv()  # reads the .env file in your project folder
+
+anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+openai_key = os.getenv("OPENAI_API_KEY")
+gemini_key = os.getenv("GEMINI_API_KEY")</code></pre>
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Don't have python-dotenv yet?</span>
+            That's expected &mdash; <code class="inline">pip install python-dotenv</code> and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="safety">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Keeping Your Keys Safe <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Safest practice is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Store in .env, never commit, use password manager</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Commit .env to GitHub</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Share keys in Slack</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Hardcode in notebook</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Keeping Your Keys Safe&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Safety repeats .env + gitignore guidance.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Safety repeats .env + gitignore guidance." data-feedback-wrong="Not quite — Safety repeats .env + gitignore guidance.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>LLM API Key Setup &mdash; Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> You have an Anthropic developer account, a copied API key, and a little credit added</li>
+            <li><span class="tick">✓</span> You have an OpenAI developer account, a copied API key, and a little credit added</li>
+            <li><span class="tick">✓</span> You have a Gemini API key from Google AI Studio</li>
+            <li><span class="tick">✓</span> Each key returned a model list in the optional test (or you've noted which one didn't)</li>
+            <li><span class="tick">✓</span> All three keys are saved somewhere safe &mdash; not just left open in a browser tab</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Stuck?</span>
+            Flag your instructor before Base Camp 2. If billing is a problem for any provider, tell them which one &mdash; the exercises can be done with just one or two of these keys.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · LLM API Key Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Final check needs:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Anthropic, OpenAI, Gemini keys saved</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Only Groq key</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Only GitHub login</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">VS Code theme</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;LLM API Key Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Checklist verifies the three frontier keys.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies the three frontier keys." data-feedback-wrong="Not quite — Checklist verifies the three frontier keys.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — LLM Keys — Frontier Key Format</h3><p>Paste the prefix of an Anthropic key. The page says keys are shown once and start with sk-ant-…</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="sk-ant-xxxxxxxxxxxxxxxx" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^sk-ant-[A-Za-z0-9\-_]{10,}$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+        </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: Anthropic keys start with sk-ant-</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+      </footer>
+    </div>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 5 Aws Account</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="3_api_keys.html">← Previous</a>
+    <a class="genai-nav-next" href="5_aws_account.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
+</body>
+</html>

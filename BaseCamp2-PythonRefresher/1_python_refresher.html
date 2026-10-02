@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Python Fundamentals | Outskill AI Fellowship</title>
+<title>Python Fundamentals | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:image" content="assets/genai-coaching-logo.svg" />
+<link rel="stylesheet" href="assets/genai-brand.css" />
+<link rel="stylesheet" href="assets/genai-gamify.css" />
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="genai-brand-lockup"><img src="assets/genai-coaching-emblem.svg" class="genai-brand-logo" alt="GenAI Coaching emblem" width="28" height="28" /><div class="genai-brand-wordmark">GEN <span>AI</span><br/>COACHING</div></div>
+    <div class="genai-brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-progress-wrap" aria-label="Course progress"><div class="genai-progress-track" aria-hidden="true"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
 
     <h4>Base Camp 2 &middot; Week 1 &middot; Session 1</h4>
     <nav>
@@ -66,18 +75,25 @@
     </nav>
   </aside>
 
-  <main>
+  <main id="main-content">
     <div class="content">
 
       <div class="page-header">
-        <span class="eyebrow"><img src="assets/outskill-icon.svg" class="eyebrow-icon" alt=""/> Base Camp 2 &middot; Week 1 &middot; Session 1</span>
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt="GenAI Coaching emblem"/> Base Camp 2 &middot; Week 1 &middot; Session 1</span>
         <h1>Python Fundamentals</h1>
         <p class="lede">Variables &amp; built-ins &middot; strings &middot; data structures &middot; branching, looping &amp; comprehensions &middot; functions. Everything runs in plain Python inside Jupyter — no installs, no imports, no virtual environments. Every snippet below is copy-paste ready.</p>
         <div class="meta-row">
           <span class="meta-pill">⏱ 3 hours, hands-on</span>
           <span class="meta-pill">No installs required</span>
         </div>
-      </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="../BaseCamp1/5_Git_Concept.html">← Prev</a>
+    <a class="genai-nav-next" href="1_python.html">Next →</a>
+  </span>
+</nav>
 
       <section class="part" id="overview">
         <h2>Learning Objectives</h2>
@@ -103,7 +119,11 @@
           <div class="agenda-row"><span class="agenda-time">2:25–2:55</span><span class="agenda-label">Part 5 — Introduce Functions</span></div>
           <div class="agenda-row"><span class="agenda-time">2:55–3:00</span><span class="agenda-label">Wrap-up &amp; Take-Home Exercise</span></div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <!-- ============ PART 1 ============ -->
       <section class="part" id="part1">
@@ -182,6 +202,12 @@ print(len(scores))</code></pre>
           </ul>
         </div>
       </section>
+<div class="genai-quiz-block" style="margin:18px 0;">
+  <h3 style="font-size:15px;font-weight:800;color:#0A0A0A;margin:0 0 12px;">✢ Part 1 Check</h3>
+  <div class="genai-quiz" data-quiz-id="quiz-part1-1" role="group" aria-label="Quiz 1"><p class="genai-quiz-q">Given <code class="inline">age = 27</code> then <code class="inline">age = 28</code> and <code class="inline">print(age)</code>, what is printed?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">28</button><button type="button" class="genai-quiz-option" data-correct="false">27</button><button type="button" class="genai-quiz-option" data-correct="false">27 28</button><button type="button" class="genai-quiz-option" data-correct="false">Error</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+<div class="genai-quiz" data-quiz-id="quiz-part1-2" role="group" aria-label="Quiz 2"><p class="genai-quiz-q">With <code class="inline">a = 15</code> and <code class="inline">b = 4</code>, what does <code class="inline">a // b</code> evaluate to?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">3</button><button type="button" class="genai-quiz-option" data-correct="false">3.75</button><button type="button" class="genai-quiz-option" data-correct="false">3.0</button><button type="button" class="genai-quiz-option" data-correct="false">4</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+
+</div>
 
       <!-- ============ PART 2 ============ -->
       <section class="part" id="part2">
@@ -192,7 +218,7 @@ print(len(scores))</code></pre>
           <h3><span class="topic-num">2.1</span> Creating and Printing Strings</h3>
           <div class="code-block">
             <div class="code-label"><span>notebook cell</span><button class="copy-btn">Copy</button></div>
-            <pre><code class="language-python">message = "Hello, AI Fellowship!"
+            <pre><code class="language-python">message = "Hello, AI Accelerator Hub!"
 print(message)
 print(len(message))</code></pre>
           </div>
@@ -312,6 +338,12 @@ print(f"Vowel count: {vowel_count}")</code></pre>
           </ul>
         </div>
       </section>
+<div class="genai-quiz-block" style="margin:18px 0;">
+  <h3 style="font-size:15px;font-weight:800;color:#0A0A0A;margin:0 0 12px;">✢ Part 2 Check</h3>
+  <div class="genai-quiz" data-quiz-id="quiz-part2-1" role="group" aria-label="Quiz 1"><p class="genai-quiz-q">For <code class="inline">course = "AI Engineering"</code>, what does <code class="inline">course[0]</code> return?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">&quot;A&quot;</button><button type="button" class="genai-quiz-option" data-correct="false">&quot;AI&quot;</button><button type="button" class="genai-quiz-option" data-correct="false">&quot;g&quot;</button><button type="button" class="genai-quiz-option" data-correct="false">space</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+<div class="genai-quiz" data-quiz-id="quiz-part2-2" role="group" aria-label="Quiz 2"><p class="genai-quiz-q">What does <code class="inline">"AI! " * 3</code> produce?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">&quot;AI! AI! AI! &quot;</button><button type="button" class="genai-quiz-option" data-correct="false">&quot;AI!AI!AI!&quot;</button><button type="button" class="genai-quiz-option" data-correct="false">&quot;AI!&quot;</button><button type="button" class="genai-quiz-option" data-correct="false">Error</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+
+</div>
 
       <!-- ============ PART 3 ============ -->
       <section class="part" id="part3">
@@ -467,6 +499,12 @@ print(teams["blue"][0])</code></pre>
           </ul>
         </div>
       </section>
+<div class="genai-quiz-block" style="margin:18px 0;">
+  <h3 style="font-size:15px;font-weight:800;color:#0A0A0A;margin:0 0 12px;">✢ Part 3 Check</h3>
+  <div class="genai-quiz" data-quiz-id="quiz-part3-1" role="group" aria-label="Quiz 1"><p class="genai-quiz-q">Given <code class="inline">fruits = ["apple", "banana", "cherry", "date"]</code>, what does <code class="inline">fruits[1:3]</code> return?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">["banana", "cherry"]</button><button type="button" class="genai-quiz-option" data-correct="false">["apple", "banana"]</button><button type="button" class="genai-quiz-option" data-correct="false">["banana", "cherry", "date"]</button><button type="button" class="genai-quiz-option" data-correct="false">["cherry"]</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+<div class="genai-quiz" data-quiz-id="quiz-part3-2" role="group" aria-label="Quiz 2"><p class="genai-quiz-q">What does <code class="inline">numbers.sort()</code> return?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">None — sorts in place</button><button type="button" class="genai-quiz-option" data-correct="false">A new sorted list</button><button type="button" class="genai-quiz-option" data-correct="false">The last element</button><button type="button" class="genai-quiz-option" data-correct="false">Error</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+
+</div>
 
       <!-- ============ PART 4 ============ -->
       <section class="part" id="part4">
@@ -640,6 +678,12 @@ print(birthday)</code></pre>
           </ul>
         </div>
       </section>
+<div class="genai-quiz-block" style="margin:18px 0;">
+  <h3 style="font-size:15px;font-weight:800;color:#0A0A0A;margin:0 0 12px;">✢ Part 4 Check</h3>
+  <div class="genai-quiz" data-quiz-id="quiz-part4-1" role="group" aria-label="Quiz 1"><p class="genai-quiz-q">With <code class="inline">temperature = 28</code>, which message prints?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">It’s a pleasant day.</button><button type="button" class="genai-quiz-option" data-correct="false">It’s hot outside.</button><button type="button" class="genai-quiz-option" data-correct="false">It’s cold outside.</button><button type="button" class="genai-quiz-option" data-correct="false">Nothing</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+<div class="genai-quiz" data-quiz-id="quiz-part4-2" role="group" aria-label="Quiz 2"><p class="genai-quiz-q">What does <code class="inline">[n for n in numbers2 if n % 2 == 0]</code> produce for numbers2=[12,7,18,3,24,9,30]?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">[12, 18, 24, 30]</button><button type="button" class="genai-quiz-option" data-correct="false">[7, 3, 9]</button><button type="button" class="genai-quiz-option" data-correct="false">[12,7,18,3,24,9,30]</button><button type="button" class="genai-quiz-option" data-correct="false">[]</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+
+</div>
 
       <!-- ============ PART 5 ============ -->
       <section class="part" id="part5">
@@ -752,8 +796,43 @@ print(count_vowels("Data Structures"))</code></pre>
           </div>
         </div>
       </section>
+<div class="genai-quiz-block" style="margin:18px 0;">
+  <h3 style="font-size:15px;font-weight:800;color:#0A0A0A;margin:0 0 12px;">✢ Part 5 Check</h3>
+  <div class="genai-quiz" data-quiz-id="quiz-part5-1" role="group" aria-label="Quiz 1"><p class="genai-quiz-q">What does <code class="inline">is_even(4)</code> return?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">True</button><button type="button" class="genai-quiz-option" data-correct="false">False</button><button type="button" class="genai-quiz-option" data-correct="false">4</button><button type="button" class="genai-quiz-option" data-correct="false">None</button></div><div class="genai-quiz-feedback" role="status"></div></div>
+<div class="genai-quiz" data-quiz-id="quiz-part5-2" role="group" aria-label="Quiz 2"><p class="genai-quiz-q">What does <code class="inline">greet_student("Ravi")</code> print with default role="student"?</p><div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true">Hello Ravi, welcome as a student!</button><button type="button" class="genai-quiz-option" data-correct="false">Hello Ravi, welcome as a mentor!</button><button type="button" class="genai-quiz-option" data-correct="false">Hello Ravi</button><button type="button" class="genai-quiz-option" data-correct="false">Error</button></div><div class="genai-quiz-feedback" role="status"></div></div>
 
-      <section class="part" id="recap">
+</div>
+
+      
+<section class="part genai-lab" id="elite-lab">
+  <div class="part-label">Elite Practice Lab</div>
+  <h2>Elite Practice Lab — Fill the Output</h2>
+  <p class="intro">Type the exact output for each snippet (derived verbatim from the page’s code examples).</p>
+  <div class="topic" id="lab-challenge-1">
+    <h3><span class="topic-num">L1</span> f-string output</h3>
+    <div class="code-block"><div class="code-label"><span>python</span></div><pre><code class="language-python">student = "Maria"
+score = 92.5
+print(f"{student} scored {score:.0f} points in the quiz.")</code></pre></div>
+    <p>What does this print? Type the exact line:</p>
+    <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <input type="text" class="genai-lab-input" data-answer="Maria scored 92 points in the quiz." data-regex="^Maria scored 92 points in the quiz\.$" placeholder="Maria scored ... " style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" aria-label="Answer for f-string challenge" />
+      <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;flex-shrink:0;">Check</button>
+      <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+    </div>
+  </div>
+  <div class="topic" id="lab-challenge-2">
+    <h3><span class="topic-num">L2</span> Slicing result</h3>
+    <div class="code-block"><div class="code-label"><span>python</span></div><pre><code class="language-python">fruits = ["apple", "banana", "cherry", "date"]
+print(fruits[1:3])</code></pre></div>
+    <p>What list is printed? Type the exact Python literal:</p>
+    <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <input type="text" class="genai-lab-input" data-answer="['banana', 'cherry']" data-regex="^\[\'banana\',\s*\'cherry\'\]$" placeholder="['banana', 'cherry']" style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" aria-label="Answer for slicing challenge" />
+      <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;flex-shrink:0;">Check</button>
+      <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+    </div>
+  </div>
+</section>
+<section class="part" id="recap">
         <div class="part-label">Recap</div>
         <h2>Key Takeaways</h2>
         <div class="recap-grid">
@@ -763,23 +842,75 @@ print(count_vowels("Data Structures"))</code></pre>
           <div class="obj-card"><span class="obj-num">4</span>Loop + if is the pattern behind filtering and counting; comprehensions write it in one line.</div>
           <div class="obj-card"><span class="obj-num">5</span>Functions turn one-off logic into a reusable tool — write it once, call it anywhere.</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
-      <footer class="site-footer">
-        <div class="footer-brand">
-          <img src="assets/outskill-icon.svg" class="footer-icon" alt="Outskill"/>
-          <span class="footer-outskill">OUTSKILL</span>
-          <span class="footer-sep">|</span>
-          <img src="assets/growth-school-logo.png" class="footer-gs-logo" alt="Growth School"/>
+      <footer class="site-footer genai-footer">
+        <div class="genai-footer-row">
+          <img src="assets/genai-coaching-logo-light.svg" alt="GenAI Coaching" class="genai-footer-logo" style="height:28px" />
+          <span class="footer-sep" style="color:#9A9A9A">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" class="footer-gs-logo" style="height:22px" />
         </div>
+        <div style="text-align:center;margin-top:8px;font-size:12px;color:#536b64;">GenAI Coaching · Enterprise · by AI Accelerator Hub</div>
       </footer>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 1 Python</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="../BaseCamp1/5_Git_Concept.html">← Previous</a>
+    <a class="genai-nav-next" href="1_python.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/script.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('[data-lab-check]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wrap = btn.closest('.genai-lab-input-wrap');
+      var input = wrap.querySelector('.genai-lab-input');
+      var feedback = wrap.querySelector('.genai-quiz-feedback');
+      if(!input || !feedback) return;
+      var val = input.value.trim();
+      var expected = input.getAttribute('data-answer')||'';
+      var regexStr = input.getAttribute('data-regex');
+      var ok = false;
+      if(regexStr){
+        try{ var re = new RegExp(regexStr); ok = re.test(val); }catch(e){ ok = val===expected; }
+      } else { ok = val===expected; }
+      feedback.classList.add('is-visible');
+      if(ok){
+        feedback.textContent='Correct! +25 XP';
+        feedback.className='genai-quiz-feedback is-visible is-correct';
+        input.style.borderColor='#C9A86A';
+        try{ var badge = document.querySelector('.genai-xp-badge strong'); if(badge){ var n = parseInt(badge.textContent||'0',10)+25; badge.textContent=String(n); } }catch(e){}
+        btn.disabled=true; input.disabled=true;
+        var toast = document.querySelector('.genai-xp-toast'); if(toast){ toast.textContent='+25 XP  lab'; toast.classList.add('is-visible'); setTimeout(function(){toast.classList.remove('is-visible')},2200); }
+      } else {
+        feedback.textContent='Not quite \u2014 check exact output including punctuation and spacing.';
+        feedback.className='genai-quiz-feedback is-visible is-wrong';
+        input.style.borderColor='#e0a800';
+      }
+    });
+  });
+  document.querySelectorAll('.genai-lab-input').forEach(function(inp){
+    inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); var b=inp.closest('.genai-lab-input-wrap').querySelector('[data-lab-check]'); if(b) b.click(); }});
+  });
+})();
+</script>
+<script src="assets/genai-gamify.js"></script>
 </body>
 </html>

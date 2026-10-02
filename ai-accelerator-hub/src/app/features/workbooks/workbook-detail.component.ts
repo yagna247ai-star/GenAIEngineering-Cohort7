@@ -20,7 +20,7 @@ import { WORKBOOK_DETAILS } from '../../core/data';
 
         <div class="reading">
           <h3>Relative reading — journalism-grade, researched</h3>
-          <p class="reading-intro">More appropriate than Outskill’s generic handout — each reading is curated for a newsroom job, with time, source, and what you’ll retain.</p>
+          <p class="reading-intro">More appropriate than AI Accelerator Hub’s generic handout — each reading is curated for a newsroom job, with time, source, and what you’ll retain.</p>
           @for(r of w.reading; track r.title){
             <article>
               <div class="reading-head">

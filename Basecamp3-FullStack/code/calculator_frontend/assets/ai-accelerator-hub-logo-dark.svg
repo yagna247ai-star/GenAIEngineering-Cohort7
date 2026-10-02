@@ -1,0 +1,25 @@
+<svg viewBox="0 0 380 52" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>AI Accelerator Hub</title>
+<g transform="translate(26,26)">
+  <circle r="22" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="14"/>
+  <circle r="14" fill="#0A0A0A" stroke="#FFFFFF" stroke-width="1.2"/>
+  <circle r="14" fill="none" stroke="#C9A86A" stroke-width="1.2" opacity="0.95"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 0 -14 L 0 -22" stroke="#C9A86A" stroke-width="1.7"/>
+    <path d="M 12.1 7 L 19 10.8" stroke="#C9A86A" stroke-width="1.7"/>
+    <path d="M -12.1 7 L -19 10.8" stroke="#C9A86A" stroke-width="1.7"/>
+    <circle cx="0" cy="-26" r="5.2" fill="#FFFFFF" stroke="#C9A86A" stroke-width="1.2"/>
+    <circle cx="0" cy="-26" r="1.6" fill="#0A0A0A"/>
+    <circle cx="22.5" cy="13" r="5.2" fill="#FFFFFF" stroke="#C9A86A" stroke-width="1.2"/>
+    <circle cx="22.5" cy="13" r="1.6" fill="#0A0A0A"/>
+    <circle cx="-22.5" cy="13" r="5.2" fill="#FFFFFF" stroke="#C9A86A" stroke-width="1.2"/>
+    <circle cx="-22.5" cy="13" r="1.6" fill="#0A0A0A"/>
+    <circle r="4.8" fill="#C9A86A" stroke="#C9A86A"/>
+    <circle r="1.7" fill="#0A0A0A"/>
+  </g>
+</g>
+<g transform="translate(58,30)">
+  <text x="0" y="0" font-family="'Fraunces','Instrument Sans','SF Pro Display',system-ui,serif" font-size="16.5" font-weight="700" letter-spacing="-0.5" fill="#FFFFFF">AI ACCELERATOR<tspan font-weight="400" letter-spacing="2.8" dx="6" font-size="13" fill="#C9A86A">HUB</tspan></text>
+  <text x="0" y="14" font-family="'Instrument Sans',system-ui,sans-serif" font-size="6.5" font-weight="600" letter-spacing="2.6" fill="#9A9A9A">GENAI COACHING • CORPORATE</text>
+</g>
+</svg>

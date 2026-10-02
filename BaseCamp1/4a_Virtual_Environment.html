@@ -236,8 +236,38 @@
 
   footer{text-align:center;color:var(--text-faint);font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:20px;}
 </style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:image" content="assets/genai-coaching-logo.svg">
+<link rel="stylesheet" href="assets/genai-brand.css">
+<link rel="stylesheet" href="assets/genai-gamify.css">
 </head>
 <body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <h4>Archive · Reference</h4>
+    <nav><ul><li><a href="#overview" class="active">Overview</a></li></ul></nav>
+  </aside>
+  <main id="main">
+    <div class="content">
+
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="../BaseCamp1-EnvironmentSetup/9_llm_settings.html">← Prev</a>
+    <a class="genai-nav-next" href="5_Git_Concept.html">Next →</a>
+  </span>
+</nav>
+
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#C9A86A;z-index:9999"></div>
+<div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 0 12px;border-bottom:1px solid #1A2333;margin-bottom:12px">
+  <img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0">
+  <span style="font-weight:800;letter-spacing:-0.02em;color:#E8EDF5;font-size:14px">GEN AI<span style="color:#C9A86A"> COACHING</span></span>
+  <span style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#54617A;letter-spacing:0.06em">Unlock Your Elite Future · Powered by AI Accelerator Hub</span>
+  <span class="genai-xp-badge" style="display:inline-flex;align-items:center;gap:6px;background:#0A0A0A;color:#fff;padding:5px 10px;border-radius:999px;font-size:12px;border:1px solid #114741">XP <strong>0</strong></span>
+</div>
 <div class="wrap">
 
   <header>
@@ -319,7 +349,18 @@
       </div>
     </div>
 
-    <div class="isolation-note" id="isolation-note"><span>→</span><span id="isolation-text"></span></div>
+    
+<div class="genai-quiz" data-quiz-id="venv-iso" style="border:1px solid #232D3F;border-radius:10px;background:#111826;padding:18px 18px 14px;margin:18px auto;max-width:900px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#8592A6"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Isolation — Why venv? <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#E8EDF5;margin:0 0 12px">What does creating a venv give you?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct! Each venv is a private shelf — same package name, different versions, no clash." data-feedback-wrong="Not quite — isolation means each venv has its own shelf; the demo shows numpy 1.23 vs 1.26 coexisting.">A private site-packages per project — numpy 1.23 and 1.26 can coexist</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! Each venv is a private shelf — same package name, different versions, no clash." data-feedback-wrong="Not quite — isolation means each venv has its own shelf; the demo shows numpy 1.23 vs 1.26 coexisting.">A faster Python interpreter</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! Each venv is a private shelf — same package name, different versions, no clash." data-feedback-wrong="Not quite — isolation means each venv has its own shelf; the demo shows numpy 1.23 vs 1.26 coexisting.">A new Python version install</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! Each venv is a private shelf — same package name, different versions, no clash." data-feedback-wrong="Not quite — isolation means each venv has its own shelf; the demo shows numpy 1.23 vs 1.26 coexisting.">A cloud backup of your code</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+<div class="isolation-note" id="isolation-note"><span>→</span><span id="isolation-text"></span></div>
   </section>
 
   <section>
@@ -340,7 +381,18 @@
       <div class="clone-card" id="clone-card">
         <div class="clone-empty-msg" id="clone-empty">empty environment<br>(new machine / new folder)</div>
       </div>
-    </div>
+    
+<div class="genai-quiz" data-quiz-id="venv-repro" style="border:1px solid #232D3F;border-radius:10px;background:#111826;padding:18px 18px 14px;margin:18px auto;max-width:900px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#8592A6"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Reproducibility — requirements.txt <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#E8EDF5;margin:0 0 12px">What does pip freeze > requirements.txt capture?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct — a frozen manifest lets any empty env rebuild an identical shelf." data-feedback-wrong="Not quite — freeze writes exact version pins for faithful replication.">Exact package==version pins to rebuild the same shelf elsewhere</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — a frozen manifest lets any empty env rebuild an identical shelf." data-feedback-wrong="Not quite — freeze writes exact version pins for faithful replication.">Only package names without versions</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — a frozen manifest lets any empty env rebuild an identical shelf." data-feedback-wrong="Not quite — freeze writes exact version pins for faithful replication.">Your Python installer executable</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — a frozen manifest lets any empty env rebuild an identical shelf." data-feedback-wrong="Not quite — freeze writes exact version pins for faithful replication.">Git commit history</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+</div>
   </section>
 
   </div>
@@ -378,11 +430,84 @@
           <div class="name">app_b.py <span style="color:var(--text-faint)">(needs numpy 1.26)</span></div>
           <div class="state">● running</div>
         </div>
-      </div>
+      
+<div class="genai-quiz" data-quiz-id="venv-without" style="border:1px solid #232D3F;border-radius:10px;background:#111826;padding:18px 18px 14px;margin:18px auto;max-width:900px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#8592A6"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Without venv — the cost <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#E8EDF5;margin:0 0 12px">What happens if you pip install numpy==1.26 globally without isolation?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct — one shared shelf means the second install overwrites the first, breaking app_a." data-feedback-wrong="Not quite — global overwrite is the core problem the simulator demos.">It overwrites numpy 1.23 — app_a breaks with ImportError</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — one shared shelf means the second install overwrites the first, breaking app_a." data-feedback-wrong="Not quite — global overwrite is the core problem the simulator demos.">Both versions are kept side by side automatically</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — one shared shelf means the second install overwrites the first, breaking app_a." data-feedback-wrong="Not quite — global overwrite is the core problem the simulator demos.">It creates a new venv for you</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — one shared shelf means the second install overwrites the first, breaking app_a." data-feedback-wrong="Not quite — global overwrite is the core problem the simulator demos.">Nothing changes until you reboot</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+</div>
     </section>
   </div>
 
-  <footer>site-packages shelves are illustrative — not a literal directory listing</footer>
+  
+<section class="genai-lab" style="border:1px solid #232D3F;border-radius:10px;padding:20px;background:#111826;margin:28px auto;max-width:900px">
+  <div class="genai-lab-head"><span style="display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0A0A0A;background:#C9A86A;padding:4px 10px;border-radius:999px">ELITE PRACTICE LAB</span><h3 style="margin:10px 0 6px;color:#E8EDF5">Activation Challenge — Power Up Your venv</h3><p style="margin:0;color:#8592A6;font-size:14px">Type the exact command to activate a venv named <code style="font-family:monospace;color:#C9A86A">venv-a</code> on macOS/Linux (or Windows). Success means your shell prompt shows the env. Hint: source &amp; Scripts differ by OS.</p></div>
+  <div class="genai-lab-body" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <label for="genai-lab-input" style="font-weight:700;font-size:14px;color:#E8EDF5">Your answer:</label>
+    <input id="genai-lab-input" type="text" placeholder="source venv-a/bin/activate" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #232D3F;border-radius:8px;font-family:monospace;background:#161F2E;color:#E8EDF5" data-pattern="^(source\s+venv-a/bin/activate|\.\s+venv-a/bin/activate|venv-a\\Scripts\\activate|venv-a/Scripts/activate|source\s+\.venv/bin/activate)\s*$" />
+    <button type="button" class="genai-lab-check" style="padding:8px 14px;background:#C9A86A;color:#0A0A0A;border:1px solid #C9A86A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+    <button type="button" class="genai-lab-hint" style="padding:8px 14px;background:#161F2E;color:#E8EDF5;border:1px solid #232D3F;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+  </div>
+  <div class="genai-lab-hint-text" style="display:none;margin-top:10px;font-size:13px;color:#8592A6;border:1px dashed #232D3F;padding:8px;border-radius:8px">Hint: macOS/Linux → source venv-a/bin/activate · Windows PowerShell → venv-a\Scripts\Activate.ps1 · Windows CMD → venv-a\Scripts\activate</div>
+  <div class="genai-lab-feedback" role="status" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+  <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:rgba(51,195,117,0.12);border:1px solid #C9A86A;border-radius:10px;color:#C9A86A;font-weight:700">Lab complete +50 XP · You can now activate &amp; isolate like an elite!</div>
+</section>
+<div class="genai-certificate" style="display:none;margin:18px auto;max-width:900px;padding:18px;background:#0e1a15;border:1px solid #C9A86A;border-radius:10px;text-align:center;color:#E8EDF5"><div style="font-weight:700">Certificate unlocked — Virtual Environments Mastery</div><div style="font-size:13px;color:#8592A6;margin-top:4px">All quizzes + lab complete. XP saved per file.</div></div>
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(hintBtn&&hintText) hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  if(check&&input) check.addEventListener('click', function(){
+    var v=(input.value||'').trim();
+    var pat=input.getAttribute('data-pattern');
+    var ok=false; try{ ok=new RegExp(pat).test(v);}catch(e){ ok=false; }
+    if(!v){ feedback.style.display='block'; feedback.style.background='#fff8e6'; feedback.style.border='1px solid #e0a800'; feedback.textContent='Type a command first.'; return; }
+    if(ok){
+      feedback.style.display='block'; feedback.style.background='#eaf7f0'; feedback.style.border='1px solid #C9A86A'; feedback.style.color='#0A0A0A';
+      feedback.textContent='Correct! That activates the isolated environment — shell now resolves to venv-a only.';
+      success.style.display='block'; if(cert) cert.style.display='block';
+      try{ var k='genai-progress-'+location.pathname; var s=JSON.parse(localStorage.getItem(k)||'{}'); s.xp=(s.xp||0)+50; s.labDone=true; localStorage.setItem(k, JSON.stringify(s)); }catch(e){}
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      var val=document.querySelector('.genai-xp-badge strong'); if(val){ var n=parseInt(val.textContent||'0',10)+50; val.textContent=n; }
+    } else {
+      feedback.style.display='block'; feedback.style.background='#fff8e6'; feedback.style.border='1px solid #e0a800'; feedback.style.color='#6b5500';
+      feedback.textContent='Not quite — try: source venv-a/bin/activate (macOS/Linux) or venv-a\Scripts\activate (Windows).';
+    }
+  });
+})();
+</script>
+
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 5 Git Concept</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="../BaseCamp1-EnvironmentSetup/9_llm_settings.html">← Previous</a>
+    <a class="genai-nav-next" href="5_Git_Concept.html">Continue →</a>
+  </div>
+</nav>
+
+<footer class="site-footer genai-footer" style="text-align:center;color:#54617A;font-family:'IBM Plex Mono',monospace;font-size:12px;margin-top:28px;border-top:1px solid #1A2333;padding-top:18px">
+  <div class="genai-footer-row" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+    <img src="assets/genai-coaching-logo.svg" alt="GenAI Coaching" style="height:28px">
+    <span style="color:#232D3F">|</span>
+    <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:22px">
+  </div>
+  <div style="margin-top:8px">site-packages shelves are illustrative — not a literal directory listing · GenAI Coaching · AI Accelerator Hub</div>
+</footer>
 </div>
 
 <script>
@@ -678,5 +803,12 @@
   jumpTo(1);
 })();
 </script>
+
+<script src="assets/genai-gamify.js"></script>
+<div class="genai-xp-toast" aria-live="polite" style="position:fixed;right:18px;bottom:18px;background:#0A0A0A;color:#fff;padding:10px 16px;border-radius:10px;border:1px solid #114741;display:none"></div>
+
+    </div>
+  </main>
+</div>
 </body>
 </html>

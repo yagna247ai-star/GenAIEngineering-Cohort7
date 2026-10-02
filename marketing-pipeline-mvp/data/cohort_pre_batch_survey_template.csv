@@ -1,0 +1,4 @@
+response_id,employer_type,company_optional,standup_time_window,on_call_frequency,on_call_dates_if_current,timezone_shift,preferred_live_window,conflict_window_notes,submitted_at
+1,Product,,10:00-11:30 IST,Never,,,Evening 19:00-21:00,,2026-09-20
+2,Services,,18:00-20:00 IST,1 week per month,2026-09-28 to 2026-10-04,IST + US overlap,Async-only,Client release 2026-10-05,2026-09-20
+3,GCC,,12:00-15:00 IST,Most weeks (client/GCC overlap),,IST, Lunch 12:00-14:00,,2026-09-20

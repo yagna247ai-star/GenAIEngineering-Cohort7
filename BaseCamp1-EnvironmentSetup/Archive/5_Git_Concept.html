@@ -159,8 +159,38 @@
 
   footer.credit{ text-align:center; margin-top:30px; font-size:11.5px; color:var(--ink-faint); }
 </style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:image" content="assets/genai-coaching-logo.svg">
+<link rel="stylesheet" href="assets/genai-brand.css">
+<link rel="stylesheet" href="assets/genai-gamify.css">
 </head>
 <body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <h4>Archive · Reference</h4>
+    <nav><ul><li><a href="#overview" class="active">Overview</a></li></ul></nav>
+  </aside>
+  <main id="main">
+    <div class="content">
+
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="4a_Virtual_Environment.html">← Prev</a>
+    <a class="genai-nav-next is-disabled" aria-disabled="true">Next →</a>
+  </span>
+</nav>
+
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="position:fixed;top:0;left:0;height:3px;width:0%;background:#C9A86A;z-index:9999"></div>
+<div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 22px 12px;border-bottom:1px solid #23282f;margin-bottom:0;background:#0b0d10">
+  <img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0">
+  <span style="font-weight:800;letter-spacing:-0.02em;color:#e8ebef;font-size:14px">GEN AI<span style="color:#C9A86A"> COACHING</span></span>
+  <span style="margin-left:auto;font-family:monospace;font-size:11px;color:#545c68;letter-spacing:0.06em">Unlock Your Elite Future · Powered by AI Accelerator Hub</span>
+  <span class="genai-xp-badge" style="display:inline-flex;align-items:center;gap:6px;background:#0A0A0A;color:#fff;padding:5px 10px;border-radius:999px;font-size:12px;border:1px solid #114741">XP <strong>0</strong></span>
+</div>
 <div class="wrap">
 
   <header class="top">
@@ -215,7 +245,28 @@
     </div>
   </div>
 
-  <div class="concept" id="conceptBox">
+  
+<div class="genai-quiz" data-quiz-id="git-flow" style="border:1px solid #23282f;border-radius:10px;background:#12151a;padding:18px 18px 14px;margin:18px 0">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:monospace;font-size:11px;letter-spacing:0.06em;color:#8992a0"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Git Flow — Four Areas <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#e8ebef;margin:0 0 12px">Which order correctly describes Git's data flow?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct! That's the canonical four-area flow the panels above visualize." data-feedback-wrong="Not quite — the flow is Working Directory → Staging → Local Repo → Remote.">Working Directory → Staging Area → Local Repository → Remote</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! That's the canonical four-area flow the panels above visualize." data-feedback-wrong="Not quite — the flow is Working Directory → Staging → Local Repo → Remote.">Remote → Local → Staging → Working Directory</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! That's the canonical four-area flow the panels above visualize." data-feedback-wrong="Not quite — the flow is Working Directory → Staging → Local Repo → Remote.">Working Directory → Remote → Staging → Local</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! That's the canonical four-area flow the panels above visualize." data-feedback-wrong="Not quite — the flow is Working Directory → Staging → Local Repo → Remote.">Staging → Working Directory → Remote → Local</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+<div class="genai-quiz" data-quiz-id="git-staging" style="border:1px solid #23282f;border-radius:10px;background:#12151a;padding:18px 18px 14px;margin:18px 0">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:monospace;font-size:11px;letter-spacing:0.06em;color:#8992a0"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Staging Area <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#e8ebef;margin:0 0 12px">What does git add do?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! git add stages changes — marking them ready for the next commit." data-feedback-wrong="Not quite — git add moves changes into the Staging Area.">Pushes directly to GitHub</button>
+<button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct! git add stages changes — marking them ready for the next commit." data-feedback-wrong="Not quite — git add moves changes into the Staging Area.">Moves edits from Working Directory to Staging Area for next commit</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! git add stages changes — marking them ready for the next commit." data-feedback-wrong="Not quite — git add moves changes into the Staging Area.">Deletes files from disk</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct! git add stages changes — marking them ready for the next commit." data-feedback-wrong="Not quite — git add moves changes into the Staging Area.">Creates a new branch</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+<div class="concept" id="conceptBox">
     <div class="chead" id="conceptToggle">
       <span class="toggle" id="conceptToggleIcon">−</span>
       <h3>Concept</h3>
@@ -223,7 +274,90 @@
     <div class="cbody" id="conceptBody">Select a scenario and click "Run next step". Each command's meaning appears here.</div>
   </div>
 
-  <footer class="credit">A visual model of Git's four areas — not a real repository. Hashes and file names are illustrative.</footer>
+  
+<div class="genai-quiz" data-quiz-id="git-commit" style="border:1px solid #23282f;border-radius:10px;background:#12151a;padding:18px 18px 14px;margin:18px 0">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:monospace;font-size:11px;letter-spacing:0.06em;color:#8992a0"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Commit vs Push <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#e8ebef;margin:0 0 12px">What is true about git commit vs git push?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct — commit is local, push publishes to Remote." data-feedback-wrong="Not quite — remember: commit is local (.git), push is remote (origin).">commit saves locally in .git; push uploads to Remote (origin)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — commit is local, push publishes to Remote." data-feedback-wrong="Not quite — remember: commit is local (.git), push is remote (origin).">commit uploads to Remote; push saves locally</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — commit is local, push publishes to Remote." data-feedback-wrong="Not quite — remember: commit is local (.git), push is remote (origin).">Both do the same thing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — commit is local, push publishes to Remote." data-feedback-wrong="Not quite — remember: commit is local (.git), push is remote (origin).">Neither touches .git</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+<div class="genai-quiz" data-quiz-id="git-pull" style="border:1px solid #23282f;border-radius:10px;background:#12151a;padding:18px 18px 14px;margin:18px 0">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-family:monospace;font-size:11px;letter-spacing:0.06em;color:#8992a0"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Sync — git pull <span style="margin-left:auto;background:#0A0A0A;color:#C9A86A;padding:3px 8px;border-radius:999px;font-weight:700">+25 XP</span></div>
+  <p class="genai-quiz-q" style="font-weight:700;font-size:15px;color:#e8ebef;margin:0 0 12px">What does git pull do when both sides diverged?</p>
+  <div class="genai-quiz-options" style="display:grid;gap:8px"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Correct — pull is fetch + merge, creating a merge commit when histories diverged." data-feedback-wrong="Not quite — pull fetches then merges into Local.">Fetches Remote and merges (or creates merge commit) into Local</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — pull is fetch + merge, creating a merge commit when histories diverged." data-feedback-wrong="Not quite — pull fetches then merges into Local.">Deletes your local commits</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — pull is fetch + merge, creating a merge commit when histories diverged." data-feedback-wrong="Not quite — pull fetches then merges into Local.">Only downloads without merging</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Correct — pull is fetch + merge, creating a merge commit when histories diverged." data-feedback-wrong="Not quite — pull fetches then merges into Local.">Rewrites Remote to match Local</button>
+</div>
+  <div class="genai-quiz-feedback" role="status" style="margin-top:10px"></div>
+</div>
+
+<section class="genai-lab" style="border:1px solid #23282f;border-radius:10px;padding:20px;background:#12151a;margin:22px 0">
+  <div class="genai-lab-head"><span style="display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0A0A0A;background:#C9A86A;padding:4px 10px;border-radius:999px">ELITE PRACTICE LAB</span><h3 style="margin:10px 0 6px;color:#e8ebef">Commit Command Ordering — Ship It Right</h3><p style="margin:0;color:#8992a0;font-size:14px">Arrange the Git commands in the order that takes a fresh edit to the shared Remote: edit → add → commit → push. Type the four keywords in order, space-separated (e.g. edit add commit push). Also try the pull-before-push variant: pull variants use the same words.</p></div>
+  <div class="genai-lab-body" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <label for="genai-lab-input" style="font-weight:700;font-size:14px;color:#e8ebef">Your order:</label>
+    <input id="genai-lab-input" type="text" placeholder="edit add commit push" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #23282f;border-radius:8px;font-family:monospace;background:#0d1013;color:#e8ebef" data-pattern="^\s*(edit\s+add\s+commit\s+push|edit\s+add\s+commit\s+pull\s+push|pull\s+edit\s+add\s+commit\s+push)\s*$" />
+    <button type="button" class="genai-lab-check" style="padding:8px 14px;background:#C9A86A;color:#0A0A0A;border:1px solid #C9A86A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+    <button type="button" class="genai-lab-hint" style="padding:8px 14px;background:#171b21;color:#e8ebef;border:1px solid #23282f;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+  </div>
+  <div class="genai-lab-hint-text" style="display:none;margin-top:10px;font-size:13px;color:#8992a0;border:1px dashed #23282f;padding:8px;border-radius:8px">Hint: Canonical flow → edit in Working Directory → git add to Staging → git commit to Local → git push to Remote. If Remote moved, insert git pull before push.</div>
+  <div class="genai-lab-feedback" role="status" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+  <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#0e1a15;border:1px solid #C9A86A;border-radius:10px;color:#52d17c;font-weight:700">Lab complete +50 XP · You can now order Git commands like an elite!</div>
+</section>
+<div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#0e1a15;border:1px solid #C9A86A;border-radius:10px;text-align:center;color:#e8ebef"><div style="font-weight:700">Certificate unlocked — Git Flow Mastery</div><div style="font-size:13px;color:#8992a0;margin-top:4px">All quizzes + lab complete. XP saved per file.</div></div>
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(hintBtn&&hintText) hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  if(check&&input) check.addEventListener('click', function(){
+    var v=(input.value||'').trim().toLowerCase();
+    var pat=input.getAttribute('data-pattern');
+    var ok=false; try{ ok=new RegExp(pat, 'i').test(v);}catch(e){ ok=false; }
+    if(!v){ feedback.style.display='block'; feedback.style.background='#301416'; feedback.style.border='1px solid #5c2226'; feedback.style.color='#e0645f'; feedback.textContent='Type the command order first.'; return; }
+    if(ok){
+      feedback.style.display='block'; feedback.style.background='#0e1a15'; feedback.style.border='1px solid #C9A86A'; feedback.style.color='#52d17c';
+      feedback.textContent='Correct! edit → add → commit → push is the elite shipping order (insert pull before push when Remote moved).';
+      success.style.display='block'; if(cert) cert.style.display='block';
+      try{ var k='genai-progress-'+location.pathname; var s=JSON.parse(localStorage.getItem(k)||'{}'); s.xp=(s.xp||0)+50; s.labDone=true; localStorage.setItem(k, JSON.stringify(s)); }catch(e){}
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      var val=document.querySelector('.genai-xp-badge strong'); if(val){ var n=parseInt(val.textContent||'0',10)+50; val.textContent=n; }
+    } else {
+      feedback.style.display='block'; feedback.style.background='#301416'; feedback.style.border='1px solid #5c2226'; feedback.style.color='#e0645f';
+      feedback.textContent='Not quite — try: edit add commit push (or with pull: edit add commit pull push).';
+    }
+  });
+})();
+</script>
+
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: Complete — you’ve finished this track</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="4a_Virtual_Environment.html">← Previous</a>
+    <a class="genai-nav-next is-disabled" aria-disabled="true">Completed ✓</a>
+  </div>
+</nav>
+
+<footer class="credit site-footer genai-footer" style="text-align:center;margin-top:30px;font-size:11.5px;color:#545c68;border-top:1px solid #23282f;padding-top:18px">
+  <div class="genai-footer-row" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:8px">
+    <img src="assets/genai-coaching-logo.svg" alt="GenAI Coaching" style="height:28px">
+    <span style="color:#23282f">|</span>
+    <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:22px">
+  </div>
+  A visual model of Git's four areas — not a real repository. Hashes and file names are illustrative. · GenAI Coaching · AI Accelerator Hub
+</footer>
 </div>
 
 <script>
@@ -915,5 +1049,12 @@ els.conceptToggle.addEventListener('click', () => {
 
 loadScenario('multi-edit-one-commit');
 </script>
+
+<script src="assets/genai-gamify.js"></script>
+<div class="genai-xp-toast" aria-live="polite" style="position:fixed;right:18px;bottom:18px;background:#0A0A0A;color:#fff;padding:10px 16px;border-radius:10px;border:1px solid #114741"></div>
+
+    </div>
+  </main>
+</div>
 </body>
 </html>

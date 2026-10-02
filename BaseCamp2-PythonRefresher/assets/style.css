@@ -1,23 +1,23 @@
 :root {
   --bg: #ffffff;
-  --bg-soft: #f2f9f6;
-  --sidebar-bg: #002726;
-  --sidebar-fg: #bfe0d3;
-  --sidebar-fg-dim: #5f8a7d;
-  --sidebar-active: #33c375;
+  --bg-soft: #FFFBF0;
+  --sidebar-bg: #0A0A0A;
+  --sidebar-fg: #E8E0C8;
+  --sidebar-fg-dim: #9A9A9A;
+  --sidebar-active: #C9A86A;
   --text: #0e1f1c;
-  --text-dim: #536b64;
-  --border: #d9ece3;
-  --py-blue: #1f8756;
-  --py-blue-dark: #002726;
-  --py-yellow: #33c375;
-  --code-bg: #002726;
-  --code-fg: #e6f5ee;
-  --callout-bg: #eaf7f0;
-  --callout-border: #33c375;
+  --text-dim: #6B6B6B;
+  --border: #E8E0C8;
+  --py-blue: #8C6A2F;
+  --py-blue-dark: #0A0A0A;
+  --py-yellow: #C9A86A;
+  --code-bg: #0A0A0A;
+  --code-fg: #FFF8E6;
+  --callout-bg: #FFF8E6;
+  --callout-border: #C9A86A;
   --warn-bg: #fff8e6;
   --warn-border: #e0a800;
-  --pill-bg: #e2f5ea;
+  --pill-bg: #FFF8E6;
   --radius: 10px;
   --maxw: 860px;
 }
@@ -262,7 +262,7 @@ section.part > h2 {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--code-bg);
-  border: 1px solid #114741;
+  border: 1px solid #5A4A22;
 }
 
 .code-block .code-label {
@@ -271,7 +271,7 @@ section.part > h2 {
   align-items: center;
   padding: 8px 14px;
   background: #001918;
-  border-bottom: 1px solid #114741;
+  border-bottom: 1px solid #5A4A22;
   font-size: 11.5px;
   color: #6fa392;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -290,7 +290,7 @@ section.part > h2 {
   transition: background .15s ease;
 }
 .copy-btn:hover { background: #155a48; }
-.copy-btn.copied { background: #1f8756; border-color: #33c375; color: #fff; }
+.copy-btn.copied { background: #8C6A2F; border-color: #C9A86A; color: #fff; }
 
 pre {
   margin: 0;
@@ -536,7 +536,7 @@ table.data-table code.inline { font-size: 12.5px; }
   flex-shrink: 0;
   width: 20px; height: 20px;
   border-radius: 5px;
-  background: #1f8756;
+  background: #8C6A2F;
   color: #fff;
   font-size: 12px;
   display: flex; align-items: center; justify-content: center;
@@ -585,7 +585,7 @@ footer.site-footer {
   border-radius: 5px;
   display: block;
 }
-.footer-brand .footer-outskill {
+.footer-brand .footer-AI Accelerator Hub {
   font-weight: 700;
   letter-spacing: .07em;
   color: var(--text-dim);
@@ -606,3 +606,13 @@ footer.site-footer {
   .sidebar { display: none; }
   main { padding: 32px 20px 100px; }
 }
+
+/* --- GenAI Black/White/Gold Veranda Patch (AI Accelerator Hub) --- */
+:root {
+  --genai-ink: #0A0A0A;
+  --genai-signal: #C9A86A;
+  --genai-signal-hover: #B8941F;
+  --genai-gold-soft: #FFF8E6;
+  --genai-border: #E8E0C8;
+}
+.genai-nav-top, .genai-nav-bottom { font-family: inherit; }

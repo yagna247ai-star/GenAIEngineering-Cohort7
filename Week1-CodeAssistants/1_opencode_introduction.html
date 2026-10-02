@@ -3,18 +3,35 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Introduction to OpenCode — Slides | Outskill AI Fellowship</title>
+<title>Introduction to OpenCode — Slides | GenAI Coaching — AI Accelerator Hub</title>
 <link rel="stylesheet" href="assets/style.css" />
 <link rel="stylesheet" href="assets/slides.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
 <style>.hljs{background:transparent!important;padding:0!important;}</style>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:image" content="assets/genai-coaching-logo.svg" />
+<link rel="stylesheet" href="assets/genai-brand.css" />
+<link rel="stylesheet" href="assets/genai-gamify.css" />
 </head>
 <body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="../BaseCamp3-FullStack/code/calculator_frontend/index.html">← Prev</a>
+    <a class="genai-nav-next" href="2_full_stack.html">Next →</a>
+  </span>
+</nav>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="brand"><img src="assets/outskill-icon.svg" class="brand-icon" alt="Outskill"/> Outskill</div>
-    <div class="brand-sub">AI Fellowship &middot; by Growth School</div>
+    <div class="genai-brand-lockup"><img src="assets/genai-coaching-emblem.svg" class="genai-brand-logo" alt="GenAI Coaching emblem" width="28" height="28" /><div class="genai-brand-wordmark">GEN <span>AI</span><br/>COACHING</div></div>
+    <div class="genai-brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-progress-wrap" aria-label="Course progress"><div class="genai-progress-track" aria-hidden="true"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
 
     <h4>Week 1 &middot; OpenCode Deep Dive</h4>
     <nav>
@@ -90,9 +107,10 @@
     </nav>
   </aside>
 
-  <main class="slide-main">
+  <main class="slide-main" id="main-content">
     <div class="slide-stage">
       <div class="slide-toolbar">
+        <img src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching" width="22" height="22" style="border-radius:6px;display:inline-block;vertical-align:middle;margin-right:8px" />
         <span class="slide-position">Slide <span id="slideNum">1</span> / <span id="slideTotal">54</span><span class="hint"> &middot; use &larr; &rarr; or the sidebar</span></span>
         <div class="slide-nav-btns">
           <button id="prevSlide" class="slide-btn">&lsaquo; Prev</button>
@@ -102,7 +120,7 @@
       <div class="slide-viewport">
 
       <section class="slide slide-hero" id="title">
-        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/outskill-icon.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; OpenCode Deep Dive</div>
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> Week 1 &middot; Full-Stack App Building with Coding Agents &middot; OpenCode Deep Dive</div>
         <h1>Introduction to OpenCode</h1>
         <p class="lede">Every OpenCode command, explained and run live — what it does, when to use it, and what outcome to expect — with the Claude Code equivalent next to each one. Agents (including how to build your own custom ones), Skills, and MCP servers: what each one is, why it exists, how it's used, worked examples, and best practices. Then a real build: a branded FastAPI calculator with an HTML frontend, scaffolded with OpenCode from a single <code class="inline">/init</code>, and tested end to end with the Playwright MCP server.</p>
         <div class="meta-row">
@@ -111,7 +129,7 @@
           <span class="meta-pill">🛠️ FastAPI &middot; HTML/JS &middot; Playwright MCP</span>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">01</div>
         </div>
       </section>
@@ -134,10 +152,14 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">02</div>
         </div>
-      </section>
+      
+          <div class="callout" style="border-left-color:#C9A86A;background:#FFFBF0">
+            <span class="callout-title" style="color:#8C6A2F">Corporate Tip — Deploy Ready</span>
+            Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
+          </div></section>
 
       <section class="slide" id="objectives">
         <div class="slide-kicker">Learning Objectives</div>
@@ -155,7 +177,7 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">03</div>
         </div>
       </section>
@@ -219,7 +241,7 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">04</div>
         </div>
       </section>
@@ -250,9 +272,35 @@
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">05</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-config">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — OpenCode Config</div>
+        <h2 class="slide-title">Quick Check — Configuring OpenCode</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-config">
+            <p class="genai-quiz-q">Slide 0.1 says <code class="inline">opencode.jsonc</code> holds secrets file-based. Which field is the allow-list of providers (slide 0.1)?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">enabled_providers</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">allowed_models</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">providers</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">model_allowlist</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 0.2: where does the global config live on macOS/Linux?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">~/.config/opencode/opencode.json</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">./opencode.json</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">~/.opencode/config.json</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">/etc/opencode.json</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="model-small-model">
@@ -270,7 +318,7 @@
           <div class="callout">Set <code class="inline">small_model</code> to your free-tier or cheapest whitelisted model. There's no reason to spend frontier-model tokens on naming a session.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">06</div>
         </div>
       </section>
@@ -294,7 +342,7 @@
           <div class="callout warn"><span class="callout-title">A model ID is a moving target</span>Providers rename, deprecate, and version their model IDs (notice <code class="inline">claude-sonnet-4-5-20250929</code> carries a date). Click through and copy the exact current ID — don't guess at it or reuse one from an old tutorial.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">07</div>
         </div>
       </section>
@@ -324,7 +372,7 @@
           <p>Same shape as <code class="inline">opencode.jsonc</code> — a JSON file Claude Code reads directly — just a nested <code class="inline">env</code> object instead of a <code class="inline">provider</code> object. Use <code class="inline">.claude/settings.json</code> for a key the whole project should share, or <code class="inline">~/.claude/settings.json</code> for one that follows you across every project — the same global-vs-project split as 0.2.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">08</div>
         </div>
       </section>
@@ -351,7 +399,7 @@
           <div class="callout">Both configs are just files sitting in your project. Close the terminal, reopen it tomorrow, and neither tool needs anything re-entered — the file is still there.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">09</div>
         </div>
       </section>
@@ -378,7 +426,7 @@
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">10</div>
         </div>
       </section>
@@ -403,7 +451,7 @@
           <div class="callout">Run <code class="inline">/models</code> right now and pick your fast/cheap tier from 0.4 before doing anything else today.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">11</div>
         </div>
       </section>
@@ -423,9 +471,35 @@
           <div class="callout warn"><span class="callout-title">Claude Code has no equivalent pair</span>The closest working analogue is pressing <strong>Esc twice</strong> to jump back to an earlier point in the conversation and edit what you sent — a rewind, not a symmetric undo/redo. Neither mechanism, in either tool, undoes file edits already made on disk — version control is still your real safety net for that.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">12</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-commands">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — Commands &amp; Lifecycle</div>
+        <h2 class="slide-title">Quick Check — OpenCode Commands</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-commands">
+            <p class="genai-quiz-q">Slide 1.1: which command scans the project and drafts AGENTS.md?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">/init</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">/new</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">/models</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">/compact</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 1.3: what does <code class="inline">/undo</code> do — and what does it NOT undo (callout)?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">Removes last message+response; does NOT undo file edits on disk</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Deletes last file edit from disk</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Reverts git commit</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Closes the session</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="keybinding-platforms">
@@ -445,7 +519,7 @@
           <div class="callout">The CLI itself doesn't care which OS it's on. The shell around it does — that's the actual line to remember.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">13</div>
         </div>
       </section>
@@ -464,7 +538,7 @@
           <p>Claude Code's <code class="inline">Shift+Tab</code> cycles <em>permission modes</em> instead of agent identity — a related but different axis. Its chat input's <code class="inline">@</code> typeahead <em>does</em> support mentioning an agent by name for guaranteed invocation, alongside file references — it's not file-only. Full purpose, worked examples, and — new this session — how to build your own custom agent, in Part 2.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">14</div>
         </div>
       </section>
@@ -482,7 +556,7 @@
           <p>A Skill is just a <code class="inline">SKILL.md</code> file sitting in a folder the agent already knows to check — <code class="inline">.opencode/skills/</code> (project) or <code class="inline">~/.config/opencode/skills/</code> (global); OpenCode also reads Claude-compatible skills straight out of <code class="inline">.claude/skills/</code>. What a Skill actually is, why it exists, full anatomy, scoping rules, worked examples, and best practices in Part 3.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">15</div>
         </div>
       </section>
@@ -500,7 +574,7 @@
           <p>Declared under the <code class="inline">"mcp"</code> key in <code class="inline">opencode.jsonc</code>; no <code class="inline">/mcp</code> slash command in OpenCode — servers just load at startup. Claude Code's <code class="inline">/mcp</code> <em>does</em> exist, but it's status-only — it shows what's connected, it doesn't turn anything on or off. What an MCP server actually is, why it exists, full schema, installing and using a real worked example (Playwright), use cases, and best practices in Part 4; you'll connect it for real in 4.7.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">16</div>
         </div>
       </section>
@@ -520,7 +594,7 @@
           <div class="callout">Different shape, same underlying need — knowing where you stand in a session. OpenCode answers "when did I send this," Claude Code answers "what has this session cost me so far."</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">17</div>
         </div>
       </section>
@@ -542,7 +616,7 @@
           <div class="callout warn"><span class="callout-title">Now do it in Claude Code</span>Run <code class="inline">/init</code>, <code class="inline">/model</code>, <code class="inline">/compact</code>, <code class="inline">/cost</code>, <code class="inline">/status</code>, and Esc-Esc on a sent message. Notice which outcomes feel identical and which don't — that gap is the point of this whole section.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">18</div>
         </div>
       </section>
@@ -561,7 +635,7 @@
           <div class="callout">By the end of Part 2 you'll have used all three layers on the same project — not just read about them.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">19</div>
         </div>
       </section>
@@ -582,7 +656,7 @@
           <p>This is the same "explore first, then act" idea as Claude Code's <code class="inline">plan</code> permission mode from last session — cycled with <code class="inline">Tab</code> here instead of <code class="inline">Shift+Tab</code>, and framed as switching <em>which agent</em> you're talking to rather than switching a mode on the same agent.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">20</div>
         </div>
       </section>
@@ -601,7 +675,7 @@ this config value is read.</code></pre>
           <div class="callout warn"><span class="callout-title">🎓 Same rule as Claude Code's Agent tool</span>A subagent starting fresh with zero memory of your conversation isn't an OpenCode quirk — it's how delegation works in both tools. "Check if this is right" tells a fresh subagent nothing; it needs the actual file, function, or claim spelled out.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">21</div>
         </div>
       </section>
@@ -624,7 +698,7 @@ this config value is read.</code></pre>
           <div class="callout">Every custom agent you write in the next few slides sits <em>alongside</em> these built-ins — it doesn't replace them. You reach for a built-in first; you write a custom one when none of the built-ins fit the job.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">22</div>
         </div>
       </section>
@@ -653,7 +727,7 @@ this config value is read.</code></pre>
           <p>Both discover recursively, so you can organize into subfolders — and both are matched against your task the same way a Skill's <code class="inline">description</code> is: it's the selection criteria, not documentation. The <code class="inline">permission</code> / <code class="inline">tools</code> / <code class="inline">permissionMode</code> fields are the two levers worth understanding properly before you write one — next.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">23</div>
         </div>
       </section>
@@ -681,7 +755,7 @@ this config value is read.</code></pre>
           <div class="callout warn"><span class="callout-title">Restricting which subagents an agent can spawn</span>Claude Code lets a custom agent's <code class="inline">tools</code> list name exactly which other subagents it may itself delegate to: <code class="inline">tools: Agent(worker, researcher), Read, Bash</code> restricts it to spawning only <code class="inline">worker</code> and <code class="inline">researcher</code> — useful for a coordinator agent you don't want fanning out into every subagent you own. OpenCode doesn't document an equivalent.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">24</div>
         </div>
       </section>
@@ -717,7 +791,7 @@ this config value is read.</code></pre>
           <div class="callout">Set the risky stuff to <code class="inline">ask</code>, the safe stuff to <code class="inline">allow</code>, and the truly dangerous stuff (<code class="inline">git push</code>, <code class="inline">rm</code>) to <code class="inline">deny</code> outright — a specific pattern is worth more than a blanket <code class="inline">ask</code> on everything, which just trains you to click "yes" without reading.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">25</div>
         </div>
       </section>
@@ -761,7 +835,7 @@ on quality, security, and best practices.</code></pre></div>
           <div class="callout">OpenCode gets there via Permissions — <em>denying</em> edit/bash; Claude Code gets there via Tools — never <em>listing</em> them. Different lever, same guarantee: this agent cannot touch your files, no matter how it's prompted.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">26</div>
         </div>
       </section>
@@ -782,7 +856,7 @@ on quality, security, and best practices.</code></pre></div>
           </table>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">27</div>
         </div>
       </section>
@@ -801,7 +875,7 @@ on quality, security, and best practices.</code></pre></div>
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">28</div>
         </div>
       </section>
@@ -831,7 +905,7 @@ bullets. Don't install anything yet.</code></pre></div>
           <div class="callout">Keep this answer — it's exactly what Part 5's build needs, and you'll use it there.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">29</div>
         </div>
       </section>
@@ -857,7 +931,7 @@ suggest improvements.</code></pre></div>
           <div class="callout warn"><span class="callout-title">Now try to break it</span>Follow up with <em>"just fix the issues you found."</em> It should refuse, or explain that it can't edit — proving the restriction from 2.8 is real and enforced, not just a polite instruction in the prompt.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">30</div>
         </div>
       </section>
@@ -876,7 +950,7 @@ suggest improvements.</code></pre></div>
           <div class="callout">Contrast with a custom agent (Part 2): an agent is a standing personality you talk <em>to</em>; a Skill is a one-off procedure the current agent borrows, runs, and sets back down.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">31</div>
         </div>
       </section>
@@ -905,7 +979,7 @@ allowed-tools: bash(git *) bash(npm run deploy *)
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">32</div>
         </div>
       </section>
@@ -926,7 +1000,7 @@ allowed-tools: bash(git *) bash(npm run deploy *)
           <div class="callout">Use global for anything genuinely personal and universal — a commit-message style you always want. Use scoped for anything project-specific — a deploy sequence, a run command, a set of ports — so it doesn't leak into (or clutter the picker for) unrelated work. Part 5 writes one scoped to a single app on purpose.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">33</div>
         </div>
       </section>
@@ -947,7 +1021,7 @@ allowed-tools: bash(git *) bash(npm run deploy *)
           </table>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">34</div>
         </div>
       </section>
@@ -965,7 +1039,7 @@ allowed-tools: bash(git *) bash(npm run deploy *)
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">35</div>
         </div>
       </section>
@@ -995,7 +1069,7 @@ many were edited, in one sentence.</code></pre></div>
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">36</div>
         </div>
       </section>
@@ -1014,7 +1088,7 @@ many were edited, in one sentence.</code></pre></div>
           <div class="callout">Session 1 introduced the concept — host/client/server, tools/resources/prompts. Today you install one, connect it, and actually use it to test a real app — Playwright MCP, ahead in 4.3 and reused throughout Part 5.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">37</div>
         </div>
       </section>
@@ -1052,9 +1126,35 @@ many were edited, in one sentence.</code></pre></div>
           <p>Claude Code's <code class="inline">.mcp.json</code> uses the same two shapes: <code class="inline">command</code>/<code class="inline">args</code> for local, <code class="inline">"type": "http"</code> + <code class="inline">url</code> for remote.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">38</div>
         </div>
+      </section>
+
+      <section class="slide genai-quiz-slide" id="genai-quiz-mcp">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg"/> GenAI Coaching · Quick Check — MCP &amp; Agents</div>
+        <h2 class="slide-title">Quick Check — MCP Servers &amp; Agents</h2>
+        <div class="slide-body">
+          <div class="genai-quiz" data-quiz-id="genai-quiz-mcp">
+            <p class="genai-quiz-q">Slide 4.2: how is a local (stdio) MCP server declared in opencode.jsonc?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">"type": "local" with "command": ["npx", ...]</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">"type": "http" with "url"</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">"type": "remote" with "socket"</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">"mcp": "npx @playwright/mcp"</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+            <p class="genai-quiz-q" style="margin-top:14px">Slide 1.5: how do you switch the primary agent between Build and Plan in OpenCode?</p>
+            <div class="genai-quiz-options">
+              <button type="button" class="genai-quiz-option" data-correct="true">Press Tab</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Type /agents</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Type /plan</button>
+              <button type="button" class="genai-quiz-option" data-correct="false">Press Shift+Tab</button>
+            </div>
+            <div class="genai-quiz-feedback" role="status"></div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Quiz</div></div>
       </section>
 
       <section class="slide" id="mcp-playwright-setup">
@@ -1084,7 +1184,7 @@ many were edited, in one sentence.</code></pre></div>
           <div class="callout warn"><span class="callout-title">If no browser launches</span>Run <code class="inline">npx playwright install chromium</code> once to fetch browser binaries, then retry the command above.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">39</div>
         </div>
       </section>
@@ -1127,7 +1227,7 @@ many were edited, in one sentence.</code></pre></div>
           </table>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">40</div>
         </div>
       </section>
@@ -1148,7 +1248,7 @@ many were edited, in one sentence.</code></pre></div>
           </table>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">41</div>
         </div>
       </section>
@@ -1166,7 +1266,7 @@ many were edited, in one sentence.</code></pre></div>
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">42</div>
         </div>
       </section>
@@ -1185,7 +1285,7 @@ tell me the page's exact heading text.</code></pre>
           <div class="callout">Expect a visible <code class="inline">browser_navigate</code> call followed by a <code class="inline">browser_snapshot</code>, then the agent reading "Example Domain" back to you from the snapshot — not from its own memory of that page. You'll reuse this exact server, live, in Part 5 to test the calculator you're about to build.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">43</div>
         </div>
       </section>
@@ -1210,7 +1310,7 @@ opencode</code></pre>
           <div class="callout">On an empty project, <code class="inline">/init</code> writes a short, mostly-generic AGENTS.md — that's expected. You're about to make it specific in 5.2, which is the whole point: a memory file is something you curate, not something that has to be perfect the moment it's generated.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">44</div>
         </div>
       </section>
@@ -1225,8 +1325,8 @@ opencode</code></pre>
             <div class="code-label"><span>append to AGENTS.md</span><button class="copy-btn">Copy</button></div>
             <pre><code class="language-plaintext">## Design
 
-- Primary color: #002726 (dark teal)
-- Accent color: #33c375 (mint green)
+- Primary color: #0A0A0A (dark teal)
+- Accent color: #C9A86A (mint green)
 - Background: #ffffff
 - Logo: assets/logo.svg — show it next to the
   page title and use it as the favicon
@@ -1238,7 +1338,7 @@ opencode</code></pre>
           <div class="callout">This is last session's "memory file" lesson applied for real: standing context you write once, in a place the agent reliably re-reads, instead of repeating "make it dark teal" in every single prompt.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">45</div>
         </div>
       </section>
@@ -1265,7 +1365,7 @@ allowed-tools: bash(python*) bash(pip*)
           <div class="callout">Write this now, before the backend or frontend even exist — you'll invoke it for real in 5.10, once there's something for it to run.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">46</div>
         </div>
       </section>
@@ -1292,7 +1392,7 @@ the server yet.</code></pre>
           <div class="callout">Same prompt works in both tools — approve each edit as it comes, per last session's Part 3.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">47</div>
         </div>
       </section>
@@ -1355,7 +1455,7 @@ uvicorn[standard]</code></pre>
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">48</div>
         </div>
       </section>
@@ -1386,7 +1486,7 @@ python main.py</code></pre></div>
           <div class="callout">Open <code class="inline">http://127.0.0.1:8000/docs</code> — FastAPI's Swagger UI should load, listing all four endpoints. That's your backend confirmed running on its designated port before the frontend exists.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">49</div>
         </div>
       </section>
@@ -1415,7 +1515,7 @@ Follow the Design section in AGENTS.md.</code></pre>
           <p style="font-size:13px;color:var(--text-dim);">Windows: the same command, just <code class="inline">python</code> instead of <code class="inline">python3</code> if that's how your install is aliased.</p>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">50</div>
         </div>
       </section>
@@ -1434,7 +1534,7 @@ Follow the Design section in AGENTS.md.</code></pre>
           </ul>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">51</div>
         </div>
       </section>
@@ -1457,7 +1557,7 @@ of a crash. Report both outcomes.</code></pre>
           <div class="callout warn"><span class="callout-title">This is MCP actually doing something, not just being configured</span>Expect a real sequence — <code class="inline">browser_navigate</code>, <code class="inline">browser_fill_form</code>, <code class="inline">browser_click</code>, <code class="inline">browser_snapshot</code> — with the agent reading "42" and the divide-by-zero error text back from the live page, not from its own arithmetic. If it just computes the answer itself without touching the browser, redirect it back to the tools explicitly.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">52</div>
         </div>
       </section>
@@ -1474,7 +1574,7 @@ of a crash. Report both outcomes.</code></pre>
           <div class="callout">Confirm it activates the existing venv (doesn't recreate it), installs from <code class="inline">requirements.txt</code>, starts the backend on 8000 and the frontend on 5500, and reports both URLs — exactly what 5.3 specified. Then open a new terminal in a completely different folder and check that <code class="inline">run-app</code> does <em>not</em> appear there — proof the scoping from 3.3 is real, not just a claim on a slide.</div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">53</div>
         </div>
       </section>
@@ -1499,14 +1599,82 @@ of a crash. Report both outcomes.</code></pre>
           </div>
         </div>
         <div class="slide-footer">
-          <div class="brand-mini"><img class="icon-mini" src="assets/outskill-icon.svg" alt=""/>OUTSKILL <span class="sep">|</span> by GROWTH SCHOOL</div>
+          <div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" />GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div>
           <div class="slide-index">54</div>
         </div>
       </section>
 
+
+      <section class="slide genai-lab-slide" id="elite-lab">
+        <div class="slide-kicker"><img alt="" class="eyebrow-icon" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Elite Practice Lab</div>
+        <h2 class="slide-title">Elite Lab — Command Builder</h2>
+        <div class="slide-body">
+          <p class="intro">From slides 0.6 and 4.3 / 5.4: type the exact commands to verify config and run a local MCP server.</p>
+          <div class="genai-quiz" style="padding:0;border:none;background:transparent;">
+            <div class="code-block"><div class="code-label"><span>inside OpenCode — verify whitelisted models</span></div><pre><code class="language-plaintext">/models</code></pre></div>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer="/models" data-regex="^/models$" placeholder="/models" style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+            <div class="code-block" style="margin-top:12px"><div class="code-label"><span>terminal — verify Playwright MCP runs standalone</span></div><pre><code class="language-bash">npx @playwright/mcp@latest --headless</code></pre></div>
+            <div class="genai-lab-input-wrap" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              <input type="text" class="genai-lab-input" data-answer="npx @playwright/mcp@latest --headless" data-regex="^npx @playwright/mcp@latest --headless$" placeholder="npx @playwright/mcp@latest --headless" style="flex:1;min-width:220px;padding:10px 12px;border:1px solid #E8E0C8;border-radius:10px;font-family:inherit;" />
+              <button type="button" class="genai-quiz-option" data-lab-check style="width:auto;padding:10px 16px;">Check</button>
+              <div class="genai-quiz-feedback" role="status" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer"><div class="brand-mini"><img class="icon-mini" src="assets/genai-coaching-emblem.svg" alt="GenAI Coaching emblem" /> GenAI Coaching <span class="sep">|</span> <img src="assets/ai-accelerator-hub-logo.svg" alt="AI Accelerator Hub" style="height:14px;vertical-align:middle;margin:0 4px 0 6px;display:inline-block" /> Powered by AI Accelerator Hub</div><div class="slide-index">Lab</div></div>
+      </section>
+<script>
+(function(){
+  document.querySelectorAll('[data-lab-check]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wrap = btn.closest('.genai-lab-input-wrap');
+      var input = wrap.querySelector('.genai-lab-input');
+      var feedback = wrap.querySelector('.genai-quiz-feedback');
+      if(!input || !feedback) return;
+      var val = input.value.trim();
+      var expected = input.getAttribute('data-answer')||'';
+      var regexStr = input.getAttribute('data-regex');
+      var ok = false;
+      if(regexStr){ try{ var re = new RegExp(regexStr); ok = re.test(val); }catch(e){ ok = val===expected; } } else { ok = val===expected; }
+      feedback.classList.add('is-visible');
+      if(ok){
+        feedback.textContent='Correct! +25 XP';
+        feedback.className='genai-quiz-feedback is-visible is-correct';
+        input.style.borderColor='#C9A86A';
+        try{ var badge = document.querySelector('.genai-xp-badge strong'); if(badge){ var n = parseInt(badge.textContent||'0',10)+25; badge.textContent=String(n); } }catch(e){}
+        btn.disabled=true; input.disabled=true;
+        var toast = document.querySelector('.genai-xp-toast'); if(!toast){ toast=document.createElement('div'); toast.className='genai-xp-toast'; document.body.appendChild(toast);} toast.textContent='+25 XP  lab'; toast.classList.add('is-visible'); setTimeout(function(){toast.classList.remove('is-visible')},2200);
+      } else {
+        feedback.textContent='Not quite — copy exactly as on the slide, including leading / or npx.';
+        feedback.className='genai-quiz-feedback is-visible is-wrong';
+        input.style.borderColor='#e0a800';
+      }
+    });
+  });
+  document.querySelectorAll('.genai-lab-input').forEach(function(inp){
+    inp.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); var b=inp.closest('.genai-lab-input-wrap').querySelector('[data-lab-check]'); if(b) b.click(); }});
+  });
+})();
+</script>
       </div>
     </div>
-  </main>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 2 Full Stack</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="../BaseCamp3-FullStack/code/calculator_frontend/index.html">← Previous</a>
+    <a class="genai-nav-next" href="2_full_stack.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -1514,5 +1682,6 @@ of a crash. Report both outcomes.</code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script src="assets/slides.js"></script>
+<script src="assets/genai-gamify.js"></script>
 </body>
 </html>

@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Creating Your AWS Account | GenAI Coaching — AI Accelerator Hub</title>
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+<style>.hljs{background:transparent!important;padding:0!important;}</style>
+  <meta name="description" content="Amazon Web Services (AWS) is where the fellowship's projects will eventually be deployed. Creating an account takes about fifteen minutes, but it involves em...">
+  <link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:image" content="assets/genai-coaching-logo.svg">
+  <link rel="stylesheet" href="assets/genai-brand.css">
+  <link rel="stylesheet" href="assets/genai-gamify.css">
+</head>
+<body>
+<div class="genai-progress" aria-hidden="true"><div class="genai-progress-bar"></div></div>
+<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0"><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-xp" aria-live="polite" style="display:flex;gap:8px;align-items:center;margin:10px 0 18px;font-size:12px"><span class="genai-xp-chip" style="display:inline-flex;align-items:center;gap:6px;background:#0a3a37;color:#fff;padding:4px 10px;border-radius:999px;border:1px solid #114741"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:14px;height:14px"> <span class="genai-xp-val">0 XP</span></span><span class="genai-streak" style="color:#9A9A9A">Streak 0</span></div>
+
+    <h4>Base Camp 1 &middot; Week 1 &middot; AWS</h4>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#signup">1 &middot; Start Sign-Up</a></li>
+        <li><a href="#contact">2 &middot; Contact Details</a></li>
+        <li><a href="#payment">3 &middot; Payment Method</a></li>
+        <li><a href="#identity">4 &middot; Verify Your Identity</a></li>
+        <li><a href="#plans">5 &middot; Choose Your Plans</a></li>
+        <li><a href="#signin">6 &middot; Sign In as Root User</a></li>
+        <li><a href="#mfa">7 &middot; Secure with MFA</a></li>
+        <li><a href="#budget">8 &middot; Set a Budget Alert</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#checklist">Setup Checklist</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="content">
+
+      <div class="page-header">
+        <span class="eyebrow"><img src="assets/genai-coaching-emblem.svg" class="eyebrow-icon" alt=""/> Base Camp 1 &middot; Week 1 &middot; Cloud Account</span>
+        <h1>Creating Your AWS Account</h1>
+        <p class="lede">Amazon Web Services (AWS) is where the fellowship's projects will eventually be deployed. Creating an account takes about fifteen minutes, but it involves email codes, a card, and a phone verification &mdash; so do it now, calmly, rather than during a live session. You'll sign up with your email address, and that same email becomes your <strong>root user</strong> login.</p>
+        <div class="meta-row">
+          <span class="meta-pill">☁️ Amazon Web Services</span>
+          <span class="meta-pill">⏱ ~15 minutes</span>
+          <span class="meta-pill">💳 Credit or debit card required</span>
+        </div>
+      
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="4_llm_api_keys.html">← Prev</a>
+    <a class="genai-nav-next" href="6_github_account.html">Next →</a>
+  </span>
+</nav>
+
+      <section class="part" id="overview">
+        <div class="part-label">Why this matters</div>
+        <h2>Your email is your root login</h2>
+        <div class="topic">
+          <p>When you create an AWS account, the email address and password you sign up with become the <strong>root user</strong> &mdash; the one identity with complete access to everything in the account, including billing. Signing in later as the root user simply means entering that same email and password.</p>
+          <p>Have these ready before you start:</p>
+          <ul class="checklist">
+            <li><span class="tick">✓</span> <span><strong>A personal email address</strong> you'll keep for years and can open right now &mdash; AWS emails you a verification code.</span></li>
+            <li><span class="tick">✓</span> <span><strong>A phone number</strong> that can receive a text message (SMS) or a voice call.</span></li>
+            <li><span class="tick">✓</span> <span><strong>A credit or debit card</strong> with international payments enabled. AWS places a small temporary hold to verify it.</span></li>
+            <li><span class="tick">✓</span> <span><strong>A password manager</strong> (or a safe place) to store the root password you're about to create.</span></li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Choose the email carefully</span>
+            Don't use a work or college address you might lose access to &mdash; if you lose the root email, recovering the account becomes painful. Also avoid an address shared with other people.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="overview">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Your email is your root login <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: AWS root user is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">The email + password you sign up with — full access, including billing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">An IAM user without billing</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">A VS Code profile</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">A GitHub account</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Your email is your root login&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">Overview: email you sign up with becomes root user with comp</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Overview: email you sign up with becomes root user with complete access." data-feedback-wrong="Not quite — Overview: email you sign up with becomes root user with complete access.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 1 ============ -->
+      <section class="part" id="signup">
+        <div class="part-label">Step 1 of 8</div>
+        <h2>Start Sign-Up: Email, Account Name &amp; Password</h2>
+        <div class="topic">
+          <div class="code-block">
+            <div class="code-label"><span>sign-up page</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://portal.aws.amazon.com/billing/signup</code></pre>
+          </div>
+          <p>You can also go to <code class="inline">aws.amazon.com</code> and choose <strong>Create an AWS Account</strong> &mdash; both land on the same sign-up flow.</p>
+          <ol class="steps">
+            <li><strong>Enter your root user email address</strong><span>This is the personal email from the checklist above.</span></li>
+            <li><strong>Enter an AWS account name</strong><span>A friendly label for your own reference, e.g. <code class="inline">AI Accelerator Hub-fellowship</code>. It's not your login and can be changed later.</span></li>
+            <li><strong>Click "Verify email address"</strong><span>AWS sends a verification code to that inbox.</span></li>
+            <li><strong>Enter the code and click "Verify"</strong><span>Check your spam or promotions folder if it doesn't arrive within a minute or two.</span></li>
+            <li><strong>Create your root user password</strong><span>Use uppercase and lowercase letters, numbers, and symbols. Make it long, unique, and store it in your password manager &mdash; this password can control your entire account and its billing.</span></li>
+            <li><strong>Click "Continue"</strong><span>The sign-up wizard walks you through the remaining screens.</span></li>
+          </ol>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="signup">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Start Sign-Up: Email, Account Name &amp; Password <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: First sign-up step asks for:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Email, AWS account name, password</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Phone only</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">GitHub token</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Supabase URL</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Start Sign-Up: Email, Account Name &amp; Password&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Signup section lists email, account name, password.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signup section lists email, account name, password." data-feedback-wrong="Not quite — Signup section lists email, account name, password.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 2 ============ -->
+      <section class="part" id="contact">
+        <div class="part-label">Step 2 of 8</div>
+        <h2>Add Your Contact Details</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Choose "Personal" as the account type</strong><span>Personal and Business accounts work identically &mdash; the choice only changes what information AWS asks for. Personal is right for coursework.</span></li>
+            <li><strong>Fill in your name, phone number, country, and address</strong><span>Use real details. The address should match what your bank has on file for the card you'll add next.</span></li>
+            <li><strong>Read and accept the AWS Customer Agreement</strong><span>Tick the checkbox at the bottom of the form.</span></li>
+            <li><strong>Click "Agree and Continue"</strong></li>
+          </ol>
+          <div class="callout">
+            Save these contact details somewhere safe. If you ever lose access to your email or your MFA device, AWS Support uses them to confirm you own the account.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="contact">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Add Your Contact Details <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Contact details include:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Personal address, phone number, account type (Personal)</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Only username</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Only API key</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Only credit card</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Add Your Contact Details&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Contact section covers address and account type.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Contact section covers address and account type." data-feedback-wrong="Not quite — Contact section covers address and account type.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 3 ============ -->
+      <section class="part" id="payment">
+        <div class="part-label">Step 3 of 8</div>
+        <h2>Add a Payment Method</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Enter your card details and billing address</strong><span>A credit or debit card works. The billing address must match your bank's records exactly.</span></li>
+            <li><strong>Click "Verify and continue"</strong><span>AWS places a small hold on the card to confirm it's valid.</span></li>
+          </ol>
+          <div class="callout">
+            Adding a card is required to open an account, even though you'll start on a plan designed not to charge you (see Step 5). If your card is declined, check that international online payments are enabled with your bank, or try a different card.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="payment">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Add a Payment Method <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: AWS does what with your card?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Places a small temporary hold to verify it</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Charges $100 immediately</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Ignores it</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Requires PayPal only</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Add a Payment Method&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Page: AWS places a small temporary hold to verify.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Page: AWS places a small temporary hold to verify." data-feedback-wrong="Not quite — Page: AWS places a small temporary hold to verify.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 4 ============ -->
+      <section class="part" id="identity">
+        <div class="part-label">Step 4 of 8</div>
+        <h2>Verify Your Identity by Phone</h2>
+        <div class="topic">
+          <ol class="steps">
+            <li><strong>Pick a verification method</strong><span><strong>Text message (SMS)</strong> sends you a numeric code. <strong>Voice call</strong> shows a code on screen, which you enter when an automated voice asks for it.</span></li>
+            <li><strong>Click "Send SMS" (or the voice call button)</strong></li>
+            <li><strong>Solve the security check</strong><span>Type the characters shown, then submit.</span></li>
+            <li><strong>Enter the code you received and click "Continue"</strong></li>
+          </ol>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="identity">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Verify Your Identity by Phone <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Identity verification uses:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Text SMS or voice call code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Only email</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Only GitHub push</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Only face ID</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Verify Your Identity by Phone&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Identity section says phone can receive SMS or voice call.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Identity section says phone can receive SMS or voice call." data-feedback-wrong="Not quite — Identity section says phone can receive SMS or voice call.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 5 ============ -->
+      <section class="part" id="plans">
+        <div class="part-label">Step 5 of 8</div>
+        <h2>Choose Your Account Plan &amp; Support Plan</h2>
+        <div class="topic">
+          <p>Newer AWS accounts choose between a <strong>Free plan</strong> and a <strong>Paid plan</strong>. New accounts receive <strong>$100 in credits</strong> at sign-up, and can earn up to $100 more by completing activities in the console.</p>
+          <table class="data-table">
+            <thead><tr><th></th><th>Free plan</th><th>Paid plan</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Charges</strong></td><td>None while on the plan</td><td>Pay-as-you-go beyond your credits</td></tr>
+              <tr><td><strong>Services</strong></td><td>A select set of AWS services</td><td>All AWS services</td></tr>
+              <tr><td><strong>Lasts</strong></td><td>6 months, or until credits run out &mdash; whichever is first</td><td>Ongoing</td></tr>
+              <tr><td><strong>When it ends</strong></td><td>Account closes; upgrade within 90 days to keep it</td><td>Account stays open</td></tr>
+            </tbody>
+          </table>
+          <ol class="steps">
+            <li><strong>Choose the Free plan</strong><span>It's the safe default for learning &mdash; it's designed so you can't run up a bill by accident. If a later exercise needs a service the Free plan excludes, your instructor will tell you, and you can upgrade at any time from the console.</span></li>
+            <li><strong>Choose "Basic support"</strong><span>It's free, and the default. You can change support tiers later.</span></li>
+            <li><strong>Click "Complete sign up"</strong><span>AWS now activates your account.</span></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-title">Set a calendar reminder</span>
+            If you stay on the Free plan, your account closes after six months or when the credits are used up. Note the date now &mdash; you'll be able to check your remaining credits and plan status on the Billing and Cost Management home page. AWS adjusts these offers periodically, so trust the on-screen wording if it differs from this page.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="plans">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Choose Your Account Plan &amp; Support Plan <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Which plan should you choose?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Basic Support — Free</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Enterprise Support paid</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Developer paid immediately</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">No plan needed</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Choose Your Account Plan &amp; Support Plan&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Plans section says choose Basic Support — Free.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Plans section says choose Basic Support — Free." data-feedback-wrong="Not quite — Plans section says choose Basic Support — Free.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 6 ============ -->
+      <section class="part" id="signin">
+        <div class="part-label">Step 6 of 8</div>
+        <h2>Sign In as the Root User</h2>
+        <div class="topic">
+          <p class="intro">Activation usually takes a few minutes (occasionally longer). AWS emails you when it's ready &mdash; then sign in with the email and password you just created.</p>
+          <div class="code-block">
+            <div class="code-label"><span>console sign-in</span><button class="copy-btn">Copy</button></div>
+            <pre><code class="language-plaintext">https://console.aws.amazon.com/</code></pre>
+          </div>
+          <ol class="steps">
+            <li><strong>Choose "Root user"</strong><span>If your browser shows an IAM user sign-in page instead, click <strong>Sign in using root user email</strong>.</span></li>
+            <li><strong>Enter your root user email address and click "Next"</strong><span>This is the same email you signed up with.</span></li>
+            <li><strong>Complete the security check if prompted</strong><span>Type the characters exactly as shown, without spaces.</span></li>
+            <li><strong>Enter your root user password</strong></li>
+            <li><strong>Complete MFA if you've enabled it, then click "Sign in"</strong><span>You'll set up MFA in the next step.</span></li>
+          </ol>
+          <div class="callout">
+            You'll land on the <strong>Console Home</strong> page. The Region selector is at the top right &mdash; use the region your instructor names for course exercises, since resources you create belong to one region.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="signin">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Sign In as the Root User <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Root sign-in means:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Enter the same email and password you signed up with</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Enter IAM username</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Use GitHub OAuth</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Use VS Code token</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Sign In as the Root User&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Signin: signing in as root means entering that same email an</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Signin: signing in as root means entering that same email and password." data-feedback-wrong="Not quite — Signin: signing in as root means entering that same email and password.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 7 ============ -->
+      <section class="part" id="mfa">
+        <div class="part-label">Step 7 of 8</div>
+        <h2>Secure the Root User with MFA</h2>
+        <div class="topic">
+          <p class="intro">Multi-factor authentication (MFA) means a stolen password alone can't open your account. Do this now &mdash; it takes two minutes.</p>
+          <ol class="steps">
+            <li><strong>Open Security credentials</strong><span>Click your account name at the top right of the console, then choose <strong>Security credentials</strong>.</span></li>
+            <li><strong>Find "Multi-factor authentication (MFA)" and click "Assign MFA device"</strong></li>
+            <li><strong>Name the device and choose "Authenticator app"</strong><span>A passkey or security key also works if you have one.</span></li>
+            <li><strong>Scan the QR code with an authenticator app</strong><span>Google Authenticator, Microsoft Authenticator, Authy, or a password manager with one-time-code support.</span></li>
+            <li><strong>Enter two consecutive codes and click "Add MFA"</strong><span>Wait for the app to show a fresh code between the two entries.</span></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-title">Don't lock yourself out</span>
+            If you lose your phone, you lose the MFA device. Keep your account contact details current, and consider registering a second MFA device as a backup.
+          </div>
+          <div class="callout">
+            <span class="callout-title">Root user: use sparingly</span>
+            AWS recommends that you don't use the root user for everyday work &mdash; keep it for account-level tasks only. For day-to-day exercises, your instructor will guide you to create a separate, limited user; until then, signing in as root to look around is fine.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="mfa">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Secure the Root User with MFA <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: MFA for root is:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Required — turn on via authenticator app / passkey</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Optional forever</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Only via email code</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Not mentioned</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Secure the Root User with MFA&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">MFA section says secure the root user with MFA.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="MFA section says secure the root user with MFA." data-feedback-wrong="Not quite — MFA section says secure the root user with MFA.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ STEP 8 ============ -->
+      <section class="part" id="budget">
+        <div class="part-label">Step 8 of 8</div>
+        <h2>Set a Zero-Spend Budget Alert</h2>
+        <div class="topic">
+          <p class="intro">A cheap second safety net: AWS emails you the moment your account starts accruing charges, so a forgotten resource never becomes a surprise bill.</p>
+          <ol class="steps">
+            <li><strong>Search for "Budgets" in the console's top search bar</strong><span>Open it under <em>Billing and Cost Management</em>.</span></li>
+            <li><strong>Click "Create budget"</strong></li>
+            <li><strong>Choose "Use a template (simplified)" &rarr; "Zero spend budget"</strong></li>
+            <li><strong>Enter a budget name and your email address, then click "Create budget"</strong><span>Use an email you actually read.</span></li>
+          </ol>
+          <div class="callout">
+            On the Free plan you're protected by design, but if you ever upgrade to the Paid plan, this alert becomes your early warning. Setting it up now costs nothing.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="budget">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · Set a Zero-Spend Budget Alert <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Budget alert is set to:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">$0 or $1 to catch any spend early</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">$1000</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">No budget needed</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">$500</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;Set a Zero-Spend Budget Alert&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">Budget section says set a zero-spend / $1 budget alert.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Budget section says set a zero-spend / $1 budget alert." data-feedback-wrong="Not quite — Budget section says set a zero-spend / $1 budget alert.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <!-- ============ TROUBLESHOOTING ============ -->
+      <section class="part" id="troubleshooting">
+        <div class="part-label">Troubleshooting</div>
+        <h2>If Something Goes Wrong</h2>
+        <div class="topic">
+          <ul class="points">
+            <li><strong>No verification email:</strong> check spam and promotions, wait a couple of minutes, and confirm you typed the address correctly. Use the resend option on the verification screen.</li>
+            <li><strong>Card declined:</strong> confirm the billing address matches your bank's records, that international online payments are enabled, and that the card supports online use. A different card often solves it.</li>
+            <li><strong>Phone verification fails:</strong> try the voice-call option instead of SMS (or the reverse), and make sure the number includes the correct country code.</li>
+            <li><strong>Can't sign in / "wrong email or password":</strong> make sure you chose <strong>Root user</strong> and not IAM user. If you forgot the password, use the "Forgot password?" link on the sign-in page.</li>
+            <li><strong>Account still activating:</strong> it can take a little while. Wait for AWS's confirmation email before assuming something failed.</li>
+          </ul>
+          <div class="callout warn">
+            <span class="callout-title">Still stuck?</span>
+            Tell your instructor before Base Camp 2 &mdash; and don't share your password, verification codes, or card details with anyone in the process, including in class chat.
+          </div>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="troubleshooting">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · If Something Goes Wrong <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: If stuck, page says:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Contact AWS support or instructor; check email verification/phone</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Reinstall Python</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Delete .env</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Change VS Code theme</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;If Something Goes Wrong&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Troubleshooting lists common blockers.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Troubleshooting lists common blockers." data-feedback-wrong="Not quite — Troubleshooting lists common blockers.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      <section class="part" id="checklist">
+        <div class="part-label">You're done when...</div>
+        <h2>AWS Account Setup &mdash; Final Check</h2>
+        <div class="topic">
+          <ul class="checklist">
+            <li><span class="tick">✓</span> You created an AWS account with your personal email as the root user email</li>
+            <li><span class="tick">✓</span> You received AWS's confirmation email that the account is active</li>
+            <li><span class="tick">✓</span> You can sign in at console.aws.amazon.com by choosing <strong>Root user</strong> and entering that email</li>
+            <li><span class="tick">✓</span> You know which plan you chose, and the date it ends if you chose the Free plan</li>
+            <li><span class="tick">✓</span> MFA is enabled on the root user</li>
+            <li><span class="tick">✓</span> A zero-spend budget alert is set up</li>
+            <li><span class="tick">✓</span> Your root password is saved in a password manager &mdash; not just remembered</li>
+          </ul>
+        </div>
+      </section>
+    <div class="genai-quiz" data-section="checklist">
+      <div class="genai-quiz-head"><img src="assets/genai-coaching-emblem.svg" alt="" style="width:18px;height:18px"> Quick Check · AWS Account Setup — Final Check <span class="genai-quiz-xp">+25 XP</span></div>
+      <p class="genai-quiz-q">Q1: Checklist confirms:</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Can sign in as root, MFA on, budget alert set</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Only Python version</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Only GitHub username</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Only Supabase keys</button>
+</div>
+      <p class="genai-quiz-q" style="margin-top:14px">Q2: Which detail is also in the &quot;AWS Account Setup — Final Check&quot; section?</p>
+      <div class="genai-quiz-options"><button type="button" class="genai-quiz-option" data-correct="true" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Checklist verifies root sign-in, MFA, budget.</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Unrelated distractor A</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Unrelated distractor B</button>
+<button type="button" class="genai-quiz-option" data-correct="false" data-feedback-correct="Checklist verifies root sign-in, MFA, budget." data-feedback-wrong="Not quite — Checklist verifies root sign-in, MFA, budget.">Unrelated distractor C</button>
+</div>
+      <div class="genai-quiz-feedback" aria-live="polite"></div>
+    </div>
+
+      
+    <section class="genai-lab" style="border:1px solid var(--genai-border, #E8E0C8);border-radius:10px;padding:18px;background:#FFFFFF;margin:24px 0">
+      <div class="genai-lab-head"><span class="genai-pill">ELITE PRACTICE LAB</span><h3>Build &amp; Verify — AWS — Root &amp; Budget Check</h3><p>Type the budget alert value the page tells you to set, or the root sign-in email pattern. The page says set a zero-spend budget.</p></div>
+      <div class="genai-lab-body" style="margin-top:12px">
+        <label for="genai-lab-input" style="font-weight:700;font-size:14px">Your answer:</label>
+        <div style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap">
+          <input id="genai-lab-input" type="text" placeholder="0" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid #E8E0C8;border-radius:8px;font-family:inherit" data-pattern="^(0|\$0|\$1|1|.*@.*\..*)$" />
+          <button type="button" class="genai-btn genai-lab-check" style="padding:8px 14px;background:#0A0A0A;color:#fff;border:1px solid #0A0A0A;border-radius:8px;font-weight:700;cursor:pointer">Check</button>
+          <button type="button" class="genai-btn genai-lab-hint" style="padding:8px 14px;background:#e2f5ea;color:#0A0A0A;border:1px solid #E8E0C8;border-radius:8px;font-weight:700;cursor:pointer">Hint</button>
+        </div>
+        <div class="genai-lab-hint-text" style="display:none;margin-top:8px;font-size:13px;color:#536b64;border:1px dashed #E8E0C8;padding:8px;border-radius:8px">Hint: The page says set a $0 (or $1) budget alert — type 0 or $0 or your email</div>
+        <div class="genai-lab-feedback" aria-live="polite" style="margin-top:10px;font-size:13.5px;padding:8px 12px;border-radius:8px;display:none"></div>
+        <div class="genai-lab-success" style="display:none;margin-top:12px;text-align:center;padding:14px;background:#eaf7f0;border:1px solid #C9A86A;border-radius:10px">
+          <div style="font-weight:800;color:#0A0A0A">✓ Verified — Elite Completed</div>
+          <div style="font-size:13px;color:#536b64">Confetti! You nailed the hands-on check for this page.</div>
+        </div>
+      </div>
+    </section>
+    <div class="genai-certificate" style="display:none;margin:18px 0;padding:18px;background:#f2f9f6;border:1px solid #C9A86A;border-radius:10px;text-align:center">
+      <div style="font-weight:800;color:#0A0A0A;font-size:16px">Elite Completed — GenAI Coaching</div>
+      <div style="font-size:13px;color:#536b64">All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.</div>
+    </div>
+
+<script>
+(function(){
+  var input=document.getElementById('genai-lab-input');
+  var check=document.querySelector('.genai-lab-check');
+  var hintBtn=document.querySelector('.genai-lab-hint');
+  var hintText=document.querySelector('.genai-lab-hint-text');
+  var feedback=document.querySelector('.genai-lab-feedback');
+  var success=document.querySelector('.genai-lab-success');
+  var cert=document.querySelector('.genai-certificate');
+  if(!input||!check) return;
+  function showFeedback(msg, ok){
+    feedback.textContent=msg;
+    feedback.style.display='block';
+    feedback.style.background=ok?'#eaf7f0':'#fff8e6';
+    feedback.style.border='1px solid '+(ok?'#C9A86A':'#e0a800');
+    feedback.style.color=ok?'#0A0A0A':'#6b5500';
+  }
+  if(hintBtn&&hintText){
+    hintBtn.addEventListener('click', function(){ hintText.style.display = hintText.style.display==='none'?'block':'none'; });
+  }
+  function celebrate(){
+    // simple confetti via emoji burst
+    var c=document.createElement('div');
+    c.textContent='🎉 🎉 🎉';
+    c.style.fontSize='22px';
+    c.style.textAlign='center';
+    c.style.marginTop='6px';
+    success.appendChild(c);
+    if(cert) cert.style.display='block';
+    // also trigger genai certificate via gamify storage: mark lab done
+    try{
+      var k='genai-progress-'+location.pathname;
+      var s=JSON.parse(localStorage.getItem(k)||'{}');
+      s.labDone=true;
+      localStorage.setItem(k, JSON.stringify(s));
+    }catch(e){}
+  }
+  check.addEventListener('click', function(){
+    var pat=input.getAttribute('data-pattern');
+    var val=input.value.trim();
+    var re;
+    try{ re=new RegExp(pat); }catch(e){ re=/.*/; }
+    if(re.test(val)){
+      showFeedback('Correct! +50 XP — Lab verified.', true);
+      success.style.display='block';
+      celebrate();
+      // award XP via gamify if available
+      try{ if(window.genaiAddXP) window.genaiAddXP(50); }catch(e){}
+      // XP toast fallback
+      var t=document.querySelector('.genai-xp-toast'); if(t){ t.textContent='+50 XP Lab'; t.classList.add('is-visible'); setTimeout(function(){t.classList.remove('is-visible')},2200); }
+      // try to trigger certificate modal from gamify.js
+      var certOverlay=document.querySelector('.genai-cert-overlay');
+      // show inline cert
+      if(cert) cert.style.display='block';
+    } else {
+      showFeedback('Not quite — check the hint and try the exact format from the page.', false);
+    }
+  });
+  input.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); check.click(); }});
+})();
+</script>
+
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching">
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px">
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+      </footer>
+    </div>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: 6 Github Account</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="4_llm_api_keys.html">← Previous</a>
+    <a class="genai-nav-next" href="6_github_account.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="assets/script.js"></script>
+  <script src="assets/genai-gamify.js"></script>
+</body>
+</html>

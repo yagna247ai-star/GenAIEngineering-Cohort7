@@ -1,0 +1,2062 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>App Idea Blueprint | GenAI Coaching — AI Accelerator Hub</title>
+<link rel="icon" href="assets/genai-coaching-emblem.svg" type="image/svg+xml" />
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI2IiBmaWxsPSIjMDAyNzI2Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMTEiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjMwIiByPSIxMSIgZmlsbD0iI2ZmZmZmZiIvPgogIDxwYXRoIGQ9Ik05MCAxNSBDOTEuNSAyNyA5MyAyOC41IDEwNSAzMCBDOTMgMzEuNSA5MS41IDMzIDkwIDQ1IEM4OC41IDMzIDg3IDMxLjUgNzUgMzAgQzg3IDI4LjUgODguNSAyNyA5MCAxNSBaIiBmaWxsPSIjMzNjMzc1Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI2MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iNjAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI5MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjkwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iOTAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=" />
+<style>
+:root {
+  --bg: #ffffff; --bg-soft: #f2f9f6;
+  --sidebar-bg: #0A0A0A; --sidebar-fg: #E8E0C8; --sidebar-fg-dim: #9A9A9A; --sidebar-active: #C9A86A;
+  --text: #0e1f1c; --text-dim: #536b64; --border: #E8E0C8; --field-border: #bcd9cb;
+  --green: #1f8756; --green-dark: #0A0A0A; --accent: #C9A86A;
+  --callout-bg: #eaf7f0; --warn-bg: #fff8e6; --warn-border: #e0a800; --pill-bg: #e2f5ea; --danger: #b42318;
+  --radius: 10px; --maxw: 900px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Calibri, Arial, sans-serif; }
+.layout { display: flex; min-height: 100vh; }
+
+/* ---- sidebar ---- */
+.sidebar { width: 270px; flex-shrink: 0; background: var(--sidebar-bg); color: var(--sidebar-fg);
+  padding: 24px 18px 40px; position: sticky; top: 0; align-self: flex-start; height: 100vh; overflow-y: auto; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #fff; font-size: 15px; margin-bottom: 4px; }
+.brand img { width: 28px; height: 28px; border-radius: 8px; display: block; }
+.brand-sub { font-size: 11.5px; color: var(--sidebar-fg-dim); margin: 0 0 22px 38px; letter-spacing: .03em; }
+.sidebar h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--sidebar-fg-dim); margin: 22px 0 8px; font-weight: 700; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar a { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--sidebar-fg); font-size: 13.5px;
+  padding: 7px 10px; border-radius: 7px; margin-bottom: 1px; text-decoration: none; }
+.sidebar a:hover { background: rgba(255,255,255,.06); color: #fff; }
+.sidebar a.active { background: rgba(51,195,117,.16); color: var(--sidebar-active); }
+.badge { font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: rgba(255,255,255,.1); color: var(--sidebar-fg); white-space: nowrap; }
+.badge.done { background: var(--accent); color: var(--green-dark); }
+
+/* ---- main ---- */
+main { flex: 1; min-width: 0; padding: 0 48px 120px; }
+.content { max-width: var(--maxw); margin: 0 auto; }
+.toolbar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border); margin: 0 -48px; padding: 12px 48px; }
+.toolbar-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.progress-wrap { flex: 1; min-width: 200px; }
+.progress-text { font-size: 13px; font-weight: 600; color: var(--green-dark); display: flex; justify-content: space-between; gap: 12px; }
+.save-state { font-weight: 500; color: var(--text-dim); }
+.save-state.dirty { color: #a67300; }
+.bar { height: 6px; border-radius: 999px; background: var(--pill-bg); margin-top: 6px; overflow: hidden; }
+.bar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s ease; }
+.btn { font: inherit; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--pill-bg); color: var(--green-dark); }
+.btn:hover { background: #d3efdf; }
+.btn.primary { background: var(--green); border-color: var(--green); color: #fff; }
+.btn.primary:hover { background: #17693f; }
+.btn.small { font-size: 13px; padding: 6px 12px; }
+.btn.add { background: #fff; border: 1.5px dashed var(--accent); color: var(--green); }
+.btn.add:hover { background: var(--callout-bg); }
+.btn:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid rgba(51,195,117,.5); outline-offset: 1px; }
+
+.page-header { margin: 40px 0 36px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--green); background: var(--pill-bg); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
+.eyebrow img { width: 15px; height: 15px; border-radius: 4px; display: block; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 12px; color: var(--green-dark); font-weight: 800; }
+.lede { font-size: 17px; color: var(--text-dim); max-width: 720px; margin: 0 0 18px; }
+.lede p { margin: 0 0 10px; }
+.lede ul { margin: 0 0 10px; padding-left: 22px; }
+.lede li { margin-bottom: 4px; }
+.meta-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.meta-pill { font-size: 12.5px; background: var(--pill-bg); color: var(--green-dark); padding: 5px 12px; border-radius: 999px; font-weight: 600; }
+.steps { counter-reset: s; list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.steps li { counter-increment: s; background: var(--bg-soft); border-radius: var(--radius); padding: 12px 14px; font-size: 13.5px; position: relative; padding-top: 34px; }
+.steps li::before { content: counter(s); position: absolute; top: 9px; left: 12px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--green-dark); color: var(--accent); font-weight: 800; font-size: 11.5px; display: flex; align-items: center; justify-content: center; }
+.steps strong { display: block; }
+
+section.part { margin-top: 56px; scroll-margin-top: 90px; }
+.part-label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
+section.part > h2 { font-size: 25px; margin: 0 0 10px; color: var(--green-dark); }
+.part-intro { color: var(--text-dim); margin: 0 0 8px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
+
+.q { border: 0; margin: 0; padding: 22px 0; border-bottom: 1px solid var(--border); min-width: 0; }
+.q-title { display: block; padding: 0; margin: 0 0 4px; font-size: 16.5px; font-weight: 700; color: var(--text); }
+.tag { display: inline-block; margin-left: 10px; vertical-align: 2px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; }
+.tag.req { background: #fde9c2; color: #8a5a00; }
+.tag.opt { background: var(--pill-bg); color: var(--green); }
+.tag.auto { background: #e5e7eb; color: #374151; }
+.help { font-size: 14px; color: var(--text-dim); margin: 2px 0; }
+.example { font-size: 14px; background: var(--callout-bg); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 8px 12px; margin: 8px 0 12px; color: var(--text); }
+.example b { color: var(--green); }
+
+input[type=text], textarea, select { width: 100%; font: inherit; font-size: 15px; color: var(--text); background: #fff;
+  border: 1px solid var(--field-border); border-radius: 8px; padding: 10px 12px; }
+select { padding-right: 8px; }
+textarea { min-height: 96px; resize: vertical; line-height: 1.5; }
+input[type=text]:focus, textarea:focus, select:focus { border-color: var(--accent); }
+input.invalid { border-color: var(--danger); background: #fff5f4; }
+.opts { display: grid; gap: 4px; margin-top: 6px; }
+.opt { display: flex; align-items: flex-start; gap: 10px; padding: 7px 10px; border-radius: 8px; cursor: pointer; font-size: 15px; }
+.opt:hover { background: var(--bg-soft); }
+.opt input { margin-top: 5px; accent-color: var(--green); flex-shrink: 0; }
+.opt.other { align-items: center; }
+.opt.other input[type=text] { flex: 1; width: auto; min-width: 0; padding: 6px 10px; font-size: 14px; }
+.sw { display: inline-flex; margin-right: 8px; vertical-align: -3px; }
+.sw i { display: inline-block; width: 18px; height: 18px; border: 1px solid rgba(0,0,0,.12); }
+.sw i:first-child { border-radius: 5px 0 0 5px; }
+.sw i:last-child { border-radius: 0 5px 5px 0; margin-left: -1px; }
+.scale { display: flex; align-items: center; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.scale .end { font-size: 13px; color: var(--text-dim); }
+.scale label { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 13px; font-weight: 600; cursor: pointer; padding: 4px 10px; border-radius: 8px; }
+.scale label:hover { background: var(--bg-soft); }
+.scale input { accent-color: var(--green); }
+
+/* colors */
+.colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
+.colorpick { display: flex; align-items: center; gap: 8px; }
+.colorpick input[type=color] { width: 42px; height: 40px; padding: 2px; border: 1px solid var(--field-border); border-radius: 8px; background: #fff; cursor: pointer; flex-shrink: 0; }
+.colorpick input[type=text] { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; text-transform: uppercase; }
+
+/* builders */
+.ex-details { margin: 8px 0 12px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+.ex-details summary { cursor: pointer; padding: 9px 14px; font-size: 14px; font-weight: 700; color: var(--green); }
+.ex-details .tablewrap { padding: 0 14px 14px; overflow-x: auto; }
+table.ex { border-collapse: collapse; width: 100%; font-size: 13px; }
+table.ex th { background: var(--green-dark); color: #fff; text-align: left; padding: 7px 10px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap; }
+table.ex td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.ex tr:nth-child(even) td { background: var(--bg-soft); }
+table.ex code { background: var(--pill-bg); padding: 0 5px; border-radius: 4px; font-size: 12px; }
+
+.builder { margin-top: 10px; }
+.empty-hint { border: 1.5px dashed var(--field-border); border-radius: 12px; padding: 18px; text-align: center; color: var(--text-dim); font-size: 14px; margin-bottom: 10px; }
+.card { border: 1px solid var(--field-border); border-radius: 12px; background: var(--bg-soft); padding: 14px 16px 16px; margin-bottom: 14px; }
+.card-head { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.card-title { flex: 1; font-weight: 800; color: var(--green-dark); font-size: 15px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.icon-btn { width: 30px; height: 30px; flex-shrink: 0; border: 1px solid var(--field-border); background: #fff; border-radius: 8px; cursor: pointer; font-size: 14px; line-height: 1; color: var(--text-dim); }
+.icon-btn:hover { background: var(--callout-bg); color: var(--green-dark); }
+.icon-btn.del:hover { background: #fdecea; color: var(--danger); border-color: #f3b5ae; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid3 { display: grid; grid-template-columns: 1.2fr 1.4fr 1.4fr; gap: 10px; }
+.f { display: block; min-width: 0; }
+.lbl { display: block; font-size: 12px; font-weight: 700; color: var(--text-dim); margin: 0 0 3px; letter-spacing: .02em; }
+.sub-title { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--green); margin: 16px 0 6px; }
+.ctl { border: 1px solid var(--field-border); border-radius: 10px; background: #fff; padding: 10px 12px 12px; margin-bottom: 10px; }
+.ctl .card-head { margin-bottom: 8px; }
+.ctl .card-title { font-size: 13.5px; font-weight: 700; }
+.cond { margin-top: 10px; padding: 10px; border-radius: 8px; background: var(--callout-bg); }
+.cond[hidden] { display: none; }
+.fld { border: 1px solid var(--field-border); border-radius: 10px; background: #fff; padding: 10px 12px; margin-bottom: 8px; }
+.fld-top { display: grid; grid-template-columns: 1.3fr 1.5fr auto auto auto; gap: 10px; align-items: end; }
+.fld-bottom { display: grid; grid-template-columns: 1fr 1.6fr; gap: 10px; margin-top: 8px; }
+.fld-bottom.no-link { grid-template-columns: 1fr; }
+.chk { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding-bottom: 9px; cursor: pointer; white-space: nowrap; }
+.chk input { accent-color: var(--green); }
+.fld-actions { display: flex; gap: 4px; padding-bottom: 5px; }
+
+/* derived panels */
+.derived { margin-top: 8px; }
+.derived table.ex td:first-child { white-space: nowrap; }
+.issue-list { margin: 6px 0 0; padding-left: 20px; font-size: 14px; }
+.issue-list li { margin-bottom: 4px; }
+.issues-ok { background: var(--callout-bg); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 10px 14px; font-size: 14px; }
+.issues-warn { background: var(--warn-bg); border-left: 3px solid var(--warn-border); border-radius: 0 8px 8px 0; padding: 10px 14px; font-size: 14px; }
+
+.finish { background: var(--bg-soft); border-radius: 14px; padding: 26px 28px; margin-top: 56px; scroll-margin-top: 90px; }
+.finish h2 { margin: 0 0 8px; color: var(--green-dark); font-size: 22px; }
+.finish .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+.prompt { position: relative; background: var(--green-dark); color: #e6f5ee; border-radius: var(--radius); padding: 14px 16px; font-size: 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; margin: 8px 0 0; }
+.prompt button { position: absolute; top: 8px; right: 8px; font-size: 11.5px; padding: 4px 10px; border-radius: 6px; cursor: pointer;
+  background: #0f3d34; color: #d7f2e4; border: 1px solid #1f6e56; font-family: inherit; }
+.prompt p { margin: 0; padding-right: 64px; }
+.callout { background: var(--callout-bg); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 18px 0 0; font-size: 14.5px; }
+.callout.warn { background: var(--warn-bg); border-left-color: var(--warn-border); }
+footer { text-align: center; color: var(--text-dim); font-size: 12.5px; margin-top: 56px; }
+
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; z-index: 50;
+  background: var(--green-dark); color: #fff; padding: 12px 18px; border-radius: 10px; font-size: 14px; max-width: min(92vw, 560px);
+  display: flex; align-items: center; gap: 14px; box-shadow: 0 8px 28px rgba(0,0,0,.25); transition: opacity .2s ease, transform .2s ease; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.toast.error { background: #8a1c1c; }
+.toast button { font: inherit; font-size: 13px; font-weight: 700; background: transparent; color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; padding: 3px 12px; cursor: pointer; }
+
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  main { padding: 0 20px 100px; }
+  .toolbar { margin: 0 -20px; padding: 10px 20px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 28px; }
+  .colors, .grid2, .grid3, .fld-bottom { grid-template-columns: 1fr; }
+  .fld-top { grid-template-columns: 1fr 1fr; }
+  .fld-top .f:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .toolbar { padding: 8px 16px; margin: 0 -20px; }
+  .toolbar-inner { gap: 8px; }
+  .progress-wrap { flex-basis: 100%; }
+  .toolbar .btn { flex: 1; padding: 7px 12px; font-size: 13px; }
+  .steps { grid-template-columns: 1fr; }
+  .finish { padding: 20px 18px; }
+}
+@media print { .sidebar, .toolbar, .toast, .finish .btn-row { display: none; } }
+<link rel="stylesheet" href="assets/genai-brand.css" />
+<link rel="stylesheet" href="assets/genai-gamify.css" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:image" content="assets/genai-coaching-logo.svg" />
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<style>.skip-link:focus{left:16px;top:12px;width:auto;height:auto;padding:8px 14px;background:#0A0A0A;color:#fff;z-index:10001;border-radius:8px;position:fixed;}</style>
+<div class="genai-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand" style="display:flex;align-items:center;gap:10px"><img src="assets/genai-coaching-emblem.svg" class="brand-icon" alt="GenAI Coaching" style="width:28px;height:28px;border-radius:8px;flex-shrink:0" /><span style="font-weight:800;line-height:1;color:#FFFFFF;font-size:14px;letter-spacing:-0.02em">GEN AI<br/>COACHING</span></div>
+    <div class="brand-sub">Unlock Your Elite Future · Powered by AI Accelerator Hub</div>
+    <div class="genai-progress-wrap" aria-label="Course progress" style="margin:12px 0 8px"><div class="genai-progress-track" aria-hidden="true"><div class="genai-progress-fill" style="width:0%"></div></div><span class="genai-xp-badge">XP <strong>0</strong></span></div>
+    <h4>Base Camp 3 &middot; App Blueprint</h4>
+    <nav><ul id="nav"></ul></nav>
+  </aside>
+
+  <main id="main-content">
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <div class="progress-wrap">
+          <div class="progress-text"><span id="progressText">0 of 0 required answered</span><span id="saveState" class="save-state">No answers yet</span></div>
+          <div class="bar" role="progressbar" aria-label="Required questions answered" aria-valuemin="0" aria-valuemax="100" id="bar"><span id="barFill"></span></div>
+        </div>
+        <button class="btn" id="loadBtn" type="button">Load JSON</button>
+        <button class="btn primary" id="saveBtn" type="button">Save as JSON</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-header">
+        <span class="eyebrow"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI2IiBmaWxsPSIjMDAyNzI2Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMTEiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjMwIiByPSIxMSIgZmlsbD0iI2ZmZmZmZiIvPgogIDxwYXRoIGQ9Ik05MCAxNSBDOTEuNSAyNyA5MyAyOC41IDEwNSAzMCBDOTMgMzEuNSA5MS41IDMzIDkwIDQ1IEM4OC41IDMzIDg3IDMxLjUgNzUgMzAgQzg3IDI4LjUgODguNSAyNyA5MCAxNSBaIiBmaWxsPSIjMzNjMzc1Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI2MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iNjAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI5MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjkwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iOTAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=" alt="" /> Base Camp 3 &middot; Full-Stack Solutioning</span>
+        <h1 id="pageTitle">App Idea Blueprint</h1>
+        <div class="lede" id="pageLede"></div>
+        
+<nav class="genai-nav-top" aria-label="Primary">
+  <span class="genai-nav-label"><img src="assets/genai-coaching-emblem.svg" alt="" /> GenAI Journey</span>
+  <span style="display:flex;gap:8px">
+    <a class="genai-nav-prev" href="2_UI.html">← Prev</a>
+    <a class="genai-nav-next" href="code/calculator_frontend/index.html">Next →</a>
+  </span>
+</nav>
+<div class="meta-row">
+          <span class="meta-pill" id="pillCount"></span>
+          <span class="meta-pill" id="pillTime"></span>
+          <span class="meta-pill">&#128274; Stays on your computer</span>
+        </div>
+        <ol class="steps">
+          <li><strong>Fill it in</strong>Replace the examples with your own real details.</li>
+          <li><strong>Save as JSON</strong>Downloads a file you can keep anywhere.</li>
+          <li><strong>Load it later</strong>Pick your file to continue where you left off.</li>
+          <li><strong>Hand it to your AI</strong>Give the JSON to your coding assistant.</li>
+        </ol>
+      </div>
+
+      <div id="sections"></div>
+
+      
+      <section class="part" id="genai-quiz-blueprint-fields" style="scroll-margin-top:90px">
+        <div class="part-label">GenAI Coaching · Quick Check</div>
+        <h2>Quick Check — Blueprint Fields</h2>
+        <p class="part-intro">Derived strictly from this blueprint’s own sections and fields.</p>
+        <div class="genai-quiz" data-quiz-id="genai-quiz-blueprint-1">
+          <p class="genai-quiz-q">In “The Big Idea”, which field is defined as “A working title is fine. You can change it later. Example: GlowBook”?</p>
+          <div class="genai-quiz-options">
+            <button type="button" class="genai-quiz-option" data-correct="true">App name</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">One-sentence pitch</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">The problem being solved</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Type of app</button>
+          </div>
+          <div class="genai-quiz-feedback" role="status"></div>
+          <p class="genai-quiz-q" style="margin-top:14px">In “Front End — Screens, Controls and Navigation”, the help for “Screens and controls” says each control must specify what (example table)?</p>
+          <div class="genai-quiz-options">
+            <button type="button" class="genai-quiz-option" data-correct="true">Shows or collects, and what happens (including HTTP method/path/data/errors for “Call the back end”)</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Only the button color</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Only the screen name</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Only the database table</button>
+          </div>
+          <div class="genai-quiz-feedback" role="status"></div>
+          <p class="genai-quiz-q" style="margin-top:14px">In “Database — What the App Stores”, what field type is used to connect two tables (e.g., booking → customer)?</p>
+          <div class="genai-quiz-options">
+            <button type="button" class="genai-quiz-option" data-correct="true">Link to another table</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Short text</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Money amount</button>
+            <button type="button" class="genai-quiz-option" data-correct="false">Choice from a list</button>
+          </div>
+          <div class="genai-quiz-feedback" role="status"></div>
+        </div>
+      </section>
+
+      <section class="part" id="elite-lab" style="scroll-margin-top:90px">
+        <div class="part-label" style="color:#0A0A0A;font-weight:700"><img alt="" src="assets/genai-coaching-emblem.svg" style="width:18px;height:18px;border-radius:4px;vertical-align:middle;margin-right:6px;"/> GenAI Coaching · Elite Practice Lab</div>
+        <h2>Elite Lab — Blueprint Completeness Checklist</h2>
+        <p class="part-intro">Check your blueprint interactively. The lab reads the form’s current state (no external hallucination) and validates required fields and links.</p>
+        <div style="border:1px solid #E8E0C8;border-radius:10px;background:#fff;padding:16px 18px">
+          <button type="button" id="genai-validate-btn" class="btn primary" style="font:inherit;font-weight:700;padding:9px 18px;border-radius:8px;cursor:pointer;background:#1f8756;color:#fff;border:1px solid #1f8756">Validate Blueprint</button>
+          <div id="genai-validate-output" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;color:#0e1f1c"></div>
+          <div class="genai-quiz-feedback" id="genai-lab-feedback" role="status" style="margin-top:10px"></div>
+          <p style="margin-top:10px;font-size:13px;color:#536b64">Tip: fill App name, pitch, screens with controls (method+path starting with /), tables with fields, and start screen before validating.</p>
+        </div>
+      </section>
+<script>
+(function(){
+  var btn = document.getElementById('genai-validate-btn');
+  var out = document.getElementById('genai-validate-output');
+  var fb = document.getElementById('genai-lab-feedback');
+  if(!btn||!out) return;
+  btn.addEventListener('click', function(){
+    var checks = [];
+    var appName = document.querySelector('[name="f_app_name"]')||document.getElementById('f_app_name')||document.querySelector('input[name*="app_name"]');
+    // fallback: read via questionnaire logic if present: use collect if available
+    var val = null;
+    try{
+      // try to use page's own collect via global
+      var inputs = document.querySelectorAll('input[type="text"], textarea');
+      var hasAppName = false;
+      inputs.forEach(function(i){ if(i.value && i.value.trim().length>2 && i.placeholder && i.placeholder.includes('GlowBook')) hasAppName = hasAppName || i.value.trim().length>0; });
+    }catch(e){}
+    // Use actual blueprint state via local collect simulation: check required fields dom
+    var requiredIds = ['your_name','app_name','one_sentence_pitch','the_problem_being_solved'];
+    var missing = [];
+    requiredIds.forEach(function(id){
+      var el = document.getElementById('q-'+id);
+      if(el){
+        var input = el.querySelector('input[type="text"], textarea');
+        if(input && !input.value.trim()) missing.push(id.replace(/_/g,' '));
+      }
+    });
+    // Screens and tables check via builders
+    var screens = document.querySelectorAll('.screen');
+    var tables = document.querySelectorAll('.tbl');
+    var issues = [];
+    if(screens.length===0) issues.push('Add at least one screen with controls');
+    else {
+      screens.forEach(function(s,i){
+        var name = s.querySelector('[data-k="screen_name"]');
+        if(!name || !name.value.trim()) issues.push('Screen '+(i+1)+' missing name');
+        var ctrls = s.querySelectorAll('.ctl');
+        if(ctrls.length===0) issues.push('Screen '+(s.querySelector('[data-k="screen_name"]')?.value||i+1)+' has no controls');
+        ctrls.forEach(function(c,j){
+          var act = c.querySelector('[data-k="action"]');
+          if(act && act.value==='call_api'){
+            var path = c.querySelector('[data-k="path"]');
+            if(!path || !path.value.trim().startsWith('/')) issues.push('Control '+(j+1)+' API path must start with /');
+          }
+        });
+      });
+    }
+    if(tables.length===0) issues.push('Add at least one table with fields');
+    var html = '';
+    if(missing.length) html += '<div style="background:#fff8e6;border-left:3px solid #e0a800;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:8px">Missing required: '+missing.join(', ')+'</div>';
+    if(issues.length) html += '<div style="background:#fff8e6;border-left:3px solid #e0a800;border-radius:0 8px 8px 0;padding:10px 14px">To fix: '+issues.join(' · ')+'</div>';
+    if(!missing.length && !issues.length){
+      html = '<div style="background:#eaf7f0;border-left:3px solid #C9A86A;border-radius:0 8px 8px 0;padding:10px 14px">✓ Blueprint looks complete — screens, controls with API paths, and tables all present.</div>';
+      fb.textContent='Correct! +25 XP'; fb.className='genai-quiz-feedback is-visible is-correct';
+      try{ var badge=document.querySelector('.genai-xp-badge strong'); if(badge){ var n=parseInt(badge.textContent||'0',10)+25; badge.textContent=String(n);} }catch(e){}
+      btn.disabled=true;
+      var toast=document.createElement('div'); toast.className='genai-xp-toast is-visible'; toast.textContent='+25 XP  lab'; toast.style.cssText='position:fixed;right:18px;bottom:18px;background:#0A0A0A;color:#fff;padding:10px 16px;border-radius:10px;z-index:9998'; document.body.appendChild(toast); setTimeout(function(){toast.classList.remove('is-visible')},2200);
+    } else {
+      fb.textContent='Not yet — fix the items above and re-validate.'; fb.className='genai-quiz-feedback is-visible is-wrong';
+    }
+    out.innerHTML = html;
+  });
+})();
+</script>
+
+      <section class="finish" id="finish">
+        <h2>Save your blueprint</h2>
+        <p>Your answers are only in this page until you save them. <strong>Save as JSON</strong> downloads a file you can reload here at any time to keep editing.
+          Nothing is sent over the internet.</p>
+        <div class="btn-row">
+          <button class="btn primary" id="saveBtn2" type="button">Save as JSON</button>
+          <button class="btn" id="loadBtn2" type="button">Load JSON</button>
+        </div>
+        <p style="margin:18px 0 0;">When your answers are specific, give the saved JSON file to your AI coding assistant with this instruction:</p>
+        <div class="prompt">
+          <p id="promptText">Build the app described in the attached blueprint (JSON). Plan first, then build the database (tables and fields), the FastAPI back end (the endpoints listed under derived.api_endpoints and any extras), and the front end (every screen, its controls, and the navigation between screens), and tell me how to run it. Use the color theme and look and feel I chose. Ask me before making any decision that isn't covered by my answers.</p>
+          <button id="copyPrompt" type="button">Copy</button>
+        </div>
+        <div class="callout warn"><strong>Tip:</strong> Save often, and save before you close the tab. If you close it with unsaved changes, your browser will warn you first.</div>
+      </section>
+
+      <footer>AI Accelerator Hub &nbsp;|&nbsp; Powered by AI Accelerator Hub</footer>
+    
+      <footer class="site-footer genai-footer" style="border-top:1px solid var(--border, #E8E0C8);padding-top:18px;margin-top:48px">
+        <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+          <img src="assets/genai-coaching-logo.svg" style="height:28px" alt="GenAI Coaching" />
+          <span style="font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">GEN AI COACHING</span>
+          <span class="footer-sep" style="color:#E8E0C8">|</span>
+          <img src="assets/ai-accelerator-hub-logo.svg" class="footer-gs-logo" alt="AI Accelerator Hub" style="height:22px" />
+        </div>
+        <div style="text-align:center;font-size:12px;color:#9A9A9A;margin-top:6px">GenAI Learning · Powered by AI Accelerator Hub</div>
+      </footer>
+</div>
+  
+<nav class="genai-nav-bottom" aria-label="Next level">
+  <div class="genai-nav-copy">
+    <h4>Continue your elite future</h4>
+    <p>Next up: Index</p>
+  </div>
+  <div class="genai-nav-actions">
+    <a class="genai-nav-prev" href="2_UI.html">← Previous</a>
+    <a class="genai-nav-next" href="code/calculator_frontend/index.html">Continue →</a>
+  </div>
+</nav>
+
+</main>
+</div>
+
+<input type="file" id="fileInput" accept=".json,application/json" hidden />
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button type="button" id="toastAction" hidden></button></div>
+<noscript><p style="padding:24px">This page needs JavaScript to run.</p></noscript>
+
+<script id="questionnaire-data" type="application/json">{
+  "title": "App Idea Blueprint — Front End, Back End & Database",
+  "time": "45–60 minutes",
+  "description": "Turn your app idea into a clear blueprint that an AI coding assistant (like Claude Code or OpenCode) can build from.\n\nYou'll describe your idea in three parts, using a restaurant as a picture:\n• Front end = the dining room: the look and colors, every screen, the controls on each screen (buttons, input boxes, tables…), and how people move between screens.\n• Back end = the kitchen: what happens when a control is used. This is your FastAPI endpoints, rules and error messages.\n• Database = the pantry: the tables and fields the app stores.\n\nEvery question includes an example from a made-up salon booking app called GlowBook. Replace the examples with your own real names, numbers and details. The screens and tables parts are small builders: add one card per screen or table, then fill in its details. The more specific you are, the better the app will be.",
+  "appNameId": "app_name",
+  "sections": [
+    {
+      "title": "The Big Idea",
+      "nav": "The Big Idea",
+      "intro": "Start with the business idea in plain words. Every question shows an example from GlowBook, a made-up salon booking app. Use real names, numbers and details of your own idea.",
+      "questions": [
+        {
+          "id": "your_name",
+          "type": "text",
+          "required": true,
+          "title": "Your name",
+          "help": "So we know whose blueprint this is."
+        },
+        {
+          "id": "app_name",
+          "type": "text",
+          "required": true,
+          "title": "App name",
+          "help": "A working title is fine. You can change it later.\nExample: GlowBook"
+        },
+        {
+          "id": "one_sentence_pitch",
+          "type": "text",
+          "required": true,
+          "title": "One-sentence pitch",
+          "help": "Complete this sentence: '[App name] helps [who] to [do what] so that [benefit].'\nExample: GlowBook helps salon customers book haircuts online so they never have to phone or wait on hold."
+        },
+        {
+          "id": "the_problem_being_solved",
+          "type": "paragraph",
+          "required": true,
+          "title": "The problem being solved",
+          "help": "What problem does your app solve, who has it, and how do they cope today?\nExample: Small salons take bookings by phone and in paper diaries. Double-bookings happen every week and customers forget their appointments."
+        },
+        {
+          "id": "who_will_use_the_app",
+          "type": "checkbox",
+          "required": true,
+          "title": "Who will use the app",
+          "help": "Tick everyone who will use it.\nExample: GlowBook has customers (book appointments), staff (see their schedule) and the owner (manages services and prices).",
+          "choices": [
+            "Customers or the general public",
+            "Staff or employees",
+            "Owner or administrator",
+            "Students or learners",
+            "Just me"
+          ],
+          "other": true
+        },
+        {
+          "id": "type_of_app",
+          "type": "choice",
+          "required": true,
+          "title": "Type of app",
+          "help": "Pick the closest match. It helps the AI choose sensible defaults.\nExample: GlowBook is 'Booking or scheduling'.",
+          "choices": [
+            "Booking or scheduling (e.g., salon, clinic, class slots)",
+            "Online shop or ordering (e.g., bakery orders, merch store)",
+            "Tracker or logbook (e.g., expenses, tasks, habits, workouts)",
+            "Dashboard or reports (e.g., sales summary, attendance)",
+            "Marketplace or directory (e.g., tutors, local services, listings)",
+            "Community or content site (e.g., blog, forum, portfolio)",
+            "Internal business tool (e.g., inventory, staff requests)"
+          ],
+          "other": true
+        },
+        {
+          "id": "how_you_will_know_it_is_working",
+          "type": "paragraph",
+          "required": false,
+          "title": "How you will know it is working",
+          "help": "Name one or two results you could actually measure.\nExample: Within 3 months, 60% of bookings come through the app and missed appointments drop by a third."
+        }
+      ]
+    },
+    {
+      "title": "Front End — Look and Feel",
+      "nav": "Front End: Look & Feel",
+      "intro": "The front end is everything a person sees and touches. Think of it as the dining room of a restaurant. This part is about how it looks. The next part is about the screens and what is on them.",
+      "questions": [
+        {
+          "id": "front_end_look_and_feel",
+          "type": "choice",
+          "required": true,
+          "title": "Front end: Look and feel",
+          "help": "Which style fits best?\nExample: GlowBook is 'Elegant and premium'.",
+          "choices": [
+            "Clean and minimal",
+            "Friendly and colorful",
+            "Professional and corporate",
+            "Bold and modern (dark theme)",
+            "Elegant and premium",
+            "Let the AI choose"
+          ],
+          "other": true
+        },
+        {
+          "id": "front_end_color_theme",
+          "type": "choice",
+          "required": true,
+          "title": "Front end: Color theme",
+          "help": "Pick the palette that fits your brand. The two swatches show the main color and the accent color. Choose 'Other' to describe your own, or use the custom colors question below for exact values.\nExample: GlowBook uses 'Rose pink'.",
+          "choices": [
+            "Fresh green (primary #1F8756, accent #C9A86A)",
+            "Ocean blue (primary #1D4ED8, accent #38BDF8)",
+            "Sunset orange (primary #EA580C, accent #FBBF24)",
+            "Royal purple (primary #6D28D9, accent #C084FC)",
+            "Rose pink (primary #BE185D, accent #F9A8D4)",
+            "Slate and steel (primary #334155, accent #94A3B8)",
+            "Black and white (primary #111827, accent #6B7280)",
+            "Let the AI choose"
+          ],
+          "other": true,
+          "swatches": [
+            [
+              "#1F8756",
+              "#C9A86A"
+            ],
+            [
+              "#1D4ED8",
+              "#38BDF8"
+            ],
+            [
+              "#EA580C",
+              "#FBBF24"
+            ],
+            [
+              "#6D28D9",
+              "#C084FC"
+            ],
+            [
+              "#BE185D",
+              "#F9A8D4"
+            ],
+            [
+              "#334155",
+              "#94A3B8"
+            ],
+            [
+              "#111827",
+              "#6B7280"
+            ],
+            null
+          ]
+        },
+        {
+          "id": "front_end_custom_colors",
+          "type": "colors",
+          "required": false,
+          "title": "Front end: Custom colors",
+          "help": "Only if you have exact brand colors. Enter hex codes such as #BE185D, or click a swatch to pick one. These override the palette above.\nExample: Primary #BE185D, Accent #D4AF37 (gold), Background #FFF7F9."
+        },
+        {
+          "id": "front_end_light_or_dark_mode",
+          "type": "choice",
+          "required": true,
+          "title": "Front end: Light or dark mode",
+          "help": "Should the app have a light or a dark background?\nExample: GlowBook uses 'Light background'.",
+          "choices": [
+            "Light background",
+            "Dark background",
+            "Both, with a switch to change",
+            "Let the AI choose"
+          ]
+        },
+        {
+          "id": "front_end_font_style",
+          "type": "choice",
+          "required": false,
+          "title": "Front end: Font style",
+          "help": "What kind of lettering suits your brand?\nExample: GlowBook uses 'Classic and elegant (serif headings)'.",
+          "choices": [
+            "Modern and clean (sans-serif)",
+            "Classic and elegant (serif headings)",
+            "Friendly and rounded",
+            "Technical (monospace touches)",
+            "Let the AI choose"
+          ],
+          "other": true
+        },
+        {
+          "id": "front_end_shape_of_buttons_and_cards",
+          "type": "choice",
+          "required": false,
+          "title": "Front end: Shape of buttons and cards",
+          "help": "How rounded should buttons, input boxes and cards be?\nExample: GlowBook uses 'Softly rounded'.",
+          "choices": [
+            "Sharp corners",
+            "Softly rounded (a safe default)",
+            "Fully rounded (pill-shaped buttons)",
+            "Let the AI choose"
+          ]
+        },
+        {
+          "id": "front_end_logo_and_inspiration",
+          "type": "paragraph",
+          "required": false,
+          "title": "Front end: Logo and inspiration",
+          "help": "Do you have a logo, or apps and websites whose look you love? Paste links or describe them.\nExample: Logo is a pink flower (link in Google Drive). Layout similar to Calendly; colors like our Instagram page."
+        },
+        {
+          "id": "front_end_devices",
+          "type": "checkbox",
+          "required": true,
+          "title": "Front end: Devices",
+          "help": "Where will people mostly use the app? Tick all that apply.\nExample: GlowBook customers book on their phones; the owner checks the schedule on a laptop.",
+          "choices": [
+            "Phone (mobile-friendly first)",
+            "Laptop or desktop",
+            "Tablet"
+          ],
+          "other": true
+        },
+        {
+          "id": "front_end_sketch_or_mock_up_link",
+          "type": "text",
+          "required": false,
+          "title": "Front end: Sketch or mock-up link",
+          "help": "If you have a hand-drawn sketch, or a Canva, Figma or Google Drive image, paste the link (set it so anyone with the link can view). No sketch? No problem. Leave this blank."
+        }
+      ]
+    },
+    {
+      "title": "Front End — Screens, Controls and Navigation",
+      "nav": "Front End: Screens",
+      "intro": "List every screen and what is on it. For each control (button, input box, table…), say what happens when the user uses it: nothing, go to another screen, or call the back end (a FastAPI endpoint). This is the most important part of the blueprint. It tells the AI exactly what to build, screen by screen.",
+      "questions": [
+        {
+          "id": "front_end_login_and_accounts",
+          "type": "choice",
+          "required": true,
+          "title": "Front end: Login and accounts",
+          "help": "Do people need an account to use the app? Tip: for version 1, fewer kinds of login means a faster, simpler build.\nExample: GlowBook uses 'different user types', because customers and the owner see different things.",
+          "choices": [
+            "No login. Anyone can use it",
+            "Yes: email and password",
+            "Yes: 'Sign in with Google'",
+            "Yes: and different user types see different things (e.g., customer vs. admin)",
+            "Not sure. Recommend one for me"
+          ]
+        },
+        {
+          "id": "front_end_navigation_style",
+          "type": "choice",
+          "required": true,
+          "title": "Front end: Navigation style",
+          "help": "How will people move around the app?\nExample: GlowBook uses 'Top menu bar'.",
+          "choices": [
+            "Top menu bar",
+            "Side menu",
+            "Bottom tab bar (phone-style)",
+            "Just buttons and links on each screen",
+            "Single page (no navigation)",
+            "Let the AI choose"
+          ],
+          "other": true
+        },
+        {
+          "id": "front_end_most_important_user_journey_step_by_step",
+          "type": "paragraph",
+          "required": true,
+          "title": "Front end: Most important user journey, step by step",
+          "help": "Walk through the single most important thing a user does, one step at a time, from opening the app to finishing.\nExample: Customer opens GlowBook → chooses Haircut → picks stylist Maya → sees free times on Friday → picks 3 pm → enters name and phone → taps Confirm → sees a confirmation and gets an email."
+        },
+        {
+          "id": "front_end_screens_and_controls",
+          "type": "screens",
+          "required": true,
+          "title": "Front end: Screens and controls",
+          "help": "Add one card per screen. Inside each card, add its controls: buttons, input boxes, dropdowns, option buttons, checkboxes, tables and so on. For each control say what it shows or collects, and what happens when it's used. If it calls the back end, give the HTTP method (GET, POST, PUT or DELETE), the endpoint path, the data sent, the data that comes back, and the errors to handle.\nExample: see the worked example below. GlowBook's 'Book' screen has 7 controls.",
+          "exampleTable": {
+            "caption": "See a worked example: GlowBook's 'Book' screen",
+            "columns": [
+              "Control",
+              "Type",
+              "Shows or collects",
+              "What happens"
+            ],
+            "rows": [
+              [
+                "Service",
+                "Dropdown list",
+                "Haircut, Colour, Blow-dry",
+                "Call back end: GET /services (fills the list)"
+              ],
+              [
+                "Stylist",
+                "Option buttons",
+                "Stylists who offer the chosen service",
+                "Call back end: GET /stylists?service_id="
+              ],
+              [
+                "Date",
+                "Date / time picker",
+                "Next 30 days",
+                "Call back end: GET /availability?date= (refreshes the free times)"
+              ],
+              [
+                "Free times",
+                "Table or list",
+                "Columns: time, stylist",
+                "Nothing happens (filled in by the availability call)"
+              ],
+              [
+                "Your details",
+                "Form",
+                "name, phone, email, notes",
+                "Nothing happens (collects data)"
+              ],
+              [
+                "Confirm booking",
+                "Button",
+                "Saves the booking",
+                "Call back end: POST /bookings (sends service, stylist, date, time, name, phone; returns the booking). Errors: 400 time taken, 422 missing phone. Then go to Confirmation."
+              ],
+              [
+                "Back",
+                "Menu or link",
+                "Return to Home",
+                "Go to screen: Home"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "front_end_start_screen",
+          "type": "screenpick",
+          "required": true,
+          "title": "Front end: Start screen",
+          "help": "Which screen appears first when the app opens? Add your screens above, then choose one here.\nExample: Home."
+        },
+        {
+          "id": "front_end_screen_after_login",
+          "type": "screenpick",
+          "required": false,
+          "title": "Front end: Screen after login",
+          "help": "If people log in, which screen do they land on? Skip this if there is no login.\nExample: My bookings (for customers)."
+        },
+        {
+          "id": "front_end_navigation_map_in_words",
+          "type": "paragraph",
+          "required": false,
+          "title": "Front end: Navigation map in words",
+          "help": "Describe how people move between screens, including after login or logout and when something goes wrong.\nExample: Home → Book → Confirmation → My bookings. Owner: Login → Dashboard → Manage services. Logout returns to Home. If a booking fails, stay on Book and show the error."
+        },
+        {
+          "id": "front_end_handy_features",
+          "type": "checkbox",
+          "required": false,
+          "title": "Front end: Handy features",
+          "help": "Tick any features you would like on screen.\nExample: GlowBook would use Calendar view, Notifications or reminders, and Ratings and reviews.",
+          "choices": [
+            "Search",
+            "Filters and sorting (e.g., by price or date)",
+            "Photo or file upload",
+            "Calendar view",
+            "Charts and graphs",
+            "Map or location",
+            "Notifications or reminders",
+            "Ratings and reviews",
+            "Multiple languages",
+            "Dark mode",
+            "Printable receipts or invoices"
+          ],
+          "other": true
+        }
+      ]
+    },
+    {
+      "title": "Back End — Actions, Rules and API",
+      "nav": "Back End",
+      "intro": "The back end is the kitchen: the rules, calculations and automatic actions that run out of sight when someone uses a control. The endpoints you attached to controls are collected into one list below, so you can spot gaps. Then describe the rules the back end must follow.",
+      "questions": [
+        {
+          "id": "back_end_endpoints_collected_from_your_screens",
+          "type": "summary",
+          "required": false,
+          "title": "Back end: Endpoints collected from your screens",
+          "help": "This list builds itself from every control whose action is 'Call the back end'. Use it to spot missing or inconsistent endpoints. Nothing to type here."
+        },
+        {
+          "id": "back_end_extra_endpoints_not_tied_to_a_control",
+          "type": "paragraph",
+          "required": false,
+          "title": "Back end: Extra endpoints not tied to a control",
+          "help": "Any other endpoints the app needs, such as sign-in, admin tasks or reports. Give the method, path and purpose.\nExample: POST /auth/login (check email and password, return a session). GET /reports/weekly (owner revenue totals). DELETE /bookings/{id} (cancel a booking)."
+        },
+        {
+          "id": "back_end_actions_the_app_must_perform",
+          "type": "paragraph",
+          "required": true,
+          "title": "Back end: Actions the app must perform",
+          "help": "List what the app must do behind the scenes. Start each item with a verb.\nExample: Check the chosen time is free. Save the booking. Email a confirmation. Send a reminder 24 hours before. Let the owner block days off."
+        },
+        {
+          "id": "back_end_business_rules_and_calculations",
+          "type": "paragraph",
+          "required": true,
+          "title": "Back end: Business rules and calculations",
+          "help": "What rules must the app always follow? Include limits, prices, automatic calculations and 'never allow' situations.\nExample: A stylist can't have two bookings at the same time. Bookings need 2 hours' notice. First-time customers get 10% off. Cancellations are free up to 24 hours before. Total price = service price minus discount."
+        },
+        {
+          "id": "back_end_error_situations_and_messages",
+          "type": "paragraph",
+          "required": false,
+          "title": "Back end: Error situations and messages",
+          "help": "List situations where the back end should say no. Give the status code (400, 404, 422 …) and the message users should see.\nExample: Time already booked → 400 'That time was just taken. Please pick another.' Unknown booking id → 404 'Booking not found.' Missing phone number → 422 'Please enter your phone number.'"
+        },
+        {
+          "id": "back_end_user_types_and_what_each_can_do",
+          "type": "paragraph",
+          "required": false,
+          "title": "Back end: User types and what each can do",
+          "help": "For each type of user, say what they can and can't do. Skip this if everyone has the same access.\nExample: Customer: book and cancel their own bookings only. Staff: see their own schedule and mark visits done. Owner: everything, including prices and reports."
+        },
+        {
+          "id": "back_end_messages_and_notifications",
+          "type": "checkbox",
+          "required": false,
+          "title": "Back end: Messages and notifications",
+          "help": "How should the app contact people?\nExample: GlowBook sends an email confirmation and a text-message reminder.",
+          "choices": [
+            "Email",
+            "Text message (SMS)",
+            "WhatsApp",
+            "Notifications inside the app",
+            "None"
+          ],
+          "other": true
+        },
+        {
+          "id": "back_end_payments",
+          "type": "choice",
+          "required": true,
+          "title": "Back end: Payments",
+          "help": "Will the app handle money?\nExample: GlowBook starts with 'Only record payments made in person'.",
+          "choices": [
+            "No payments",
+            "Yes: one-time online payments (e.g., pay for a booking)",
+            "Yes: subscriptions or memberships",
+            "Only record payments made in person",
+            "Maybe later"
+          ]
+        },
+        {
+          "id": "back_end_other_services_to_connect",
+          "type": "checkbox",
+          "required": false,
+          "title": "Back end: Other services to connect",
+          "help": "Should the app connect to other services? Optional for version 1. You'll add AI features in later weeks.\nExample: GlowBook connects to Google Calendar and an email service.",
+          "choices": [
+            "Google Maps or location",
+            "Google Calendar",
+            "Email service",
+            "Text-message or WhatsApp provider",
+            "Payment provider (e.g., Stripe, Razorpay, PayPal)",
+            "AI features (e.g., a chatbot or text summaries)",
+            "Spreadsheet import or export",
+            "None"
+          ],
+          "other": true
+        },
+        {
+          "id": "back_end_sensitive_information_handled",
+          "type": "checkbox",
+          "required": true,
+          "title": "Back end: Sensitive information handled",
+          "help": "What sensitive information will the app hold? This tells the AI which protections to build in. If you take card payments, the app should use a payment provider rather than storing card numbers itself.\nExample: GlowBook holds names, phone numbers, emails and login passwords.",
+          "choices": [
+            "Names and contact details",
+            "Passwords (login accounts)",
+            "Payment or card details",
+            "Health information",
+            "Children's information",
+            "ID numbers (e.g., national ID)",
+            "None of these"
+          ]
+        },
+        {
+          "id": "back_end_expected_number_of_users",
+          "type": "choice",
+          "required": true,
+          "title": "Back end: Expected number of users",
+          "help": "How many people do you expect in the first 3 months?\nExample: GlowBook is 'Small group (up to 50)'.",
+          "choices": [
+            "Just me, or a demo (1–5 people)",
+            "Small group (up to 50)",
+            "A community (up to 500)",
+            "Thousands or more"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Database — What the App Stores",
+      "nav": "Database",
+      "intro": "The database is the app's memory: a set of tables, like organized spreadsheets, and the restaurant's pantry. Each kind of thing the app remembers (customers, bookings…) gets its own table, and each detail about it (name, date…) is a field, which is a column.",
+      "questions": [
+        {
+          "id": "database_tables_and_fields",
+          "type": "tables",
+          "required": true,
+          "title": "Database: Tables and fields",
+          "help": "Add a table for each kind of thing the app stores, then list its fields. Every table automatically gets an ID and a created date, so don't list those. To connect two tables, choose 'Link to another table' as the field type and pick the table it points to. Think about the data your screens show and collect.\nExample: see the worked example below. GlowBook has five tables: Customers, Stylists, Services, Bookings, Reviews.",
+          "exampleTable": {
+            "caption": "See a worked example: GlowBook's 'Bookings' table",
+            "columns": [
+              "Field",
+              "Type",
+              "Required?",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "customer",
+                "Link to another table (Customers)",
+                "Yes",
+                "Who booked"
+              ],
+              [
+                "stylist",
+                "Link to another table (Stylists)",
+                "Yes",
+                ""
+              ],
+              [
+                "service",
+                "Link to another table (Services)",
+                "Yes",
+                ""
+              ],
+              [
+                "date",
+                "Date",
+                "Yes",
+                "Not in the past"
+              ],
+              [
+                "start_time",
+                "Time",
+                "Yes",
+                "On the half hour"
+              ],
+              [
+                "status",
+                "Choice from a list",
+                "Yes",
+                "booked / cancelled / done (default: booked)"
+              ],
+              [
+                "notes",
+                "Long text",
+                "No",
+                ""
+              ]
+            ]
+          }
+        },
+        {
+          "id": "database_how_the_tables_connect_in_words",
+          "type": "paragraph",
+          "required": false,
+          "title": "Database: How the tables connect, in words",
+          "help": "Say in plain sentences how the tables are linked.\nExample: One customer can have many bookings. Each booking is for exactly one stylist and one service. A stylist can offer many services."
+        },
+        {
+          "id": "database_three_sample_records",
+          "type": "paragraph",
+          "required": true,
+          "title": "Database: Three sample records",
+          "help": "Give 3 realistic example records for your most important table. The AI will use them to fill the app with demo data.\nExample (Bookings): Priya S., Haircut, Maya, Fri 12 Sep, 3:00 pm, booked. | Tom L., Colour, Ana, Sat 13 Sep, 10:30 am, done. | Neha R., Blow-dry, Maya, Sat 13 Sep, 1:00 pm, cancelled."
+        },
+        {
+          "id": "database_how_long_to_keep_information",
+          "type": "choice",
+          "required": false,
+          "title": "Database: How long to keep information",
+          "help": "What should happen to old information?\nExample: GlowBook keeps bookings for 2 years, then deletes them.",
+          "choices": [
+            "Keep everything forever",
+            "Keep for a set time, then delete (tell us how long)",
+            "Users can delete their own data",
+            "Not sure. Recommend one for me"
+          ],
+          "other": true
+        },
+        {
+          "id": "database_files_and_photos",
+          "type": "checkbox",
+          "required": false,
+          "title": "Database: Files and photos",
+          "help": "Will the app store files?\nExample: GlowBook lets stylists upload photos of their work.",
+          "choices": [
+            "Photos (e.g., product or profile pictures)",
+            "Documents (PDF, Word)",
+            "Nothing. Just text and numbers"
+          ],
+          "other": true
+        },
+        {
+          "id": "database_reports_and_downloads",
+          "type": "checkbox",
+          "required": false,
+          "title": "Database: Reports and downloads",
+          "help": "What summaries should owners be able to see or download?\nExample: The GlowBook owner sees today's bookings and weekly revenue on a dashboard.",
+          "choices": [
+            "On-screen dashboard with totals and charts",
+            "Download to Excel or CSV",
+            "Printable PDF (invoices, receipts)",
+            "Weekly summary by email",
+            "None"
+          ],
+          "other": true
+        }
+      ]
+    },
+    {
+      "title": "Scope and Build Preferences",
+      "nav": "Scope & Build",
+      "intro": "Now decide what goes into version 1. A small app that works beats a big app that doesn't. Saying what to leave out is just as valuable as listing what to include.",
+      "questions": [
+        {
+          "id": "scope_must_have_features_for_version_1_maximum_3",
+          "type": "paragraph",
+          "required": true,
+          "title": "Scope: Must-have features for version 1 (maximum 3)",
+          "help": "If you could launch with only 3 features, which would they be?\nExample: 1) Customers book a slot. 2) Owner sees a daily schedule. 3) Email confirmation."
+        },
+        {
+          "id": "scope_nice_to_have_features_for_later",
+          "type": "paragraph",
+          "required": false,
+          "title": "Scope: Nice-to-have features for later",
+          "help": "Example: Online payment, loyalty points, WhatsApp reminders."
+        },
+        {
+          "id": "scope_what_the_app_should_not_do",
+          "type": "paragraph",
+          "required": false,
+          "title": "Scope: What the app should NOT do",
+          "help": "List anything to leave out so version 1 stays simple.\nExample: No online payments yet. No support for multiple salon branches."
+        },
+        {
+          "id": "build_technology_preference",
+          "type": "choice",
+          "required": true,
+          "title": "Build: Technology preference",
+          "help": "Which technology should the AI use? If unsure, pick the first option. It's what we practice in class, runs on your laptop, and is easiest for you to read and change.",
+          "choices": [
+            "Our class stack: Python (FastAPI) back end + plain HTML and JavaScript front end (recommended)",
+            "Python (FastAPI) back end + React front end",
+            "No preference. Let the AI choose"
+          ],
+          "other": true
+        },
+        {
+          "id": "build_database_preference",
+          "type": "choice",
+          "required": true,
+          "title": "Build: Database preference",
+          "help": "Heads-up: in Week 2 your app goes online, and a laptop-only database may need to be swapped for an online one at that point. Ask the AI to keep this easy to change.",
+          "choices": [
+            "Simple starter database that lives on my laptop (e.g., SQLite): easiest to begin",
+            "Online database that also works when the app goes live (e.g., PostgreSQL)",
+            "No preference. Let the AI choose"
+          ],
+          "other": true
+        },
+        {
+          "id": "build_where_the_app_should_run",
+          "type": "choice",
+          "required": true,
+          "title": "Build: Where the app should run",
+          "help": "Where should the finished app run?",
+          "choices": [
+            "On my laptop for now. We'll put it online in Week 2 (recommended)",
+            "Online from the start",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "build_similar_apps_for_inspiration",
+          "type": "paragraph",
+          "required": false,
+          "title": "Build: Similar apps for inspiration",
+          "help": "Name 1–3 existing apps or websites similar to yours, and what you would do differently.\nExample: Fresha and Calendly. Ours is simpler and built for one salon."
+        },
+        {
+          "id": "build_anything_else_the_ai_should_know",
+          "type": "paragraph",
+          "required": false,
+          "title": "Build: Anything else the AI should know",
+          "help": "Anything that didn't fit above: preferences, constraints, deadlines, special requests."
+        }
+      ]
+    },
+    {
+      "title": "Final Check",
+      "nav": "Final Check",
+      "intro": "One last look before you finish. Your answers become the blueprint an AI coding assistant will build from. It can only build what you've clearly described.",
+      "questions": [
+        {
+          "id": "final_check_blueprint_check",
+          "type": "check",
+          "required": false,
+          "title": "Final check: Blueprint check",
+          "help": "An automatic check of your screens, controls, tables and colors. Nothing here stops you from saving, but fixing these makes the AI's job much easier."
+        },
+        {
+          "id": "final_check_answers_are_specific",
+          "type": "checkbox",
+          "required": true,
+          "title": "Final check: Answers are specific",
+          "help": "Tick to confirm.",
+          "choices": [
+            "I replaced the examples with my own real names, numbers and details, and a stranger could build my app from these answers."
+          ]
+        },
+        {
+          "id": "final_check_how_clear_does_the_idea_feel_right_now",
+          "type": "scale",
+          "required": false,
+          "title": "Final check: How clear does the idea feel right now?",
+          "help": "This helps your instructor know where to offer extra support.",
+          "low": 1,
+          "high": 5,
+          "lowLabel": "Still foggy",
+          "highLabel": "Crystal clear"
+        }
+      ]
+    }
+  ]
+}</script>
+<script>
+(function () {
+  "use strict";
+  var FILE_TYPE = "app-idea-blueprint";
+  var FILE_VERSION = 2;
+  var DATA = JSON.parse(document.getElementById("questionnaire-data").textContent);
+
+  var CONTROL_TYPES = [
+    ["button", "Button"], ["text_input", "Text input box"], ["number_input", "Number input box"], ["date_picker", "Date / time picker"],
+    ["dropdown", "Dropdown list"], ["option_buttons", "Option buttons (choose one)"], ["checkboxes", "Checkboxes (choose several)"],
+    ["toggle", "On/off switch"], ["table", "Table or list"], ["search_box", "Search box"], ["label_text", "Text or heading"],
+    ["image", "Image or icon"], ["menu_link", "Menu or link"], ["file_upload", "File or photo upload"], ["chart", "Chart or graph"],
+    ["form", "Form (a group of inputs)"], ["other", "Other"]
+  ];
+  var CONTROL_HINTS = {
+    button: "What it triggers, e.g., saves the booking", text_input: "What the user types, e.g., name (required, max 50 characters)",
+    number_input: "Number collected, e.g., guests (1 to 10)", date_picker: "Date or time collected, e.g., appointment date (future dates only)",
+    dropdown: "The list items, e.g., Haircut, Colour, Blow-dry (or where they come from)", option_buttons: "The options, e.g., Morning / Afternoon / Evening",
+    checkboxes: "The options, e.g., Add hair wash, Add styling", toggle: "What it switches, e.g., email reminders on or off",
+    table: "Columns shown, e.g., date, time, service, status", search_box: "What it searches, e.g., customers by name or phone",
+    label_text: "The text or data shown, e.g., 'Today's bookings: 12'", image: "Which image, e.g., stylist photo",
+    menu_link: "Menu items and where they lead", file_upload: "What is uploaded, e.g., profile photo (JPG or PNG, max 5 MB)",
+    chart: "What is plotted, e.g., revenue per week (bar chart)", form: "Which inputs it groups, e.g., name, phone, notes",
+    other: "Describe what it shows or collects"
+  };
+  var ACTIONS = [
+    ["display_only", "Nothing happens (just shows or collects data)"], ["go_to_screen", "Go to another screen"],
+    ["call_api", "Call the back end (a FastAPI endpoint)"], ["update_this_screen", "Change this screen (show/hide, filter, sort...)"],
+    ["other", "Something else"]
+  ];
+  var METHODS = ["GET", "POST", "PUT", "DELETE"];
+  var FIELD_TYPES = [
+    ["text", "Short text"], ["long_text", "Long text"], ["whole_number", "Whole number"], ["decimal_number", "Decimal number"],
+    ["money", "Money amount"], ["date", "Date"], ["time", "Time"], ["date_time", "Date and time"], ["yes_no", "Yes / No"],
+    ["choice_list", "Choice from a list (put the options in Notes)"], ["email", "Email address"], ["phone", "Phone number"],
+    ["url", "Web link (URL)"], ["file_or_photo", "File or photo"], ["link_to_table", "Link to another table"]
+  ];
+  var HEX = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i;
+
+  function $(id) { return document.getElementById(id); }
+  function el(tag, props, children) {
+    var n = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) {
+      if (k === "class") n.className = props[k];
+      else if (k === "text") n.textContent = props[k];
+      else n.setAttribute(k, props[k]);
+    });
+    (children || []).forEach(function (c) { if (c) n.appendChild(c); });
+    return n;
+  }
+  function nn(s) { s = (s == null ? "" : String(s)).trim(); return s === "" ? null : s; }
+  function optionEl(value, text) { var o = document.createElement("option"); o.value = value; o.textContent = text; return o; }
+  function selectFrom(k, pairs) {
+    var s = el("select", { "data-k": k });
+    pairs.forEach(function (p) { s.appendChild(optionEl(p[0], p[1])); });
+    return s;
+  }
+  function textIn(k, placeholder) { return el("input", { type: "text", "data-k": k, placeholder: placeholder || "", autocomplete: "off" }); }
+  function labeled(label, node, cls) { return el("label", { class: "f" + (cls ? " " + cls : "") }, [el("span", { class: "lbl", text: label }), node]); }
+  function get(root, k) { var n = root.querySelector('[data-k="' + k + '"]'); return n ? n : null; }
+  function val(root, k) { var n = get(root, k); return n ? n.value : ""; }
+
+  // ---------------------------------------------------------------- shared list plumbing
+  function changed() { markDirty(); }
+  function moveNode(node, dir) {
+    var p = node.parentNode;
+    if (dir < 0 && node.previousElementSibling) p.insertBefore(node, node.previousElementSibling);
+    else if (dir > 0 && node.nextElementSibling) p.insertBefore(node.nextElementSibling, node);
+    refreshRefs(); changed();
+  }
+  function removeNode(node, what) {
+    var parent = node.parentNode, next = node.nextSibling;
+    parent.removeChild(node);
+    refreshRefs(); changed();
+    toast("Removed " + what + ".", { ms: 9000, action: { label: "Undo", fn: function () {
+      parent.insertBefore(node, next); refreshRefs(); changed();
+    } } });
+  }
+  function cardHead(node, whatFn) {
+    var title = el("span", { class: "card-title" });
+    var up = el("button", { type: "button", class: "icon-btn", "aria-label": "Move up", title: "Move up", text: "↑" });
+    var down = el("button", { type: "button", class: "icon-btn", "aria-label": "Move down", title: "Move down", text: "↓" });
+    var del = el("button", { type: "button", class: "icon-btn del", "aria-label": "Remove", title: "Remove", text: "✕" });
+    up.addEventListener("click", function () { moveNode(node, -1); });
+    down.addEventListener("click", function () { moveNode(node, 1); });
+    del.addEventListener("click", function () { removeNode(node, whatFn()); });
+    return { root: el("div", { class: "card-head" }, [title, up, down, del]), title: title };
+  }
+
+  // names used by "pick a screen" / "pick a table" selects
+  function screenNames() { return uniq(Array.prototype.map.call(document.querySelectorAll('.screen > .screen-body [data-k="screen_name"]'), function (n) { return n.value.trim(); })); }
+  function tableNames() { return uniq(Array.prototype.map.call(document.querySelectorAll('.tbl > .tbl-body [data-k="table_name"]'), function (n) { return n.value.trim(); })); }
+  function uniq(a) { var seen = {}, out = []; a.forEach(function (x) { if (x && !seen[x]) { seen[x] = 1; out.push(x); } }); return out; }
+  function fillSelect(sel, names, blank, keep) {
+    var cur = keep != null ? keep : sel.value;
+    sel.innerHTML = "";
+    sel.appendChild(optionEl("", blank));
+    names.forEach(function (n) { sel.appendChild(optionEl(n, n)); });
+    if (cur && names.indexOf(cur) === -1) sel.appendChild(optionEl(cur, cur + "  (not in your list)"));
+    sel.value = cur || "";
+  }
+  function refreshRefs() {
+    var sn = screenNames(), tn = tableNames();
+    Array.prototype.forEach.call(document.querySelectorAll("select[data-screenref]"), function (s) { fillSelect(s, sn, s.getAttribute("data-blank") || "Choose a screen..."); });
+    Array.prototype.forEach.call(document.querySelectorAll("select[data-tableref]"), function (s) { fillSelect(s, tn, "Choose a table..."); });
+  }
+
+  // ---------------------------------------------------------------- example table
+  function exampleBlock(ex) {
+    var d = el("details", { class: "ex-details" });
+    d.appendChild(el("summary", { text: ex.caption }));
+    var t = el("table", { class: "ex" });
+    t.appendChild(el("thead", {}, [el("tr", {}, ex.columns.map(function (c) { return el("th", { text: c }); }))]));
+    t.appendChild(el("tbody", {}, ex.rows.map(function (r) { return el("tr", {}, r.map(function (c) { return el("td", { text: c }); })); })));
+    d.appendChild(el("div", { class: "tablewrap" }, [t]));
+    return d;
+  }
+
+  // ---------------------------------------------------------------- SCREENS builder
+  function buildScreensBuilder(q) {
+    var root = el("div", { class: "builder" });
+    var hint = el("div", { class: "empty-hint", text: "No screens yet. Add your first screen (for example: Home)." });
+    var list = el("div", { class: "cards" });
+    var add = el("button", { type: "button", class: "btn add", text: "+ Add screen" });
+    root.appendChild(hint); root.appendChild(list); root.appendChild(add);
+
+    function syncHint() { hint.hidden = list.children.length > 0; }
+
+    function newControl(ctlList) {
+      var row = el("div", { class: "ctl" });
+      var head = cardHead(row, function () { return "control " + (val(row, "label") ? "'" + val(row, "label") + "'" : ""); });
+      row.appendChild(head.root);
+      var type = selectFrom("type", CONTROL_TYPES);
+      var label = textIn("label", "Label on screen, e.g., Confirm booking");
+      var shows = textIn("shows", CONTROL_HINTS.button);
+      var action = selectFrom("action", ACTIONS);
+      row.appendChild(el("div", { class: "grid3" }, [labeled("Control type", type), labeled("Label or name", label), labeled("What it shows or collects", shows)]));
+      row.appendChild(el("div", { style: "margin-top:10px" }, [labeled("What happens when the user uses it", action)]));
+
+      var goto = el("select", { "data-k": "goto", "data-screenref": "1", "data-blank": "Choose a screen..." });
+      var condGo = el("div", { class: "cond", hidden: "" }, [labeled("Go to this screen", goto)]);
+
+      var method = selectFrom("method", [["", "Method..."]].concat(METHODS.map(function (m) { return [m, m]; })));
+      var path = textIn("path", "/bookings  or  /bookings/{id}");
+      var sends = textIn("sends", "e.g., service_id, stylist_id, date, time, customer_name");
+      var returns = textIn("returns", "e.g., the saved booking, including its id");
+      var errors = textIn("errors", "e.g., 400 time already taken: show 'Please pick another time'; 422 missing phone: highlight the field");
+      var then = el("select", { "data-k": "then", "data-screenref": "1", "data-blank": "Stay on this screen" });
+      var condApi = el("div", { class: "cond", hidden: "" }, [
+        el("div", { class: "grid2" }, [labeled("HTTP method", method), labeled("Endpoint path", path)]),
+        el("div", { class: "grid2", style: "margin-top:10px" }, [labeled("Data sent to the back end", sends), labeled("Data that comes back", returns)]),
+        el("div", { class: "grid2", style: "margin-top:10px" }, [labeled("Errors and what the screen shows", errors), labeled("After success, go to", then)])
+      ]);
+      row.appendChild(condGo); row.appendChild(condApi);
+
+      function syncCond() {
+        condGo.hidden = action.value !== "go_to_screen";
+        condApi.hidden = action.value !== "call_api";
+      }
+      action.addEventListener("change", syncCond);
+      type.addEventListener("change", function () { shows.placeholder = CONTROL_HINTS[type.value] || ""; });
+      path.addEventListener("input", function () { path.classList.toggle("invalid", path.value.trim() !== "" && path.value.trim().charAt(0) !== "/"); });
+      row.__sync = syncCond;
+      ctlList.appendChild(row);
+      refreshRefs();
+      return row;
+    }
+
+    function readControl(row) {
+      var o = { type: val(row, "type"), label: nn(val(row, "label")), shows_or_collects: nn(val(row, "shows")), action: val(row, "action") };
+      if (o.action === "go_to_screen") o.goes_to_screen = nn(val(row, "goto"));
+      if (o.action === "call_api") {
+        o.api_method = nn(val(row, "method")); o.api_path = nn(val(row, "path"));
+        o.api_sends = nn(val(row, "sends")); o.api_returns = nn(val(row, "returns")); o.api_errors = nn(val(row, "errors"));
+        o.then_go_to_screen = nn(val(row, "then"));
+      }
+      return o;
+    }
+    function writeControl(row, c) {
+      get(row, "type").value = CONTROL_TYPES.some(function (t) { return t[0] === c.type; }) ? c.type : "other";
+      get(row, "shows").placeholder = CONTROL_HINTS[get(row, "type").value] || "";
+      get(row, "label").value = c.label || "";
+      get(row, "shows").value = c.shows_or_collects || "";
+      get(row, "action").value = ACTIONS.some(function (a) { return a[0] === c.action; }) ? c.action : "display_only";
+      get(row, "method").value = METHODS.indexOf(c.api_method) !== -1 ? c.api_method : "";
+      get(row, "path").value = c.api_path || "";
+      get(row, "sends").value = c.api_sends || "";
+      get(row, "returns").value = c.api_returns || "";
+      get(row, "errors").value = c.api_errors || "";
+      get(row, "path").classList.toggle("invalid", !!c.api_path && String(c.api_path).charAt(0) !== "/");
+      row.__pending = { goto: c.goes_to_screen || "", then: c.then_go_to_screen || "" };
+      row.__sync();
+    }
+
+    function newScreen() {
+      var card = el("div", { class: "card screen" });
+      var head = cardHead(card, function () { return "screen " + (val(card, "screen_name") ? "'" + val(card, "screen_name") + "'" : ""); });
+      card.appendChild(head.root);
+      var body = el("div", { class: "screen-body" });
+      var name = textIn("screen_name", "e.g., Book");
+      var purpose = textIn("purpose", "What the user does here, e.g., pick a service and time, then confirm");
+      var who = textIn("who", "Who can open it, e.g., logged-in customers");
+      body.appendChild(el("div", { class: "grid3" }, [labeled("Screen name", name), labeled("Purpose", purpose), labeled("Who can see it", who)]));
+      body.appendChild(el("div", { class: "sub-title", text: "Controls on this screen" }));
+      var ctlList = el("div", { class: "ctl-list" });
+      var addCtl = el("button", { type: "button", class: "btn add small", text: "+ Add control" });
+      addCtl.addEventListener("click", function () { newControl(ctlList); changed(); });
+      body.appendChild(ctlList); body.appendChild(addCtl);
+      card.appendChild(body);
+      card.__head = head; card.__ctlList = ctlList;
+      list.appendChild(card);
+      syncHint();
+      return card;
+    }
+    add.addEventListener("click", function () {
+      var c = newScreen(); refreshRefs(); changed();
+      var n = get(c, "screen_name"); if (n) n.focus();
+    });
+
+    function read() {
+      return Array.prototype.map.call(list.children, function (card) {
+        return {
+          name: nn(val(card, "screen_name")), purpose: nn(val(card, "purpose")), who_can_see: nn(val(card, "who")),
+          controls: Array.prototype.map.call(card.__ctlList.children, readControl)
+        };
+      });
+    }
+    function write(v) {
+      list.innerHTML = "";
+      (Array.isArray(v) ? v : []).forEach(function (s) {
+        var card = newScreen();
+        get(card, "screen_name").value = s.name || "";
+        get(card, "purpose").value = s.purpose || "";
+        get(card, "who").value = s.who_can_see || "";
+        (Array.isArray(s.controls) ? s.controls : []).forEach(function (c) { writeControl(newControl(card.__ctlList), c || {}); });
+      });
+      syncHint();
+      refreshRefs();
+      // restore chosen target screens now that every screen name exists
+      Array.prototype.forEach.call(list.querySelectorAll(".ctl"), function (row) {
+        if (!row.__pending) return;
+        fillSelect(get(row, "goto"), screenNames(), "Choose a screen...", row.__pending.goto);
+        fillSelect(get(row, "then"), screenNames(), "Stay on this screen", row.__pending.then);
+        row.__pending = null;
+      });
+    }
+    function updateTitles() {
+      Array.prototype.forEach.call(list.children, function (card, i) {
+        var n = val(card, "screen_name").trim();
+        var count = card.__ctlList.children.length;
+        card.__head.title.textContent = "Screen " + (i + 1) + ": " + (n || "(unnamed)") + "  ·  " + count + " control" + (count === 1 ? "" : "s");
+        Array.prototype.forEach.call(card.__ctlList.children, function (row, j) {
+          var lab = val(row, "label").trim();
+          var tl = CONTROL_TYPES.filter(function (t) { return t[0] === val(row, "type"); })[0];
+          row.querySelector(".card-title").textContent = "Control " + (j + 1) + ": " + (lab || "(no label)") + "  ·  " + (tl ? tl[1] : "");
+        });
+      });
+    }
+    return { root: root, read: read, write: write, updateTitles: updateTitles };
+  }
+
+  // ---------------------------------------------------------------- TABLES builder
+  function buildTablesBuilder(q) {
+    var root = el("div", { class: "builder" });
+    var hint = el("div", { class: "empty-hint", text: "No tables yet. Add your first table (for example: Bookings)." });
+    var list = el("div", { class: "cards" });
+    var add = el("button", { type: "button", class: "btn add", text: "+ Add table" });
+    root.appendChild(hint); root.appendChild(list); root.appendChild(add);
+    function syncHint() { hint.hidden = list.children.length > 0; }
+
+    function newField(fldList) {
+      var row = el("div", { class: "fld" });
+      var name = textIn("fname", "e.g., start_time");
+      var type = selectFrom("ftype", FIELD_TYPES);
+      var req = el("input", { type: "checkbox", "data-k": "frequired" });
+      var uni = el("input", { type: "checkbox", "data-k": "funique" });
+      var up = el("button", { type: "button", class: "icon-btn", "aria-label": "Move up", title: "Move up", text: "↑" });
+      var down = el("button", { type: "button", class: "icon-btn", "aria-label": "Move down", title: "Move down", text: "↓" });
+      var del = el("button", { type: "button", class: "icon-btn del", "aria-label": "Remove field", title: "Remove field", text: "✕" });
+      up.addEventListener("click", function () { moveNode(row, -1); });
+      down.addEventListener("click", function () { moveNode(row, 1); });
+      del.addEventListener("click", function () { removeNode(row, "field" + (name.value.trim() ? " '" + name.value.trim() + "'" : "")); });
+      row.appendChild(el("div", { class: "fld-top" }, [
+        labeled("Field name", name), labeled("Type", type),
+        el("label", { class: "chk" }, [req, document.createTextNode("Required")]),
+        el("label", { class: "chk" }, [uni, document.createTextNode("Unique")]),
+        el("div", { class: "fld-actions" }, [up, down, del])
+      ]));
+      var link = el("select", { "data-k": "flink", "data-tableref": "1" });
+      var linkWrap = labeled("Links to table", link);
+      var notes = textIn("fnotes", "Notes or example values, e.g., booked / cancelled / done (default: booked)");
+      var bottom = el("div", { class: "fld-bottom no-link" }, [linkWrap, labeled("Notes", notes)]);
+      linkWrap.hidden = true;
+      row.appendChild(bottom);
+      function sync() { var isLink = type.value === "link_to_table"; linkWrap.hidden = !isLink; bottom.className = "fld-bottom" + (isLink ? "" : " no-link"); }
+      type.addEventListener("change", sync);
+      row.__sync = sync;
+      fldList.appendChild(row);
+      refreshRefs();
+      return row;
+    }
+    function newTable() {
+      var card = el("div", { class: "card tbl" });
+      var head = cardHead(card, function () { return "table " + (val(card, "table_name") ? "'" + val(card, "table_name") + "'" : ""); });
+      card.appendChild(head.root);
+      var body = el("div", { class: "tbl-body" });
+      var name = textIn("table_name", "e.g., Bookings");
+      var purpose = textIn("tpurpose", "What one row represents, e.g., one appointment");
+      body.appendChild(el("div", { class: "grid2" }, [labeled("Table name", name), labeled("What one row represents", purpose)]));
+      body.appendChild(el("div", { class: "sub-title", text: "Fields (columns)" }));
+      var fldList = el("div", { class: "fld-list" });
+      var addFld = el("button", { type: "button", class: "btn add small", text: "+ Add field" });
+      addFld.addEventListener("click", function () { var r = newField(fldList); changed(); get(r, "fname").focus(); });
+      body.appendChild(fldList); body.appendChild(addFld);
+      card.appendChild(body);
+      card.__head = head; card.__fldList = fldList;
+      list.appendChild(card);
+      syncHint();
+      return card;
+    }
+    add.addEventListener("click", function () {
+      var c = newTable(); refreshRefs(); changed();
+      get(c, "table_name").focus();
+    });
+
+    function readField(row) {
+      var o = { name: nn(val(row, "fname")), type: val(row, "ftype"), required: get(row, "frequired").checked, unique: get(row, "funique").checked, notes: nn(val(row, "fnotes")) };
+      if (o.type === "link_to_table") o.links_to = nn(val(row, "flink"));
+      return o;
+    }
+    function read() {
+      return Array.prototype.map.call(list.children, function (card) {
+        return { name: nn(val(card, "table_name")), purpose: nn(val(card, "tpurpose")), fields: Array.prototype.map.call(card.__fldList.children, readField) };
+      });
+    }
+    function write(v) {
+      list.innerHTML = "";
+      var pendingLinks = [];
+      (Array.isArray(v) ? v : []).forEach(function (t) {
+        var card = newTable();
+        get(card, "table_name").value = t.name || "";
+        get(card, "tpurpose").value = t.purpose || "";
+        (Array.isArray(t.fields) ? t.fields : []).forEach(function (f) {
+          f = f || {};
+          var row = newField(card.__fldList);
+          get(row, "fname").value = f.name || "";
+          get(row, "ftype").value = FIELD_TYPES.some(function (x) { return x[0] === f.type; }) ? f.type : "text";
+          get(row, "frequired").checked = !!f.required;
+          get(row, "funique").checked = !!f.unique;
+          get(row, "fnotes").value = f.notes || "";
+          row.__sync();
+          pendingLinks.push([get(row, "flink"), f.links_to || ""]);
+        });
+      });
+      syncHint();
+      refreshRefs();
+      pendingLinks.forEach(function (p) { fillSelect(p[0], tableNames(), "Choose a table...", p[1]); });
+    }
+    function updateTitles() {
+      Array.prototype.forEach.call(list.children, function (card, i) {
+        var n = val(card, "table_name").trim(), count = card.__fldList.children.length;
+        card.__head.title.textContent = "Table " + (i + 1) + ": " + (n || "(unnamed)") + "  ·  " + count + " field" + (count === 1 ? "" : "s");
+      });
+    }
+    return { root: root, read: read, write: write, updateTitles: updateTitles };
+  }
+
+  // ---------------------------------------------------------------- build the form
+  var fields = [];        // real questions: { q, section, root, read(), write(v) }
+  var derived = [];       // read-only blocks: { q, update(vals) }
+  var byId = {};
+  var builders = [];
+  var sectionsEl = $("sections");
+  var navEl = $("nav");
+  var navBadges = [];
+
+  document.title = DATA.title + " | GenAI Coaching | GenAI Coaching";
+  $("pageTitle").textContent = DATA.title;
+  $("pillTime").textContent = "⏱ " + (DATA.time || "30–40 minutes");
+  DATA.description.split("\n\n").forEach(function (para) {
+    var list = null, box = $("pageLede");
+    para.split("\n").forEach(function (line) {
+      if (/^•\s/.test(line)) {
+        if (!list) { list = el("ul"); box.appendChild(list); }
+        list.appendChild(el("li", { text: line.replace(/^•\s+/, "") }));
+      } else { box.appendChild(el("p", { text: line })); }
+    });
+  });
+
+  function helpBlock(help) {
+    var box = el("div");
+    (help || "").split("\n").forEach(function (line) {
+      if (!line.trim()) return;
+      var m = line.match(/^(Example[^:]*:)\s*(.*)$/);
+      if (m) {
+        var d = el("div", { class: "example" });
+        d.appendChild(el("b", { text: m[1] + " " }));
+        d.appendChild(document.createTextNode(m[2]));
+        box.appendChild(d);
+      } else { box.appendChild(el("p", { class: "help", text: line })); }
+    });
+    return box;
+  }
+
+  function grow(t) {
+    if (t.tagName !== "TEXTAREA") return;
+    t.style.height = "auto";
+    t.style.height = Math.max(96, t.scrollHeight + 2) + "px";
+  }
+
+  function swatchEl(cols) {
+    return el("span", { class: "sw", "aria-hidden": "true" }, cols.map(function (c) { var i = el("i"); i.style.background = c; return i; }));
+  }
+
+  function buildField(q, section) {
+    var name = "f_" + q.id;
+    var isDerived = q.type === "summary" || q.type === "check";
+    var root = el("fieldset", { class: "q", id: "q-" + q.id });
+    var legend = el("legend", { class: "q-title" });
+    legend.appendChild(document.createTextNode(q.title));
+    legend.appendChild(el("span", { class: "tag " + (isDerived ? "auto" : (q.required ? "req" : "opt")), text: isDerived ? "Automatic" : (q.required ? "Required" : "Optional") }));
+    root.appendChild(legend);
+    root.appendChild(helpBlock(q.help));
+    if (q.exampleTable) root.appendChild(exampleBlock(q.exampleTable));
+    var api = { q: q, section: section, root: root };
+
+    if (q.type === "text" || q.type === "paragraph") {
+      var input = q.type === "text" ? el("input", { type: "text", name: name, "aria-label": q.title, autocomplete: "off" })
+                                    : el("textarea", { name: name, "aria-label": q.title });
+      root.appendChild(input);
+      api.read = function () { var v = input.value.trim(); return v === "" ? null : v; };
+      api.write = function (v) { input.value = v == null ? "" : String(v); grow(input); };
+      if (q.type === "paragraph") input.addEventListener("input", function () { grow(input); });
+    }
+
+    else if (q.type === "choice") {
+      var opts = el("div", { class: "opts", role: "radiogroup" });
+      var radios = q.choices.map(function (c, i) {
+        var r = el("input", { type: "radio", name: name, value: c });
+        var kids = [r];
+        if (q.swatches && q.swatches[i]) kids.push(swatchEl(q.swatches[i]));
+        kids.push(el("span", { text: c }));
+        opts.appendChild(el("label", { class: "opt" }, kids));
+        return r;
+      });
+      var otherRadio = null, otherText = null;
+      if (q.other) {
+        otherRadio = el("input", { type: "radio", name: name, value: "__other__" });
+        otherText = el("input", { type: "text", placeholder: "Other (type here)", "aria-label": q.title + " — other" });
+        otherText.addEventListener("input", function () { otherRadio.checked = true; });
+        opts.appendChild(el("label", { class: "opt other" }, [otherRadio, otherText]));
+      }
+      root.appendChild(opts);
+      api.read = function () {
+        for (var i = 0; i < radios.length; i++) if (radios[i].checked) return radios[i].value;
+        if (otherRadio && otherRadio.checked) { var t = otherText.value.trim(); return t === "" ? null : t; }
+        return null;
+      };
+      api.write = function (v) {
+        radios.forEach(function (r) { r.checked = false; });
+        if (otherRadio) { otherRadio.checked = false; otherText.value = ""; }
+        if (v == null) return;
+        if (Array.isArray(v)) v = v[0];
+        v = String(v);
+        var hit = radios.filter(function (r) { return r.value === v; })[0];
+        if (hit) hit.checked = true;
+        else if (otherRadio) { otherRadio.checked = true; otherText.value = v; }
+      };
+    }
+
+    else if (q.type === "checkbox") {
+      var box = el("div", { class: "opts" });
+      var boxes = q.choices.map(function (c) {
+        var b = el("input", { type: "checkbox", name: name, value: c });
+        box.appendChild(el("label", { class: "opt" }, [b, el("span", { text: c })]));
+        return b;
+      });
+      var otherBox = null, otherTxt = null;
+      if (q.other) {
+        otherBox = el("input", { type: "checkbox", name: name, value: "__other__" });
+        otherTxt = el("input", { type: "text", placeholder: "Other (type here)", "aria-label": q.title + " — other" });
+        otherTxt.addEventListener("input", function () { otherBox.checked = true; });
+        box.appendChild(el("label", { class: "opt other" }, [otherBox, otherTxt]));
+      }
+      root.appendChild(box);
+      api.read = function () {
+        var out = boxes.filter(function (b) { return b.checked; }).map(function (b) { return b.value; });
+        if (otherBox && otherBox.checked && otherTxt.value.trim() !== "") out.push(otherTxt.value.trim());
+        return out;
+      };
+      api.write = function (v) {
+        var arr = v == null ? [] : (Array.isArray(v) ? v.map(String) : [String(v)]);
+        boxes.forEach(function (b) { b.checked = arr.indexOf(b.value) !== -1; });
+        if (otherBox) {
+          var extra = arr.filter(function (x) { return q.choices.indexOf(x) === -1; });
+          otherBox.checked = extra.length > 0;
+          otherTxt.value = extra.join(", ");
+        }
+      };
+    }
+
+    else if (q.type === "scale") {
+      var row = el("div", { class: "scale", role: "radiogroup" });
+      row.appendChild(el("span", { class: "end", text: q.lowLabel || String(q.low) }));
+      var scaleRadios = [];
+      for (var n = q.low; n <= q.high; n++) {
+        var r = el("input", { type: "radio", name: name, value: String(n) });
+        scaleRadios.push(r);
+        row.appendChild(el("label", {}, [r, el("span", { text: String(n) })]));
+      }
+      row.appendChild(el("span", { class: "end", text: q.highLabel || String(q.high) }));
+      root.appendChild(row);
+      api.read = function () {
+        for (var i = 0; i < scaleRadios.length; i++) if (scaleRadios[i].checked) return Number(scaleRadios[i].value);
+        return null;
+      };
+      api.write = function (v) {
+        var s = v == null ? "" : String(v);
+        scaleRadios.forEach(function (r) { r.checked = r.value === s; });
+      };
+    }
+
+    else if (q.type === "colors") {
+      var wrap = el("div", { class: "colors" });
+      var parts = {};
+      [["primary", "Primary color"], ["accent", "Accent color"], ["background", "Background color"]].forEach(function (p) {
+        var picker = el("input", { type: "color", value: "#ffffff", "aria-label": p[1] + " picker" });
+        var hex = el("input", { type: "text", placeholder: "#RRGGBB", maxlength: "7", "aria-label": p[1] + " hex code", autocomplete: "off" });
+        picker.addEventListener("input", function () { hex.value = picker.value.toUpperCase(); hex.classList.remove("invalid"); });
+        hex.addEventListener("input", function () {
+          var t = hex.value.trim();
+          if (t && t.charAt(0) !== "#") { t = "#" + t; hex.value = t; }
+          var ok = HEX.test(t);
+          hex.classList.toggle("invalid", t !== "" && !ok);
+          if (ok) picker.value = t.length === 4 ? "#" + t[1] + t[1] + t[2] + t[2] + t[3] + t[3] : t;
+        });
+        parts[p[0]] = { picker: picker, hex: hex };
+        wrap.appendChild(labeled(p[1], el("div", { class: "colorpick" }, [picker, hex])));
+      });
+      root.appendChild(wrap);
+      api.read = function () {
+        var o = {}, any = false;
+        Object.keys(parts).forEach(function (k) { var t = nn(parts[k].hex.value); o[k] = t ? t.toUpperCase() : null; if (t) any = true; });
+        return any ? o : null;
+      };
+      api.write = function (v) {
+        Object.keys(parts).forEach(function (k) {
+          var t = v && typeof v === "object" && v[k] ? String(v[k]) : "";
+          parts[k].hex.value = t;
+          parts[k].hex.classList.toggle("invalid", t !== "" && !HEX.test(t));
+          if (HEX.test(t)) parts[k].picker.value = t.length === 4 ? "#" + t[1] + t[1] + t[2] + t[2] + t[3] + t[3] : t;
+        });
+      };
+    }
+
+    else if (q.type === "screenpick") {
+      var sel = el("select", { name: name, "data-screenref": "1", "data-blank": "Choose a screen...", "aria-label": q.title });
+      root.appendChild(sel);
+      api.read = function () { return nn(sel.value); };
+      api.write = function (v) { fillSelect(sel, screenNames(), "Choose a screen...", v == null ? "" : String(v)); };
+    }
+
+    else if (q.type === "screens") {
+      var sb = buildScreensBuilder(q);
+      root.appendChild(sb.root); builders.push(sb);
+      api.read = sb.read; api.write = sb.write;
+    }
+
+    else if (q.type === "tables") {
+      var tb = buildTablesBuilder(q);
+      root.appendChild(tb.root); builders.push(tb);
+      api.read = tb.read; api.write = tb.write;
+    }
+
+    else if (isDerived) {
+      var out = el("div", { class: "derived" });
+      root.appendChild(out);
+      api.out = out;
+    }
+    return api;
+  }
+
+  var qTotal = 0;
+  DATA.sections.forEach(function (sec, si) {
+    var part = el("section", { class: "part", id: "sec-" + si });
+    part.appendChild(el("div", { class: "part-label", text: "Section " + (si + 1) + " of " + DATA.sections.length }));
+    part.appendChild(el("h2", { text: sec.title }));
+    part.appendChild(el("p", { class: "part-intro", text: sec.intro }));
+    sec.questions.forEach(function (q) {
+      var f = buildField(q, si);
+      if (q.type === "summary" || q.type === "check") { derived.push(f); }
+      else { fields.push(f); byId[q.id] = f; qTotal++; }
+      part.appendChild(f.root);
+    });
+    sectionsEl.appendChild(part);
+
+    var badge = el("span", { class: "badge" });
+    var link = el("a", { href: "#sec-" + si }, [el("span", { text: sec.nav || sec.title }), badge]);
+    navEl.appendChild(el("li", {}, [link]));
+    navBadges.push({ badge: badge, link: link, target: part, section: si });
+  });
+  var finishLink = el("a", { href: "#finish" }, [el("span", { text: "Save & next steps" })]);
+  navEl.appendChild(el("li", {}, [finishLink]));
+  navBadges.push({ badge: null, link: finishLink, target: $("finish") });
+  $("pillCount").textContent = qTotal + " questions";
+
+  // ---------------------------------------------------------------- derived: endpoints + checks
+  function endpointsFrom(screens) {
+    var map = {}, order = [];
+    (screens || []).forEach(function (s) {
+      (s.controls || []).forEach(function (c) {
+        if (c.action !== "call_api" || !c.api_method || !c.api_path) return;
+        var key = c.api_method + " " + c.api_path;
+        if (!map[key]) { map[key] = { method: c.api_method, path: c.api_path, used_by: [], sends: [], returns: [], errors: [] }; order.push(key); }
+        var e = map[key];
+        e.used_by.push((s.name || "(unnamed screen)") + " › " + (c.label || "(no label)"));
+        if (c.api_sends && e.sends.indexOf(c.api_sends) === -1) e.sends.push(c.api_sends);
+        if (c.api_returns && e.returns.indexOf(c.api_returns) === -1) e.returns.push(c.api_returns);
+        if (c.api_errors && e.errors.indexOf(c.api_errors) === -1) e.errors.push(c.api_errors);
+      });
+    });
+    return order.map(function (k) { return map[k]; });
+  }
+
+  function computeIssues(vals) {
+    var issues = [];
+    var screens = vals.__screens || [], tables = vals.__tables || [];
+    var sNames = uniq(screens.map(function (s) { return s.name; }));
+    var tNames = uniq(tables.map(function (t) { return t.name; }));
+    function dupCheck(list, label) {
+      var count = {};
+      list.forEach(function (n) {
+        if (!n) return;
+        var k = n.toLowerCase();
+        count[k] = (count[k] || 0) + 1;
+        if (count[k] === 2) issues.push("Two " + label + "s are both called '" + n + "'.");
+      });
+    }
+    dupCheck(screens.map(function (s) { return s.name; }), "screen");
+    dupCheck(tables.map(function (t) { return t.name; }), "table");
+    screens.forEach(function (s, i) {
+      var sn = s.name ? "'" + s.name + "'" : "Screen " + (i + 1);
+      if (!s.name) issues.push("Screen " + (i + 1) + " has no name.");
+      if (!s.controls.length) issues.push("Screen " + sn + " has no controls yet.");
+      s.controls.forEach(function (c, j) {
+        var cn = sn + ", " + (c.label ? "control '" + c.label + "'" : "control " + (j + 1));
+        if (!c.label) issues.push(cn + " has no label.");
+        if (c.action === "go_to_screen") {
+          if (!c.goes_to_screen) issues.push(cn + " should go to another screen, but none is chosen.");
+          else if (sNames.indexOf(c.goes_to_screen) === -1) issues.push(cn + " goes to '" + c.goes_to_screen + "', which isn't in your screen list.");
+        }
+        if (c.action === "call_api") {
+          if (!c.api_method) issues.push(cn + " calls the back end but has no HTTP method.");
+          if (!c.api_path) issues.push(cn + " calls the back end but has no endpoint path.");
+          else if (c.api_path.charAt(0) !== "/") issues.push(cn + ": the endpoint path should start with '/'.");
+          if (c.then_go_to_screen && sNames.indexOf(c.then_go_to_screen) === -1) issues.push(cn + " goes to '" + c.then_go_to_screen + "' after success, which isn't in your screen list.");
+        }
+      });
+    });
+    ["front_end_start_screen", "front_end_screen_after_login"].forEach(function (id) {
+      var v = vals[id];
+      if (v && sNames.indexOf(v) === -1) issues.push("'" + v + "' is chosen as a start or login screen but isn't in your screen list.");
+    });
+    tables.forEach(function (t, i) {
+      var tn = t.name ? "'" + t.name + "'" : "Table " + (i + 1);
+      if (!t.name) issues.push("Table " + (i + 1) + " has no name.");
+      if (!t.fields.length) issues.push("Table " + tn + " has no fields yet.");
+      var seen = {};
+      t.fields.forEach(function (f, j) {
+        var fn = tn + ", " + (f.name ? "field '" + f.name + "'" : "field " + (j + 1));
+        if (!f.name) issues.push(fn + " has no name.");
+        else { var k = f.name.toLowerCase(); if (seen[k]) issues.push("Table " + tn + " has two fields called '" + f.name + "'."); seen[k] = 1; }
+        if (f.type === "link_to_table") {
+          if (!f.links_to) issues.push(fn + " links to another table, but none is chosen.");
+          else if (tNames.indexOf(f.links_to) === -1) issues.push(fn + " links to '" + f.links_to + "', which isn't in your table list.");
+        }
+      });
+    });
+    var colors = vals.front_end_custom_colors;
+    if (colors) Object.keys(colors).forEach(function (k) { if (colors[k] && !HEX.test(colors[k])) issues.push("The " + k + " color '" + colors[k] + "' isn't a valid hex code (like #BE185D)."); });
+    return issues;
+  }
+
+  function renderDerived(vals) {
+    var eps = endpointsFrom(vals.__screens);
+    var issues = computeIssues(vals);
+    derived.forEach(function (d) {
+      var out = d.out; out.innerHTML = "";
+      if (d.q.type === "summary") {
+        if (!eps.length) { out.appendChild(el("div", { class: "empty-hint", text: "No endpoints yet. When a control's action is “Call the back end”, its endpoint appears here." })); return; }
+        var t = el("table", { class: "ex" });
+        t.appendChild(el("thead", {}, [el("tr", {}, ["Endpoint", "Used by", "Data sent", "Data returned", "Errors"].map(function (c) { return el("th", { text: c }); }))]));
+        t.appendChild(el("tbody", {}, eps.map(function (e) {
+          var ep = el("td"); ep.appendChild(el("code", { text: e.method + " " + e.path }));
+          return el("tr", {}, [ep, el("td", { text: e.used_by.join("; ") }), el("td", { text: e.sends.join("; ") || "—" }), el("td", { text: e.returns.join("; ") || "—" }), el("td", { text: e.errors.join("; ") || "—" })]);
+        })));
+        out.appendChild(el("div", { class: "tablewrap", style: "overflow-x:auto" }, [t]));
+      } else {
+        if (!issues.length) out.appendChild(el("div", { class: "issues-ok", text: "✓ No problems found in your screens, controls, tables or colors." }));
+        else {
+          var box = el("div", { class: "issues-warn" });
+          box.appendChild(el("strong", { text: issues.length + " thing" + (issues.length === 1 ? "" : "s") + " to review (saving still works):" }));
+          var ul = el("ul", { class: "issue-list" });
+          issues.slice(0, 15).forEach(function (m) { ul.appendChild(el("li", { text: m })); });
+          if (issues.length > 15) ul.appendChild(el("li", { text: "…and " + (issues.length - 15) + " more." }));
+          box.appendChild(ul); out.appendChild(box);
+        }
+      }
+    });
+    return { endpoints: eps, issues: issues };
+  }
+
+  // ---------------------------------------------------------------- state, progress
+  var dirty = false, savedAt = null;
+
+  function isAnswered(v) {
+    if (v == null) return false;
+    if (Array.isArray(v)) return v.length > 0 && (typeof v[0] !== "object" || v.some(function (o) { return o && o.name; }));
+    if (typeof v === "object") return Object.keys(v).some(function (k) { return v[k]; });
+    return String(v).trim() !== "";
+  }
+  function collect() {
+    var out = {};
+    fields.forEach(function (f) { out[f.q.id] = f.read(); });
+    return out;
+  }
+
+  function refresh() {
+    var vals = collect();
+    // helper views for the derived panels (screens/tables are always the builders' current content)
+    vals.__screens = []; vals.__tables = [];
+    fields.forEach(function (f) {
+      if (f.q.type === "screens") vals.__screens = vals[f.q.id] || [];
+      if (f.q.type === "tables") vals.__tables = vals[f.q.id] || [];
+    });
+    builders.forEach(function (b) { b.updateTitles(); });
+    var der = renderDerived(vals);
+
+    var req = fields.filter(function (f) { return f.q.required; });
+    var done = req.filter(function (f) { return isAnswered(vals[f.q.id]); }).length;
+    var any = fields.some(function (f) { return isAnswered(vals[f.q.id]); });
+    var pct = req.length ? Math.round(done / req.length * 100) : 100;
+    $("progressText").textContent = done + " of " + req.length + " required answered";
+    $("barFill").style.width = pct + "%";
+    $("bar").setAttribute("aria-valuenow", String(pct));
+    navBadges.forEach(function (nb) {
+      if (!nb.badge) return;
+      var left = req.filter(function (f) { return f.section === nb.section && !isAnswered(vals[f.q.id]); }).length;
+      nb.badge.textContent = left === 0 ? "✓" : left + " left";
+      nb.badge.className = "badge" + (left === 0 ? " done" : "");
+    });
+    var st = $("saveState");
+    if (dirty) { st.textContent = "Unsaved changes"; st.className = "save-state dirty"; }
+    else if (savedAt) { st.textContent = savedAt; st.className = "save-state"; }
+    else { st.textContent = any ? "Unsaved changes" : "No answers yet"; st.className = "save-state" + (any ? " dirty" : ""); }
+    return { done: done, total: req.length, vals: vals, endpoints: der.endpoints, issues: der.issues };
+  }
+
+  function markDirty() { dirty = true; savedAt = null; refresh(); }
+  sectionsEl.addEventListener("input", function (e) {
+    var t = e.target;
+    if (t && t.getAttribute && (t.getAttribute("data-k") === "screen_name" || t.getAttribute("data-k") === "table_name")) refreshRefs();
+    markDirty();
+  });
+  sectionsEl.addEventListener("change", markDirty);
+  window.addEventListener("beforeunload", function (e) { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+  // ---------------------------------------------------------------- toast
+  var toastTimer = null, toastFn = null;
+  function toast(msg, opts) {
+    opts = opts || {};
+    $("toastMsg").textContent = msg;
+    var t = $("toast"), a = $("toastAction");
+    t.className = "toast show" + (opts.error ? " error" : "");
+    toastFn = opts.action ? opts.action.fn : null;
+    a.hidden = !opts.action;
+    if (opts.action) a.textContent = opts.action.label;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.className = "toast" + (opts.error ? " error" : ""); }, opts.ms || 7000);
+  }
+  $("toastAction").addEventListener("click", function () {
+    var fn = toastFn; toastFn = null;
+    $("toast").className = "toast";
+    if (fn) fn();
+  });
+
+  // ---------------------------------------------------------------- save
+  function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40); }
+  function buildFile() {
+    var r = refresh();
+    var answers = {};
+    fields.forEach(function (f) {
+      answers[f.q.id] = { section: DATA.sections[f.section].title, question: f.q.title, answer: r.vals[f.q.id] };
+    });
+    var nameField = byId[DATA.appNameId];
+    return {
+      type: FILE_TYPE,
+      version: FILE_VERSION,
+      form_title: DATA.title,
+      saved_at: new Date().toISOString(),
+      app_name: nameField ? r.vals[DATA.appNameId] : null,
+      progress: { required_answered: r.done, required_total: r.total, complete: r.done === r.total, issues_to_review: r.issues.length },
+      derived: { api_endpoints: r.endpoints, issues_to_review: r.issues },
+      answers: answers
+    };
+  }
+  function save() {
+    var file = buildFile();
+    var fname = (slug(file.app_name) || "app-idea") + "-blueprint.json";
+    var blob = new Blob([JSON.stringify(file, null, 2) + "\n"], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = el("a", { href: url, download: fname });
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    dirty = false;
+    savedAt = "Saved at " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    refresh();
+    var left = file.progress.required_total - file.progress.required_answered, n = file.progress.issues_to_review;
+    var msg = "Saved " + fname + (left ? " — " + left + " required question" + (left === 1 ? "" : "s") + " still unanswered." : " — all required questions answered.");
+    if (n) msg += " " + n + " item" + (n === 1 ? "" : "s") + " flagged in the blueprint check.";
+    toast(msg, { ms: 8000 });
+  }
+
+  // ---------------------------------------------------------------- load
+  function apply(answers) {
+    var matched = 0;
+    fields.forEach(function (f) {
+      var entry = answers[f.q.id];
+      var v = entry && typeof entry === "object" && !Array.isArray(entry) && "answer" in entry ? entry.answer : entry;
+      f.write(v == null ? null : v);
+      if (isAnswered(f.read())) matched++;
+    });
+    var unknown = Object.keys(answers).filter(function (id) { return !byId[id]; }).length;
+    return { matched: matched, unknown: unknown };
+  }
+  function load(file) {
+    var reader = new FileReader();
+    reader.onerror = function () { toast("Couldn't read that file.", { error: true }); };
+    reader.onload = function () {
+      var obj;
+      try { obj = JSON.parse(String(reader.result)); }
+      catch (e) { toast("That file isn't valid JSON, so nothing was changed.", { error: true }); return; }
+      if (!obj || obj.type !== FILE_TYPE || typeof obj.answers !== "object" || obj.answers === null) {
+        toast("That doesn't look like an App Idea Blueprint file, so nothing was changed.", { error: true });
+        return;
+      }
+      var before = collect(), wasDirty = dirty, prevSaved = savedAt;
+      var res = apply(obj.answers);
+      dirty = false;
+      savedAt = "Loaded " + file.name;
+      refresh();
+      var msg = "Loaded " + res.matched + " answer" + (res.matched === 1 ? "" : "s") + " from " + file.name + ".";
+      if (res.unknown) msg += " " + res.unknown + " didn't match this version and were skipped.";
+      if (obj.version > FILE_VERSION) msg += " (File is from a newer version.)";
+      toast(msg, { ms: 10000, action: { label: "Undo", fn: function () {
+        apply(before); dirty = wasDirty; savedAt = prevSaved; refresh(); toast("Restored your previous answers.");
+      } } });
+    };
+    reader.readAsText(file);
+  }
+  function pickFile() { $("fileInput").click(); }
+  $("fileInput").addEventListener("change", function (e) {
+    var f = e.target.files && e.target.files[0];
+    if (f) load(f);
+    e.target.value = "";
+  });
+
+  ["saveBtn", "saveBtn2"].forEach(function (id) { $(id).addEventListener("click", save); });
+  ["loadBtn", "loadBtn2"].forEach(function (id) { $(id).addEventListener("click", pickFile); });
+  document.addEventListener("keydown", function (e) {
+    if ((e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && e.key.toLowerCase() === "s") { e.preventDefault(); save(); }
+  });
+
+  // ---------------------------------------------------------------- copy prompt
+  $("copyPrompt").addEventListener("click", function () {
+    var text = $("promptText").textContent, btn = $("copyPrompt");
+    function done() { btn.textContent = "Copied!"; setTimeout(function () { btn.textContent = "Copy"; }, 1400); }
+    function fallback() {
+      var ta = el("textarea", { style: "position:fixed;opacity:0" });
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (err) {}
+      document.body.removeChild(ta); done();
+    }
+    if (navigator.clipboard && window.isSecureContext !== false) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  });
+
+  // ---------------------------------------------------------------- sidebar highlight
+  function onScroll() {
+    var pos = window.scrollY + 140, current = null;
+    navBadges.forEach(function (nb) { if (nb.target.offsetTop <= pos) current = nb; });
+    navBadges.forEach(function (nb) { nb.link.classList.remove("active"); });
+    if (current) current.link.classList.add("active");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  refreshRefs();
+  refresh();
+  onScroll();
+})();
+</script>
+<script src="assets/genai-gamify.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* GenAI Coaching — Gamification Layer (flat enterprise, 1px borders, 10px radius) */
+:root {
+  --genai-ink: #0A0A0A;
+  --genai-signal: #C9A86A;
+  --genai-paper: #FFFFFF;
+  --genai-border: #E8E0C8;
+  --genai-radius: 10px;
+}
+
+/* ---------- Inline progress + XP header ---------- */
+.genai-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 20px;
+  font-size: 13px;
+  color: #6B6B6B;
+}
+.genai-progress-track {
+  flex: 1;
+  height: 8px;
+  background: #FFF8E6;
+  border: 1px solid var(--genai-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.genai-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--genai-signal);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+.genai-xp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--genai-ink);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--genai-ink);
+  white-space: nowrap;
+}
+.genai-xp-badge strong { color: var(--genai-signal); }
+
+/* ---------- XP toast ---------- */
+.genai-xp-toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: var(--genai-ink);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: var(--genai-radius);
+  border: 1px solid #5A4A22;
+  box-shadow: 0 6px 18px rgba(0,39,38,0.18);
+  z-index: 9998;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.genai-xp-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.genai-xp-toast small { color: var(--genai-signal); font-weight: 700; }
+
+/* ---------- Quiz ---------- */
+.genai-quiz {
+  border: 1px solid var(--genai-border);
+  border-radius: var(--genai-radius);
+  background: #FFFFFF;
+  padding: 18px 18px 14px;
+  margin: 18px 0;
+}
+.genai-quiz-q {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--genai-ink);
+  margin: 0 0 12px;
+}
+.genai-quiz-options {
+  display: grid;
+  gap: 8px;
+}
+.genai-quiz-option {
+  text-align: left;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #0e1f1c;
+  background: #FFFBF0;
+  border: 1px solid var(--genai-border);
+  border-radius: var(--genai-radius);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.genai-quiz-option:hover { background: #FFF8E6; border-color: #E8E0C8; }
+.genai-quiz-option.is-selected { border-color: var(--genai-signal); background: #FFF8E6; }
+.genai-quiz-option.is-correct { border-color: var(--genai-signal); background: #FFF8E6; }
+.genai-quiz-option.is-wrong { border-color: #e0a800; background: #fff8e6; }
+.genai-quiz-option:disabled { cursor: default; opacity: 0.92; }
+.genai-quiz-feedback {
+  margin-top: 10px;
+  font-size: 13.5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  display: none;
+}
+.genai-quiz-feedback.is-visible { display: block; }
+.genai-quiz-feedback.is-correct { background: #FFF8E6; border-color: var(--genai-signal); color: var(--genai-ink); }
+.genai-quiz-feedback.is-wrong { background: #fff8e6; border-color: #e0a800; color: #6b5500; }
+
+/* ---------- Checkpoint ---------- */
+.genai-checkpoint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--genai-border);
+  border-radius: var(--genai-radius);
+  background: #FFFBF0;
+  padding: 14px 16px;
+  margin: 18px 0;
+  font-size: 14px;
+}
+.genai-checkpoint-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--genai-signal);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+  border: 1px solid var(--genai-signal);
+}
+.genai-checkpoint.is-done { background: #FFF8E6; border-color: var(--genai-signal); }
+.genai-checkpoint.is-done .genai-checkpoint-dot { background: var(--genai-ink); border-color: var(--genai-ink); }
+
+/* ---------- Certificate modal ---------- */
+.genai-cert-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,39,38,0.52);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+.genai-cert-overlay.is-open { display: flex; }
+.genai-cert-modal {
+  background: #FFFFFF;
+  border: 1px solid var(--genai-border);
+  border-radius: var(--genai-radius);
+  max-width: 520px;
+  width: 100%;
+  padding: 28px 24px 22px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0,39,38,0.18);
+}
+.genai-cert-modal h3 {
+  margin: 0 0 8px;
+  color: var(--genai-ink);
+  font-size: 20px;
+}
+.genai-cert-modal p { color: #6B6B6B; font-size: 14px; margin: 0 0 16px; }
+.genai-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFF8E6;
+  border: 1px solid var(--genai-signal);
+  color: var(--genai-ink);
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.genai-cert-close {
+  background: var(--genai-ink);
+  color: #FFFFFF;
+  border: 1px solid var(--genai-ink);
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.genai-cert-close:hover { background: #00302b; }
+
+@media (prefers-reduced-motion: reduce) {
+  .genai-progress-fill, .genai-xp-toast { transition: none; }
+}

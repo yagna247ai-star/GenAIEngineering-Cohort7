@@ -15,13 +15,13 @@ import { StatGridComponent } from '../../shared/components/stat-grid.component';
           <div class="eyebrow"><i></i> AI ACCELERATOR HUB — JOURNALISM EDITION</div>
           <div class="kicker">For investigative reporters, editors & newsroom operators</div>
           <h1>Verify first.<br><em>Accelerate second.</em></h1>
-          <p class="lead">Outskill’s portal, re-engineered for journalism. A source-first curriculum — from the AI Generalist Toolkit to newsroom agents — with editorial guardrails. <b>Proof you can publish.</b></p>
+          <p class="lead">AI Accelerator Hub’s portal, re-engineered for journalism. A source-first curriculum — from the AI Generalist Toolkit to newsroom agents — with editorial guardrails. <b>Proof you can publish.</b></p>
           <div class="actions">
             <a routerLink="/my-roadmap" class="btn-primary">Create my newsroom roadmap →</a>
             <a routerLink="/learning-topics" class="btn-quiet">Explore 105 sections</a>
           </div>
           <div class="trust"><span>◷ 10–15 min onboarding</span><span>• Beginner-friendly</span><span>• Change answers anytime</span><span>• Editorial standards desk</span></div>
-          <div class="quote">“Learn deeply. Build bravely.” <small>— Outskill principle, newsroom-hardened</small></div>
+          <div class="quote">“Learn deeply. Build bravely.” <small>— AI Accelerator Hub principle, newsroom-hardened</small></div>
         </div>
         <div class="hero-panel">
           <div class="eyebrow gold"><i></i> YOUR JOURNEY PREVIEW</div>
@@ -37,20 +37,20 @@ import { StatGridComponent } from '../../shared/components/stat-grid.component';
         </div>
       </section>
 
-      <!-- Research-backed insights — more appropriate than Outskill’s generic -->
+      <!-- Research-backed insights — more appropriate than AI Accelerator Hub’s generic -->
       <section class="insights">
         <div class="eyebrow"><i></i> RESEARCHED FOR NEWSROOMS — WHY THIS HUB IS MORE APPROPRIATE</div>
         <div class="insight-grid">
           <div><strong>72%</strong> of newsrooms use AI for research <em>Reuters Institute 2024</em> — <span>but only 18% have verification protocols. This hub closes that gap with citation &amp; confidence gates.</span></div>
           <div><strong>3×</strong> faster background research with RAG <em>Poynter + Columbia Journalism Review</em> — <span>when retrieval is permissioned and PII-redacted. Evidence Locker (WB02) shows how.</span></div>
-          <div><strong>1</strong> bylined proof per level <em>Enterprise standard</em> — <span>Outskill’s “build visible proof” is generic; here proof is portfolio-evaluated (citation ≥90%, PII 0) before publish.</span></div>
+          <div><strong>1</strong> bylined proof per level <em>Enterprise standard</em> — <span>AI Accelerator Hub’s “build visible proof” is generic; here proof is portfolio-evaluated (citation ≥90%, PII 0) before publish.</span></div>
         </div>
         <div class="trust-strip"><span>For Investigative Reporters • Editors • Fact-Checkers • Producers</span><span>• Editorial standards desk in every prompt</span><span>• VCA-deployable</span></div>
       </section>
 
       <!-- Library overview — navigates to pages, not anchors -->
       <section class="section">
-        <app-page-header kicker="YOUR COMPLETE RESOURCE LIBRARY" title="Everything to go from learning to byline." desc="Explore freely, or follow your roadmap. Each resource is built for a newsroom outcome — more appropriate than Outskill’s generic learner path."></app-page-header>
+        <app-page-header kicker="YOUR COMPLETE RESOURCE LIBRARY" title="Everything to go from learning to byline." desc="Explore freely, or follow your roadmap. Each resource is built for a newsroom outcome — more appropriate than AI Accelerator Hub’s generic learner path."></app-page-header>
         <div class="grid3">
           <a routerLink="/my-roadmap" class="card feature"><div class="kicker-sm">PERSONALIZED JOURNEY</div><h3>Find your best place to start.</h3><p>8 thoughtful questions → a focused 30-day plan mapped to 105 sections, with editorial gates.</p><span class="cta">Take the onboarding →</span></a>
           <a routerLink="/learning-topics" class="card"><div class="kicker-sm">LEARN</div><h3>Learning Topics</h3><p>105 sections across 6 editorial pillars — from foundations to audience & ethics.</p><span class="cta">Explore topics →</span></a>
@@ -60,13 +60,13 @@ import { StatGridComponent } from '../../shared/components/stat-grid.component';
         </div>
       </section>
 
-      <!-- Session teaser — more appropriate than Outskill’s generic “A clear AI roadmap” -->
+      <!-- Session teaser — more appropriate than AI Accelerator Hub’s generic “A clear AI roadmap” -->
       <section class="section">
-        <div class="compare-note">Research: Outskill’s homepage is generic “curious learner → AI builder.” Journalism Edition is more appropriate: same structure, but every promise is tied to a journalist outcome with editorial guardrails.</div>
+        <div class="compare-note">Research: AI Accelerator Hub’s homepage is generic “curious learner → AI builder.” Journalism Edition is more appropriate: same structure, but every promise is tied to a journalist outcome with editorial guardrails.</div>
         <a routerLink="/session/foundations" class="anchor-teaser">
           <div class="eyebrow gold"><i></i> SESSION 01 • FOUNDATIONS — JOURNALISM FOCUS</div>
           <h2>Foundations of Generative AI and the AI Generalist Toolkit</h2>
-          <p>For journalists, generative AI is not a chatbot. It is a generalist toolkit — models + prompts + context + evals. More appropriate than Outskill’s generic intro: here you also get outcome + try-it.</p>
+          <p>For journalists, generative AI is not a chatbot. It is a generalist toolkit — models + prompts + context + evals. More appropriate than AI Accelerator Hub’s generic intro: here you also get outcome + try-it.</p>
           <span class="cta">Open Session 01 → Prompt vs Context →</span>
         </a>
       </section>
