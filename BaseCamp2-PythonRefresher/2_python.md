@@ -1,72 +1,51 @@
-# Environments, Libraries &amp; Data Tools — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp2-PythonRefresher/2_python.html` → `BaseCamp2-PythonRefresher/2_python.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Environments, Libraries & Data Tools — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](2_python_refresher.md) · [Next →](2_python_slides.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<2_python_refresher.html>) [Next →](<2_python_slides.html>)
+## 📑 Contents
+- [How This Extended Session Breaks Down](#how-this-extended-session-breaks-down)
+- [By the End of This Session, You Will Be Able To…](#by-the-end-of-this-session-you-will-be-able-to)
+- [The Problem: Version Conflicts](#the-problem-version-conflicts)
+- [What Is a Virtual Environment?](#what-is-a-virtual-environment)
+- [Creating a Virtual Environment](#creating-a-virtual-environment)
+- [Quick Check](#quick-check)
+- [Activating a Virtual Environment](#activating-a-virtual-environment)
+- [Deactivating a Virtual Environment](#deactivating-a-virtual-environment)
+- [The Problem Libraries Solve](#the-problem-libraries-solve)
+- [Installing a Library with pip](#installing-a-library-with-pip)
+- [Import and Use a Library](#import-and-use-a-library)
+- [Set Up venv_numpy_126](#set-up-venv-numpy-126)
+- [Quick Check](#quick-check)
+- [Set Up venv_numpy_232](#set-up-venv-numpy-232)
+- [Validate: Is the venv Actually Active?](#validate-is-the-venv-actually-active)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Virtual environments · installing libraries with pip · NumPy · Pandas · files, functions & error handling · command-line scripts. This session combines two full modules — set up isolated environments, install and use real libraries, and finish with a script you run from the terminal, not just a notebook cell.
 
-XP **0**
+---
 
-#### Base Camp 2 · Week 1 · Session 2
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * Part 1 · Virtual Environments
-  * 1.1 The Problem: Version Conflicts
-  * 1.2 What Is a Virtual Environment?
-  * 1.3 Creating a Virtual Environment
-  * 1.4 Activating a Virtual Environment
-  * 1.5 Deactivating a Virtual Environment
-  * Part 2 · Libraries
-  * 2.1 The Problem Libraries Solve
-  * 2.2 Installing a Library with pip
-  * 2.3 Import and Use a Library
-  * Part 3 · Hands-On
-  * 3.1 Set Up venv_numpy_126
-  * 3.2 Set Up venv_numpy_232
-  * 3.3 Validate: Is the venv Actually Active?
-  * 3.4 Check Installed Libraries & Versions
-  * 3.5 Write the Test Function (.py and .ipynb)
-  * 3.6 Same File, Two Different Outcomes
-  * 3.7 requirements.txt — Reproducible Environments
-  * Halfway Point
-  * Part 4 · NumPy
-  * 4.1 Creating Arrays
-  * 4.2 Array Math & Broadcasting
-  * 4.3 Aggregations, Indexing & Reshaping
-  * Part 5 · Pandas
-  * 5.1 Why Pandas?
-  * 5.2 Our Mock Dataset: employees.csv
-  * 5.3 Reading a CSV & Exploring It
-  * 5.4 Selecting & Filtering Rows
-  * 5.5 Adding Columns & Grouping
-  * 5.6 Writing Output with to_csv()
-  * Part 6 · Files & Errors
-  * 6.1 A Function With File Arguments
-  * 6.2 When Functions Error Out
-  * 6.3 Handling Errors with try / except
-  * 6.4 Common Exception Types
-  * Part 7 · Real Scripts
-  * 7.1 The if __name__ == "__main__" Pattern
-  * 7.2 Command-Line Arguments with argparse
-  * 7.3 process_employees.py — The Function
-  * 7.4 process_employees.py — The Main Block
-  * 7.5 Running It From the Terminal
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 38 · use ← → or the sidebar
 
@@ -1126,8 +1105,18 @@ Check
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: 2 Python Slides
+<div align="center">
 
-[← Previous](<2_python_refresher.html>) [Continue →](<2_python_slides.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `BaseCamp2-PythonRefresher/2_python.html` → `BaseCamp2-PythonRefresher/2_python.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Python Slides*  
+> [← Previous](2_python_refresher.md) · [Continue →](2_python_slides.md)
+
+</div>

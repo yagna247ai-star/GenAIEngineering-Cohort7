@@ -1,35 +1,49 @@
-# Session 2 — Installing VS Code | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/2_VS_Code.html` → `BaseCamp1-EnvironmentSetup/2_VS_Code.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Session 2 — Installing VS Code
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](1_Python.md) · [Next →](3_api_keys.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [One editor, one workflow](#one-editor-one-workflow)
+- [Download VS Code](#download-vs-code)
+- [Meet the Explorer](#meet-the-explorer)
+- [Open a Terminal Inside VS Code](#open-a-terminal-inside-vs-code)
+- [Install the Python & Jupyter Extensions](#install-the-python-jupyter-extensions)
+- [Choose a Color Theme](#choose-a-color-theme)
+- [Create test.py and test.ipynb](#create-test-py-and-test-ipynb)
+- [Confirm the Right Python Is Selected](#confirm-the-right-python-is-selected)
+- [Choosing the Right Python When Several Are Installed](#choosing-the-right-python-when-several-are-installed)
+- [Install ipykernel](#install-ipykernel)
+- [Extra Extensions Worth Installing](#extra-extensions-worth-installing)
+- [VS Code Setup — Final Check](#vs-code-setup-final-check)
+  - [Build & Verify — VS Code — Confirm Editor & Interpreter](#build-verify-vs-code-confirm-editor-interpreter)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · Session 2
+> Your code editor for the entire fellowship. This session installs VS Code, sets up an in-editor terminal, adds the essential extensions, and has you write your very first Python file and notebook.
 
-  * Overview
-  * Step 1 · Download VS Code
-  * Step 2 · Meet the Explorer
-  * Step 3 · Open a Terminal
-  * Step 4 · Python & Jupyter Extensions
-  * Step 5 · Choose a Theme
-  * Step 6 · Your First Files
-  * Step 7 · Verify the Interpreter
-  * Multiple Versions?
-  * Step 8 · Install ipykernel
-  * Step 9 · More Extensions
-  * Final Check
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Session 2
 
@@ -38,8 +52,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 Your code editor for the entire fellowship. This session installs VS Code, sets up an in-editor terminal, adds the essential extensions, and has you write your very first Python file and notebook.
 
 💻 Editor: Visual Studio Code Builds on Session 1's Python 3.11.9
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<1_Python.html>) [Next →](<3_api_keys.html>)
 
 Why this matters
 
@@ -359,12 +371,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 3 Api Keys
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<1_Python.html>) [Continue →](<3_api_keys.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/2_VS_Code.html` → `BaseCamp1-EnvironmentSetup/2_VS_Code.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *3 Api Keys*  
+> [← Previous](1_Python.md) · [Continue →](3_api_keys.md)
+
+</div>

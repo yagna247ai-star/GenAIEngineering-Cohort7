@@ -1,22 +1,34 @@
-# App Idea Blueprint | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp3-FullStack/app_idea_blueprint.html` → `BaseCamp3-FullStack/app_idea_blueprint.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# App Idea Blueprint
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](2_UI.md) · [Next →](code/calculator_frontend/index.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [Quick Check — Blueprint Fields](#quick-check-blueprint-fields)
+- [Elite Lab — Blueprint Completeness Checklist](#elite-lab-blueprint-completeness-checklist)
+- [Save your blueprint](#save-your-blueprint)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-XP **0**
 
-#### Base Camp 3 · App Blueprint
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 0 of 0 required answeredNo answers yet
 
@@ -25,8 +37,6 @@ Load JSON Save as JSON
 ![](data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI2IiBmaWxsPSIjMDAyNzI2Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMTEiIGZpbGw9IiNmZmZmZmYiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjMwIiByPSIxMSIgZmlsbD0iI2ZmZmZmZiIvPgogIDxwYXRoIGQ9Ik05MCAxNSBDOTEuNSAyNyA5MyAyOC41IDEwNSAzMCBDOTMgMzEuNSA5MS41IDMzIDkwIDQ1IEM4OC41IDMzIDg3IDMxLjUgNzUgMzAgQzg3IDI4LjUgODguNSAyNyA5MCAxNSBaIiBmaWxsPSIjMzNjMzc1Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI2MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iNjAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSI5MCIgcj0iMTEiIGZpbGw9IiMzM2MzNzUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjkwIiByPSIxMSIgZmlsbD0iIzMzYzM3NSIvPgogIDxjaXJjbGUgY3g9IjkwIiBjeT0iOTAiIHI9IjExIiBmaWxsPSIjZmZmZmZmIi8+Cjwvc3ZnPgo=) Base Camp 3 · Full-Stack Solutioning
 
 # App Idea Blueprint
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<2_UI.html>) [Next →](<code/calculator_frontend/index.html>)
 
 🔒 Stays on your computer
 
@@ -77,16 +87,20 @@ Copy
 
 **Tip:** Save often, and save before you close the tab. If you close it with unsaved changes, your browser will warn you first.
 
-AI Accelerator Hub  |  Powered by AI Accelerator Hub
+AI Accelerator Hub | Powered by AI Accelerator Hub
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: Index
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<2_UI.html>) [Continue →](<code/calculator_frontend/index.html>)
+> *Source:* `BaseCamp3-FullStack/app_idea_blueprint.html` → `BaseCamp3-FullStack/app_idea_blueprint.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
 
-This page needs JavaScript to run.
+
+> **Continue your elite future** — Next up: *Index*  
+> [← Previous](2_UI.md) · [Continue →](code/calculator_frontend/index.md)
+
+</div>

@@ -1,67 +1,51 @@
-# Environments, Libraries &amp; Data Tools | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp2-PythonRefresher/2_python_refresher.html` → `BaseCamp2-PythonRefresher/2_python_refresher.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Environments, Libraries & Data Tools
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](1_python_slides.md) · [Next →](2_python.md)
+>
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+## 📑 Contents
+- [Learning Objectives](#learning-objectives)
+- [Virtual Environments](#virtual-environments)
+  - [1.1The Problem: Version Conflicts](#1-1the-problem-version-conflicts)
+  - [1.2What Is a Virtual Environment?](#1-2what-is-a-virtual-environment)
+  - [1.3Creating a Virtual Environment](#1-3creating-a-virtual-environment)
+  - [1.4Activating a Virtual Environment](#1-4activating-a-virtual-environment)
+  - [1.5Deactivating a Virtual Environment](#1-5deactivating-a-virtual-environment)
+  - [✢ Part 1 Check](#part-1-check)
+- [Libraries](#libraries)
+  - [2.1The Problem Libraries Solve](#2-1the-problem-libraries-solve)
+  - [2.2Installing a Library with pip](#2-2installing-a-library-with-pip)
+  - [2.3Import and Use a Library](#2-3import-and-use-a-library)
+  - [✢ Part 2 Check](#part-2-check)
+- [Two venvs, Two NumPy Versions](#two-venvs-two-numpy-versions)
+  - [3.1Set Up venv_numpy_126](#3-1set-up-venv-numpy-126)
 
-GEN AI  
-COACHING
+---
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
 
-XP **0**
+> Virtual environments · installing libraries with pip · NumPy · Pandas · files, functions & error handling · command-line scripts. This session combines two full modules — set up isolated environments, install and use real libraries, and finish with a script you run from the terminal, not just a notebook cell.
 
-#### Base Camp 2 · Week 1 · Session 2
+---
 
-  * Overview & Objectives
-  * Part 1 · Virtual Environments
-  * 1.1 The Version-Conflict Problem
-  * 1.2 What Is a venv?
-  * 1.3 Creating a venv
-  * 1.4 Activating a venv
-  * 1.5 Deactivating a venv
-  * Part 2 · Libraries
-  * 2.1 The Problem Libraries Solve
-  * 2.2 Installing With pip
-  * 2.3 Import and Use a Library
-  * Part 3 · Hands-On
-  * 3.1 Set Up venv_numpy_126
-  * 3.2 Set Up venv_numpy_232
-  * 3.3 Validate the venv
-  * 3.4 Check Installed Libraries
-  * 3.5 Write the Test Function
-  * 3.6 Same File, Two Outcomes
-  * 3.7 requirements.txt
-  * Part 4 · NumPy
-  * 4.1 Creating Arrays
-  * 4.2 Array Math & Broadcasting
-  * 4.3 Aggregations, Indexing, Reshaping
-  * Part 5 · Pandas
-  * 5.1 Why Pandas?
-  * 5.2 Mock Dataset: employees.csv
-  * 5.3 Reading a CSV & Exploring
-  * 5.4 Selecting & Filtering Rows
-  * 5.5 Adding Columns & Grouping
-  * 5.6 Writing Output With to_csv()
-  * Part 6 · Files & Errors
-  * 6.1 A Function With File Arguments
-  * 6.2 When Functions Error Out
-  * 6.3 Handling Errors With try/except
-  * 6.4 Common Exception Types
-  * Part 7 · Real Scripts
-  * 7.1 The __main__ Pattern
-  * 7.2 Command-Line Args With argparse
-  * 7.3 process_employees.py — Function
-  * 7.4 process_employees.py — Main Block
-  * 7.5 Running It From the Terminal
-  * Recap
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) Base Camp 2 · Week 1 · Session 2 · Extended
 
@@ -70,8 +54,6 @@ XP **0**
 Virtual environments · installing libraries with pip · NumPy · Pandas · files, functions & error handling · command-line scripts. This session combines two full modules — set up isolated environments, install and use real libraries, and finish with a script you run from the terminal, not just a notebook cell.
 
 ⏱ Extended, hands-on 📄 Dataset: employees.csv (provided)
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<1_python_slides.html>) [Next →](<2_python.html>)
 
 ## Learning Objectives
 
@@ -909,14 +891,20 @@ Recap
 
 10Everything from this session — environments, libraries, data, and error handling — comes together in one real script.
 
-Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
+Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
 
-![GenAI Coaching](assets/genai-coaching-logo-light.svg) | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Coaching · Enterprise · by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 2 Python
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<1_python_slides.html>) [Continue →](<2_python.html>)
+> *Source:* `BaseCamp2-PythonRefresher/2_python_refresher.html` → `BaseCamp2-PythonRefresher/2_python_refresher.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Python*  
+> [← Previous](1_python_slides.md) · [Continue →](2_python.md)
+
+</div>

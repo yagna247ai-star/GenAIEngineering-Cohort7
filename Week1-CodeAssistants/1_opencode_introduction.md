@@ -1,87 +1,51 @@
-# Introduction to OpenCode — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `Week1-CodeAssistants/1_opencode_introduction.html` → `Week1-CodeAssistants/1_opencode_introduction.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Introduction to OpenCode — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](../BaseCamp3-FullStack/code/calculator_frontend/index.md) · [Next →](2_full_stack.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<../BaseCamp3-FullStack/code/calculator_frontend/index.html>) [Next →](<2_full_stack.html>)
+## 📑 Contents
+- [How Today Breaks Down](#how-today-breaks-down)
+- [By the End of Today, You Will Be Able To…](#by-the-end-of-today-you-will-be-able-to)
+- [The opencode.jsonc Config File](#the-opencode-jsonc-config-file)
+- [Global vs Project Config — Where the Files Live](#global-vs-project-config-where-the-files-live)
+- [Quick Check — Configuring OpenCode](#quick-check-configuring-opencode)
+- [model vs small_model](#model-vs-small-model)
+- [Choosing Models, Provider by Provider](#choosing-models-provider-by-provider)
+- [Claude Code's Equivalent Config](#claude-code-s-equivalent-config)
+- [Write Your Config — No Shell Commands Needed](#write-your-config-no-shell-commands-needed)
+- [Session Lifecycle Commands](#session-lifecycle-commands)
+- [Interface & Model Commands](#interface-model-commands)
+- [The "Timeline" — /undo & /redo](#the-timeline-undo-redo)
+- [Quick Check — OpenCode Commands](#quick-check-opencode-commands)
+- [Windows vs Mac Keybindings](#windows-vs-mac-keybindings)
+- [Agents — No Slash Command, Tab & @mention Instead](#agents-no-slash-command-tab-mention-instead)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Every OpenCode command, explained and run live — what it does, when to use it, and what outcome to expect — with the Claude Code equivalent next to each one. Agents (including how to build your own custom ones), Skills, and MCP servers: what each one is, why it exists, how it's used, worked examples, and best practices. Then a real build: a branded FastAPI calculator with an HTML frontend, scaffolded with OpenCode from a single/init, and tested end to end with the Playwright MCP server.
 
-XP **0**
+---
 
-#### Week 1 · OpenCode Deep Dive
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * Part 0 · Configure OpenCode
-  * 0.1 The opencode.jsonc Config File
-  * 0.2 Global vs Project Config
-  * 0.3 model vs small_model
-  * 0.4 Choosing Models, Provider by Provider
-  * 0.5 Claude Code's Equivalent Config
-  * 0.6 Hands-On · Write Your Config
-  * Part 1 · Command Reference
-  * 1.1 Session Lifecycle Commands
-  * 1.2 Interface & Model Commands
-  * 1.3 The "Timeline" · /undo & /redo
-  * 1.4 Windows vs Mac Keybindings
-  * 1.5 Agents · Tab & @mention
-  * 1.6 Skills · Auto-Discovered, Not Typed
-  * 1.7 MCP Servers · Configured, Not Toggled
-  * 1.8 Status & Timestamps
-  * 1.9 Hands-On · Run Every Command Once
-  * Part 2 · Agents
-  * 2.1 What Is an Agent, and Why More Than One?
-  * 2.2 Primary Agents · Build vs Plan
-  * 2.3 Subagents via @mention
-  * 2.4 Built-In Subagents, Recapped
-  * 2.5 Creating a Custom Agent
-  * 2.6 Tools · The Building Blocks
-  * 2.7 Permissions · The Approval Model
-  * 2.8 Worked Example · code-reviewer
-  * 2.9 Diverse Use Cases
-  * 2.10 Best Practices
-  * 2.11 Hands-On · Delegate a Question
-  * 2.12 Hands-On · Write Your Own Custom Agent
-  * Part 3 · Skills
-  * 3.1 What Is a Skill, and Why Package It?
-  * 3.2 Anatomy of a SKILL.md
-  * 3.3 Scoped vs Global Skills
-  * 3.4 Diverse Use Cases
-  * 3.5 Best Practices
-  * 3.6 Hands-On · Write a Skill
-  * Part 4 · MCP Servers
-  * 4.1 What Is an MCP Server, and Why Connect One?
-  * 4.2 Local vs Remote Servers
-  * 4.3 Install & Set Up Playwright MCP
-  * 4.4 Example Utility · Playwright MCP
-  * 4.5 Diverse Use Cases
-  * 4.6 Best Practices
-  * 4.7 Hands-On · Connect Playwright MCP
-  * Part 5 · Build with OpenCode
-  * 5.1 Create the App Folder & Run /init
-  * 5.2 Give It Brand Context
-  * 5.3 Hands-On · Write This App's Scoped Skill
-  * 5.4 Hands-On · Scaffold the FastAPI Backend
-  * 5.5 The Generated Backend, Reviewed
-  * 5.6 Hands-On · Activate, Install, Run
-  * 5.7 Hands-On · Build the Branded Frontend
-  * 5.8 Reading This Diff Like a Reviewer
-  * 5.9 Hands-On · Test It With Playwright MCP
-  * 5.10 Hands-On · Run the Scoped Skill
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 54 · use ← → or the sidebar
 
@@ -1500,8 +1464,18 @@ Check
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: 2 Full Stack
+<div align="center">
 
-[← Previous](<../BaseCamp3-FullStack/code/calculator_frontend/index.html>) [Continue →](<2_full_stack.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `Week1-CodeAssistants/1_opencode_introduction.html` → `Week1-CodeAssistants/1_opencode_introduction.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Full Stack*  
+> [← Previous](../BaseCamp3-FullStack/code/calculator_frontend/index.md) · [Continue →](2_full_stack.md)
+
+</div>

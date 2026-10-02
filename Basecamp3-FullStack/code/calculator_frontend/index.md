@@ -1,20 +1,27 @@
-# Calculator | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp3-FullStack/code/calculator_frontend/index.html` → `BaseCamp3-FullStack/code/calculator_frontend/index.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Calculator
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](../../app_idea_blueprint.md) · [Next →](../../../Week1-CodeAssistants/1_opencode_introduction.md)
+>
 
-[ ![GenAI Coaching emblem](../../assets/genai-coaching-emblem.svg) GEN AI  
-COACHING ](<../../..>) ELITE Calculator
 
-XP **0**
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<../../app_idea_blueprint.html>) [Next →](<../../../Week1-CodeAssistants/1_opencode_introduction.html>)
 
 # Calculator
 
@@ -35,12 +42,18 @@ Verify your FastAPI calculator handles all 4 operations and error cases. Complet
 
 Try: 12 / 4 =  Check Answer
 
-#### Continue your elite future
+---
 
-Next up: 1 Opencode Introduction
+<div align="center">
 
-[← Previous](<../../app_idea_blueprint.html>) [Continue →](<../../../Week1-CodeAssistants/1_opencode_introduction.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-GenAI Learning · Powered by AI Accelerator Hub
+> *Source:* `BaseCamp3-FullStack/code/calculator_frontend/index.html` → `BaseCamp3-FullStack/code/calculator_frontend/index.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *1 Opencode Introduction*  
+> [← Previous](../../app_idea_blueprint.md) · [Continue →](../../../Week1-CodeAssistants/1_opencode_introduction.md)
+
+</div>

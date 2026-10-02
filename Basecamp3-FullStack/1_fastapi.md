@@ -1,71 +1,51 @@
-# Building Your First REST API with FastAPI — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp3-FullStack/1_fastapi.html` → `BaseCamp3-FullStack/1_fastapi.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Building Your First REST API with FastAPI — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](../BaseCamp2-PythonRefresher/2_python_slides.md) · [Next →](2_UI.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<../BaseCamp2-PythonRefresher/2_python_slides.html>) [Next →](<2_UI.html>)
+## 📑 Contents
+- [How This Extended Session Breaks Down](#how-this-extended-session-breaks-down)
+- [By the End of This Session, You Will Be Able To…](#by-the-end-of-this-session-you-will-be-able-to)
+- [Anatomy of a Function](#anatomy-of-a-function)
+- [add, subtract, multiply](#add-subtract-multiply)
+- [The Trouble With divide(0)](#the-trouble-with-divide-0)
+- [try / except: Handling the Crash](#try-except-handling-the-crash)
+- [Returning Results as a Dictionary](#returning-results-as-a-dictionary)
+- [One Laptop Isn't Enough](#one-laptop-isn-t-enough)
+- [The Client–Server Model](#the-client-server-model)
+- [Where Our Calculator Fits](#where-our-calculator-fits)
+- [What Is an API?](#what-is-an-api)
+- [What Makes an API "RESTful"](#what-makes-an-api-restful)
+- [HTTP Methods: GET, POST, PUT, DELETE](#http-methods-get-post-put-delete)
+- [Anatomy of a Request & a Response](#anatomy-of-a-request-a-response)
+- [HTTP Status Codes at a Glance](#http-status-codes-at-a-glance)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Function arguments & return values · error handling · client–server architecture · REST APIs at a glance · setting up FastAPI · turning calculator functions into live endpoints · Swagger · calling your own API from a notebook. Today we build the server — tomorrow, a real client connects to it.
 
-XP **0**
+---
 
-#### Base Camp 3 · Week 2 · Session 1
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * Part 1 · Calculator Functions
-  * 1.1 Anatomy of a Function
-  * 1.2 add, subtract, multiply
-  * 1.3 The Trouble With divide(0)
-  * 1.4 try / except: Handling the Crash
-  * 1.5 Returning Results as a Dictionary
-  * Part 2 · Client–Server Architecture
-  * 2.1 One Laptop Isn't Enough
-  * 2.2 The Client–Server Model
-  * 2.3 Where Our Calculator Fits
-  * Part 3 · REST APIs
-  * 3.1 What Is an API?
-  * 3.2 What Makes an API "RESTful"
-  * 3.3 HTTP Methods: GET, POST, PUT, DELETE
-  * 3.4 Anatomy of a Request & a Response
-  * 3.5 HTTP Status Codes at a Glance
-  * Part 4 · Setting Up FastAPI
-  * 4.1 What Is FastAPI (and Why)
-  * 4.2 Create & Activate a Fresh venv
-  * 4.3 Installing fastapi and uvicorn
-  * 4.4 Project Files: main.py
-  * Halfway Point
-  * Part 5 · From Functions to Endpoints
-  * 5.1 The Smallest Possible FastAPI App
-  * 5.2 add() Becomes a GET Endpoint
-  * 5.3 subtract() and multiply() as Endpoints
-  * 5.4 divide() — a Real Error, Not a Crash
-  * 5.5 Letting main.py Start Its Own Server
-  * 5.6 Running the Server: python main.py
-  * Part 6 · Swagger: Explore Your API
-  * 6.1 What Is Swagger / OpenAPI?
-  * 6.2 Opening /docs and Trying an Endpoint
-  * 6.3 Testing the divide-by-zero Error
-  * 6.4 /redoc — the Read-Only Alternative
-  * Part 7 · Calling the API from Python
-  * 7.1 Installing requests in Your Notebook
-  * 7.2 GET Requests: add, subtract, multiply
-  * 7.3 Adding a POST Endpoint: calculate
-  * 7.4 Calling the POST Endpoint
-  * 7.5 Checking status_code First
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 37 · use ← → or the sidebar
 
@@ -404,7 +384,7 @@ REQUEST
 
 client → serverCopy
 [code] 
-    GET /add?a=4&b;=5 HTTP/1.1
+    GET /add?a=4&b=5 HTTP/1.1
     Host: localhost:8000
 [/code]
 
@@ -1019,8 +999,18 @@ Hint: typed params are required — `a: float` not just `a` — and the path is 
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: 2 Ui
+<div align="center">
 
-[← Previous](<../BaseCamp2-PythonRefresher/2_python_slides.html>) [Continue →](<2_UI.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `BaseCamp3-FullStack/1_fastapi.html` → `BaseCamp3-FullStack/1_fastapi.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Ui*  
+> [← Previous](../BaseCamp2-PythonRefresher/2_python_slides.md) · [Continue →](2_UI.md)
+
+</div>

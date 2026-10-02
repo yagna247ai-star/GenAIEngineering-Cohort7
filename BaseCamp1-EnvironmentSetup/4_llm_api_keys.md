@@ -1,31 +1,45 @@
-# Setting Up Anthropic, OpenAI &amp; Gemini API Keys | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/4_llm_api_keys.html` → `BaseCamp1-EnvironmentSetup/4_llm_api_keys.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Setting Up Anthropic, OpenAI & Gemini API Keys
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](3_api_keys.md) · [Next →](5_aws_account.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [An API key is not your chat subscription](#an-api-key-is-not-your-chat-subscription)
+- [Anthropic (Claude)](#anthropic-claude)
+- [OpenAI](#openai)
+- [Google Gemini](#google-gemini)
+- [Side-by-Side Comparison](#side-by-side-comparison)
+- [Test That Each Key Works](#test-that-each-key-works)
+- [Keeping Your Keys Safe](#keeping-your-keys-safe)
+- [LLM API Key Setup — Final Check](#llm-api-key-setup-final-check)
+  - [Build & Verify — LLM Keys — Frontier Key Format](#build-verify-llm-keys-frontier-key-format)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · LLM Keys
+> The previous page covered fast, open-weight and search providers. This one covers the three frontier model labs you'll call most often from Python: Anthropic's Claude, OpenAI's GPT models, and Google's Gemini. Each needs its own account and API key — do it now, calmly, so class time is spent coding instead of waiting on verification emails and billing pages.
 
-  * Overview
-  * 1 · Anthropic (Claude)
-  * 2 · OpenAI
-  * 3 · Google Gemini
-  * Side-by-Side Comparison
-  * Test Your Keys
-  * Keeping Keys Safe
-  * Setup Checklist
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Before Base Camp 2
 
@@ -34,8 +48,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 The previous page covered fast, open-weight and search providers. This one covers the three frontier model labs you'll call most often from Python: Anthropic's Claude, OpenAI's GPT models, and Google's Gemini. Each needs its own account and API key — do it now, calmly, so class time is spent coding instead of waiting on verification emails and billing pages.
 
 🔑 3 providers ⏱ ~15 minutes 💳 Small billing setup may be needed
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<3_api_keys.html>) [Next →](<5_aws_account.html>)
 
 Why this matters
 
@@ -105,7 +117,7 @@ api keys pageCopy
   2. **Land on the API Keys page** This page lists every secret key tied to your account and project.
   3. **Click "Create new secret key"** Name it (e.g. `AI Accelerator Hub-fellowship`). Leave the project as the default, and leave permissions on **All** for coursework.
   4. **Copy the key immediately** OpenAI keys start with `sk-` (project keys often start with `sk-proj-`). The full key is shown only once — copy it before clicking Done.
-  5. **Add credit so calls succeed** Open _Settings → Billing_, add a payment method, and purchase a small amount of prepaid credit. Without credit, requests fail with a "quota exceeded" error even though the key itself is valid.
+  5. **Add credit so calls succeed** Open _Settings → Billing_ , add a payment method, and purchase a small amount of prepaid credit. Without credit, requests fail with a "quota exceeded" error even though the key itself is valid.
 
 The OpenAI SDK reads `OPENAI_API_KEY` from the environment by default — use that exact name in your `.env` file. The billing page also lets you set a monthly spend limit; setting a low one on day one caps your worst-case cost if a key ever leaks. 
 
@@ -309,12 +321,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 5 Aws Account
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<3_api_keys.html>) [Continue →](<5_aws_account.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/4_llm_api_keys.html` → `BaseCamp1-EnvironmentSetup/4_llm_api_keys.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *5 Aws Account*  
+> [← Previous](3_api_keys.md) · [Continue →](5_aws_account.md)
+
+</div>

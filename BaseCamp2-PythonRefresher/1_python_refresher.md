@@ -1,63 +1,51 @@
-# Python Fundamentals | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp2-PythonRefresher/1_python_refresher.html` → `BaseCamp2-PythonRefresher/1_python_refresher.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Python Fundamentals
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](../BaseCamp1/5_Git_Concept.md) · [Next →](1_python.md)
+>
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+## 📑 Contents
+- [Learning Objectives](#learning-objectives)
+- [Variables, Arithmetic & Built-in Functions](#variables-arithmetic-built-in-functions)
+  - [1.1Variables](#1-1variables)
+  - [1.2Arithmetic Operators](#1-2arithmetic-operators)
+  - [1.3Built-in Functions](#1-3built-in-functions)
+  - [✢ Part 1 Check](#part-1-check)
+- [String Manipulation](#string-manipulation)
+  - [2.1Creating and Printing Strings](#2-1creating-and-printing-strings)
+  - [2.2Indexing and Slicing](#2-2indexing-and-slicing)
+  - [2.3Concatenation and Repetition](#2-3concatenation-and-repetition)
+  - [2.4Useful String Methods](#2-4useful-string-methods)
+  - [2.5f-strings (Formatted Strings)](#2-5f-strings-formatted-strings)
+  - [2.6Mini Practice — No Loops Needed Yet](#2-6mini-practice-no-loops-needed-yet)
+  - [✢ Part 2 Check](#part-2-check)
+- [Data Structures](#data-structures)
 
-GEN AI  
-COACHING
+---
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
 
-XP **0**
+> Variables & built-ins · strings · data structures · branching, looping & comprehensions · functions. Everything runs in plain Python inside Jupyter — no installs, no imports, no virtual environments. Every snippet below is copy-paste ready.
 
-#### Base Camp 2 · Week 1 · Session 1
+---
 
-  * Overview & Objectives
-  * Part 1 · Getting Started
-  * 1.1 Variables
-  * 1.2 Arithmetic Operators
-  * 1.3 Built-in Functions
-  * Part 2 · Strings
-  * 2.1 Creating & Printing
-  * 2.2 Indexing & Slicing
-  * 2.3 Concatenation & Repetition
-  * 2.4 Useful String Methods
-  * 2.5 f-strings
-  * 2.6 Mini Practice
-  * Part 3 · Data Structures
-  * 3.1 Lists
-  * 3.2 Modifying Lists
-  * 3.3 Tuples
-  * 3.4 Dictionaries
-  * 3.5 Sets
-  * 3.6 Which Structure?
-  * 3.7 Composite Structures
-  * Part 4 · Control Flow
-  * 4.1 if / elif / else
-  * 4.2 for Loops
-  * 4.3 while Loops
-  * 4.4 Filtering a List
-  * 4.5 Counting With a Loop
-  * 4.6 Looping Over a Dictionary
-  * 4.7 Nested Loops
-  * 4.8 List Comprehensions
-  * 4.9 Dictionary Comprehensions
-  * Part 5 · Functions
-  * 5.1 Defining a Function
-  * 5.2 Parameters & Return
-  * 5.3 Default Parameters
-  * 5.4 Loops Into Functions
-  * 5.5 Reusing Functions
-  * 5.6 Try It Yourself
-  * Recap
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) Base Camp 2 · Week 1 · Session 1
 
@@ -66,8 +54,6 @@ XP **0**
 Variables & built-ins · strings · data structures · branching, looping & comprehensions · functions. Everything runs in plain Python inside Jupyter — no installs, no imports, no virtual environments. Every snippet below is copy-paste ready.
 
 ⏱ 3 hours, hands-on No installs required
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<../BaseCamp1/5_Git_Concept.html>) [Next →](<1_python.html>)
 
 ## Learning Objectives
 
@@ -776,14 +762,20 @@ Recap
 
 5Functions turn one-off logic into a reusable tool — write it once, call it anywhere.
 
-Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
+Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately.
 
-![GenAI Coaching](assets/genai-coaching-logo-light.svg) | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Coaching · Enterprise · by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 1 Python
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<../BaseCamp1/5_Git_Concept.html>) [Continue →](<1_python.html>)
+> *Source:* `BaseCamp2-PythonRefresher/1_python_refresher.html` → `BaseCamp2-PythonRefresher/1_python_refresher.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *1 Python*  
+> [← Previous](../BaseCamp1/5_Git_Concept.md) · [Continue →](1_python.md)
+
+</div>

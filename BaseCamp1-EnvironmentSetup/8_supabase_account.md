@@ -1,33 +1,49 @@
-# Creating Your Supabase Account | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/8_supabase_account.html` → `BaseCamp1-EnvironmentSetup/8_supabase_account.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Creating Your Supabase Account
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](7_claude_code_opencode_new.md) · [Next →](9_llm_settings.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [An online database, free to start](#an-online-database-free-to-start)
+- [Sign Up](#sign-up)
+  - [Option A — Email and password](#option-a-email-and-password)
+  - [Option B — Continue with GitHub](#option-b-continue-with-github)
+- [Create an Organization](#create-an-organization)
+- [Create Your First Project](#create-your-first-project)
+- [Look Around & Prove It Works](#look-around-prove-it-works)
+- [Find Your Project URL & API Keys](#find-your-project-url-api-keys)
+- [Free Plan Housekeeping](#free-plan-housekeeping)
+- [Keeping Your Keys Safe](#keeping-your-keys-safe)
+- [If Something Goes Wrong](#if-something-goes-wrong)
+- [Supabase Setup — Final Check](#supabase-setup-final-check)
+  - [Build & Verify — Supabase — Project URL](#build-verify-supabase-project-url)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · Supabase
+> Supabase gives you a free, hosted PostgreSQL database that lives online — plus ready-made login, file storage, and an automatic data API on top of it. It's the natural next step after a database that lives only on your laptop: an online database keeps working when your app goes live. The account takes about fifteen minutes to set up, so do it now rather than during a live session.
 
-  * Overview
-  * 1 · Sign Up
-  * 2 · Create an Organization
-  * 3 · Create Your First Project
-  * 4 · Look Around
-  * 5 · Find Your URL & Keys
-  * Free Plan Housekeeping
-  * Keeping Keys Safe
-  * Troubleshooting
-  * Setup Checklist
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Database Account
 
@@ -36,8 +52,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 Supabase gives you a free, hosted PostgreSQL database that lives online — plus ready-made login, file storage, and an automatic data API on top of it. It's the natural next step after a database that lives only on your laptop: an online database keeps working when your app goes live. The account takes about fifteen minutes to set up, so do it now rather than during a live session.
 
 🗄️ Hosted PostgreSQL ⏱ ~15 minutes Free plan is all you need
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<7_claude_code_opencode_new.html>) [Next →](<9_llm_settings.html>)
 
 Why this matters
 
@@ -195,7 +209,7 @@ Step 5 of 5
 Apps talk to your project using its web address and an API key. You'll collect them now so they're ready when the time comes.
 
   1. **Click "Connect" at the top of the dashboard** The Connect panel shows your **Project URL** — it looks like `https://abcdefghijkl.supabase.co` — and the key to use.
-  2. **Or open Project Settings → API Keys**Every key lives on this page. There's no separate "API" settings page.
+  2. **Or open Project Settings → API Keys** Every key lives on this page. There's no separate "API" settings page.
   3. **Copy your Project URL and both keys into your password manager** Label each one clearly so you never mix them up.
 
 Key| Looks like| Where it may be used  
@@ -332,12 +346,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 9 Llm Settings
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<7_claude_code_opencode_new.html>) [Continue →](<9_llm_settings.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/8_supabase_account.html` → `BaseCamp1-EnvironmentSetup/8_supabase_account.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *9 Llm Settings*  
+> [← Previous](7_claude_code_opencode_new.md) · [Continue →](9_llm_settings.md)
+
+</div>

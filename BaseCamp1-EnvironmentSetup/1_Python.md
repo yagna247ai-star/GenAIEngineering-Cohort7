@@ -1,31 +1,45 @@
-# Session 1 — Installing Python | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/1_Python.html` → `BaseCamp1-EnvironmentSetup/1_Python.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Session 1 — Installing Python
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · `← Prev` · [Next →](2_VS_Code.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [One version, everywhere](#one-version-everywhere)
+- [Download Python 3.11.9](#download-python-3-11-9)
+- [Installing on Windows](#installing-on-windows)
+- [Installing on macOS](#installing-on-macos)
+- [Confirm Python Is Installed Correctly](#confirm-python-is-installed-correctly)
+- ["python", "python3", or "py" — Which One Do I Type?](#python-python3-or-py-which-one-do-i-type)
+- [Got Multiple Python Versions Installed?](#got-multiple-python-versions-installed)
+- [Environment Check — Before You Move On](#environment-check-before-you-move-on)
+  - [Build & Verify — Python 3.11.9 — Verify Your Install](#build-verify-python-3-11-9-verify-your-install)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · Session 1
+> By the end of this session, every laptop in the room — Windows or Mac — runs the exact same Python version, verified and ready. That consistency is the whole point: when everyone's code behaves the same way, debugging a shared exercise means debugging the exercise, not someone's environment.
 
-  * Overview
-  * Step 1 · Download Python
-  * Step 2 · Install on Windows
-  * Step 2 · Install on macOS
-  * Step 3 · Verify the Install
-  * python vs python3 vs py
-  * Multiple Versions Installed
-  * Environment Check
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Session 1
 
@@ -34,8 +48,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 By the end of this session, every laptop in the room — Windows or Mac — runs the exact same Python version, verified and ready. That consistency is the whole point: when everyone's code behaves the same way, debugging a shared exercise means debugging the exercise, not someone's environment.
 
 🐍 Target version: Python 3.11.9 Windows + macOS covered
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey ← Prev [Next →](<2_VS_Code.html>)
 
 Why this matters
 
@@ -284,12 +296,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 2 Vs Code
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-← Previous [Continue →](<2_VS_Code.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/1_Python.html` → `BaseCamp1-EnvironmentSetup/1_Python.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Vs Code*  
+> `← Previous` · [Continue →](2_VS_Code.md)
+
+</div>

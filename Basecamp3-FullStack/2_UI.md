@@ -1,67 +1,51 @@
-# Bringing the Calculator to Life with HTML &amp; JavaScript — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp3-FullStack/2_UI.html` → `BaseCamp3-FullStack/2_UI.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Bringing the Calculator to Life with HTML & JavaScript — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](1_fastapi.md) · [Next →](app_idea_blueprint.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<1_fastapi.html>) [Next →](<app_idea_blueprint.html>)
+## 📑 Contents
+- [How This Extended Session Breaks Down](#how-this-extended-session-breaks-down)
+- [By the End of This Session, You Will Be Able To…](#by-the-end-of-this-session-you-will-be-able-to)
+- [What Is HTML?](#what-is-html)
+- [The Skeleton of Every Page](#the-skeleton-of-every-page)
+- [Text & Structure Tags](#text-structure-tags)
+- [Input Elements — Building a Form](#input-elements-building-a-form)
+- [The Calculator Skeleton (Putting It Together)](#the-calculator-skeleton-putting-it-together)
+- [What Is JavaScript (and Where It Runs)](#what-is-javascript-and-where-it-runs)
+- [Adding a <script> Tag](#adding-a-script-tag)
+- [Selecting Elements: getElementById](#selecting-elements-getelementbyid)
+- [Reading Input Values](#reading-input-values)
+- [Listening for Clicks: addEventListener](#listening-for-clicks-addeventlistener)
+- [Putting a Result on the Page](#putting-a-result-on-the-page)
+- [A Local-Only Calculator](#a-local-only-calculator)
+- [Quick Check — DOM Selection & Events](#quick-check-dom-selection-events)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Step-by-step HTML · the DOM & JavaScript events ·fetch()and CORS · running the front-end and back-end on two ports at once. Yesterday we built the server — today, a real interface calls it live, in the browser.
 
-XP **0**
+---
 
-#### Base Camp 3 · Week 2 · Session 2
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * Part 1 · HTML Basics
-  * 1.1 What Is HTML?
-  * 1.2 The Skeleton of Every Page
-  * 1.3 Text & Structure Tags
-  * 1.4 Input Elements — Building a Form
-  * 1.5 The Calculator Skeleton
-  * Part 2 · Introducing JavaScript
-  * 2.1 What Is JavaScript (and Where It Runs)
-  * 2.2 Adding a <script> Tag
-  * 2.3 Selecting Elements: getElementById
-  * 2.4 Reading Input Values
-  * 2.5 Listening for Clicks: addEventListener
-  * 2.6 Putting a Result on the Page
-  * 2.7 A Local-Only Calculator
-  * Part 3 · Talking to the Server
-  * 3.1 Recap: Our Server Is Still Running
-  * 3.2 What Is fetch()?
-  * 3.3 Calling /add from the Console
-  * 3.4 CORS: Why the Browser Blocks You
-  * 3.5 Fixing CORS in FastAPI
-  * 3.6 Wiring fetch() into the Button
-  * 3.7 Watch It Happen: the Network Tab
-  * 3.8 Handling Errors from the Server
-  * Halfway Point
-  * Part 4 · Two Ports, Two Servers
-  * 4.1 Two Servers, Two Ports — Why Split Them?
-  * 4.2 Keep the Backend Running
-  * 4.3 Serving the Front-End on Its Own Port
-  * 4.4 Two Terminals, Side by Side
-  * 4.5 Confirming Both Are Alive
-  * Part 5 · Full Calculator, End to End
-  * 5.1 The Complete index.html
-  * 5.2 The Complete app.js
-  * 5.3 Trying It End-to-End
-  * 5.4 Testing the divide-by-zero Error
-  * 5.5 Under the Hood: One Click, Recapped
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 35 · use ← → or the sidebar
 
@@ -505,7 +489,7 @@ Later today, `index.html` will be served from a different port than the API. Try
 
 DevTools Console — page served from a different originCopy
 [code] 
-    Access to fetch at 'http://localhost:8000/add?a=4&b;=5'
+    Access to fetch at 'http://localhost:8000/add?a=4&b=5'
     from origin 'http://localhost:5500' has been blocked by CORS policy:
     No 'Access-Control-Allow-Origin' header is present on the requested resource.
 [/code]
@@ -954,8 +938,18 @@ Backticks, not quotes — and `${op}`, `${a}`, `${b}` spliced into the URL exact
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: App Idea Blueprint
+<div align="center">
 
-[← Previous](<1_fastapi.html>) [Continue →](<app_idea_blueprint.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `BaseCamp3-FullStack/2_UI.html` → `BaseCamp3-FullStack/2_UI.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *App Idea Blueprint*  
+> [← Previous](1_fastapi.md) · [Continue →](app_idea_blueprint.md)
+
+</div>

@@ -1,31 +1,45 @@
-# Setting Up API Keys | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/3_api_keys.html` → `BaseCamp1-EnvironmentSetup/3_api_keys.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Setting Up API Keys
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](2_VS_Code.md) · [Next →](4_llm_api_keys.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [One account, one key, per provider](#one-account-one-key-per-provider)
+- [Mistral AI](#mistral-ai)
+- [Groq](#groq)
+- [OpenRouter](#openrouter)
+- [Serper](#serper)
+- [Hugging Face](#hugging-face)
+- [Keeping Your Keys Safe](#keeping-your-keys-safe)
+- [API Key Setup — Final Check](#api-key-setup-final-check)
+  - [Build & Verify — API Keys — Validate Token Format](#build-verify-api-keys-validate-token-format)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · API Access
+> Base Camp 2 and beyond will have you calling real LLM, search, and model-hosting APIs from Python. Every one of those providers needs an account and an API key. Do this setup now — once, calmly, outside of class time — so you're not fumbling through sign-up flows and email verification links in the middle of a live session.
 
-  * Overview
-  * 1 · Mistral AI
-  * 2 · Groq
-  * 3 · OpenRouter
-  * 4 · Serper
-  * 5 · Hugging Face
-  * Keeping Keys Safe
-  * Setup Checklist
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Before Base Camp 2
 
@@ -34,8 +48,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 Base Camp 2 and beyond will have you calling real LLM, search, and model-hosting APIs from Python. Every one of those providers needs an account and an API key. Do this setup now — once, calmly, outside of class time — so you're not fumbling through sign-up flows and email verification links in the middle of a live session.
 
 🔑 5 providers ⏱ ~15 minutes No coding required yet
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<2_VS_Code.html>) [Next →](<4_llm_api_keys.html>)
 
 Why this matters
 
@@ -287,12 +299,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 4 Llm Api Keys
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<2_VS_Code.html>) [Continue →](<4_llm_api_keys.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/3_api_keys.html` → `BaseCamp1-EnvironmentSetup/3_api_keys.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *4 Llm Api Keys*  
+> [← Previous](2_VS_Code.md) · [Continue →](4_llm_api_keys.md)
+
+</div>

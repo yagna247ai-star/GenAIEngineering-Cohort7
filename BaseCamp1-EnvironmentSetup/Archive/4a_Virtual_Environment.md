@@ -1,22 +1,35 @@
+<div align="center">
+
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
 # Virtual Environments — A Step-by-Step Model
 
-> **Source:** `BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html` → `BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+> **GenAI Journey** · [← Prev](../../Week1-CodeAssistants/2_full_stack.md) · [Next →](5_Git_Concept.md)
+>
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+## 📑 Contents
+  - [Start: one global Python](#start-one-global-python)
+- [Freeze it, replay it anywhere](#freeze-it-replay-it-anywhere)
+- [One shared shelf for every project](#one-shared-shelf-for-every-project)
+  - [Activation Challenge — Power Up Your venv](#activation-challenge-power-up-your-venv)
 
-#### Archive · Reference
+---
 
-  * Overview
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<../../Week1-CodeAssistants/2_full_stack.html>) [Next →](<5_Git_Concept.html>)
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) GEN AI COACHING Unlock Your Elite Future · Powered by AI Accelerator Hub XP **0**
 
@@ -148,12 +161,18 @@ Certificate unlocked — Virtual Environments Mastery
 
 All quizzes + lab complete. XP saved per file.
 
-#### Continue your elite future
+---
 
-Next up: 5 Git Concept
+<div align="center">
 
-[← Previous](<../../Week1-CodeAssistants/2_full_stack.html>) [Continue →](<5_Git_Concept.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-site-packages shelves are illustrative — not a literal directory listing · GenAI Coaching · AI Accelerator Hub
+> *Source:* `BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html` → `BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *5 Git Concept*  
+> [← Previous](../../Week1-CodeAssistants/2_full_stack.md) · [Continue →](5_Git_Concept.md)
+
+</div>

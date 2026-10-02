@@ -1,67 +1,51 @@
-# Python Fundamentals — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp2-PythonRefresher/1_python_slides.html` → `BaseCamp2-PythonRefresher/1_python_slides.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Python Fundamentals — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](1_python.md) · [Next →](2_python_refresher.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<1_python.html>) [Next →](<2_python_refresher.html>)
+## 📑 Contents
+- [How the Next 3 Hours Break Down](#how-the-next-3-hours-break-down)
+- [By the End of This Session, You Will Be Able To…](#by-the-end-of-this-session-you-will-be-able-to)
+- [Variables](#variables)
+- [Arithmetic Operators](#arithmetic-operators)
+- [Built-in Functions](#built-in-functions)
+- [Quick Check](#quick-check)
+- [Creating and Printing Strings](#creating-and-printing-strings)
+- [Indexing and Slicing](#indexing-and-slicing)
+- [Concatenation and Repetition](#concatenation-and-repetition)
+- [Useful String Methods](#useful-string-methods)
+- [f-strings (Formatted Strings)](#f-strings-formatted-strings)
+- [Mini Practice — No Loops Needed Yet](#mini-practice-no-loops-needed-yet)
+- [Quick Check](#quick-check)
+- [Lists](#lists)
+- [Modifying Lists](#modifying-lists)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Variables & built-ins · strings · data structures · branching, looping & comprehensions · functions. Everything runs in plain Python inside Jupyter — no installs, no imports, no virtual environments. Every snippet below is copy-paste ready.
 
-XP **0**
+---
 
-#### Base Camp 2 · Week 1 · Session 1
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * Part 1 · Getting Started
-  * 1.1 Variables
-  * 1.2 Arithmetic Operators
-  * 1.3 Built-in Functions
-  * Part 2 · Strings
-  * 2.1 Creating and Printing Strings
-  * 2.2 Indexing and Slicing
-  * 2.3 Concatenation and Repetition
-  * 2.4 Useful String Methods
-  * 2.5 f-strings (Formatted Strings)
-  * 2.6 Mini Practice — No Loops Needed Yet
-  * Part 3 · Data Structures
-  * 3.1 Lists
-  * 3.2 Modifying Lists
-  * 3.3 Tuples
-  * 3.4 Dictionaries
-  * 3.5 Sets
-  * 3.6 Which Data Structure Do I Use?
-  * 3.7 Composite Data Structures
-  * Part 4 · Control Flow
-  * 4.1 if / elif / else
-  * 4.2 for Loops
-  * 4.3 while Loops
-  * 4.4 Filtering a List
-  * 4.5 Counting With a Loop
-  * 4.6 Looping Over a Dictionary
-  * 4.7 Nested Loops
-  * 4.8 List Comprehensions
-  * 4.9 Dictionary Comprehensions
-  * Part 5 · Functions
-  * 5.1 Defining a Function
-  * 5.2 Parameters and Return Values
-  * 5.3 Default Parameter Values
-  * 5.4 Turning Loops Into Functions
-  * 5.5 Reusing Functions on New Data
-  * 5.6 Before Next Session
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 35 · use ← → or the sidebar
 
@@ -982,8 +966,18 @@ Check
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: 2 Python Refresher
+<div align="center">
 
-[← Previous](<1_python.html>) [Continue →](<2_python_refresher.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `BaseCamp2-PythonRefresher/1_python_slides.html` → `BaseCamp2-PythonRefresher/1_python_slides.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *2 Python Refresher*  
+> [← Previous](1_python.md) · [Continue →](2_python_refresher.md)
+
+</div>

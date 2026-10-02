@@ -1,34 +1,48 @@
-# Creating Your AWS Account | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/5_aws_account.html` → `BaseCamp1-EnvironmentSetup/5_aws_account.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Creating Your AWS Account
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](4_llm_api_keys.md) · [Next →](6_github_account.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [Your email is your root login](#your-email-is-your-root-login)
+- [Start Sign-Up: Email, Account Name & Password](#start-sign-up-email-account-name-password)
+- [Add Your Contact Details](#add-your-contact-details)
+- [Add a Payment Method](#add-a-payment-method)
+- [Verify Your Identity by Phone](#verify-your-identity-by-phone)
+- [Choose Your Account Plan & Support Plan](#choose-your-account-plan-support-plan)
+- [Sign In as the Root User](#sign-in-as-the-root-user)
+- [Secure the Root User with MFA](#secure-the-root-user-with-mfa)
+- [Set a Zero-Spend Budget Alert](#set-a-zero-spend-budget-alert)
+- [If Something Goes Wrong](#if-something-goes-wrong)
+- [AWS Account Setup — Final Check](#aws-account-setup-final-check)
+  - [Build & Verify — AWS — Root & Budget Check](#build-verify-aws-root-budget-check)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · AWS
+> Amazon Web Services (AWS) is where the fellowship's projects will eventually be deployed. Creating an account takes about fifteen minutes, but it involves email codes, a card, and a phone verification — so do it now, calmly, rather than during a live session. You'll sign up with your email address, and that same email becomes yourroot userlogin.
 
-  * Overview
-  * 1 · Start Sign-Up
-  * 2 · Contact Details
-  * 3 · Payment Method
-  * 4 · Verify Your Identity
-  * 5 · Choose Your Plans
-  * 6 · Sign In as Root User
-  * 7 · Secure with MFA
-  * 8 · Set a Budget Alert
-  * Troubleshooting
-  * Setup Checklist
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Cloud Account
 
@@ -37,8 +51,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 Amazon Web Services (AWS) is where the fellowship's projects will eventually be deployed. Creating an account takes about fifteen minutes, but it involves email codes, a card, and a phone verification — so do it now, calmly, rather than during a live session. You'll sign up with your email address, and that same email becomes your **root user** login.
 
 ☁️ Amazon Web Services ⏱ ~15 minutes 💳 Credit or debit card required
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<4_llm_api_keys.html>) [Next →](<6_github_account.html>)
 
 Why this matters
 
@@ -323,12 +335,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 6 Github Account
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<4_llm_api_keys.html>) [Continue →](<6_github_account.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/5_aws_account.html` → `BaseCamp1-EnvironmentSetup/5_aws_account.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *6 Github Account*  
+> [← Previous](4_llm_api_keys.md) · [Continue →](6_github_account.md)
+
+</div>

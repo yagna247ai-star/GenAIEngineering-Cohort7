@@ -1,76 +1,51 @@
-# Full-Stack Build with OpenCode — Slides | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `Week1-CodeAssistants/2_full_stack.html` → `Week1-CodeAssistants/2_full_stack.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Full-Stack Build with OpenCode — Slides
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](1_opencode_introduction.md) · [Next →](../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.md)
+>
 
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<1_opencode_introduction.html>) [Next →](<../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html>)
+## 📑 Contents
+- [How Today Breaks Down](#how-today-breaks-down)
+- [By the End of Today, You Will Be Able To…](#by-the-end-of-today-you-will-be-able-to)
+- [If Any of This Is All New to You](#if-any-of-this-is-all-new-to-you)
+- [Where It Comes From](#where-it-comes-from)
+- [The Blueprint's Shape (JSON)](#the-blueprint-s-shape-json)
+- [Quick Check — Blueprint Shape](#quick-check-blueprint-shape)
+- [No JSON? A Markdown Version](#no-json-a-markdown-version)
+- [Set Up the Project](#set-up-the-project)
+- [Three Layers, One Plan](#three-layers-one-plan)
+- [The Build Prompt](#the-build-prompt)
+- [Get the Full Plan](#get-the-full-plan)
+- [Reading a Multi-Layer Plan](#reading-a-multi-layer-plan)
+- [A Memory File Before You Start](#a-memory-file-before-you-start)
+- [Choosing a Permission Setup](#choosing-a-permission-setup)
+- [Init & Write Memory](#init-write-memory)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)
+---
 
-GEN AI  
-COACHING
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+> Your app-idea blueprint goes in one end; a working FastAPI + SQLite + HTML/JS app comes out the other — plus two diagrams of your own app, drawn for you. Written for complete beginners: every term is explained the first time it shows up, and every step in both OpenCode and Claude Code. Everything from Session 1 (agents, skills, permissions, MCP) gets used for real, on your own app idea.
 
-XP **0**
+---
 
-#### Week 1 · Session 2
 
-  * Title
-  * Session Agenda
-  * Learning Objectives
-  * If This Is All New to You
-  * Part 1 · Your Blueprint
-  * 1.1 Where It Comes From
-  * 1.2 The Blueprint's Shape (JSON)
-  * 1.3 No JSON? A Markdown Version
-  * 1.4 Hands-On · Set Up the Project
-  * Part 2 · Plan the Whole Build
-  * 2.1 Three Layers, One Plan
-  * 2.2 The Build Prompt
-  * 2.3 Hands-On · Get the Full Plan
-  * 2.4 Reading a Multi-Layer Plan
-  * Part 3 · Memory & Setup
-  * 3.1 A Memory File Before You Start
-  * 3.2 Choosing a Permission Setup
-  * 3.3 Hands-On · Init & Write Memory
-  * Part 4 · Database Layer
-  * 4.1 Tables → Real Schema
-  * 4.2 Hands-On · Build the Database
-  * 4.3 Hands-On · Verify the Schema
-  * Part 5 · FastAPI Back End
-  * 5.1 Endpoints → Real Routes
-  * 5.2 Hands-On · Build the Backend
-  * 5.3 Hands-On · Test It in Swagger
-  * Halfway Point
-  * Part 6 · Front End
-  * 6.1 Screens & Controls → Pages & Elements
-  * 6.2 Hands-On · Scaffold the Front End
-  * 6.3 Hands-On · Build the Screens
-  * 6.4 Hands-On · Wire It to the Backend
-  * Part 7 · Skills, Subagents & Diagrams
-  * 7.1 A Skill to Run Everything
-  * 7.2 A Subagent to Cross-Check the Build
-  * 7.3 Why Diagram Your Own App?
-  * 7.4 A Skill to Draw the Architecture
-  * 7.5 A Skill to Draw the Sequence
-  * 7.6 Hands-On · Generate Both Diagrams
-  * 7.7 Hands-On · Write & Run the Skills
-  * Part 8 · Review, Test & Iterate
-  * 8.1 Reading a Diff Across 3 Layers
-  * 8.2 Hands-On · End-to-End Test
-  * 8.3 Hands-On · Redirect & Iterate
-  * 8.4 Hands-On · Fix Flagged Issues
-  * Part 9 · Wrap-Up
-  * 9.1 What Powered What
-  * 9.2 Before Week 2
-  * Recap
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 40 · use ← → or the sidebar
 
@@ -1053,8 +1028,18 @@ Check
 
 Lab
 
-#### Continue your elite future
+---
 
-Next up: 4A Virtual Environment
+<div align="center">
 
-[← Previous](<1_opencode_introduction.html>) [Continue →](<../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.html>)
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
+
+> *Source:* `Week1-CodeAssistants/2_full_stack.html` → `Week1-CodeAssistants/2_full_stack.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *4A Virtual Environment*  
+> [← Previous](1_opencode_introduction.md) · [Continue →](../BaseCamp1-EnvironmentSetup/Archive/4a_Virtual_Environment.md)
+
+</div>

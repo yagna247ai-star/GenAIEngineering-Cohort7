@@ -1,35 +1,51 @@
-# Setting Up Claude Code &amp; OpenCode with API Keys | GenAI Coaching — AI Accelerator Hub
+<div align="center">
 
-> **Source:** `BaseCamp1-EnvironmentSetup/7_claude_code_opencode_new.html` → `BaseCamp1-EnvironmentSetup/7_claude_code_opencode_new.md`  
-> **Brand:** GenAI Coaching × AI Accelerator Hub | White / Black / Gold Veranda `#0A0A0A` `#C9A86A` `#FFFFFF`  
-> **Deployment:** Corporate training — production-grade Markdown (converted from HTML, content verbatim)  
-> **Original HTML preserved alongside Markdown**
+<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+
+# Setting Up Claude Code & OpenCode with API Keys
+
+> **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
+> *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
+
+[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
+
+</div>
 
 ---
 
-Skip to content
+> **GenAI Journey** · [← Prev](7_claude_code_opencode.md) · [Next →](8_supabase_account.md)
+>
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg)GEN AI  
-COACHING
+## 📑 Contents
+- [Two agents, one set of keys](#two-agents-one-set-of-keys)
+- [Which Key Should You Use First?](#which-key-should-you-use-first)
+  - [The parallel, provider by provider](#the-parallel-provider-by-provider)
+- [Install Claude Code](#install-claude-code)
+- [Give Claude Code Your Anthropic API Key](#give-claude-code-your-anthropic-api-key)
+- [Run Claude Code for the First Time](#run-claude-code-for-the-first-time)
+- [Install OpenCode](#install-opencode)
+- [Connect Your API Keys to OpenCode](#connect-your-api-keys-to-opencode)
+  - [Option 1 — The /connect command (recommended)](#option-1-the-connect-command-recommended)
+  - [Option 2 — Environment variables](#option-2-environment-variables)
+- [Pick a Model and Run OpenCode](#pick-a-model-and-run-opencode)
+  - [Pick a small, cheap model first](#pick-a-small-cheap-model-first)
+- [Side-by-Side Commands](#side-by-side-commands)
+- [Using Coding Agents Safely](#using-coding-agents-safely)
+- [If Something Goes Wrong](#if-something-goes-wrong)
 
-Unlock Your Elite Future · Powered by AI Accelerator Hub
+---
 
-![](assets/genai-coaching-emblem.svg) 0 XPStreak 0
 
-#### Base Camp 1 · Week 1 · AI Agents
+> Claude Code and OpenCode are AI coding agents that live in your terminal: you open a project folder, describe what you want in plain English, and the agent reads your files, edits code, and runs commands to get it done. Both can run on the API keys you created on the previous two pages — this page installs each one, picks a cost-smart key to start with, and connects it, so you can start building with them from day one.
 
-  * Overview
-  * Which Key Should You Use?
-  * A1 · Claude Code: Install
-  * A2 · Claude Code: API Key
-  * A3 · Claude Code: First Run
-  * B1 · OpenCode: Install
-  * B2 · OpenCode: API Keys
-  * B3 · OpenCode: First Run
-  * Quick Reference
-  * Using Agents Safely
-  * Troubleshooting
-  * Setup Checklist
+---
+
+
+> [!TIP]
+> **Corporate Tip — Deploy Ready**  
+> Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
+
 
 ![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · AI Coding Tools
 
@@ -38,8 +54,6 @@ Unlock Your Elite Future · Powered by AI Accelerator Hub
 Claude Code and OpenCode are AI coding agents that live in your terminal: you open a project folder, describe what you want in plain English, and the agent reads your files, edits code, and runs commands to get it done. Both can run on the API keys you created on the previous two pages — this page installs each one, picks a cost-smart key to start with, and connects it, so you can start building with them from day one.
 
 ⌨️ 2 terminal tools ⏱ ~20 minutes Uses keys from pages 3 & 4
-
-![](assets/genai-coaching-emblem.svg) GenAI Journey [← Prev](<7_claude_code_opencode.html>) [Next →](<8_supabase_account.html>)
 
 Why this matters
 
@@ -79,7 +93,7 @@ Before you connect anything
 
 You generated eight keys across the last two pages. Only six of them can act as an agent's "brain" — Serper and Hugging Face are a search tool and a model-hosting service, not chat models, so they don't appear here. (Serper comes back later in the fellowship as a _tool_ an agent can call, not the model powering it.) For the six that matter, follow this order:
 
-  1. **Start free — Groq, Mistral, or OpenRouter**All three give you real, working credits with no card on file. Any one of them is enough to learn the ropes with OpenCode (see the parallels table below for why Claude Code isn't in this step).
+  1. **Start free — Groq, Mistral, or OpenRouter** All three give you real, working credits with no card on file. Any one of them is enough to learn the ropes with OpenCode (see the parallels table below for why Claude Code isn't in this step).
   2. **Gemini is a second free option** Google AI Studio's free tier needs no billing either — a good fourth option if you want more headroom before touching a paid key.
   3. **Only move to a paid key once free credits run out** That means **Anthropic** or **OpenAI** — both need a small amount of prepaid credit (see page 4). Anthropic is the one to reach for if you specifically want to use Claude Code.
 
@@ -553,12 +567,18 @@ Elite Completed — GenAI Coaching
 
 All Quick Checks + Lab verified. Your certificate is ready — XP saved on this device.
 
-![GenAI Coaching](assets/genai-coaching-logo.svg) GEN AI COACHING | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg)
+---
 
-GenAI Learning · Powered by AI Accelerator Hub
+<div align="center">
 
-#### Continue your elite future
+<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
 
-Next up: 8 Supabase Account
+*GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
-[← Previous](<7_claude_code_opencode.html>) [Continue →](<8_supabase_account.html>)
+> *Source:* `BaseCamp1-EnvironmentSetup/7_claude_code_opencode_new.html` → `BaseCamp1-EnvironmentSetup/7_claude_code_opencode_new.md` | *Original HTML preserved* | *Gold `#C9A86A` Black `#0A0A0A` White `#FFFFFF`*
+
+
+> **Continue your elite future** — Next up: *8 Supabase Account*  
+> [← Previous](7_claude_code_opencode.md) · [Continue →](8_supabase_account.md)
+
+</div>
