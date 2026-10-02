@@ -1,0 +1,66 @@
+name: Wiki Sync — One GitHub → One Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - 'GEF_C7_Redesigned_Weekend_Quality_Schedule.xlsx'
+      - 'GEF C7 Final Schedule.xlsx'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone wiki
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.wiki.git /tmp/wiki
+          ls -la /tmp/wiki | head -n 20
+
+      - name: Sync MD to Wiki (26 modules + GEF schedule)
+        run: |
+          set -e
+          # Copy each MD as wiki page: BaseCamp1-EnvironmentSetup/1_Python.md -> BaseCamp1-EnvironmentSetup-1-Python.md
+          for f in $(find . -name "*.md" -not -path "./.venv/*" -not -path "./.git/*" -not -path "./ai-accelerator-hub/*" -not -path "./marketing-pipeline-mvp/*" -not -path "./.tmp/*"); do
+            n=$(echo "$f" | sed 's|^\./||; s|/|-|g; s|\.md||; s|_|-|g')
+            # Fix asset paths for wiki rendering (relative -> absolute raw)
+            dir=$(dirname "$f")
+            # Copy raw file first
+            cp "$f" "/tmp/wiki/$n.md"
+            # Convert relative assets to absolute raw for wiki
+            sed -i "s|src=\"assets/|src=\"https://raw.githubusercontent.com/${{ github.repository }}/main/$dir/assets/|g" "/tmp/wiki/$n.md"
+            sed -i "s|(assets/|(https://raw.githubusercontent.com/${{ github.repository }}/main/$dir/assets/|g" "/tmp/wiki/$n.md"
+          done
+          # GEF schedule page
+          if [ -f "GEF_C7_Redesigned_Weekend_Quality_Schedule.xlsx" ]; then
+            cat > /tmp/wiki/GEF-C7-Redesigned-Schedule.md << 'MD'
+          # GEF C7 — Redesigned Weekend-Quality Schedule
+          > **Weekday 08:00-10:00 + Weekend 10-13/15-18** — 8 sheets, preserves 100% original topics.
+
+          - **Download Excel:** [GEF_C7_Redesigned_Weekend_Quality_Schedule.xlsx](https://github.com/${{ github.repository }}/blob/main/GEF_C7_Redesigned_Weekend_Quality_Schedule.xlsx)
+          - **Sheets:** 00_Executive_Analysis → 01_Master_Schedule (12 cols) → 02_System_Design → 03_Cairo_Automation (separate) → 04_Career_Pointers → 05_Think_Arc_Tools
+          MD
+          fi
+          ls /tmp/wiki/*.md | wc -l | xargs echo "Wiki pages after sync:"
+
+      - name: Commit and push wiki
+        run: |
+          cd /tmp/wiki
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No wiki changes to push"
+            exit 0
+          fi
+          git commit -m "Sync MD → Wiki — $(date -u +%Y-%m-%dT%H:%M:%SZ) — 26 HTML+MD + GEF C7"
+          git push origin master
