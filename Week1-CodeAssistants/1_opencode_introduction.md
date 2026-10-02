@@ -1463,6 +1463,94 @@ Lab
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 0.1 saysopencode.jsoncholds secrets file-based. Which field is the allow-list of providers (slide 0.1)?**
+>
+> - [ ] enabled_providers
+> - [ ] allowed_models
+> - [ ] providers
+> - [ ] model_allowlist
+>
+> **Slide 0.2: where does the global config live on macOS/Linux?**
+>
+> - [ ] ~/.config/opencode/opencode.json
+> - [ ] ./opencode.json
+> - [ ] ~/.opencode/config.json
+> - [ ] /etc/opencode.json
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 0.1 saysopencode.jsoncholds secrets file-based. Which field is the allow-list of providers (slide 0.1)?** → *enabled_providers* — 
+> - **Slide 0.2: where does the global config live on macOS/Linux?** → *~/.config/opencode/opencode.json* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 1.1: which command scans the project and drafts AGENTS.md?**
+>
+> - [ ] /init
+> - [ ] /new
+> - [ ] /models
+> - [ ] /compact
+>
+> **Slide 1.3: what does/undodo — and what does it NOT undo (callout)?**
+>
+> - [ ] Removes last message+response; does NOT undo file edits on disk
+> - [ ] Deletes last file edit from disk
+> - [ ] Reverts git commit
+> - [ ] Closes the session
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 1.1: which command scans the project and drafts AGENTS.md?** → */init* — 
+> - **Slide 1.3: what does/undodo — and what does it NOT undo (callout)?** → *Removes last message+response; does NOT undo file edits on disk* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 4.2: how is a local (stdio) MCP server declared in opencode.jsonc?**
+>
+> - [ ] "type": "local" with "command": ["npx", ...]
+> - [ ] "type": "http" with "url"
+> - [ ] "type": "remote" with "socket"
+> - [ ] "mcp": "npx @playwright/mcp"
+>
+> **Slide 1.5: how do you switch the primary agent between Build and Plan in OpenCode?**
+>
+> - [ ] Press Tab
+> - [ ] Type /agents
+> - [ ] Type /plan
+> - [ ] Press Shift+Tab
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 4.2: how is a local (stdio) MCP server declared in opencode.jsonc?** → *"type": "local" with "command": ["npx", ...]* — 
+> - **Slide 1.5: how do you switch the primary agent between Build and Plan in OpenCode?** → *Press Tab* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

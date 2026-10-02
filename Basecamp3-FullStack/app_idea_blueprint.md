@@ -42,7 +42,6 @@ Load JSON Save as JSON
   3. **Load it later** Pick your file to continue where you left off.
   4. **Hand it to your AI** Give the JSON to your coding assistant.
 
-GenAI Coaching · Quick Check
 
 ## Quick Check — Blueprint Fields
 
@@ -87,6 +86,47 @@ Copy
 AI Accelerator Hub | Powered by AI Accelerator Hub
 
 ---
+
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **In “The Big Idea”, which field is defined as “A working title is fine. You can change it later. Example: GlowBook”?**
+>
+> - [ ] App name
+> - [ ] One-sentence pitch
+> - [ ] The problem being solved
+> - [ ] Type of app
+>
+> **In “Front End — Screens, Controls and Navigation”, the help for “Screens and controls” says each control must specify what (example table)?**
+>
+> - [ ] Shows or collects, and what happens (including HTTP method/path/data/errors for “Call the back end”)
+> - [ ] Only the button color
+> - [ ] Only the screen name
+> - [ ] Only the database table
+>
+> **In “Database — What the App Stores”, what field type is used to connect two tables (e.g., booking → customer)?**
+>
+> - [ ] Link to another table
+> - [ ] Short text
+> - [ ] Money amount
+> - [ ] Choice from a list
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **In “The Big Idea”, which field is defined as “A working title is fine. You can change it later. Example: GlowBook”?** → *App name* — 
+> - **In “Front End — Screens, Controls and Navigation”, the help for “Screens and controls” says each control must specify what (example table)?** → *Shows or collects, and what happens (including HTTP method/path/data/errors for “Call the back end”)* — 
+> - **In “Database — What the App Stores”, what field type is used to connect two tables (e.g., booking → customer)?** → *Link to another table* — 
+>
+> </details>
 
 <div align="center">
 

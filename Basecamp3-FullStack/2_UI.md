@@ -937,6 +937,94 @@ Lab
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **In Part 2.3, which JavaScript call selects the element withid="a"(slide 2.3)?**
+>
+> - [ ] document.getElementById("a")
+> - [ ] document.querySelector("a")
+> - [ ] document.getElementByTagName("a")
+> - [ ] document.getElementById(a)
+>
+> **Slide 2.4 warns.valuealways returns a string. What is the result of"4" + "5"withoutNumber()?**
+>
+> - [ ] "45" (string concatenation)
+> - [ ] 9 (number)
+> - [ ] 45 (number)
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **In Part 2.3, which JavaScript call selects the element withid="a"(slide 2.3)?** → *document.getElementById("a")* — 
+> - **Slide 2.4 warns.valuealways returns a string. What is the result of"4" + "5"withoutNumber()?** → *"45" (string concatenation)* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 3.2 introducesfetch()as the browser equivalent of which Python library from Session 1?**
+>
+> - [ ] requests
+> - [ ] uvicorn
+> - [ ] fastapi
+> - [ ] pydantic
+>
+> **Slide 3.4 shows the CORS error when fetching from port 5500 to 8000. What header was missing?**
+>
+> - [ ] Access-Control-Allow-Origin
+> - [ ] Content-Type
+> - [ ] Authorization
+> - [ ] Accept-Encoding
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 3.2 introducesfetch()as the browser equivalent of which Python library from Session 1?** → *requests* — 
+> - **Slide 3.4 shows the CORS error when fetching from port 5500 to 8000. What header was missing?** → *Access-Control-Allow-Origin* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 3.8 says fetch() only rejects on network failure. How must you detect a 400 or 404 response?**
+>
+> - [ ] Checkresponse.okyourself and parseerr.detail
+> - [ ] It throws automatically — use try/catch around fetch
+> - [ ] Checkresponse.status_code
+> - [ ] Use.catch()alone — it catches 400s
+>
+> **Slide 3.5’s CORS fix adds which middleware in main.py?**
+>
+> - [ ] CORSMiddleware with allow_origins=["*"]
+> - [ ] SessionMiddleware
+> - [ ] HTTPSRedirectMiddleware
+> - [ ] GZipMiddleware
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 3.8 says fetch() only rejects on network failure. How must you detect a 400 or 404 response?** → *Checkresponse.okyourself and parseerr.detail* — 
+> - **Slide 3.5’s CORS fix adds which middleware in main.py?** → *CORSMiddleware with allow_origins=["*"]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

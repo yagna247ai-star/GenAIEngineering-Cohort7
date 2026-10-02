@@ -892,6 +892,252 @@ Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pa
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **On macOS, which command creates a venv namedvenv_numpy_126?**
+>
+> - [ ] python3 -m venv venv_numpy_126
+> - [ ] pip install venv_numpy_126
+> - [ ] venv create
+> - [ ] source venv
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **On macOS, which command creates a venv namedvenv_numpy_126?** → *python3 -m venv venv_numpy_126* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesdeactivatedo?**
+>
+> - [ ] Returns to system Python
+> - [ ] Deletes venv
+> - [ ] Installs requirements
+> - [ ] Creates venv
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesdeactivatedo?** → *Returns to system Python* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesnp.strings.str_lenreturn on NumPy 2.3.2 for ['hello','world','numpy']?**
+>
+> - [ ] [5 5 5]
+> - [ ] [5 5]
+> - [ ] AttributeError
+> - [ ] [hello world]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesnp.strings.str_lenreturn on NumPy 2.3.2 for ['hello','world','numpy']?** → *[5 5 5]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doespip install numpy==1.26.4inside a venv do?**
+>
+> - [ ] Installs exactly 1.26.4 into that venv only
+> - [ ] Installs globally
+> - [ ] Uninstalls Python
+> - [ ] Creates venv
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doespip install numpy==1.26.4inside a venv do?** → *Installs exactly 1.26.4 into that venv only* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Runningpython test_numpy.pyinside venv_numpy_126 produces?**
+>
+> - [ ] AttributeError: no attribute 'strings'
+> - [ ] FileNotFoundError
+> - [ ] [5 5 5]
+> - [ ] ImportError
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Runningpython test_numpy.pyinside venv_numpy_126 produces?** → *AttributeError: no attribute 'strings'* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Which file records exact versions for recreation?**
+>
+> - [ ] requirements.txt
+> - [ ] employees.csv
+> - [ ] venv folder
+> - [ ] test_numpy.py
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Which file records exact versions for recreation?** → *requirements.txt* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Givenprices = np.array([100,200,300]), what isprices * 1.1?**
+>
+> - [ ] [110. 220. 330.]
+> - [ ] [110,220,330]
+> - [ ] Error
+> - [ ] [100,200,300]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Givenprices = np.array([100,200,300]), what isprices * 1.1?** → *[110. 220. 330.]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Forgrid = np.arange(1,13).reshape(3,4), what isgrid[1,2]?**
+>
+> - [ ] 7
+> - [ ] 6
+> - [ ] 8
+> - [ ] [2,6,10]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Forgrid = np.arange(1,13).reshape(3,4), what isgrid[1,2]?** → *7* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doespd.read_csv("employees.csv").shapereturn?**
+>
+> - [ ] (12, 5)
+> - [ ] (5, 12)
+> - [ ] (12,)
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doespd.read_csv("employees.csv").shapereturn?** → *(12, 5)* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesdf[df["salary"] > 70000][["name","salary"]]do?**
+>
+> - [ ] Keeps rows salary>70000, shows name/salary
+> - [ ] Adds bonus
+> - [ ] Groups
+> - [ ] Writes CSV
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesdf[df["salary"] > 70000][["name","salary"]]do?** → *Keeps rows salary>70000, shows name/salary* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Callingprocess_employee_data("missing.csv","out.csv")prints?**
+>
+> - [ ] Error: could not find file 'missing.csv'
+> - [ ] Traceback crash
+> - [ ] Saved 0 rows
+> - [ ] KeyError
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Callingprocess_employee_data("missing.csv","out.csv")prints?** → *Error: could not find file 'missing.csv'* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Which exception doesdf["typo_column"]raise?**
+>
+> - [ ] KeyError
+> - [ ] FileNotFoundError
+> - [ ] ValueError
+> - [ ] TypeError
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Which exception doesdf["typo_column"]raise?** → *KeyError* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesif __name__ == "__main__":guard do?**
+>
+> - [ ] Runs only when executed directly
+> - [ ] Always runs
+> - [ ] Never runs
+> - [ ] Handles errors
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesif __name__ == "__main__":guard do?** → *Runs only when executed directly* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Runningpython process_employees.py employees.csv employees_with_bonus.csvproduces?**
+>
+> - [ ] Saved 12 rows to employees_with_bonus.csv
+> - [ ] Error could not find
+> - [ ] Saved 0 rows
+> - [ ] Help
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Runningpython process_employees.py employees.csv employees_with_bonus.csvproduces?** → *Saved 12 rows to employees_with_bonus.csv* — 
+>
+> </details>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

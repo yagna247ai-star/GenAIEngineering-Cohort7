@@ -60,17 +60,31 @@ The chat apps you may already use — Claude.ai, ChatGPT, the Gemini app — and
 
 Plan for billing Anthropic and OpenAI generally require adding a small amount of prepaid credit before API calls will succeed — a few dollars is plenty for coursework. Gemini has a free tier that works without a card. Details are in each section, and dashboards change their wording from time to time, so trust the on-screen labels if they differ slightly from these steps. 
 
-Quick Check · An API key is not your chat subscription +25 XP
 
-Q1: Chat subscription vs API key:
+> [!NOTE]
+> **Quick Check — An API key is not your chat subscription · +25 XP** 🎯
+>
+> **Q1: Chat subscription vs API key:**
+>
+> - [ ] Separate products/billing — Claude Pro/ChatGPT Plus does not include API credits
+> - [ ] Same thing
+> - [ ] API key is free if you have chat subscription
+> - [ ] Billing is shared
+>
+> **Q2: Which detail is also in the "An API key is not your chat subscription" section?**
+>
+> - [ ] Overview: chat and API are separate products with separate b
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — An API key is not your chat subscription</summary>
+>
+> - **Q1: Chat subscription vs API key:** → *Separate products/billing — Claude Pro/ChatGPT Plus does not include API credits* — Overview: chat and API are separate products with separate billing.
+> - **Q2: Which detail is also in the "An API key is not your chat subscription" section?** → *Overview: chat and API are separate products with separate b* — Overview: chat and API are separate products with separate billing.
+>
+> </details>
 
-Separate products/billing — Claude Pro/ChatGPT Plus does not include API credits Same thing API key is free if you have chat subscription Billing is shared
-
-Q2: Which detail is also in the "An API key is not your chat subscription" section?
-
-Overview: chat and API are separate products with separate b Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 1 of 3
 
 ## Anthropic (Claude)
 
@@ -89,17 +103,31 @@ api keys pageCopy
 
 The Anthropic SDK looks for an environment variable named `ANTHROPIC_API_KEY` automatically — use exactly that name in your `.env` file and you won't have to pass the key around in code. 
 
-Quick Check · Anthropic (Claude) +25 XP
 
-Q1: Anthropic keys are at:
+> [!NOTE]
+> **Quick Check — Anthropic (Claude) · +25 XP** 🎯
+>
+> **Q1: Anthropic keys are at:**
+>
+> - [ ] console.anthropic.com → API Keys
+> - [ ] console.groq.com
+> - [ ] platform.openai.com
+> - [ ] aistudio.google.com
+>
+> **Q2: Which detail is also in the "Anthropic (Claude)" section?**
+>
+> - [ ] Anthropic section links to console.anthropic.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Anthropic (Claude)</summary>
+>
+> - **Q1: Anthropic keys are at:** → *console.anthropic.com → API Keys* — Anthropic section links to console.anthropic.com.
+> - **Q2: Which detail is also in the "Anthropic (Claude)" section?** → *Anthropic section links to console.anthropic.com.* — Anthropic section links to console.anthropic.com.
+>
+> </details>
 
-console.anthropic.com → API Keys console.groq.com platform.openai.com aistudio.google.com
-
-Q2: Which detail is also in the "Anthropic (Claude)" section?
-
-Anthropic section links to console.anthropic.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 2 of 3
 
 ## OpenAI
 
@@ -118,17 +146,31 @@ api keys pageCopy
 
 The OpenAI SDK reads `OPENAI_API_KEY` from the environment by default — use that exact name in your `.env` file. The billing page also lets you set a monthly spend limit; setting a low one on day one caps your worst-case cost if a key ever leaks. 
 
-Quick Check · OpenAI +25 XP
 
-Q1: OpenAI keys are at:
+> [!NOTE]
+> **Quick Check — OpenAI · +25 XP** 🎯
+>
+> **Q1: OpenAI keys are at:**
+>
+> - [ ] platform.openai.com → API keys
+> - [ ] console.anthropic.com
+> - [ ] serper.dev
+> - [ ] supabase.co
+>
+> **Q2: Which detail is also in the "OpenAI" section?**
+>
+> - [ ] OpenAI section links to platform.openai.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — OpenAI</summary>
+>
+> - **Q1: OpenAI keys are at:** → *platform.openai.com → API keys* — OpenAI section links to platform.openai.com.
+> - **Q2: Which detail is also in the "OpenAI" section?** → *OpenAI section links to platform.openai.com.* — OpenAI section links to platform.openai.com.
+>
+> </details>
 
-platform.openai.com → API keys console.anthropic.com serper.dev supabase.co
-
-Q2: Which detail is also in the "OpenAI" section?
-
-OpenAI section links to platform.openai.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 3 of 3
 
 ## Google Gemini
 
@@ -148,17 +190,31 @@ The Gemini API has a free tier with rate limits, so you can get started without 
 
 Free-tier data note Under Google's terms, content sent through the free tier may be used to improve Google's products. Don't send sensitive, personal, or confidential data while using the free tier. 
 
-Quick Check · Google Gemini +25 XP
 
-Q1: Gemini keys are at:
+> [!NOTE]
+> **Quick Check — Google Gemini · +25 XP** 🎯
+>
+> **Q1: Gemini keys are at:**
+>
+> - [ ] aistudio.google.com → API Keys (or Google AI Studio)
+> - [ ] platform.openai.com
+> - [ ] console.mistral.ai
+> - [ ] github.com
+>
+> **Q2: Which detail is also in the "Google Gemini" section?**
+>
+> - [ ] Gemini section links to aistudio.google.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Google Gemini</summary>
+>
+> - **Q1: Gemini keys are at:** → *aistudio.google.com → API Keys (or Google AI Studio)* — Gemini section links to aistudio.google.com.
+> - **Q2: Which detail is also in the "Google Gemini" section?** → *Gemini section links to aistudio.google.com.* — Gemini section links to aistudio.google.com.
+>
+> </details>
 
-aistudio.google.com → API Keys (or Google AI Studio) platform.openai.com console.mistral.ai github.com
-
-Q2: Which detail is also in the "Google Gemini" section?
-
-Gemini section links to aistudio.google.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Quick reference
 
 ## Side-by-Side Comparison
 
@@ -168,17 +224,31 @@ Provider| Key page| Key looks like| Billing to start| Env variable
 **OpenAI**| `platform.openai.com/api-keys`| `sk-… / sk-proj-…`| Prepaid credit| `OPENAI_API_KEY`  
 **Google Gemini**| `aistudio.google.com/apikey`| `AIza…`| Free tier available| `GEMINI_API_KEY`  
   
-Quick Check · Side-by-Side Comparison +25 XP
 
-Q1: Which table row is shown?
+> [!NOTE]
+> **Quick Check — Side-by-Side Comparison · +25 XP** 🎯
+>
+> **Q1: Which table row is shown?**
+>
+> - [ ] Provider, key location, billing notes side-by-side
+> - [ ] Only prices
+> - [ ] Only model names
+> - [ ] Only URLs
+>
+> **Q2: Which detail is also in the "Side-by-Side Comparison" section?**
+>
+> - [ ] Compare section provides side-by-side table.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Side-by-Side Comparison</summary>
+>
+> - **Q1: Which table row is shown?** → *Provider, key location, billing notes side-by-side* — Compare section provides side-by-side table.
+> - **Q2: Which detail is also in the "Side-by-Side Comparison" section?** → *Compare section provides side-by-side table.* — Compare section provides side-by-side table.
+>
+> </details>
 
-Provider, key location, billing notes side-by-side Only prices Only model names Only URLs
-
-Q2: Which detail is also in the "Side-by-Side Comparison" section?
-
-Compare section provides side-by-side table. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Optional but recommended
 
 ## Test That Each Key Works
 
@@ -222,17 +292,31 @@ powershellCopy
 
 One-off test only Keys typed into a terminal end up in your shell history, and these variables vanish when you close the window. That's fine for a quick check — the permanent setup is the `.env` file below. On Windows, use `curl.exe` (not plain `curl`), because PowerShell aliases `curl` to a different command. 
 
-Quick Check · Test That Each Key Works +25 XP
 
-Q1: How to test keys?
+> [!NOTE]
+> **Quick Check — Test That Each Key Works · +25 XP** 🎯
+>
+> **Q1: How to test keys?**
+>
+> - [ ] Run a small Python snippet that calls each provider
+> - [ ] Email support
+> - [ ] Wait for class
+> - [ ] Reinstall Python
+>
+> **Q2: Which detail is also in the "Test That Each Key Works" section?**
+>
+> - [ ] Test section gives Python snippets to call each API.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Test That Each Key Works</summary>
+>
+> - **Q1: How to test keys?** → *Run a small Python snippet that calls each provider* — Test section gives Python snippets to call each API.
+> - **Q2: Which detail is also in the "Test That Each Key Works" section?** → *Test section gives Python snippets to call each API.* — Test section gives Python snippets to call each API.
+>
+> </details>
 
-Run a small Python snippet that calls each provider Email support Wait for class Reinstall Python
-
-Q2: Which detail is also in the "Test That Each Key Works" section?
-
-Test section gives Python snippets to call each API. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Before you move on
 
 ## Keeping Your Keys Safe
 
@@ -266,17 +350,31 @@ pythonCopy
 
 Don't have python-dotenv yet? That's expected — `pip install python-dotenv` and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe. 
 
-Quick Check · Keeping Your Keys Safe +25 XP
 
-Q1: Safest practice is:
+> [!NOTE]
+> **Quick Check — Keeping Your Keys Safe · +25 XP** 🎯
+>
+> **Q1: Safest practice is:**
+>
+> - [ ] Store in .env, never commit, use password manager
+> - [ ] Commit .env to GitHub
+> - [ ] Share keys in Slack
+> - [ ] Hardcode in notebook
+>
+> **Q2: Which detail is also in the "Keeping Your Keys Safe" section?**
+>
+> - [ ] Safety repeats .env + gitignore guidance.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Keeping Your Keys Safe</summary>
+>
+> - **Q1: Safest practice is:** → *Store in .env, never commit, use password manager* — Safety repeats .env + gitignore guidance.
+> - **Q2: Which detail is also in the "Keeping Your Keys Safe" section?** → *Safety repeats .env + gitignore guidance.* — Safety repeats .env + gitignore guidance.
+>
+> </details>
 
-Store in .env, never commit, use password manager Commit .env to GitHub Share keys in Slack Hardcode in notebook
-
-Q2: Which detail is also in the "Keeping Your Keys Safe" section?
-
-Safety repeats .env + gitignore guidance. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## LLM API Key Setup — Final Check
 
@@ -288,23 +386,30 @@ You're done when...
 
 Stuck? Flag your instructor before Base Camp 2. If billing is a problem for any provider, tell them which one — the exercises can be done with just one or two of these keys. 
 
-Quick Check · LLM API Key Setup — Final Check +25 XP
 
-Q1: Final check needs:
-
-Anthropic, OpenAI, Gemini keys saved Only Groq key Only GitHub login VS Code theme
-
-Q2: Which detail is also in the "LLM API Key Setup — Final Check" section?
-
-Checklist verifies the three frontier keys. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — LLM Keys — Frontier Key Format
-
-Paste the prefix of an Anthropic key. The page says keys are shown once and start with sk-ant-…
-
-Your answer:
+> [!NOTE]
+> **Quick Check — LLM API Key Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Final check needs:**
+>
+> - [ ] Anthropic, OpenAI, Gemini keys saved
+> - [ ] Only Groq key
+> - [ ] Only GitHub login
+> - [ ] VS Code theme
+>
+> **Q2: Which detail is also in the "LLM API Key Setup — Final Check" section?**
+>
+> - [ ] Checklist verifies the three frontier keys.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — LLM API Key Setup — Final Check</summary>
+>
+> - **Q1: Final check needs:** → *Anthropic, OpenAI, Gemini keys saved* — Checklist verifies the three frontier keys.
+> - **Q2: Which detail is also in the "LLM API Key Setup — Final Check" section?** → *Checklist verifies the three frontier keys.* — Checklist verifies the three frontier keys.
+>
+> </details>
 
 Check Hint
 

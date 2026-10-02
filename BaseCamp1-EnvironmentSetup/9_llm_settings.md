@@ -65,17 +65,31 @@ The chat apps you may already use — Claude.ai, ChatGPT, the Gemini app — and
 
 Plan for billing Anthropic and OpenAI generally require adding a small amount of prepaid credit before API calls will succeed — a few dollars is plenty for coursework. Gemini, Mistral, Groq, OpenRouter, Serper, and Hugging Face all have free tiers that work without a card. Details are in each section, and dashboards change their wording from time to time, so trust the on-screen labels if they differ slightly from these steps. 
 
-Quick Check · One account, one key, per provider +25 XP
 
-Q1: How many providers on this page?
+> [!NOTE]
+> **Quick Check — One account, one key, per provider · +25 XP** 🎯
+>
+> **Q1: How many providers on this page?**
+>
+> - [ ] 8 providers: Anthropic, OpenAI, Gemini, Mistral, Groq, OpenRouter, Serper, Hugging Face
+> - [ ] 5 providers
+> - [ ] 3 providers
+> - [ ] 11 providers
+>
+> **Q2: Which detail is also in the "One account, one key, per provider" section?**
+>
+> - [ ] Lede: Eight providers — three frontier labs plus open-weight
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — One account, one key, per provider</summary>
+>
+> - **Q1: How many providers on this page?** → *8 providers: Anthropic, OpenAI, Gemini, Mistral, Groq, OpenRouter, Serper, Hugging Face* — Lede: Eight providers — three frontier labs plus open-weight/routing/search/hosting.
+> - **Q2: Which detail is also in the "One account, one key, per provider" section?** → *Lede: Eight providers — three frontier labs plus open-weight* — Lede: Eight providers — three frontier labs plus open-weight/routing/search/hosting.
+>
+> </details>
 
-8 providers: Anthropic, OpenAI, Gemini, Mistral, Groq, OpenRouter, Serper, Hugging Face 5 providers 3 providers 11 providers
-
-Q2: Which detail is also in the "One account, one key, per provider" section?
-
-Lede: Eight providers — three frontier labs plus open-weight Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 1 of 8
 
 ## Anthropic (Claude)
 
@@ -94,17 +108,31 @@ api keys pageCopy
 
 The Anthropic SDK looks for an environment variable named `ANTHROPIC_API_KEY` automatically — use exactly that name in your `.env` file and you won't have to pass the key around in code. 
 
-Quick Check · Anthropic (Claude) +25 XP
 
-Q1: Anthropic console is:
+> [!NOTE]
+> **Quick Check — Anthropic (Claude) · +25 XP** 🎯
+>
+> **Q1: Anthropic console is:**
+>
+> - [ ] console.anthropic.com
+> - [ ] platform.openai.com
+> - [ ] aistudio.google.com
+> - [ ] serper.dev
+>
+> **Q2: Which detail is also in the "Anthropic (Claude)" section?**
+>
+> - [ ] Anthropic section links to console.anthropic.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Anthropic (Claude)</summary>
+>
+> - **Q1: Anthropic console is:** → *console.anthropic.com* — Anthropic section links to console.anthropic.com.
+> - **Q2: Which detail is also in the "Anthropic (Claude)" section?** → *Anthropic section links to console.anthropic.com.* — Anthropic section links to console.anthropic.com.
+>
+> </details>
 
-console.anthropic.com platform.openai.com aistudio.google.com serper.dev
-
-Q2: Which detail is also in the "Anthropic (Claude)" section?
-
-Anthropic section links to console.anthropic.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 2 of 8
 
 ## OpenAI
 
@@ -123,17 +151,31 @@ api keys pageCopy
 
 The OpenAI SDK reads `OPENAI_API_KEY` from the environment by default — use that exact name in your `.env` file. The billing page also lets you set a monthly spend limit; setting a low one on day one caps your worst-case cost if a key ever leaks. 
 
-Quick Check · OpenAI +25 XP
 
-Q1: OpenAI console is:
+> [!NOTE]
+> **Quick Check — OpenAI · +25 XP** 🎯
+>
+> **Q1: OpenAI console is:**
+>
+> - [ ] platform.openai.com
+> - [ ] console.anthropic.com
+> - [ ] console.groq.com
+> - [ ] supabase.com
+>
+> **Q2: Which detail is also in the "OpenAI" section?**
+>
+> - [ ] OpenAI section links to platform.openai.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — OpenAI</summary>
+>
+> - **Q1: OpenAI console is:** → *platform.openai.com* — OpenAI section links to platform.openai.com.
+> - **Q2: Which detail is also in the "OpenAI" section?** → *OpenAI section links to platform.openai.com.* — OpenAI section links to platform.openai.com.
+>
+> </details>
 
-platform.openai.com console.anthropic.com console.groq.com supabase.com
-
-Q2: Which detail is also in the "OpenAI" section?
-
-OpenAI section links to platform.openai.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 3 of 8
 
 ## Google Gemini
 
@@ -153,17 +195,31 @@ The Gemini API has a free tier with rate limits, so you can get started without 
 
 Free-tier data note Under Google's terms, content sent through the free tier may be used to improve Google's products. Don't send sensitive, personal, or confidential data while using the free tier. 
 
-Quick Check · Google Gemini +25 XP
 
-Q1: Gemini console is:
+> [!NOTE]
+> **Quick Check — Google Gemini · +25 XP** 🎯
+>
+> **Q1: Gemini console is:**
+>
+> - [ ] aistudio.google.com
+> - [ ] platform.openai.com
+> - [ ] console.mistral.ai
+> - [ ] github.com
+>
+> **Q2: Which detail is also in the "Google Gemini" section?**
+>
+> - [ ] Gemini section links to aistudio.google.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Google Gemini</summary>
+>
+> - **Q1: Gemini console is:** → *aistudio.google.com* — Gemini section links to aistudio.google.com.
+> - **Q2: Which detail is also in the "Google Gemini" section?** → *Gemini section links to aistudio.google.com.* — Gemini section links to aistudio.google.com.
+>
+> </details>
 
-aistudio.google.com platform.openai.com console.mistral.ai github.com
-
-Q2: Which detail is also in the "Google Gemini" section?
-
-Gemini section links to aistudio.google.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 4 of 8
 
 ## Mistral AI
 
@@ -181,17 +237,31 @@ api keys pageCopy
 
 Some new Mistral accounts need a verified phone number or a payment method on file before API access is fully enabled — follow any prompts the console shows you. The Mistral SDK reads `MISTRAL_API_KEY` from the environment. 
 
-Quick Check · Mistral AI +25 XP
 
-Q1: Mistral console is:
+> [!NOTE]
+> **Quick Check — Mistral AI · +25 XP** 🎯
+>
+> **Q1: Mistral console is:**
+>
+> - [ ] console.mistral.ai
+> - [ ] platform.openai.com
+> - [ ] aws.amazon.com
+> - [ ] supabase.co
+>
+> **Q2: Which detail is also in the "Mistral AI" section?**
+>
+> - [ ] Mistral section links to console.mistral.ai.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Mistral AI</summary>
+>
+> - **Q1: Mistral console is:** → *console.mistral.ai* — Mistral section links to console.mistral.ai.
+> - **Q2: Which detail is also in the "Mistral AI" section?** → *Mistral section links to console.mistral.ai.* — Mistral section links to console.mistral.ai.
+>
+> </details>
 
-console.mistral.ai platform.openai.com aws.amazon.com supabase.co
-
-Q2: Which detail is also in the "Mistral AI" section?
-
-Mistral section links to console.mistral.ai. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 5 of 8
 
 ## Groq
 
@@ -209,17 +279,31 @@ api keys pageCopy
 
 Groq's free tier includes generous rate limits, which makes it a good default choice for testing and live coding during class. The Groq SDK reads `GROQ_API_KEY` from the environment. 
 
-Quick Check · Groq +25 XP
 
-Q1: Groq console is:
+> [!NOTE]
+> **Quick Check — Groq · +25 XP** 🎯
+>
+> **Q1: Groq console is:**
+>
+> - [ ] console.groq.com
+> - [ ] console.mistral.ai
+> - [ ] platform.openai.com
+> - [ ] github.com
+>
+> **Q2: Which detail is also in the "Groq" section?**
+>
+> - [ ] Groq section links to console.groq.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Groq</summary>
+>
+> - **Q1: Groq console is:** → *console.groq.com* — Groq section links to console.groq.com.
+> - **Q2: Which detail is also in the "Groq" section?** → *Groq section links to console.groq.com.* — Groq section links to console.groq.com.
+>
+> </details>
 
-console.groq.com console.mistral.ai platform.openai.com github.com
-
-Q2: Which detail is also in the "Groq" section?
-
-Groq section links to console.groq.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 6 of 8
 
 ## OpenRouter
 
@@ -237,17 +321,31 @@ api keys pageCopy
 
 Setting a credit limit on day one is worth the extra ten seconds — it caps your worst-case spend if a key ever leaks or a script runs away in a loop. The OpenRouter SDK reads `OPENROUTER_API_KEY` from the environment. 
 
-Quick Check · OpenRouter +25 XP
 
-Q1: OpenRouter gives:
+> [!NOTE]
+> **Quick Check — OpenRouter · +25 XP** 🎯
+>
+> **Q1: OpenRouter gives:**
+>
+> - [ ] Many LLMs via one API
+> - [ ] Only one model
+> - [ ] Only search
+> - [ ] Only DB
+>
+> **Q2: Which detail is also in the "OpenRouter" section?**
+>
+> - [ ] Overview says OpenRouter many LLMs via one API.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — OpenRouter</summary>
+>
+> - **Q1: OpenRouter gives:** → *Many LLMs via one API* — Overview says OpenRouter many LLMs via one API.
+> - **Q2: Which detail is also in the "OpenRouter" section?** → *Overview says OpenRouter many LLMs via one API.* — Overview says OpenRouter many LLMs via one API.
+>
+> </details>
 
-Many LLMs via one API Only one model Only search Only DB
-
-Q2: Which detail is also in the "OpenRouter" section?
-
-Overview says OpenRouter many LLMs via one API. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 7 of 8
 
 ## Serper
 
@@ -264,17 +362,31 @@ api keys pageCopy
 
 Serper's free tier gives you a fixed number of free search credits when you sign up — plenty for coursework, but keep an eye on usage once you start building agents that search on every request. 
 
-Quick Check · Serper +25 XP
 
-Q1: Serper provides:
+> [!NOTE]
+> **Quick Check — Serper · +25 XP** 🎯
+>
+> **Q1: Serper provides:**
+>
+> - [ ] Real-time web search
+> - [ ] PostgreSQL hosting
+> - [ ] Code editing
+> - [ ] Logo design
+>
+> **Q2: Which detail is also in the "Serper" section?**
+>
+> - [ ] Overview says Serper provides real-time web search.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Serper</summary>
+>
+> - **Q1: Serper provides:** → *Real-time web search* — Overview says Serper provides real-time web search.
+> - **Q2: Which detail is also in the "Serper" section?** → *Overview says Serper provides real-time web search.* — Overview says Serper provides real-time web search.
+>
+> </details>
 
-Real-time web search PostgreSQL hosting Code editing Logo design
-
-Q2: Which detail is also in the "Serper" section?
-
-Overview says Serper provides real-time web search. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 8 of 8
 
 ## Hugging Face
 
@@ -292,17 +404,31 @@ tokens pageCopy
 
 Hugging Face calls these **access tokens** everywhere in its own docs — if you see that term later in the fellowship, it's the same key you're creating here. 
 
-Quick Check · Hugging Face +25 XP
 
-Q1: Hugging Face provides:
+> [!NOTE]
+> **Quick Check — Hugging Face · +25 XP** 🎯
+>
+> **Q1: Hugging Face provides:**
+>
+> - [ ] Hosted models and datasets via tokens
+> - [ ] Only AWS billing
+> - [ ] Only VS Code themes
+> - [ ] Only GitHub auth
+>
+> **Q2: Which detail is also in the "Hugging Face" section?**
+>
+> - [ ] Overview says Hugging Face hosted models/datasets.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Hugging Face</summary>
+>
+> - **Q1: Hugging Face provides:** → *Hosted models and datasets via tokens* — Overview says Hugging Face hosted models/datasets.
+> - **Q2: Which detail is also in the "Hugging Face" section?** → *Overview says Hugging Face hosted models/datasets.* — Overview says Hugging Face hosted models/datasets.
+>
+> </details>
 
-Hosted models and datasets via tokens Only AWS billing Only VS Code themes Only GitHub auth
-
-Q2: Which detail is also in the "Hugging Face" section?
-
-Overview says Hugging Face hosted models/datasets. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Quick reference
 
 ## Side-by-Side Comparison
 
@@ -317,17 +443,31 @@ Provider| Key page| Key looks like| Billing to start| Env variable
 **Serper**| `serper.dev/api-keys`| opaque string| Free search credits| `SERPER_API_KEY`  
 **Hugging Face**| `huggingface.co/settings/tokens`| `hf_…`| Free| `HUGGINGFACE_API_KEY`  
   
-Quick Check · Side-by-Side Comparison +25 XP
 
-Q1: Compare table shows:
+> [!NOTE]
+> **Quick Check — Side-by-Side Comparison · +25 XP** 🎯
+>
+> **Q1: Compare table shows:**
+>
+> - [ ] All 8 providers, key locations, billing notes
+> - [ ] Only 3
+> - [ ] Only prices
+> - [ ] Only URLs
+>
+> **Q2: Which detail is also in the "Side-by-Side Comparison" section?**
+>
+> - [ ] Compare is side-by-side for all 8.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Side-by-Side Comparison</summary>
+>
+> - **Q1: Compare table shows:** → *All 8 providers, key locations, billing notes* — Compare is side-by-side for all 8.
+> - **Q2: Which detail is also in the "Side-by-Side Comparison" section?** → *Compare is side-by-side for all 8.* — Compare is side-by-side for all 8.
+>
+> </details>
 
-All 8 providers, key locations, billing notes Only 3 Only prices Only URLs
-
-Q2: Which detail is also in the "Side-by-Side Comparison" section?
-
-Compare is side-by-side for all 8. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Optional but recommended
 
 ## Test That Each Key Works
 
@@ -395,17 +535,31 @@ powershellCopy
 
 One-off test only Keys typed into a terminal end up in your shell history, and these variables vanish when you close the window. That's fine for a quick check — the permanent setup is the `.env` file below. On Windows, use `curl.exe` (not plain `curl`), because PowerShell aliases `curl` to a different command. 
 
-Quick Check · Test That Each Key Works +25 XP
 
-Q1: Test uses:
+> [!NOTE]
+> **Quick Check — Test That Each Key Works · +25 XP** 🎯
+>
+> **Q1: Test uses:**
+>
+> - [ ] Small Python snippets calling each provider
+> - [ ] Manual email
+> - [ ] Reinstall Python
+> - [ ] VS Code only
+>
+> **Q2: Which detail is also in the "Test That Each Key Works" section?**
+>
+> - [ ] Test section shows Python snippets.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Test That Each Key Works</summary>
+>
+> - **Q1: Test uses:** → *Small Python snippets calling each provider* — Test section shows Python snippets.
+> - **Q2: Which detail is also in the "Test That Each Key Works" section?** → *Test section shows Python snippets.* — Test section shows Python snippets.
+>
+> </details>
 
-Small Python snippets calling each provider Manual email Reinstall Python VS Code only
-
-Q2: Which detail is also in the "Test That Each Key Works" section?
-
-Test section shows Python snippets. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Before you move on
 
 ## Keeping Your Keys Safe
 
@@ -445,17 +599,31 @@ pythonCopy
 
 Don't have python-dotenv yet? That's expected — `pip install python-dotenv` and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe. 
 
-Quick Check · Keeping Your Keys Safe +25 XP
 
-Q1: Save keys in:
+> [!NOTE]
+> **Quick Check — Keeping Your Keys Safe · +25 XP** 🎯
+>
+> **Q1: Save keys in:**
+>
+> - [ ] .env file + password manager; don't commit
+> - [ ] Public repo
+> - [ ] Chat
+> - [ ] Screenshot
+>
+> **Q2: Which detail is also in the "Keeping Your Keys Safe" section?**
+>
+> - [ ] Safety says .env + password manager.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Keeping Your Keys Safe</summary>
+>
+> - **Q1: Save keys in:** → *.env file + password manager; don't commit* — Safety says .env + password manager.
+> - **Q2: Which detail is also in the "Keeping Your Keys Safe" section?** → *Safety says .env + password manager.* — Safety says .env + password manager.
+>
+> </details>
 
-.env file + password manager; don't commit Public repo Chat Screenshot
-
-Q2: Which detail is also in the "Keeping Your Keys Safe" section?
-
-Safety says .env + password manager. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## LLM & API Key Setup — Final Check
 
@@ -472,23 +640,30 @@ You're done when...
 
 Stuck? Flag your instructor before Base Camp 2. If billing is a problem for any provider, tell them which one — you'll need at least the Groq and Serper keys ready for the earliest hands-on exercises, and the exercises can otherwise be done with just one or two of these keys. 
 
-Quick Check · LLM & API Key Setup — Final Check +25 XP
 
-Q1: Checklist expects:
-
-All 8 keys saved safely Only 3 keys Only GitHub login Only Python version
-
-Q2: Which detail is also in the "LLM & API Key Setup — Final Check" section?
-
-Checklist verifies all 8. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — LLM Settings — .env Format
-
-Type an env line as the safety section recommends. Example: ANTHROPIC_API_KEY=sk-ant-...
-
-Your answer:
+> [!NOTE]
+> **Quick Check — LLM & API Key Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Checklist expects:**
+>
+> - [ ] All 8 keys saved safely
+> - [ ] Only 3 keys
+> - [ ] Only GitHub login
+> - [ ] Only Python version
+>
+> **Q2: Which detail is also in the "LLM & API Key Setup — Final Check" section?**
+>
+> - [ ] Checklist verifies all 8.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — LLM & API Key Setup — Final Check</summary>
+>
+> - **Q1: Checklist expects:** → *All 8 keys saved safely* — Checklist verifies all 8.
+> - **Q2: Which detail is also in the "LLM & API Key Setup — Final Check" section?** → *Checklist verifies all 8.* — Checklist verifies all 8.
+>
+> </details>
 
 Check Hint
 

@@ -78,15 +78,23 @@ torch 2.1 transformers 4.35 numpy 1.26 tokenizers 0.15
 
 app_b.py—
 
-Quick Check · Isolation — Why venv? +25 XP
 
-What does creating a venv give you?
+> [!NOTE]
+> **Quick Check — Quick Check · +25 XP** 🎯
+>
+> **What does creating a venv give you?**
+>
+> - [ ] A private site-packages per project — numpy 1.23 and 1.26 can coexist
+> - [ ] A faster Python interpreter
+> - [ ] A new Python version install
+> - [ ] A cloud backup of your code
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What does creating a venv give you?** → *A private site-packages per project — numpy 1.23 and 1.26 can coexist* — Correct! Each venv is a private shelf — same package name, different versions, no clash.
+>
+> </details>
 
-A private site-packages per project — numpy 1.23 and 1.26 can coexist A faster Python interpreter A new Python version install A cloud backup of your code
-
-→
-
-Reproducibility
 
 ## Freeze it, replay it anywhere
 
@@ -136,27 +144,23 @@ app_b.py (needs numpy 1.26)
 
 ● running
 
-Quick Check · Without venv — the cost +25 XP
 
-What happens if you pip install numpy==1.26 globally without isolation?
+> [!NOTE]
+> **Quick Check — Quick Check · +25 XP** 🎯
+>
+> **What does pip freeze > requirements.txt capture?**
+>
+> - [ ] Exact package==version pins to rebuild the same shelf elsewhere
+> - [ ] Only package names without versions
+> - [ ] Your Python installer executable
+> - [ ] Git commit history
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What does pip freeze > requirements.txt capture?** → *Exact package==version pins to rebuild the same shelf elsewhere* — Correct — a frozen manifest lets any empty env rebuild an identical shelf.
+>
+> </details>
 
-It overwrites numpy 1.23 — app_a breaks with ImportError Both versions are kept side by side automatically It creates a new venv for you Nothing changes until you reboot
-
-ELITE PRACTICE LAB
-
-### Activation Challenge — Power Up Your venv
-
-Type the exact command to activate a venv named `venv-a` on macOS/Linux (or Windows). Success means your shell prompt shows the env. Hint: source & Scripts differ by OS.
-
-Your answer: Check Hint
-
-Hint: macOS/Linux → source venv-a/bin/activate · Windows PowerShell → venv-a\Scripts\Activate.ps1 · Windows CMD → venv-a\Scripts\activate
-
-Lab complete +50 XP · You can now activate & isolate like an elite!
-
-Certificate unlocked — Virtual Environments Mastery
-
-All quizzes + lab complete. XP saved per file.
 
 ---
 

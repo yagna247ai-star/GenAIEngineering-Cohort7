@@ -763,6 +763,184 @@ Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pa
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Givenage = 27thenage = 28andprint(age), what is printed?**
+>
+> - [ ] 28
+> - [ ] 27
+> - [ ] 27 28
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Givenage = 27thenage = 28andprint(age), what is printed?** → *28* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Witha = 15andb = 4, what doesa // bevaluate to?**
+>
+> - [ ] 3
+> - [ ] 3.75
+> - [ ] 3.0
+> - [ ] 4
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Witha = 15andb = 4, what doesa // bevaluate to?** → *3* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Forcourse = "AI Engineering", what doescourse[0]return?**
+>
+> - [ ] "A"
+> - [ ] "AI"
+> - [ ] "g"
+> - [ ] space
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Forcourse = "AI Engineering", what doescourse[0]return?** → *"A"* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What does"AI! " * 3produce?**
+>
+> - [ ] "AI! AI! AI! "
+> - [ ] "AI!AI!AI!"
+> - [ ] "AI!"
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What does"AI! " * 3produce?** → *"AI! AI! AI! "* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Givenfruits = ["apple", "banana", "cherry", "date"], what doesfruits[1:3]return?**
+>
+> - [ ] ["banana", "cherry"]
+> - [ ] ["apple", "banana"]
+> - [ ] ["banana", "cherry", "date"]
+> - [ ] ["cherry"]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Givenfruits = ["apple", "banana", "cherry", "date"], what doesfruits[1:3]return?** → *["banana", "cherry"]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesnumbers.sort()return?**
+>
+> - [ ] None — sorts in place
+> - [ ] A new sorted list
+> - [ ] The last element
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesnumbers.sort()return?** → *None — sorts in place* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Withtemperature = 28, which message prints?**
+>
+> - [ ] It’s a pleasant day.
+> - [ ] It’s hot outside.
+> - [ ] It’s cold outside.
+> - [ ] Nothing
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Withtemperature = 28, which message prints?** → *It’s a pleasant day.* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What does[n for n in numbers2 if n % 2 == 0]produce for numbers2=[12,7,18,3,24,9,30]?**
+>
+> - [ ] [12, 18, 24, 30]
+> - [ ] [7, 3, 9]
+> - [ ] [12,7,18,3,24,9,30]
+> - [ ] []
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What does[n for n in numbers2 if n % 2 == 0]produce for numbers2=[12,7,18,3,24,9,30]?** → *[12, 18, 24, 30]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesis_even(4)return?**
+>
+> - [ ] True
+> - [ ] False
+> - [ ] 4
+> - [ ] None
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesis_even(4)return?** → *True* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesgreet_student("Ravi")print with default role="student"?**
+>
+> - [ ] Hello Ravi, welcome as a student!
+> - [ ] Hello Ravi, welcome as a mentor!
+> - [ ] Hello Ravi
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesgreet_student("Ravi")print with default role="student"?** → *Hello Ravi, welcome as a student!* — 
+>
+> </details>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

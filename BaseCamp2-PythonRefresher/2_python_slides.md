@@ -184,19 +184,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 06
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-Which macOS command creates a venv named `venv_numpy_126`?
-
-python3 -m venv venv_numpy_126 pip install venv create source venv
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 1 · Virtual Environments · 1.4
 
 ## Activating a Virtual Environment
 
@@ -336,19 +324,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 12
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-What error occurs running `np.strings.str_len` on NumPy 1.26?
-
-AttributeError FileNotFoundError [5 5 5] ImportError
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 3 · Hands-On · 3.2
 
 ## Set Up venv_numpy_232
 
@@ -520,33 +496,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 18
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-Which file records exact versions via `pip freeze > requirements.txt`?
-
-requirements.txt employees.csv test_numpy.py venv folder
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Halfway Point
-
-# From Environments to Data Tools
-
-You've built two isolated NumPy environments and understand why they exist. Take a longer break here — the second half shifts into NumPy's capabilities, pandas, and building a real command-line script.
-
-Next up: Part 4 — NumPy Capabilities
-
-GenAI Coaching | Powered by AI Accelerator Hub 
-
-19
-
-Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
-
-Part 4 · NumPy · 4.1
 
 ## Creating Arrays
 
@@ -680,19 +630,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 24
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-For `prices=np.array([100,200,300])`, what is `prices*1.1`?
-
-[110. 220. 330.] [110,220,330] Error [100,200,300]
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 5 · Pandas · 5.3
 
 ## Reading a CSV & Exploring It
 
@@ -844,19 +782,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 30
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-What does `pd.read_csv("employees.csv").shape` return?
-
-(12, 5) (5, 12) (12,) Error
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 6 · Files & Errors · 6.3
 
 ## Handling Errors with try / except
 
@@ -1004,19 +930,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 36
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-What does `if __name__=="__main__":` guard do?
-
-Runs only when executed directly Always runs Never runs Handles errors
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 7 · Real Scripts · 7.5
 
 ## Running It From the Terminal
 
@@ -1103,6 +1017,121 @@ GenAI Coaching | Powered by AI Accelerator Hub
 Lab
 
 ---
+
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Which macOS command creates a venv namedvenv_numpy_126?**
+>
+> - [ ] python3 -m venv venv_numpy_126
+> - [ ] pip install
+> - [ ] venv create
+> - [ ] source venv
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Which macOS command creates a venv namedvenv_numpy_126?** → *python3 -m venv venv_numpy_126* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What error occurs runningnp.strings.str_lenon NumPy 1.26?**
+>
+> - [ ] AttributeError
+> - [ ] FileNotFoundError
+> - [ ] [5 5 5]
+> - [ ] ImportError
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What error occurs runningnp.strings.str_lenon NumPy 1.26?** → *AttributeError* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Which file records exact versions viapip freeze > requirements.txt?**
+>
+> - [ ] requirements.txt
+> - [ ] employees.csv
+> - [ ] test_numpy.py
+> - [ ] venv folder
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Which file records exact versions viapip freeze > requirements.txt?** → *requirements.txt* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Forprices=np.array([100,200,300]), what isprices*1.1?**
+>
+> - [ ] [110. 220. 330.]
+> - [ ] [110,220,330]
+> - [ ] Error
+> - [ ] [100,200,300]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Forprices=np.array([100,200,300]), what isprices*1.1?** → *[110. 220. 330.]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doespd.read_csv("employees.csv").shapereturn?**
+>
+> - [ ] (12, 5)
+> - [ ] (5, 12)
+> - [ ] (12,)
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doespd.read_csv("employees.csv").shapereturn?** → *(12, 5)* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesif __name__=="__main__":guard do?**
+>
+> - [ ] Runs only when executed directly
+> - [ ] Always runs
+> - [ ] Never runs
+> - [ ] Handles errors
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesif __name__=="__main__":guard do?** → *Runs only when executed directly* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
 
 <div align="center">
 

@@ -1027,6 +1027,94 @@ Lab
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 1.2: which key in the exported JSON already contains the backend spec the agent will build (worked out automatically)?**
+>
+> - [ ] derived.api_endpoints
+> - [ ] answers
+> - [ ] progress
+> - [ ] issues_to_review
+>
+> **Slide 1.1: what is the single recommended build prompt instruction regarding decisions not covered by the blueprint?**
+>
+> - [ ] Ask me before making any decision not covered by my answers
+> - [ ] Make the best guess and continue
+> - [ ] Skip that feature
+> - [ ] Use the AI default template
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 1.2: which key in the exported JSON already contains the backend spec the agent will build (worked out automatically)?** → *derived.api_endpoints* — 
+> - **Slide 1.1: what is the single recommended build prompt instruction regarding decisions not covered by the blueprint?** → *Ask me before making any decision not covered by my answers* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 4.1: a blueprint field that “links to another table” becomes what in SQLite?**
+>
+> - [ ] A foreign key — a column pointing at a row in another table
+> - [ ] A new database file
+> - [ ] A JSON blob
+> - [ ] An index only
+>
+> **Slide 2.2: what is the recommended build order for the three layers — and why?**
+>
+> - [ ] Database → Backend → Frontend (each depends on the previous existing)
+> - [ ] Frontend → Backend → Database
+> - [ ] Backend → Database → Frontend
+> - [ ] All three in parallel
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 4.1: a blueprint field that “links to another table” becomes what in SQLite?** → *A foreign key — a column pointing at a row in another table* — 
+> - **Slide 2.2: what is the recommended build order for the three layers — and why?** → *Database → Backend → Frontend (each depends on the previous existing)* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Slide 6.1: each blueprint “screen” becomes what in the built app?**
+>
+> - [ ] A page — one HTML file per screen with its controls and navigation
+> - [ ] A database table
+> - [ ] An API endpoint
+> - [ ] A MCP server
+>
+> **Slide 7.1: the “run-app” skill from Session 1 Part 5 is what kind of skill?**
+>
+> - [ ] Scoped (project) skill — lives in .opencode/skills/ or .claude/skills/ inside the project
+> - [ ] Global skill — in ~/.config/opencode/skills/
+> - [ ] MCP server tool
+> - [ ] Agent permission
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Slide 6.1: each blueprint “screen” becomes what in the built app?** → *A page — one HTML file per screen with its controls and navigation* — 
+> - **Slide 7.1: the “run-app” skill from Session 1 Part 5 is what kind of skill?** → *Scoped (project) skill — lives in .opencode/skills/ or .claude/skills/ inside the project* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

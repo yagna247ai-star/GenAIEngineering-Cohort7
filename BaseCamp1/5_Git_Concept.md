@@ -60,11 +60,22 @@ index — next commit
 
 origin — shared repo
 
-Quick Check · Git Flow — Four Areas +25 XP
 
-Which order correctly describes Git's data flow?
-
-Working Directory → Staging Area → Local Repository → Remote Remote → Local → Staging → Working Directory Working Directory → Remote → Staging → Local Staging → Working Directory → Remote → Local
+> [!NOTE]
+> **Quick Check — Quick Check · +25 XP** 🎯
+>
+> **Which order correctly describes Git's data flow?**
+>
+> - [ ] Working Directory → Staging Area → Local Repository → Remote
+> - [ ] Remote → Local → Staging → Working Directory
+> - [ ] Working Directory → Remote → Staging → Local
+> - [ ] Staging → Working Directory → Remote → Local
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Which order correctly describes Git's data flow?** → *Working Directory → Staging Area → Local Repository → Remote* — Correct! That's the canonical four-area flow the panels above visualize.
+>
+> </details>
 
 Quick Check · Staging Area +25 XP
 
@@ -78,11 +89,22 @@ Pushes directly to GitHub Moves edits from Working Directory to Staging Area for
 
 Select a scenario and click "Run next step". Each command's meaning appears here.
 
-Quick Check · Commit vs Push +25 XP
 
-What is true about git commit vs git push?
-
-commit saves locally in .git; push uploads to Remote (origin) commit uploads to Remote; push saves locally Both do the same thing Neither touches .git
+> [!NOTE]
+> **Quick Check — Quick Check · +25 XP** 🎯
+>
+> **What does git add do?**
+>
+> - [ ] Pushes directly to GitHub
+> - [ ] Moves edits from Working Directory to Staging Area for next commit
+> - [ ] Deletes files from disk
+> - [ ] Creates a new branch
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What does git add do?** → *Moves edits from Working Directory to Staging Area for next commit* — Correct! git add stages changes — marking them ready for the next commit.
+>
+> </details>
 
 Quick Check · Sync — git pull +25 XP
 

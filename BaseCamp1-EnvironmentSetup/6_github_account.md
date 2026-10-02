@@ -59,17 +59,31 @@ Your GitHub profile is a portfolio: every project you publish appears under your
 
 No card or payment details are needed. GitHub's free plan covers everything in this fellowship, including unlimited public and private repositories. 
 
-Quick Check · Your public developer identity +25 XP
 
-Q1: GitHub profile is described as:
+> [!NOTE]
+> **Quick Check — Your public developer identity · +25 XP** 🎯
+>
+> **Q1: GitHub profile is described as:**
+>
+> - [ ] A portfolio — every project appears under your username
+> - [ ] Only private storage
+> - [ ] Only an email inbox
+> - [ ] Only a chat app
+>
+> **Q2: Which detail is also in the "Your public developer identity" section?**
+>
+> - [ ] Overview: GitHub profile is a portfolio.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Your public developer identity</summary>
+>
+> - **Q1: GitHub profile is described as:** → *A portfolio — every project appears under your username* — Overview: GitHub profile is a portfolio.
+> - **Q2: Which detail is also in the "Your public developer identity" section?** → *Overview: GitHub profile is a portfolio.* — Overview: GitHub profile is a portfolio.
+>
+> </details>
 
-A portfolio — every project appears under your username Only private storage Only an email inbox Only a chat app
-
-Q2: Which detail is also in the "Your public developer identity" section?
-
-Overview: GitHub profile is a portfolio. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 1 — Decide first
 
 ## Choose a Username You'll Be Happy With
 
@@ -82,17 +96,31 @@ Your username appears in the URL of everything you publish — `github.com/your-
 
 A simple, professional choice like `firstname-lastname` ages better than a nickname or a joke. 
 
-Quick Check · Choose a Username You'll Be Happy With +25 XP
 
-Q1: Username advice:
+> [!NOTE]
+> **Quick Check — Choose a Username You'll Be Happy With · +25 XP** 🎯
+>
+> **Q1: Username advice:**
+>
+> - [ ] Pick something professional you'll keep — it's your public developer identity
+> - [ ] Use random numbers only
+> - [ ] Change it weekly
+> - [ ] Use your email as username
+>
+> **Q2: Which detail is also in the "Choose a Username You'll Be Happy With" section?**
+>
+> - [ ] Username section advises a lasting professional name.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Choose a Username You'll Be Happy With</summary>
+>
+> - **Q1: Username advice:** → *Pick something professional you'll keep — it's your public developer identity* — Username section advises a lasting professional name.
+> - **Q2: Which detail is also in the "Choose a Username You'll Be Happy With" section?** → *Username section advises a lasting professional name.* — Username section advises a lasting professional name.
+>
+> </details>
 
-Pick something professional you'll keep — it's your public developer identity Use random numbers only Change it weekly Use your email as username
-
-Q2: Which detail is also in the "Choose a Username You'll Be Happy With" section?
-
-Username section advises a lasting professional name. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 2 — Create the account
 
 ## Sign Up with Your Email
 
@@ -110,17 +138,31 @@ sign-up pageCopy
 
 GitHub also offers **Continue with Google** on the sign-up page. It works, but signing up with an email and password makes it easier to understand exactly how your account is secured — and easier to recover if you later lose access to a social login. 
 
-Quick Check · Sign Up with Your Email +25 XP
 
-Q1: Sign-up needs:
+> [!NOTE]
+> **Quick Check — Sign Up with Your Email · +25 XP** 🎯
+>
+> **Q1: Sign-up needs:**
+>
+> - [ ] Email, password, username verification
+> - [ ] Credit card
+> - [ ] AWS MFA
+> - [ ] Supabase URL
+>
+> **Q2: Which detail is also in the "Sign Up with Your Email" section?**
+>
+> - [ ] Signup lists email, password, username.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Sign Up with Your Email</summary>
+>
+> - **Q1: Sign-up needs:** → *Email, password, username verification* — Signup lists email, password, username.
+> - **Q2: Which detail is also in the "Sign Up with Your Email" section?** → *Signup lists email, password, username.* — Signup lists email, password, username.
+>
+> </details>
 
-Email, password, username verification Credit card AWS MFA Supabase URL
-
-Q2: Which detail is also in the "Sign Up with Your Email" section?
-
-Signup lists email, password, username. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 3 — Confirm it's you
 
 ## Verify Your Email Address
 
@@ -131,17 +173,31 @@ Step 3 — Confirm it's you
 
 Don't skip verification Without a verified email address you won't be able to do basic things like creating a repository. 
 
-Quick Check · Verify Your Email Address +25 XP
 
-Q1: Verification is:
+> [!NOTE]
+> **Quick Check — Verify Your Email Address · +25 XP** 🎯
+>
+> **Q1: Verification is:**
+>
+> - [ ] GitHub emails you a code to confirm the email
+> - [ ] Automatic without code
+> - [ ] Via phone SMS only
+> - [ ] Via mailed letter
+>
+> **Q2: Which detail is also in the "Verify Your Email Address" section?**
+>
+> - [ ] Verify section says GitHub emails a code.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Verify Your Email Address</summary>
+>
+> - **Q1: Verification is:** → *GitHub emails you a code to confirm the email* — Verify section says GitHub emails a code.
+> - **Q2: Which detail is also in the "Verify Your Email Address" section?** → *Verify section says GitHub emails a code.* — Verify section says GitHub emails a code.
+>
+> </details>
 
-GitHub emails you a code to confirm the email Automatic without code Via phone SMS only Via mailed letter
-
-Q2: Which detail is also in the "Verify Your Email Address" section?
-
-Verify section says GitHub emails a code. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 4 — Secure the account
 
 ## Turn On Two-Factor Authentication
 
@@ -155,17 +211,31 @@ Two-factor authentication (2FA) adds a second check on top of your password. Git
 
 Recovery codes matter If you lose your 2FA device and your recovery codes, you can be permanently locked out of the account. Store the codes before you close this settings page. 
 
-Quick Check · Turn On Two-Factor Authentication +25 XP
 
-Q1: 2FA uses:
+> [!NOTE]
+> **Quick Check — Turn On Two-Factor Authentication · +25 XP** 🎯
+>
+> **Q1: 2FA uses:**
+>
+> - [ ] Authenticator app or passkey-capable device
+> - [ ] Only SMS
+> - [ ] Only email
+> - [ ] No 2FA needed
+>
+> **Q2: Which detail is also in the "Turn On Two-Factor Authentication" section?**
+>
+> - [ ] Twofactor lists authenticator app or passkey.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Turn On Two-Factor Authentication</summary>
+>
+> - **Q1: 2FA uses:** → *Authenticator app or passkey-capable device* — Twofactor lists authenticator app or passkey.
+> - **Q2: Which detail is also in the "Turn On Two-Factor Authentication" section?** → *Twofactor lists authenticator app or passkey.* — Twofactor lists authenticator app or passkey.
+>
+> </details>
 
-Authenticator app or passkey-capable device Only SMS Only email No 2FA needed
-
-Q2: Which detail is also in the "Turn On Two-Factor Authentication" section?
-
-Twofactor lists authenticator app or passkey. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 5 — Optional but recommended
 
 ## Protect Your Email Address
 
@@ -177,17 +247,31 @@ Every commit you make is stamped with an email address, and on a public reposito
 
 While you're in Settings, you can also add your name and a profile photo under **Public profile**. It's not required, but a profile with a real name looks more credible when you share it. 
 
-Quick Check · Protect Your Email Address +25 XP
 
-Q1: Email privacy option:
+> [!NOTE]
+> **Quick Check — Protect Your Email Address · +25 XP** 🎯
+>
+> **Q1: Email privacy option:**
+>
+> - [ ] Keep email private / use GitHub-provided noreply address
+> - [ ] Must publish email publicly
+> - [ ] Delete email
+> - [ ] Use fake email
+>
+> **Q2: Which detail is also in the "Protect Your Email Address" section?**
+>
+> - [ ] Privacy says protect email via noreply.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Protect Your Email Address</summary>
+>
+> - **Q1: Email privacy option:** → *Keep email private / use GitHub-provided noreply address* — Privacy says protect email via noreply.
+> - **Q2: Which detail is also in the "Protect Your Email Address" section?** → *Privacy says protect email via noreply.* — Privacy says protect email via noreply.
+>
+> </details>
 
-Keep email private / use GitHub-provided noreply address Must publish email publicly Delete email Use fake email
-
-Q2: Which detail is also in the "Protect Your Email Address" section?
-
-Privacy says protect email via noreply. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 6 — Verify
 
 ## Confirm You Can Sign In Again
 
@@ -203,17 +287,31 @@ sign-in pageCopy
   3. **Enter your 2FA code when asked** This confirms your authenticator is set up correctly.
   4. **Check that your profile loads** Visit `github.com/your-username` — you should see your (empty, for now) profile.
 
-Quick Check · Confirm You Can Sign In Again +25 XP
 
-Q1: Sign-in check proves:
+> [!NOTE]
+> **Quick Check — Confirm You Can Sign In Again · +25 XP** 🎯
+>
+> **Q1: Sign-in check proves:**
+>
+> - [ ] You can sign in again with email/username and password + 2FA
+> - [ ] AWS billing works
+> - [ ] Python runs
+> - [ ] Supabase connects
+>
+> **Q2: Which detail is also in the "Confirm You Can Sign In Again" section?**
+>
+> - [ ] Signin section verifies re-login.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Confirm You Can Sign In Again</summary>
+>
+> - **Q1: Sign-in check proves:** → *You can sign in again with email/username and password + 2FA* — Signin section verifies re-login.
+> - **Q2: Which detail is also in the "Confirm You Can Sign In Again" section?** → *Signin section verifies re-login.* — Signin section verifies re-login.
+>
+> </details>
 
-You can sign in again with email/username and password + 2FA AWS billing works Python runs Supabase connects
-
-Q2: Which detail is also in the "Confirm You Can Sign In Again" section?
-
-Signin section verifies re-login. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Troubleshooting
 
 ## If Something Goes Wrong
 
@@ -225,17 +323,31 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2. Never share your password, 2FA codes, or recovery codes with anyone. 
 
-Quick Check · If Something Goes Wrong +25 XP
 
-Q1: Troubleshooting covers:
+> [!NOTE]
+> **Quick Check — If Something Goes Wrong · +25 XP** 🎯
+>
+> **Q1: Troubleshooting covers:**
+>
+> - [ ] Email not received, username taken, 2FA issues
+> - [ ] Python PATH errors only
+> - [ ] AWS budget errors
+> - [ ] Supabase pause
+>
+> **Q2: Which detail is also in the "If Something Goes Wrong" section?**
+>
+> - [ ] Troubleshooting lists common GitHub issues.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — If Something Goes Wrong</summary>
+>
+> - **Q1: Troubleshooting covers:** → *Email not received, username taken, 2FA issues* — Troubleshooting lists common GitHub issues.
+> - **Q2: Which detail is also in the "If Something Goes Wrong" section?** → *Troubleshooting lists common GitHub issues.* — Troubleshooting lists common GitHub issues.
+>
+> </details>
 
-Email not received, username taken, 2FA issues Python PATH errors only AWS budget errors Supabase pause
-
-Q2: Which detail is also in the "If Something Goes Wrong" section?
-
-Troubleshooting lists common GitHub issues. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## GitHub Account Setup — Final Check
 
@@ -246,23 +358,30 @@ You're done when...
   * ✓ You signed out and back in successfully
   * ✓ You've noted your GitHub username to share with your instructor when asked
 
-Quick Check · GitHub Account Setup — Final Check +25 XP
 
-Q1: Final check needs:
-
-Account created, email verified, 2FA on, privacy set Only Python install Only AWS MFA Only .env file
-
-Q2: Which detail is also in the "GitHub Account Setup — Final Check" section?
-
-Checklist verifies account, email, 2FA, privacy. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — GitHub — Username Check
-
-Type a valid GitHub username (the page says choose a lasting professional one). Rules: 1-39 chars, alphanum + hyphens.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — GitHub Account Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Final check needs:**
+>
+> - [ ] Account created, email verified, 2FA on, privacy set
+> - [ ] Only Python install
+> - [ ] Only AWS MFA
+> - [ ] Only .env file
+>
+> **Q2: Which detail is also in the "GitHub Account Setup — Final Check" section?**
+>
+> - [ ] Checklist verifies account, email, 2FA, privacy.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — GitHub Account Setup — Final Check</summary>
+>
+> - **Q1: Final check needs:** → *Account created, email verified, 2FA on, privacy set* — Checklist verifies account, email, 2FA, privacy.
+> - **Q2: Which detail is also in the "GitHub Account Setup — Final Check" section?** → *Checklist verifies account, email, 2FA, privacy.* — Checklist verifies account, email, 2FA, privacy.
+>
+> </details>
 
 Check Hint
 

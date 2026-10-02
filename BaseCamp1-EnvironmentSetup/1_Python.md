@@ -54,17 +54,31 @@ Python is updated constantly, and "just install the latest one" is a trap in a c
 
 Before you start If you already have some version of Python installed, that's fine — install 3.11.9 alongside it. Session 1's troubleshooting section below shows you how to run the exact version you need even when several are present. 
 
-Quick Check · One version, everywhere +25 XP
 
-Q1: Why does the fellowship standardize on Python 3.11.9 specifically?
+> [!NOTE]
+> **Quick Check — One version, everywhere · +25 XP** 🎯
+>
+> **Q1: Why does the fellowship standardize on Python 3.11.9 specifically?**
+>
+> - [ ] To keep every exercise reproducible across the cohort (the page says minor version differences change how libraries behave)
+> - [ ] Because 3.11.9 is the newest Python
+> - [ ] Because 3.11.9 is faster than any other version
+> - [ ] Because the OS requires 3.11.9
+>
+> **Q2: If you already have a different Python installed, what does the page advise?**
+>
+> - [ ] Install 3.11.9 alongside it and use version-specific commands
+> - [ ] Uninstall all other Pythons first
+> - [ ] Ignore it and use whatever is installed
+> - [ ] Install 3.11.9 only inside a VM
+>
+> <details><summary>✅ Reveal Answers — One version, everywhere</summary>
+>
+> - **Q1: Why does the fellowship standardize on Python 3.11.9 specifically?** → *To keep every exercise reproducible across the cohort (the page says minor version differences change how libraries behave)* — The page states: “To keep every exercise reproducible across the whole cohort, this fellowship standardizes on Python 3.11.9 specifically — not 3.12, not 3.13.”
+> - **Q2: If you already have a different Python installed, what does the page advise?** → *Install 3.11.9 alongside it and use version-specific commands* — Callout: “If you already have some version of Python installed, that's fine — install 3.11.9 alongside it.”
+>
+> </details>
 
-To keep every exercise reproducible across the cohort (the page says minor version differences change how libraries behave) Because 3.11.9 is the newest Python Because 3.11.9 is faster than any other version Because the OS requires 3.11.9
-
-Q2: If you already have a different Python installed, what does the page advise?
-
-Install 3.11.9 alongside it and use version-specific commands Uninstall all other Pythons first Ignore it and use whatever is installed Install 3.11.9 only inside a VM
-
-Step 1 — Download
 
 ## Download Python 3.11.9
 
@@ -96,17 +110,31 @@ direct linkCopy
     https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg
 [/code]
 
-Quick Check · Download Python 3.11.9 +25 XP
 
-Q1: Where does the page tell you to download Python 3.11.9?
+> [!NOTE]
+> **Quick Check — Download Python 3.11.9 · +25 XP** 🎯
+>
+> **Q1: Where does the page tell you to download Python 3.11.9?**
+>
+> - [ ] From python.org → Downloads → View the full list of downloads
+> - [ ] From the Microsoft Store only
+> - [ ] From VS Code extensions
+> - [ ] From GitHub releases
+>
+> **Q2: Which installer file is correct for Windows 64-bit?**
+>
+> - [ ] Windows installer (64-bit) for Python 3.11.9
+> - [ ] Windows installer (32-bit) for 3.13
+> - [ ] Source tarball
+> - [ ] macOS pkg
+>
+> <details><summary>✅ Reveal Answers — Download Python 3.11.9</summary>
+>
+> - **Q1: Where does the page tell you to download Python 3.11.9?** → *From python.org → Downloads → View the full list of downloads* — Section: direct link to python.org Downloads and “View the full list of downloads” to find 3.11.9.
+> - **Q2: Which installer file is correct for Windows 64-bit?** → *Windows installer (64-bit) for Python 3.11.9* — Page lists the 64-bit Windows installer for 3.11.9 specifically.
+>
+> </details>
 
-From python.org → Downloads → View the full list of downloads From the Microsoft Store only From VS Code extensions From GitHub releases
-
-Q2: Which installer file is correct for Windows 64-bit?
-
-Windows installer (64-bit) for Python 3.11.9 Windows installer (32-bit) for 3.13 Source tarball macOS pkg
-
-Step 2 — Windows
 
 ## Installing on Windows
 
@@ -115,17 +143,31 @@ Step 2 — Windows
   3. **Click "Install Now"** Use the default install location. Approve the Windows permission prompt if one appears.
   4. **Click "Close" when done** The optional "Disable path length limit" screen is safe to click too — it prevents rare errors with long file paths later in the program.
 
-Quick Check · Installing on Windows +25 XP
 
-Q1: Which checkbox MUST be ticked during Windows install?
+> [!NOTE]
+> **Quick Check — Installing on Windows · +25 XP** 🎯
+>
+> **Q1: Which checkbox MUST be ticked during Windows install?**
+>
+> - [ ] Add python.exe to PATH
+> - [ ] Install launcher for all users (recommended) → actually “Add Python 3.11 to PATH”
+> - [ ] Disable pip
+> - [ ] Install without Tcl/Tk
+>
+> **Q2: What does “Install Now” do on Windows?**
+>
+> - [ ] Installs Python 3.11.9 with default options into default location
+> - [ ] Only downloads without installing
+> - [ ] Installs VS Code
+> - [ ] Creates a virtual environment
+>
+> <details><summary>✅ Reveal Answers — Installing on Windows</summary>
+>
+> - **Q1: Which checkbox MUST be ticked during Windows install?** → *Install launcher for all users (recommended) → actually “Add Python 3.11 to PATH”* — Step 2 Windows: checkbox “Add Python 3.11 to PATH” must be checked.
+> - **Q2: What does “Install Now” do on Windows?** → *Installs Python 3.11.9 with default options into default location* — Section says clicking Install Now installs with defaults.
+>
+> </details>
 
-Add python.exe to PATH Install launcher for all users (recommended) → actually “Add Python 3.11 to PATH” Disable pip Install without Tcl/Tk
-
-Q2: What does “Install Now” do on Windows?
-
-Installs Python 3.11.9 with default options into default location Only downloads without installing Installs VS Code Creates a virtual environment
-
-Step 2 — macOS
 
 ## Installing on macOS
 
@@ -134,17 +176,31 @@ Step 2 — macOS
   3. **Enter your Mac password** This is your normal login password, required to install system software.
   4. **Run "Install Certificates.command"** A Finder window opens automatically in `/Applications/Python 3.11/` after install. Double-click this file once — it lets Python make secure internet connections.
 
-Quick Check · Installing on macOS +25 XP
 
-Q1: Which file do macOS users download for Python 3.11.9?
+> [!NOTE]
+> **Quick Check — Installing on macOS · +25 XP** 🎯
+>
+> **Q1: Which file do macOS users download for Python 3.11.9?**
+>
+> - [ ] macOS 64-bit universal2 installer for Python 3.11.9
+> - [ ] Windows .exe
+> - [ ] Linux tar.xz
+> - [ ] Homebrew formula only
+>
+> **Q2: After install, which command checks the version on macOS?**
+>
+> - [ ] python3 --version or python3.11 --version
+> - [ ] py -0
+> - [ ] winget list
+> - [ ] code --version
+>
+> <details><summary>✅ Reveal Answers — Installing on macOS</summary>
+>
+> - **Q1: Which file do macOS users download for Python 3.11.9?** → *macOS 64-bit universal2 installer for Python 3.11.9* — macOS download row points to the universal2 installer pkg.
+> - **Q2: After install, which command checks the version on macOS?** → *python3 --version or python3.11 --version* — Verify section shows python3 --version (and python3.11 --version when multiple versions).
+>
+> </details>
 
-macOS 64-bit universal2 installer for Python 3.11.9 Windows .exe Linux tar.xz Homebrew formula only
-
-Q2: After install, which command checks the version on macOS?
-
-python3 --version or python3.11 --version py -0 winget list code --version
-
-Step 3 — Verify
 
 ## Confirm Python Is Installed Correctly
 
@@ -178,17 +234,31 @@ zshCopy
     # plain "python" usually doesn't exist on Mac — always use python3
 [/code]
 
-Quick Check · Confirm Python Is Installed Correctly +25 XP
 
-Q1: What exact output proves success?
+> [!NOTE]
+> **Quick Check — Confirm Python Is Installed Correctly · +25 XP** 🎯
+>
+> **Q1: What exact output proves success?**
+>
+> - [ ] Python 3.11.9
+> - [ ] Python 3.13.0
+> - [ ] Python 2.7
+> - [ ] No output
+>
+> **Q2: Which command lists the install path?**
+>
+> - [ ] which python3 / where python / py -0 (Windows)
+> - [ ] git status
+> - [ ] code .
+> - [ ] pip list
+>
+> <details><summary>✅ Reveal Answers — Confirm Python Is Installed Correctly</summary>
+>
+> - **Q1: What exact output proves success?** → *Python 3.11.9* — Verify section: running the version command should print exactly Python 3.11.9.
+> - **Q2: Which command lists the install path?** → *which python3 / where python / py -0 (Windows)* — Section shows which -a python3, where python, py -0 to locate installs.
+>
+> </details>
 
-Python 3.11.9 Python 3.13.0 Python 2.7 No output
-
-Q2: Which command lists the install path?
-
-which python3 / where python / py -0 (Windows) git status code . pip list
-
-Common Confusion
 
 ## "python", "python3", or "py" — Which One Do I Type?
 
@@ -202,17 +272,31 @@ Command| Where| What it does
 `py -3.11`| Windows, multiple versions| Tells the Windows launcher to use exactly version 3.11, ignoring any other installed version.  
 `python3.11`| macOS / Linux, multiple versions| Runs a specific version directly when more than one Python 3.x is installed.  
   
-Quick Check · "python", "python3", or "py" — Which One Do I Type? +25 XP
 
-Q1: On Windows the recommended default launcher is:
+> [!NOTE]
+> **Quick Check — "python", "python3", or "py" — Which One Do I Type? · +25 XP** 🎯
+>
+> **Q1: On Windows the recommended default launcher is:**
+>
+> - [ ] py
+> - [ ] python3
+> - [ ] python3.11 only
+> - [ ] python2
+>
+> **Q2: On macOS/Linux with multiple versions, how to pin 3.11?**
+>
+> - [ ] python3.11 --version
+> - [ ] py -0
+> - [ ] python.exe
+> - [ ] uv run
+>
+> <details><summary>✅ Reveal Answers — "python", "python3", or "py" — Which One Do I Type?</summary>
+>
+> - **Q1: On Windows the recommended default launcher is:** → *py* — Table: py is Windows — recommended default (Windows Python Launcher).
+> - **Q2: On macOS/Linux with multiple versions, how to pin 3.11?** → *python3.11 --version* — Table row: python3.11 runs a specific version directly.
+>
+> </details>
 
-py python3 python3.11 only python2
-
-Q2: On macOS/Linux with multiple versions, how to pin 3.11?
-
-python3.11 --version py -0 python.exe uv run
-
-Troubleshooting
 
 ## Got Multiple Python Versions Installed?
 
@@ -242,17 +326,31 @@ zshCopy
 
 Rule of thumb Always run programs with `py -3.11` (Windows) or `python3.11` (Mac) for this course — even if plain `python` / `python3` already points somewhere else on your machine. 
 
-Quick Check · Got Multiple Python Versions Installed? +25 XP
 
-Q1: Windows: how to list every installed version?
+> [!NOTE]
+> **Quick Check — Got Multiple Python Versions Installed? · +25 XP** 🎯
+>
+> **Q1: Windows: how to list every installed version?**
+>
+> - [ ] py -0
+> - [ ] python --version
+> - [ ] code --list
+> - [ ] pip freeze
+>
+> **Q2: macOS: how to list every installed version?**
+>
+> - [ ] which -a python3
+> - [ ] py -0
+> - [ ] where.exe python
+> - [ ] ls -a
+>
+> <details><summary>✅ Reveal Answers — Got Multiple Python Versions Installed?</summary>
+>
+> - **Q1: Windows: how to list every installed version?** → *py -0* — OS grid Windows: py -0 lists every installed version.
+> - **Q2: macOS: how to list every installed version?** → *which -a python3* — OS grid macOS: which -a python3 lists every version.
+>
+> </details>
 
-py -0 python --version code --list pip freeze
-
-Q2: macOS: how to list every installed version?
-
-which -a python3 py -0 where.exe python ls -a
-
-You're done when...
 
 ## Environment Check — Before You Move On
 
@@ -263,23 +361,30 @@ You're done when...
 
 Stuck? Flag your instructor before the next step — everyone needs a working Python before we install the code editor. 
 
-Quick Check · Environment Check — Before You Move On +25 XP
 
-Q1: Which checklist item is required before next step?
-
-Running version command prints exactly Python 3.11.9 Having deleted old Pythons Installing Node Creating GitHub repo
-
-Q2: What to do if stuck?
-
-Flag your instructor before the next step Reinstall OS Skip to VS Code anyway Ignore the version
-
-ELITE PRACTICE LAB
-
-### Build & Verify — Python 3.11.9 — Verify Your Install
-
-Type the exact version-check command for your OS. The page says success is printing Python 3.11.9. Try the Windows launcher or macOS command.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — Environment Check — Before You Move On · +25 XP** 🎯
+>
+> **Q1: Which checklist item is required before next step?**
+>
+> - [ ] Running version command prints exactly Python 3.11.9
+> - [ ] Having deleted old Pythons
+> - [ ] Installing Node
+> - [ ] Creating GitHub repo
+>
+> **Q2: What to do if stuck?**
+>
+> - [ ] Flag your instructor before the next step
+> - [ ] Reinstall OS
+> - [ ] Skip to VS Code anyway
+> - [ ] Ignore the version
+>
+> <details><summary>✅ Reveal Answers — Environment Check — Before You Move On</summary>
+>
+> - **Q1: Which checklist item is required before next step?** → *Running version command prints exactly Python 3.11.9* — Checklist: “Running the version command prints exactly Python 3.11.9”.
+> - **Q2: What to do if stuck?** → *Flag your instructor before the next step* — Callout Stuck? — Flag your instructor before the next step.
+>
+> </details>
 
 Check Hint
 

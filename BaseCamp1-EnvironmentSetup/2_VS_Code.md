@@ -58,17 +58,31 @@ Python (Session 1) is the language; VS Code is where you'll actually write, run,
 
 Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
 
-Quick Check · One editor, one workflow +25 XP
 
-Q1: Why is VS Code the fellowship editor?
+> [!NOTE]
+> **Quick Check — One editor, one workflow · +25 XP** 🎯
+>
+> **Q1: Why is VS Code the fellowship editor?**
+>
+> - [ ] It gives a built-in terminal, file browser, and Python interpreter switcher — the page says that matters when multiple versions exist
+> - [ ] Because it's the only editor that runs Python
+> - [ ] Because Python ships inside VS Code
+> - [ ] Because it's required for GitHub
+>
+> **Q2: What does VS Code show about Python?**
+>
+> - [ ] Which Python installation is running your code
+> - [ ] Only the file name
+> - [ ] Only the OS version
+> - [ ] The AWS region
+>
+> <details><summary>✅ Reveal Answers — One editor, one workflow</summary>
+>
+> - **Q1: Why is VS Code the fellowship editor?** → *It gives a built-in terminal, file browser, and Python interpreter switcher — the page says that matters when multiple versions exist* — Overview: VS Code gives built-in terminal, file browser, and a way to see and switch which Python is running.
+> - **Q2: What does VS Code show about Python?** → *Which Python installation is running your code* — Overview: VS Code shows which Python installation is running your code.
+>
+> </details>
 
-It gives a built-in terminal, file browser, and Python interpreter switcher — the page says that matters when multiple versions exist Because it's the only editor that runs Python Because Python ships inside VS Code Because it's required for GitHub
-
-Q2: What does VS Code show about Python?
-
-Which Python installation is running your code Only the file name Only the OS version The AWS region
-
-Step 1 — Download
 
 ## Download VS Code
 
@@ -81,17 +95,31 @@ urlCopy
 
 Mac users Choose **Apple Silicon** if your Mac has an M1/M2/M3/M4 chip, or **Intel chip** for older Macs. Not sure? **Universal** works on both. 
 
-Quick Check · Download VS Code +25 XP
 
-Q1: Where to download VS Code from?
+> [!NOTE]
+> **Quick Check — Download VS Code · +25 XP** 🎯
+>
+> **Q1: Where to download VS Code from?**
+>
+> - [ ] code.visualstudio.com
+> - [ ] python.org
+> - [ ] github.com only
+> - [ ] Microsoft Store exclusively
+>
+> **Q2: Which VS Code build is recommended?**
+>
+> - [ ] Stable build for your OS (Windows/macOS)
+> - [ ] Insiders only
+> - [ ] Web only
+> - [ ] Legacy 2019 build
+>
+> <details><summary>✅ Reveal Answers — Download VS Code</summary>
+>
+> - **Q1: Where to download VS Code from?** → *code.visualstudio.com* — Download section links to code.visualstudio.com.
+> - **Q2: Which VS Code build is recommended?** → *Stable build for your OS (Windows/macOS)* — Page says download the Stable build for your OS.
+>
+> </details>
 
-code.visualstudio.com python.org github.com only Microsoft Store exclusively
-
-Q2: Which VS Code build is recommended?
-
-Stable build for your OS (Windows/macOS) Insiders only Web only Legacy 2019 build
-
-Step 2 — First Look
 
 ## Meet the Explorer
 
@@ -99,17 +127,31 @@ The Explorer is your file browser inside VS Code — every file and folder for t
 
 Tip Create one folder for the whole fellowship — e.g. `ai-fellowship` — and keep every week's files inside it. Opening that single folder in VS Code gives you one Explorer view for everything. 
 
-Quick Check · Meet the Explorer +25 XP
 
-Q1: What is the Explorer in VS Code?
+> [!NOTE]
+> **Quick Check — Meet the Explorer · +25 XP** 🎯
+>
+> **Q1: What is the Explorer in VS Code?**
+>
+> - [ ] The file browser / sidebar that shows folders and files
+> - [ ] A browser extension
+> - [ ] The terminal
+> - [ ] The Python debugger
+>
+> **Q2: Explorer lets you:**
+>
+> - [ ] Create, rename, and delete files and folders
+> - [ ] Only view images
+> - [ ] Compile Python to C
+> - [ ] Set AWS budgets
+>
+> <details><summary>✅ Reveal Answers — Meet the Explorer</summary>
+>
+> - **Q1: What is the Explorer in VS Code?** → *The file browser / sidebar that shows folders and files* — Explorer section introduces the Explorer as the file browser.
+> - **Q2: Explorer lets you:** → *Create, rename, and delete files and folders* — Explorer section describes creating files/folders.
+>
+> </details>
 
-The file browser / sidebar that shows folders and files A browser extension The terminal The Python debugger
-
-Q2: Explorer lets you:
-
-Create, rename, and delete files and folders Only view images Compile Python to C Set AWS budgets
-
-Step 3 — Terminal
 
 ## Open a Terminal Inside VS Code
 
@@ -133,17 +175,31 @@ Terminal dropdown should show **zsh**.
 
 The default "zsh" terminal is exactly what you need — no change needed.
 
-Quick Check · Open a Terminal Inside VS Code +25 XP
 
-Q1: How to open a terminal inside VS Code?
+> [!NOTE]
+> **Quick Check — Open a Terminal Inside VS Code · +25 XP** 🎯
+>
+> **Q1: How to open a terminal inside VS Code?**
+>
+> - [ ] Terminal → New Terminal or Ctrl+`
+> - [ ] File → New File
+> - [ ] View → Explorer
+> - [ ] Run → Start Debugging
+>
+> **Q2: Where does the integrated terminal open?**
+>
+> - [ ] Inside VS Code at the bottom panel
+> - [ ] As a separate OS window only
+> - [ ] Inside the browser URL bar
+> - [ ] Inside GitHub
+>
+> <details><summary>✅ Reveal Answers — Open a Terminal Inside VS Code</summary>
+>
+> - **Q1: How to open a terminal inside VS Code?** → *Terminal → New Terminal or Ctrl+`* — Terminal section: Terminal → New Terminal / Ctrl+`.
+> - **Q2: Where does the integrated terminal open?** → *Inside VS Code at the bottom panel* — Page shows integrated terminal inside VS Code.
+>
+> </details>
 
-Terminal → New Terminal or Ctrl+` File → New File View → Explorer Run → Start Debugging
-
-Q2: Where does the integrated terminal open?
-
-Inside VS Code at the bottom panel As a separate OS window only Inside the browser URL bar Inside GitHub
-
-Step 4 — Extensions
 
 ## Install the Python & Jupyter Extensions
 
@@ -162,17 +218,31 @@ Jupyter| Microsoft| Notebook support for VS Code
   
 Watch out Check the publisher name under each search result — it should say "Microsoft." Several look-alike extensions exist from other publishers. 
 
-Quick Check · Install the Python & Jupyter Extensions +25 XP
 
-Q1: Which two extensions are essential?
+> [!NOTE]
+> **Quick Check — Install the Python & Jupyter Extensions · +25 XP** 🎯
+>
+> **Q1: Which two extensions are essential?**
+>
+> - [ ] Python (Microsoft) and Jupyter (Microsoft)
+> - [ ] Prettier and ESLint
+> - [ ] GitLens and Docker
+> - [ ] Live Server only
+>
+> **Q2: How to install an extension?**
+>
+> - [ ] Click Extensions sidebar → search → Install
+> - [ ] Drag a zip file onto the dock
+> - [ ] pip install
+> - [ ] brew install
+>
+> <details><summary>✅ Reveal Answers — Install the Python & Jupyter Extensions</summary>
+>
+> - **Q1: Which two extensions are essential?** → *Python (Microsoft) and Jupyter (Microsoft)* — Extensions section lists Python and Jupyter as essential.
+> - **Q2: How to install an extension?** → *Click Extensions sidebar → search → Install* — Section shows Extensions sidebar search and Install.
+>
+> </details>
 
-Python (Microsoft) and Jupyter (Microsoft) Prettier and ESLint GitLens and Docker Live Server only
-
-Q2: How to install an extension?
-
-Click Extensions sidebar → search → Install Drag a zip file onto the dock pip install brew install
-
-Step 5 — Make It Yours
 
 ## Choose a Color Theme
 
@@ -188,17 +258,31 @@ Options include Dark Modern (default), Light Modern, Monokai, Solarized Dark, So
 
 There's no "right" theme — pick whatever's easiest on your eyes. If you want your screen to match the instructor's screenshots exactly, stick with **Dark Modern** (the default). 
 
-Quick Check · Choose a Color Theme +25 XP
 
-Q1: Choosing a theme affects:
+> [!NOTE]
+> **Quick Check — Choose a Color Theme · +25 XP** 🎯
+>
+> **Q1: Choosing a theme affects:**
+>
+> - [ ] Editor colors / readability only — not functionality
+> - [ ] Python version
+> - [ ] API keys
+> - [ ] Git history
+>
+> **Q2: How to change theme?**
+>
+> - [ ] Preferences: Color Theme via Command Palette
+> - [ ] Reinstall VS Code
+> - [ ] Edit settings.json only
+> - [ ] Change OS wallpaper
+>
+> <details><summary>✅ Reveal Answers — Choose a Color Theme</summary>
+>
+> - **Q1: Choosing a theme affects:** → *Editor colors / readability only — not functionality* — Theme section notes theme is cosmetic for readability.
+> - **Q2: How to change theme?** → *Preferences: Color Theme via Command Palette* — Page shows Command Palette → Preferences: Color Theme.
+>
+> </details>
 
-Editor colors / readability only — not functionality Python version API keys Git history
-
-Q2: How to change theme?
-
-Preferences: Color Theme via Command Palette Reinstall VS Code Edit settings.json only Change OS wallpaper
-
-Step 6 — Your First Files
 
 ## Create test.py and test.ipynb
 
@@ -211,17 +295,31 @@ test.pyCopy
 
 Naming tip Use `.py` for plain Python scripts and `.ipynb` for Jupyter notebooks — VS Code recognizes both instantly and adjusts its UI accordingly (e.g. notebooks get "cells," scripts get a Run button). 
 
-Quick Check · Create test.py and test.ipynb +25 XP
 
-Q1: Which two test files do you create?
+> [!NOTE]
+> **Quick Check — Create test.py and test.ipynb · +25 XP** 🎯
+>
+> **Q1: Which two test files do you create?**
+>
+> - [ ] test.py and test.ipynb
+> - [ ] app.py and index.html
+> - [ ] .env and README.md
+> - [ ] main.go and main.rs
+>
+> **Q2: test.py should contain:**
+>
+> - [ ] print("Hello, fellowship!") or similar print test
+> - [ ] import aws secrets
+> - [ ] HTML page
+> - [ ] SQL query
+>
+> <details><summary>✅ Reveal Answers — Create test.py and test.ipynb</summary>
+>
+> - **Q1: Which two test files do you create?** → *test.py and test.ipynb* — Firstfiles: Create test.py and test.ipynb.
+> - **Q2: test.py should contain:** → *print("Hello, fellowship!") or similar print test* — Section shows writing a print statement in test.py.
+>
+> </details>
 
-test.py and test.ipynb app.py and index.html .env and README.md main.go and main.rs
-
-Q2: test.py should contain:
-
-print("Hello, fellowship!") or similar print test import aws secrets HTML page SQL query
-
-Step 7 — Verify
 
 ## Confirm the Right Python Is Selected
 
@@ -232,17 +330,31 @@ File type| Where the indicator lives| How to change it
 `test.py`| Bottom status bar — e.g. "🐍 Python 3.11.9"| Command Palette → "Python: Select Interpreter" → choose the one showing 3.11.9  
 `test.ipynb`| Top-right kernel picker| Click "Select Kernel" → Python Environments → pick 3.11.9  
   
-Quick Check · Confirm the Right Python Is Selected +25 XP
 
-Q1: Where to confirm Python interpreter in VS Code?
+> [!NOTE]
+> **Quick Check — Confirm the Right Python Is Selected · +25 XP** 🎯
+>
+> **Q1: Where to confirm Python interpreter in VS Code?**
+>
+> - [ ] Bottom-right status bar / Command Palette → Python: Select Interpreter
+> - [ ] Top menu → Help → About
+> - [ ] Explorer → Outline
+> - [ ] Git tab
+>
+> **Q2: Correct interpreter to select is:**
+>
+> - [ ] Python 3.11.9 installed in Session 1
+> - [ ] Any Python 2.7
+> - [ ] System Python without version
+> - [ ] Node.js
+>
+> <details><summary>✅ Reveal Answers — Confirm the Right Python Is Selected</summary>
+>
+> - **Q1: Where to confirm Python interpreter in VS Code?** → *Bottom-right status bar / Command Palette → Python: Select Interpreter* — Verify section points to bottom-right interpreter indicator.
+> - **Q2: Correct interpreter to select is:** → *Python 3.11.9 installed in Session 1* — Page says select Python 3.11.9 from Session 1.
+>
+> </details>
 
-Bottom-right status bar / Command Palette → Python: Select Interpreter Top menu → Help → About Explorer → Outline Git tab
-
-Q2: Correct interpreter to select is:
-
-Python 3.11.9 installed in Session 1 Any Python 2.7 System Python without version Node.js
-
-Multiple Versions?
 
 ## Choosing the Right Python When Several Are Installed
 
@@ -258,17 +370,31 @@ Select InterpreterCopy
 
 Rule of thumb Always match the exact version number — **3.11.9** — and prefer an entry inside a project's `.venv` folder over a system-wide install. (You'll create your first `.venv` in Base Camp 2.) 
 
-Quick Check · Choosing the Right Python When Several Are Installed +25 XP
 
-Q1: With multiple Pythons, how to lock to 3.11.9 in VS Code?
+> [!NOTE]
+> **Quick Check — Choosing the Right Python When Several Are Installed · +25 XP** 🎯
+>
+> **Q1: With multiple Pythons, how to lock to 3.11.9 in VS Code?**
+>
+> - [ ] Select 3.11.9 in the interpreter picker
+> - [ ] Uninstall all others
+> - [ ] Use py -0 inside VS Code only
+> - [ ] Edit the HTML
+>
+> **Q2: Which detail is also in the "Choosing the Right Python When Several Are Installed" section?**
+>
+> - [ ] Multiple section says pick 3.11.9 in interpreter picker.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Choosing the Right Python When Several Are Installed</summary>
+>
+> - **Q1: With multiple Pythons, how to lock to 3.11.9 in VS Code?** → *Select 3.11.9 in the interpreter picker* — Multiple section says pick 3.11.9 in interpreter picker.
+> - **Q2: Which detail is also in the "Choosing the Right Python When Several Are Installed" section?** → *Multiple section says pick 3.11.9 in interpreter picker.* — Multiple section says pick 3.11.9 in interpreter picker.
+>
+> </details>
 
-Select 3.11.9 in the interpreter picker Uninstall all others Use py -0 inside VS Code only Edit the HTML
-
-Q2: Which detail is also in the "Choosing the Right Python When Several Are Installed" section?
-
-Multiple section says pick 3.11.9 in interpreter picker. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 8 — One More Package
 
 ## Install ipykernel
 
@@ -292,17 +418,31 @@ zshCopy
 
 Using `python -m pip` (not just `pip`) guarantees the package installs into the exact Python you're targeting — even with multiple versions installed, because `python -m` forces that specific interpreter to do the installing. 
 
-Quick Check · Install ipykernel +25 XP
 
-Q1: What is ipykernel for?
+> [!NOTE]
+> **Quick Check — Install ipykernel · +25 XP** 🎯
+>
+> **Q1: What is ipykernel for?**
+>
+> - [ ] Lets VS Code run Jupyter notebooks with the selected Python
+> - [ ] A theme
+> - [ ] A Git extension
+> - [ ] An AWS SDK
+>
+> **Q2: Which detail is also in the "Install ipykernel" section?**
+>
+> - [ ] ipykernel section: enables notebooks with the selected kerne
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Install ipykernel</summary>
+>
+> - **Q1: What is ipykernel for?** → *Lets VS Code run Jupyter notebooks with the selected Python* — ipykernel section: enables notebooks with the selected kernel.
+> - **Q2: Which detail is also in the "Install ipykernel" section?** → *ipykernel section: enables notebooks with the selected kerne* — ipykernel section: enables notebooks with the selected kernel.
+>
+> </details>
 
-Lets VS Code run Jupyter notebooks with the selected Python A theme A Git extension An AWS SDK
-
-Q2: Which detail is also in the "Install ipykernel" section?
-
-ipykernel section: enables notebooks with the selected kerne Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 9 — A Few More Extensions
 
 ## Extra Extensions Worth Installing
 
@@ -315,17 +455,31 @@ Markdown Preview Enhanced| Yiyi Wang| Richer Markdown preview — math, diagrams
 Mermaid| Mermaid Chart| Author Mermaid diagrams (flowcharts, sequence, ER) with editor support  
 Mermaid Preview| Mermaid OSS| Live-render Mermaid diagrams side-by-side as you write them  
   
-Quick Check · Extra Extensions Worth Installing +25 XP
 
-Q1: Which extra extension is suggested?
+> [!NOTE]
+> **Quick Check — Extra Extensions Worth Installing · +25 XP** 🎯
+>
+> **Q1: Which extra extension is suggested?**
+>
+> - [ ] Pylance, autoDocstring, etc.
+> - [ ] Photoshop extension
+> - [ ] AWS Toolkit only
+> - [ ] No extras suggested
+>
+> **Q2: Which detail is also in the "Extra Extensions Worth Installing" section?**
+>
+> - [ ] MoreExt lists Pylance and helpful extras.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Extra Extensions Worth Installing</summary>
+>
+> - **Q1: Which extra extension is suggested?** → *Pylance, autoDocstring, etc.* — MoreExt lists Pylance and helpful extras.
+> - **Q2: Which detail is also in the "Extra Extensions Worth Installing" section?** → *MoreExt lists Pylance and helpful extras.* — MoreExt lists Pylance and helpful extras.
+>
+> </details>
 
-Pylance, autoDocstring, etc. Photoshop extension AWS Toolkit only No extras suggested
-
-Q2: Which detail is also in the "Extra Extensions Worth Installing" section?
-
-MoreExt lists Pylance and helpful extras. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## VS Code Setup — Final Check
 
@@ -338,23 +492,30 @@ You're done when...
   * ✓ `ipykernel` is installed
   * ✓ Draw.io Integration, Markdown Preview Enhanced, Mermaid, and Mermaid Preview are installed
 
-Quick Check · VS Code Setup — Final Check +25 XP
 
-Q1: Final check requires:
-
-VS Code opens test.py and runs Hello with Python 3.11.9 VS Code uninstalls Python AWS account created GitHub username chosen
-
-Q2: Which detail is also in the "VS Code Setup — Final Check" section?
-
-Checklist confirms test.py runs correctly. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — VS Code — Confirm Editor & Interpreter
-
-Type the command that proves VS Code sees Python 3.11.9. The page uses the status bar / interpreter picker, but in a terminal you'd check the editor and Python.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — VS Code Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Final check requires:**
+>
+> - [ ] VS Code opens test.py and runs Hello with Python 3.11.9
+> - [ ] VS Code uninstalls Python
+> - [ ] AWS account created
+> - [ ] GitHub username chosen
+>
+> **Q2: Which detail is also in the "VS Code Setup — Final Check" section?**
+>
+> - [ ] Checklist confirms test.py runs correctly.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — VS Code Setup — Final Check</summary>
+>
+> - **Q1: Final check requires:** → *VS Code opens test.py and runs Hello with Python 3.11.9* — Checklist confirms test.py runs correctly.
+> - **Q2: Which detail is also in the "VS Code Setup — Final Check" section?** → *Checklist confirms test.py runs correctly.* — Checklist confirms test.py runs correctly.
+>
+> </details>
 
 Check Hint
 

@@ -64,17 +64,31 @@ Have these ready before you start:
 
 Choose the email carefully Don't use a work or college address you might lose access to — if you lose the root email, recovering the account becomes painful. Also avoid an address shared with other people. 
 
-Quick Check · Your email is your root login +25 XP
 
-Q1: AWS root user is:
+> [!NOTE]
+> **Quick Check — Your email is your root login · +25 XP** 🎯
+>
+> **Q1: AWS root user is:**
+>
+> - [ ] The email + password you sign up with — full access, including billing
+> - [ ] An IAM user without billing
+> - [ ] A VS Code profile
+> - [ ] A GitHub account
+>
+> **Q2: Which detail is also in the "Your email is your root login" section?**
+>
+> - [ ] Overview: email you sign up with becomes root user with comp
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Your email is your root login</summary>
+>
+> - **Q1: AWS root user is:** → *The email + password you sign up with — full access, including billing* — Overview: email you sign up with becomes root user with complete access.
+> - **Q2: Which detail is also in the "Your email is your root login" section?** → *Overview: email you sign up with becomes root user with comp* — Overview: email you sign up with becomes root user with complete access.
+>
+> </details>
 
-The email + password you sign up with — full access, including billing An IAM user without billing A VS Code profile A GitHub account
-
-Q2: Which detail is also in the "Your email is your root login" section?
-
-Overview: email you sign up with becomes root user with comp Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 1 of 8
 
 ## Start Sign-Up: Email, Account Name & Password
 
@@ -92,17 +106,31 @@ You can also go to `aws.amazon.com` and choose **Create an AWS Account** — bot
   5. **Create your root user password** Use uppercase and lowercase letters, numbers, and symbols. Make it long, unique, and store it in your password manager — this password can control your entire account and its billing.
   6. **Click "Continue"** The sign-up wizard walks you through the remaining screens.
 
-Quick Check · Start Sign-Up: Email, Account Name & Password +25 XP
 
-Q1: First sign-up step asks for:
+> [!NOTE]
+> **Quick Check — Start Sign-Up: Email, Account Name & Password · +25 XP** 🎯
+>
+> **Q1: First sign-up step asks for:**
+>
+> - [ ] Email, AWS account name, password
+> - [ ] Phone only
+> - [ ] GitHub token
+> - [ ] Supabase URL
+>
+> **Q2: Which detail is also in the "Start Sign-Up: Email, Account Name & Password" section?**
+>
+> - [ ] Signup section lists email, account name, password.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Start Sign-Up: Email, Account Name & Password</summary>
+>
+> - **Q1: First sign-up step asks for:** → *Email, AWS account name, password* — Signup section lists email, account name, password.
+> - **Q2: Which detail is also in the "Start Sign-Up: Email, Account Name & Password" section?** → *Signup section lists email, account name, password.* — Signup section lists email, account name, password.
+>
+> </details>
 
-Email, AWS account name, password Phone only GitHub token Supabase URL
-
-Q2: Which detail is also in the "Start Sign-Up: Email, Account Name & Password" section?
-
-Signup section lists email, account name, password. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 2 of 8
 
 ## Add Your Contact Details
 
@@ -113,17 +141,31 @@ Step 2 of 8
 
 Save these contact details somewhere safe. If you ever lose access to your email or your MFA device, AWS Support uses them to confirm you own the account. 
 
-Quick Check · Add Your Contact Details +25 XP
 
-Q1: Contact details include:
+> [!NOTE]
+> **Quick Check — Add Your Contact Details · +25 XP** 🎯
+>
+> **Q1: Contact details include:**
+>
+> - [ ] Personal address, phone number, account type (Personal)
+> - [ ] Only username
+> - [ ] Only API key
+> - [ ] Only credit card
+>
+> **Q2: Which detail is also in the "Add Your Contact Details" section?**
+>
+> - [ ] Contact section covers address and account type.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Add Your Contact Details</summary>
+>
+> - **Q1: Contact details include:** → *Personal address, phone number, account type (Personal)* — Contact section covers address and account type.
+> - **Q2: Which detail is also in the "Add Your Contact Details" section?** → *Contact section covers address and account type.* — Contact section covers address and account type.
+>
+> </details>
 
-Personal address, phone number, account type (Personal) Only username Only API key Only credit card
-
-Q2: Which detail is also in the "Add Your Contact Details" section?
-
-Contact section covers address and account type. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 3 of 8
 
 ## Add a Payment Method
 
@@ -132,17 +174,31 @@ Step 3 of 8
 
 Adding a card is required to open an account, even though you'll start on a plan designed not to charge you (see Step 5). If your card is declined, check that international online payments are enabled with your bank, or try a different card. 
 
-Quick Check · Add a Payment Method +25 XP
 
-Q1: AWS does what with your card?
+> [!NOTE]
+> **Quick Check — Add a Payment Method · +25 XP** 🎯
+>
+> **Q1: AWS does what with your card?**
+>
+> - [ ] Places a small temporary hold to verify it
+> - [ ] Charges $100 immediately
+> - [ ] Ignores it
+> - [ ] Requires PayPal only
+>
+> **Q2: Which detail is also in the "Add a Payment Method" section?**
+>
+> - [ ] Page: AWS places a small temporary hold to verify.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Add a Payment Method</summary>
+>
+> - **Q1: AWS does what with your card?** → *Places a small temporary hold to verify it* — Page: AWS places a small temporary hold to verify.
+> - **Q2: Which detail is also in the "Add a Payment Method" section?** → *Page: AWS places a small temporary hold to verify.* — Page: AWS places a small temporary hold to verify.
+>
+> </details>
 
-Places a small temporary hold to verify it Charges $100 immediately Ignores it Requires PayPal only
-
-Q2: Which detail is also in the "Add a Payment Method" section?
-
-Page: AWS places a small temporary hold to verify. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 4 of 8
 
 ## Verify Your Identity by Phone
 
@@ -151,17 +207,31 @@ Step 4 of 8
   3. **Solve the security check** Type the characters shown, then submit.
   4. **Enter the code you received and click "Continue"**
 
-Quick Check · Verify Your Identity by Phone +25 XP
 
-Q1: Identity verification uses:
+> [!NOTE]
+> **Quick Check — Verify Your Identity by Phone · +25 XP** 🎯
+>
+> **Q1: Identity verification uses:**
+>
+> - [ ] Text SMS or voice call code
+> - [ ] Only email
+> - [ ] Only GitHub push
+> - [ ] Only face ID
+>
+> **Q2: Which detail is also in the "Verify Your Identity by Phone" section?**
+>
+> - [ ] Identity section says phone can receive SMS or voice call.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Verify Your Identity by Phone</summary>
+>
+> - **Q1: Identity verification uses:** → *Text SMS or voice call code* — Identity section says phone can receive SMS or voice call.
+> - **Q2: Which detail is also in the "Verify Your Identity by Phone" section?** → *Identity section says phone can receive SMS or voice call.* — Identity section says phone can receive SMS or voice call.
+>
+> </details>
 
-Text SMS or voice call code Only email Only GitHub push Only face ID
-
-Q2: Which detail is also in the "Verify Your Identity by Phone" section?
-
-Identity section says phone can receive SMS or voice call. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 5 of 8
 
 ## Choose Your Account Plan & Support Plan
 
@@ -180,17 +250,31 @@ Newer AWS accounts choose between a **Free plan** and a **Paid plan**. New accou
 
 Set a calendar reminder If you stay on the Free plan, your account closes after six months or when the credits are used up. Note the date now — you'll be able to check your remaining credits and plan status on the Billing and Cost Management home page. AWS adjusts these offers periodically, so trust the on-screen wording if it differs from this page. 
 
-Quick Check · Choose Your Account Plan & Support Plan +25 XP
 
-Q1: Which plan should you choose?
+> [!NOTE]
+> **Quick Check — Choose Your Account Plan & Support Plan · +25 XP** 🎯
+>
+> **Q1: Which plan should you choose?**
+>
+> - [ ] Basic Support — Free
+> - [ ] Enterprise Support paid
+> - [ ] Developer paid immediately
+> - [ ] No plan needed
+>
+> **Q2: Which detail is also in the "Choose Your Account Plan & Support Plan" section?**
+>
+> - [ ] Plans section says choose Basic Support — Free.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Choose Your Account Plan & Support Plan</summary>
+>
+> - **Q1: Which plan should you choose?** → *Basic Support — Free* — Plans section says choose Basic Support — Free.
+> - **Q2: Which detail is also in the "Choose Your Account Plan & Support Plan" section?** → *Plans section says choose Basic Support — Free.* — Plans section says choose Basic Support — Free.
+>
+> </details>
 
-Basic Support — Free Enterprise Support paid Developer paid immediately No plan needed
-
-Q2: Which detail is also in the "Choose Your Account Plan & Support Plan" section?
-
-Plans section says choose Basic Support — Free. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 6 of 8
 
 ## Sign In as the Root User
 
@@ -209,17 +293,31 @@ console sign-inCopy
 
 You'll land on the **Console Home** page. The Region selector is at the top right — use the region your instructor names for course exercises, since resources you create belong to one region. 
 
-Quick Check · Sign In as the Root User +25 XP
 
-Q1: Root sign-in means:
+> [!NOTE]
+> **Quick Check — Sign In as the Root User · +25 XP** 🎯
+>
+> **Q1: Root sign-in means:**
+>
+> - [ ] Enter the same email and password you signed up with
+> - [ ] Enter IAM username
+> - [ ] Use GitHub OAuth
+> - [ ] Use VS Code token
+>
+> **Q2: Which detail is also in the "Sign In as the Root User" section?**
+>
+> - [ ] Signin: signing in as root means entering that same email an
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Sign In as the Root User</summary>
+>
+> - **Q1: Root sign-in means:** → *Enter the same email and password you signed up with* — Signin: signing in as root means entering that same email and password.
+> - **Q2: Which detail is also in the "Sign In as the Root User" section?** → *Signin: signing in as root means entering that same email an* — Signin: signing in as root means entering that same email and password.
+>
+> </details>
 
-Enter the same email and password you signed up with Enter IAM username Use GitHub OAuth Use VS Code token
-
-Q2: Which detail is also in the "Sign In as the Root User" section?
-
-Signin: signing in as root means entering that same email an Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 7 of 8
 
 ## Secure the Root User with MFA
 
@@ -235,17 +333,31 @@ Don't lock yourself out If you lose your phone, you lose the MFA device. Keep yo
 
 Root user: use sparingly AWS recommends that you don't use the root user for everyday work — keep it for account-level tasks only. For day-to-day exercises, your instructor will guide you to create a separate, limited user; until then, signing in as root to look around is fine. 
 
-Quick Check · Secure the Root User with MFA +25 XP
 
-Q1: MFA for root is:
+> [!NOTE]
+> **Quick Check — Secure the Root User with MFA · +25 XP** 🎯
+>
+> **Q1: MFA for root is:**
+>
+> - [ ] Required — turn on via authenticator app / passkey
+> - [ ] Optional forever
+> - [ ] Only via email code
+> - [ ] Not mentioned
+>
+> **Q2: Which detail is also in the "Secure the Root User with MFA" section?**
+>
+> - [ ] MFA section says secure the root user with MFA.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Secure the Root User with MFA</summary>
+>
+> - **Q1: MFA for root is:** → *Required — turn on via authenticator app / passkey* — MFA section says secure the root user with MFA.
+> - **Q2: Which detail is also in the "Secure the Root User with MFA" section?** → *MFA section says secure the root user with MFA.* — MFA section says secure the root user with MFA.
+>
+> </details>
 
-Required — turn on via authenticator app / passkey Optional forever Only via email code Not mentioned
-
-Q2: Which detail is also in the "Secure the Root User with MFA" section?
-
-MFA section says secure the root user with MFA. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 8 of 8
 
 ## Set a Zero-Spend Budget Alert
 
@@ -258,17 +370,31 @@ A cheap second safety net: AWS emails you the moment your account starts accruin
 
 On the Free plan you're protected by design, but if you ever upgrade to the Paid plan, this alert becomes your early warning. Setting it up now costs nothing. 
 
-Quick Check · Set a Zero-Spend Budget Alert +25 XP
 
-Q1: Budget alert is set to:
+> [!NOTE]
+> **Quick Check — Set a Zero-Spend Budget Alert · +25 XP** 🎯
+>
+> **Q1: Budget alert is set to:**
+>
+> - [ ] $0 or $1 to catch any spend early
+> - [ ] $1000
+> - [ ] No budget needed
+> - [ ] $500
+>
+> **Q2: Which detail is also in the "Set a Zero-Spend Budget Alert" section?**
+>
+> - [ ] Budget section says set a zero-spend / $1 budget alert.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Set a Zero-Spend Budget Alert</summary>
+>
+> - **Q1: Budget alert is set to:** → *$0 or $1 to catch any spend early* — Budget section says set a zero-spend / $1 budget alert.
+> - **Q2: Which detail is also in the "Set a Zero-Spend Budget Alert" section?** → *Budget section says set a zero-spend / $1 budget alert.* — Budget section says set a zero-spend / $1 budget alert.
+>
+> </details>
 
-$0 or $1 to catch any spend early $1000 No budget needed $500
-
-Q2: Which detail is also in the "Set a Zero-Spend Budget Alert" section?
-
-Budget section says set a zero-spend / $1 budget alert. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Troubleshooting
 
 ## If Something Goes Wrong
 
@@ -280,17 +406,31 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2 — and don't share your password, verification codes, or card details with anyone in the process, including in class chat. 
 
-Quick Check · If Something Goes Wrong +25 XP
 
-Q1: If stuck, page says:
+> [!NOTE]
+> **Quick Check — If Something Goes Wrong · +25 XP** 🎯
+>
+> **Q1: If stuck, page says:**
+>
+> - [ ] Contact AWS support or instructor; check email verification/phone
+> - [ ] Reinstall Python
+> - [ ] Delete .env
+> - [ ] Change VS Code theme
+>
+> **Q2: Which detail is also in the "If Something Goes Wrong" section?**
+>
+> - [ ] Troubleshooting lists common blockers.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — If Something Goes Wrong</summary>
+>
+> - **Q1: If stuck, page says:** → *Contact AWS support or instructor; check email verification/phone* — Troubleshooting lists common blockers.
+> - **Q2: Which detail is also in the "If Something Goes Wrong" section?** → *Troubleshooting lists common blockers.* — Troubleshooting lists common blockers.
+>
+> </details>
 
-Contact AWS support or instructor; check email verification/phone Reinstall Python Delete .env Change VS Code theme
-
-Q2: Which detail is also in the "If Something Goes Wrong" section?
-
-Troubleshooting lists common blockers. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## AWS Account Setup — Final Check
 
@@ -302,23 +442,30 @@ You're done when...
   * ✓ A zero-spend budget alert is set up
   * ✓ Your root password is saved in a password manager — not just remembered
 
-Quick Check · AWS Account Setup — Final Check +25 XP
 
-Q1: Checklist confirms:
-
-Can sign in as root, MFA on, budget alert set Only Python version Only GitHub username Only Supabase keys
-
-Q2: Which detail is also in the "AWS Account Setup — Final Check" section?
-
-Checklist verifies root sign-in, MFA, budget. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — AWS — Root & Budget Check
-
-Type the budget alert value the page tells you to set, or the root sign-in email pattern. The page says set a zero-spend budget.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — AWS Account Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Checklist confirms:**
+>
+> - [ ] Can sign in as root, MFA on, budget alert set
+> - [ ] Only Python version
+> - [ ] Only GitHub username
+> - [ ] Only Supabase keys
+>
+> **Q2: Which detail is also in the "AWS Account Setup — Final Check" section?**
+>
+> - [ ] Checklist verifies root sign-in, MFA, budget.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — AWS Account Setup — Final Check</summary>
+>
+> - **Q1: Checklist confirms:** → *Can sign in as root, MFA on, budget alert set* — Checklist verifies root sign-in, MFA, budget.
+> - **Q2: Which detail is also in the "AWS Account Setup — Final Check" section?** → *Checklist verifies root sign-in, MFA, budget.* — Checklist verifies root sign-in, MFA, budget.
+>
+> </details>
 
 Check Hint
 

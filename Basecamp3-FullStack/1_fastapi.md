@@ -998,6 +998,94 @@ Lab
 
 ---
 
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **In Part 5.2, theaddendpoint uses@app.get("/add")witha: float, b: float. What happens if you callGET /add?a=hello&b=5?**
+>
+> - [ ] FastAPI rejects it with 422 Unprocessable Entity before your function runs
+> - [ ] It returns{"result": "hello5"}as a string
+> - [ ] It returns 200 with{"result": null}
+> - [ ] The server crashes with 500
+>
+> **Which HTTP method is shown for retrieving data with no side effects (read-only) in Part 3.3?**
+>
+> - [ ] GET
+> - [ ] POST
+> - [ ] PUT
+> - [ ] DELETE
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **In Part 5.2, theaddendpoint uses@app.get("/add")witha: float, b: float. What happens if you callGET /add?a=hello&b=5?** → *FastAPI rejects it with 422 Unprocessable Entity before your function runs* — Correct — FastAPI reads the type hints and validates query params before your function runs; it rejects non-numeric input with 422 (slide 5.2).
+> - **Which HTTP method is shown for retrieving data with no side effects (read-only) in Part 3.3?** → *GET* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **From Part 6: which URL serves the interactive Swagger UI where you can “Try it out” (slide 6.2)?**
+>
+> - [ ] http://localhost:8000/docs
+> - [ ] http://localhost:8000/redoc
+> - [ ] http://localhost:8000/openapi.json
+> - [ ] http://localhost:8000/
+>
+> **When you callGET /divide?a=10&b=0via Swagger (slide 6.3), what response do you see after Part 5.4’s fix?**
+>
+> - [ ] Status 400 with {"detail": "Cannot divide by zero"} — server stays running
+> - [ ] Status 200 with {"result": 0}
+> - [ ] Status 500 traceback and server crashes
+> - [ ] Status 422 validation error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **From Part 6: which URL serves the interactive Swagger UI where you can “Try it out” (slide 6.2)?** → *http://localhost:8000/docs* — 
+> - **When you callGET /divide?a=10&b=0via Swagger (slide 6.3), what response do you see after Part 5.4’s fix?** → *Status 400 with {"detail": "Cannot divide by zero"} — server stays running* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **In Part 7.3, thePOST /calculateendpoint uses a PydanticCalcRequestwitha: float, b: float, op: str. How does the client send data to it (slide 7.4)?**
+>
+> - [ ] requests.post(..., json=payload) — as a JSON body
+> - [ ] requests.get(..., params=payload) — as query string ?a=&b=
+> - [ ] As form-data via headers
+> - [ ] As a URL path like /calculate/10/3/multiply
+>
+> **What status code doescalculatereturn whenpayload.opis unknown (slide 7.3)?**
+>
+> - [ ] 400 Bad Request with detail "Unknown op: ..."
+> - [ ] 200 OK with {"result": null}
+> - [ ] 404 Not Found
+> - [ ] 500 Internal Server Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **In Part 7.3, thePOST /calculateendpoint uses a PydanticCalcRequestwitha: float, b: float, op: str. How does the client send data to it (slide 7.4)?** → *requests.post(..., json=payload) — as a JSON body* — 
+> - **What status code doescalculatereturn whenpayload.opis unknown (slide 7.3)?** → *400 Bad Request with detail "Unknown op: ..."* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+
 <div align="center">
 
 <img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />

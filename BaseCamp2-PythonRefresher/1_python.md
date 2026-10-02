@@ -195,19 +195,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 06
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-Given `age = 27` then `age = 28`, what does `print(age)` output?
-
-28 27 Error 27 28
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 2 · Strings · 2.1
 
 ## Creating and Printing Strings
 
@@ -355,19 +343,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 12
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-With `a=15, b=4`, what is `a // b`?
-
-3 3.75 4 3.0
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 3 · Data Structures · 3.1
 
 ## Lists
 
@@ -512,19 +488,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 18
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-For `course="AI Engineering"`, what does `course[0]` return?
-
-"A" "AI" "g" Error
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 3 · Data Structures · 3.7
 
 ## Composite Data Structures
 
@@ -672,19 +636,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 24
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-What does `fruits[1:3]` return?
-
-["banana","cherry"] ["apple","banana"] ["cherry","date"] ["banana"]
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 4 · Control Flow · 4.6
 
 ## Looping Over a Dictionary
 
@@ -811,19 +763,7 @@ GenAI Coaching | Powered by AI Accelerator Hub
 
 30
 
-GenAI Coaching · Quick Check
 
-## Quick Check
-
-What does `is_even(4)` return?
-
-True False 4 None
-
-GenAI Coaching | Powered by AI Accelerator Hub
-
-Quiz
-
-Part 5 · Functions · 5.3
 
 ## Default Parameter Values
 
@@ -964,6 +904,104 @@ GenAI Coaching | Powered by AI Accelerator Hub
 Lab
 
 ---
+
+
+
+---
+
+## ✅ Quick Checks — Interactive Practice## ✅ Quick Checks — Interactive Practice
+
+> *Test your understanding with checkboxes — check your answers and reveal feedback instantly. Each check = +25 XP.*
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Givenage = 27thenage = 28, what doesprint(age)output?**
+>
+> - [ ] 28
+> - [ ] 27
+> - [ ] Error
+> - [ ] 27 28
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Givenage = 27thenage = 28, what doesprint(age)output?** → *28* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Witha=15, b=4, what isa // b?**
+>
+> - [ ] 3
+> - [ ] 3.75
+> - [ ] 4
+> - [ ] 3.0
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Witha=15, b=4, what isa // b?** → *3* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **Forcourse="AI Engineering", what doescourse[0]return?**
+>
+> - [ ] "A"
+> - [ ] "AI"
+> - [ ] "g"
+> - [ ] Error
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **Forcourse="AI Engineering", what doescourse[0]return?** → *"A"* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesfruits[1:3]return?**
+>
+> - [ ] ["banana","cherry"]
+> - [ ] ["apple","banana"]
+> - [ ] ["cherry","date"]
+> - [ ] ["banana"]
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesfruits[1:3]return?** → *["banana","cherry"]* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
+> **What doesis_even(4)return?**
+>
+> - [ ] True
+> - [ ] False
+> - [ ] 4
+> - [ ] None
+>
+> <details><summary>✅ Reveal Answers — Quick Check</summary>
+>
+> - **What doesis_even(4)return?** → *True* — 
+>
+> </details>
+
+
+> [!NOTE]
+> **Quick Check · +25 XP** 🎯
+>
 
 <div align="center">
 

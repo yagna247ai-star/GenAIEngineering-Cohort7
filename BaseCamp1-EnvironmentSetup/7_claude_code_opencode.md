@@ -73,17 +73,31 @@ Before you start, you need:
 
 Agents use a lot of tokens A coding agent makes many model calls per task, and API usage is billed per token — noticeably more than a single chat message. A few dollars of credit is enough to learn on, but keep an eye on your usage dashboard and use the spend limits described in the safety section below. 
 
-Quick Check · Two agents, one set of keys +25 XP
 
-Q1: Claude Code is:
+> [!NOTE]
+> **Quick Check — Two agents, one set of keys · +25 XP** 🎯
+>
+> **Q1: Claude Code is:**
+>
+> - [ ] Made by Anthropic — Claude models only — needs Anthropic key
+> - [ ] Open-source multi-provider
+> - [ ] Only runs on phone
+> - [ ] No API key needed
+>
+> **Q2: Which detail is also in the "Two agents, one set of keys" section?**
+>
+> - [ ] Table: Claude Code made by Anthropic, Claude models only.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Two agents, one set of keys</summary>
+>
+> - **Q1: Claude Code is:** → *Made by Anthropic — Claude models only — needs Anthropic key* — Table: Claude Code made by Anthropic, Claude models only.
+> - **Q2: Which detail is also in the "Two agents, one set of keys" section?** → *Table: Claude Code made by Anthropic, Claude models only.* — Table: Claude Code made by Anthropic, Claude models only.
+>
+> </details>
 
-Made by Anthropic — Claude models only — needs Anthropic key Open-source multi-provider Only runs on phone No API key needed
-
-Q2: Which detail is also in the "Two agents, one set of keys" section?
-
-Table: Claude Code made by Anthropic, Claude models only. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part A — Claude Code · Step 1
 
 ## Install Claude Code
 
@@ -134,17 +148,31 @@ verifyCopy
 
 Windows tip Your prompt shows `PS C:\` in PowerShell and plain `C:\` in Command Prompt — use the matching command. Installing [Git for Windows](<https://git-scm.com/downloads/win>) is optional, but lets Claude Code use a Bash shell for its commands. 
 
-Quick Check · Install Claude Code +25 XP
 
-Q1: Install command is:
+> [!NOTE]
+> **Quick Check — Install Claude Code · +25 XP** 🎯
+>
+> **Q1: Install command is:**
+>
+> - [ ] npm install -g @anthropic-ai/claude-code
+> - [ ] pip install claude-code
+> - [ ] brew install python
+> - [ ] code --install claude
+>
+> **Q2: Which detail is also in the "Install Claude Code" section?**
+>
+> - [ ] CC-install shows npm install -g @anthropic-ai/claude-code.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Install Claude Code</summary>
+>
+> - **Q1: Install command is:** → *npm install -g @anthropic-ai/claude-code* — CC-install shows npm install -g @anthropic-ai/claude-code.
+> - **Q2: Which detail is also in the "Install Claude Code" section?** → *CC-install shows npm install -g @anthropic-ai/claude-code.* — CC-install shows npm install -g @anthropic-ai/claude-code.
+>
+> </details>
 
-npm install -g @anthropic-ai/claude-code pip install claude-code brew install python code --install claude
-
-Q2: Which detail is also in the "Install Claude Code" section?
-
-CC-install shows npm install -g @anthropic-ai/claude-code. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part A — Claude Code · Step 2
 
 ## Give Claude Code Your Anthropic API Key
 
@@ -182,17 +210,31 @@ powershell — this window onlyCopy
 
 Only an Anthropic key works here Claude Code talks to Claude models only. An OpenAI or Gemini key won't work in it — use those with OpenCode in Part B. 
 
-Quick Check · Give Claude Code Your Anthropic API Key +25 XP
 
-Q1: Claude Code accepts:
+> [!NOTE]
+> **Quick Check — Give Claude Code Your Anthropic API Key · +25 XP** 🎯
+>
+> **Q1: Claude Code accepts:**
+>
+> - [ ] Anthropic key only
+> - [ ] Any provider key
+> - [ ] Only OpenAI key
+> - [ ] No key
+>
+> **Q2: Which detail is also in the "Give Claude Code Your Anthropic API Key" section?**
+>
+> - [ ] Overview table: Claude Code accepts Anthropic key.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Give Claude Code Your Anthropic API Key</summary>
+>
+> - **Q1: Claude Code accepts:** → *Anthropic key only* — Overview table: Claude Code accepts Anthropic key.
+> - **Q2: Which detail is also in the "Give Claude Code Your Anthropic API Key" section?** → *Overview table: Claude Code accepts Anthropic key.* — Overview table: Claude Code accepts Anthropic key.
+>
+> </details>
 
-Anthropic key only Any provider key Only OpenAI key No key
-
-Q2: Which detail is also in the "Give Claude Code Your Anthropic API Key" section?
-
-Overview table: Claude Code accepts Anthropic key. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part A — Claude Code · Step 3
 
 ## Run Claude Code for the First Time
 
@@ -211,17 +253,31 @@ inside Claude CodeCopy
 
 Already have a Claude Pro or Max subscription? If `ANTHROPIC_API_KEY` is set and you approve it, Claude Code bills that key instead of your subscription. To go back to your subscription, run `unset ANTHROPIC_API_KEY` (on Windows, remove the variable in System settings) and check `/status` again. 
 
-Quick Check · Run Claude Code for the First Time +25 XP
 
-Q1: First run command is:
+> [!NOTE]
+> **Quick Check — Run Claude Code for the First Time · +25 XP** 🎯
+>
+> **Q1: First run command is:**
+>
+> - [ ] claude
+> - [ ] opencode
+> - [ ] python main.py
+> - [ ] git push
+>
+> **Q2: Which detail is also in the "Run Claude Code for the First Time" section?**
+>
+> - [ ] CC-run shows running claude in terminal.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Run Claude Code for the First Time</summary>
+>
+> - **Q1: First run command is:** → *claude* — CC-run shows running claude in terminal.
+> - **Q2: Which detail is also in the "Run Claude Code for the First Time" section?** → *CC-run shows running claude in terminal.* — CC-run shows running claude in terminal.
+>
+> </details>
 
-claude opencode python main.py git push
-
-Q2: Which detail is also in the "Run Claude Code for the First Time" section?
-
-CC-run shows running claude in terminal. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part B — OpenCode · Step 1
 
 ## Install OpenCode
 
@@ -265,17 +321,31 @@ verifyCopy
     opencode --version
 [/code]
 
-Quick Check · Install OpenCode +25 XP
 
-Q1: OpenCode install uses:
+> [!NOTE]
+> **Quick Check — Install OpenCode · +25 XP** 🎯
+>
+> **Q1: OpenCode install uses:**
+>
+> - [ ] npm/curl installer from opencode.ai
+> - [ ] pip only
+> - [ ] VS Code extension only
+> - [ ] Docker only
+>
+> **Q2: Which detail is also in the "Install OpenCode" section?**
+>
+> - [ ] OC-install lists install via script/npm.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Install OpenCode</summary>
+>
+> - **Q1: OpenCode install uses:** → *npm/curl installer from opencode.ai* — OC-install lists install via script/npm.
+> - **Q2: Which detail is also in the "Install OpenCode" section?** → *OC-install lists install via script/npm.* — OC-install lists install via script/npm.
+>
+> </details>
 
-npm/curl installer from opencode.ai pip only VS Code extension only Docker only
-
-Q2: Which detail is also in the "Install OpenCode" section?
-
-OC-install lists install via script/npm. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part B — OpenCode · Step 2
 
 ## Connect Your API Keys to OpenCode
 
@@ -330,17 +400,31 @@ The output lists saved credentials, plus an **Environment** section naming each 
 
 Same variable names as your other tools These are the same names the earlier API-key pages put in your `.env` file for Python. For OpenCode, the reliable way is to export them as environment variables in your terminal (or use `/connect`), as shown above. 
 
-Quick Check · Connect Your API Keys to OpenCode +25 XP
 
-Q1: OpenCode accepts:
+> [!NOTE]
+> **Quick Check — Connect Your API Keys to OpenCode · +25 XP** 🎯
+>
+> **Q1: OpenCode accepts:**
+>
+> - [ ] Anthropic, OpenAI, or Gemini keys (many providers)
+> - [ ] Only Anthropic
+> - [ ] Only Groq
+> - [ ] No key
+>
+> **Q2: Which detail is also in the "Connect Your API Keys to OpenCode" section?**
+>
+> - [ ] Overview says OpenCode accepts Anthropic, OpenAI, or Gemini.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Connect Your API Keys to OpenCode</summary>
+>
+> - **Q1: OpenCode accepts:** → *Anthropic, OpenAI, or Gemini keys (many providers)* — Overview says OpenCode accepts Anthropic, OpenAI, or Gemini.
+> - **Q2: Which detail is also in the "Connect Your API Keys to OpenCode" section?** → *Overview says OpenCode accepts Anthropic, OpenAI, or Gemini.* — Overview says OpenCode accepts Anthropic, OpenAI, or Gemini.
+>
+> </details>
 
-Anthropic, OpenAI, or Gemini keys (many providers) Only Anthropic Only Groq No key
-
-Q2: Which detail is also in the "Connect Your API Keys to OpenCode" section?
-
-Overview says OpenCode accepts Anthropic, OpenAI, or Gemini. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Part B — OpenCode · Step 3
 
 ## Pick a Model and Run OpenCode
 
@@ -381,17 +465,31 @@ terminalCopy
     opencode auth logout     # remove a provider's saved key
 [/code]
 
-Quick Check · Pick a Model and Run OpenCode +25 XP
 
-Q1: Run OpenCode with:
+> [!NOTE]
+> **Quick Check — Pick a Model and Run OpenCode · +25 XP** 🎯
+>
+> **Q1: Run OpenCode with:**
+>
+> - [ ] opencode
+> - [ ] claude
+> - [ ] python
+> - [ ] npm start
+>
+> **Q2: Which detail is also in the "Pick a Model and Run OpenCode" section?**
+>
+> - [ ] OC-run shows opencode command.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Pick a Model and Run OpenCode</summary>
+>
+> - **Q1: Run OpenCode with:** → *opencode* — OC-run shows opencode command.
+> - **Q2: Which detail is also in the "Pick a Model and Run OpenCode" section?** → *OC-run shows opencode command.* — OC-run shows opencode command.
+>
+> </details>
 
-opencode claude python npm start
-
-Q2: Which detail is also in the "Pick a Model and Run OpenCode" section?
-
-OC-run shows opencode command. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Quick reference
 
 ## Side-by-Side Commands
 
@@ -406,17 +504,31 @@ Switch model| `/model`| `/models`
 Sign out| `/logout`| `opencode auth logout`  
 Health check| `claude doctor`| —  
   
-Quick Check · Side-by-Side Commands +25 XP
 
-Q1: Reference table compares:
+> [!NOTE]
+> **Quick Check — Side-by-Side Commands · +25 XP** 🎯
+>
+> **Q1: Reference table compares:**
+>
+> - [ ] Claude Code vs OpenCode commands side-by-side
+> - [ ] Python vs Node
+> - [ ] AWS vs GitHub
+> - [ ] VS Code vs Jupyter
+>
+> **Q2: Which detail is also in the "Side-by-Side Commands" section?**
+>
+> - [ ] Reference section is side-by-side commands.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Side-by-Side Commands</summary>
+>
+> - **Q1: Reference table compares:** → *Claude Code vs OpenCode commands side-by-side* — Reference section is side-by-side commands.
+> - **Q2: Which detail is also in the "Side-by-Side Commands" section?** → *Reference section is side-by-side commands.* — Reference section is side-by-side commands.
+>
+> </details>
 
-Claude Code vs OpenCode commands side-by-side Python vs Node AWS vs GitHub VS Code vs Jupyter
-
-Q2: Which detail is also in the "Side-by-Side Commands" section?
-
-Reference section is side-by-side commands. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Before you move on
 
 ## Using Coding Agents Safely
 
@@ -431,17 +543,31 @@ These tools are powerful because they can read your files and run commands — w
 
 Where OpenCode stores your key `auth.json` holds keys you enter through `/connect` in plain text. Treat that file like a password — never share or commit it. 
 
-Quick Check · Using Coding Agents Safely +25 XP
 
-Q1: Safety advises:
+> [!NOTE]
+> **Quick Check — Using Coding Agents Safely · +25 XP** 🎯
+>
+> **Q1: Safety advises:**
+>
+> - [ ] Review edits, don't share keys, verify commands
+> - [ ] Auto-approve everything
+> - [ ] Commit keys
+> - [ ] Ignore file changes
+>
+> **Q2: Which detail is also in the "Using Coding Agents Safely" section?**
+>
+> - [ ] Safety section covers reviewing edits and key hygiene.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Using Coding Agents Safely</summary>
+>
+> - **Q1: Safety advises:** → *Review edits, don't share keys, verify commands* — Safety section covers reviewing edits and key hygiene.
+> - **Q2: Which detail is also in the "Using Coding Agents Safely" section?** → *Safety section covers reviewing edits and key hygiene.* — Safety section covers reviewing edits and key hygiene.
+>
+> </details>
 
-Review edits, don't share keys, verify commands Auto-approve everything Commit keys Ignore file changes
-
-Q2: Which detail is also in the "Using Coding Agents Safely" section?
-
-Safety section covers reviewing edits and key hygiene. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Troubleshooting
 
 ## If Something Goes Wrong
 
@@ -455,17 +581,31 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2 — and don't paste your real key into class chat while asking for help; describe the error message instead. 
 
-Quick Check · If Something Goes Wrong +25 XP
 
-Q1: Troubleshooting helps with:
+> [!NOTE]
+> **Quick Check — If Something Goes Wrong · +25 XP** 🎯
+>
+> **Q1: Troubleshooting helps with:**
+>
+> - [ ] Install failures, key errors, permission issues
+> - [ ] Only theme errors
+> - [ ] Only AWS billing
+> - [ ] Only Supabase
+>
+> **Q2: Which detail is also in the "If Something Goes Wrong" section?**
+>
+> - [ ] Troubleshooting lists common agent issues.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — If Something Goes Wrong</summary>
+>
+> - **Q1: Troubleshooting helps with:** → *Install failures, key errors, permission issues* — Troubleshooting lists common agent issues.
+> - **Q2: Which detail is also in the "If Something Goes Wrong" section?** → *Troubleshooting lists common agent issues.* — Troubleshooting lists common agent issues.
+>
+> </details>
 
-Install failures, key errors, permission issues Only theme errors Only AWS billing Only Supabase
-
-Q2: Which detail is also in the "If Something Goes Wrong" section?
-
-Troubleshooting lists common agent issues. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## Coding Agent Setup — Final Check
 
@@ -478,23 +618,30 @@ You're done when...
   * ✓ OpenCode completed a first small task using a model you chose
   * ✓ You've noted where your keys are stored and set a spend limit where available
 
-Quick Check · Coding Agent Setup — Final Check +25 XP
 
-Q1: Checklist verifies:
-
-Both agents installed, keys connected, first run succeeds Only Python version Only GitHub login Only AWS budget
-
-Q2: Which detail is also in the "Coding Agent Setup — Final Check" section?
-
-Checklist confirms agents ready. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — Coding Agents — First Run
-
-Type the install command for Claude Code. The page shows the npm install line.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — Coding Agent Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Checklist verifies:**
+>
+> - [ ] Both agents installed, keys connected, first run succeeds
+> - [ ] Only Python version
+> - [ ] Only GitHub login
+> - [ ] Only AWS budget
+>
+> **Q2: Which detail is also in the "Coding Agent Setup — Final Check" section?**
+>
+> - [ ] Checklist confirms agents ready.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Coding Agent Setup — Final Check</summary>
+>
+> - **Q1: Checklist verifies:** → *Both agents installed, keys connected, first run succeeds* — Checklist confirms agents ready.
+> - **Q2: Which detail is also in the "Coding Agent Setup — Final Check" section?** → *Checklist confirms agents ready.* — Checklist confirms agents ready.
+>
+> </details>
 
 Check Hint
 

@@ -71,17 +71,31 @@ Have these ready before you start:
 
 Stay on the Free plan The Free plan is plenty for learning and class projects. If any screen asks you to upgrade or enter payment details, stop and check that the **Free** plan is selected. 
 
-Quick Check · An online database, free to start +25 XP
 
-Q1: Supabase Free plan includes:
+> [!NOTE]
+> **Quick Check — An online database, free to start · +25 XP** 🎯
+>
+> **Q1: Supabase Free plan includes:**
+>
+> - [ ] 2 active projects, 500 MB DB, 1 GB storage, 50k MAU
+> - [ ] Unlimited everything
+> - [ ] No free plan
+> - [ ] Only 1 project, 10 MB
+>
+> **Q2: Which detail is also in the "An online database, free to start" section?**
+>
+> - [ ] Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — An online database, free to start</summary>
+>
+> - **Q1: Supabase Free plan includes:** → *2 active projects, 500 MB DB, 1 GB storage, 50k MAU* — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.
+> - **Q2: Which detail is also in the "An online database, free to start" section?** → *Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.* — Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU.
+>
+> </details>
 
-2 active projects, 500 MB DB, 1 GB storage, 50k MAU Unlimited everything No free plan Only 1 project, 10 MB
-
-Q2: Which detail is also in the "An online database, free to start" section?
-
-Overview table: 2 active projects, 500 MB, 1 GB, 50k MAU. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 1 of 5
 
 ## Sign Up
 
@@ -109,17 +123,31 @@ Which option should I pick? **GitHub** is the quickest, and you'll use GitHub in
 
 Ignore the other buttons You may also see **Continue with SSO** (for companies with their own single sign-on) and **Continue with ChatGPT**. You don't need either for the fellowship. 
 
-Quick Check · Sign Up +25 XP
 
-Q1: Sign up via:
+> [!NOTE]
+> **Quick Check — Sign Up · +25 XP** 🎯
+>
+> **Q1: Sign up via:**
+>
+> - [ ] GitHub OAuth or email at supabase.com
+> - [ ] Only AWS console
+> - [ ] Only VS Code
+> - [ ] Only phone call
+>
+> **Q2: Which detail is also in the "Sign Up" section?**
+>
+> - [ ] Signup section offers GitHub/email.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Sign Up</summary>
+>
+> - **Q1: Sign up via:** → *GitHub OAuth or email at supabase.com* — Signup section offers GitHub/email.
+> - **Q2: Which detail is also in the "Sign Up" section?** → *Signup section offers GitHub/email.* — Signup section offers GitHub/email.
+>
+> </details>
 
-GitHub OAuth or email at supabase.com Only AWS console Only VS Code Only phone call
-
-Q2: Which detail is also in the "Sign Up" section?
-
-Signup section offers GitHub/email. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 2 of 5
 
 ## Create an Organization
 
@@ -132,17 +160,31 @@ Supabase groups projects inside an **organization**. On your first visit it asks
 
 If Supabase already created an organization for you when you signed in, you can use that one — skip ahead to Step 3. 
 
-Quick Check · Create an Organization +25 XP
 
-Q1: Organization is:
+> [!NOTE]
+> **Quick Check — Create an Organization · +25 XP** 🎯
+>
+> **Q1: Organization is:**
+>
+> - [ ] Container that holds your projects
+> - [ ] A Python package
+> - [ ] A VS Code theme
+> - [ ] A billing card
+>
+> **Q2: Which detail is also in the "Create an Organization" section?**
+>
+> - [ ] Org section says organization holds projects.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Create an Organization</summary>
+>
+> - **Q1: Organization is:** → *Container that holds your projects* — Org section says organization holds projects.
+> - **Q2: Which detail is also in the "Create an Organization" section?** → *Org section says organization holds projects.* — Org section says organization holds projects.
+>
+> </details>
 
-Container that holds your projects A Python package A VS Code theme A billing card
-
-Q2: Which detail is also in the "Create an Organization" section?
-
-Org section says organization holds projects. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 3 of 5
 
 ## Create Your First Project
 
@@ -155,17 +197,31 @@ A **project** is one PostgreSQL database plus its API, login system and file sto
 
 Save the database password first It's shown while you fill in the form. Store it before you click Create — it's not something Supabase will show you again on a normal screen. 
 
-Quick Check · Create Your First Project +25 XP
 
-Q1: Creating a project requires:
+> [!NOTE]
+> **Quick Check — Create Your First Project · +25 XP** 🎯
+>
+> **Q1: Creating a project requires:**
+>
+> - [ ] Name, database password, region
+> - [ ] Only email
+> - [ ] Only API key
+> - [ ] Only GitHub username
+>
+> **Q2: Which detail is also in the "Create Your First Project" section?**
+>
+> - [ ] Project section needs name, password, region.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Create Your First Project</summary>
+>
+> - **Q1: Creating a project requires:** → *Name, database password, region* — Project section needs name, password, region.
+> - **Q2: Which detail is also in the "Create Your First Project" section?** → *Project section needs name, password, region.* — Project section needs name, password, region.
+>
+> </details>
 
-Name, database password, region Only email Only API key Only GitHub username
-
-Q2: Which detail is also in the "Create Your First Project" section?
-
-Project section needs name, password, region. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 4 of 5
 
 ## Look Around & Prove It Works
 
@@ -189,17 +245,31 @@ SQL EditorCopy
 
 The result panel shows a line beginning `PostgreSQL` followed by a version number. That means you have a working, online database.
 
-Quick Check · Look Around & Prove It Works +25 XP
 
-Q1: Explore proves:
+> [!NOTE]
+> **Quick Check — Look Around & Prove It Works · +25 XP** 🎯
+>
+> **Q1: Explore proves:**
+>
+> - [ ] Table Editor, SQL Editor, API docs work
+> - [ ] Only theme change
+> - [ ] Only Python version
+> - [ ] Only GitHub push
+>
+> **Q2: Which detail is also in the "Look Around & Prove It Works" section?**
+>
+> - [ ] Explore section shows Table/SQL editors.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Look Around & Prove It Works</summary>
+>
+> - **Q1: Explore proves:** → *Table Editor, SQL Editor, API docs work* — Explore section shows Table/SQL editors.
+> - **Q2: Which detail is also in the "Look Around & Prove It Works" section?** → *Explore section shows Table/SQL editors.* — Explore section shows Table/SQL editors.
+>
+> </details>
 
-Table Editor, SQL Editor, API docs work Only theme change Only Python version Only GitHub push
-
-Q2: Which detail is also in the "Look Around & Prove It Works" section?
-
-Explore section shows Table/SQL editors. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Step 5 of 5
 
 ## Find Your Project URL & API Keys
 
@@ -226,17 +296,31 @@ When you're ready to use them in a project, keep them in the same `.env` file as
     SUPABASE_DB_PASSWORD=your_database_password_here
 [/code]
 
-Quick Check · Find Your Project URL & API Keys +25 XP
 
-Q1: Keys are at:
+> [!NOTE]
+> **Quick Check — Find Your Project URL & API Keys · +25 XP** 🎯
+>
+> **Q1: Keys are at:**
+>
+> - [ ] Project Settings → API → URL & anon/service_role keys
+> - [ ] GitHub settings
+> - [ ] AWS console
+> - [ ] VS Code settings
+>
+> **Q2: Which detail is also in the "Find Your Project URL & API Keys" section?**
+>
+> - [ ] Keys section points to Project Settings → API.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Find Your Project URL & API Keys</summary>
+>
+> - **Q1: Keys are at:** → *Project Settings → API → URL & anon/service_role keys* — Keys section points to Project Settings → API.
+> - **Q2: Which detail is also in the "Find Your Project URL & API Keys" section?** → *Keys section points to Project Settings → API.* — Keys section points to Project Settings → API.
+>
+> </details>
 
-Project Settings → API → URL & anon/service_role keys GitHub settings AWS console VS Code settings
-
-Q2: Which detail is also in the "Find Your Project URL & API Keys" section?
-
-Keys section points to Project Settings → API. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Good to know
 
 ## Free Plan Housekeeping
 
@@ -244,17 +328,31 @@ Good to know
   * **Paused doesn't mean deleted.** A paused Free project can be restored with a single click from its dashboard page for 90 days after it was paused. After that window you can still download a backup of your data, but you can no longer restore it in place.
   * **Two free projects at a time.** Paused projects don't count toward the limit. If you hit it, pause or delete one you no longer need.
 
-Quick Check · Free Plan Housekeeping +25 XP
 
-Q1: Free plan housekeeping warns:
+> [!NOTE]
+> **Quick Check — Free Plan Housekeeping · +25 XP** 🎯
+>
+> **Q1: Free plan housekeeping warns:**
+>
+> - [ ] Projects pause after inactivity — resume needed
+> - [ ] No limits
+> - [ ] Auto-deletes forever
+> - [ ] No warning
+>
+> **Q2: Which detail is also in the "Free Plan Housekeeping" section?**
+>
+> - [ ] Freeplan warns about auto-pause.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Free Plan Housekeeping</summary>
+>
+> - **Q1: Free plan housekeeping warns:** → *Projects pause after inactivity — resume needed* — Freeplan warns about auto-pause.
+> - **Q2: Which detail is also in the "Free Plan Housekeeping" section?** → *Freeplan warns about auto-pause.* — Freeplan warns about auto-pause.
+>
+> </details>
 
-Projects pause after inactivity — resume needed No limits Auto-deletes forever No warning
-
-Q2: Which detail is also in the "Free Plan Housekeeping" section?
-
-Freeplan warns about auto-pause. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Before you move on
 
 ## Keeping Your Keys Safe
 
@@ -267,17 +365,31 @@ A Supabase project has three secrets. Treat the last two like passwords:
   * Never paste any of these into Slack, email, chat messages, or a GitHub repository. Keep `.env` out of version control.
   * If a secret key leaks, create a new one on the _Project Settings → API Keys_ page and delete the old one straight away. If the database password leaks, reset it in the project's database settings.
 
-Quick Check · Keeping Your Keys Safe +25 XP
 
-Q1: Service_role key is:
+> [!NOTE]
+> **Quick Check — Keeping Your Keys Safe · +25 XP** 🎯
+>
+> **Q1: Service_role key is:**
+>
+> - [ ] Secret — never expose in frontend; anon is public but RLS-protected
+> - [ ] Same as anon, safe anywhere
+> - [ ] Not needed
+> - [ ] Only for VS Code
+>
+> **Q2: Which detail is also in the "Keeping Your Keys Safe" section?**
+>
+> - [ ] Safety distinguishes anon vs service_role.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Keeping Your Keys Safe</summary>
+>
+> - **Q1: Service_role key is:** → *Secret — never expose in frontend; anon is public but RLS-protected* — Safety distinguishes anon vs service_role.
+> - **Q2: Which detail is also in the "Keeping Your Keys Safe" section?** → *Safety distinguishes anon vs service_role.* — Safety distinguishes anon vs service_role.
+>
+> </details>
 
-Secret — never expose in frontend; anon is public but RLS-protected Same as anon, safe anywhere Not needed Only for VS Code
-
-Q2: Which detail is also in the "Keeping Your Keys Safe" section?
-
-Safety distinguishes anon vs service_role. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Troubleshooting
 
 ## If Something Goes Wrong
 
@@ -291,17 +403,31 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2. Describe the message you see — and never share your database password or secret key when asking for help. 
 
-Quick Check · If Something Goes Wrong +25 XP
 
-Q1: Troubleshooting covers:
+> [!NOTE]
+> **Quick Check — If Something Goes Wrong · +25 XP** 🎯
+>
+> **Q1: Troubleshooting covers:**
+>
+> - [ ] Project creation fails, password, region, email
+> - [ ] Only Python PATH
+> - [ ] Only theme
+> - [ ] Only AWS budget
+>
+> **Q2: Which detail is also in the "If Something Goes Wrong" section?**
+>
+> - [ ] Troubleshooting lists Supabase issues.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — If Something Goes Wrong</summary>
+>
+> - **Q1: Troubleshooting covers:** → *Project creation fails, password, region, email* — Troubleshooting lists Supabase issues.
+> - **Q2: Which detail is also in the "If Something Goes Wrong" section?** → *Troubleshooting lists Supabase issues.* — Troubleshooting lists Supabase issues.
+>
+> </details>
 
-Project creation fails, password, region, email Only Python PATH Only theme Only AWS budget
-
-Q2: Which detail is also in the "If Something Goes Wrong" section?
-
-Troubleshooting lists Supabase issues. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## Supabase Setup — Final Check
 
@@ -313,23 +439,30 @@ You're done when...
   * ✓ You've saved your Project URL, publishable key and secret key — labelled, and not shared
   * ✓ You know the project pauses after a week of inactivity, and how to restore it
 
-Quick Check · Supabase Setup — Final Check +25 XP
 
-Q1: Final check confirms:
-
-Account, org, project, URL+keys saved Only Python install Only GitHub 2FA Only AWS MFA
-
-Q2: Which detail is also in the "Supabase Setup — Final Check" section?
-
-Checklist confirms Supabase ready. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — Supabase — Project URL
-
-Paste your Supabase project URL format. The page says find it under Project Settings → API.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — Supabase Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Final check confirms:**
+>
+> - [ ] Account, org, project, URL+keys saved
+> - [ ] Only Python install
+> - [ ] Only GitHub 2FA
+> - [ ] Only AWS MFA
+>
+> **Q2: Which detail is also in the "Supabase Setup — Final Check" section?**
+>
+> - [ ] Checklist confirms Supabase ready.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Supabase Setup — Final Check</summary>
+>
+> - **Q1: Final check confirms:** → *Account, org, project, URL+keys saved* — Checklist confirms Supabase ready.
+> - **Q2: Which detail is also in the "Supabase Setup — Final Check" section?** → *Checklist confirms Supabase ready.* — Checklist confirms Supabase ready.
+>
+> </details>
 
 Check Hint
 

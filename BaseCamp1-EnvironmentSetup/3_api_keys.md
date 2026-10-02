@@ -60,17 +60,31 @@ Each of these five services gives you a different capability you'll use later in
 
 Before you start Use a personal email you check regularly — some providers send a verification link before the API keys page unlocks. 
 
-Quick Check · One account, one key, per provider +25 XP
 
-Q1: How many providers are set up on this page?
+> [!NOTE]
+> **Quick Check — One account, one key, per provider · +25 XP** 🎯
+>
+> **Q1: How many providers are set up on this page?**
+>
+> - [ ] 5 providers: Mistral, Groq, OpenRouter, Serper, Hugging Face
+> - [ ] 3 providers
+> - [ ] 8 providers
+> - [ ] 2 providers
+>
+> **Q2: What is the common flow for every provider?**
+>
+> - [ ] Create account → find API keys page → generate key → copy immediately → save safe
+> - [ ] Email the CEO → wait
+> - [ ] Install VS Code → run Python
+> - [ ] Push to GitHub → deploy
+>
+> <details><summary>✅ Reveal Answers — One account, one key, per provider</summary>
+>
+> - **Q1: How many providers are set up on this page?** → *5 providers: Mistral, Groq, OpenRouter, Serper, Hugging Face* — Meta pill and overview say 5 providers.
+> - **Q2: What is the common flow for every provider?** → *Create account → find API keys page → generate key → copy immediately → save safe* — Overview lists the 5-step flow.
+>
+> </details>
 
-5 providers: Mistral, Groq, OpenRouter, Serper, Hugging Face 3 providers 8 providers 2 providers
-
-Q2: What is the common flow for every provider?
-
-Create account → find API keys page → generate key → copy immediately → save safe Email the CEO → wait Install VS Code → run Python Push to GitHub → deploy
-
-Provider 1 of 5
 
 ## Mistral AI
 
@@ -88,17 +102,31 @@ api keys pageCopy
 
 Some new Mistral accounts need a verified phone number or a payment method on file before API access is fully enabled — follow any prompts the console shows you. 
 
-Quick Check · Mistral AI +25 XP
 
-Q1: Where are Mistral keys managed?
+> [!NOTE]
+> **Quick Check — Mistral AI · +25 XP** 🎯
+>
+> **Q1: Where are Mistral keys managed?**
+>
+> - [ ] console.mistral.ai → API Keys
+> - [ ] github.com/settings
+> - [ ] supabase dashboard
+> - [ ] aws console
+>
+> **Q2: Which detail is also in the "Mistral AI" section?**
+>
+> - [ ] Mistral section links to console.mistral.ai API Keys.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Mistral AI</summary>
+>
+> - **Q1: Where are Mistral keys managed?** → *console.mistral.ai → API Keys* — Mistral section links to console.mistral.ai API Keys.
+> - **Q2: Which detail is also in the "Mistral AI" section?** → *Mistral section links to console.mistral.ai API Keys.* — Mistral section links to console.mistral.ai API Keys.
+>
+> </details>
 
-console.mistral.ai → API Keys github.com/settings supabase dashboard aws console
-
-Q2: Which detail is also in the "Mistral AI" section?
-
-Mistral section links to console.mistral.ai API Keys. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 2 of 5
 
 ## Groq
 
@@ -116,17 +144,31 @@ api keys pageCopy
 
 Groq's free tier includes generous rate limits, which makes it a good default choice for testing and live coding during class. 
 
-Quick Check · Groq +25 XP
 
-Q1: Groq dashboard is at:
+> [!NOTE]
+> **Quick Check — Groq · +25 XP** 🎯
+>
+> **Q1: Groq dashboard is at:**
+>
+> - [ ] console.groq.com → API Keys
+> - [ ] console.mistral.ai
+> - [ ] platform.openai.com
+> - [ ] serper.dev
+>
+> **Q2: Which detail is also in the "Groq" section?**
+>
+> - [ ] Groq section gives console.groq.com.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Groq</summary>
+>
+> - **Q1: Groq dashboard is at:** → *console.groq.com → API Keys* — Groq section gives console.groq.com.
+> - **Q2: Which detail is also in the "Groq" section?** → *Groq section gives console.groq.com.* — Groq section gives console.groq.com.
+>
+> </details>
 
-console.groq.com → API Keys console.mistral.ai platform.openai.com serper.dev
-
-Q2: Which detail is also in the "Groq" section?
-
-Groq section gives console.groq.com. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 3 of 5
 
 ## OpenRouter
 
@@ -144,17 +186,31 @@ api keys pageCopy
 
 Setting a credit limit on day one is worth the extra ten seconds — it caps your worst-case spend if a key ever leaks or a script runs away in a loop. 
 
-Quick Check · OpenRouter +25 XP
 
-Q1: OpenRouter provides:
+> [!NOTE]
+> **Quick Check — OpenRouter · +25 XP** 🎯
+>
+> **Q1: OpenRouter provides:**
+>
+> - [ ] Access to many different LLMs through one API
+> - [ ] Only one model
+> - [ ] Only search results
+> - [ ] Only storage
+>
+> **Q2: Which detail is also in the "OpenRouter" section?**
+>
+> - [ ] Overview says OpenRouter gives access to many LLMs through o
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — OpenRouter</summary>
+>
+> - **Q1: OpenRouter provides:** → *Access to many different LLMs through one API* — Overview says OpenRouter gives access to many LLMs through one API.
+> - **Q2: Which detail is also in the "OpenRouter" section?** → *Overview says OpenRouter gives access to many LLMs through o* — Overview says OpenRouter gives access to many LLMs through one API.
+>
+> </details>
 
-Access to many different LLMs through one API Only one model Only search results Only storage
-
-Q2: Which detail is also in the "OpenRouter" section?
-
-Overview says OpenRouter gives access to many LLMs through o Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 4 of 5
 
 ## Serper
 
@@ -171,17 +227,31 @@ api keys pageCopy
 
 Serper's free tier gives you a fixed number of free search credits when you sign up — plenty for coursework, but keep an eye on usage once you start building agents that search on every request. 
 
-Quick Check · Serper +25 XP
 
-Q1: Serper is for:
+> [!NOTE]
+> **Quick Check — Serper · +25 XP** 🎯
+>
+> **Q1: Serper is for:**
+>
+> - [ ] Real-time web search results for grounding AI answers
+> - [ ] Hosting PostgreSQL
+> - [ ] Python editing
+> - [ ] Designing logos
+>
+> **Q2: Which detail is also in the "Serper" section?**
+>
+> - [ ] Overview says Serper provides real-time web search results.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Serper</summary>
+>
+> - **Q1: Serper is for:** → *Real-time web search results for grounding AI answers* — Overview says Serper provides real-time web search results.
+> - **Q2: Which detail is also in the "Serper" section?** → *Overview says Serper provides real-time web search results.* — Overview says Serper provides real-time web search results.
+>
+> </details>
 
-Real-time web search results for grounding AI answers Hosting PostgreSQL Python editing Designing logos
-
-Q2: Which detail is also in the "Serper" section?
-
-Overview says Serper provides real-time web search results. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Provider 5 of 5
 
 ## Hugging Face
 
@@ -199,17 +269,31 @@ tokens pageCopy
 
 Hugging Face calls these **access tokens** everywhere in its own docs — if you see that term later in the fellowship, it's the same key you're creating here. 
 
-Quick Check · Hugging Face +25 XP
 
-Q1: Hugging Face keys are:
+> [!NOTE]
+> **Quick Check — Hugging Face · +25 XP** 🎯
+>
+> **Q1: Hugging Face keys are:**
+>
+> - [ ] Access tokens for hosted models and datasets
+> - [ ] AWS root passwords
+> - [ ] VS Code themes
+> - [ ] Git commits
+>
+> **Q2: Which detail is also in the "Hugging Face" section?**
+>
+> - [ ] Overview says Hugging Face gives hosted models and datasets.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Hugging Face</summary>
+>
+> - **Q1: Hugging Face keys are:** → *Access tokens for hosted models and datasets* — Overview says Hugging Face gives hosted models and datasets.
+> - **Q2: Which detail is also in the "Hugging Face" section?** → *Overview says Hugging Face gives hosted models and datasets.* — Overview says Hugging Face gives hosted models and datasets.
+>
+> </details>
 
-Access tokens for hosted models and datasets AWS root passwords VS Code themes Git commits
-
-Q2: Which detail is also in the "Hugging Face" section?
-
-Overview says Hugging Face gives hosted models and datasets. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-Before you move on
 
 ## Keeping Your Keys Safe
 
@@ -243,17 +327,31 @@ pythonCopy
 
 Don't have python-dotenv yet? That's expected — `pip install python-dotenv` and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe (a password manager works fine too). 
 
-Quick Check · Keeping Your Keys Safe +25 XP
 
-Q1: Best place to store keys?
+> [!NOTE]
+> **Quick Check — Keeping Your Keys Safe · +25 XP** 🎯
+>
+> **Q1: Best place to store keys?**
+>
+> - [ ] Password manager or local .env file (not committed)
+> - [ ] Paste in public GitHub repo
+> - [ ] Email to group chat
+> - [ ] Screenshot on desktop
+>
+> **Q2: Which detail is also in the "Keeping Your Keys Safe" section?**
+>
+> - [ ] Safety section says use password manager or local .env file.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — Keeping Your Keys Safe</summary>
+>
+> - **Q1: Best place to store keys?** → *Password manager or local .env file (not committed)* — Safety section says use password manager or local .env file.
+> - **Q2: Which detail is also in the "Keeping Your Keys Safe" section?** → *Safety section says use password manager or local .env file.* — Safety section says use password manager or local .env file.
+>
+> </details>
 
-Password manager or local .env file (not committed) Paste in public GitHub repo Email to group chat Screenshot on desktop
-
-Q2: Which detail is also in the "Keeping Your Keys Safe" section?
-
-Safety section says use password manager or local .env file. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-You're done when...
 
 ## API Key Setup — Final Check
 
@@ -266,23 +364,30 @@ You're done when...
 
 Stuck? Flag your instructor before Base Camp 2 — you'll need at least the Groq and Serper keys ready for the earliest hands-on exercises. 
 
-Quick Check · API Key Setup — Final Check +25 XP
 
-Q1: Checklist confirms:
-
-All 5 keys saved safely and retrievable VS Code theme chosen Python path verified AWS MFA enabled
-
-Q2: Which detail is also in the "API Key Setup — Final Check" section?
-
-Checklist verifies all 5 provider keys. Unrelated distractor A Unrelated distractor B Unrelated distractor C
-
-ELITE PRACTICE LAB
-
-### Build & Verify — API Keys — Validate Token Format
-
-Paste a Hugging Face token format (shown in the page as hf_…). Real keys are shown once — this checks the format, not your real key.
-
-Your answer:
+> [!NOTE]
+> **Quick Check — API Key Setup — Final Check · +25 XP** 🎯
+>
+> **Q1: Checklist confirms:**
+>
+> - [ ] All 5 keys saved safely and retrievable
+> - [ ] VS Code theme chosen
+> - [ ] Python path verified
+> - [ ] AWS MFA enabled
+>
+> **Q2: Which detail is also in the "API Key Setup — Final Check" section?**
+>
+> - [ ] Checklist verifies all 5 provider keys.
+> - [ ] Unrelated distractor A
+> - [ ] Unrelated distractor B
+> - [ ] Unrelated distractor C
+>
+> <details><summary>✅ Reveal Answers — API Key Setup — Final Check</summary>
+>
+> - **Q1: Checklist confirms:** → *All 5 keys saved safely and retrievable* — Checklist verifies all 5 provider keys.
+> - **Q2: Which detail is also in the "API Key Setup — Final Check" section?** → *Checklist verifies all 5 provider keys.* — Checklist verifies all 5 provider keys.
+>
+> </details>
 
 Check Hint
 
