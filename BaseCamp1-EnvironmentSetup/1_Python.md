@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Session 1 — Installing Python
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -41,7 +38,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Session 1
+Base Camp 1 · Week 1 · Session 1
 
 # Environment Setup: Installing Python
 
@@ -57,7 +54,7 @@ Python is updated constantly, and "just install the latest one" is a trap in a c
 
 Before you start If you already have some version of Python installed, that's fine — install 3.11.9 alongside it. Session 1's troubleshooting section below shows you how to run the exact version you need even when several are present. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · One version, everywhere +25 XP
+Quick Check · One version, everywhere +25 XP
 
 Q1: Why does the fellowship standardize on Python 3.11.9 specifically?
 
@@ -99,7 +96,7 @@ direct linkCopy
     https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg
 [/code]
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Download Python 3.11.9 +25 XP
+Quick Check · Download Python 3.11.9 +25 XP
 
 Q1: Where does the page tell you to download Python 3.11.9?
 
@@ -118,7 +115,7 @@ Step 2 — Windows
   3. **Click "Install Now"** Use the default install location. Approve the Windows permission prompt if one appears.
   4. **Click "Close" when done** The optional "Disable path length limit" screen is safe to click too — it prevents rare errors with long file paths later in the program.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Installing on Windows +25 XP
+Quick Check · Installing on Windows +25 XP
 
 Q1: Which checkbox MUST be ticked during Windows install?
 
@@ -137,7 +134,7 @@ Step 2 — macOS
   3. **Enter your Mac password** This is your normal login password, required to install system software.
   4. **Run "Install Certificates.command"** A Finder window opens automatically in `/Applications/Python 3.11/` after install. Double-click this file once — it lets Python make secure internet connections.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Installing on macOS +25 XP
+Quick Check · Installing on macOS +25 XP
 
 Q1: Which file do macOS users download for Python 3.11.9?
 
@@ -181,7 +178,7 @@ zshCopy
     # plain "python" usually doesn't exist on Mac — always use python3
 [/code]
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Confirm Python Is Installed Correctly +25 XP
+Quick Check · Confirm Python Is Installed Correctly +25 XP
 
 Q1: What exact output proves success?
 
@@ -205,7 +202,7 @@ Command| Where| What it does
 `py -3.11`| Windows, multiple versions| Tells the Windows launcher to use exactly version 3.11, ignoring any other installed version.  
 `python3.11`| macOS / Linux, multiple versions| Runs a specific version directly when more than one Python 3.x is installed.  
   
-![](assets/genai-coaching-emblem.svg) Quick Check · "python", "python3", or "py" — Which One Do I Type? +25 XP
+Quick Check · "python", "python3", or "py" — Which One Do I Type? +25 XP
 
 Q1: On Windows the recommended default launcher is:
 
@@ -245,7 +242,7 @@ zshCopy
 
 Rule of thumb Always run programs with `py -3.11` (Windows) or `python3.11` (Mac) for this course — even if plain `python` / `python3` already points somewhere else on your machine. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Got Multiple Python Versions Installed? +25 XP
+Quick Check · Got Multiple Python Versions Installed? +25 XP
 
 Q1: Windows: how to list every installed version?
 
@@ -266,7 +263,7 @@ You're done when...
 
 Stuck? Flag your instructor before the next step — everyone needs a working Python before we install the code editor. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Environment Check — Before You Move On +25 XP
+Quick Check · Environment Check — Before You Move On +25 XP
 
 Q1: Which checklist item is required before next step?
 
@@ -300,7 +297,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

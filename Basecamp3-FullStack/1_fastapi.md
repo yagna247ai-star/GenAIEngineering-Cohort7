@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Building Your First REST API with FastAPI — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 37 · use ← → or the sidebar
+Slide 1 / 37 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Base Camp 3 · Week 2 · Session 1
+Base Camp 3 · Week 2 · Session 1
 
 # Building Your First REST API with FastAPI
 
@@ -59,7 +56,7 @@ Function arguments & return values · error handling · client–server architec
 
 ⏱ Extended, hands-on 🖥️ Server today · client tomorrow
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 01
 
@@ -93,7 +90,7 @@ Session Agenda
 
 5:20–5:30Final Recap & Wrap-up
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 02
 
@@ -125,7 +122,7 @@ By the end of this session, you will be able to:
 
 10Run the server with `python main.py` (uvicorn started from code), explore it in Swagger UI, and call it from a notebook using `requests`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 03
 
@@ -149,7 +146,7 @@ pythonCopy
 
 Defining vs. calling`def add(a, b):` only defines the function. Nothing happens until you _call_ it — `add(2, 3)` — passing real values called **arguments** for the parameters `a` and `b`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 04
 
@@ -178,7 +175,7 @@ notebook cellCopy
   * Each function: two parameters in, one calculation, one value out.
   * A one-line body can `return` an expression directly — no need for a separate variable.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 05
 
@@ -207,7 +204,7 @@ outputCopy
 
 The _third_ line of output never printed — the error crashed the program the instant it happened, mid-function.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 06
 
@@ -233,7 +230,7 @@ notebook cellCopy
   * Naming the exact exception keeps you from silently hiding unrelated bugs.
   * The program continues afterward — one bad input no longer takes down everything else.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 07
 
@@ -260,7 +257,7 @@ notebook cellCopy
 
 Keep this pattern in mind — every endpoint we write in Part 5 will return a dictionary just like this one, and FastAPI will convert it to JSON automatically.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 08
 
@@ -274,7 +271,7 @@ The real questionWhat if a teammate, a phone app, or a website needs to use the 
 
 Sharing a `.py` file isn't the same as sharing a running, reachable **service**. That's the gap client–server architecture closes.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 09
 
@@ -300,7 +297,7 @@ Always running, waiting for requests
   * A **client** is anything that sends it a request and waits for a response — it never needs to see the server's code.
   * One server can answer many different clients, at the same time, without either side knowing how the other is built.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 10
 
@@ -320,7 +317,7 @@ We build a **client** — a separate Python program that sends requests to that 
 
 Once the server is running, _any_ client that speaks HTTP can use it — not just the one we happen to write tomorrow.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 11
 
@@ -334,7 +331,7 @@ The restaurant analogy You (the client) order from a menu (the API) by name. The
 
 A **web API** is an API you talk to over the internet (or a local network) using HTTP — the same protocol your browser uses to load web pages.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 12
 
@@ -351,7 +348,7 @@ REST (REpresentational State Transfer) isn't a piece of software — it's a set 
 
 FastAPI, which we set up in Part 4, is built specifically to make writing REST APIs like this fast and hard to get wrong.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 13
 
@@ -370,7 +367,7 @@ Method| Used to…| Example
   
 Today we'll build with `GET` and `POST` — the two you'll use constantly. `PUT` and `DELETE` follow the exact same pattern once those two click.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 14
 
@@ -401,7 +398,7 @@ server → clientCopy
   * A request = **method** \+ **URL** (path, plus optional query parameters like `?a=4&b=5`) + optional headers/body.
   * A response = **status code** \+ headers + a **body** (almost always JSON, for a REST API).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 15
 
@@ -422,7 +419,7 @@ Code| Meaning| When you'll see it today
   
 These codes are the API version of Part 1's exceptions — `400` is what `HTTPException` will send back in Part 5.4, in place of a `ZeroDivisionError` crash.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 16
 
@@ -436,7 +433,7 @@ Why FastAPI, specifically It reads the type hints you're already writing (`a: fl
 
 FastAPI defines _what_ your endpoints do. It doesn't, by itself, listen on a network port — that job belongs to **uvicorn** , installed next.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 17
 
@@ -466,7 +463,7 @@ zshCopy
 
 Everything for the rest of today — installing libraries, running the server — happens with this venv activated.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 18
 
@@ -491,7 +488,7 @@ Terminal — venv_fastapi activeCopy
     > Version: 0.115.0
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 19
 
@@ -512,7 +509,7 @@ Terminal — inside your project folderCopy
   * `main.py` is the name we're choosing — in Part 5.5 the file will start the server itself, referring to its own name as `"main:app"`.
   * Keep this file open in your editor — we'll build it up piece by piece for the rest of the session.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 20
 
@@ -524,7 +521,7 @@ You've refreshed functions and error handling, and you understand why client–s
 
 Next up: Part 5 — From Functions to Endpoints
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 21
 
@@ -549,7 +546,7 @@ main.pyCopy
   * `@app.get("/")` is a **decorator** — it wires the HTTP method (`GET`) and path (`/`) to the function written directly below it.
   * Returning a dictionary is enough — FastAPI converts it to JSON automatically, no extra step.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 22
 
@@ -570,7 +567,7 @@ main.py (append below)Copy
   * `a: float` and `b: float` aren't optional decoration — FastAPI reads them from `?a=4&b=5` in the URL and _validates_ they're really numbers before your code even runs.
   * Send text instead of a number (`?a=hello&b=5`) and FastAPI rejects it itself, with a `422` — your function is never called.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 23
 
@@ -593,11 +590,11 @@ main.py (append below)Copy
 
 Three endpoints in, and the pattern should feel automatic: `@app.get("/path")`, typed parameters, a dictionary return. `/divide` is next — and it needs one more piece.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 24
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — GET Endpoints
+GenAI Coaching · Quick Check — GET Endpoints
 
 ## Quick Check — GET Endpoints & Validation
 
@@ -609,7 +606,7 @@ Which HTTP method is shown for retrieving data with no side effects (read-only) 
 
 GET POST PUT DELETE
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -637,7 +634,7 @@ main.py (append below)Copy
   * Add `HTTPException` to the import at the top of the file — it's the FastAPI-side equivalent of the `except ZeroDivisionError` from Part 1.4.
   * `raise HTTPException(status_code=400, detail="...")` sends back the `400 Bad Request` from Part 3.5, with your message in the body — instead of a `500` crash.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 25
 
@@ -672,7 +669,7 @@ main.py (top and bottom of the file)Copy
   * `host="0.0.0.0"` listens on all network interfaces (dev only); you still browse to `http://localhost:8000` on your own machine. `port=8000` is the port it listens on.
   * The `if __name__ == "__main__":` guard is the pattern from Base Camp 2 — it starts the server only when you run the file directly, not when uvicorn imports it as `main:app`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 26
 
@@ -696,7 +693,7 @@ Terminal — venv_fastapi active, inside calculator_api/Copy
 
 Add any new endpoints **above** `def main()` from now on. Leave this terminal running — open a _new_ terminal (or use Swagger, next) to talk to it.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 27
 
@@ -710,7 +707,7 @@ Swagger UIA web page, served by your own running server, listing every endpoint 
 
 This is one of the biggest reasons FastAPI was chosen in 4.1 — the documentation can never drift out of date, because it's generated from the same code that runs.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 28
 
@@ -731,7 +728,7 @@ browser address barCopy
   4. **Execute.** Click "Execute" — Swagger sends the real request to your running server.
   5. **Read the result.** See the response body `{"result": 9}` and status code `200`, right below.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 29
 
@@ -763,7 +760,7 @@ ResponseCopy
 
 No traceback, no crashed server — Swagger just shows a `400` and your `detail` message. The server is still running underneath, ready for the next request.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 30
 
@@ -781,11 +778,11 @@ browser address barCopy
   * `/docs` (Swagger UI) — interactive, lets you execute real requests. Best while you're building.
   * `/redoc` — clean, read-only reference. No "Try it out" button, but easier to skim and share with teammates who just need to read the contract.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 31
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Swagger & Status Codes
+GenAI Coaching · Quick Check — Swagger & Status Codes
 
 ## Quick Check — Docs & Status Codes
 
@@ -797,7 +794,7 @@ When you call `GET /divide?a=10&b=0` via Swagger (slide 6.3), what response do y
 
 Status 400 with {"detail": "Cannot divide by zero"} — server stays running Status 200 with {"result": 0} Status 500 traceback and server crashes Status 422 validation error
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -815,7 +812,7 @@ Terminal — notebook's venv activeCopy
 
 Why requests`requests` is the standard Python library for sending HTTP requests to any server — GET, POST, and every other method. This is literally what "being a client" means in code, and it's what tomorrow's client script will be built on.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 32
 
@@ -845,7 +842,7 @@ notebook cellCopy
   * `params={"a": 4, "b": 5}` is how `requests` builds the `?a=4&b=5` query string from Part 5.2 — no manual string building.
   * `response.status_code` and `response.json()` are the Python-side view of the raw HTTP response from Part 3.4.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 33
 
@@ -884,7 +881,7 @@ main.py (add above def main())Copy
   * `CalcRequest` is a **Pydantic model** — a class describing the exact shape of the JSON body you expect. FastAPI parses and validates it into `payload` automatically.
   * Save the file — `reload=True` from 5.5 picks up this change without restarting the server by hand.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 34
 
@@ -906,11 +903,11 @@ notebook cellCopy
   * `json=payload` tells `requests` to serialize the dictionary and send it as the request body — the client-side mirror of the `CalcRequest` model in 7.3.
   * Try Swagger's `/docs` page on `POST /calculate` too — same endpoint, same result, different client.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 35
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — POST Endpoint
+GenAI Coaching · Quick Check — POST Endpoint
 
 ## Quick Check — POST & JSON Body
 
@@ -922,7 +919,7 @@ What status code does `calculate` return when `payload.op` is unknown (slide 7.3
 
 400 Bad Request with detail "Unknown op: ..." 200 OK with {"result": null} 404 Not Found 500 Internal Server Error
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -944,7 +941,7 @@ notebook cellCopy
 
 This is the client-side twin of Part 5.4's `HTTPException` — the server sends a clean `400` and a `detail` message, and the client checks for it instead of letting a bad response crash its own code.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 36
 
@@ -972,11 +969,11 @@ Recap
 
 10The `requests` library is a real client in Python — today, it proved the server works; tomorrow, we build with it properly.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 37
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Lab — Build Your Endpoint
 
@@ -995,7 +992,7 @@ Check
 
 Hint: typed params are required — `a: float` not just `a` — and the path is quoted with double quotes.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Lab
 
@@ -1003,7 +1000,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

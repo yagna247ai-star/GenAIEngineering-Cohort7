@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Setting Up API Keys
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -41,7 +38,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Before Base Camp 2
+Base Camp 1 · Week 1 · Before Base Camp 2
 
 # Setting Up API Keys
 
@@ -63,7 +60,7 @@ Each of these five services gives you a different capability you'll use later in
 
 Before you start Use a personal email you check regularly — some providers send a verification link before the API keys page unlocks. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · One account, one key, per provider +25 XP
+Quick Check · One account, one key, per provider +25 XP
 
 Q1: How many providers are set up on this page?
 
@@ -91,7 +88,7 @@ api keys pageCopy
 
 Some new Mistral accounts need a verified phone number or a payment method on file before API access is fully enabled — follow any prompts the console shows you. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Mistral AI +25 XP
+Quick Check · Mistral AI +25 XP
 
 Q1: Where are Mistral keys managed?
 
@@ -119,7 +116,7 @@ api keys pageCopy
 
 Groq's free tier includes generous rate limits, which makes it a good default choice for testing and live coding during class. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Groq +25 XP
+Quick Check · Groq +25 XP
 
 Q1: Groq dashboard is at:
 
@@ -147,7 +144,7 @@ api keys pageCopy
 
 Setting a credit limit on day one is worth the extra ten seconds — it caps your worst-case spend if a key ever leaks or a script runs away in a loop. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · OpenRouter +25 XP
+Quick Check · OpenRouter +25 XP
 
 Q1: OpenRouter provides:
 
@@ -174,7 +171,7 @@ api keys pageCopy
 
 Serper's free tier gives you a fixed number of free search credits when you sign up — plenty for coursework, but keep an eye on usage once you start building agents that search on every request. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Serper +25 XP
+Quick Check · Serper +25 XP
 
 Q1: Serper is for:
 
@@ -202,7 +199,7 @@ tokens pageCopy
 
 Hugging Face calls these **access tokens** everywhere in its own docs — if you see that term later in the fellowship, it's the same key you're creating here. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Hugging Face +25 XP
+Quick Check · Hugging Face +25 XP
 
 Q1: Hugging Face keys are:
 
@@ -246,7 +243,7 @@ pythonCopy
 
 Don't have python-dotenv yet? That's expected — `pip install python-dotenv` and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe (a password manager works fine too). 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Keeping Your Keys Safe +25 XP
+Quick Check · Keeping Your Keys Safe +25 XP
 
 Q1: Best place to store keys?
 
@@ -269,7 +266,7 @@ You're done when...
 
 Stuck? Flag your instructor before Base Camp 2 — you'll need at least the Groq and Serper keys ready for the earliest hands-on exercises. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · API Key Setup — Final Check +25 XP
+Quick Check · API Key Setup — Final Check +25 XP
 
 Q1: Checklist confirms:
 
@@ -303,7 +300,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

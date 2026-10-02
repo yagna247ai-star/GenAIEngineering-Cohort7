@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Calculator
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -30,13 +27,13 @@ Second number
 Operation Add Subtract Multiply Divide   
 Calculate
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Challenge — Solve 3 to unlock Elite badge XP **0**
+GenAI Challenge — Solve 3 to unlock Elite badge XP **0**
 
 Use the calculator above. Each correct calculation counts — solve 3 in a row without error.
 
 ✓ ELITE BADGE UNLOCKED
 
-![](assets/genai-coaching-emblem.svg) Elite Lab — Calculator API
+Elite Lab — Calculator API
 
 Verify your FastAPI calculator handles all 4 operations and error cases. Complete 3 calculations to earn **+50 XP**.
 
@@ -46,7 +43,7 @@ Try: 12 / 4 =  Check Answer
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Session 2 — Installing VS Code
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -45,7 +42,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Session 2
+Base Camp 1 · Week 1 · Session 2
 
 # Environment Setup: Installing VS Code
 
@@ -61,7 +58,7 @@ Python (Session 1) is the language; VS Code is where you'll actually write, run,
 
 Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · One editor, one workflow +25 XP
+Quick Check · One editor, one workflow +25 XP
 
 Q1: Why is VS Code the fellowship editor?
 
@@ -84,7 +81,7 @@ urlCopy
 
 Mac users Choose **Apple Silicon** if your Mac has an M1/M2/M3/M4 chip, or **Intel chip** for older Macs. Not sure? **Universal** works on both. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Download VS Code +25 XP
+Quick Check · Download VS Code +25 XP
 
 Q1: Where to download VS Code from?
 
@@ -102,7 +99,7 @@ The Explorer is your file browser inside VS Code — every file and folder for t
 
 Tip Create one folder for the whole fellowship — e.g. `ai-fellowship` — and keep every week's files inside it. Opening that single folder in VS Code gives you one Explorer view for everything. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Meet the Explorer +25 XP
+Quick Check · Meet the Explorer +25 XP
 
 Q1: What is the Explorer in VS Code?
 
@@ -136,7 +133,7 @@ Terminal dropdown should show **zsh**.
 
 The default "zsh" terminal is exactly what you need — no change needed.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Open a Terminal Inside VS Code +25 XP
+Quick Check · Open a Terminal Inside VS Code +25 XP
 
 Q1: How to open a terminal inside VS Code?
 
@@ -165,7 +162,7 @@ Jupyter| Microsoft| Notebook support for VS Code
   
 Watch out Check the publisher name under each search result — it should say "Microsoft." Several look-alike extensions exist from other publishers. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Install the Python & Jupyter Extensions +25 XP
+Quick Check · Install the Python & Jupyter Extensions +25 XP
 
 Q1: Which two extensions are essential?
 
@@ -191,7 +188,7 @@ Options include Dark Modern (default), Light Modern, Monokai, Solarized Dark, So
 
 There's no "right" theme — pick whatever's easiest on your eyes. If you want your screen to match the instructor's screenshots exactly, stick with **Dark Modern** (the default). 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Choose a Color Theme +25 XP
+Quick Check · Choose a Color Theme +25 XP
 
 Q1: Choosing a theme affects:
 
@@ -214,7 +211,7 @@ test.pyCopy
 
 Naming tip Use `.py` for plain Python scripts and `.ipynb` for Jupyter notebooks — VS Code recognizes both instantly and adjusts its UI accordingly (e.g. notebooks get "cells," scripts get a Run button). 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Create test.py and test.ipynb +25 XP
+Quick Check · Create test.py and test.ipynb +25 XP
 
 Q1: Which two test files do you create?
 
@@ -235,7 +232,7 @@ File type| Where the indicator lives| How to change it
 `test.py`| Bottom status bar — e.g. "🐍 Python 3.11.9"| Command Palette → "Python: Select Interpreter" → choose the one showing 3.11.9  
 `test.ipynb`| Top-right kernel picker| Click "Select Kernel" → Python Environments → pick 3.11.9  
   
-![](assets/genai-coaching-emblem.svg) Quick Check · Confirm the Right Python Is Selected +25 XP
+Quick Check · Confirm the Right Python Is Selected +25 XP
 
 Q1: Where to confirm Python interpreter in VS Code?
 
@@ -261,7 +258,7 @@ Select InterpreterCopy
 
 Rule of thumb Always match the exact version number — **3.11.9** — and prefer an entry inside a project's `.venv` folder over a system-wide install. (You'll create your first `.venv` in Base Camp 2.) 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Choosing the Right Python When Several Are Installed +25 XP
+Quick Check · Choosing the Right Python When Several Are Installed +25 XP
 
 Q1: With multiple Pythons, how to lock to 3.11.9 in VS Code?
 
@@ -295,7 +292,7 @@ zshCopy
 
 Using `python -m pip` (not just `pip`) guarantees the package installs into the exact Python you're targeting — even with multiple versions installed, because `python -m` forces that specific interpreter to do the installing. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Install ipykernel +25 XP
+Quick Check · Install ipykernel +25 XP
 
 Q1: What is ipykernel for?
 
@@ -318,7 +315,7 @@ Markdown Preview Enhanced| Yiyi Wang| Richer Markdown preview — math, diagrams
 Mermaid| Mermaid Chart| Author Mermaid diagrams (flowcharts, sequence, ER) with editor support  
 Mermaid Preview| Mermaid OSS| Live-render Mermaid diagrams side-by-side as you write them  
   
-![](assets/genai-coaching-emblem.svg) Quick Check · Extra Extensions Worth Installing +25 XP
+Quick Check · Extra Extensions Worth Installing +25 XP
 
 Q1: Which extra extension is suggested?
 
@@ -341,7 +338,7 @@ You're done when...
   * ✓ `ipykernel` is installed
   * ✓ Draw.io Integration, Markdown Preview Enhanced, Mermaid, and Mermaid Preview are installed
 
-![](assets/genai-coaching-emblem.svg) Quick Check · VS Code Setup — Final Check +25 XP
+Quick Check · VS Code Setup — Final Check +25 XP
 
 Q1: Final check requires:
 
@@ -375,7 +372,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

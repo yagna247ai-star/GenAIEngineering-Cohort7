@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Setting Up Anthropic, OpenAI & Gemini API Keys
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -41,7 +38,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Before Base Camp 2
+Base Camp 1 · Week 1 · Before Base Camp 2
 
 # Setting Up Anthropic, OpenAI & Gemini API Keys
 
@@ -63,7 +60,7 @@ The chat apps you may already use — Claude.ai, ChatGPT, the Gemini app — and
 
 Plan for billing Anthropic and OpenAI generally require adding a small amount of prepaid credit before API calls will succeed — a few dollars is plenty for coursework. Gemini has a free tier that works without a card. Details are in each section, and dashboards change their wording from time to time, so trust the on-screen labels if they differ slightly from these steps. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · An API key is not your chat subscription +25 XP
+Quick Check · An API key is not your chat subscription +25 XP
 
 Q1: Chat subscription vs API key:
 
@@ -92,7 +89,7 @@ api keys pageCopy
 
 The Anthropic SDK looks for an environment variable named `ANTHROPIC_API_KEY` automatically — use exactly that name in your `.env` file and you won't have to pass the key around in code. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Anthropic (Claude) +25 XP
+Quick Check · Anthropic (Claude) +25 XP
 
 Q1: Anthropic keys are at:
 
@@ -121,7 +118,7 @@ api keys pageCopy
 
 The OpenAI SDK reads `OPENAI_API_KEY` from the environment by default — use that exact name in your `.env` file. The billing page also lets you set a monthly spend limit; setting a low one on day one caps your worst-case cost if a key ever leaks. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · OpenAI +25 XP
+Quick Check · OpenAI +25 XP
 
 Q1: OpenAI keys are at:
 
@@ -151,7 +148,7 @@ The Gemini API has a free tier with rate limits, so you can get started without 
 
 Free-tier data note Under Google's terms, content sent through the free tier may be used to improve Google's products. Don't send sensitive, personal, or confidential data while using the free tier. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Google Gemini +25 XP
+Quick Check · Google Gemini +25 XP
 
 Q1: Gemini keys are at:
 
@@ -171,7 +168,7 @@ Provider| Key page| Key looks like| Billing to start| Env variable
 **OpenAI**| `platform.openai.com/api-keys`| `sk-… / sk-proj-…`| Prepaid credit| `OPENAI_API_KEY`  
 **Google Gemini**| `aistudio.google.com/apikey`| `AIza…`| Free tier available| `GEMINI_API_KEY`  
   
-![](assets/genai-coaching-emblem.svg) Quick Check · Side-by-Side Comparison +25 XP
+Quick Check · Side-by-Side Comparison +25 XP
 
 Q1: Which table row is shown?
 
@@ -225,7 +222,7 @@ powershellCopy
 
 One-off test only Keys typed into a terminal end up in your shell history, and these variables vanish when you close the window. That's fine for a quick check — the permanent setup is the `.env` file below. On Windows, use `curl.exe` (not plain `curl`), because PowerShell aliases `curl` to a different command. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Test That Each Key Works +25 XP
+Quick Check · Test That Each Key Works +25 XP
 
 Q1: How to test keys?
 
@@ -269,7 +266,7 @@ pythonCopy
 
 Don't have python-dotenv yet? That's expected — `pip install python-dotenv` and virtual environments are covered in Base Camp 2, Session 2. For now, just get every key generated and saved somewhere safe. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Keeping Your Keys Safe +25 XP
+Quick Check · Keeping Your Keys Safe +25 XP
 
 Q1: Safest practice is:
 
@@ -291,7 +288,7 @@ You're done when...
 
 Stuck? Flag your instructor before Base Camp 2. If billing is a problem for any provider, tell them which one — the exercises can be done with just one or two of these keys. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · LLM API Key Setup — Final Check +25 XP
+Quick Check · LLM API Key Setup — Final Check +25 XP
 
 Q1: Final check needs:
 
@@ -325,7 +322,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Creating Your Supabase Account
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -45,7 +42,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Database Account
+Base Camp 1 · Week 1 · Database Account
 
 # Creating Your Supabase Account
 
@@ -74,7 +71,7 @@ Have these ready before you start:
 
 Stay on the Free plan The Free plan is plenty for learning and class projects. If any screen asks you to upgrade or enter payment details, stop and check that the **Free** plan is selected. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · An online database, free to start +25 XP
+Quick Check · An online database, free to start +25 XP
 
 Q1: Supabase Free plan includes:
 
@@ -112,7 +109,7 @@ Which option should I pick? **GitHub** is the quickest, and you'll use GitHub in
 
 Ignore the other buttons You may also see **Continue with SSO** (for companies with their own single sign-on) and **Continue with ChatGPT**. You don't need either for the fellowship. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Sign Up +25 XP
+Quick Check · Sign Up +25 XP
 
 Q1: Sign up via:
 
@@ -135,7 +132,7 @@ Supabase groups projects inside an **organization**. On your first visit it asks
 
 If Supabase already created an organization for you when you signed in, you can use that one — skip ahead to Step 3. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Create an Organization +25 XP
+Quick Check · Create an Organization +25 XP
 
 Q1: Organization is:
 
@@ -158,7 +155,7 @@ A **project** is one PostgreSQL database plus its API, login system and file sto
 
 Save the database password first It's shown while you fill in the form. Store it before you click Create — it's not something Supabase will show you again on a normal screen. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Create Your First Project +25 XP
+Quick Check · Create Your First Project +25 XP
 
 Q1: Creating a project requires:
 
@@ -192,7 +189,7 @@ SQL EditorCopy
 
 The result panel shows a line beginning `PostgreSQL` followed by a version number. That means you have a working, online database.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Look Around & Prove It Works +25 XP
+Quick Check · Look Around & Prove It Works +25 XP
 
 Q1: Explore proves:
 
@@ -229,7 +226,7 @@ When you're ready to use them in a project, keep them in the same `.env` file as
     SUPABASE_DB_PASSWORD=your_database_password_here
 [/code]
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Find Your Project URL & API Keys +25 XP
+Quick Check · Find Your Project URL & API Keys +25 XP
 
 Q1: Keys are at:
 
@@ -247,7 +244,7 @@ Good to know
   * **Paused doesn't mean deleted.** A paused Free project can be restored with a single click from its dashboard page for 90 days after it was paused. After that window you can still download a backup of your data, but you can no longer restore it in place.
   * **Two free projects at a time.** Paused projects don't count toward the limit. If you hit it, pause or delete one you no longer need.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Free Plan Housekeeping +25 XP
+Quick Check · Free Plan Housekeeping +25 XP
 
 Q1: Free plan housekeeping warns:
 
@@ -270,7 +267,7 @@ A Supabase project has three secrets. Treat the last two like passwords:
   * Never paste any of these into Slack, email, chat messages, or a GitHub repository. Keep `.env` out of version control.
   * If a secret key leaks, create a new one on the _Project Settings → API Keys_ page and delete the old one straight away. If the database password leaks, reset it in the project's database settings.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Keeping Your Keys Safe +25 XP
+Quick Check · Keeping Your Keys Safe +25 XP
 
 Q1: Service_role key is:
 
@@ -294,7 +291,7 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2. Describe the message you see — and never share your database password or secret key when asking for help. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · If Something Goes Wrong +25 XP
+Quick Check · If Something Goes Wrong +25 XP
 
 Q1: Troubleshooting covers:
 
@@ -316,7 +313,7 @@ You're done when...
   * ✓ You've saved your Project URL, publishable key and secret key — labelled, and not shared
   * ✓ You know the project pauses after a week of inactivity, and how to restore it
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Supabase Setup — Final Check +25 XP
+Quick Check · Supabase Setup — Final Check +25 XP
 
 Q1: Final check confirms:
 
@@ -350,7 +347,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

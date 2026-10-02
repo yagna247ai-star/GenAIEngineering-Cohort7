@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Introduction to OpenCode — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 54 · use ← → or the sidebar
+Slide 1 / 54 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Week 1 · Full-Stack App Building with Coding Agents · OpenCode Deep Dive
+Week 1 · Full-Stack App Building with Coding Agents · OpenCode Deep Dive
 
 # Introduction to OpenCode
 
@@ -59,7 +56,7 @@ Every OpenCode command, explained and run live — what it does, when to use it,
 
 ⏱ ~5.5 hours, hands-on 🟢 OpenCode · 🔵 Claude Code side by side 🛠️ FastAPI · HTML/JS · Playwright MCP
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 01
 
@@ -87,7 +84,7 @@ Session Agenda
 
 4:55–5:05Recap
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 02
 
@@ -113,7 +110,7 @@ Learning Objectives
 
 8Create a virtual environment, install requirements, run both halves of an app on their designated ports, and test the finished app end to end by driving a real browser through Playwright MCP.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 03
 
@@ -172,7 +169,7 @@ opencode.jsoncCopy
 
 This file now holds real secrets Once you paste actual keys in, add `opencode.jsonc` to your project's `.gitignore` before you ever commit — that's a file-system precaution, not a shell command, and it's the one step worth taking even though everything else here stays inside the config file. 
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 04
 
@@ -199,11 +196,11 @@ Windows (PowerShell) — check it existsCopy
 
 Windows specifics OpenCode's own docs recommend running it inside **WSL** on Windows — in which case the path is identical to macOS/Linux: `~/.config/opencode/opencode.json`, inside your WSL filesystem. Running natively on Windows isn't separately documented; OpenCode doesn't switch to a Windows-native folder like `%APPDATA%`, so the same relative path typically resolves to `%USERPROFILE%\.config\opencode\opencode.json` — the command above confirms it either way. 
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 05
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — OpenCode Config
+GenAI Coaching · Quick Check — OpenCode Config
 
 ## Quick Check — Configuring OpenCode
 
@@ -215,7 +212,7 @@ Slide 0.2: where does the global config live on macOS/Linux?
 
 ~/.config/opencode/opencode.json ./opencode.json ~/.opencode/config.json /etc/opencode.json
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -232,7 +229,7 @@ This is the same "fast/cheap vs frontier" split from last session's model-choice
 
 Set `small_model` to your free-tier or cheapest whitelisted model. There's no reason to spend frontier-model tokens on naming a session.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 06
 
@@ -253,7 +250,7 @@ OpenRouter (free tier)| [openrouter.ai/collections/free-models](<https://openrou
   
 A model ID is a moving targetProviders rename, deprecate, and version their model IDs (notice `claude-sonnet-4-5-20250929` carries a date). Click through and copy the exact current ID — don't guess at it or reuse one from an old tutorial.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 07
 
@@ -289,7 +286,7 @@ Store it directly in Claude Code's own config file:
 
 Same shape as `opencode.jsonc` — a JSON file Claude Code reads directly — just a nested `env` object instead of a `provider` object. Use `.claude/settings.json` for a key the whole project should share, or `~/.claude/settings.json` for one that follows you across every project — the same global-vs-project split as 0.2.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 08
 
@@ -323,7 +320,7 @@ Should report you're authenticated.
 
 Both configs are just files sitting in your project. Close the terminal, reopen it tomorrow, and neither tool needs anything re-entered — the file is still there.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 09
 
@@ -343,7 +340,7 @@ Command| What it does| When to use it| Outcome
   * `/sessions`/`/resume` → **no in-session browser or rename in Claude Code.** Closest is `claude --continue` (most recent) or `claude --resume` (picker) at launch
   * `/compact` → Claude Code's `/compact` — same idea, optionally with focus instructions
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 10
 
@@ -363,7 +360,7 @@ Command| What it does| When to use it| Outcome
 
 Run `/models` right now and pick your fast/cheap tier from 0.4 before doing anything else today.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 11
 
@@ -380,11 +377,11 @@ Command| What it does| When to use it| Outcome
   
 Claude Code has no equivalent pairThe closest working analogue is pressing **Esc twice** to jump back to an earlier point in the conversation and edit what you sent — a rewind, not a symmetric undo/redo. Neither mechanism, in either tool, undoes file edits already made on disk — version control is still your real safety net for that.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 12
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Commands & Lifecycle
+GenAI Coaching · Quick Check — Commands & Lifecycle
 
 ## Quick Check — OpenCode Commands
 
@@ -396,7 +393,7 @@ Slide 1.3: what does `/undo` do — and what does it NOT undo (callout)?
 
 Removes last message+response; does NOT undo file edits on disk Deletes last file edit from disk Reverts git commit Closes the session
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -416,7 +413,7 @@ Where your provider keys live| `opencode.jsonc` / `.claude/settings.json`| Same 
   
 The CLI itself doesn't care which OS it's on. The shell around it does — that's the actual line to remember.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 13
 
@@ -431,7 +428,7 @@ Mechanism| What it does| When to use it| Outcome
   
 Claude Code's `Shift+Tab` cycles _permission modes_ instead of agent identity — a related but different axis. Its chat input's `@` typeahead _does_ support mentioning an agent by name for guaranteed invocation, alongside file references — it's not file-only. Full purpose, worked examples, and — new this session — how to build your own custom agent, in Part 2.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 14
 
@@ -446,7 +443,7 @@ Skill matching
   
 A Skill is just a `SKILL.md` file sitting in a folder the agent already knows to check — `.opencode/skills/` (project) or `~/.config/opencode/skills/` (global); OpenCode also reads Claude-compatible skills straight out of `.claude/skills/`. What a Skill actually is, why it exists, full anatomy, scoping rules, worked examples, and best practices in Part 3.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 15
 
@@ -461,7 +458,7 @@ MCP config
   
 Declared under the `"mcp"` key in `opencode.jsonc`; no `/mcp` slash command in OpenCode — servers just load at startup. Claude Code's `/mcp` _does_ exist, but it's status-only — it shows what's connected, it doesn't turn anything on or off. What an MCP server actually is, why it exists, full schema, installing and using a real worked example (Playwright), use cases, and best practices in Part 4; you'll connect it for real in 4.7.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 16
 
@@ -478,7 +475,7 @@ Claude Code `/status`| Reports version, account, and connectivity| Confirming yo
   
 Different shape, same underlying need — knowing where you stand in a session. OpenCode answers "when did I send this," Claude Code answers "what has this session cost me so far."
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 17
 
@@ -498,7 +495,7 @@ In your configured project folder, run each of these in OpenCode, in order, and 
 
 Now do it in Claude CodeRun `/init`, `/model`, `/compact`, `/cost`, `/status`, and Esc-Esc on a sent message. Notice which outcomes feel identical and which don't — that gap is the point of this whole section.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 18
 
@@ -514,7 +511,7 @@ Session 1 covered what one agent is — something that reads, plans, edits, and 
 
 By the end of Part 2 you'll have used all three layers on the same project — not just read about them.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 19
 
@@ -533,7 +530,7 @@ Agent| Mandate
 
 This is the same "explore first, then act" idea as Claude Code's `plan` permission mode from last session — cycled with `Tab` here instead of `Shift+Tab`, and framed as switching _which agent_ you're talking to rather than switching a mode on the same agent.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 20
 
@@ -553,7 +550,7 @@ promptCopy
 
 🎓 Same rule as Claude Code's Agent toolA subagent starting fresh with zero memory of your conversation isn't an OpenCode quirk — it's how delegation works in both tools. "Check if this is right" tells a fresh subagent nothing; it needs the actual file, function, or claim spelled out.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 21
 
@@ -574,7 +571,7 @@ OpenCode ships one default subagent, `general` — the closest match to Claude C
 
 Every custom agent you write in the next few slides sits _alongside_ these built-ins — it doesn't replace them. You reach for a built-in first; you write a custom one when none of the built-ins fit the job.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 22
 
@@ -598,7 +595,7 @@ A custom agent is the same shape as a Skill (3.2) — a markdown file with YAML 
 
 Both discover recursively, so you can organize into subfolders — and both are matched against your task the same way a Skill's `description` is: it's the selection criteria, not documentation. The `permission` / `tools` / `permissionMode` fields are the two levers worth understanding properly before you write one — next.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 23
 
@@ -625,7 +622,7 @@ OpenCode has no separate "turn this tool off" switchUnlike Claude Code's explici
 
 Restricting which subagents an agent can spawnClaude Code lets a custom agent's `tools` list name exactly which other subagents it may itself delegate to: `tools: Agent(worker, researcher), Read, Bash` restricts it to spawning only `worker` and `researcher` — useful for a coordinator agent you don't want fanning out into every subagent you own. OpenCode doesn't document an equivalent.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 24
 
@@ -661,7 +658,7 @@ Claude Code's version of the same idea is the six permission modes from Session 
 
 Set the risky stuff to `ask`, the safe stuff to `allow`, and the truly dangerous stuff (`git push`, `rm`) to `deny` outright — a specific pattern is worth more than a blanket `ask` on everything, which just trains you to click "yes" without reading.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 25
 
@@ -708,7 +705,7 @@ Same job, same name, written the way each tool expects — both physically incap
 
 OpenCode gets there via Permissions — _denying_ edit/bash; Claude Code gets there via Tools — never _listing_ them. Different lever, same guarantee: this agent cannot touch your files, no matter how it's prompted.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 26
 
@@ -724,7 +721,7 @@ Scenario| Why delegate
 **Parallel investigation** — checking three unrelated hypotheses for a bug at once| Each subagent explores one hypothesis independently; you compare their reports instead of one agent context-switching serially  
 **Drafting test cases** for code someone else (or another agent) just wrote| Fresh eyes on requirements, not on the implementation that was just produced  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 27
 
@@ -739,7 +736,7 @@ Part 2 · Agents · 2.10
   * **Give a custom agent the least tools/permissions it needs to do its one job** — a reviewer that can't edit is a feature, not a limitation; it's what makes its feedback trustworthy.
   * **Treat Plan mode as a subagent's little sibling** — same principle (look before you touch), applied to your one main conversation instead of a delegated one.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 28
 
@@ -773,7 +770,7 @@ promptCopy
 
 Keep this answer — it's exactly what Part 5's build needs, and you'll use it there.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 29
 
@@ -803,7 +800,7 @@ Type `@` and it should appear in the typeahead alongside your files.
 
 Now try to break itFollow up with _"just fix the issues you found."_ It should refuse, or explain that it can't edit — proving the restriction from 2.8 is real and enforced, not just a polite instruction in the prompt.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 30
 
@@ -819,7 +816,7 @@ A quick reset before the mechanics: what problem does a Skill actually solve?
 
 Contrast with a custom agent (Part 2): an agent is a standing personality you talk _to_ ; a Skill is a one-off procedure the current agent borrows, runs, and sets back down.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 31
 
@@ -846,7 +843,7 @@ The same file format works in `.opencode/skills/` and `.claude/skills/` — a ma
   * **`allowed-tools`** pre-approves exactly the tools this skill needs — nothing more. This is least-privilege applied to a packaged workflow.
   * The body is plain instructions — numbered steps, a checklist, a template — whatever a person would need to do the job by hand.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 32
 
@@ -864,7 +861,7 @@ Location| Scope
   
 Use global for anything genuinely personal and universal — a commit-message style you always want. Use scoped for anything project-specific — a deploy sequence, a run command, a set of ports — so it doesn't leak into (or clutter the picker for) unrelated work. Part 5 writes one scoped to a single app on purpose.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 33
 
@@ -880,7 +877,7 @@ Skill| What it packages
 **run-app**|  Create/activate a venv, install requirements, start a backend and frontend on their designated ports — exactly what you'll build in Part 5  
 **onboarding-brief**|  Summarize a codebase area for a new contributor — architecture, gotchas, where to start reading  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 34
 
@@ -894,7 +891,7 @@ Part 3 · Skills · 3.5
   * **One skill, one job.** A skill that tries to cover five loosely related workflows triggers unpredictably and is harder to trust.
   * **Keep the body procedural, not aspirational.** "Always write good tests" isn't actionable; "run `pytest -x`, and if it fails, stop and report which test failed" is.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 35
 
@@ -924,7 +921,7 @@ Then ask: _"Summarize the session so far."_
 
 Same file, unmodified, at `.claude/skills/task-summary/SKILL.md` — that's the payoff of the shared format from 3.2.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 36
 
@@ -940,7 +937,7 @@ Before local-vs-remote schemas, the basic idea: what is MCP actually for?
 
 Session 1 introduced the concept — host/client/server, tools/resources/prompts. Today you install one, connect it, and actually use it to test a real app — Playwright MCP, ahead in 4.3 and reused throughout Part 5.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 37
 
@@ -979,11 +976,11 @@ opencode.jsonc — remote (HTTP)Copy
 
 Claude Code's `.mcp.json` uses the same two shapes: `command`/`args` for local, `"type": "http"` \+ `url` for remote.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 38
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — MCP & Agents
+GenAI Coaching · Quick Check — MCP & Agents
 
 ## Quick Check — MCP Servers & Agents
 
@@ -995,7 +992,7 @@ Slide 1.5: how do you switch the primary agent between Build and Plan in OpenCod
 
 Press Tab Type /agents Type /plan Press Shift+Tab
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -1025,7 +1022,7 @@ Flag| Purpose
   
 If no browser launchesRun `npx playwright install chromium` once to fetch browser binaries, then retry the command above.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 39
 
@@ -1067,7 +1064,7 @@ Tool| Does
 `browser_snapshot`| Read the page's accessibility tree — what's actually on screen, as text  
 `browser_take_screenshot`| Capture a visual screenshot  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 40
 
@@ -1083,7 +1080,7 @@ Filesystem MCP server| Local| Safely let an agent reach a second project folder 
 A team's internal API, wrapped as MCP| Remote| Every teammate's agent gets the same tool without each of them running a local process  
 **Playwright MCP**|  Local| End-to-end testing, screenshotting a live bug for a report, filling out a form for a demo — today's build, Part 5  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 41
 
@@ -1097,7 +1094,7 @@ Part 4 · MCP Servers · 4.6
   * **Prefer remote (HTTP) for anything shared across a team** — one running server, everyone's agent points at the same URL.
   * **Prefer local (stdio) for anything that only makes sense on your machine** — Playwright MCP driving your own local browser is exactly this case.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 42
 
@@ -1116,7 +1113,7 @@ promptCopy
 
 Expect a visible `browser_navigate` call followed by a `browser_snapshot`, then the agent reading "Example Domain" back to you from the snapshot — not from its own memory of that page. You'll reuse this exact server, live, in Part 5 to test the calculator you're about to build.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 43
 
@@ -1142,7 +1139,7 @@ inside OpenCodeCopy
 
 On an empty project, `/init` writes a short, mostly-generic AGENTS.md — that's expected. You're about to make it specific in 5.2, which is the whole point: a memory file is something you curate, not something that has to be perfect the moment it's generated.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 44
 
@@ -1172,7 +1169,7 @@ Copy an actual logo file into `calculator_app/assets/logo.svg` before 5.7 so the
 
 This is last session's "memory file" lesson applied for real: standing context you write once, in a place the agent reliably re-reads, instead of repeating "make it dark teal" in every single prompt.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 45
 
@@ -1199,7 +1196,7 @@ calculator_app/.opencode/skills/run-app/SKILL.mdCopy
 
 Write this now, before the backend or frontend even exist — you'll invoke it for real in 5.10, once there's something for it to run.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 46
 
@@ -1226,7 +1223,7 @@ promptCopy
 
 Same prompt works in both tools — approve each edit as it comes, per last session's Part 3.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 47
 
@@ -1289,7 +1286,7 @@ backend/requirements.txtCopy
     uvicorn[standard]
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 48
 
@@ -1323,7 +1320,7 @@ terminalCopy
 
 Open `http://127.0.0.1:8000/docs` — FastAPI's Swagger UI should load, listing all four endpoints. That's your backend confirmed running on its designated port before the frontend exists.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 49
 
@@ -1354,7 +1351,7 @@ terminal, from inside frontend/Copy
 
 Windows: the same command, just `python` instead of `python3` if that's how your install is aliased.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 50
 
@@ -1370,7 +1367,7 @@ Before trusting either half, check specifically:
   * Are the ports exactly 8000 (backend) and 5500 (frontend) — matching what the scoped skill in 5.3 assumes?
   * Did anything outside `backend/` and `frontend/` get touched that didn't need to be?
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 51
 
@@ -1393,7 +1390,7 @@ promptCopy
 
 This is MCP actually doing something, not just being configuredExpect a real sequence — `browser_navigate`, `browser_fill_form`, `browser_click`, `browser_snapshot` — with the agent reading "42" and the divide-by-zero error text back from the live page, not from its own arithmetic. If it just computes the answer itself without touching the browser, redirect it back to the tools explicitly.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 52
 
@@ -1410,7 +1407,7 @@ promptCopy
 
 Confirm it activates the existing venv (doesn't recreate it), installs from `requirements.txt`, starts the backend on 8000 and the frontend on 5500, and reports both URLs — exactly what 5.3 specified. Then open a new terminal in a completely different folder and check that `run-app` does _not_ appear there — proof the scoping from 3.3 is real, not just a claim on a slide.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 53
 
@@ -1436,11 +1433,11 @@ Before Next Session
 
 Add one more operation to the calculator — e.g. `power(a, b)` — as a new backend endpoint and a matching frontend control, then have Playwright MCP click through it for you. Same loop, one more rep.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 54
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Lab — Command Builder
 
@@ -1460,7 +1457,7 @@ terminal — verify Playwright MCP runs standalone
 
 Check
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Lab
 
@@ -1468,7 +1465,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

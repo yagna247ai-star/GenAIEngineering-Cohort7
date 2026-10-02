@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Creating Your AWS Account
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -44,7 +41,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Cloud Account
+Base Camp 1 · Week 1 · Cloud Account
 
 # Creating Your AWS Account
 
@@ -67,7 +64,7 @@ Have these ready before you start:
 
 Choose the email carefully Don't use a work or college address you might lose access to — if you lose the root email, recovering the account becomes painful. Also avoid an address shared with other people. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Your email is your root login +25 XP
+Quick Check · Your email is your root login +25 XP
 
 Q1: AWS root user is:
 
@@ -95,7 +92,7 @@ You can also go to `aws.amazon.com` and choose **Create an AWS Account** — bot
   5. **Create your root user password** Use uppercase and lowercase letters, numbers, and symbols. Make it long, unique, and store it in your password manager — this password can control your entire account and its billing.
   6. **Click "Continue"** The sign-up wizard walks you through the remaining screens.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Start Sign-Up: Email, Account Name & Password +25 XP
+Quick Check · Start Sign-Up: Email, Account Name & Password +25 XP
 
 Q1: First sign-up step asks for:
 
@@ -116,7 +113,7 @@ Step 2 of 8
 
 Save these contact details somewhere safe. If you ever lose access to your email or your MFA device, AWS Support uses them to confirm you own the account. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Add Your Contact Details +25 XP
+Quick Check · Add Your Contact Details +25 XP
 
 Q1: Contact details include:
 
@@ -135,7 +132,7 @@ Step 3 of 8
 
 Adding a card is required to open an account, even though you'll start on a plan designed not to charge you (see Step 5). If your card is declined, check that international online payments are enabled with your bank, or try a different card. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Add a Payment Method +25 XP
+Quick Check · Add a Payment Method +25 XP
 
 Q1: AWS does what with your card?
 
@@ -154,7 +151,7 @@ Step 4 of 8
   3. **Solve the security check** Type the characters shown, then submit.
   4. **Enter the code you received and click "Continue"**
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Verify Your Identity by Phone +25 XP
+Quick Check · Verify Your Identity by Phone +25 XP
 
 Q1: Identity verification uses:
 
@@ -183,7 +180,7 @@ Newer AWS accounts choose between a **Free plan** and a **Paid plan**. New accou
 
 Set a calendar reminder If you stay on the Free plan, your account closes after six months or when the credits are used up. Note the date now — you'll be able to check your remaining credits and plan status on the Billing and Cost Management home page. AWS adjusts these offers periodically, so trust the on-screen wording if it differs from this page. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Choose Your Account Plan & Support Plan +25 XP
+Quick Check · Choose Your Account Plan & Support Plan +25 XP
 
 Q1: Which plan should you choose?
 
@@ -212,7 +209,7 @@ console sign-inCopy
 
 You'll land on the **Console Home** page. The Region selector is at the top right — use the region your instructor names for course exercises, since resources you create belong to one region. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Sign In as the Root User +25 XP
+Quick Check · Sign In as the Root User +25 XP
 
 Q1: Root sign-in means:
 
@@ -238,7 +235,7 @@ Don't lock yourself out If you lose your phone, you lose the MFA device. Keep yo
 
 Root user: use sparingly AWS recommends that you don't use the root user for everyday work — keep it for account-level tasks only. For day-to-day exercises, your instructor will guide you to create a separate, limited user; until then, signing in as root to look around is fine. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Secure the Root User with MFA +25 XP
+Quick Check · Secure the Root User with MFA +25 XP
 
 Q1: MFA for root is:
 
@@ -261,7 +258,7 @@ A cheap second safety net: AWS emails you the moment your account starts accruin
 
 On the Free plan you're protected by design, but if you ever upgrade to the Paid plan, this alert becomes your early warning. Setting it up now costs nothing. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Set a Zero-Spend Budget Alert +25 XP
+Quick Check · Set a Zero-Spend Budget Alert +25 XP
 
 Q1: Budget alert is set to:
 
@@ -283,7 +280,7 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2 — and don't share your password, verification codes, or card details with anyone in the process, including in class chat. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · If Something Goes Wrong +25 XP
+Quick Check · If Something Goes Wrong +25 XP
 
 Q1: If stuck, page says:
 
@@ -305,7 +302,7 @@ You're done when...
   * ✓ A zero-spend budget alert is set up
   * ✓ Your root password is saved in a password manager — not just remembered
 
-![](assets/genai-coaching-emblem.svg) Quick Check · AWS Account Setup — Final Check +25 XP
+Quick Check · AWS Account Setup — Final Check +25 XP
 
 Q1: Checklist confirms:
 
@@ -339,7 +336,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

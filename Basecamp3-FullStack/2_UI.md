@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Bringing the Calculator to Life with HTML & JavaScript — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 35 · use ← → or the sidebar
+Slide 1 / 35 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Base Camp 3 · Week 2 · Session 2
+Base Camp 3 · Week 2 · Session 2
 
 # Bringing the Calculator to Life with HTML & JavaScript
 
@@ -59,7 +56,7 @@ Step-by-step HTML · the DOM & JavaScript events · `fetch()` and CORS · runnin
 
 ⏱ Extended, hands-on 🔌 Two servers, two ports, one browser tab
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 01
 
@@ -85,7 +82,7 @@ Session Agenda
 
 4:10–4:20Final Recap & Wrap-up
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 02
 
@@ -117,7 +114,7 @@ By the end of this session, you will be able to:
 
 10Build and test a complete calculator UI that calls the live FastAPI server end to end.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 03
 
@@ -131,7 +128,7 @@ Where it fits HTML is the **skeleton** — what's on the page and how it's organ
 
 Almost every tag comes in an opening and closing pair — `<p>` starts a paragraph, `</p>` ends it. Everything between them is that element's content.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 04
 
@@ -159,7 +156,7 @@ index.htmlCopy
   * `<head>` holds metadata — nothing inside it is visible on the page itself (the `<title>` shows in the browser tab).
   * `<body>` holds everything visitors actually see. Everything we build goes here.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 05
 
@@ -183,7 +180,7 @@ inside <body>Copy
   * `<div>` is a generic container — it groups other elements together with no visual styling of its own.
   * An `id` attribute (like `id="app"`) gives an element a unique name — JavaScript will use these constantly, starting in Part 2.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 06
 
@@ -214,7 +211,7 @@ inside <div id="app">Copy
 
 Every element that JavaScript needs to find later gets a distinct `id` — `a`, `b`, `op`, `calcBtn`. Get these exactly right; Part 2 depends on them.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 07
 
@@ -258,7 +255,7 @@ index.htmlCopy
 
 Open this file directly in a browser (double-click it). You'll see a full form — but clicking "Calculate" does nothing yet. That's Part 2.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 08
 
@@ -272,7 +269,7 @@ The key architectural point Python (`main.py`) runs on _your server_. JavaScript
 
 That distinction matters all session: anything JavaScript does happens locally, instantly, with no server involved — until we deliberately ask it to talk to one, in Part 3.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 09
 
@@ -294,7 +291,7 @@ index.html (before </body>)Copy
   * Open DevTools (right-click → Inspect, or F12) → the **Console** tab — you'll see your message there.
   * `console.log()` is your best debugging friend all session — use it constantly to check what a value actually is.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 10
 
@@ -312,7 +309,7 @@ inside <script>Copy
   * `document.getElementById("a")` fetches the exact element whose `id="a"` — the first number input from 1.4.
   * `const` declares a variable that won't be reassigned — the standard choice unless you know a value needs to change.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 11
 
@@ -333,7 +330,7 @@ inside <script>Copy
 
 `.value` on any input **always** returns a string. Forget `Number()` and `"4" + "5"` gives you `"45"`, not `9` — a classic first bug.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 12
 
@@ -354,7 +351,7 @@ inside <script>Copy
   * The function you pass to `addEventListener` runs _every time_ that click happens, for as long as the page stays open.
   * Save, reload, click "Calculate" — watch the Console log once per click.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 13
 
@@ -371,7 +368,7 @@ inside the click listenerCopy
   * `textContent` sets the visible text inside an element — here, the empty `<div id="result">` from 1.5.
   * The page updates **instantly** , with no reload — this is the whole point of client-side JavaScript.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 14
 
@@ -400,11 +397,11 @@ index.html (inside <script>)Copy
 
 This works! But the math happens entirely in the browser — the FastAPI server from last session isn't involved at all. Part 3 replaces this local math with a real network call to it.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 15
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — DOM & Events
+GenAI Coaching · Quick Check — DOM & Events
 
 ## Quick Check — DOM Selection & Events
 
@@ -416,7 +413,7 @@ Slide 2.4 warns `.value` always returns a string. What is the result of `"4" + "
 
 "45" (string concatenation) 9 (number) 45 (number) Error
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -436,7 +433,7 @@ Terminal — venv_fastapi active, from last sessionCopy
   * Confirm it's alive: open `http://localhost:8000/docs` — Swagger should load, exactly like last session.
   * Leave this terminal running for the rest of today.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 16
 
@@ -456,7 +453,7 @@ shape of a fetch callCopy
   * `fetch(url)` sends the request and returns a **Promise** — a value that isn't ready yet, but will be.
   * `.then()` chains what happens once each step finishes: first turn the response into JSON, then use that data.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 17
 
@@ -477,7 +474,7 @@ DevTools ConsoleCopy
 
 If you see `{result: 9}` logged, the browser just called your FastAPI server directly — no Swagger, no `requests`, just JavaScript.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 18
 
@@ -497,7 +494,7 @@ DevTools Console — page served from a different originCopy
   * Browsers enforce a **same-origin policy** : a page loaded from one origin (protocol + host + **port**) can't read a response from a different origin unless that server explicitly allows it.
   * `:5500` (front-end) and `:8000` (API) count as _different origins_ — even on the very same laptop.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 19
 
@@ -525,7 +522,7 @@ main.py (near the top, after app = FastAPI())Copy
   * `allow_origins=["*"]` means "any origin may call this API" — fine for local learning; a real deployment would list its exact front-end URL instead.
   * Save — `reload=True` (from your `main()`) restarts the server with the fix applied.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 20
 
@@ -553,11 +550,11 @@ index.html (inside <script>, replacing 2.7)Copy
   * Backtick strings (template literals) let `${op}` splice the dropdown's value straight into the URL — one function now handles all four operations.
   * `data.result` reads the exact key our FastAPI endpoints return — the same dictionary shape from Session 1.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 21
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — fetch() & CORS
+GenAI Coaching · Quick Check — fetch() & CORS
 
 ## Quick Check — Talking to the Server
 
@@ -569,7 +566,7 @@ Slide 3.4 shows the CORS error when fetching from port 5500 to 8000. What header
 
 Access-Control-Allow-Origin Content-Type Authorization Accept-Encoding
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -587,7 +584,7 @@ DevTools has a tab that shows every request your page makes, in real time.
 
 This is Part 3.4's anatomy of a request/response, from Session 1 — no longer a diagram, but a real exchange you triggered yourself.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 22
 
@@ -616,11 +613,11 @@ index.html (inside <script>, replacing 3.6)Copy
       });
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 23
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Error Handling
+GenAI Coaching · Quick Check — Error Handling
 
 ## Quick Check — Handling Server Errors
 
@@ -632,7 +629,7 @@ Slide 3.5’s CORS fix adds which middleware in main.py?
 
 CORSMiddleware with allow_origins=["*"] SessionMiddleware HTTPSRedirectMiddleware GZipMiddleware
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Quiz
 
@@ -644,7 +641,7 @@ Your calculator already talks to the live server, in one browser tab, on one mac
 
 Next up: Part 4 — Two Ports, Two Servers
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 24
 
@@ -660,7 +657,7 @@ The real shape The **backend** (FastAPI + uvicorn) serves data and logic on `:80
 
 Two independent processes, two ports, one browser tab talking to both — exactly the CORS situation from 3.4, now for real.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 25
 
@@ -678,7 +675,7 @@ Terminal 1 — venv_fastapi active, inside calculator_api/Copy
 
 Do not close this terminal. It stays open and running for the rest of the session — the front-end has nothing to call without it.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 26
 
@@ -704,7 +701,7 @@ zsh — inside the folder with index.htmlCopy
 
 Then open `http://localhost:5500/index.html` in the browser — the calculator now loads from its _own_ origin, port `5500`, separate from the API's `8000`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 27
 
@@ -734,7 +731,7 @@ front-end folderCopy
 
 Two processes, two ports, one machine — this is a miniature version of how a real product's frontend and backend are deployed, often on entirely different servers.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 28
 
@@ -749,7 +746,7 @@ Four checks, in order — if any one fails, that's exactly where to look.
   * ✓Filling in numbers and clicking "Calculate" shows a real result — the two are talking, CORS included.
   * ✓The Network tab (3.7) shows the request going to `:8000` while the page itself loaded from `:5500`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 29
 
@@ -792,7 +789,7 @@ index.htmlCopy
 
 `<script src="app.js"></script>` loads and runs the external file below — same effect as an inline `<script>`, one file per job.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 30
 
@@ -827,7 +824,7 @@ app.jsCopy
     });
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 31
 
@@ -844,7 +841,7 @@ With both terminals from Part 4 still running, reload `http://localhost:5500/ind
 
 Try all four operations. Each one reuses the exact same `app.js` code — only the `op` value changes.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 32
 
@@ -860,7 +857,7 @@ Now break it on purpose — the whole reason 3.8's error handling exists.
 
 No crash, no frozen page, no `Result: undefined` — the server's `HTTPException` (Session 1) and the client's `response.ok` check (3.8) are working together.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 33
 
@@ -887,7 +884,7 @@ FastAPI + uvicorn
   * FastAPI runs the matching function, returns a dictionary, which becomes the JSON body.
   * `app.js` checks `response.ok`, then writes either the result or the error into `textContent`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 34
 
@@ -915,11 +912,11 @@ Recap
 
 10A full click cycle — DOM event → fetch → server → JSON → DOM update — is now a system you built yourself, end to end.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 35
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Lab — Wire the Calculator Button
 
@@ -934,7 +931,7 @@ Check
 
 Backticks, not quotes — and `${op}`, `${a}`, `${b}` spliced into the URL exactly as in slide 3.6.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GENAI COACHING | by AI Accelerator Hub
+GENAI COACHING | by AI Accelerator Hub
 
 Lab
 
@@ -942,7 +939,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

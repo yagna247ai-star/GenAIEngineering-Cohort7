@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Setting Up Claude Code & OpenCode with API Keys
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -46,7 +43,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · AI Coding Tools
+Base Camp 1 · Week 1 · AI Coding Tools
 
 # Setting Up Claude Code & OpenCode with API Keys
 
@@ -76,7 +73,7 @@ Before you start, you need:
 
 Agents use a lot of tokens A coding agent makes many model calls per task, and API usage is billed per token — noticeably more than a single chat message. A few dollars of credit is enough to learn on, but keep an eye on your usage dashboard and use the spend limits described in the safety section below. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Two agents, one set of keys +25 XP
+Quick Check · Two agents, one set of keys +25 XP
 
 Q1: Claude Code is:
 
@@ -137,7 +134,7 @@ verifyCopy
 
 Windows tip Your prompt shows `PS C:\` in PowerShell and plain `C:\` in Command Prompt — use the matching command. Installing [Git for Windows](<https://git-scm.com/downloads/win>) is optional, but lets Claude Code use a Bash shell for its commands. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Install Claude Code +25 XP
+Quick Check · Install Claude Code +25 XP
 
 Q1: Install command is:
 
@@ -185,7 +182,7 @@ powershell — this window onlyCopy
 
 Only an Anthropic key works here Claude Code talks to Claude models only. An OpenAI or Gemini key won't work in it — use those with OpenCode in Part B. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Give Claude Code Your Anthropic API Key +25 XP
+Quick Check · Give Claude Code Your Anthropic API Key +25 XP
 
 Q1: Claude Code accepts:
 
@@ -214,7 +211,7 @@ inside Claude CodeCopy
 
 Already have a Claude Pro or Max subscription? If `ANTHROPIC_API_KEY` is set and you approve it, Claude Code bills that key instead of your subscription. To go back to your subscription, run `unset ANTHROPIC_API_KEY` (on Windows, remove the variable in System settings) and check `/status` again. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Run Claude Code for the First Time +25 XP
+Quick Check · Run Claude Code for the First Time +25 XP
 
 Q1: First run command is:
 
@@ -268,7 +265,7 @@ verifyCopy
     opencode --version
 [/code]
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Install OpenCode +25 XP
+Quick Check · Install OpenCode +25 XP
 
 Q1: OpenCode install uses:
 
@@ -333,7 +330,7 @@ The output lists saved credentials, plus an **Environment** section naming each 
 
 Same variable names as your other tools These are the same names the earlier API-key pages put in your `.env` file for Python. For OpenCode, the reliable way is to export them as environment variables in your terminal (or use `/connect`), as shown above. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Connect Your API Keys to OpenCode +25 XP
+Quick Check · Connect Your API Keys to OpenCode +25 XP
 
 Q1: OpenCode accepts:
 
@@ -384,7 +381,7 @@ terminalCopy
     opencode auth logout     # remove a provider's saved key
 [/code]
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Pick a Model and Run OpenCode +25 XP
+Quick Check · Pick a Model and Run OpenCode +25 XP
 
 Q1: Run OpenCode with:
 
@@ -409,7 +406,7 @@ Switch model| `/model`| `/models`
 Sign out| `/logout`| `opencode auth logout`  
 Health check| `claude doctor`| —  
   
-![](assets/genai-coaching-emblem.svg) Quick Check · Side-by-Side Commands +25 XP
+Quick Check · Side-by-Side Commands +25 XP
 
 Q1: Reference table compares:
 
@@ -434,7 +431,7 @@ These tools are powerful because they can read your files and run commands — w
 
 Where OpenCode stores your key `auth.json` holds keys you enter through `/connect` in plain text. Treat that file like a password — never share or commit it. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Using Coding Agents Safely +25 XP
+Quick Check · Using Coding Agents Safely +25 XP
 
 Q1: Safety advises:
 
@@ -458,7 +455,7 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2 — and don't paste your real key into class chat while asking for help; describe the error message instead. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · If Something Goes Wrong +25 XP
+Quick Check · If Something Goes Wrong +25 XP
 
 Q1: Troubleshooting helps with:
 
@@ -481,7 +478,7 @@ You're done when...
   * ✓ OpenCode completed a first small task using a model you chose
   * ✓ You've noted where your keys are stored and set a spend limit where available
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Coding Agent Setup — Final Check +25 XP
+Quick Check · Coding Agent Setup — Final Check +25 XP
 
 Q1: Checklist verifies:
 
@@ -515,7 +512,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

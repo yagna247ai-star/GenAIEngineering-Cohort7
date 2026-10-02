@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Full-Stack Build with OpenCode — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 40 · use ← → or the sidebar
+Slide 1 / 40 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Week 1 · Full-Stack App Building with Coding Agents · Session 2
+Week 1 · Full-Stack App Building with Coding Agents · Session 2
 
 # Full-Stack Build with OpenCode
 
@@ -59,7 +56,7 @@ Your app-idea blueprint goes in one end; a working FastAPI + SQLite + HTML/JS ap
 
 ⏱ ~5.5 hours, hands-on 🛠️ FastAPI · SQLite · plain HTML/JS 📄 Input: your blueprint file 🖼️ Output: 2 diagrams of your app
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 01
 
@@ -95,7 +92,7 @@ Session Agenda
 
 5:20–5:30Part 9 — Wrap-Up, Recap & Preview of Week 2
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 02
 
@@ -121,7 +118,7 @@ Learning Objectives
 
 8Leave with a working full-stack app — plus two pictures of it — that you can show and explain to anyone.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 03
 
@@ -146,7 +143,7 @@ Term| In plain English
   
 You don't need to memorize any of this. You just need to know it's here.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 04
 
@@ -162,7 +159,7 @@ Before this session, you were asked to turn your app idea into a **blueprint** u
 
 No coding knowledge was needed to fill it out, and none is needed to read it back — it's just your own words, organized.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 05
 
@@ -203,11 +200,11 @@ glowbook-blueprint.json (excerpt)Copy
   * `derived.api_endpoints` — every backend call your screens need, worked out automatically from the controls you described. This is your backend spec, already written for you.
   * `derived.issues_to_review` — gaps the tool spotted itself (e.g. a screen with no controls, or a control missing its endpoint). Worth fixing in the tool before you build.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 06
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Blueprint
+GenAI Coaching · Quick Check — Blueprint
 
 ## Quick Check — Blueprint Shape
 
@@ -219,7 +216,7 @@ Slide 1.1: what is the single recommended build prompt instruction regarding dec
 
 Ask me before making any decision not covered by my answers Make the best guess and continue Skip that feature Use the AI default template
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -256,7 +253,7 @@ blueprint.mdCopy
 
 Keep it specific — names, fields, and screen-by-screen behavior. "Users can manage bookings" is not specific; "DELETE /bookings/{id} cancels a booking and shows a confirmation" is.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 07
 
@@ -286,7 +283,7 @@ terminalCopy
 
 Don't have a blueprint yet? Go back to 1.1 now — everything from Part 2 onward depends on this file existing.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 08
 
@@ -298,7 +295,7 @@ Session 1's decision table said: plan first when there are multi-file changes, a
 
 The right order is always **database → backend → frontend** — each layer depends on the one before it already existing. You can't display data from a backend that doesn't exist yet, and a backend can't save data to a database that isn't there.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 09
 
@@ -327,7 +324,7 @@ the build prompt — attach or paste your blueprint firstCopy
 
 Notice this prompt itself asks for a plan first — you're about to enforce that with a Plan agent on top, which is belt-and-suspenders and exactly right for a build this size.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 10
 
@@ -351,7 +348,7 @@ Press `Shift+Tab` into Plan Mode, then give it the same 2.2 prompt plus the same
 
 Do not approve execution yet — read the plan fully first (2.4).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 11
 
@@ -368,7 +365,7 @@ Before approving, check the plan specifically for — you don't need to understa
 
 If something's missing, say so now — _"Your plan doesn't mention the Cancel button on My Bookings — add it"_ — before a single file gets written.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 12
 
@@ -399,7 +396,7 @@ AGENTS.md / CLAUDE.md — starter contentCopy
 
 That last "Design" section is Session 1's brand-context lesson, applied here — paste your blueprint's actual color and logo answers in once, and the frontend build in Part 6 follows them automatically.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 13
 
@@ -431,7 +428,7 @@ Switch to `acceptEdits` mode (`Shift+Tab`) — auto-accepts file edits, still pr
 
 Whatever you pick, stay in the room. Skim file names as they're created — you're trading per-edit approval for periodic spot-checks, not for ignoring it entirely.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 14
 
@@ -445,7 +442,7 @@ Part 3 · Hands-On · 3.3
 
 Same command, different filename — you're now set up for the whole rest of today's build.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 15
 
@@ -457,11 +454,11 @@ Every "thing the app remembers" in your blueprint (Section 4) becomes a real SQL
 
 SQLite needs no server or install beyond Python itself — perfect for today. It's also literally a single file on your laptop, which makes it easy to look inside and easy to reset if something goes wrong.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 16
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Database Layer
+GenAI Coaching · Quick Check — Database Layer
 
 ## Quick Check — Tables & Stack
 
@@ -473,7 +470,7 @@ Slide 2.2: what is the recommended build order for the three layers — and why?
 
 Database → Backend → Frontend (each depends on the previous existing) Frontend → Backend → Database Backend → Database → Frontend All three in parallel
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -494,7 +491,7 @@ promptCopy
 
 Watch the permission prompts (or the edit summary) as files are created in a `backend/` or `database/` folder — you should see one file per table's worth of logic, not one giant file.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 17
 
@@ -513,7 +510,7 @@ promptCopy
 
 Compare the output against your blueprint's tables and fields yourself — this is the same "read the diff, don't just trust the claim" habit from Session 1, applied to a database instead of a code diff. You don't need to understand SQL to check that every field you listed actually shows up as a column.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 18
 
@@ -523,7 +520,7 @@ Part 5 · FastAPI Back End · 5.1
 
 Every entry in `derived.api_endpoints` (or the Back End section of your Markdown blueprint) becomes one FastAPI route: the same method (GET/POST/PUT/DELETE), the same path, reading or writing the tables from Part 4. Pydantic models — FastAPI's way of checking that incoming data has the right shape before anything happens with it — validate what each endpoint sends and returns. This is exactly the pattern from Base Camp 3's FastAPI session, just generated for your specific app instead of a calculator.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 19
 
@@ -546,7 +543,7 @@ promptCopy
 
 This is the biggest single step so far — expect several file edits and at least one permission/command prompt for installing `fastapi` and `uvicorn`. Read them; "installing a package" just means downloading a small piece of pre-written code your app depends on.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 20
 
@@ -566,7 +563,7 @@ promptCopy
 
 This is the same Swagger workflow from Base Camp 3 — now proving out your own app's real endpoints. If this page loads and these two calls work, your backend is genuinely functioning, independent of any frontend.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 21
 
@@ -578,7 +575,7 @@ Your database stores real data and your FastAPI backend serves it — tested and
 
 Next up: Part 6 — Front End
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 22
 
@@ -592,11 +589,11 @@ Each screen in your blueprint becomes one HTML page; each control (button, input
 
 This is deliberately the simplest possible frontend approach — no build tools, no installs, no npm. It's the same shape as last week's calculator app (`index.html` \+ `app.js`), just with more pages. If your blueprint asked for React instead, that's a fine choice for later — today's session builds the "our class stack" default so absolute beginners have zero extra tooling to fight with.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 23
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check — Full-Stack Flow
+GenAI Coaching · Quick Check — Full-Stack Flow
 
 ## Quick Check — Front-End & Skills
 
@@ -608,7 +605,7 @@ Slide 7.1: the “run-app” skill from Session 1 Part 5 is what kind of skill?
 
 Scoped (project) skill — lives in .opencode/skills/ or .claude/skills/ inside the project Global skill — in ~/.config/opencode/skills/ MCP server tool Agent permission
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -636,7 +633,7 @@ terminal — inside frontend/Copy
 
 Open `http://localhost:5500` and confirm you see your app's name, logo, and colors before moving on.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 24
 
@@ -656,7 +653,7 @@ promptCopy
 
 Building the UI with fake data before wiring the real backend is deliberate — it isolates "does the UI look and flow right" from "does the network call work," so if something's broken later, you know which half to look in.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 25
 
@@ -676,7 +673,7 @@ promptCopy
 
 A common snag here is **CORS** — a browser security rule that blocks a page from calling a different address unless that address explicitly allows it. If the frontend can't reach the backend, open your browser's console (right-click → Inspect → Console) and, if you see the word "CORS," just tell the agent: _"the browser console shows a CORS error — fix it."_ It knows the fix (FastAPI's `CORSMiddleware`, already added back in 5.2).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 26
 
@@ -703,7 +700,7 @@ You'll start both servers many more times today. Package it once, per Session 1 
 
 This is scoped to this one project (Session 1, Part 3) — it lives inside `my-app/`, so it won't clutter any other project's list of skills.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 27
 
@@ -727,7 +724,7 @@ In Claude Code, drop the `@general` and just ask in plain language — it'll pic
 
 Remember Session 1's rule: context doesn't inherit. This prompt works because it re-states exactly what to compare — the subagent doesn't remember your earlier conversation about the app.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 28
 
@@ -743,7 +740,7 @@ You just asked an agent to build three connected layers at once. Before trusting
 
 Neither format needs you to install anything new — both open free, in a browser, over the next two slides.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 29
 
@@ -780,7 +777,7 @@ To view the finished diagram:
 
 This is the exact color style used in Base Camp 3's `calculator_app_evolution.drawio` — if you've seen that diagram before, your own will look like it belongs to the same family.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 30
 
@@ -825,7 +822,7 @@ Part 7 · Skills, Subagents & Diagrams · 7.5
 
 Your `sequence.md` will render the exact same way as the diagram above: automatically on GitHub, in VS Code's Markdown preview, or pasted into the free live editor at mermaid.live.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 31
 
@@ -847,7 +844,7 @@ promptCopy
 
 If either diagram is missing a piece, that's a real finding — treat it exactly like the 7.2 subagent's cross-check report, and fix it before Part 8.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 32
 
@@ -860,7 +857,7 @@ Part 7 · Hands-On · 7.7
   3. **Run the 7.2 cross-check** Note anything it flags — you'll fix real gaps in Part 8.
   4. **Confirm both diagrams from 7.6 exist** You'll hand these to someone else in Part 9 as proof of what you built.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 33
 
@@ -875,7 +872,7 @@ Session 1's diff-reading checklist, applied to a build this size, means checking
   * Does every frontend fetch call use the exact method + path the backend defined?
   * Did anything get built that isn't in the blueprint — or in your architecture diagram — at all?
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 34
 
@@ -898,7 +895,7 @@ promptCopy
 
 This is the moment the three layers either prove they work together, or don't — and now you'll know exactly which layer to fix.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 35
 
@@ -919,7 +916,7 @@ Wrong path mid-task? OpenCode: try `Esc`, or `Ctrl+C` if that doesn't stop it. C
 
 Same muscle memory as Session 1, now on your own app.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 36
 
@@ -938,7 +935,7 @@ promptCopy
 
 Work through these one at a time, reviewing each diff — this is deliberately the slow, careful way, on purpose.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 37
 
@@ -956,7 +953,7 @@ Skills (scoped)| Part 7 — `run-dev`, `draw-architecture`, `draw-sequence`, all
 Subagents| Part 7 — the blueprint-vs-code cross-check, isolated from your main thread  
 Reviewing & redirecting| Part 8 — catching and fixing real gaps before calling it done  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 38
 
@@ -972,7 +969,7 @@ Your app currently lives only on your laptop, in a SQLite file, with no version 
 
 Keep your project folder, your blueprint, and both diagrams — you'll deploy this same app, not a new one, and the diagrams are exactly what you'll show to explain it to a reviewer.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 39
 
@@ -998,13 +995,13 @@ Before Week 2
 
 Keep today's project folder intact — blueprint, backend, frontend, and both diagrams. Next session takes this exact app to GitHub and puts it online.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg)GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 40
 
 Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Lab — Command Builder & Flow
 
@@ -1024,7 +1021,7 @@ opencode.jsonc — local (stdio) MCP declaration (type field)
 
 Check
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Lab
 
@@ -1032,7 +1029,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

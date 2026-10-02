@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Creating Your GitHub Account
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -42,7 +39,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![](assets/genai-coaching-emblem.svg) Base Camp 1 · Week 1 · Developer Account
+Base Camp 1 · Week 1 · Developer Account
 
 # Creating Your GitHub Account
 
@@ -62,7 +59,7 @@ Your GitHub profile is a portfolio: every project you publish appears under your
 
 No card or payment details are needed. GitHub's free plan covers everything in this fellowship, including unlimited public and private repositories. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Your public developer identity +25 XP
+Quick Check · Your public developer identity +25 XP
 
 Q1: GitHub profile is described as:
 
@@ -85,7 +82,7 @@ Your username appears in the URL of everything you publish — `github.com/your-
 
 A simple, professional choice like `firstname-lastname` ages better than a nickname or a joke. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Choose a Username You'll Be Happy With +25 XP
+Quick Check · Choose a Username You'll Be Happy With +25 XP
 
 Q1: Username advice:
 
@@ -113,7 +110,7 @@ sign-up pageCopy
 
 GitHub also offers **Continue with Google** on the sign-up page. It works, but signing up with an email and password makes it easier to understand exactly how your account is secured — and easier to recover if you later lose access to a social login. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Sign Up with Your Email +25 XP
+Quick Check · Sign Up with Your Email +25 XP
 
 Q1: Sign-up needs:
 
@@ -134,7 +131,7 @@ Step 3 — Confirm it's you
 
 Don't skip verification Without a verified email address you won't be able to do basic things like creating a repository. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Verify Your Email Address +25 XP
+Quick Check · Verify Your Email Address +25 XP
 
 Q1: Verification is:
 
@@ -158,7 +155,7 @@ Two-factor authentication (2FA) adds a second check on top of your password. Git
 
 Recovery codes matter If you lose your 2FA device and your recovery codes, you can be permanently locked out of the account. Store the codes before you close this settings page. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Turn On Two-Factor Authentication +25 XP
+Quick Check · Turn On Two-Factor Authentication +25 XP
 
 Q1: 2FA uses:
 
@@ -180,7 +177,7 @@ Every commit you make is stamped with an email address, and on a public reposito
 
 While you're in Settings, you can also add your name and a profile photo under **Public profile**. It's not required, but a profile with a real name looks more credible when you share it. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Protect Your Email Address +25 XP
+Quick Check · Protect Your Email Address +25 XP
 
 Q1: Email privacy option:
 
@@ -206,7 +203,7 @@ sign-in pageCopy
   3. **Enter your 2FA code when asked** This confirms your authenticator is set up correctly.
   4. **Check that your profile loads** Visit `github.com/your-username` — you should see your (empty, for now) profile.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Confirm You Can Sign In Again +25 XP
+Quick Check · Confirm You Can Sign In Again +25 XP
 
 Q1: Sign-in check proves:
 
@@ -228,7 +225,7 @@ Troubleshooting
 
 Still stuck? Tell your instructor before Base Camp 2. Never share your password, 2FA codes, or recovery codes with anyone. 
 
-![](assets/genai-coaching-emblem.svg) Quick Check · If Something Goes Wrong +25 XP
+Quick Check · If Something Goes Wrong +25 XP
 
 Q1: Troubleshooting covers:
 
@@ -249,7 +246,7 @@ You're done when...
   * ✓ You signed out and back in successfully
   * ✓ You've noted your GitHub username to share with your instructor when asked
 
-![](assets/genai-coaching-emblem.svg) Quick Check · GitHub Account Setup — Final Check +25 XP
+Quick Check · GitHub Account Setup — Final Check +25 XP
 
 Q1: Final check needs:
 
@@ -283,7 +280,7 @@ All Quick Checks + Lab verified. Your certificate is ready — XP saved on this 
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

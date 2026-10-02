@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Git Flow — Interactive Simulator
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -33,7 +30,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) GEN AI COACHING Unlock Your Elite Future · Powered by AI Accelerator Hub XP **0**
+GEN AI COACHING Unlock Your Elite Future · Powered by AI Accelerator Hub XP **0**
 
 # Git Flow — interactive simulator
 
@@ -63,13 +60,13 @@ index — next commit
 
 origin — shared repo
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Git Flow — Four Areas +25 XP
+Quick Check · Git Flow — Four Areas +25 XP
 
 Which order correctly describes Git's data flow?
 
 Working Directory → Staging Area → Local Repository → Remote Remote → Local → Staging → Working Directory Working Directory → Remote → Staging → Local Staging → Working Directory → Remote → Local
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Staging Area +25 XP
+Quick Check · Staging Area +25 XP
 
 What does git add do?
 
@@ -81,13 +78,13 @@ Pushes directly to GitHub Moves edits from Working Directory to Staging Area for
 
 Select a scenario and click "Run next step". Each command's meaning appears here.
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Commit vs Push +25 XP
+Quick Check · Commit vs Push +25 XP
 
 What is true about git commit vs git push?
 
 commit saves locally in .git; push uploads to Remote (origin) commit uploads to Remote; push saves locally Both do the same thing Neither touches .git
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Sync — git pull +25 XP
+Quick Check · Sync — git pull +25 XP
 
 What does git pull do when both sides diverged?
 
@@ -113,7 +110,7 @@ All quizzes + lab complete. XP saved per file.
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

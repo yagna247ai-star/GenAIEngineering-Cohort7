@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Virtual Environments — A Step-by-Step Model
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -31,7 +28,7 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) GEN AI COACHING Unlock Your Elite Future · Powered by AI Accelerator Hub XP **0**
+GEN AI COACHING Unlock Your Elite Future · Powered by AI Accelerator Hub XP **0**
 
 python // isolation model
 
@@ -81,7 +78,7 @@ torch 2.1 transformers 4.35 numpy 1.26 tokenizers 0.15
 
 app_b.py—
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Isolation — Why venv? +25 XP
+Quick Check · Isolation — Why venv? +25 XP
 
 What does creating a venv give you?
 
@@ -109,7 +106,7 @@ pip freeze > requirements.txt — written ✓
 empty environment  
 (new machine / new folder)
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Reproducibility — requirements.txt +25 XP
+Quick Check · Reproducibility — requirements.txt +25 XP
 
 What does pip freeze > requirements.txt capture?
 
@@ -139,7 +136,7 @@ app_b.py (needs numpy 1.26)
 
 ● running
 
-![](assets/genai-coaching-emblem.svg) Quick Check · Without venv — the cost +25 XP
+Quick Check · Without venv — the cost +25 XP
 
 What happens if you pip install numpy==1.26 globally without isolation?
 
@@ -165,7 +162,7 @@ All quizzes + lab complete. XP saved per file.
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Environments, Libraries & Data Tools — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 38 · use ← → or the sidebar
+Slide 1 / 38 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Base Camp 2 · Week 1 · Session 2 · Extended
+Base Camp 2 · Week 1 · Session 2 · Extended
 
 # Environments, Libraries & Data Tools
 
@@ -59,7 +56,7 @@ Virtual environments · installing libraries with pip · NumPy · Pandas · file
 
 ⏱ Extended, hands-on 📄 Dataset: employees.csv (provided)
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 01
 
@@ -95,7 +92,7 @@ Session Agenda
 
 5:50–6:00Final Recap & Wrap-up
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 02
 
@@ -127,7 +124,7 @@ By the end of this session, you will be able to:
 
 10Structure a script with `if __name__ == "__main__"` and run it from the terminal with arguments.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 03
 
@@ -141,7 +138,7 @@ The NumPy example `np.strings` was added in NumPy 2.0. Code written for NumPy 2.
 
 Project A might need NumPy 1.26. Project B — built a year later — needs NumPy 2.3.2 for a feature that didn't exist before. Installing one version globally can silently break the other project.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 04
 
@@ -155,7 +152,7 @@ Mental model Think of each venv as its own sealed toolbox. You can have `venv_nu
 
 Each project gets its own venv folder — installing or upgrading a library in one venv never touches another. And `venv` comes built into Python — no separate installation required.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 05
 
@@ -183,11 +180,11 @@ zshCopy
 
 `venv_numpy_126` is just a name we're choosing — call it anything, but a name that describes the project or setup helps future-you.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 06
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -195,7 +192,7 @@ Which macOS command creates a venv named `venv_numpy_126`?
 
 python3 -m venv venv_numpy_126 pip install venv create source venv
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -223,7 +220,7 @@ zshCopy
 
 That `(venv_numpy_126)` prefix appearing in your prompt is the signal it worked — see 3.3 below for how to confirm it fully.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 07
 
@@ -241,7 +238,7 @@ Command Prompt / Terminal — both OSCopy
 
 Deactivate before switching to a different venv — running two active venvs at once in one terminal isn't a thing; each terminal window is either in one venv, or in none.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 08
 
@@ -260,7 +257,7 @@ pythonCopy
 
 A library is code someone else already wrote, tested, and optimized — you just plug it in.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 09
 
@@ -284,7 +281,7 @@ Terminal — Windows or MacCopy
 
 The exact same two commands — `pip install` and `pip show` — work identically on Windows and Mac.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 10
 
@@ -305,7 +302,7 @@ notebook cellCopy
   * `np.__version__` tells you exactly which version is installed.
   * `np.strings.str_len()` is a real NumPy 2.x function — keep this example in mind for Part 3.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 11
 
@@ -335,11 +332,11 @@ zshCopy
               > Successfully installed numpy-1.26.4
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 12
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -347,7 +344,7 @@ What error occurs running `np.strings.str_len` on NumPy 1.26?
 
 AttributeError FileNotFoundError [5 5 5] ImportError
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -379,7 +376,7 @@ zshCopy
 
 You now have two folders on disk — `venv_numpy_126` and `venv_numpy_232` — each with its own private copy of NumPy.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 13
 
@@ -413,7 +410,7 @@ zshCopy
 
 **Important:** the Python version (3.11.9) stays the same in every venv — venvs isolate installed _libraries_ , not the Python version itself.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 14
 
@@ -439,7 +436,7 @@ Terminal — inside venv_numpy_126Copy
 
 Same two commands, run inside `venv_numpy_232`, would show `Version: 2.3.2` instead — same laptop, two truths.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 15
 
@@ -463,7 +460,7 @@ test_numpy.pyCopy
   * `get_string_lengths()` wraps the `np.strings.str_len()` call from Part 2.3 in a reusable function.
   * This one function is what we'll run in both venvs next.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 16
 
@@ -495,7 +492,7 @@ TerminalCopy
 
 This is exactly why venvs exist: identical code, identical laptop — the only difference is which environment is active.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 17
 
@@ -519,11 +516,11 @@ Terminal — inside venv_numpy_232Copy
 
 Share `requirements.txt` alongside your code — teammates, servers, and your future self all install the exact same versions.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 18
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -531,7 +528,7 @@ Which file records exact versions via `pip freeze > requirements.txt`?
 
 requirements.txt employees.csv test_numpy.py venv folder
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -543,7 +540,7 @@ You've built two isolated NumPy environments and understand why they exist. Take
 
 Next up: Part 4 — NumPy Capabilities
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 19
 
@@ -572,7 +569,7 @@ notebook cellCopy
   * `np.zeros()` / `np.ones()` create pre-filled arrays of any shape.
   * `np.arange(start, stop, step)` and `np.linspace(start, stop, count)` both generate number sequences.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 20
 
@@ -595,7 +592,7 @@ notebook cellCopy
   * A single number (like 1.1) automatically "broadcasts" across the whole array.
   * Two same-shaped arrays combine element-by-element: `a1[0]+b1[0]`, `a1[1]+b1[1]`...
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 21
 
@@ -621,7 +618,7 @@ notebook cellCopy
   * `.reshape(rows, cols)` turns a flat array into a grid — same data, new shape.
   * `grid[1, 2]` gets one cell; `grid[:, 1]` gets an entire column.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 22
 
@@ -641,7 +638,7 @@ pythonCopy
 
 That one line is how almost every pandas file starts. Almost every real dataset you'll touch in this fellowship starts as a CSV file loaded into a DataFrame.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 23
 
@@ -679,11 +676,11 @@ employees.csvCopy
 
 This exact file is provided alongside the slides — save it as `employees.csv` in your project folder before continuing.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 24
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -691,7 +688,7 @@ For `prices=np.array([100,200,300])`, what is `prices*1.1`?
 
 [110. 220. 330.] [110,220,330] Error [100,200,300]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -713,7 +710,7 @@ notebook cellCopy
   * `.head()` previews the first 5 rows — always check this first.
   * `.shape` gives `(rows, columns)`; `.columns` lists every column name.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 25
 
@@ -737,7 +734,7 @@ notebook cellCopy
   * `df[condition]` keeps only the rows where the condition is `True`.
   * Conditions can combine any column — this is the pandas version of Part 4's loop + if filtering from Session 1.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 26
 
@@ -761,7 +758,7 @@ notebook cellCopy
   * `.groupby(col)` splits rows into groups, ready to summarize.
   * `.value_counts()` is a fast way to count how many rows fall into each category.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 27
 
@@ -779,7 +776,7 @@ notebook cellCopy
   * `index=False` skips writing pandas' internal row numbers into the file.
   * This is the exact pattern we'll wrap inside a function next.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 28
 
@@ -804,7 +801,7 @@ notebook cellCopy
   * Everything from Part 5.3–5.6 is now packaged into one reusable call.
   * This works perfectly... as long as the input is exactly what we expect.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 29
 
@@ -843,11 +840,11 @@ TerminalCopy
 
 Both crash the entire program — even if 11 other rows or files were perfectly fine.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 30
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -855,7 +852,7 @@ What does `pd.read_csv("employees.csv").shape` return?
 
 (12, 5) (5, 12) (12,) Error
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -886,7 +883,7 @@ notebook cellCopy
   * Naming the exact exception (`FileNotFoundError`, `KeyError`) keeps you from hiding unrelated bugs.
   * `return` inside `except` stops that function call cleanly, without crashing the whole program.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 31
 
@@ -904,7 +901,7 @@ Exception| Happens when...| Example
 `ZeroDivisionError`| Dividing by zero| `10 / 0`  
 `TypeError`| An operation on the wrong type| `"5" + 5`  
   
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 32
 
@@ -925,7 +922,7 @@ notebook cellCopy
   * It equals `"__main__"` only when the file is run directly — not when it's imported elsewhere.
   * This lets a file work both as a standalone script _and_ as a library other files can import safely.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 33
 
@@ -953,7 +950,7 @@ notebook cellCopy
 
 `argparse` reads real terminal arguments — run this from a `.py` file, not a Jupyter cell.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 34
 
@@ -983,7 +980,7 @@ process_employees.pyCopy
 
 This is the exact function from Part 6.3 — pandas, file args, and try/except, all together. It's just a function so far — nothing runs yet without something calling it. That's what the `__main__` block below is for.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 35
 
@@ -1003,11 +1000,11 @@ process_employees.py (append below)Copy
 
 Appended to the bottom of the same file, below the function from 7.3. This block only runs when the file is executed directly from the terminal. Together, the two blocks are the complete, real file — save it as `process_employees.py`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 36
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -1015,7 +1012,7 @@ What does `if __name__=="__main__":` guard do?
 
 Runs only when executed directly Always runs Never runs Handles errors
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -1040,7 +1037,7 @@ TerminalCopy
               error: the following arguments are required: output_file
 [/code]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 37
 
@@ -1068,13 +1065,13 @@ Recap
 
 10Everything from this session — environments, libraries, data, and error handling — comes together in one real script.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 38
 
 Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Practice Lab — Fill the Output
 
@@ -1101,7 +1098,7 @@ For Ravi Kumar (salary 85000), what prints? Type exact number:
 
 Check
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Lab
 
@@ -1109,7 +1106,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 

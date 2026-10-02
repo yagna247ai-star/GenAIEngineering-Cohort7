@@ -1,14 +1,11 @@
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="52" alt="GenAI Coaching" style="vertical-align:middle;margin-right:12px" />
-<img src="assets/ai-accelerator-hub-logo.svg" width="240" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/genai-coaching-logo.svg" width="360" alt="GenAI Coaching — AI Accelerator Hub" />
 
 # Python Fundamentals — Slides
 
 > **GenAI Coaching × AI Accelerator Hub** — *White / Black / Gold Veranda* ` #0A0A0A ` ` #C9A86A ` ` #FFFFFF `  
 > *Enterprise Corporate Training — Production-Grade • Weekend Quality 10-13 / 15-18 • Weekday 08:00-10:00*
-
-[![Enterprise](https://img.shields.io/badge/Enterprise-Corporate%20Training-0A0A0A?style=for-the-badge)](.) [![Gold Veranda](https://img.shields.io/badge/Gold_Veranda-C9A86A?style=for-the-badge&logo=star)](.) [![Deploy Ready](https://img.shields.io/badge/Deploy-Ready-C9A86A?style=flat-square)](.)
 
 </div>
 
@@ -47,11 +44,11 @@
 > Use this module as a standalone micro-module in your team stand-up. Have each learner demo the step live — corporate cohorts retain **3× more** when they teach back immediately. Pair with *ThinkPad TrackPoint* (hands on home row) + *Arc Weekend Space* (isolate work tabs).
 
 
-![GenAI Coaching](assets/genai-coaching-emblem.svg) Slide 1 / 35 · use ← → or the sidebar
+Slide 1 / 35 · use ← → or the sidebar
 
 ‹ Prev Next ›
 
-![](assets/genai-coaching-emblem.svg) Base Camp 2 · Week 1 · Session 1
+Base Camp 2 · Week 1 · Session 1
 
 # Python Fundamentals
 
@@ -59,7 +56,7 @@ Variables & built-ins · strings · data structures · branching, looping & comp
 
 ⏱ 3 hours, hands-on No installs required
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 01
 
@@ -85,7 +82,7 @@ Session Agenda
 
 2:55–3:00Wrap-up & Take-Home Exercise
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 02
 
@@ -107,7 +104,7 @@ By the end of this session, you will be able to:
 
 5Write your own reusable functions, and refactor repeated loop logic into them.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 03
 
@@ -135,7 +132,7 @@ notebook cellCopy
   * `=` assigns a value; Python figures out the type automatically — no need to declare `int` or `str` up front.
   * Reassigning a variable overwrites whatever it held before — `age` is simply pointed at a new value.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 04
 
@@ -167,7 +164,7 @@ Operator| Meaning
   
 Python follows the normal order of operations — use `( )` to control it, exactly as in a calculator.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 05
 
@@ -194,11 +191,11 @@ notebook cellCopy
   * `round()`, `int()`, `float()`, `str()` convert or adjust values between types.
   * `min()`, `max()`, `sum()`, `len()` work directly on lists and other collections — no manual loop needed.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 06
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -206,7 +203,7 @@ Given `age = 27` then `age = 28`, what does `print(age)` output?
 
 28 27 Error 27 28
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -224,7 +221,7 @@ notebook cellCopy
   * A string is text written inside quotes — single or double, Python treats them the same.
   * `len()` returns how many characters it contains.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 07
 
@@ -250,7 +247,7 @@ notebook cellCopy
   * A slice `[a:b]` grabs characters from `a` up to (not including) `b`.
   * Leaving out a number means "from the start" or "to the end."
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 08
 
@@ -273,7 +270,7 @@ notebook cellCopy
   * `*` repeats a string that many times.
   * Both create a brand-new string; the originals stay unchanged (strings are immutable in Python).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 09
 
@@ -304,7 +301,7 @@ notebook cellCopy
   * `.split()` breaks text into a list of words; `.join()` reverses that, stitching a list back into one string.
   * `.find()` locates a substring's position; `in` just checks whether it exists at all.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 10
 
@@ -325,7 +322,7 @@ notebook cellCopy
   * Anything inside `{ }` is evaluated and inserted automatically — variables, expressions, even function calls.
   * `:.0f` formats a number rounded to 0 decimal places.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 11
 
@@ -354,11 +351,11 @@ notebook cellCopy
   * Comparing a string to its own reverse is a one-line palindrome check.
   * `.count()` tallies how many times a character appears.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 12
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -366,7 +363,7 @@ With `a=15, b=4`, what is `a // b`?
 
 3 3.75 4 3.0
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -388,7 +385,7 @@ notebook cellCopy
   * Indexing and slicing work exactly like they do on strings.
   * A list can hold any number of items, of any type — even a mix of types.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 13
 
@@ -419,7 +416,7 @@ notebook cellCopy
   * `.remove()` deletes by value; `.pop()` removes and returns the last item.
   * `.sort()` reorders the list in place, permanently — it doesn't return a new list.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 14
 
@@ -444,7 +441,7 @@ notebook cellCopy
   * Tuples are immutable — they can never be changed after creation.
   * You can "unpack" a tuple straight into variables: `x, y = coordinates`.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 15
 
@@ -471,7 +468,7 @@ notebook cellCopy
   * Read with `dict[key]`; add or update with `dict[key] = value` — same syntax does both.
   * `.keys()`, `.values()`, `.items()` give you each part separately.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 16
 
@@ -494,7 +491,7 @@ notebook cellCopy
   * Adding a duplicate is silently ignored — no error, no change.
   * `in` checks membership in a set extremely efficiently, faster than searching a list.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 17
 
@@ -511,11 +508,11 @@ Set `{ }`| No| Yes| No| Removing duplicates, membership checks
   
 * Dictionaries preserve insertion order in modern Python (3.7+).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 18
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -523,7 +520,7 @@ For `course="AI Engineering"`, what does `course[0]` return?
 
 "A" "AI" "g" Error
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -554,7 +551,7 @@ notebook cellCopy
   * Combine indexing (`[0]`) and key lookup (`["name"]`) to reach nested values.
   * Structures nest in any combination — lists of dicts, dicts of lists, and deeper.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 19
 
@@ -578,7 +575,7 @@ notebook cellCopy
   * The first `True` branch runs; every other branch is skipped.
   * `else` is optional and catches everything not already matched.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 20
 
@@ -602,7 +599,7 @@ notebook cellCopy
   * `range(5)` produces 0, 1, 2, 3, 4 — five numbers starting at 0.
   * The loop variable takes on each value in the sequence, in turn.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 21
 
@@ -622,7 +619,7 @@ notebook cellCopy
   * Something inside the loop must eventually make it `False`, or it never stops.
   * Useful when you don't know in advance how many repeats you need.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 22
 
@@ -646,7 +643,7 @@ notebook cellCopy
   * Loop + if is the core "filter" pattern used everywhere in programming.
   * `n % 2 == 0` tests whether a number is even (no remainder).
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 23
 
@@ -671,11 +668,11 @@ notebook cellCopy
   * A running total variable is updated once per matching character.
   * Loops let you apply more complex conditions than built-in methods can handle alone.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 24
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -683,7 +680,7 @@ What does `fruits[1:3]` return?
 
 ["banana","cherry"] ["apple","banana"] ["cherry","date"] ["banana"]
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -708,7 +705,7 @@ notebook cellCopy
   * You can build a brand-new filtered dictionary the same way as a list.
   * This pattern scales to any filtering condition on structured data.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 25
 
@@ -727,7 +724,7 @@ notebook cellCopy
   * Great for grids, tables, and comparing every pair of items.
   * 3 outer steps × 3 inner steps = 9 total print statements here.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 26
 
@@ -748,7 +745,7 @@ notebook cellCopy
   * `[expression for item in iterable if condition]` mirrors Part 4.4 exactly.
   * Great for simple transforms — for complex logic, a regular loop reads clearer.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 27
 
@@ -769,7 +766,7 @@ notebook cellCopy
   * `adults_only_dc` reproduces Part 4.6's loop result in a single line.
   * Comprehensions can transform values too — not just filter them.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 28
 
@@ -789,7 +786,7 @@ notebook cellCopy
   * Code inside only runs when the function is actually called.
   * Calling `greet()` by name executes everything indented beneath it.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 29
 
@@ -810,11 +807,11 @@ notebook cellCopy
   * `return` sends a value back; it doesn't print anything by itself.
   * The returned value can be stored, printed, or reused elsewhere.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 30
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Quick Check
+GenAI Coaching · Quick Check
 
 ## Quick Check
 
@@ -822,7 +819,7 @@ What does `is_even(4)` return?
 
 True False 4 None
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Quiz
 
@@ -843,7 +840,7 @@ notebook cellCopy
   * `role="mentor"` overrides the default for that one specific call.
   * Defaults make a function flexible without extra required inputs.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 31
 
@@ -876,7 +873,7 @@ notebook cellCopy
   * `numbers` and `word` are placeholders — any list or string can be passed in.
   * Functions turn one-off code into a tool you can call again and again.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 32
 
@@ -894,7 +891,7 @@ notebook cellCopy
   * This is the core benefit of functions: write the logic once, reuse it everywhere.
   * Compare this to copy-pasting the loop every time you needed it.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 33
 
@@ -913,7 +910,7 @@ exampleCopy
 
 **Hint:** `.split()` turns a sentence into a list of words, slicing (`my_list[::-1]`) reverses a list, and `" ".join(list)` turns a list back into one string.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 34
 
@@ -931,13 +928,13 @@ Recap
 
 5Functions turn one-off logic into a reusable tool — write it once, call it anywhere.
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub 
+GenAI Coaching | Powered by AI Accelerator Hub 
 
 35
 
 Corporate Tip — Deploy Ready Use this section as a standalone micro-module: pair the concept above with your team stand-up. Have each learner demo the step live — corporate cohorts retain 3× more when they teach back immediately. 
 
-![](assets/genai-coaching-emblem.svg) GenAI Coaching · Elite Practice Lab
+GenAI Coaching · Elite Practice Lab
 
 ## Elite Practice Lab — Fill the Output
 
@@ -962,7 +959,7 @@ What list prints? Type exact literal:
 
 Check
 
-![GenAI Coaching emblem](assets/genai-coaching-emblem.svg) GenAI Coaching | ![AI Accelerator Hub](assets/ai-accelerator-hub-logo.svg) Powered by AI Accelerator Hub
+GenAI Coaching | Powered by AI Accelerator Hub
 
 Lab
 
@@ -970,7 +967,7 @@ Lab
 
 <div align="center">
 
-<img src="assets/genai-coaching-emblem.svg" width="28" alt="GenAI Coaching" style="vertical-align:middle" /> **GEN AI COACHING** &nbsp;|&nbsp; <img src="assets/ai-accelerator-hub-logo.svg" width="140" alt="AI Accelerator Hub" style="vertical-align:middle" />
+<img src="assets/ai-accelerator-hub-logo.svg" width="180" alt="AI Accelerator Hub" />
 
 *GenAI Learning · Powered by AI Accelerator Hub* — *Corporate Training • Production-Grade*
 
